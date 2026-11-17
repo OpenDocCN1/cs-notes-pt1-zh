@@ -43,15 +43,15 @@ struct SampleSwipeableCellViewModel {
 
 在 `SampleSwipeableCard` 类中，添加以下代码：
 
+
+![](img/cb102a7b41ec7fde69c4111812d68f97_13.png)
+
 ```swift
 var viewModel: SampleSwipeableCellViewModel? {
     didSet {
         configure(for: viewModel)
     }
 }
-
-![](img/cb102a7b41ec7fde69c4111812d68f97_13.png)
-
 private func configure(for viewModel: SampleSwipeableCellViewModel?) {
     guard let viewModel = viewModel else { return }
     titleLabel.text = viewModel.title

@@ -201,14 +201,6 @@ void inorderTraversal(Node* root) {
 
 ![](img/6a9b92df06a5a2551f62473daa3ab9cb_111.png)
 
-```cpp
-// 辅助函数：在BST中查找值为data的节点
-Node* Find(Node* root, int data) {
-    if(root == NULL) return NULL;
-    else if(root->data == data) return root;
-    else if(root->data < data) return Find(root->right, data);
-    else return Find(root->left, data);
-}
 
 ![](img/6a9b92df06a5a2551f62473daa3ab9cb_113.png)
 
@@ -218,6 +210,19 @@ Node* Find(Node* root, int data) {
 
 ![](img/6a9b92df06a5a2551f62473daa3ab9cb_119.png)
 
+
+![](img/6a9b92df06a5a2551f62473daa3ab9cb_121.png)
+
+![](img/6a9b92df06a5a2551f62473daa3ab9cb_122.png)
+
+```cpp
+// 辅助函数：在BST中查找值为data的节点
+Node* Find(Node* root, int data) {
+    if(root == NULL) return NULL;
+    else if(root->data == data) return root;
+    else if(root->data < data) return Find(root->right, data);
+    else return Find(root->left, data);
+}
 // 辅助函数：找到子树中的最小节点（最左节点）
 Node* FindMin(Node* root) {
     if(root == NULL) return NULL;
@@ -225,11 +230,6 @@ Node* FindMin(Node* root) {
         root = root->left;
     return root;
 }
-
-![](img/6a9b92df06a5a2551f62473daa3ab9cb_121.png)
-
-![](img/6a9b92df06a5a2551f62473daa3ab9cb_122.png)
-
 // 主函数：获取中序后继
 Node* GetSuccessor(Node* root, int data) {
     // 1. 搜索包含data的当前节点

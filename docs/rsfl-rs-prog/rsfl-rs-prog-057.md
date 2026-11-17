@@ -45,12 +45,12 @@ println!("{:?}", items);
 
 以下是使用 `entry` API 的示例：
 
-```rust
-let mut items = HashMap::new();
-items.insert(String::from("cup"), 10);
 
 ![](img/e9c3714c1e351e5b13e76a79e812b9fe_7.png)
 
+```rust
+let mut items = HashMap::new();
+items.insert(String::from("cup"), 10);
 items.entry(String::from("cup")).or_insert(20);
 items.entry(String::from("spoon")).or_insert(20);
 
@@ -90,6 +90,9 @@ println!("{:?}", value); // 输出 10
 
 以下是实现单词计数器的代码：
 
+
+![](img/e9c3714c1e351e5b13e76a79e812b9fe_20.png)
+
 ```rust
 let text = "Bob says: Bob said that. Bob said that Bob. Bob, bob didn't say anything";
 let mut map = HashMap::new();
@@ -98,9 +101,6 @@ for word in text.split_whitespace() {
     let count = map.entry(word.to_lowercase()).or_insert(0);
     *count += 1;
 }
-
-![](img/e9c3714c1e351e5b13e76a79e812b9fe_20.png)
-
 println!("{:?}", map);
 ```
 

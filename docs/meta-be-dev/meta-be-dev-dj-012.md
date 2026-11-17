@@ -38,11 +38,11 @@
 ![](img/3aedd0dffb17ca146754e5692fb34ca5_3.png)
 
 代码示例如下：
-```python
-from django.http import HttpResponse
 
 ![](img/3aedd0dffb17ca146754e5692fb34ca5_5.png)
 
+```python
+from django.http import HttpResponse
 def home(request):
     return HttpResponse("Welcome to the Little Lemon restaurant.")
 ```

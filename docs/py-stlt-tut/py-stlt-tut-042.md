@@ -32,6 +32,11 @@ st.write(printer(“Hello, Streamlit Cache!”))
 
 现在，我们来看看如何使用Streamlit的缓存功能来优化上述函数。只需在函数定义前添加`@st.cache`装饰器即可。
 
+
+![](img/0c434b40cc03bf81e5852a6b68a09a4b_3.png)
+
+![](img/0c434b40cc03bf81e5852a6b68a09a4b_4.png)
+
 ```python
 import time
 import streamlit as st
@@ -40,11 +45,6 @@ import streamlit as st
 def printer(message):
     time.sleep(3)
     return message
-
-![](img/0c434b40cc03bf81e5852a6b68a09a4b_3.png)
-
-![](img/0c434b40cc03bf81e5852a6b68a09a4b_4.png)
-
 st.write(printer(“Hello, Streamlit Cache!”))
 ```
 

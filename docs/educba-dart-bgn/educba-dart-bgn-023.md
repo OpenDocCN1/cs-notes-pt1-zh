@@ -44,11 +44,11 @@
 
 ![](img/96dc0372395b6dec4e47a586d38434db_18.png)
 
-```dart
-import 'dart:io';
 
 ![](img/96dc0372395b6dec4e47a586d38434db_20.png)
 
+```dart
+import 'dart:io';
 void main() {
   // 创建存储员工姓名的列表，类型为String，容量为5
   List<String> empName = List.filled(5, '');

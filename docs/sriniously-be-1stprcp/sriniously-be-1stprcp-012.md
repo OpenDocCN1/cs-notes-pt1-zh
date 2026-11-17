@@ -418,6 +418,9 @@ CREATE INDEX idx_project_members_user_id ON project_members(user_id);
 
 ![](img/53b1cae1c541ea20c20c004c1c097746_37.png)
 
+
+![](img/53b1cae1c541ea20c20c004c1c097746_39.png)
+
 ```sql
 -- 首先，创建一个函数，用于将 updated_at 设置为当前时间戳
 CREATE OR REPLACE FUNCTION update_updated_at_column()
@@ -427,9 +430,6 @@ BEGIN
     RETURN NEW;
 END;
 $$ language 'plpgsql';
-
-![](img/53b1cae1c541ea20c20c004c1c097746_39.png)
-
 -- 然后，为每个需要此功能的表创建触发器
 CREATE TRIGGER update_users_updated_at BEFORE UPDATE ON users
     FOR EACH ROW EXECUTE FUNCTION update_updated_at_column();

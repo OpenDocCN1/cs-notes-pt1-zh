@@ -149,14 +149,14 @@ class Donation(Employee):
 
 现在，我们可以创建员工实例并调用方法了。同时，创建一个列表来存储捐款金额。
 
-```python
-john = Donation()
-peter = Donation()
 
 ![](img/5338a094655ffa6e35abef70b8b4f445_44.png)
 
 ![](img/5338a094655ffa6e35abef70b8b4f445_45.png)
 
+```python
+john = Donation()
+peter = Donation()
 amounts = []
 amounts.append(john.donate())
 amounts.append(peter.donate())

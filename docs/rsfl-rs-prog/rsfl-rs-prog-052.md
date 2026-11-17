@@ -109,12 +109,6 @@ numbers.push(6); // 然后修改向量，这样是允许的
 *   **不可变遍历**：迭代对每个元素的不可变引用。
 *   **可变遍历**：迭代对每个元素的可变引用，从而可以在遍历时修改它们。使用 `*` 解引用运算符来获取并修改值。
 
-```rust
-// 不可变遍历
-let people = vec!["Bob", "James", "Sandra"];
-for person in &people {
-    println!("{}", person);
-}
 
 ![](img/d119a7c99f7e75f28df603a55faef301_29.png)
 
@@ -122,6 +116,12 @@ for person in &people {
 
 ![](img/d119a7c99f7e75f28df603a55faef301_31.png)
 
+```rust
+// 不可变遍历
+let people = vec!["Bob", "James", "Sandra"];
+for person in &people {
+    println!("{}", person);
+}
 // 可变遍历
 let mut numbers = vec![1, 2, 3];
 for n in &mut numbers {
@@ -150,13 +150,6 @@ Rust 需要在编译时知道向量中将包含哪些类型，因为它需要确
 
 ![](img/d119a7c99f7e75f28df603a55faef301_39.png)
 
-```rust
-#[derive(Debug)] // 为枚举派生Debug trait以便打印
-enum Value {
-    Int(i32),
-    Float(f64),
-    Text(String),
-}
 
 ![](img/d119a7c99f7e75f28df603a55faef301_41.png)
 
@@ -164,6 +157,13 @@ enum Value {
 
 ![](img/d119a7c99f7e75f28df603a55faef301_43.png)
 
+```rust
+#[derive(Debug)] // 为枚举派生Debug trait以便打印
+enum Value {
+    Int(i32),
+    Float(f64),
+    Text(String),
+}
 let mut values = vec![
     Value::Float(std::f64::consts::PI),
     Value::Int(42),

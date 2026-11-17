@@ -63,13 +63,13 @@
 首先，我们需要编辑Ansible的**主机清单文件** (`/etc/ansible/hosts`)，将我们要管理的机器信息添加进去。使用`vim`或`nano`编辑此文件。
 
 以下是一个配置示例，请根据你的实际IP地址和主机名进行修改：
+
+![](img/af531e6b7d84ce25b2d2428df164dc14_19.png)
+
 ```ini
 [webservers]
 web1 ansible_host=192.168.1.102
 web2 ansible_host=192.168.1.103
-
-![](img/af531e6b7d84ce25b2d2428df164dc14_19.png)
-
 [databases]
 db1 ansible_host=192.168.1.104
 db2 ansible_host=192.168.1.105

@@ -89,13 +89,13 @@ class Student:
 
 类变量可以被任何实例访问，也可以通过类名直接访问。以下是访问方式：
 
+
+![](img/3755ff6b38dda80c5dd364d2e78c0bf6_25.png)
+
 ```python
 # 通过实例访问（可行，但不推荐）
 print(student1.class_year)  # 输出: 2024
 print(student2.class_year)  # 输出: 2024
-
-![](img/3755ff6b38dda80c5dd364d2e78c0bf6_25.png)
-
 # 通过类名访问（推荐做法）
 print(Student.class_year)   # 输出: 2024
 ```
@@ -145,16 +145,16 @@ class Student:
 
 现在，每创建一个学生，计数器就会增加。我们创建几个学生并打印总数：
 
-```python
-student1 = Student("Sponongebob", 30)
-student2 = Student("Patrick", 35)
-student3 = Student("Squiidward", 55)
-student4 = Student("Sandy", 27)
 
 ![](img/3755ff6b38dda80c5dd364d2e78c0bf6_40.png)
 
 ![](img/3755ff6b38dda80c5dd364d2e78c0bf6_41.png)
 
+```python
+student1 = Student("Sponongebob", 30)
+student2 = Student("Patrick", 35)
+student3 = Student("Squiidward", 55)
+student4 = Student("Sandy", 27)
 print(f"学生总数为: {Student.num_students}")  # 输出: 学生总数为: 4
 ```
 

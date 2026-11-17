@@ -104,6 +104,11 @@ glRenderbufferStorageMultisample(GL_RENDERBUFFER, 4, GL_DEPTH24_STENCIL8, width,
 4.  将处理后的结果绘制到屏幕。
 
 以下是渲染循环中的核心步骤：
+
+![](img/2459996b0c3f3ee3d770fee4d93cf755_11.png)
+
+![](img/2459996b0c3f3ee3d770fee4d93cf755_12.png)
+
 ```cpp
 // 1. 绑定多重采样FBO，渲染场景
 glBindFramebuffer(GL_FRAMEBUFFER, msaaFBO);
@@ -116,11 +121,6 @@ glEnable(GL_DEPTH_TEST);
 glBindFramebuffer(GL_READ_FRAMEBUFFER, msaaFBO);
 glBindFramebuffer(GL_DRAW_FRAMEBUFFER, intermediateFBO);
 glBlitFramebuffer(0, 0, width, height, 0, 0, width, height, GL_COLOR_BUFFER_BIT, GL_NEAREST);
-
-![](img/2459996b0c3f3ee3d770fee4d93cf755_11.png)
-
-![](img/2459996b0c3f3ee3d770fee4d93cf755_12.png)
-
 // 3. 绑定中间FBO，进行后期处理（例如应用灰度、模糊等着色器）
 glBindFramebuffer(GL_FRAMEBUFFER, intermediateFBO);
 // ... 应用后期处理着色器，绘制一个覆盖屏幕的四边形 ...

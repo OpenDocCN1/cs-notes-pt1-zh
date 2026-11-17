@@ -72,17 +72,17 @@ class Triangle(Shape):
 
 ![](img/4613933901af91f6b5ef86db8d5eb0fb_4.png)
 
-```python
-shapes = []
 
 ![](img/4613933901af91f6b5ef86db8d5eb0fb_6.png)
 
-shapes.append(Circle(4))
-shapes.append(Square(5))
-shapes.append(Triangle(6, 7))
 
 ![](img/4613933901af91f6b5ef86db8d5eb0fb_8.png)
 
+```python
+shapes = []
+shapes.append(Circle(4))
+shapes.append(Square(5))
+shapes.append(Triangle(6, 7))
 for shape in shapes:
     print(f"{shape.area()} 平方厘米")
 ```

@@ -245,26 +245,26 @@ def _parse_function_parameters(self) -> Optional[List[FunctionParameterNode]]:
 
 ![](img/93fee7ca9a35ce8b29b816ec2ebfb1f0_111.png)
 
-```python
-# 在 visit_FunctionStatementNode 中
-param_types = [self.type_map[p.value_type] for p in node.parameters]
-param_names = [p.name for p in node.parameters]
 
 ![](img/93fee7ca9a35ce8b29b816ec2ebfb1f0_113.png)
 
 ![](img/93fee7ca9a35ce8b29b816ec2ebfb1f0_115.png)
 
+
+![](img/93fee7ca9a35ce8b29b816ec2ebfb1f0_117.png)
+
+![](img/93fee7ca9a35ce8b29b816ec2ebfb1f0_119.png)
+
+```python
+# 在 visit_FunctionStatementNode 中
+param_types = [self.type_map[p.value_type] for p in node.parameters]
+param_names = [p.name for p in node.parameters]
 # 为参数分配内存并存储初始值
 param_pointers = []
 for i, param_type in enumerate(param_types):
     param_ptr = self.builder.alloca(param_type, name=param_names[i])
     self.builder.store(function.args[i], param_ptr) # function 是当前的 llvm.Function
     param_pointers.append(param_ptr)
-
-![](img/93fee7ca9a35ce8b29b816ec2ebfb1f0_117.png)
-
-![](img/93fee7ca9a35ce8b29b816ec2ebfb1f0_119.png)
-
 # 将参数添加到新环境中
 for (param_name, param_type), param_ptr in zip(zip(param_names, param_types), param_pointers):
     self.env.define(param_name, (param_ptr, param_type))
@@ -280,15 +280,15 @@ for (param_name, param_type), param_ptr in zip(zip(param_names, param_types), pa
 
 完成所有修改后，我们可以编写一个测试程序：
 
-```python
-fn add(a: int, b: int): int {
-    return a + b;
-}
 
 ![](img/93fee7ca9a35ce8b29b816ec2ebfb1f0_127.png)
 
 ![](img/93fee7ca9a35ce8b29b816ec2ebfb1f0_129.png)
 
+```python
+fn add(a: int, b: int): int {
+    return a + b;
+}
 fn main(): int {
     return add(1, 2);
 }

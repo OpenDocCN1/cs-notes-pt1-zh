@@ -42,20 +42,20 @@ prices = [10.99, 4.99, 7.50, 12.75, 14.49]
 2.  将该函数和价格列表传递给`reduce()`。
 3.  接收并打印结果。
 
-```python
-from functools import reduce
 
 ![](img/b675c5d3f46218ee5d9c19714456dffe_9.png)
 
-prices = [10.99, 4.99, 7.50, 12.75, 14.49]
 
 ![](img/b675c5d3f46218ee5d9c19714456dffe_11.png)
 
-def add(x, y):
-    return x + y
 
 ![](img/b675c5d3f46218ee5d9c19714456dffe_13.png)
 
+```python
+from functools import reduce
+prices = [10.99, 4.99, 7.50, 12.75, 14.49]
+def add(x, y):
+    return x + y
 total = reduce(add, prices)
 print(f"总价为：${total:.2f}")
 ```
@@ -70,11 +70,11 @@ print(f"总价为：${total:.2f}")
 
 以下是使用`lambda`表达式重写的代码：
 
-```python
-from functools import reduce
 
 ![](img/b675c5d3f46218ee5d9c19714456dffe_17.png)
 
+```python
+from functools import reduce
 prices = [10.99, 4.99, 7.50, 12.75, 14.49]
 
 total = reduce(lambda x, y: x + y, prices)

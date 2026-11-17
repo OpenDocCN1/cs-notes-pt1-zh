@@ -53,13 +53,13 @@ Lambda表达式的一个常见用途是作为参数传递给标准库算法，�
 
 ![](img/7400bc6a63bfddd3a88e7d6df9eded3a_3.png)
 
+
+![](img/7400bc6a63bfddd3a88e7d6df9eded3a_5.png)
+
 ```cpp
 #include <iostream>
 #include <vector>
 #include <algorithm>
-
-![](img/7400bc6a63bfddd3a88e7d6df9eded3a_5.png)
-
 int main() {
     std::vector<int> my_vector = {1, 25, 3, 20, 5};
 

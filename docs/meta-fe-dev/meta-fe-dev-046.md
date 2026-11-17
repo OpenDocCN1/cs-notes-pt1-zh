@@ -41,6 +41,9 @@
 
 以下是实现此转换的代码示例：
 
+
+![](img/80029ca35eb563512505422b0c781c94_3.png)
+
 ```javascript
 const topDesserts = data.map(dessert => {
   return {
@@ -48,9 +51,6 @@ const topDesserts = data.map(dessert => {
     price: dessert.price
   };
 });
-
-![](img/80029ca35eb563512505422b0c781c94_3.png)
-
 console.log(topDesserts);
 ```
 

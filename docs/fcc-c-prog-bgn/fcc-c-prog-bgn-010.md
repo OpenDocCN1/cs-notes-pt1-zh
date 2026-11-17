@@ -39,13 +39,13 @@ int main() {
 
 ![](img/947fb87572344f7b94ec6743611111ec_2.png)
 
-```c
-#include <stdio.h>
 
 ![](img/947fb87572344f7b94ec6743611111ec_3.png)
 
 ![](img/947fb87572344f7b94ec6743611111ec_4.png)
 
+```c
+#include <stdio.h>
 int main() {
     /* 这行代码用于在屏幕上打印问候语 */
     printf("Hello, World!\n");

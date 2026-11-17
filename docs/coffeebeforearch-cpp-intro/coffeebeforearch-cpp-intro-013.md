@@ -72,13 +72,13 @@ print(my_array);
 
 将以上部分组合起来，得到完整的示例程序：
 
+
+![](img/aab151b8dda55764fb73fb2fa7f72b2e_5.png)
+
 ```cpp
 #include <algorithm>
 #include <array>
 #include <iostream>
-
-![](img/aab151b8dda55764fb73fb2fa7f72b2e_5.png)
-
 // 打印数组的函数
 void print(auto array) {
     for (auto value : array) {

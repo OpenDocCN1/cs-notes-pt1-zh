@@ -197,12 +197,12 @@ const EnhancedComponent = higherOrderComponent(WrappedComponent);
 
 最后，你被介绍了一个使用推荐测试运行器 Jest 和 React Testing Library 的基本测试示例，以说明测试的基本结构。
 
-```javascript
-import { render, screen } from '@testing-library/react';
-import MyComponent from './MyComponent';
 
 ![](img/82bbd898031f1bd6907dfcca54b8d1f0_38.png)
 
+```javascript
+import { render, screen } from '@testing-library/react';
+import MyComponent from './MyComponent';
 test('renders learn react link', () => {
   render(<MyComponent />);
   const linkElement = screen.getByText(/learn react/i);

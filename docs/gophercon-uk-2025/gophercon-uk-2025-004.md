@@ -177,11 +177,11 @@ func main() {
 
 以下是创建管道并在父子进程间传递数据的示例：
 
-```go
-package main
 
 ![](img/5fe9ce228f9e0e7c2bcf42247d3f7a8e_4.png)
 
+```go
+package main
 import (
     "bufio"
     "fmt"

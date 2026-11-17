@@ -41,6 +41,11 @@ else:
 
 我们可以为复选框添加一个回调函数，并在函数内部通过 `key` 访问其状态。
 
+
+![](img/795160f2c71b7ef41e7282933ac2ec83_5.png)
+
+![](img/795160f2c71b7ef41e7282933ac2ec83_6.png)
+
 ```python
 import streamlit as st
 
@@ -49,11 +54,6 @@ def change():
     # 通过 key 访问复选框的当前值
     current_state = st.session_state.my_checker
     print(f"复选框状态已改变为：{current_state}")
-
-![](img/795160f2c71b7ef41e7282933ac2ec83_5.png)
-
-![](img/795160f2c71b7ef41e7282933ac2ec83_6.png)
-
 # 创建带 key 和回调函数的复选框
 st.checkbox('带回调的复选框',
             value=True,
@@ -159,11 +159,11 @@ st.write(f'你最喜欢的汽车是：{car}')
 
 以下是多选下拉框的示例：
 
-```python
-import streamlit as st
 
 ![](img/795160f2c71b7ef41e7282933ac2ec83_19.png)
 
+```python
+import streamlit as st
 # 创建一个多选下拉框
 brands = st.multiselect(
     '你最喜欢的科技品牌是？（可多选）',

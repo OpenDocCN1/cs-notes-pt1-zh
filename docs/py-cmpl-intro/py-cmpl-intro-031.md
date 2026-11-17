@@ -77,6 +77,11 @@ print(f"加密消息：{cipher_text}")
 
 解密是加密的逆过程。我们需要使用相同的 `key` 和 `chars` 列表来还原信息。
 
+
+![](img/39b2be91ac6f5a41e24dd865e738b55e_15.png)
+
+![](img/39b2be91ac6f5a41e24dd865e738b55e_17.png)
+
 ```python
 cipher_text = input("请输入要解密的消息：")
 plain_text = ""
@@ -84,11 +89,6 @@ plain_text = ""
 for letter in cipher_text:
     index = key.index(letter)
     plain_text += chars[index]
-
-![](img/39b2be91ac6f5a41e24dd865e738b55e_15.png)
-
-![](img/39b2be91ac6f5a41e24dd865e738b55e_17.png)
-
 print(f"加密消息：{cipher_text}")
 print(f"解密消息：{plain_text}")
 ```

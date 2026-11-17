@@ -16,14 +16,14 @@
 让我们通过一个具体的例子来理解数据竞争。我们将创建两个线程，每个线程都会对一个共享的整数计数器进行多次递增操作。
 
 以下是示例代码的基本结构：
-```cpp
-#include <iostream>
-#include <thread>
 
 ![](img/c4acf4acd3d46c2be2e9f941331822f2_3.png)
 
 ![](img/c4acf4acd3d46c2be2e9f941331822f2_5.png)
 
+```cpp
+#include <iostream>
+#include <thread>
 int main() {
     int counter = 0; // 共享计数器
 
@@ -112,13 +112,13 @@ std::atomic<int> counter(0);
 ![](img/c4acf4acd3d46c2be2e9f941331822f2_11.png)
 
 以下是修改后的完整代码：
+
+![](img/c4acf4acd3d46c2be2e9f941331822f2_13.png)
+
 ```cpp
 #include <iostream>
 #include <thread>
 #include <atomic> // 包含原子操作头文件
-
-![](img/c4acf4acd3d46c2be2e9f941331822f2_13.png)
-
 int main() {
     std::atomic<int> counter(0); // 声明为原子整数
 

@@ -139,13 +139,16 @@ AnalyzeResult analyze(SettingContext &ctx, AST &tree);
 
 `analyze`函数的核心逻辑是遍历AST中的每个节点，并调用其`analyze`成员函数。根据返回的`MaybeNode`结果，我们决定是重写节点、保留原节点还是记录错误。
 
+
+![](img/a4f2cba96bb70490c3b21f4895f7607b_46.png)
+
+
+![](img/a4f2cba96bb70490c3b21f4895f7607b_48.png)
+
 ```cpp
 // 简化后的核心循环逻辑
 AST new_ast;
 std::vector<ErrorPtr> errors;
-
-![](img/a4f2cba96bb70490c3b21f4895f7607b_46.png)
-
 for (auto &node : tree) {
     auto maybe_node = node->analyze(ctx);
     
@@ -163,9 +166,6 @@ for (auto &node : tree) {
         errors.push_back(maybe_node.getError());
     }
 }
-
-![](img/a4f2cba96bb70490c3b21f4895f7607b_48.png)
-
 if (errors.empty()) {
     return AnalyzeResult::success(new_ast);
 } else {

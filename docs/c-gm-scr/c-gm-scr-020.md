@@ -467,13 +467,6 @@ dt_multiplier += (1.0f - dt_multiplier) * 0.1f * delta_time;
 
 ![](img/ffd282b2d431f9765c707d3effca38b7_378.png)
 
-```c
-typedef struct Block {
-    Vector2 position;
-    int health;
-    struct Block* neighbors[4]; // 最多4个邻居（上、下、左、右）
-    bool is_active;
-} Block;
 
 ![](img/ffd282b2d431f9765c707d3effca38b7_380.png)
 
@@ -495,6 +488,13 @@ typedef struct Block {
 
 ![](img/ffd282b2d431f9765c707d3effca38b7_396.png)
 
+```c
+typedef struct Block {
+    Vector2 position;
+    int health;
+    struct Block* neighbors[4]; // 最多4个邻居（上、下、左、右）
+    bool is_active;
+} Block;
 // 在生成方块时初始化邻居关系
 void init_block_neighbors(Block* block_array, int total_blocks) {
     for (int i = 0; i < total_blocks; ++i) {

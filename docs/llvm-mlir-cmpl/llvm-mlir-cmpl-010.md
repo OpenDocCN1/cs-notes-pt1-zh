@@ -266,18 +266,11 @@ Pass管理器用于组织和运行Pass管道。以下是如何定义和使用Pas
 
 ![](img/175e489c9e191d7e5631039ecf128480_157.png)
 
-```cpp
-// 创建一个顶层的Pass管理器，作用于MLIR模块（ModuleOp）
-PassManager pm(ctx);
-pm.addPass(std::make_unique<MyModulePass>());
 
 ![](img/175e489c9e191d7e5631039ecf128480_159.png)
 
 ![](img/175e489c9e191d7e5631039ecf128480_161.png)
 
-// 创建一个嵌套的Pass管理器，仅作用于特定方言的模块操作
-OpPassManager &nestedModulePM = pm.nest<ModuleOp>();
-nestedModulePM.addPass(std::make_unique<MyDialectModulePass>());
 
 ![](img/175e489c9e191d7e5631039ecf128480_163.png)
 
@@ -285,12 +278,19 @@ nestedModulePM.addPass(std::make_unique<MyDialectModulePass>());
 
 ![](img/175e489c9e191d7e5631039ecf128480_166.png)
 
-// 进一步嵌套，创建一个作用于函数操作的Pass管理器
-OpPassManager &nestedFunctionPM = nestedModulePM.nest<FuncOp>();
-nestedFunctionPM.addPass(std::make_unique<MyFunctionPass>());
 
 ![](img/175e489c9e191d7e5631039ecf128480_167.png)
 
+```cpp
+// 创建一个顶层的Pass管理器，作用于MLIR模块（ModuleOp）
+PassManager pm(ctx);
+pm.addPass(std::make_unique<MyModulePass>());
+// 创建一个嵌套的Pass管理器，仅作用于特定方言的模块操作
+OpPassManager &nestedModulePM = pm.nest<ModuleOp>();
+nestedModulePM.addPass(std::make_unique<MyDialectModulePass>());
+// 进一步嵌套，创建一个作用于函数操作的Pass管理器
+OpPassManager &nestedFunctionPM = nestedModulePM.nest<FuncOp>();
+nestedFunctionPM.addPass(std::make_unique<MyFunctionPass>());
 // 获取要转换的MLIR模块（例如 `moduleOp`）
 // 运行Pass管道，转换是原地（in-place）进行的
 if (failed(pm.run(moduleOp))) {

@@ -87,17 +87,17 @@ print(result)
 
 ![](img/e58cbf877cdc2bb205e37d41a6c36e36_29.png)
 
-```python
-a = 6
-b = 7
 
 ![](img/e58cbf877cdc2bb205e37d41a6c36e36_31.png)
 
-max_num = a if a > b else b
-print(max_num)  # 输出 7
 
 ![](img/e58cbf877cdc2bb205e37d41a6c36e36_33.png)
 
+```python
+a = 6
+b = 7
+max_num = a if a > b else b
+print(max_num)  # 输出 7
 min_num = a if a < b else b
 print(min_num)  # 输出 6
 ```

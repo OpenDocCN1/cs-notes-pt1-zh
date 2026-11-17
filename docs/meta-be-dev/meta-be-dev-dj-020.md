@@ -73,12 +73,12 @@ handler404 = views.handler404
 ```
 
 接下来，在项目级的`views.py`文件中创建处理函数：
-```python
-# myproject/views.py
-from django.http import HttpResponse
 
 ![](img/18875dd42af2ab1757b9f334b5f58084_11.png)
 
+```python
+# myproject/views.py
+from django.http import HttpResponse
 def handler404(request, exception):
     return HttpResponse("404错误：页面未找到")
 ```
@@ -119,12 +119,12 @@ def handler404(request, exception):
 ![](img/18875dd42af2ab1757b9f334b5f58084_22.png)
 
 以下是一个改进的示例：
-```python
-# myproject/views.py
-from django.http import HttpResponseNotFound
 
 ![](img/18875dd42af2ab1757b9f334b5f58084_24.png)
 
+```python
+# myproject/views.py
+from django.http import HttpResponseNotFound
 def handler404(request, exception):
     html_content = """
     <!DOCTYPE html>

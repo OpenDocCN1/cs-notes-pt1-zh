@@ -184,24 +184,24 @@ while is_running:
 
 ![](img/c4b89b28761031c14dd4b1973d1bd265_51.png)
 
-```python
-import random
 
 ![](img/c4b89b28761031c14dd4b1973d1bd265_53.png)
 
-lowest_number = 1
-highest_number = 100
-answer = random.randint(lowest_number, highest_number)
 
 ![](img/c4b89b28761031c14dd4b1973d1bd265_55.png)
 
+
+![](img/c4b89b28761031c14dd4b1973d1bd265_57.png)
+
+```python
+import random
+lowest_number = 1
+highest_number = 100
+answer = random.randint(lowest_number, highest_number)
 guesses = 0
 is_running = True
 
 print(f"Python数字猜谜游戏！\n请选择一个介于 {lowest_number} 和 {highest_number} 之间的数字。")
-
-![](img/c4b89b28761031c14dd4b1973d1bd265_57.png)
-
 while is_running:
     guess = input("请输入你的猜测：")
 

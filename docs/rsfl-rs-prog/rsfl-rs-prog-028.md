@@ -16,13 +16,13 @@
 
 以下是一个示例函数 `greet`，它接收一个 `String` 类型的参数。
 
+
+![](img/85805ced8029b9b9b84fcbc3983e1a25_4.png)
+
 ```rust
 fn greet(name: String) {
     println!("Hello {}", name);
 }
-
-![](img/85805ced8029b9b9b84fcbc3983e1a25_4.png)
-
 fn main() {
     let text = String::from("Bob");
     greet(text);
@@ -121,16 +121,16 @@ fn main() {
 
 以下是计算字符串长度并返回原始字符串和长度的函数示例。
 
-```rust
-fn total_characters(text: String) -> (String, usize) {
-    let length = text.chars().count(); // 计算字符数
-    (text, length) // 以元组形式返回原始字符串和长度
-}
 
 ![](img/85805ced8029b9b9b84fcbc3983e1a25_20.png)
 
 ![](img/85805ced8029b9b9b84fcbc3983e1a25_21.png)
 
+```rust
+fn total_characters(text: String) -> (String, usize) {
+    let length = text.chars().count(); // 计算字符数
+    (text, length) // 以元组形式返回原始字符串和长度
+}
 fn main() {
     let text = String::from("Bob");
     let (text, length) = total_characters(text); // 接收返回的元组

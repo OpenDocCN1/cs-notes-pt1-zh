@@ -54,16 +54,16 @@
 ![](img/d5d0d201bd565083e54ced01d7007158_27.png)
 
 **代码描述：**
-```python
-# 判定问题示例
-def is_clique_of_size_k(graph, k):
-    # 返回 True 或 False
-    pass
 
 ![](img/d5d0d201bd565083e54ced01d7007158_28.png)
 
 ![](img/d5d0d201bd565083e54ced01d7007158_30.png)
 
+```python
+# 判定问题示例
+def is_clique_of_size_k(graph, k):
+    # 返回 True 或 False
+    pass
 # 优化问题示例
 def find_maximum_clique_size(graph):
     # 返回一个整数（最大团的大小）

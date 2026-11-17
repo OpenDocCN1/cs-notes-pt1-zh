@@ -239,11 +239,11 @@ EOF
 
 ![](img/575f8c16fd63c7fa2e9aed94f4bd5043_24.png)
 
-```bash
-echo "lfs" > /etc/hostname
 
 ![](img/575f8c16fd63c7fa2e9aed94f4bd5043_26.png)
 
+```bash
+echo "lfs" > /etc/hostname
 cat > /etc/hosts << "EOF"
 # /etc/hosts
 127.0.0.1  localhost

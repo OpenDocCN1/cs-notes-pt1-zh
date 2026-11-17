@@ -25,6 +25,9 @@
 4.  最后，使用`clang`将处理后的Bitcode文件重新编译为可执行文件。
 
 这个过程可以用以下代码流程描述：
+
+![](img/523fb2a566da04e318a2ea31a5c4e5ef_1.png)
+
 ```bash
 # 1. 构建测试套件（基线）
 cmake ... -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++ ...
@@ -32,9 +35,6 @@ make
 
 # 2. 提取Bitcode (假设通过某种方式获得 .bc 文件)
 extract_bc_from_executable ${EXECUTABLE} -o ${EXECUTABLE}.bc
-
-![](img/523fb2a566da04e318a2ea31a5c4e5ef_1.png)
-
 # 3. 应用自定义Pass
 opt -load=MyPass.so -mypass ${EXECUTABLE}.bc -o ${EXECUTABLE}.optimized.bc
 

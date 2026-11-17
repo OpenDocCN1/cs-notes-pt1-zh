@@ -116,6 +116,9 @@ print(f"经过 {time} 年后的余额为：${total:.2f}")
 
 以下是使用`while True`循环的代码片段：
 
+
+![](img/c78aeb72a18674e25209852c2d86c3c0_6.png)
+
 ```python
 # 获取本金（允许0值）
 while True:
@@ -132,9 +135,6 @@ while True:
         print("利率不能小于0。")
     else:
         break
-
-![](img/c78aeb72a18674e25209852c2d86c3c0_6.png)
-
 # 获取时间（允许0值）
 while True:
     time = int(input("请输入投资年限（整数）："))

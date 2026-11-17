@@ -27,14 +27,14 @@ enum Result<T, E> {
 
 ![](img/25da715ca4eeda440068651cf2fe5e3b_4.png)
 
-```rust
-use std::fs::File;
-use std::io::Read;
 
 ![](img/25da715ca4eeda440068651cf2fe5e3b_6.png)
 
 ![](img/25da715ca4eeda440068651cf2fe5e3b_8.png)
 
+```rust
+use std::fs::File;
+use std::io::Read;
 fn main() {
     let path = "secret.txt";
     let txt = File::open(path);
@@ -90,12 +90,12 @@ match txt {
 
 ![](img/25da715ca4eeda440068651cf2fe5e3b_21.png)
 
-```rust
-use std::fs::File;
-use std::io::ErrorKind;
 
 ![](img/25da715ca4eeda440068651cf2fe5e3b_22.png)
 
+```rust
+use std::fs::File;
+use std::io::ErrorKind;
 fn main() {
     let path = "sample.txt";
     let txt = File::open(path);

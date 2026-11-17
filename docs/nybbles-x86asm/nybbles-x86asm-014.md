@@ -41,13 +41,6 @@
 要使用图形模式，首先需要通过BIOS中断调用切换到模式13h，程序结束时再切换回文本模式。
 
 以下是核心的汇编代码片段：
-```assembly
-; 进入模式13h (320x200x256)
-mov ah, 0      ; 功能号：设置显示模式
-mov al, 13h    ; 模式号：13h
-int 10h        ; 调用BIOS视频中断
-
-; ... 此处执行图形操作 ...
 
 ![](img/2451c89476a44145c20ce97f916c5e8e_11.png)
 
@@ -59,6 +52,13 @@ int 10h        ; 调用BIOS视频中断
 
 ![](img/2451c89476a44145c20ce97f916c5e8e_19.png)
 
+```assembly
+; 进入模式13h (320x200x256)
+mov ah, 0      ; 功能号：设置显示模式
+mov al, 13h    ; 模式号：13h
+int 10h        ; 调用BIOS视频中断
+
+; ... 此处执行图形操作 ...
 ; 退出程序前，切换回文本模式 (模式03h)
 mov ah, 0
 mov al, 03h
@@ -243,13 +243,6 @@ PLOT 100, 100, 7      ; 在(100,100)绘制一个浅灰色像素
 ### 循环绘制示例
 
 以下代码演示了如何使用循环和 `PLOT` 宏来填充整个屏幕，每行变化一次颜色。
-```assembly
-    mov ax, 0A000h
-    mov es, ax          ; 设置视频内存段 (只需一次)
-
-    xor ax, ax          ; AX = 0 (Y坐标)
-    xor bx, bx          ; BX = 0 (X坐标)
-    mov dx, 1           ; DX = 1 (颜色，初始值)
 
 ![](img/2451c89476a44145c20ce97f916c5e8e_80.png)
 
@@ -257,6 +250,29 @@ PLOT 100, 100, 7      ; 在(100,100)绘制一个浅灰色像素
 
 ![](img/2451c89476a44145c20ce97f916c5e8e_84.png)
 
+
+![](img/2451c89476a44145c20ce97f916c5e8e_86.png)
+
+![](img/2451c89476a44145c20ce97f916c5e8e_88.png)
+
+![](img/2451c89476a44145c20ce97f916c5e8e_90.png)
+
+![](img/2451c89476a44145c20ce97f916c5e8e_92.png)
+
+
+![](img/2451c89476a44145c20ce97f916c5e8e_94.png)
+
+![](img/2451c89476a44145c20ce97f916c5e8e_96.png)
+
+![](img/2451c89476a44145c20ce97f916c5e8e_98.png)
+
+```assembly
+    mov ax, 0A000h
+    mov es, ax          ; 设置视频内存段 (只需一次)
+
+    xor ax, ax          ; AX = 0 (Y坐标)
+    xor bx, bx          ; BX = 0 (X坐标)
+    mov dx, 1           ; DX = 1 (颜色，初始值)
 screen_loop:
     PLOT ax, bx, dx     ; 调用宏绘制像素
 
@@ -271,24 +287,8 @@ screen_loop:
     cmp ax, 200         ; 是否到达屏幕底部？
     jl screen_loop      ; 如果小于200，继续循环
     jmp .drawing_done   ; 否则结束绘制
-
-![](img/2451c89476a44145c20ce97f916c5e8e_86.png)
-
-![](img/2451c89476a44145c20ce97f916c5e8e_88.png)
-
-![](img/2451c89476a44145c20ce97f916c5e8e_90.png)
-
-![](img/2451c89476a44145c20ce97f916c5e8e_92.png)
-
 .same_line:
     jmp screen_loop     ; 继续绘制当前行的下一个像素
-
-![](img/2451c89476a44145c20ce97f916c5e8e_94.png)
-
-![](img/2451c89476a44145c20ce97f916c5e8e_96.png)
-
-![](img/2451c89476a44145c20ce97f916c5e8e_98.png)
-
 .drawing_done:
 ```
 ### 优化思路

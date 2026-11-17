@@ -27,6 +27,9 @@
 一个典型的图形应用程序遵循几个基本阶段。我们将代码结构分为初始化、主循环和清理三个部分。
 
 以下是我们的程序框架：
+
+![](img/96f41c9b19187d09242c25e448e43fd2_9.png)
+
 ```cpp
 #include <SDL2/SDL.h>
 #include <iostream>
@@ -35,9 +38,6 @@
 void InitializeProgram();
 void MainLoop();
 void Cleanup();
-
-![](img/96f41c9b19187d09242c25e448e43fd2_9.png)
-
 int main() {
     InitializeProgram();
     MainLoop();
@@ -70,15 +70,15 @@ void Cleanup() {}
 ![](img/96f41c9b19187d09242c25e448e43fd2_17.png)
 
 相关代码片段如下：
+
+![](img/96f41c9b19187d09242c25e448e43fd2_19.png)
+
 ```cpp
 // 全局变量
 int gScreenWidth = 640;
 int gScreenHeight = 480;
 SDL_Window* gGraphicsApplicationWindow = nullptr;
 SDL_GLContext gOpenGLContext = nullptr;
-
-![](img/96f41c9b19187d09242c25e448e43fd2_19.png)
-
 void InitializeProgram() {
     // 初始化SDL
     if (SDL_Init(SDL_INIT_VIDEO) < 0) {
@@ -149,11 +149,14 @@ g++ main.cpp glad.c -I./include -lSDL2 -ldl
 ![](img/96f41c9b19187d09242c25e448e43fd2_24.png)
 
 以下是主循环的基本结构：
-```cpp
-bool gQuit = false; // 全局控制变量
 
 ![](img/96f41c9b19187d09242c25e448e43fd2_26.png)
 
+
+![](img/96f41c9b19187d09242c25e448e43fd2_28.png)
+
+```cpp
+bool gQuit = false; // 全局控制变量
 void MainLoop() {
     while (!gQuit) {
         Input();      // 处理输入
@@ -163,9 +166,6 @@ void MainLoop() {
         SDL_GL_SwapWindow(gGraphicsApplicationWindow);
     }
 }
-
-![](img/96f41c9b19187d09242c25e448e43fd2_28.png)
-
 void Input() {
     SDL_Event e;
     // 持续轮询事件

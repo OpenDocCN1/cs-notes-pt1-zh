@@ -112,16 +112,16 @@ println!("{:?}", numbers); // 输出：{2, 3, 4, 5}
 
 以下是获取集合信息和管理集合的常用方法。
 
-```rust
-let numbers = HashSet::from([1, 2, 3, 4, 5]);
-
-// 获取集合长度（元素个数）
-println!("{}", numbers.len()); // 输出：5
 
 ![](img/0287554462730bcaa448b148b94f1606_22.png)
 
 ![](img/0287554462730bcaa448b148b94f1606_23.png)
 
+```rust
+let numbers = HashSet::from([1, 2, 3, 4, 5]);
+
+// 获取集合长度（元素个数）
+println!("{}", numbers.len()); // 输出：5
 // 检查集合是否为空
 println!("{}", numbers.is_empty()); // 输出：false
 
@@ -203,14 +203,14 @@ println!("交集: {:?}", intersection); // 输出：{2, 3}
 
 差集包含存在于第一个集合但不存在于第二个集合中的元素。**注意：差集的顺序很重要**。
 
-```rust
-let diff1: HashSet<&i32> = hs1.difference(&hs2).collect();
-println!("hs1 - hs2: {:?}", diff1); // 输出：{1}
 
 ![](img/0287554462730bcaa448b148b94f1606_31.png)
 
 ![](img/0287554462730bcaa448b148b94f1606_32.png)
 
+```rust
+let diff1: HashSet<&i32> = hs1.difference(&hs2).collect();
+println!("hs1 - hs2: {:?}", diff1); // 输出：{1}
 let diff2: HashSet<&i32> = hs2.difference(&hs1).collect();
 println!("hs2 - hs1: {:?}", diff2); // 输出：{4}
 ```

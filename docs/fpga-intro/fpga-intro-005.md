@@ -96,15 +96,15 @@ assign done = (state == STATE_DONE);
 
 将摩尔型转换为米利型，主要修改输出逻辑部分：
 
-```verilog
-// 状态定义（减少一个状态）
-localparam STATE_IDLE  = 1'b0;
-localparam STATE_COUNT = 1'b1;
 
 ![](img/710397d6b0f2ab1a33beb5aeb7fc3092_3.png)
 
 ![](img/710397d6b0f2ab1a33beb5aeb7fc3092_4.png)
 
+```verilog
+// 状态定义（减少一个状态）
+localparam STATE_IDLE  = 1'b0;
+localparam STATE_COUNT = 1'b1;
 // 输出逻辑（取决于当前状态和输入 - 米利型特点）
 always @(*) begin
     case (state)

@@ -17,6 +17,9 @@
 我们分配一块32字节（16个状态）的内存作为栈，并维护一个栈指针。栈从高地址向低地址增长。
 
 **数据结构定义：**
+
+![](img/280578a6e4f2fc5320877f4de87185f8_3.png)
+
 ```assembly
 ; 状态结构体
 struc state_def
@@ -24,9 +27,6 @@ struc state_def
     .pad    db ?    ; 填充字节，保证结构体大小为偶数
     .callback dd ?  ; 该状态的回调函数指针
 endstruc
-
-![](img/280578a6e4f2fc5320877f4de87185f8_3.png)
-
 ; 状态栈指针变量
 state_stack_ptr dw ?
 ```

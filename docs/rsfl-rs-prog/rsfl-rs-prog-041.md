@@ -73,15 +73,15 @@ let b: Option<u8> = Some(20);
 
 ![](img/f320e759847aa656ee8ef86737e7ac9e_11.png)
 
-```rust
-let selected_user: Option<&str> = Some("Bob");
-let user_name = selected_user.unwrap_or("No user selected");
-println!("{:?}", user_name); // 输出: "Bob"
 
 ![](img/f320e759847aa656ee8ef86737e7ac9e_13.png)
 
 ![](img/f320e759847aa656ee8ef86737e7ac9e_14.png)
 
+```rust
+let selected_user: Option<&str> = Some("Bob");
+let user_name = selected_user.unwrap_or("No user selected");
+println!("{:?}", user_name); // 输出: "Bob"
 let no_user: Option<&str> = None;
 let user_name2 = no_user.unwrap_or("No user selected");
 println!("{:?}", user_name2); // 输出: "No user selected"
@@ -97,15 +97,15 @@ println!("{:?}", user_name2); // 输出: "No user selected"
 
 ![](img/f320e759847aa656ee8ef86737e7ac9e_19.png)
 
-```rust
-let selected_number: Option<i32> = Some(10);
-let value = selected_number.unwrap();
-println!("{:?}", value); // 输出: 10
 
 ![](img/f320e759847aa656ee8ef86737e7ac9e_21.png)
 
 ![](img/f320e759847aa656ee8ef86737e7ac9e_22.png)
 
+```rust
+let selected_number: Option<i32> = Some(10);
+let value = selected_number.unwrap();
+println!("{:?}", value); // 输出: 10
 let no_number: Option<i32> = None;
 // let value2 = no_number.unwrap(); // 运行此行代码会导致程序崩溃！
 ```

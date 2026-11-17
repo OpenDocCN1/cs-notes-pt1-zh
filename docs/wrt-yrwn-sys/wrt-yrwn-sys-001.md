@@ -61,6 +61,11 @@
 
 `Makefile` 用于自动化编译和链接过程。其核心规则如下：
 
+
+![](img/59eaeaecbe2491e5aee4b05d60ae8c6f_7.png)
+
+![](img/59eaeaecbe2491e5aee4b05d60ae8c6f_9.png)
+
 ```makefile
 # 定义编译器和参数
 CXXFLAGS = -m32 -nostdlib -fno-builtin -fno-rtti -fno-exceptions -fno-leading-underscore
@@ -78,11 +83,6 @@ LDFLAGS = -m elf_i386 -T linker.ld
 # 链接所有.o文件生成kernel.bin
 kernel.bin: linker.ld loader.o kernel.o
     ld $(LDFLAGS) -o $@ loader.o kernel.o
-
-![](img/59eaeaecbe2491e5aee4b05d60ae8c6f_7.png)
-
-![](img/59eaeaecbe2491e5aee4b05d60ae8c6f_9.png)
-
 # 安装内核到/boot目录
 install: kernel.bin
     cp kernel.bin /boot/mykernel.bin
@@ -94,11 +94,6 @@ install: kernel.bin
 
 其核心代码如下：
 
-```assembly
-# 定义多引导头，使GRUB识别本文件为合法内核
-.set MAGIC, 0x1BADB002
-.set FLAGS, 0
-.set CHECKSUM, -(MAGIC + FLAGS)
 
 ![](img/59eaeaecbe2491e5aee4b05d60ae8c6f_11.png)
 
@@ -106,13 +101,18 @@ install: kernel.bin
 
 ![](img/59eaeaecbe2491e5aee4b05d60ae8c6f_15.png)
 
+
+![](img/59eaeaecbe2491e5aee4b05d60ae8c6f_17.png)
+
+```assembly
+# 定义多引导头，使GRUB识别本文件为合法内核
+.set MAGIC, 0x1BADB002
+.set FLAGS, 0
+.set CHECKSUM, -(MAGIC + FLAGS)
 .section .multiboot
     .long MAGIC
     .long FLAGS
     .long CHECKSUM
-
-![](img/59eaeaecbe2491e5aee4b05d60ae8c6f_17.png)
-
 # 设置栈空间（2MB）和栈指针
 .section .bss
 .align 16
@@ -149,9 +149,6 @@ loop:
 
 以下是 `kernel.cpp` 的初始实现：
 
-```cpp
-// 定义视频内存地址
-volatile unsigned short* video_memory = (unsigned short*)0xB8000;
 
 ![](img/59eaeaecbe2491e5aee4b05d60ae8c6f_19.png)
 
@@ -161,6 +158,9 @@ volatile unsigned short* video_memory = (unsigned short*)0xB8000;
 
 ![](img/59eaeaecbe2491e5aee4b05d60ae8c6f_25.png)
 
+```cpp
+// 定义视频内存地址
+volatile unsigned short* video_memory = (unsigned short*)0xB8000;
 // 自定义字符串打印函数
 void print_string(const char* str) {
     for(int i = 0; str[i] != '\0'; ++i) {

@@ -41,15 +41,15 @@
 程序上，我们可以创建一个指针数组（或引用数组），数组大小为顶点数 `V`。数组中的每个元素（指针）指向一个动态数据结构，该结构存储了对应顶点的邻居列表。
 
 例如，在C/C++中，可以这样实现：
+
+![](img/b0a32ea9cb234fcca3f6f54f387f20ef_11.png)
+
 ```c
 // 假设使用链表存储邻居
 struct ListNode {
     int vertex;
     struct ListNode* next;
 };
-
-![](img/b0a32ea9cb234fcca3f6f54f387f20ef_11.png)
-
 struct ListNode* adjacencyList[V]; // 指针数组
 ```
 `adjacencyList[i]` 指向一个链表，该链表包含了顶点 `i` 的所有邻居。

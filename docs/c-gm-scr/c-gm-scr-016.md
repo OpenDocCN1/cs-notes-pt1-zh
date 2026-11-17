@@ -456,15 +456,6 @@
 ![](img/d2b281400e0d90c00f492f0adbc6943a_371.png)
 
 以下是分析器的核心结构：
-```c
-// 性能分析数据结构
-typedef struct {
-    u64 elapsed_time; // 总耗时（微秒或毫秒）
-    u32 hit_count;    // 被调用的次数
-} ProfileData;
-
-// 分析器实例
-ProfileData g_profile_data[PROFILE_SLOT_COUNT];
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_373.png)
 
@@ -476,10 +467,6 @@ ProfileData g_profile_data[PROFILE_SLOT_COUNT];
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_381.png)
 
-// 开始分析一个代码块
-void profile_begin(int slot_index) {
-    g_profile_data[slot_index].start_time = os_get_performance_counter();
-}
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_383.png)
 
@@ -493,6 +480,19 @@ void profile_begin(int slot_index) {
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_393.png)
 
+```c
+// 性能分析数据结构
+typedef struct {
+    u64 elapsed_time; // 总耗时（微秒或毫秒）
+    u32 hit_count;    // 被调用的次数
+} ProfileData;
+
+// 分析器实例
+ProfileData g_profile_data[PROFILE_SLOT_COUNT];
+// 开始分析一个代码块
+void profile_begin(int slot_index) {
+    g_profile_data[slot_index].start_time = os_get_performance_counter();
+}
 // 结束分析一个代码块
 void profile_end(int slot_index) {
     u64 end_time = os_get_performance_counter();

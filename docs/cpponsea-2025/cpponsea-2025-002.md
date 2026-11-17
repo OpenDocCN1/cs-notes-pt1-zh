@@ -248,12 +248,6 @@ ADL 是实现**运算符重载**和**泛型编程**的关键。例如，`std::co
 
 ![](img/850194d5ca28e415c2cdfff332ac5be1_99.png)
 
-```cpp
-void select(int) {}      // 1. 精确匹配 int
-void select(short) {}    // 1. 精确匹配 short
-void select(double) {}   // 3. 标准转换 (float->double)
-void select(std::string_view) {} // 4. 用户定义转换 (char*->string_view)
-void select(...) {}      // 5. 最后的选择
 
 ![](img/850194d5ca28e415c2cdfff332ac5be1_101.png)
 
@@ -263,6 +257,12 @@ void select(...) {}      // 5. 最后的选择
 
 ![](img/850194d5ca28e415c2cdfff332ac5be1_107.png)
 
+```cpp
+void select(int) {}      // 1. 精确匹配 int
+void select(short) {}    // 1. 精确匹配 short
+void select(double) {}   // 3. 标准转换 (float->double)
+void select(std::string_view) {} // 4. 用户定义转换 (char*->string_view)
+void select(...) {}      // 5. 最后的选择
 int main() {
     select(42);          // 调用 select(int)，精确匹配
     short s = 42;
@@ -333,10 +333,6 @@ int main() {
 
 ![](img/850194d5ca28e415c2cdfff332ac5be1_141.png)
 
-```cpp
-template<typename T> T sqrt(T); // (1) 通用模板
-template<typename T> std::complex<T> sqrt(std::complex<T>); // (2) 针对 complex 的模板
-float sqrt(float); // (3) 普通函数
 
 ![](img/850194d5ca28e415c2cdfff332ac5be1_143.png)
 
@@ -344,6 +340,10 @@ float sqrt(float); // (3) 普通函数
 
 ![](img/850194d5ca28e415c2cdfff332ac5be1_147.png)
 
+```cpp
+template<typename T> T sqrt(T); // (1) 通用模板
+template<typename T> std::complex<T> sqrt(std::complex<T>); // (2) 针对 complex 的模板
+float sqrt(float); // (3) 普通函数
 std::complex<float> z;
 auto r1 = sqrt(42);    // 调用 (1)，int 匹配 T
 auto r2 = sqrt(3.14f); // 调用 (3)，普通函数优于模板 (1)

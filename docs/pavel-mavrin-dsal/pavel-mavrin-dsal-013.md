@@ -123,15 +123,18 @@
 ![](img/f40506d187648ea1c9e8ced70ef087b8_88.png)
 
 **核心代码框架**：
-```python
-# 假设 n 为顶点数，graph[v] 是 v 的邻接表（包含边权）
-dp = [[INF] * n for _ in range(1 << n)]
-dp[1 << s][s] = 0  # 初始状态，只包含起点 s
 
 ![](img/f40506d187648ea1c9e8ced70ef087b8_90.png)
 
 ![](img/f40506d187648ea1c9e8ced70ef087b8_92.png)
 
+
+![](img/f40506d187648ea1c9e8ced70ef087b8_94.png)
+
+```python
+# 假设 n 为顶点数，graph[v] 是 v 的邻接表（包含边权）
+dp = [[INF] * n for _ in range(1 << n)]
+dp[1 << s][s] = 0  # 初始状态，只包含起点 s
 for mask in range(1 << n): # 遍历所有子集
     for v in range(n):
         if not (mask & (1 << v)): # 如果 v 不在当前子集中，跳过
@@ -141,9 +144,6 @@ for mask in range(1 << n): # 遍历所有子集
                 continue
             new_mask = mask | (1 << u)
             dp[new_mask][u] = min(dp[new_mask][u], dp[mask][v] + weight)
-
-![](img/f40506d187648ea1c9e8ced70ef087b8_94.png)
-
 # 寻找访问所有顶点后的最小成本
 full_mask = (1 << n) - 1
 answer = min(dp[full_mask][v] for v in range(n))

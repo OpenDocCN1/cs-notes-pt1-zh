@@ -93,6 +93,9 @@ rocky
 
 现在，让我们从头创建一个更完整的清单文件，整合以上概念：
 
+
+![](img/dbfc39e5710892a77b218eda87758eae_15.png)
+
 ```ini
 [webservers]
 web1
@@ -109,9 +112,6 @@ db1
 [rocky]
 web2
 db2
-
-![](img/dbfc39e5710892a77b218eda87758eae_15.png)
-
 [servers:children]
 ubuntu
 rocky

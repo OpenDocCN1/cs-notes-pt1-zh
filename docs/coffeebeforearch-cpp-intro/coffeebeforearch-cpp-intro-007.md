@@ -26,11 +26,11 @@ while (condition) {
 
 让我们通过一个简单的例子来理解。假设我们有一些工作项需要处理，但数量不确定。
 
-```cpp
-#include <iostream>
 
 ![](img/c9d18556d652157eb40df13167d24ceb_3.png)
 
+```cpp
+#include <iostream>
 int main() {
     int work_items = 10; // 初始化工作项数量
 

@@ -163,14 +163,14 @@ ls -l
 
 **注意**：只有当没有任何容器在使用该卷时，你才能删除它。
 
-```bash
-# 首先删除使用该卷的容器
-docker rm -f test2
 
 ![](img/5d21805ef1eaa0dbaaac135c99478f32_22.png)
 
 ![](img/5d21805ef1eaa0dbaaac135c99478f32_23.png)
 
+```bash
+# 首先删除使用该卷的容器
+docker rm -f test2
 # 然后删除数据卷
 docker volume rm sample
 ```

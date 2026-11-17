@@ -84,14 +84,14 @@ int characterAge = 67;
 
 此外，我们还可以在程序运行过程中改变变量的值：
 
-```c
-int characterAge = 67; // 初始年龄
-printf("He was %d years old.\n", characterAge);
 
 ![](img/2fb5d479310a7858220e936ba30627af_11.png)
 
 ![](img/2fb5d479310a7858220e936ba30627af_12.png)
 
+```c
+int characterAge = 67; // 初始年龄
+printf("He was %d years old.\n", characterAge);
 characterAge = 30; // 在故事中途修改年龄
 printf("He did not like being %d.\n", characterAge);
 ```

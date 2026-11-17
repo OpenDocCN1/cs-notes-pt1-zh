@@ -214,6 +214,9 @@ AVL树（以发明者Adelson-Velsky和Landis命名）是一种**高度平衡的�
 ![](img/991d152afafa33a68c0aa8e5f4c6c636_104.png)
 
 **代码/图示逻辑**：
+
+![](img/991d152afafa33a68c0aa8e5f4c6c636_106.png)
+
 ```
 不平衡状态:
         A (BF=+2)
@@ -221,9 +224,6 @@ AVL树（以发明者Adelson-Velsky和Landis命名）是一种**高度平衡的�
       B (BF=+1)
      /
     C
-
-![](img/991d152afafa33a68c0aa8e5f4c6c636_106.png)
-
 执行LL旋转(右旋)后:
       B
      / \
@@ -254,13 +254,6 @@ AVL树（以发明者Adelson-Velsky和Landis命名）是一种**高度平衡的�
 ![](img/991d152afafa33a68c0aa8e5f4c6c636_117.png)
 
 **代码/图示逻辑**：
-```
-不平衡状态:
-    A (BF=-2)
-     \
-      B (BF=-1)
-       \
-        C
 
 ![](img/991d152afafa33a68c0aa8e5f4c6c636_119.png)
 
@@ -270,6 +263,13 @@ AVL树（以发明者Adelson-Velsky和Landis命名）是一种**高度平衡的�
 
 ![](img/991d152afafa33a68c0aa8e5f4c6c636_123.png)
 
+```
+不平衡状态:
+    A (BF=-2)
+     \
+      B (BF=-1)
+       \
+        C
 执行RR旋转(左旋)后:
       B
      / \
@@ -305,6 +305,13 @@ AVL树（以发明者Adelson-Velsky和Landis命名）是一种**高度平衡的�
 ![](img/991d152afafa33a68c0aa8e5f4c6c636_138.png)
 
 **代码/图示逻辑**：
+
+![](img/991d152afafa33a68c0aa8e5f4c6c636_140.png)
+
+![](img/991d152afafa33a68c0aa8e5f4c6c636_141.png)
+
+![](img/991d152afafa33a68c0aa8e5f4c6c636_142.png)
+
 ```
 不平衡状态:
         A (BF=+2)
@@ -319,13 +326,6 @@ AVL树（以发明者Adelson-Velsky和Landis命名）是一种**高度平衡的�
       C
      /
     B
-
-![](img/991d152afafa33a68c0aa8e5f4c6c636_140.png)
-
-![](img/991d152afafa33a68c0aa8e5f4c6c636_141.png)
-
-![](img/991d152afafa33a68c0aa8e5f4c6c636_142.png)
-
 第二步：对A进行LL旋转(右旋)
         C
        / \
@@ -359,6 +359,9 @@ AVL树（以发明者Adelson-Velsky和Landis命名）是一种**高度平衡的�
 也可以理解为：将 `B` 的左孩子 `C` 提升为新的根节点。
 
 **代码/图示逻辑**：
+
+![](img/991d152afafa33a68c0aa8e5f4c6c636_159.png)
+
 ```
 不平衡状态:
     A (BF=-2)
@@ -373,9 +376,6 @@ AVL树（以发明者Adelson-Velsky和Landis命名）是一种**高度平衡的�
       C
        \
         B
-
-![](img/991d152afafa33a68c0aa8e5f4c6c636_159.png)
-
 第二步：对A进行RR旋转(左旋)
         C
        / \

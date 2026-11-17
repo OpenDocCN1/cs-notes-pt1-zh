@@ -109,33 +109,33 @@ class Student:
 ![](img/5bfb5bb56c14c748bea4c8745236b37a_33.png)
 
 让我们创建几个学生对象并测试我们的方法：
-```python
-# 调用类方法，此时还没有学生
-print(Student.get_count())
 
 ![](img/5bfb5bb56c14c748bea4c8745236b37a_35.png)
 
-# 创建三个学生对象
-student1 = Student("海绵宝宝", 3.2)
-student2 = Student("派大星", 2.0)
-student3 = Student("珊迪", 4.0)
 
 ![](img/5bfb5bb56c14c748bea4c8745236b37a_37.png)
 
-# 再次调用类方法查看总数
-print(Student.get_count())
 
 ![](img/5bfb5bb56c14c748bea4c8745236b37a_39.png)
 
 ![](img/5bfb5bb56c14c748bea4c8745236b37a_41.png)
 
-# 调用实例方法查看某个学生的信息
-print(student1.get_info())
 
 ![](img/5bfb5bb56c14c748bea4c8745236b37a_43.png)
 
 ![](img/5bfb5bb56c14c748bea4c8745236b37a_45.png)
 
+```python
+# 调用类方法，此时还没有学生
+print(Student.get_count())
+# 创建三个学生对象
+student1 = Student("海绵宝宝", 3.2)
+student2 = Student("派大星", 2.0)
+student3 = Student("珊迪", 4.0)
+# 再次调用类方法查看总数
+print(Student.get_count())
+# 调用实例方法查看某个学生的信息
+print(student1.get_info())
 # 调用类方法查看平均GPA
 print(Student.get_average_gpa())
 ```

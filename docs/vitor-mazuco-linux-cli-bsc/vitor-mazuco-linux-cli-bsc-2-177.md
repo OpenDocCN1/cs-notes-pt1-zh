@@ -102,28 +102,28 @@ docker run --rm -v $(pwd)/top-secret.txt:/secret/top-secret.txt test-breach
 
 以下是修改后的`Dockerfile`安全实践：
 
+
+![](img/16ed58bd543865bc421831b68357072e_6.png)
+
+![](img/16ed58bd543865bc421831b68357072e_7.png)
+
+
+![](img/16ed58bd543865bc421831b68357072e_9.png)
+
+
+![](img/16ed58bd543865bc421831b68357072e_10.png)
+
 ```dockerfile
 # 安全实践的 Dockerfile
 FROM ubuntu:latest
 
 # 1. 创建一个新的用户组，GID设为3000
 RUN groupadd -g 3000 demogroup
-
-![](img/16ed58bd543865bc421831b68357072e_6.png)
-
-![](img/16ed58bd543865bc421831b68357072e_7.png)
-
 # 2. 创建一个新的用户，UID设为4000，并将其加入上一步创建的组
 RUN useradd -u 4000 -g demogroup demo-user
-
-![](img/16ed58bd543865bc421831b68357072e_9.png)
-
 # 3. 将宿主机文件复制到容器内，并更改所有权为新建的用户
 COPY top-secret.txt /secret/
 RUN chown demo-user:demogroup /secret/top-secret.txt
-
-![](img/16ed58bd543865bc421831b68357072e_10.png)
-
 # 4. 切换到新建的非root用户
 USER demo-user
 

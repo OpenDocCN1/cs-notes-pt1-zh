@@ -27,12 +27,12 @@
 在 `token.py` 文件的 `TokenType` 枚举中，我们需要添加新的符号。
 
 **代码示例：**
-```python
-# 在符号区域添加
-BANG = ‘BANG‘ # 对应 ‘!‘
 
 ![](img/69db6256f9dfb864a5ccc710bf040937_9.png)
 
+```python
+# 在符号区域添加
+BANG = ‘BANG‘ # 对应 ‘!‘
 # 在赋值运算符区域添加
 PLUS_EQ = ‘PLUS_EQ‘    # ‘+=‘
 MINUS_EQ = ‘MINUS_EQ‘  # ‘-=‘
@@ -299,18 +299,18 @@ def visit_assign_statement(self, node):
 ![](img/69db6256f9dfb864a5ccc710bf040937_73.png)
 
 **测试示例 (`test.line`):**
+
+![](img/69db6256f9dfb864a5ccc710bf040937_75.png)
+
+
+![](img/69db6256f9dfb864a5ccc710bf040937_77.png)
+
 ```
 x = 10
 x += 5
 print(x) # 应输出 15
-
-![](img/69db6256f9dfb864a5ccc710bf040937_75.png)
-
 y = -20
 print(y) # 应输出 -20
-
-![](img/69db6256f9dfb864a5ccc710bf040937_77.png)
-
 flag = !false
 print(flag) # 应输出 true
 ```

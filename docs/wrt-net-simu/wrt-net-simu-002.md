@@ -53,6 +53,11 @@ in_addr_t generate(...) {
 
 ![](img/e47078a6dc7c2d22a36e3072a2a75fd0_25.png)
 
+
+![](img/e47078a6dc7c2d22a36e3072a2a75fd0_27.png)
+
+![](img/e47078a6dc7c2d22a36e3072a2a75fd0_29.png)
+
 ```c
 // birch_utils.h 或类似头文件中
 #ifndef BIRCH_UTILS_H
@@ -66,11 +71,6 @@ typedef unsigned short in16;
 typedef unsigned int in32;
 
 void zero(in8* str, in16 size);
-
-![](img/e47078a6dc7c2d22a36e3072a2a75fd0_27.png)
-
-![](img/e47078a6dc7c2d22a36e3072a2a75fd0_29.png)
-
 #endif
 ```
 

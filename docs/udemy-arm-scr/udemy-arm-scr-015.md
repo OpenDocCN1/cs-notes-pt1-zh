@@ -77,13 +77,13 @@ uart_write_char:
 
 ![](img/c7a34747b511647d7bcfff9d3319c533_36.png)
 
+
+![](img/c7a34747b511647d7bcfff9d3319c533_38.png)
+
 ```assembly
 uart_write_char:
     LDR R1, =UART2_SR             ; 步骤1：加载状态寄存器地址到R1
     LDR R2, [R1]                  ; 读取状态寄存器的值到R2
-
-![](img/c7a34747b511647d7bcfff9d3319c533_38.png)
-
 check_tx_flag:
     AND R2, R2, #UART_TX_BUFFER_FLAG ; 步骤2：检查发送缓冲区满标志位
     CMP R2, #0                    ; 比较结果是否为0（缓冲区是否空闲）

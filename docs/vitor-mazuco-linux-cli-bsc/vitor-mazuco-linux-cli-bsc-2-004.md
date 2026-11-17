@@ -33,13 +33,13 @@
 
 以下是脚本 `status_server.sh` 的基本结构：
 
-```bash
-#!/bin/bash
 
 ![](img/b80aad6d7d953252f9199ff35854cfc0_9.png)
 
 ![](img/b80aad6d7d953252f9199ff35854cfc0_11.png)
 
+```bash
+#!/bin/bash
 echo "主机名: $(hostname)"
 echo "内核版本: $(uname -r)"
 echo "当前日期: $(date)"
@@ -88,11 +88,11 @@ echo "当前日期: $(date)"
 
 让我们将这些命令整合到我们的脚本中，形成一个完整的报告。最终的脚本内容如下：
 
-```bash
-#!/bin/bash
 
 ![](img/b80aad6d7d953252f9199ff35854cfc0_21.png)
 
+```bash
+#!/bin/bash
 echo "==================== 服务器状态报告 ===================="
 echo "主机名: $(hostname)"
 echo "内核版本: $(uname -r)"

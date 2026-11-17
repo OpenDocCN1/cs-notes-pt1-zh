@@ -78,11 +78,11 @@ except PermissionError:
 
 ![](img/8f60d14447ea4c81899e9ca66fb585e8_14.png)
 
-```python
-import json
 
 ![](img/8f60d14447ea4c81899e9ca66fb585e8_16.png)
 
+```python
+import json
 json_file_path = "C:/Users/YourName/Desktop/input.json"
 ```
 

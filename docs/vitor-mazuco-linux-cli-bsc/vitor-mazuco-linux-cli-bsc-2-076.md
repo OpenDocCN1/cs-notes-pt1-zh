@@ -63,11 +63,11 @@ connection = MySQLdb.connect(
 让我们使用`nano`编辑器创建一个新文件，并将其命名为`connection_test.py`，以便明确这是一个连接测试。
 
 以下是测试脚本的内容：
-```python
-import MySQLdb
 
 ![](img/d9921622dd0443979237805786f9e46d_5.png)
 
+```python
+import MySQLdb
 try:
     # 尝试建立数据库连接
     connection = MySQLdb.connect(

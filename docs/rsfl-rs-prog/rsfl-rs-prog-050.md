@@ -137,11 +137,11 @@ impl Config {
 
 ![](img/08e3e4950ee4c0131327b3c6bc9de685_36.png)
 
-```rust
-use std::io::{BufRead, BufReader};
 
 ![](img/08e3e4950ee4c0131327b3c6bc9de685_38.png)
 
+```rust
+use std::io::{BufRead, BufReader};
 fn grep(reader: &mut BufReader<std::fs::File>, pattern: &str, case_insensitive: bool) {
     let mut line = String::new();
 
@@ -178,13 +178,13 @@ fn grep(reader: &mut BufReader<std::fs::File>, pattern: &str, case_insensitive: 
 
 接着，我们实现 `grep_file` 函数，它打开指定文件并将文件句柄传递给 `grep` 函数。
 
-```rust
-use std::fs::File;
 
 ![](img/08e3e4950ee4c0131327b3c6bc9de685_44.png)
 
 ![](img/08e3e4950ee4c0131327b3c6bc9de685_46.png)
 
+```rust
+use std::fs::File;
 fn grep_file(file: &str, config: &Config) -> Result<(), String> {
     let file = match File::open(file) {
         Ok(f) => f,
@@ -216,8 +216,6 @@ fn grep_file(file: &str, config: &Config) -> Result<(), String> {
 
 ![](img/08e3e4950ee4c0131327b3c6bc9de685_56.png)
 
-```rust
-use std::env;
 
 ![](img/08e3e4950ee4c0131327b3c6bc9de685_58.png)
 
@@ -225,6 +223,8 @@ use std::env;
 
 ![](img/08e3e4950ee4c0131327b3c6bc9de685_61.png)
 
+```rust
+use std::env;
 fn main() -> Result<(), String> {
     let args: Vec<String> = env::args().collect();
     let config = Config::new(&args)?;

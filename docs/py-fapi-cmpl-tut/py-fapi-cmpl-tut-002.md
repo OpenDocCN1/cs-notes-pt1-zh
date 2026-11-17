@@ -42,18 +42,18 @@ async def get_current_user(
 
 ![](img/7d5adcabc5e6be579c6937eaaf16dbca_8.png)
 
-```python
-from fastapi import APIRouter, Depends
-from source.auth.dependencies import get_current_user
 
 ![](img/7d5adcabc5e6be579c6937eaaf16dbca_10.png)
 
-router = APIRouter()
 
 ![](img/7d5adcabc5e6be579c6937eaaf16dbca_12.png)
 
 ![](img/7d5adcabc5e6be579c6937eaaf16dbca_14.png)
 
+```python
+from fastapi import APIRouter, Depends
+from source.auth.dependencies import get_current_user
+router = APIRouter()
 @router.get("/me")
 async def get_current_user_endpoint(user: User = Depends(get_current_user)):
     return user
@@ -69,14 +69,14 @@ async def get_current_user_endpoint(user: User = Depends(get_current_user)):
 
 首先，我们在用户模型中添加一个角色字段。
 
-```python
-from sqlmodel import Field
-from typing import Optional
 
 ![](img/7d5adcabc5e6be579c6937eaaf16dbca_16.png)
 
 ![](img/7d5adcabc5e6be579c6937eaaf16dbca_18.png)
 
+```python
+from sqlmodel import Field
+from typing import Optional
 class User(SQLModel, table=True):
     role: Optional[str] = Field(default="user", sa_column_kwargs={"server_default": "user"})
 ```
@@ -102,8 +102,6 @@ class RoleChecker:
 
 现在，我们可以在路由中使用这个依赖项来限制访问。
 
-```python
-from source.auth.dependencies import RoleChecker
 
 ![](img/7d5adcabc5e6be579c6937eaaf16dbca_20.png)
 
@@ -113,6 +111,8 @@ from source.auth.dependencies import RoleChecker
 
 ![](img/7d5adcabc5e6be579c6937eaaf16dbca_23.png)
 
+```python
+from source.auth.dependencies import RoleChecker
 admin_role_checker = RoleChecker(allowed_roles=["admin"])
 
 @router.get("/admin-only", dependencies=[Depends(admin_role_checker)])
@@ -427,8 +427,6 @@ async def password_reset_confirm(token: str, passwords: PasswordResetConfirm, se
 
 ![](img/7d5adcabc5e6be579c6937eaaf16dbca_105.png)
 
-```python
-from fastapi import BackgroundTasks
 
 ![](img/7d5adcabc5e6be579c6937eaaf16dbca_107.png)
 
@@ -440,6 +438,8 @@ from fastapi import BackgroundTasks
 
 ![](img/7d5adcabc5e6be579c6937eaaf16dbca_113.png)
 
+```python
+from fastapi import BackgroundTasks
 @router.post("/send-email")
 async def send_email_endpoint(
     email_data: EmailSchema,
@@ -486,8 +486,6 @@ async def send_email_endpoint(
 
 ![](img/7d5adcabc5e6be579c6937eaaf16dbca_139.png)
 
-```python
-from celery import Celery
 
 ![](img/7d5adcabc5e6be579c6937eaaf16dbca_141.png)
 
@@ -511,6 +509,8 @@ from celery import Celery
 
 ![](img/7d5adcabc5e6be579c6937eaaf16dbca_160.png)
 
+```python
+from celery import Celery
 celery_app = Celery("tasks", broker=config.REDIS_URL, backend=config.REDIS_URL)
 
 @celery_app.task
@@ -557,8 +557,6 @@ FastAPI 自动生成 OpenAPI 文档，我们可以通过访问 `/docs` 或 `/red
 
 ![](img/7d5adcabc5e6be579c6937eaaf16dbca_176.png)
 
-```python
-from fastapi import FastAPI
 
 ![](img/7d5adcabc5e6be579c6937eaaf16dbca_178.png)
 
@@ -568,6 +566,8 @@ from fastapi import FastAPI
 
 ![](img/7d5adcabc5e6be579c6937eaaf16dbca_183.png)
 
+```python
+from fastapi import FastAPI
 app = FastAPI(
     title="Bookly API",
     description="A simple book review API.",

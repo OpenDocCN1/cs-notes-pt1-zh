@@ -80,6 +80,11 @@ end function
 ![](img/4d0cdc2f509247a37698d9e3a7e70acb_21.png)
 
 我们需要包含必要的头文件并定义绝对值宏。函数接收直线的起点、终点坐标和颜色值。
+
+![](img/4d0cdc2f509247a37698d9e3a7e70acb_23.png)
+
+![](img/4d0cdc2f509247a37698d9e3a7e70acb_25.png)
+
 ```c
 #include <conio.h>
 #include <dos.h>
@@ -88,11 +93,6 @@ end function
 #include <time.h>
 
 #define abs(a) (((a) < 0) ? -(a) : (a))
-
-![](img/4d0cdc2f509247a37698d9e3a7e70acb_23.png)
-
-![](img/4d0cdc2f509247a37698d9e3a7e70acb_25.png)
-
 void draw_line(int x0, int y0, int x1, int y1, unsigned char color) {
     int dx = abs(x1 - x0);
     int dy = abs(y1 - y0);

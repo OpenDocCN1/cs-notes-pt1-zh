@@ -39,14 +39,14 @@ from bs4 import BeautifulSoup
 
 我们将创建一个包含标题、输入框和提交按钮的简单表单。
 
+
+![](img/256fbc2f7b3cc0046ed07cff1b554401_5.png)
+
 ```python
 # 创建应用标题
 st.markdown("""
 <h1 style='text-align: center;'>网页爬虫</h1>
 """, unsafe_allow_html=True)
-
-![](img/256fbc2f7b3cc0046ed07cff1b554401_5.png)
-
 # 创建一个表单，用于接收用户输入
 with st.form(key='search_form'):
     # 文本输入框，让用户输入搜索关键词

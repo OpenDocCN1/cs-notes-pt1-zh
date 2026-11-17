@@ -125,13 +125,13 @@ System.out.println("String after indent(0):\n" + s3);
 
 以下是一个示例，展示如何将字符串转换为大写，然后转换为字符数组：
 
-```java
-import java.util.Arrays;
 
 ![](img/0645e02e139bb4dfb6a1e45cb4779982_36.png)
 
 ![](img/0645e02e139bb4dfb6a1e45cb4779982_38.png)
 
+```java
+import java.util.Arrays;
 public static void main(String[] args) {
     String str = "Life's too short";
     var result = str

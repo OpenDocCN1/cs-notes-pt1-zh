@@ -28,11 +28,11 @@
 
 ![](img/dc3e5f6b83b3f0ed6b5504728d3c5cd7_13.png)
 
-```dart
-import 'dart:io';
 
 ![](img/dc3e5f6b83b3f0ed6b5504728d3c5cd7_15.png)
 
+```dart
+import 'dart:io';
 void main() {
   String fName;
   String lName;
@@ -132,11 +132,11 @@ print('您的姓名是：' + fName + ' ' + lName);
 
 ![](img/dc3e5f6b83b3f0ed6b5504728d3c5cd7_40.png)
 
-```dart
-import 'dart:io';
 
 ![](img/dc3e5f6b83b3f0ed6b5504728d3c5cd7_42.png)
 
+```dart
+import 'dart:io';
 void main() {
   String fName;
   String lName;

@@ -146,15 +146,15 @@ struct GateDescriptor {
 
 创建并填充IDT后，我们需要告诉CPU使用它。这通过 `lidt` 汇编指令完成。
 
+
+![](img/37d40cf8bcd5725d9e95d729ea0e833b_37.png)
+
 ```cpp
 // interrupts.cpp 示例片段
 struct InterruptDescriptorTablePointer {
     uint16_t size;
     uint32_t base;
 } __attribute__((packed));
-
-![](img/37d40cf8bcd5725d9e95d729ea0e833b_37.png)
-
 InterruptDescriptorTablePointer idtPointer;
 idtPointer.size = sizeof(GateDescriptor) * 256 - 1;
 idtPointer.base = (uint32_t)idt;
@@ -165,11 +165,6 @@ asm volatile("lidt (%0)" : : "r" (&idtPointer));
 
 仅仅设置IDT还不够，我们还需要告诉可编程中断控制器（PIC）开始向CPU发送中断。计算机通常有一个主PIC和一个从PIC。我们需要通过特定的端口（0x20， 0x21等）向它们发送初始化命令字（ICW），包括设置中断号的偏移量（例如，让主PIC的中断从0x20开始），以避免与CPU内部异常使用的中断号冲突。
 
-```cpp
-// 初始化PIC的示例代码
-Port8Bit masterCommandPort(0x20);
-Port8Bit masterDataPort(0x21);
-// ... 初始化从PIC端口
 
 ![](img/37d40cf8bcd5725d9e95d729ea0e833b_41.png)
 
@@ -187,6 +182,11 @@ Port8Bit masterDataPort(0x21);
 
 ![](img/37d40cf8bcd5725d9e95d729ea0e833b_49.png)
 
+```cpp
+// 初始化PIC的示例代码
+Port8Bit masterCommandPort(0x20);
+Port8Bit masterDataPort(0x21);
+// ... 初始化从PIC端口
 // 发送初始化命令序列
 masterCommandPort.Write(0x11); // 初始化开始
 masterDataPort.Write(0x20);    // 主PIC中断向量偏移

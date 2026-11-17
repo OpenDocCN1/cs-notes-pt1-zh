@@ -83,6 +83,9 @@ UART2的发送（TX）和接收（RX）线分别对应GPIOA的引脚PA2和PA3。
 *   在 `GPIOA_AFRL` 寄存器中，设置 `AFRL2[3:0] = 0111`（即AF7，对应USART2功能）。
 
 我们定义相关GPIO寄存器偏移量和配置值：
+
+![](img/e1921c4d3b2c45ca86b6703f6f5ee523_31.png)
+
 ```assembly
 ; GPIOA 寄存器基地址
 GPIOA_BASE      EQU     0x40020000
@@ -90,9 +93,6 @@ GPIOA_BASE      EQU     0x40020000
 ; 寄存器偏移量
 GPIOx_MODER_OFFSET  EQU 0x00
 GPIOx_AFRL_OFFSET   EQU 0x20
-
-![](img/e1921c4d3b2c45ca86b6703f6f5ee523_31.png)
-
 ; GPIOA 寄存器地址
 GPIOA_MODER     EQU     GPIOA_BASE + GPIOx_MODER_OFFSET
 GPIOA_AFRL      EQU     GPIOA_BASE + GPIOx_AFRL_OFFSET

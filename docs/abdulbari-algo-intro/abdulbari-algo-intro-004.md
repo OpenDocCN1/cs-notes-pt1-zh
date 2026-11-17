@@ -44,15 +44,15 @@
 
 ![](img/8dd36582f66dd48f19eefcfb72127ad9_27.png)
 
-```pseudocode
-算法：交换两个数字
-输入：两个数字 a 和 b
-输出：交换后的 a 和 b
 
 ![](img/8dd36582f66dd48f19eefcfb72127ad9_29.png)
 
 ![](img/8dd36582f66dd48f19eefcfb72127ad9_30.png)
 
+```pseudocode
+算法：交换两个数字
+输入：两个数字 a 和 b
+输出：交换后的 a 和 b
 步骤：
 1. 声明一个临时变量 t。
 2. 将 a 的值赋给 t。

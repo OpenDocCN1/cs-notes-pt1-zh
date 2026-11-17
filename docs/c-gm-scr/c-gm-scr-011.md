@@ -312,10 +312,6 @@ DirectSound->lpVtbl->SetCooperativeLevel(DirectSound, Window, DSSCL_PRIORITY);
 
 ![](img/7a07006fd44b8dede9f835fb4c96181a_241.png)
 
-```c
-DSBUFFERDESC BufferDescription = {0};
-BufferDescription.dwSize = sizeof(BufferDescription);
-BufferDescription.dwFlags = DSBCAPS_PRIMARYBUFFER;
 
 ![](img/7a07006fd44b8dede9f835fb4c96181a_243.png)
 
@@ -333,6 +329,10 @@ BufferDescription.dwFlags = DSBCAPS_PRIMARYBUFFER;
 
 ![](img/7a07006fd44b8dede9f835fb4c96181a_257.png)
 
+```c
+DSBUFFERDESC BufferDescription = {0};
+BufferDescription.dwSize = sizeof(BufferDescription);
+BufferDescription.dwFlags = DSBCAPS_PRIMARYBUFFER;
 LPDIRECTSOUNDBUFFER PrimaryBuffer;
 if (SUCCEEDED(DirectSound->lpVtbl->CreateSoundBuffer(DirectSound, &BufferDescription, &PrimaryBuffer, 0))) {
     // 主缓冲区创建成功
@@ -365,14 +365,6 @@ if (SUCCEEDED(DirectSound->lpVtbl->CreateSoundBuffer(DirectSound, &BufferDescrip
 
 ![](img/7a07006fd44b8dede9f835fb4c96181a_279.png)
 
-```c
-WAVEFORMATEX WaveFormat = {0};
-WaveFormat.wFormatTag = WAVE_FORMAT_PCM;
-WaveFormat.nChannels = 2; // 立体声
-WaveFormat.nSamplesPerSec = 44100; // 44.1kHz采样率
-WaveFormat.wBitsPerSample = 16; // 16位采样
-WaveFormat.nBlockAlign = (WaveFormat.nChannels * WaveFormat.wBitsPerSample) / 8;
-WaveFormat.nAvgBytesPerSec = WaveFormat.nSamplesPerSec * WaveFormat.nBlockAlign;
 
 ![](img/7a07006fd44b8dede9f835fb4c96181a_281.png)
 
@@ -382,9 +374,6 @@ WaveFormat.nAvgBytesPerSec = WaveFormat.nSamplesPerSec * WaveFormat.nBlockAlign;
 
 ![](img/7a07006fd44b8dede9f835fb4c96181a_287.png)
 
-BufferDescription.dwFlags = DSBCAPS_GLOBALFOCUS;
-BufferDescription.dwBufferBytes = WaveFormat.nAvgBytesPerSec; // 1秒的缓冲区大小
-BufferDescription.lpwfxFormat = &WaveFormat;
 
 ![](img/7a07006fd44b8dede9f835fb4c96181a_289.png)
 
@@ -396,6 +385,17 @@ BufferDescription.lpwfxFormat = &WaveFormat;
 
 ![](img/7a07006fd44b8dede9f835fb4c96181a_297.png)
 
+```c
+WAVEFORMATEX WaveFormat = {0};
+WaveFormat.wFormatTag = WAVE_FORMAT_PCM;
+WaveFormat.nChannels = 2; // 立体声
+WaveFormat.nSamplesPerSec = 44100; // 44.1kHz采样率
+WaveFormat.wBitsPerSample = 16; // 16位采样
+WaveFormat.nBlockAlign = (WaveFormat.nChannels * WaveFormat.wBitsPerSample) / 8;
+WaveFormat.nAvgBytesPerSec = WaveFormat.nSamplesPerSec * WaveFormat.nBlockAlign;
+BufferDescription.dwFlags = DSBCAPS_GLOBALFOCUS;
+BufferDescription.dwBufferBytes = WaveFormat.nAvgBytesPerSec; // 1秒的缓冲区大小
+BufferDescription.lpwfxFormat = &WaveFormat;
 LPDIRECTSOUNDBUFFER SecondaryBuffer;
 if (SUCCEEDED(DirectSound->lpVtbl->CreateSoundBuffer(DirectSound, &BufferDescription, &SecondaryBuffer, 0))) {
     // 副缓冲区创建成功
@@ -643,12 +643,6 @@ SecondaryBuffer->lpVtbl->Play(SecondaryBuffer, 0, 0, DSBPLAY_LOOPING);
 
 ![](img/7a07006fd44b8dede9f835fb4c96181a_489.png)
 
-```c
-typedef struct {
-    S16* Samples;
-    DWORD SampleCount;
-    DWORD ChannelCount;
-} loaded_sound;
 
 ![](img/7a07006fd44b8dede9f835fb4c96181a_491.png)
 
@@ -658,6 +652,12 @@ typedef struct {
 
 ![](img/7a07006fd44b8dede9f835fb4c96181a_497.png)
 
+```c
+typedef struct {
+    S16* Samples;
+    DWORD SampleCount;
+    DWORD ChannelCount;
+} loaded_sound;
 typedef struct {
     loaded_sound* Sound;
     F32 Position;
@@ -709,9 +709,6 @@ typedef struct {
 
 ![](img/7a07006fd44b8dede9f835fb4c96181a_531.png)
 
-```c
-playing_sound PlayingSounds[32];
-DWORD NextPlayingSound = 0;
 
 ![](img/7a07006fd44b8dede9f835fb4c96181a_533.png)
 
@@ -721,6 +718,9 @@ DWORD NextPlayingSound = 0;
 
 ![](img/7a07006fd44b8dede9f835fb4c96181a_539.png)
 
+```c
+playing_sound PlayingSounds[32];
+DWORD NextPlayingSound = 0;
 playing_sound* PlaySound(loaded_sound* Sound, bool Looping) {
     playing_sound* Result = &PlayingSounds[NextPlayingSound];
     NextPlayingSound = (NextPlayingSound + 1) % ArrayCount(PlayingSounds);

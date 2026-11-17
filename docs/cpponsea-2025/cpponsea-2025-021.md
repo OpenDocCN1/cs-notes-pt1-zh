@@ -105,10 +105,6 @@ void update_Q(State s, Action a, double reward) {
 
 ![](img/fa6f7e9b1fb67db54d197345948984ed_1.png)
 
-```cpp
-// 伪代码：Q学习更新规则
-double alpha = 0.1; // 学习率
-double gamma = 0.9; // 折扣因子
 
 ![](img/fa6f7e9b1fb67db54d197345948984ed_3.png)
 
@@ -116,6 +112,10 @@ double gamma = 0.9; // 折扣因子
 
 ![](img/fa6f7e9b1fb67db54d197345948984ed_7.png)
 
+```cpp
+// 伪代码：Q学习更新规则
+double alpha = 0.1; // 学习率
+double gamma = 0.9; // 折扣因子
 void q_learn_update(State s, Action a, double reward, State next_s) {
     double current_q = Q_table[{s, a}];
     double max_future_q = max(Q_table[{next_s, all_possible_actions}]);
@@ -142,13 +142,6 @@ void q_learn_update(State s, Action a, double reward, State next_s) {
 
 ![](img/fa6f7e9b1fb67db54d197345948984ed_13.png)
 
-```cpp
-// 伪代码：贪吃蛇的增强状态定义
-struct SnakeState {
-    char up, down, left, right; // 四周环境
-    int dx_to_apple, dy_to_apple; // 与苹果的相对位置
-    // 需要定义比较运算符以便用作map的键
-};
 
 ![](img/fa6f7e9b1fb67db54d197345948984ed_15.png)
 
@@ -156,6 +149,13 @@ struct SnakeState {
 
 ![](img/fa6f7e9b1fb67db54d197345948984ed_19.png)
 
+```cpp
+// 伪代码：贪吃蛇的增强状态定义
+struct SnakeState {
+    char up, down, left, right; // 四周环境
+    int dx_to_apple, dy_to_apple; // 与苹果的相对位置
+    // 需要定义比较运算符以便用作map的键
+};
 std::map<SnakeState, std::map<Action, double>> Q_table; // 二维Q表
 ```
 

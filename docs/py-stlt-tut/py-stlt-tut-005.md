@@ -82,14 +82,14 @@ st.metric(label=“风速”, value=“120 m s⁻¹”, delta=“-1.4 m s⁻¹�
 pip install pandas
 ```
 然后在代码中导入并创建DataFrame：
-```python
-import pandas as pd
-import streamlit as st
 
 ![](img/0ef371f9a194089f3d8a8a962d2dd399_20.png)
 
 ![](img/0ef371f9a194089f3d8a8a962d2dd399_21.png)
 
+```python
+import pandas as pd
+import streamlit as st
 data = {
     ‘column1‘: [1, 2, 3, 4, 5, 6, 7],
     ‘column2‘: [11, 12, 13, 14, 15, 16, 17]

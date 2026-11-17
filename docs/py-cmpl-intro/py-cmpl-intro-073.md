@@ -113,16 +113,16 @@ print(f"执行耗时：{elapsed_time:.1f} 秒")
 
 ![](img/c845f0f1ef028ec39c68f2f027bb94a0_38.png)
 
-```python
-import time
-
-# 1. 记录开始时间
-start_time = time.perf_counter()
 
 ![](img/c845f0f1ef028ec39c68f2f027bb94a0_40.png)
 
 ![](img/c845f0f1ef028ec39c68f2f027bb94a0_41.png)
 
+```python
+import time
+
+# 1. 记录开始时间
+start_time = time.perf_counter()
 # 2. 执行待测代码
 for i in range(1000000):
     pass

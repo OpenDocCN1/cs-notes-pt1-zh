@@ -12,6 +12,11 @@
 
 以下是定义我们方言（`serene`）和三个基础操作（`value`， `fn`， `return`）的ODS文件核心内容：
 
+
+![](img/e848665f6c73b4117590a6b17ec88bf2_1.png)
+
+![](img/e848665f6c73b4117590a6b17ec88bf2_3.png)
+
 ```tablegen
 // 定义 serene 方言
 def Serene_Dialect : Dialect {
@@ -26,11 +31,6 @@ def Serene_Dialect : Dialect {
 // 定义所有 serene 操作的基础类
 class Serene_Op<string mnemonic, list<Trait> traits = []> :
     Op<Serene_Dialect, mnemonic, traits>;
-
-![](img/e848665f6c73b4117590a6b17ec88bf2_1.png)
-
-![](img/e848665f6c73b4117590a6b17ec88bf2_3.png)
-
 // 定义 value 操作，用于表示一个整数值
 def ValueOp : Serene_Op<"value"> {
   let summary = "integer value operation";

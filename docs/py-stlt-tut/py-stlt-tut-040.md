@@ -34,15 +34,15 @@ Streamlit主要提供两种回调：
 
 以下是修改后的代码，使用 `on_change` 回调：
 
+
+![](img/b4693d1cc434b3603bb0267c17e8651c_3.png)
+
 ```python
 import streamlit as st
 
 # 定义回调函数
 def printer():
     print("Message from callback!")
-
-![](img/b4693d1cc434b3603bb0267c17e8651c_3.png)
-
 input_name = st.text_input("Enter your name:")
 submit_button = st.button("Submit")
 

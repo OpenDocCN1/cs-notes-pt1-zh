@@ -240,16 +240,6 @@
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_216.png)
 
-```c
-// 仅在游戏窗口激活且鼠标被锁定时，才将光标重置到屏幕中心并隐藏
-if (window_is_active && mouse_is_locked) {
-    SetCursorPos(center_screen_x, center_screen_y);
-    ShowCursor(FALSE); // 隐藏光标
-} else {
-    // 当窗口失去焦点时，恢复默认光标并显示
-    SetCursor(LoadCursor(NULL, IDC_ARROW));
-    ShowCursor(TRUE);
-}
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_218.png)
 
@@ -291,6 +281,16 @@ if (window_is_active && mouse_is_locked) {
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_255.png)
 
+```c
+// 仅在游戏窗口激活且鼠标被锁定时，才将光标重置到屏幕中心并隐藏
+if (window_is_active && mouse_is_locked) {
+    SetCursorPos(center_screen_x, center_screen_y);
+    ShowCursor(FALSE); // 隐藏光标
+} else {
+    // 当窗口失去焦点时，恢复默认光标并显示
+    SetCursor(LoadCursor(NULL, IDC_ARROW));
+    ShowCursor(TRUE);
+}
 // 计算鼠标移动差值时，使用上一帧的鼠标位置，而不是固定的中心点
 mouse_delta_x = new_mouse_x - old_mouse_x;
 mouse_delta_y = new_mouse_y - old_mouse_y;
@@ -650,13 +650,6 @@ old_mouse_y = new_mouse_y;
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_551.png)
 
-```c
-// 简化的弹簧系统更新
-// desired_p: 目标位置（基于玩家输入）
-// visual_p: 当前视觉位置
-// visual_dp: 当前视觉速度
-// spring_constant: 弹簧系数
-// damping_constant: 阻尼系数
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_553.png)
 
@@ -700,12 +693,6 @@ old_mouse_y = new_mouse_y;
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_591.png)
 
-// 计算弹簧力 (Hooke‘s law)
-vec2 spring_force = spring_constant * (desired_p - visual_p);
-// 计算阻尼力
-vec2 damping_force = damping_constant * (desired_dp - visual_dp);
-// 计算加速度 (F = ma)
-vec2 acceleration = (spring_force + damping_force) * dt; // 乘以 dt 确保帧率独立
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_593.png)
 
@@ -749,6 +736,19 @@ vec2 acceleration = (spring_force + damping_force) * dt; // 乘以 dt 确保帧�
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_629.png)
 
+```c
+// 简化的弹簧系统更新
+// desired_p: 目标位置（基于玩家输入）
+// visual_p: 当前视觉位置
+// visual_dp: 当前视觉速度
+// spring_constant: 弹簧系数
+// damping_constant: 阻尼系数
+// 计算弹簧力 (Hooke‘s law)
+vec2 spring_force = spring_constant * (desired_p - visual_p);
+// 计算阻尼力
+vec2 damping_force = damping_constant * (desired_dp - visual_dp);
+// 计算加速度 (F = ma)
+vec2 acceleration = (spring_force + damping_force) * dt; // 乘以 dt 确保帧率独立
 // 更新速度和位置
 visual_dp += acceleration;
 visual_p += visual_dp * dt;
@@ -918,9 +918,6 @@ visual_p += visual_dp * dt;
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_769.png)
 
-```c
-double target_seconds_per_frame = 1.0 / 60.0; // 目标帧时间
-double work_seconds_elapsed = ... // 计算游戏逻辑和渲染耗时
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_771.png)
 
@@ -972,6 +969,9 @@ double work_seconds_elapsed = ... // 计算游戏逻辑和渲染耗时
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_815.png)
 
+```c
+double target_seconds_per_frame = 1.0 / 60.0; // 目标帧时间
+double work_seconds_elapsed = ... // 计算游戏逻辑和渲染耗时
 double seconds_elapsed_for_frame = work_seconds_elapsed;
 if (seconds_elapsed_for_frame < target_seconds_per_frame) {
     // 如果本帧耗时少于目标时间，则休眠剩余时间
@@ -1158,13 +1158,6 @@ dt = seconds_elapsed_for_frame; // 用于本帧所有基于时间的计算
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_969.png)
 
-```c
-// 能量块动画更新
-power_block->animation_timer += dt * animation_speed_multiplier;
-if (power_block->animation_timer > 1.0f) {
-    power_block->animation_timer = 0.0f;
-    power_block->animation_direction *= -1; // 反转动画方向
-}
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_971.png)
 
@@ -1178,6 +1171,13 @@ if (power_block->animation_timer > 1.0f) {
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_980.png)
 
+```c
+// 能量块动画更新
+power_block->animation_timer += dt * animation_speed_multiplier;
+if (power_block->animation_timer > 1.0f) {
+    power_block->animation_timer = 0.0f;
+    power_block->animation_direction *= -1; // 反转动画方向
+}
 // 根据计时器计算当前缩放比例 (0.3 到 1.0 之间)
 float t = power_block->animation_timer;
 if (power_block->animation_direction < 0) {
@@ -1248,15 +1248,6 @@ power_block->half_size_y = base_half_size * scale;
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_1033.png)
 
-```c
-// 计算能量块在垂直方向上的归一化位置 (0=顶部， 1=底部)
-float normalized_y = map_range(power_block->p.y,
-                               arena_top,
-                               arena_bottom,
-                               0.0f, 1.0f);
-// 位置越低，音调越高
-float pitch_multiplier = 1.0f + normalized_y;
-sound_set_pitch(power_block->sound_id, pitch_multiplier);
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_1035.png)
 
@@ -1268,6 +1259,15 @@ sound_set_pitch(power_block->sound_id, pitch_multiplier);
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_1043.png)
 
+```c
+// 计算能量块在垂直方向上的归一化位置 (0=顶部， 1=底部)
+float normalized_y = map_range(power_block->p.y,
+                               arena_top,
+                               arena_bottom,
+                               0.0f, 1.0f);
+// 位置越低，音调越高
+float pitch_multiplier = 1.0f + normalized_y;
+sound_set_pitch(power_block->sound_id, pitch_multiplier);
 // 多个能量块同时存在时，降低总音量以避免声音过大
 float volume = 0.15f / (float)active_power_block_count;
 sound_set_target_volume(power_block->sound_id, volume);

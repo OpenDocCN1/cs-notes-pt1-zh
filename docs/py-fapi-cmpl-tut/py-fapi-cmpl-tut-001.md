@@ -134,13 +134,13 @@ fastapi
 ![](img/61b5aa4c68627fe37ce2e42649211167_66.png)
 
 在 `main.py` 中，导入 FastAPI 类并创建一个应用实例：
-```python
-from fastapi import FastAPI
 
 ![](img/61b5aa4c68627fe37ce2e42649211167_68.png)
 
 ![](img/61b5aa4c68627fe37ce2e42649211167_69.png)
 
+```python
+from fastapi import FastAPI
 app = FastAPI()
 ```
 
@@ -271,13 +271,13 @@ async def greet_user_with_age(name: str, age: int = 0):
 ![](img/61b5aa4c68627fe37ce2e42649211167_96.png)
 
 代码示例如下：
-```python
-from typing import Optional
 
 ![](img/61b5aa4c68627fe37ce2e42649211167_98.png)
 
 ![](img/61b5aa4c68627fe37ce2e42649211167_99.png)
 
+```python
+from typing import Optional
 @app.get("/greet")
 async def greet_optional(name: Optional[str] = "User", age: Optional[int] = 0):
     return {"message": f"Hello {name}, you are {age} years old"}
@@ -304,8 +304,6 @@ async def greet_optional(name: Optional[str] = "User", age: Optional[int] = 0):
 ![](img/61b5aa4c68627fe37ce2e42649211167_106.png)
 
 代码示例如下：
-```python
-from pydantic import BaseModel
 
 ![](img/61b5aa4c68627fe37ce2e42649211167_108.png)
 
@@ -313,14 +311,16 @@ from pydantic import BaseModel
 
 ![](img/61b5aa4c68627fe37ce2e42649211167_111.png)
 
-class BookCreate(BaseModel):
-    title: str
-    author: str
 
 ![](img/61b5aa4c68627fe37ce2e42649211167_113.png)
 
 ![](img/61b5aa4c68627fe37ce2e42649211167_115.png)
 
+```python
+from pydantic import BaseModel
+class BookCreate(BaseModel):
+    title: str
+    author: str
 @app.post("/createbook")
 async def create_book(book: BookCreate):
     return {"title": book.title, "author": book.author}

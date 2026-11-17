@@ -37,9 +37,6 @@ struct Node {
 
 接下来，我们编写层序遍历函数 `levelOrder`。
 
-```cpp
-#include <queue>
-#include <iostream>
 
 ![](img/b3c5c72f9afe807aa497eae30e6d7e07_8.png)
 
@@ -47,6 +44,9 @@ struct Node {
 
 ![](img/b3c5c72f9afe807aa497eae30e6d7e07_10.png)
 
+```cpp
+#include <queue>
+#include <iostream>
 void levelOrder(Node* root) {
     // 处理空树的情况
     if (root == nullptr) {

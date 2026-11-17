@@ -39,14 +39,14 @@ class Animal:
 
 现在，我们将创建三个子类：`Dog`、`Cat` 和 `Mouse`。它们都将继承自 `Animal` 类。
 
-```python
-class Dog(Animal):
-    pass
 
 ![](img/00a95a7908a23bb5eaf52875ea6b1755_6.png)
 
 ![](img/00a95a7908a23bb5eaf52875ea6b1755_7.png)
 
+```python
+class Dog(Animal):
+    pass
 class Cat(Animal):
     pass
 

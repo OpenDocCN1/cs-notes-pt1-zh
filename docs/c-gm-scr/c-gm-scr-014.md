@@ -733,15 +733,15 @@ sound->position += sound->speed_multiplier;
 ![](img/35cc7b407d7f4707e0d68b6c750d9e6f_613.png)
 
 **修复后的核心代码：**
-```c
-// 计算当前和下一个采样点的索引（考虑声道数）
-s32 sample_index0 = (s32)sound->position * sound->channels;
-s32 sample_index1 = sample_index0 + sound->channels;
 
 ![](img/35cc7b407d7f4707e0d68b6c750d9e6f_615.png)
 
 ![](img/35cc7b407d7f4707e0d68b6c750d9e6f_617.png)
 
+```c
+// 计算当前和下一个采样点的索引（考虑声道数）
+s32 sample_index0 = (s32)sound->position * sound->channels;
+s32 sample_index1 = sample_index0 + sound->channels;
 // 处理循环
 if (sound->looping) {
     if (sample_index1 >= sound->sample_count * sound->channels) {
@@ -1021,10 +1021,6 @@ void play_sound_with_variation(Loaded_Sound* sound, f32 volume, f32 pitch_variat
 ![](img/35cc7b407d7f4707e0d68b6c750d9e6f_840.png)
 
 **核心计算逻辑：**
-```c
-// 计算声像值，范围大约在 [-1.0, 1.0] 之间，-1为最左，1为最右
-f32 pan = (source_x - listener_x) * 0.01f; // 0.01f 是一个缩放因子，用于调整效果强度
-pan = clamp(pan, -1.0f, 1.0f);
 
 ![](img/35cc7b407d7f4707e0d68b6c750d9e6f_842.png)
 
@@ -1054,9 +1050,6 @@ pan = clamp(pan, -1.0f, 1.0f);
 
 ![](img/35cc7b407d7f4707e0d68b6c750d9e6f_866.png)
 
-// 根据声像调整左右声道增益
-f32 left_gain = 1.0f - max(0.0f, pan);
-f32 right_gain = 1.0f + min(0.0f, pan);
 
 ![](img/35cc7b407d7f4707e0d68b6c750d9e6f_868.png)
 
@@ -1072,6 +1065,13 @@ f32 right_gain = 1.0f + min(0.0f, pan);
 
 ![](img/35cc7b407d7f4707e0d68b6c750d9e6f_878.png)
 
+```c
+// 计算声像值，范围大约在 [-1.0, 1.0] 之间，-1为最左，1为最右
+f32 pan = (source_x - listener_x) * 0.01f; // 0.01f 是一个缩放因子，用于调整效果强度
+pan = clamp(pan, -1.0f, 1.0f);
+// 根据声像调整左右声道增益
+f32 left_gain = 1.0f - max(0.0f, pan);
+f32 right_gain = 1.0f + min(0.0f, pan);
 // 在混合时应用增益
 left_sample += sound_sample * left_gain * sound->volume;
 right_sample += sound_sample * right_gain * sound->volume;

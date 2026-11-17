@@ -39,13 +39,13 @@ npm install express --save
 ![](img/19016f4ac44e9f6c227a85b99c3021d4_1.png)
 
 在`index.js`文件中，编写一个简单的Web服务器代码，使其在端口3000上运行并返回一条消息：
+
+![](img/19016f4ac44e9f6c227a85b99c3021d4_3.png)
+
 ```javascript
 const express = require('express');
 const app = express();
 const port = 3000;
-
-![](img/19016f4ac44e9f6c227a85b99c3021d4_3.png)
-
 app.get('/', (req, res) => {
   res.send('Hello from Node.js inside Docker!');
 });

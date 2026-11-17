@@ -63,8 +63,9 @@ print("\n")
 ![](img/0c1b71b1abd51163c16ea5ab73725b90_15.png)
 
 运行爬虫后，你将在终端看到类似以下的长字符串输出，这就是图片的`srcset`信息：
-```
 https://example.com/image1.jpg 1x, https://example.com/image1-2x.jpg 2x
+
+```
 ```
 
 ## 总结

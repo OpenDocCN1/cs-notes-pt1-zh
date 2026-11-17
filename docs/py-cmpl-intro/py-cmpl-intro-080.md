@@ -111,14 +111,14 @@ self.label.setScaledContents(True)
 
 ![](img/f0597931941f80aaa4093f39764426b1_39.png)
 
+
+![](img/f0597931941f80aaa4093f39764426b1_41.png)
+
 ```python
 window_width = self.width()
 window_height = self.height()
 label_width = self.label.width()
 label_height = self.label.height()
-
-![](img/f0597931941f80aaa4093f39764426b1_41.png)
-
 x = (window_width - label_width) // 2
 y = (window_height - label_height) // 2
 

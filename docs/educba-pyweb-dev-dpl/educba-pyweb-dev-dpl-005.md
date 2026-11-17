@@ -55,14 +55,14 @@
 
 ![](img/4236c1c6d1a9ae9a858e24b43a2f8f14_3.png)
 
-```python
-import urllib.request
-import re
 
 ![](img/4236c1c6d1a9ae9a858e24b43a2f8f14_5.png)
 
 ![](img/4236c1c6d1a9ae9a858e24b43a2f8f14_6.png)
 
+```python
+import urllib.request
+import re
 # 打开网页并读取内容
 url = 'http://example.com/jobs.html'
 html = urllib.request.urlopen(url).read().decode('utf-8')

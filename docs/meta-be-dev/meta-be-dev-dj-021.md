@@ -10,12 +10,12 @@
 
 ![](img/5e674d5865ec8dad951145d38d3e5359_1.png)
 
-```python
-# 基于函数的视图示例
-from django.http import HttpResponse
 
 ![](img/5e674d5865ec8dad951145d38d3e5359_3.png)
 
+```python
+# 基于函数的视图示例
+from django.http import HttpResponse
 def my_view(request):
     return HttpResponse("Hello, World!")
 ```

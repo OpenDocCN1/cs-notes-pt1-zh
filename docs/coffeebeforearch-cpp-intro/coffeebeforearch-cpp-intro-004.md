@@ -68,14 +68,14 @@ if (a < b) {
 
 ![](img/59e3ad1b5be40acd025aa8e1af42177a_11.png)
 
-```cpp
-int a = 10;
-int b = 10;
 
 ![](img/59e3ad1b5be40acd025aa8e1af42177a_12.png)
 
 ![](img/59e3ad1b5be40acd025aa8e1af42177a_14.png)
 
+```cpp
+int a = 10;
+int b = 10;
 if (a < b) {
     std::cout << "A is less than B\n";
 } else {

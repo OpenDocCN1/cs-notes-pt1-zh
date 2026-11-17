@@ -28,12 +28,12 @@ C++ 社区对反射的探索由来已久：
 
 提升操作符 `^`（昵称“帽子操作符”）用于将程序实体（如类型、变量）提升到反射领域，得到一个 `std::meta::info` 对象。拼接操作符 `[: ... :]` 用于将反射领域的信息提取回 C++ 程序领域。
 
-```cpp
-// 将类型`int`提升到反射领域，结果是一个`std::meta::info`对象
-constexpr std::meta::info refl_int = ^int;
 
 ![](img/72fa588386bb12c18d12179186d47d23_2.png)
 
+```cpp
+// 将类型`int`提升到反射领域，结果是一个`std::meta::info`对象
+constexpr std::meta::info refl_int = ^int;
 // 使用拼接操作符将反射信息提取回C++领域，声明一个int变量
 typename [: refl_int :] a = 42;
 ```

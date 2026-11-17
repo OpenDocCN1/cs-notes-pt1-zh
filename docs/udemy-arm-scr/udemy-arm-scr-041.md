@@ -145,15 +145,15 @@ TEN_MS_DELAY  EQU  160000
 为了测试我们的延时子程序，我们创建两个简单的函数控制LED，并在主循环中调用它们。
 
 以下是LED控制函数：
+
+![](img/1ae3569c5595989554e10ba8c561866b_41.png)
+
 ```assembly
 LED_On:
     LDR  R1, =GPIOF_DATA_R  ; 加载GPIO端口数据寄存器地址
     MOV  R0, #LED_RED       ; LED_RED是控制红灯的位掩码，例如 0x02
     STR  R0, [R1]           ; 将值写入寄存器，点亮LED
     BX   LR
-
-![](img/1ae3569c5595989554e10ba8c561866b_41.png)
-
 LED_Off:
     LDR  R1, =GPIOF_DATA_R
     MOV  R0, #0             ; 写入0，关闭LED

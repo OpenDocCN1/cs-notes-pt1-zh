@@ -123,14 +123,14 @@ print(letters.isalpha()) # 输出: True
 
 ![](img/ba79e9203646a5ab158f7040e17a4ea7_12.png)
 
+
+![](img/ba79e9203646a5ab158f7040e17a4ea7_14.png)
+
 ```python
 phone_number = "123-456-7890"
 # 统计短横线 '-' 的数量
 dash_count = phone_number.count("-")
 print(dash_count)  # 输出: 2
-
-![](img/ba79e9203646a5ab158f7040e17a4ea7_14.png)
-
 # 将短横线替换为空格
 new_number = phone_number.replace("-", " ")
 print(new_number)  # 输出: 123 456 7890

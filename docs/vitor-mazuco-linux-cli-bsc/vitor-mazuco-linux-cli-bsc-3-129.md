@@ -38,15 +38,15 @@ output "<输出变量名称>" {
 2.  其`value`引用之前创建的`aws_instance`资源（假设资源名为`example_server`）的`public_ip`属性。
 
 修改后的配置文件相关部分如下所示：
+
+![](img/4c1a46e31e80c2bda98f3e50afc353b4_5.png)
+
 ```hcl
 # ... (之前的provider、resource等配置保持不变)
 
 resource "aws_instance" "example_server" {
   # ... (实例的其他配置，如AMI、实例类型等)
 }
-
-![](img/4c1a46e31e80c2bda98f3e50afc353b4_5.png)
-
 output "public_ip" {
   value = aws_instance.example_server.public_ip
 }
@@ -58,13 +58,13 @@ output "public_ip" {
 保存配置文件后，运行`terraform apply`命令来创建或更新基础设施。
 
 在`apply`命令执行成功后，Terraform不仅会汇总资源变更情况，还会在最后打印出所有定义好的输出变量的值。你会看到类似这样的输出：
+
+![](img/4c1a46e31e80c2bda98f3e50afc353b4_7.png)
+
 ```
 Apply complete! Resources: X added, Y changed, Z destroyed.
 
 Outputs:
-
-![](img/4c1a46e31e80c2bda98f3e50afc353b4_7.png)
-
 public_ip = "203.0.113.10"
 ```
 这样，我们就直接获得了新服务器的公网IP地址。

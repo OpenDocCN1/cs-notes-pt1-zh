@@ -112,11 +112,11 @@
 
 在新创建的Swift文件中，定义一个类：
 
-```swift
-import UIKit
 
 ![](img/62e280e317210264b004e62c80692128_32.png)
 
+```swift
+import UIKit
 class SwipeableCardContainerView: UIView {
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -173,11 +173,11 @@ extension SwipeableCardContainerView: SwipeableViewDelegate {
 1.  新建一个Swift文件，命名为 `SwipeableCardViewDelegate`。
 2.  在文件中定义协议：
 
-```swift
-import Foundation
 
 ![](img/62e280e317210264b004e62c80692128_36.png)
 
+```swift
+import Foundation
 protocol SwipeableCardViewDelegate: class {
     func didSelect(card: SwipeableCardViewCard)
 }

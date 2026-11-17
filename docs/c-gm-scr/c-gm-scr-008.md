@@ -210,11 +210,6 @@
 ![](img/13f3c34aeca4e45732e15609ba01749b_182.png)
 
 **核心修复代码：**
-```c
-// 修复前的错误代码
-if (ball->active) {
-    // 处理逻辑...
-}
 
 ![](img/13f3c34aeca4e45732e15609ba01749b_184.png)
 
@@ -246,6 +241,11 @@ if (ball->active) {
 
 ![](img/13f3c34aeca4e45732e15609ba01749b_212.png)
 
+```c
+// 修复前的错误代码
+if (ball->active) {
+    // 处理逻辑...
+}
 // 修复后的正确代码
 if (ball->active) {
     // 处理逻辑...
@@ -419,10 +419,6 @@ typedef struct {
 ![](img/13f3c34aeca4e45732e15609ba01749b_348.png)
 
 **粒子更新与渲染逻辑：**
-```c
-// 假设有一个全局粒子数组和索引
-Particle particles[MAX_PARTICLES];
-int next_particle = 0;
 
 ![](img/13f3c34aeca4e45732e15609ba01749b_350.png)
 
@@ -438,6 +434,10 @@ int next_particle = 0;
 
 ![](img/13f3c34aeca4e45732e15609ba01749b_362.png)
 
+```c
+// 假设有一个全局粒子数组和索引
+Particle particles[MAX_PARTICLES];
+int next_particle = 0;
 // 在游戏循环中更新粒子
 for (int i = 0; i < MAX_PARTICLES; ++i) {
     Particle *particle = &particles[i];

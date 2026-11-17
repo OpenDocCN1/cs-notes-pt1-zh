@@ -74,6 +74,13 @@ Java 8提供了四种主要的方法引用类型。
 
 ![](img/9fff66dcfa89fcd1a18f28dd0e3cbd16_25.png)
 
+
+![](img/9fff66dcfa89fcd1a18f28dd0e3cbd16_27.png)
+
+![](img/9fff66dcfa89fcd1a18f28dd0e3cbd16_28.png)
+
+![](img/9fff66dcfa89fcd1a18f28dd0e3cbd16_29.png)
+
 ```java
 // 1. 定义函数式接口
 interface MyInterface {
@@ -86,13 +93,6 @@ class MyClass {
         System.out.println("Instance Method");
     }
 }
-
-![](img/9fff66dcfa89fcd1a18f28dd0e3cbd16_27.png)
-
-![](img/9fff66dcfa89fcd1a18f28dd0e3cbd16_28.png)
-
-![](img/9fff66dcfa89fcd1a18f28dd0e3cbd16_29.png)
-
 // 3. 主类中使用方法引用
 public class MethodRefExample1 {
     public static void main(String[] args) {
@@ -122,20 +122,20 @@ public class MethodRefExample1 {
 
 ![](img/9fff66dcfa89fcd1a18f28dd0e3cbd16_35.png)
 
-```java
-import java.util.function.BiFunction;
 
 ![](img/9fff66dcfa89fcd1a18f28dd0e3cbd16_37.png)
 
+
+![](img/9fff66dcfa89fcd1a18f28dd0e3cbd16_39.png)
+
+```java
+import java.util.function.BiFunction;
 // 1. 创建包含静态方法的类
 class Multiplication {
     public static int multiply(int a, int b) {
         return a * b;
     }
 }
-
-![](img/9fff66dcfa89fcd1a18f28dd0e3cbd16_39.png)
-
 // 2. 主类中使用静态方法引用
 public class MethodRefExample2 {
     public static void main(String[] args) {
@@ -200,16 +200,19 @@ public class MethodRefExample3 {
 3.  使用方法引用将构造函数赋值给接口引用。
 4.  通过接口引用调用方法，从而触发构造函数。
 
-```java
-// 1. 定义函数式接口
-interface MyInterface1 {
-    Hello display(String s);
-}
 
 ![](img/9fff66dcfa89fcd1a18f28dd0e3cbd16_54.png)
 
 ![](img/9fff66dcfa89fcd1a18f28dd0e3cbd16_55.png)
 
+
+![](img/9fff66dcfa89fcd1a18f28dd0e3cbd16_57.png)
+
+```java
+// 1. 定义函数式接口
+interface MyInterface1 {
+    Hello display(String s);
+}
 // 2. 创建类
 class Hello {
     // 构造函数
@@ -217,9 +220,6 @@ class Hello {
         System.out.println(s);
     }
 }
-
-![](img/9fff66dcfa89fcd1a18f28dd0e3cbd16_57.png)
-
 // 3. 主类中使用构造函数引用
 public class MethodRefExample4 {
     public static void main(String[] args) {

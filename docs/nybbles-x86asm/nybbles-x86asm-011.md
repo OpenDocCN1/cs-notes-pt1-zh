@@ -110,6 +110,11 @@ mov cx, 256
 
 ![](img/8c4b950563863018c88400a3c014ef51_11.png)
 
+
+![](img/8c4b950563863018c88400a3c014ef51_13.png)
+
+![](img/8c4b950563863018c88400a3c014ef51_14.png)
+
 ```assembly
 ; 生成的跳转表数据
 key_table_state:
@@ -126,11 +131,6 @@ key_table_state:
     db SCANCODE_PGDN
     dw callback_pgdw
     db 0 ; 结束标记
-
-![](img/8c4b950563863018c88400a3c014ef51_13.png)
-
-![](img/8c4b950563863018c88400a3c014ef51_14.png)
-
 ; 生成的键盘处理逻辑
 handle_keys_state:
     mov bp, key_table_state ; BP指向跳转表

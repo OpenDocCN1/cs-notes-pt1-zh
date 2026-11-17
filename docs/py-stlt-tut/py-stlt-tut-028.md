@@ -36,13 +36,13 @@ uploaded_audio = st.file_uploader("上传您的音频文件", type=['mp3', 'wav'
 
 为了处理音频，我们需要使用 `pydub` 库。在导入之前，请确保已按照相关教程正确安装 `pydub` 及其依赖（如 `ffmpeg`）。
 
-```python
-from pydub import AudioSegment
 
 ![](img/f6ae7e26ef4b661cadddedb2b39b56ab_7.png)
 
 ![](img/f6ae7e26ef4b661cadddedb2b39b56ab_8.png)
 
+```python
+from pydub import AudioSegment
 # 检查用户是否已上传文件
 if uploaded_audio is not None:
     # 将上传的文件转换为 AudioSegment 对象

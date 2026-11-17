@@ -46,13 +46,13 @@ int main() {
 
 以下是获取GPA（平均绩点）的示例：
 
-```c
-#include <stdio.h>
 
 ![](img/db65679198681a3f98e0e35ecaa32aeb_4.png)
 
 ![](img/db65679198681a3f98e0e35ecaa32aeb_5.png)
 
+```c
+#include <stdio.h>
 int main() {
     double gpa;
     printf("Enter your GPA: ");
@@ -106,13 +106,13 @@ int main() {
 
 首先，我们看看如何使用 `scanf` 获取字符串。
 
-```c
-#include <stdio.h>
 
 ![](img/db65679198681a3f98e0e35ecaa32aeb_17.png)
 
 ![](img/db65679198681a3f98e0e35ecaa32aeb_18.png)
 
+```c
+#include <stdio.h>
 int main() {
     char name[20]; // 声明一个能存储最多20个字符的数组
     printf("Enter your name: ");

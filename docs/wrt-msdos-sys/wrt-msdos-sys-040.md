@@ -235,6 +235,20 @@ if (key_pressed) {
 
 在程序开始时，我们需要定义并设置一个乐器。以下是一个示例乐器配置，它创建了一个具有FM合成特性的音色：
 
+
+![](img/6fcfce86e56c5fbc5593c5681c169ec6_46.png)
+
+![](img/6fcfce86e56c5fbc5593c5681c169ec6_48.png)
+
+![](img/6fcfce86e56c5fbc5593c5681c169ec6_50.png)
+
+
+![](img/6fcfce86e56c5fbc5593c5681c169ec6_52.png)
+
+![](img/6fcfce86e56c5fbc5593c5681c169ec6_54.png)
+
+![](img/6fcfce86e56c5fbc5593c5681c169ec6_55.png)
+
 ```c
 Adlib_Instrument my_instrument;
 
@@ -252,23 +266,9 @@ my_instrument.carrier.wave_select = 0; // 正弦波
 // 配置调制器（参数类似，数值可不同以产生不同效果）
 my_instrument.modulator.tremolo = 0;
 // ... 设置其他调制器参数 ...
-
-![](img/6fcfce86e56c5fbc5593c5681c169ec6_46.png)
-
-![](img/6fcfce86e56c5fbc5593c5681c169ec6_48.png)
-
-![](img/6fcfce86e56c5fbc5593c5681c169ec6_50.png)
-
 // 设置连接方式为FM合成（0），反馈强度为0
 my_instrument.connection = 0;
 my_instrument.feedback = 0;
-
-![](img/6fcfce86e56c5fbc5593c5681c169ec6_52.png)
-
-![](img/6fcfce86e56c5fbc5593c5681c169ec6_54.png)
-
-![](img/6fcfce86e56c5fbc5593c5681c169ec6_55.png)
-
 // 为所有6个声道设置这个乐器
 for (int i = 0; i < 6; i++) {
     adlib_set_instrument(&my_instrument, i);

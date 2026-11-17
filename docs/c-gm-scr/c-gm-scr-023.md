@@ -385,11 +385,6 @@
 
 ![](img/c990a1d1bc1607ec62b9419da49f4cdf_335.png)
 
-```c
-typedef struct {
-    // ... 其他成员（声音数据、位置、音量等）
-    volatile u32 access; // 访问状态标志：SOUND_NORMAL, SOUND_READING, SOUND_WRITING
-} playing_sound;
 
 ![](img/c990a1d1bc1607ec62b9419da49f4cdf_337.png)
 
@@ -415,6 +410,11 @@ typedef struct {
 
 ![](img/c990a1d1bc1607ec62b9419da49f4cdf_358.png)
 
+```c
+typedef struct {
+    // ... 其他成员（声音数据、位置、音量等）
+    volatile u32 access; // 访问状态标志：SOUND_NORMAL, SOUND_READING, SOUND_WRITING
+} playing_sound;
 #define SOUND_NORMAL 0
 #define SOUND_READING 1
 #define SOUND_WRITING 2

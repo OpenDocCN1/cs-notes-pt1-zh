@@ -67,8 +67,9 @@ const element = <h1>Hello, {formatName(user.firstName, user.lastName)}!</h1>;
 以下是具体步骤：
 首先，将图片地址存储在一个名为`url`的变量中。图片将使用`<img>`元素显示，因此你需要将`url`变量嵌入到`src`属性中。
 
-```jsx
 const url = 'https://example.com/profile.jpg';
+
+```jsx
 const profileImg = <img src={url} alt="Profile" />;
 ```
 

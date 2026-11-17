@@ -91,25 +91,25 @@ ul li {
 
 以下是实现斑马纹和完成状态的样式：
 
+
+![](img/c82e331d340ebac9eb7b45e695374be2_18.png)
+
+
+![](img/c82e331d340ebac9eb7b45e695374be2_20.png)
+
+![](img/c82e331d340ebac9eb7b45e695374be2_22.png)
+
 ```css
 /* 斑马纹效果 */
 ul li:nth-child(odd) {
   background: #f9f9f9;
 }
-
-![](img/c82e331d340ebac9eb7b45e695374be2_18.png)
-
 /* 任务完成时的样式 */
 ul li.checked {
   background: #888;
   color: #fff;
   text-decoration: line-through;
 }
-
-![](img/c82e331d340ebac9eb7b45e695374be2_20.png)
-
-![](img/c82e331d340ebac9eb7b45e695374be2_22.png)
-
 /* 任务完成时的勾选标记 */
 ul li.checked::before {
   content: '';
@@ -145,6 +145,15 @@ ul li.checked::before {
 
 ![](img/c82e331d340ebac9eb7b45e695374be2_34.png)
 
+
+![](img/c82e331d340ebac9eb7b45e695374be2_35.png)
+
+
+![](img/c82e331d340ebac9eb7b45e695374be2_37.png)
+
+
+![](img/c82e331d340ebac9eb7b45e695374be2_39.png)
+
 ```css
 /* 关闭（删除）按钮 */
 .close {
@@ -153,9 +162,6 @@ ul li.checked::before {
   top: 0;
   padding: 12px 16px 12px 16px;
 }
-
-![](img/c82e331d340ebac9eb7b45e695374be2_35.png)
-
 .close:hover {
   background-color: #f44336;
   color: white;
@@ -168,17 +174,11 @@ ul li.checked::before {
   color: white;
   text-align: center;
 }
-
-![](img/c82e331d340ebac9eb7b45e695374be2_37.png)
-
 .header:after {
   content: "";
   display: table;
   clear: both;
 }
-
-![](img/c82e331d340ebac9eb7b45e695374be2_39.png)
-
 /* 输入框样式 */
 input {
   margin: 0;

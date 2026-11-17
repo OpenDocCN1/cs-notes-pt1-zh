@@ -18,11 +18,16 @@
 
 ![](img/19dc0b4493dea711aee6b93b49b2bf3f_3.png)
 
-```cpp
-#include <iostream>
 
 ![](img/19dc0b4493dea711aee6b93b49b2bf3f_5.png)
 
+
+![](img/19dc0b4493dea711aee6b93b49b2bf3f_7.png)
+
+![](img/19dc0b4493dea711aee6b93b49b2bf3f_8.png)
+
+```cpp
+#include <iostream>
 struct Animal {
     // 使用 virtual 关键字声明虚函数
     virtual void speak() {
@@ -42,11 +47,6 @@ struct Cat : public Animal {
         std::cout << "Meow\n";
     }
 };
-
-![](img/19dc0b4493dea711aee6b93b49b2bf3f_7.png)
-
-![](img/19dc0b4493dea711aee6b93b49b2bf3f_8.png)
-
 int main() {
     Dog d;
     Cat c;

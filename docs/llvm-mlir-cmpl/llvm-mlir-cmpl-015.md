@@ -117,14 +117,6 @@ ORC提供了基于层的设计，允许我们构建自己的JIT引擎。同时�
 
 ![](img/8bb683619a38f7c097464957d6c7506a_62.png)
 
-```cpp
-// 创建一个简单的LLVM IR模块，其中包含一个`add1`函数
-ThreadSafeModule createDemoModule() {
-  // ... 创建模块和函数的LLVM IR代码 ...
-  auto M = std::make_unique<Module>("test", Ctx);
-  // ... 构建函数体：`return argument + 1` ...
-  return ThreadSafeModule(std::move(M), std::make_unique<LLVMContext>());
-}
 
 ![](img/8bb683619a38f7c097464957d6c7506a_64.png)
 
@@ -142,6 +134,14 @@ ThreadSafeModule createDemoModule() {
 
 ![](img/8bb683619a38f7c097464957d6c7506a_74.png)
 
+```cpp
+// 创建一个简单的LLVM IR模块，其中包含一个`add1`函数
+ThreadSafeModule createDemoModule() {
+  // ... 创建模块和函数的LLVM IR代码 ...
+  auto M = std::make_unique<Module>("test", Ctx);
+  // ... 构建函数体：`return argument + 1` ...
+  return ThreadSafeModule(std::move(M), std::make_unique<LLVMContext>());
+}
 int main() {
   // 初始化LLVM
   InitializeNativeTarget();

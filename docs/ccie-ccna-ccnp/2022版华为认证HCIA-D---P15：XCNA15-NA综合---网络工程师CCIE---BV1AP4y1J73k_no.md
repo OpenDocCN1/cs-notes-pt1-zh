@@ -113,9 +113,6 @@
 
 **2. 配置默认路由与下发**
 在R1上配置指向运营商（ISP）的默认路由，并通过OSPF将其下发到内网。
-```bash
-# 在R1上配置静态默认路由
-[R1] ip route-static 0.0.0.0 0 20.1.1.2
 
 ![](img/9804df15e7eb3c47c64cca45eb7bb8c7_23.png)
 
@@ -123,6 +120,9 @@
 
 ![](img/9804df15e7eb3c47c64cca45eb7bb8c7_27.png)
 
+```bash
+# 在R1上配置静态默认路由
+[R1] ip route-static 0.0.0.0 0 20.1.1.2
 # 在R1的OSPF进程中下发默认路由
 [R1-ospf-10] default-route-advertise always
 ```
@@ -187,15 +187,15 @@
 
 **2. 配置VRRP虚拟网关**
 在SW7和SW8上为VLAN 30和40的SVI接口配置VRRP。通过调整优先级，指定主备设备。
+
+![](img/9804df15e7eb3c47c64cca45eb7bb8c7_43.png)
+
 ```bash
 # 在SW7上配置VLAN 30的VRRP，并设置较高优先级使其成为Master
 [SW7] interface Vlanif 30
 [SW7-Vlanif30] ip address 172.16.30.253 24
 [SW7-Vlanif30] vrrp vrid 30 virtual-ip 172.16.30.254
 [SW7-Vlanif30] vrrp vrid 30 priority 120
-
-![](img/9804df15e7eb3c47c64cca45eb7bb8c7_43.png)
-
 # 在SW8上配置VLAN 30的VRRP，使用默认优先级（100）作为Backup
 [SW8] interface Vlanif 30
 [SW8-Vlanif30] ip address 172.16.30.252 24

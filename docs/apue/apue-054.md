@@ -81,12 +81,12 @@ unlink("/tmp/mysocket");
 我们将此程序编译成名为`reader`的可执行文件。
 
 发送方程序（sender）的设置与接收方非常相似：
-```c
-// 在本地域中创建一个数据报套接字
-int sockfd = socket(PF_LOCAL, SOCK_DGRAM, 0);
 
 ![](img/7dec439671970a740c531f7df7a3dd9f_7.png)
 
+```c
+// 在本地域中创建一个数据报套接字
+int sockfd = socket(PF_LOCAL, SOCK_DGRAM, 0);
 // 再次填充结构体 sockaddr_un
 struct sockaddr_un addr;
 addr.sun_family = PF_LOCAL;

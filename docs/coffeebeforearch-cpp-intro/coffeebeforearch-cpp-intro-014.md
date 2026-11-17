@@ -51,12 +51,12 @@ void print(const std::vector<int>& vector) {
 ![](img/cad0a9ade18f865e6611f9736143f59f_9.png)
 
 让我们尝试使用`push_back`和`pop_back`。
-```cpp
-my_vector.push_back(6); // 在末尾添加元素 6
-print(my_vector); // 输出: 1 2 3 4 5 6
 
 ![](img/cad0a9ade18f865e6611f9736143f59f_11.png)
 
+```cpp
+my_vector.push_back(6); // 在末尾添加元素 6
+print(my_vector); // 输出: 1 2 3 4 5 6
 my_vector.pop_back(); // 移除最后一个元素
 print(my_vector); // 输出: 1 2 3 4 5
 ```
@@ -89,14 +89,14 @@ for (int i = 0; i < 10; ++i) {
 频繁的重新分配会影响性能。如果我们能预先知道或将存储的元素数量，可以使用`reserve()`方法提前分配足够的容量，避免运行时的多次分配。
 
 例如，如果我们知道要存储10个元素：
-```cpp
-std::vector<int> my_vector;
-my_vector.reserve(10); // 预先分配容量为10
 
 ![](img/cad0a9ade18f865e6611f9736143f59f_17.png)
 
 ![](img/cad0a9ade18f865e6611f9736143f59f_19.png)
 
+```cpp
+std::vector<int> my_vector;
+my_vector.reserve(10); // 预先分配容量为10
 for (int i = 0; i < 10; ++i) {
     std::cout << "Size: " << my_vector.size() << "\n";
     std::cout << "Capacity: " << my_vector.capacity() << "\n";

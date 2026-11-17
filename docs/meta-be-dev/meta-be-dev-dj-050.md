@@ -118,11 +118,11 @@ Django有一个独特的调试器，当 `DEBUG = True` 且发生错误时，它�
 你知道每种语言和框架都有许多测试选项。在Django中，一个流行的方法是**单元测试**，你可以用它来隔离一个函数、类或方法，并只测试那一段代码。
 
 在Django中，单元测试模块采用基于类的方法。你可以将测试添加到一个类中，该类继承自Django测试包中的 `TestCase` 类。
-```python
-from django.test import TestCase
 
 ![](img/ae9adc4c04651535f6948e9552e17f81_27.png)
 
+```python
+from django.test import TestCase
 class MyViewTests(TestCase):
     def test_homepage_status_code(self):
         response = self.client.get(‘/‘)

@@ -160,12 +160,6 @@
 
 ![](img/a8dd2b7c2e064a5802e967ba681ac481_139.png)
 
-```c
-typedef struct {
-    v2 p; // 位置
-    v2 dp; // 速度
-    v2 ddp; // 加速度
-} pong_state;
 
 ![](img/a8dd2b7c2e064a5802e967ba681ac481_141.png)
 
@@ -179,10 +173,6 @@ typedef struct {
 
 ![](img/a8dd2b7c2e064a5802e967ba681ac481_150.png)
 
-typedef union {
-    pong_state pong;
-    // 未来会为其他关卡类型添加更多状态
-} level_state;
 
 ![](img/a8dd2b7c2e064a5802e967ba681ac481_152.png)
 
@@ -210,6 +200,16 @@ typedef union {
 
 ![](img/a8dd2b7c2e064a5802e967ba681ac481_174.png)
 
+```c
+typedef struct {
+    v2 p; // 位置
+    v2 dp; // 速度
+    v2 ddp; // 加速度
+} pong_state;
+typedef union {
+    pong_state pong;
+    // 未来会为其他关卡类型添加更多状态
+} level_state;
 level_state g_level_state;
 ```
 
@@ -651,6 +651,11 @@ void simulate_block_for_level(block* b, level_state* state) {
 
 ![](img/a8dd2b7c2e064a5802e967ba681ac481_448.png)
 
+
+![](img/a8dd2b7c2e064a5802e967ba681ac481_450.png)
+
+![](img/a8dd2b7c2e064a5802e967ba681ac481_452.png)
+
 ```c
 typedef struct {
     v2 p;
@@ -658,11 +663,6 @@ typedef struct {
     s32 lives;
     // ... 其他属性
 } player;
-
-![](img/a8dd2b7c2e064a5802e967ba681ac481_450.png)
-
-![](img/a8dd2b7c2e064a5802e967ba681ac481_452.png)
-
 player g_player;
 ```
 
@@ -700,11 +700,6 @@ player g_player;
 
 ![](img/a8dd2b7c2e064a5802e967ba681ac481_480.png)
 
-```c
-void start_game() {
-    // ... 其他初始化 ...
-    g_player.lives = 3;
-}
 
 ![](img/a8dd2b7c2e064a5802e967ba681ac481_482.png)
 
@@ -720,6 +715,11 @@ void start_game() {
 
 ![](img/a8dd2b7c2e064a5802e967ba681ac481_494.png)
 
+```c
+void start_game() {
+    // ... 其他初始化 ...
+    g_player.lives = 3;
+}
 void lose_life() {
     g_player.lives--;
     if(g_player.lives > 0) {
@@ -845,8 +845,6 @@ void draw_lives() {
 
 ![](img/a8dd2b7c2e064a5802e967ba681ac481_582.png)
 
-```c
-static u32 g_random_state = 123456789; // 初始种子
 
 ![](img/a8dd2b7c2e064a5802e967ba681ac481_584.png)
 
@@ -868,6 +866,8 @@ static u32 g_random_state = 123456789; // 初始种子
 
 ![](img/a8dd2b7c2e064a5802e967ba681ac481_601.png)
 
+```c
+static u32 g_random_state = 123456789; // 初始种子
 u32 random_u32() {
     u32 result = g_random_state;
     result ^= result << 13;
@@ -920,13 +920,6 @@ u32 random_u32() {
 
 ![](img/a8dd2b7c2e064a5802e967ba681ac481_638.png)
 
-```c
-// 生成一个在 [min, max] 范围内的随机整数
-s32 random_int_in_range(s32 min, s32 max) {
-    u32 range = (max - min) + 1;
-    u32 random_value = random_u32() % range;
-    return min + (s32)random_value;
-}
 
 ![](img/a8dd2b7c2e064a5802e967ba681ac481_640.png)
 
@@ -948,6 +941,13 @@ s32 random_int_in_range(s32 min, s32 max) {
 
 ![](img/a8dd2b7c2e064a5802e967ba681ac481_658.png)
 
+```c
+// 生成一个在 [min, max] 范围内的随机整数
+s32 random_int_in_range(s32 min, s32 max) {
+    u32 range = (max - min) + 1;
+    u32 random_value = random_u32() % range;
+    return min + (s32)random_value;
+}
 // 以一定概率返回 true
 b32 random_chance(f32 probability) {
     // probability 应在 0.0 到 1.0 之间

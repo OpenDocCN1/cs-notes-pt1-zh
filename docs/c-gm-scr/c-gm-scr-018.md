@@ -216,10 +216,6 @@
 
 ![](img/f50787a48fc38bca0b94a2fc47cf7c96_192.png)
 
-```c
-// 设置俄罗斯方块关卡的背景色和方块颜色
-level_state.tetris.background_color = 0xAD0BD9E0;
-level_state.tetris.block_color = 0x89898989;
 
 ![](img/f50787a48fc38bca0b94a2fc47cf7c96_194.png)
 
@@ -235,6 +231,10 @@ level_state.tetris.block_color = 0x89898989;
 
 ![](img/f50787a48fc38bca0b94a2fc47cf7c96_206.png)
 
+```c
+// 设置俄罗斯方块关卡的背景色和方块颜色
+level_state.tetris.background_color = 0xAD0BD9E0;
+level_state.tetris.block_color = 0x89898989;
 // 在菜单中添加该关卡的文本项
 menu_add_item(&game_state.menu, "Tetris", ...);
 ```

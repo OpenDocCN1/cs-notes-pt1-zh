@@ -10,6 +10,12 @@
 
 以下是游戏所需的核心数据结构：
 
+
+![](img/b94cb2384287477683c64cf51c55ff26_1.png)
+
+
+![](img/b94cb2384287477683c64cf51c55ff26_3.png)
+
 ```python
 questions = (
     "How many elements are in the periodic table?",
@@ -18,9 +24,6 @@ questions = (
     "How many bones are in the human body?",
     "Which planet in the solar system is the hottest?"
 )
-
-![](img/b94cb2384287477683c64cf51c55ff26_1.png)
-
 options = (
     ("A. 116", "B. 117", "C. 118", "D. 119"),
     ("A. Whale", "B. Crocodile", "C. Elephant", "D. Ostrich"),
@@ -28,9 +31,6 @@ options = (
     ("A. 206", "B. 207", "C. 208", "D. 209"),
     ("A. Mercury", "B. Venus", "C. Earth", "D. Mars")
 )
-
-![](img/b94cb2384287477683c64cf51c55ff26_3.png)
-
 answers = ("C", "D", "A", "A", "B")
 guesses = []
 score = 0
@@ -109,13 +109,16 @@ for question in questions:
 
 ![](img/b94cb2384287477683c64cf51c55ff26_25.png)
 
+
+![](img/b94cb2384287477683c64cf51c55ff26_27.png)
+
+
+![](img/b94cb2384287477683c64cf51c55ff26_29.png)
+
 ```python
 print("----------------------")
 print("       RESULTS        ")
 print("----------------------")
-
-![](img/b94cb2384287477683c64cf51c55ff26_27.png)
-
 print("answers: ", end="")
 for answer in answers:
     print(answer, end=" ")
@@ -125,9 +128,6 @@ print("guesses: ", end="")
 for guess in guesses:
     print(guess, end=" ")
 print()
-
-![](img/b94cb2384287477683c64cf51c55ff26_29.png)
-
 score = int(score / len(questions) * 100)
 print(f"Your score is: {score}%")
 ```

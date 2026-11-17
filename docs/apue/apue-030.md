@@ -106,13 +106,13 @@ CFLAGS = -Wall -Werror -Wextra
 *   `$<` 是一个特殊的自动化变量，代表依赖项（即 `.c` 文件）。
 
 现在，我们可以简化我们的目标规则：
-```makefile
-all: $(PROGRAM)
 
 ![](img/7b1d7ab0b1cd31a0edd73b30d5dd50eb_7.png)
 
 ![](img/7b1d7ab0b1cd31a0edd73b30d5dd50eb_8.png)
 
+```makefile
+all: $(PROGRAM)
 $(PROGRAM): $(OBJS)
     $(CC) $(OBJS) -o $(PROGRAM)
 ```

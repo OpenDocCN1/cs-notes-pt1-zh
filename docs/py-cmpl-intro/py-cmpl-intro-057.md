@@ -18,9 +18,6 @@
 
 例如，如果直接定义两个同名的类，会产生命名冲突。
 
-```python
-class Employee:
-    print("这是第一个类")
 
 ![](img/9e9b040187b388b4c9a73869056ddbef_5.png)
 
@@ -28,6 +25,9 @@ class Employee:
 
 ![](img/9e9b040187b388b4c9a73869056ddbef_8.png)
 
+```python
+class Employee:
+    print("这是第一个类")
 class Employee:
     print("这是第二个类")
 ```
@@ -50,15 +50,15 @@ class Employee:
 
 ![](img/9e9b040187b388b4c9a73869056ddbef_14.png)
 
-```python
-class Company:
-    class Employee:
-        pass
 
 ![](img/9e9b040187b388b4c9a73869056ddbef_16.png)
 
 ![](img/9e9b040187b388b4c9a73869056ddbef_17.png)
 
+```python
+class Company:
+    class Employee:
+        pass
 class Nonprofit:
     class Employee:
         pass
@@ -189,6 +189,9 @@ class Company:
 
 ![](img/9e9b040187b388b4c9a73869056ddbef_60.png)
 
+
+![](img/9e9b040187b388b4c9a73869056ddbef_62.png)
+
 ```python
 # 创建第一个公司
 company1 = Company("蟹堡王")
@@ -197,9 +200,6 @@ company1 = Company("蟹堡王")
 company1.add_employee("尤金·蟹老板", "经理")
 company1.add_employee("海绵宝宝", "厨师")
 company1.add_employee("章鱼哥", "收银员")
-
-![](img/9e9b040187b388b4c9a73869056ddbef_62.png)
-
 # 列出第一个公司的所有员工
 print(f"{company1.company_name}的员工：")
 for employee in company1.list_employees():
@@ -232,6 +232,9 @@ for employee in company1.list_employees():
 
 ![](img/9e9b040187b388b4c9a73869056ddbef_72.png)
 
+
+![](img/9e9b040187b388b4c9a73869056ddbef_74.png)
+
 ```python
 # 创建第二个公司
 company2 = Company("海之霸")
@@ -239,9 +242,6 @@ company2 = Company("海之霸")
 # 为第二个公司添加员工
 company2.add_employee("谢尔顿·痞老板", "经理")
 company2.add_employee("凯伦", "助理")
-
-![](img/9e9b040187b388b4c9a73869056ddbef_74.png)
-
 # 列出第二个公司的所有员工
 print(f"\n{company2.company_name}的员工：")
 for employee in company2.list_employees():

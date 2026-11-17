@@ -162,6 +162,9 @@ if(offset == 0) {
 ![](img/3e7b57a65ebc69688a6a55c003bd59af_38.png)
 
 以下是翻转颜色的公式：
+
+![](img/3e7b57a65ebc69688a6a55c003bd59af_40.png)
+
 ```c
 // 假设 videoMemory 是 uint16_t* 类型，指向 0xB8000
 uint16_t* location = videoMemory + (80 * y + x);
@@ -170,9 +173,6 @@ uint8_t attribute = (*location >> 8) & 0xFF; // 高字节是属性
 
 // 翻转前景色和背景色
 uint8_t newAttribute = ((attribute & 0xF0) >> 4) | ((attribute & 0x0F) << 4);
-
-![](img/3e7b57a65ebc69688a6a55c003bd59af_40.png)
-
 // 写回视频内存
 *location = character | (newAttribute << 8);
 ```

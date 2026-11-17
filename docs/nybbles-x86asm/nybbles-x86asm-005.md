@@ -47,21 +47,21 @@ cycledown=20
 我使用A86汇编器，并通过Makefile管理构建过程。项目主要生成两个.COM文件：游戏引擎和编辑器工具。Makefile利用A86的特性，通过命令行定义条件编译常量。
 
 以下是Makefile的简化结构：
+
+![](img/ab42b8bbc2b219d2bdac98b69b361840_13.png)
+
+
+![](img/ab42b8bbc2b219d2bdac98b69b361840_15.png)
+
 ```makefile
 # 定义目标和源文件
 GAME_SRC = game.8
 TOOL_SRC = tool.8
-
-![](img/ab42b8bbc2b219d2bdac98b69b361840_13.png)
-
 # 使用A86汇编，并定义DEBUG常量
 all: game.com tool.com
 
 game.com: $(GAME_SRC)
     a86 $(GAME_SRC) =debug game.com
-
-![](img/ab42b8bbc2b219d2bdac98b69b361840_15.png)
-
 tool.com: $(TOOL_SRC)
     a86 $(TOOL_SRC) =debug tool.com
 ```

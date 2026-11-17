@@ -144,6 +144,9 @@ void interrupt new_timer_handler(...) {
 
 ### 3. 设置和恢复中断向量
 使用 DOS 提供的 `getvect` 和 `setvect` 函数来管理中断向量。
+
+![](img/671902fd1b0d9aac742cd0b899d31d5c_26.png)
+
 ```c
 void set_interrupt(void) {
     disable();
@@ -152,9 +155,6 @@ void set_interrupt(void) {
     set_timer(50); // 将PIT设置为50Hz
     enable();
 }
-
-![](img/671902fd1b0d9aac742cd0b899d31d5c_26.png)
-
 void reset_interrupt(void) {
     disable();
     setvect(0x1C, old_timer_handler);
@@ -169,13 +169,18 @@ void reset_interrupt(void) {
 
 ### 4. 编程 PIT 芯片
 PIT 的计数器 0 由端口 `0x40`（数据）和 `0x43`（控制字）控制。我们需要将其设置为模式 3（方波发生器），并写入新的计数值。
+
+![](img/671902fd1b0d9aac742cd0b899d31d5c_32.png)
+
+
+![](img/671902fd1b0d9aac742cd0b899d31d5c_34.png)
+
+![](img/671902fd1b0d9aac742cd0b899d31d5c_36.png)
+
 ```c
 #define TIMER_PORT0 0x40
 #define TIMER_MODE_CTRL 0x43
 #define PIT_CLOCK_RATE 1193181L // PIT 的基准时钟频率
-
-![](img/671902fd1b0d9aac742cd0b899d31d5c_32.png)
-
 void set_timer(unsigned int hz) {
     unsigned int counter = (unsigned int)(PIT_CLOCK_RATE / hz);
     // 设置控制字：选择计数器0，读写低/高字节，模式3，二进制计数
@@ -184,11 +189,6 @@ void set_timer(unsigned int hz) {
     outportb(TIMER_PORT0, counter & 0xFF);
     outportb(TIMER_PORT0, (counter >> 8) & 0xFF);
 }
-
-![](img/671902fd1b0d9aac742cd0b899d31d5c_34.png)
-
-![](img/671902fd1b0d9aac742cd0b899d31d5c_36.png)
-
 void reset_timer(void) {
     // 恢复为默认的18.206 Hz (计数值为0，相当于65536)
     outportb(TIMER_MODE_CTRL, 0x36);

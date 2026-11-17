@@ -32,17 +32,17 @@
 
 在Servlet的`doGet`方法中，添加以下代码来调用发送方法并重定向页面：
 
-```java
-// 拼接邮件内容数据
-String data = name + " " + mailId + " " + message;
 
 ![](img/40a468e886f22e987cf0fecc0c6580f7_5.png)
 
-// 调用发送邮件方法
-EmailSender.send("jasonT.smith2801@gmail.com", "yourPassword", "tracy@gmail.com", "A lead", data);
 
 ![](img/40a468e886f22e987cf0fecc0c6580f7_7.png)
 
+```java
+// 拼接邮件内容数据
+String data = name + " " + mailId + " " + message;
+// 调用发送邮件方法
+EmailSender.send("jasonT.smith2801@gmail.com", "yourPassword", "tracy@gmail.com", "A lead", data);
 // 邮件发送成功后，重定向回首页
 response.sendRedirect("index.jsp");
 ```

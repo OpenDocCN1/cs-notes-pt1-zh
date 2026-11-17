@@ -83,15 +83,15 @@ ssize_t write(int fd, const void *buf, size_t count);
 
 ![](img/fd4ae7ceb5b943b2880cac7cb1925f08_24.png)
 
+
+![](img/fd4ae7ceb5b943b2880cac7cb1925f08_26.png)
+
 ```c
 // rwx.c 示例代码框架
 #include <fcntl.h>
 #include <unistd.h>
 #define BUFF_SIZE 64
 #define COMMENT “// Appended by program\n”
-
-![](img/fd4ae7ceb5b943b2880cac7cb1925f08_26.png)
-
 int main() {
     int fd = open(“rwx.c”, O_RDWR | O_APPEND); // 使用 O_APPEND 打开
     char buffer[BUFF_SIZE];

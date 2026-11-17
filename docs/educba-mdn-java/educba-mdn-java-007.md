@@ -136,13 +136,13 @@ Java 12为`Collectors`类添加了一个新的静态方法`teeing`。该方法�
 
 **示例1：计算平均值**
 
+
+![](img/ca263c1ccd13d71e928c17c04d930195_25.png)
+
 ```java
 import java.util.Arrays;
 import java.util.List;
 import static java.util.stream.Collectors.*;
-
-![](img/ca263c1ccd13d71e928c17c04d930195_25.png)
-
 public class TeeingExample {
     public static void main(String[] args) {
         List<Integer> numbers = Arrays.asList(10, 20, 30, 40);
@@ -187,12 +187,12 @@ public class TeeingExample {
 
 **示例2：筛选并统计城市**
 
-```java
-import java.util.stream.Stream;
-import static java.util.stream.Collectors.*;
 
 ![](img/ca263c1ccd13d71e928c17c04d930195_36.png)
 
+```java
+import java.util.stream.Stream;
+import static java.util.stream.Collectors.*;
 public class TeeingFilterExample {
     public static void main(String[] args) {
         var result = Stream.of(

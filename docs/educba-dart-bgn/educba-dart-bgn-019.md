@@ -92,13 +92,13 @@ void main() {
 2.  提示用户输入并读取控制台的信息。
 3.  使用 `int.parse()` 和 `double.parse()` 将字符串转换为数字。
 
-```dart
-import 'dart:io';
 
 ![](img/74e0c8a4de16875e2c032aaa9467158f_11.png)
 
 ![](img/74e0c8a4de16875e2c032aaa9467158f_12.png)
 
+```dart
+import 'dart:io';
 void main() {
   int varInt;
   double varDouble;

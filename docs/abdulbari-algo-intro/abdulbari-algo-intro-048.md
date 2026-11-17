@@ -84,11 +84,11 @@ cost[i] = min { c[i][k] + cost[k] }， 其中 k 取遍 i 的所有后继顶点�
 
 ![](img/8677bc629f980a2746fbb47580334f8f_25.png)
 
-```cpp
-cost[n] = 0; // 汇点成本为0
 
 ![](img/8677bc629f980a2746fbb47580334f8f_27.png)
 
+```cpp
+cost[n] = 0; // 汇点成本为0
 // 从顶点n-1逆向计算到顶点1
 for (int i = n-1; i >= 1; i--) {
     int minCost = INT_MAX;

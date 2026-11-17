@@ -106,13 +106,16 @@
 
 在定义了所有必要的地址之后，我们可以开始搭建汇编程序的基本结构。
 
+
+![](img/318a039f99789a3a787999222b687b4c_19.png)
+
+
+![](img/318a039f99789a3a787999222b687b4c_21.png)
+
 ```assembly
 .syntax unified
 .cpu cortex-m4
 .thumb
-
-![](img/318a039f99789a3a787999222b687b4c_19.png)
-
 /* 寄存器地址定义（如上所示） */
 .EQU GPIOA_BASE, 0x40020000
 .EQU RCC_BASE,   0x40023800
@@ -122,9 +125,6 @@
 .EQU RCC_AHB1ENR, RCC_BASE + AHB1ENR_OFFSET
 .EQU GPIOA_MODER, GPIOA_BASE + MODER_OFFSET
 .EQU GPIOA_ODR,   GPIOA_BASE + ODR_OFFSET
-
-![](img/318a039f99789a3a787999222b687b4c_21.png)
-
 /* 声明主函数为全局标签，供启动文件调用 */
 .global main
 

@@ -158,8 +158,6 @@ popd
 
 ![](img/65cad47fe79d6d7fa64b4e5575d06d39_111.png)
 
-```c
-#include <windows.h>
 
 ![](img/65cad47fe79d6d7fa64b4e5575d06d39_113.png)
 
@@ -167,6 +165,8 @@ popd
 
 ![](img/65cad47fe79d6d7fa64b4e5575d06d39_117.png)
 
+```c
+#include <windows.h>
 LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 {
     switch (uMsg)
@@ -283,14 +283,6 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 
 ![](img/65cad47fe79d6d7fa64b4e5575d06d39_169.png)
 
-```c
-typedef struct
-{
-    int Width;
-    int Height;
-    u32* Pixels;
-    BITMAPINFO BitmapInfo;
-} render_buffer;
 
 ![](img/65cad47fe79d6d7fa64b4e5575d06d39_171.png)
 
@@ -318,6 +310,14 @@ typedef struct
 
 ![](img/65cad47fe79d6d7fa64b4e5575d06d39_195.png)
 
+```c
+typedef struct
+{
+    int Width;
+    int Height;
+    u32* Pixels;
+    BITMAPINFO BitmapInfo;
+} render_buffer;
 render_buffer GlobalRenderBuffer;
 ```
 
@@ -505,12 +505,6 @@ void DisplayBuffer(HDC DeviceContext, render_buffer* Buffer)
 
 ![](img/65cad47fe79d6d7fa64b4e5575d06d39_311.png)
 
-```c
-typedef struct
-{
-    bool IsDown;
-    bool Changed;
-} button;
 
 ![](img/65cad47fe79d6d7fa64b4e5575d06d39_313.png)
 
@@ -522,6 +516,12 @@ typedef struct
 
 ![](img/65cad47fe79d6d7fa64b4e5575d06d39_320.png)
 
+```c
+typedef struct
+{
+    bool IsDown;
+    bool Changed;
+} button;
 typedef struct
 {
     button Buttons[4];  // 左、右、上、下

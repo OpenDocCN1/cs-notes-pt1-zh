@@ -40,10 +40,6 @@ f"{value:flags}"
 
 在冒号后使用 `.` 加上数字和 `f` 可以指定小数点后显示的位数。例如，`.2f` 表示保留两位小数。
 
-```python
-price1 = 3.14159
-price2 = -987.65
-price3 = 12.34
 
 ![](img/430574d3a031a6a2ebda2fe02f026c51_15.png)
 
@@ -51,6 +47,10 @@ price3 = 12.34
 
 ![](img/430574d3a031a6a2ebda2fe02f026c51_17.png)
 
+```python
+price1 = 3.14159
+price2 = -987.65
+price3 = 12.34
 print(f"价格1是：${price1:.2f}")
 print(f"价格2是：${price2:.2f}")
 print(f"价格3是：${price3:.2f}")
@@ -142,15 +142,15 @@ print(f"价格3是：${price3: 10.2f}")  # 正数前有空格，与负数对齐
 
 ![](img/430574d3a031a6a2ebda2fe02f026c51_44.png)
 
-```python
-price1 = 3000.14159
-price2 = -987654.65
-price3 = 1200.34
 
 ![](img/430574d3a031a6a2ebda2fe02f026c51_45.png)
 
 ![](img/430574d3a031a6a2ebda2fe02f026c51_47.png)
 
+```python
+price1 = 3000.14159
+price2 = -987654.65
+price3 = 1200.34
 print(f"价格1是：${price1:,.2f}")
 print(f"价格2是：${price2:,.2f}")
 print(f"价格3是：${price3:,.2f}")

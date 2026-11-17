@@ -48,6 +48,9 @@ je .in_bank_state
 为了实现标签页的左右滚动，我们引入了一个变量 `bank_start_offset`。它表示当前显示的第一个存储库头在内存块中的偏移量。
 
 **代码示例**（更新滚动偏移量）：
+
+![](img/1a2a9925540c98a97222a3898c673fc2_13.png)
+
 ```assembly
 ; “上一个”按钮回调（向左滚动）
 bank_previous:
@@ -60,9 +63,6 @@ bank_previous:
 .done:
     pop ax
     ret
-
-![](img/1a2a9925540c98a97222a3898c673fc2_13.png)
-
 ; “下一个”按钮回调（向右滚动）
 bank_next:
     push ax
@@ -159,6 +159,9 @@ mb_result_flag db 0    ; 0=取消，1=确定
 当用户点击“新建”按钮时，如果已经有一个文件处于活动状态，我们需要弹出确认对话框。
 
 **代码示例**（新文件回调）：
+
+![](img/1a2a9925540c98a97222a3898c673fc2_19.png)
+
 ```assembly
 new_file_callback:
     ; 首先，无论何种情况，都进入文件命名编辑状态
@@ -174,9 +177,6 @@ new_file_callback:
     ; ...
     push STATE_MESSAGE_BOX      ; 将消息框状态压栈
     ret                         ; 状态机将切换到消息框
-
-![](img/1a2a9925540c98a97222a3898c673fc2_19.png)
-
 .proceed_normal:
     ; 正常的文件命名流程...
     ; 启用文本输入框等...
@@ -192,6 +192,9 @@ new_file_callback:
 ![](img/1a2a9925540c98a97222a3898c673fc2_25.png)
 
 **代码示例**（消息框按钮回调）：
+
+![](img/1a2a9925540c98a97222a3898c673fc2_27.png)
+
 ```assembly
 ; “确定”按钮回调
 msgbox_ok_callback:
@@ -200,9 +203,6 @@ msgbox_ok_callback:
     ; 隐藏消息框，弹出其状态
     ; ...
     ret
-
-![](img/1a2a9925540c98a97222a3898c673fc2_27.png)
-
 ; “取消”按钮回调
 msgbox_cancel_callback:
     mov byte [mb_action_flag], 1

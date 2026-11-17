@@ -118,16 +118,16 @@
 
 ![](img/78b545354beac9b8758688e0d4a719bc_51.png)
 
-```c
-struct Node {
-    int data;
-    struct Node* next;
-};
 
 ![](img/78b545354beac9b8758688e0d4a719bc_53.png)
 
 ![](img/78b545354beac9b8758688e0d4a719bc_54.png)
 
+```c
+struct Node {
+    int data;
+    struct Node* next;
+};
 struct Node* front = NULL;
 struct Node* rear = NULL;
 ```

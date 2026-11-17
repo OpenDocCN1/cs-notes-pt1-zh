@@ -140,12 +140,12 @@ void main() {
 
 片段着色器将接收纹理坐标，并使用立方体贴图纹理进行采样。
 
-```glsl
-#version 330 core
-out vec4 FragColor;
 
 ![](img/7ed0840798dea70630540bd57b2a6bbe_8.png)
 
+```glsl
+#version 330 core
+out vec4 FragColor;
 in vec3 TexCoords;
 
 uniform samplerCube skybox;

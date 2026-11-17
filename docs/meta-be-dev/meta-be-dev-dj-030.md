@@ -55,11 +55,11 @@
 
 让我们逐行分析这段代码：
 
-```python
-from django import forms
 
 ![](img/d0c830a24aedc476197bebac5b62929d_10.png)
 
+```python
+from django import forms
 class NameForm(forms.Form):
     your_name = forms.CharField(max_length=100)
 ```

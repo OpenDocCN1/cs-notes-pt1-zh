@@ -95,6 +95,9 @@ print(f“总价为：${total:.2f}”)
 
 ![](img/134375871f7f27dcf798d1d2fd297c54_9.png)
 
+
+![](img/134375871f7f27dcf798d1d2fd297c54_11.png)
+
 ```python
 foods = []
 prices = []
@@ -113,9 +116,6 @@ print(“-” * 5 + “您的购物车” + “-” * 5)
 for food in foods:
     print(food, end=“ ”)
 print()
-
-![](img/134375871f7f27dcf798d1d2fd297c54_11.png)
-
 for price in prices:
     total += price
 
@@ -128,6 +128,9 @@ print(f“总价为：${total:.2f}”)
 ![](img/134375871f7f27dcf798d1d2fd297c54_15.png)
 
 **运行示例：**
+
+![](img/134375871f7f27dcf798d1d2fd297c54_17.png)
+
 ```
 请输入要购买的商品（输入‘q’退出）：披萨
 请输入 披萨 的价格：5.99
@@ -138,9 +141,6 @@ print(f“总价为：${total:.2f}”)
 请输入要购买的商品（输入‘q’退出）：q
 -----您的购物车-----
 披萨 汉堡 热狗
-
-![](img/134375871f7f27dcf798d1d2fd297c54_17.png)
-
 总价为：$11.24
 ```
 

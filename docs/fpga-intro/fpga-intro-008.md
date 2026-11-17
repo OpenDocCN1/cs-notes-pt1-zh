@@ -69,6 +69,9 @@
 
 以下是核心的Verilog模块代码：
 
+
+![](img/8904f555eaa90bf2961cdef166ed5c06_10.png)
+
 ```verilog
 module memory (
     input wire clk,
@@ -93,9 +96,6 @@ module memory (
             r_data <= mem[r_addr];
         end
     end
-
-![](img/8904f555eaa90bf2961cdef166ed5c06_10.png)
-
 endmodule
 ```
 

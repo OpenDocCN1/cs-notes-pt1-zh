@@ -83,15 +83,15 @@ int select(int nfds, fd_set *readfds, fd_set *writefds,
 
 以下是我们更新后的示例程序，添加了对`select`的调用：
 
+
+![](img/d75ac6c6fcfa9d633ae73225c0c49a60_11.png)
+
 ```c
 // 伪代码示例
 fd_set readfds;
 FD_ZERO(&readfds);
 FD_SET(sock1, &readfds);
 FD_SET(sock2, &readfds);
-
-![](img/d75ac6c6fcfa9d633ae73225c0c49a60_11.png)
-
 int max_fd = (sock1 > sock2) ? sock1 : sock2;
 
 while (1) {

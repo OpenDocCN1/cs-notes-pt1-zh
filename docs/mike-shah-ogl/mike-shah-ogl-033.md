@@ -80,13 +80,13 @@ void Camera::MouseLook(int mouseX, int mouseY) {
 接下来，我们需要在主循环的输入处理部分捕获鼠标移动事件，并调用相机的`MouseLook`函数。
 
 **代码示例：在主程序输入处理部分**
+
+![](img/41ba74566da6b0bcdae756db1b23b681_6.png)
+
 ```cpp
 // 在程序初始化部分（主循环之前），将鼠标锁定到窗口中心并隐藏
 SDL_WarpMouseInWindow(gGraphicsApplicationWindow, SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2);
 SDL_SetRelativeMouseMode(SDL_TRUE);
-
-![](img/41ba74566da6b0bcdae756db1b23b681_6.png)
-
 // 在主循环的事件处理部分
 while(SDL_PollEvent(&event)) {
     if(event.type == SDL_MOUSEMOTION) {

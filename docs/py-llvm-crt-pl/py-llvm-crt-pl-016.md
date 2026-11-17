@@ -304,8 +304,6 @@ func add(a: int, b: int) -> int {
 ![](img/6af1ed99976df5c30c5bbff0fda916f2_142.png)
 
 在 `test.lime` 文件中，我们可以导入并使用它：
-```lime
-import "math.lime";
 
 ![](img/6af1ed99976df5c30c5bbff0fda916f2_144.png)
 
@@ -315,6 +313,8 @@ import "math.lime";
 
 ![](img/6af1ed99976df5c30c5bbff0fda916f2_150.png)
 
+```lime
+import "math.lime";
 for i in 0..10 {
     if i == 1 {
         print(i, " + 8 = ", add(i, 8));

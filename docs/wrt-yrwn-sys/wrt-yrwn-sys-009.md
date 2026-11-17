@@ -39,14 +39,14 @@ public:
 ![](img/92dddb41e74c356cbdf24295a45e4617_4.png)
 
 以下是驱动程序管理器的核心结构：
+
+![](img/92dddb41e74c356cbdf24295a45e4617_6.png)
+
 ```cpp
 class DriverManager {
 private:
     Driver* drivers[256];
     int numDrivers;
-
-![](img/92dddb41e74c356cbdf24295a45e4617_6.png)
-
 public:
     DriverManager();
     void AddDriver(Driver* driver);

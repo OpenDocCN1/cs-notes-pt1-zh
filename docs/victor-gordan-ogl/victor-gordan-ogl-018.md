@@ -17,21 +17,21 @@ OpenGL教程：P18：透明度与混合
 为了启用透明度，我们需要创建一个新的片段着色器。这个着色器与我们常规的片段着色器几乎相同，但会添加一个关键步骤：检查Alpha值。如果Alpha值低于某个阈值，我们就丢弃该片段。
 
 以下是实现此逻辑的着色器代码示例：
-```glsl
-#version 330 core
-out vec4 FragColor;
-in vec2 TexCoords;
 
 ![](img/0f02d227e8b448e1e54983fa31f00c56_1.png)
 
 ![](img/0f02d227e8b448e1e54983fa31f00c56_2.png)
 
-uniform sampler2D texture1;
 
 ![](img/0f02d227e8b448e1e54983fa31f00c56_3.png)
 
 ![](img/0f02d227e8b448e1e54983fa31f00c56_4.png)
 
+```glsl
+#version 330 core
+out vec4 FragColor;
+in vec2 TexCoords;
+uniform sampler2D texture1;
 void main()
 {
     vec4 texColor = texture(texture1, TexCoords);

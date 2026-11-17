@@ -12,6 +12,9 @@
 *   **`fetchall()`**：获取结果集中的**所有**行记录。
 
 以下是查询的基本代码结构：
+
+![](img/c2685d504bb8c94c57835ed838a7845e_1.png)
+
 ```python
 import mysql.connector
 
@@ -22,9 +25,6 @@ connection = mysql.connector.connect(
     password="your_password",
     database="your_database"
 )
-
-![](img/c2685d504bb8c94c57835ed838a7845e_1.png)
-
 # 2. 创建游标对象
 cursor = connection.cursor()
 

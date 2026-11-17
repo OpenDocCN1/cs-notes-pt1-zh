@@ -8,12 +8,12 @@
 
 与`std::unique_ptr`类似，`std::shared_ptr`也定义在 `<memory>` 头文件中。以下是创建一个`std::shared_ptr`的基本方法。
 
-```cpp
-#include <iostream>
-#include <memory>
 
 ![](img/5ab198e28e2e0c6dc97b9a54353f94c6_1.png)
 
+```cpp
+#include <iostream>
+#include <memory>
 int main() {
     // 创建一个管理10个整数数组的shared_ptr
     std::shared_ptr<int[]> pointer1(new int[10]);

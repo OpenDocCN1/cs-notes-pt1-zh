@@ -87,17 +87,17 @@ span.class1.class2 {
 ![](img/060a5be1fdc466ad54d1f4de77167c30_26.png)
 
 以下是关键代码示例：
+
+![](img/060a5be1fdc466ad54d1f4de77167c30_28.png)
+
+![](img/060a5be1fdc466ad54d1f4de77167c30_29.png)
+
 ```python
 import streamlit as st
 
 # 读取 CSS 文件内容
 with open(‘designing.css’) as source_design:
     css_content = source_design.read()
-
-![](img/060a5be1fdc466ad54d1f4de77167c30_28.png)
-
-![](img/060a5be1fdc466ad54d1f4de77167c30_29.png)
-
 # 使用 Markdown 嵌入 CSS 样式
 st.markdown(f‘<style>{css_content}</style>’, unsafe_allow_html=True)
 ```

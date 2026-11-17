@@ -197,17 +197,6 @@ void MemoryManager::free(void* ptr) {
 
 以下是运算符重载的示例：
 
-```cpp
-// 全局 new/delete 运算符，调用我们的内存管理器
-void* operator new(size_t size) {
-    if(MemoryManager::activeMemoryManager == nullptr) return nullptr;
-    return MemoryManager::activeMemoryManager->malloc(size);
-}
-void operator delete(void* ptr) {
-    if(MemoryManager::activeMemoryManager != nullptr) {
-        MemoryManager::activeMemoryManager->free(ptr);
-    }
-}
 
 ![](img/78de33d16cf722ce44753100b4fc2326_29.png)
 
@@ -225,6 +214,17 @@ void operator delete(void* ptr) {
 
 ![](img/78de33d16cf722ce44753100b4fc2326_38.png)
 
+```cpp
+// 全局 new/delete 运算符，调用我们的内存管理器
+void* operator new(size_t size) {
+    if(MemoryManager::activeMemoryManager == nullptr) return nullptr;
+    return MemoryManager::activeMemoryManager->malloc(size);
+}
+void operator delete(void* ptr) {
+    if(MemoryManager::activeMemoryManager != nullptr) {
+        MemoryManager::activeMemoryManager->free(ptr);
+    }
+}
 // Placement new 运算符，用于在指定内存地址构造对象
 void* operator new(size_t, void* ptr) {
     return ptr;
@@ -256,13 +256,13 @@ if(driver != nullptr) {
 
 在实例化 `MemoryManager` 时，我们需要确定堆的起始地址和大小。一个简单但不够优雅的方法是将起始地址硬编码为内核栈之后的一个固定值（例如10MB）。大小可以从GRUB传递的多引导信息结构中获取（内存大小以KB为单位），然后减去堆的起始地址和一部分预留空间。
 
+
+![](img/78de33d16cf722ce44753100b4fc2326_50.png)
+
 ```cpp
 // 示例：从 multiboot 信息获取内存大小（KB），并转换为字节
 size_t memorySizeKB = *((uint32_t*)((size_t)multibootStructPtr + 8));
 size_t heapSize = (memorySizeKB * 1024) - heapStartAddress - 10*1024; // 减去10KB预留
-
-![](img/78de33d16cf722ce44753100b4fc2326_50.png)
-
 MemoryManager memoryManager(heapStartAddress, heapSize);
 ```
 

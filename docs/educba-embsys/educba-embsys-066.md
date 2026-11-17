@@ -60,12 +60,12 @@ for (int row1 = 1; row1 <= rows; row1++) {
 
 将以上两部分组合起来，得到完整的程序代码如下：
 
-```cpp
-#include <iostream>
-using namespace std;
 
 ![](img/04060b051964cbfce62c71011e24b36b_1.png)
 
+```cpp
+#include <iostream>
+using namespace std;
 int main() {
     int rows;
     cout << "Input Number of rows: ";

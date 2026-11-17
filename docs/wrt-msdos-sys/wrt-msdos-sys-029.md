@@ -29,17 +29,17 @@
 现在，让我们来看看实现这个效果的代码核心部分。
 
 以下是操作最大扫描线寄存器的关键步骤：
-```c
-// 1. 选择最大扫描线寄存器（索引为0x09）
-outportb(CRTC_INDEX, MAX_SCAN_LINE_REG);
 
 ![](img/5420300b2910c7b2a64ede71c83aeb38_5.png)
 
-// 2. 读取寄存器的原始值
-original_value = inportb(CRTC_DATA);
 
 ![](img/5420300b2910c7b2a64ede71c83aeb38_7.png)
 
+```c
+// 1. 选择最大扫描线寄存器（索引为0x09）
+outportb(CRTC_INDEX, MAX_SCAN_LINE_REG);
+// 2. 读取寄存器的原始值
+original_value = inportb(CRTC_DATA);
 // 3. 构造新值：保留高3位，替换低5位为动画参数
 new_value = (original_value & 0xE0) | (timer & 0x1F);
 

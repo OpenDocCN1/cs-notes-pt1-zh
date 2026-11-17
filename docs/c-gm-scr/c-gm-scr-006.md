@@ -320,10 +320,6 @@ game_state->score += 10 * game_state->lives; // 基础分乘以生命值
 
 ![](img/fb0e7f46d547648aaa046497e55447ae_260.png)
 
-```c
-// 全局变量，记录上次摧毁方块的时间
-static f32 last_block_destroyed_time = 0;
-static int touchless_bonus = 0; // 无触球连击数
 
 ![](img/fb0e7f46d547648aaa046497e55447ae_262.png)
 
@@ -351,8 +347,6 @@ static int touchless_bonus = 0; // 无触球连击数
 
 ![](img/fb0e7f46d547648aaa046497e55447ae_285.png)
 
-// 当球碰到玩家挡板时，重置连击
-touchless_bonus = 0;
 
 ![](img/fb0e7f46d547648aaa046497e55447ae_287.png)
 
@@ -372,6 +366,12 @@ touchless_bonus = 0;
 
 ![](img/fb0e7f46d547648aaa046497e55447ae_303.png)
 
+```c
+// 全局变量，记录上次摧毁方块的时间
+static f32 last_block_destroyed_time = 0;
+static int touchless_bonus = 0; // 无触球连击数
+// 当球碰到玩家挡板时，重置连击
+touchless_bonus = 0;
 // 当摧毁一个方块时
 touchless_bonus++;
 game_state->score += touchless_bonus * 5; // 连击奖励
@@ -471,12 +471,6 @@ last_block_destroyed_time = game_state->current_time;
 
 ![](img/fb0e7f46d547648aaa046497e55447ae_377.png)
 
-```c
-// 在平台层代码中（例如Windows）
-POINT center_screen;
-center_screen.x = screen_size.x / 2;
-center_screen.y = screen_size.y / 2;
-SetCursorPos(center_screen.x, center_screen.y); // 将鼠标设置到中心
 
 ![](img/fb0e7f46d547648aaa046497e55447ae_379.png)
 
@@ -484,12 +478,18 @@ SetCursorPos(center_screen.x, center_screen.y); // 将鼠标设置到中心
 
 ![](img/fb0e7f46d547648aaa046497e55447ae_383.png)
 
-// 获取鼠标当前位置（此时应在中心附近）
-POINT current_mouse_pos;
-GetCursorPos(¤t_mouse_pos);
 
 ![](img/fb0e7f46d547648aaa046497e55447ae_385.png)
 
+```c
+// 在平台层代码中（例如Windows）
+POINT center_screen;
+center_screen.x = screen_size.x / 2;
+center_screen.y = screen_size.y / 2;
+SetCursorPos(center_screen.x, center_screen.y); // 将鼠标设置到中心
+// 获取鼠标当前位置（此时应在中心附近）
+POINT current_mouse_pos;
+GetCursorPos(¤t_mouse_pos);
 // 计算增量
 mouse_delta.x = (f32)(current_mouse_pos.x - center_screen.x);
 mouse_delta.y = (f32)(current_mouse_pos.y - center_screen.y);
@@ -766,9 +766,6 @@ if(collision_on_x) {
 ![](img/fb0e7f46d547648aaa046497e55447ae_592.png)
 
 核心修改是在创建砖块的循环中，对首尾砖块进行特殊处理：
-```c
-V2 block_half_size = {1.5f, 0.75f};
-V2 block_relative_p = {0, 0};
 
 ![](img/fb0e7f46d547648aaa046497e55447ae_594.png)
 
@@ -784,8 +781,6 @@ V2 block_relative_p = {0, 0};
 
 ![](img/fb0e7f46d547648aaa046497e55447ae_606.png)
 
-// 计算砖块位置
-block_relative_p.x = (-num_blocks_x / 2.0f + x) * (block_half_size.x * 2 + spacing) + block_half_size.x;
 
 ![](img/fb0e7f46d547648aaa046497e55447ae_608.png)
 
@@ -815,6 +810,11 @@ block_relative_p.x = (-num_blocks_x / 2.0f + x) * (block_half_size.x * 2 + spaci
 
 ![](img/fb0e7f46d547648aaa046497e55447ae_631.png)
 
+```c
+V2 block_half_size = {1.5f, 0.75f};
+V2 block_relative_p = {0, 0};
+// 计算砖块位置
+block_relative_p.x = (-num_blocks_x / 2.0f + x) * (block_half_size.x * 2 + spacing) + block_half_size.x;
 // 如果是第一行，并且是第一个或最后一个砖块
 if(y == 0 && (x == 0 || x == num_blocks_x - 1)) {
     block_half_size.x *= 0.5f; // 宽度减半
@@ -866,15 +866,6 @@ if(y == 0 && (x == 0 || x == num_blocks_x - 1)) {
 
 ![](img/fb0e7f46d547648aaa046497e55447ae_667.png)
 
-```c
-#define MAX_MESSAGES 32
-struct Message {
-    int value;
-    f32 timer;
-    V4 color;
-};
-Message messages[MAX_MESSAGES];
-int current_message = 0;
 
 ![](img/fb0e7f46d547648aaa046497e55447ae_669.png)
 
@@ -894,13 +885,6 @@ int current_message = 0;
 
 ![](img/fb0e7f46d547648aaa046497e55447ae_685.png)
 
-void PrintInt(int value, V4 color) {
-    Message* msg = &messages[current_message];
-    msg->value = value;
-    msg->color = color;
-    msg->timer = 2.0f; // 显示2秒
-    current_message = (current_message + 1) % MAX_MESSAGES;
-}
 
 ![](img/fb0e7f46d547648aaa046497e55447ae_687.png)
 
@@ -928,6 +912,22 @@ void PrintInt(int value, V4 color) {
 
 ![](img/fb0e7f46d547648aaa046497e55447ae_710.png)
 
+```c
+#define MAX_MESSAGES 32
+struct Message {
+    int value;
+    f32 timer;
+    V4 color;
+};
+Message messages[MAX_MESSAGES];
+int current_message = 0;
+void PrintInt(int value, V4 color) {
+    Message* msg = &messages[current_message];
+    msg->value = value;
+    msg->color = color;
+    msg->timer = 2.0f; // 显示2秒
+    current_message = (current_message + 1) % MAX_MESSAGES;
+}
 // 在渲染循环中绘制所有活跃的消息
 for(int i = 0; i < MAX_MESSAGES; ++i) {
     if(messages[i].timer > 0) {

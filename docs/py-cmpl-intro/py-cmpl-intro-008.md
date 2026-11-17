@@ -76,6 +76,9 @@ if unit == "LBS" or unit == "KGS":
 
 将以上所有步骤组合起来，就得到了完整的体重转换器程序。
 
+
+![](img/7fe7139509e0d8ba0d869a8d2ac5a86f_13.png)
+
 ```python
 # 获取用户输入
 weight = float(input("请输入您的体重："))
@@ -90,9 +93,6 @@ elif unit == "L":
     unit = "KGS"
 else:
     print(f"您输入的单位 ‘{unit}’ 无效。")
-
-![](img/7fe7139509e0d8ba0d869a8d2ac5a86f_13.png)
-
 # 输出转换结果
 if unit == "LBS" or unit == "KGS":
     print(f"您的体重是 {round(weight, 1)} {unit}。")

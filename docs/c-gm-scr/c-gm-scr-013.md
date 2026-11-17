@@ -210,10 +210,6 @@ if (block_life > 0) {
 ![](img/80ebbaad2eb9948dc69a50a6f8cfb116_164.png)
 
 **核心代码修改：**
-```c
-// 修正前
-x_clamped = clamp(x, 0, bitmap->width);
-width_clamped = clamp(width, 0, bitmap->height); // 错误：使用了 height
 
 ![](img/80ebbaad2eb9948dc69a50a6f8cfb116_166.png)
 
@@ -239,6 +235,10 @@ width_clamped = clamp(width, 0, bitmap->height); // 错误：使用了 height
 
 ![](img/80ebbaad2eb9948dc69a50a6f8cfb116_185.png)
 
+```c
+// 修正前
+x_clamped = clamp(x, 0, bitmap->width);
+width_clamped = clamp(width, 0, bitmap->height); // 错误：使用了 height
 // 修正后
 x_clamped = clamp(x, 0, bitmap->width);
 width_clamped = clamp(width, 0, bitmap->width); // 正确：使用 width
@@ -577,11 +577,6 @@ hot_level = clamp(hot_level, 0, level_count - 1);
 ![](img/80ebbaad2eb9948dc69a50a6f8cfb116_441.png)
 
 **数据结构定义：**
-```c
-typedef struct {
-    b32 is_unlocked;    // 关卡是否已解锁
-    s32 high_score;     // 该关卡的最高分
-} Level_Save;
 
 ![](img/80ebbaad2eb9948dc69a50a6f8cfb116_443.png)
 
@@ -589,6 +584,11 @@ typedef struct {
 
 ![](img/80ebbaad2eb9948dc69a50a6f8cfb116_447.png)
 
+```c
+typedef struct {
+    b32 is_unlocked;    // 关卡是否已解锁
+    s32 high_score;     // 该关卡的最高分
+} Level_Save;
 Level_Save level_saves[MAX_LEVELS]; // 全局存档数组
 ```
 
@@ -647,6 +647,9 @@ Level_Save level_saves[MAX_LEVELS]; // 全局存档数组
 ![](img/80ebbaad2eb9948dc69a50a6f8cfb116_487.png)
 
 **文件操作核心代码（Windows平台示例）：**
+
+![](img/80ebbaad2eb9948dc69a50a6f8cfb116_489.png)
+
 ```c
 b32 save_game() {
     Save_Data data;
@@ -657,9 +660,6 @@ b32 save_game() {
     // 调用平台层函数写入文件
     return platform_write_save_file("data/save.dat", &data, sizeof(data));
 }
-
-![](img/80ebbaad2eb9948dc69a50a6f8cfb116_489.png)
-
 b32 load_game() {
     Save_Data data;
     if (platform_read_save_file("data/save.dat", &data, sizeof(data))) {
@@ -741,11 +741,6 @@ b32 load_game() {
 ![](img/80ebbaad2eb9948dc69a50a6f8cfb116_543.png)
 
 **音乐状态控制：**
-```c
-// 切换到游戏模式时
-set_target_volume(&menu_music, 0.0f); // 菜单音乐淡出
-set_target_volume(&gameplay_music, 1.0f); // 游戏音乐淡入
-start_game();
 
 ![](img/80ebbaad2eb9948dc69a50a6f8cfb116_545.png)
 
@@ -775,6 +770,11 @@ start_game();
 
 ![](img/80ebbaad2eb9948dc69a50a6f8cfb116_569.png)
 
+```c
+// 切换到游戏模式时
+set_target_volume(&menu_music, 0.0f); // 菜单音乐淡出
+set_target_volume(&gameplay_music, 1.0f); // 游戏音乐淡入
+start_game();
 // 切换回菜单模式时
 set_target_volume(&gameplay_music, 0.0f);
 set_target_volume(&menu_music, 1.0f);
@@ -868,12 +868,6 @@ set_target_volume(&menu_music, 1.0f);
 ![](img/80ebbaad2eb9948dc69a50a6f8cfb116_644.png)
 
 **播放音效的示例：**
-```c
-// 当方块被摧毁时
-if (block_destroyed) {
-    int sound_index = rand_int(0, BRICK_SOUND_COUNT - 1);
-    play_sound(&brick_sounds[sound_index]);
-}
 
 ![](img/80ebbaad2eb9948dc69a50a6f8cfb116_646.png)
 
@@ -905,6 +899,12 @@ if (block_destroyed) {
 
 ![](img/80ebbaad2eb9948dc69a50a6f8cfb116_671.png)
 
+```c
+// 当方块被摧毁时
+if (block_destroyed) {
+    int sound_index = rand_int(0, BRICK_SOUND_COUNT - 1);
+    play_sound(&brick_sounds[sound_index]);
+}
 // 当球击中挡板时
 if (ball_hit_paddle) {
     // 使用循环播放的一组音效，产生有节奏的连续击打声
@@ -997,11 +997,6 @@ if (ball_hit_paddle) {
 ![](img/80ebbaad2eb9948dc69a50a6f8cfb116_739.png)
 
 **核心公式与代码：**
-```c
-// 在每帧更新中计算目标值
-target_pitch = 0.5f + abs(player_velocity_x) * 0.1f; // 基础音高 + 速度影响
-target_pitch = clamp(target_pitch, 0.5f, 2.0f); // 限制音高范围
-target_volume = abs(player_velocity_x) * 0.05f;
 
 ![](img/80ebbaad2eb9948dc69a50a6f8cfb116_741.png)
 
@@ -1037,9 +1032,6 @@ target_volume = abs(player_velocity_x) * 0.05f;
 
 ![](img/80ebbaad2eb9948dc69a50a6f8cfb116_769.png)
 
-// 在音频混合器中平滑过渡并生成样本
-sound->pitch = move_towards(sound->pitch, target_pitch, dt * 10.0f);
-sound->volume = move_towards(sound->volume, target_volume, dt * 3.0f);
 
 ![](img/80ebbaad2eb9948dc69a50a6f8cfb116_770.png)
 
@@ -1081,6 +1073,14 @@ sound->volume = move_towards(sound->volume, target_volume, dt * 3.0f);
 
 ![](img/80ebbaad2eb9948dc69a50a6f8cfb116_803.png)
 
+```c
+// 在每帧更新中计算目标值
+target_pitch = 0.5f + abs(player_velocity_x) * 0.1f; // 基础音高 + 速度影响
+target_pitch = clamp(target_pitch, 0.5f, 2.0f); // 限制音高范围
+target_volume = abs(player_velocity_x) * 0.05f;
+// 在音频混合器中平滑过渡并生成样本
+sound->pitch = move_towards(sound->pitch, target_pitch, dt * 10.0f);
+sound->volume = move_towards(sound->volume, target_volume, dt * 3.0f);
 // 生成带音高变化的样本
 float sample_index = sound->position;
 float sample = sinf(2.0f * PI * sample_index * BASE_FREQUENCY * sound->pitch / SAMPLE_RATE);

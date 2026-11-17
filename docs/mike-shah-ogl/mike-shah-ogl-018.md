@@ -41,12 +41,12 @@ your_project/
 
 ![](img/00cccf7798ad6aecc710e6df04c3fbf7_11.png)
 
-```cpp
-#include <iostream>
-#include <glm/glm.hpp>
 
 ![](img/00cccf7798ad6aecc710e6df04c3fbf7_13.png)
 
+```cpp
+#include <iostream>
+#include <glm/glm.hpp>
 int main() {
     // 创建两个三维向量
     glm::vec3 a(1.0f, 1.0f, 1.0f);
@@ -144,15 +144,15 @@ GLM支持类似GLSL的分量访问和Swizzling操作，但这需要启用特定�
 
 ![](img/00cccf7798ad6aecc710e6df04c3fbf7_25.png)
 
+
+![](img/00cccf7798ad6aecc710e6df04c3fbf7_27.png)
+
 ```cpp
 #define GLM_ENABLE_EXPERIMENTAL // 启用实验性功能（如Swizzle）
 #include <iostream>
 #include <glm/glm.hpp>
 #include <glm/gtx/string_cast.hpp>
 #include <glm/gtx/swizzle.hpp> // Swizzle操作
-
-![](img/00cccf7798ad6aecc710e6df04c3fbf7_27.png)
-
 int main() {
     glm::vec4 color(0.2f, 0.4f, 0.8f, 1.0f);
     
@@ -181,13 +181,13 @@ int main() {
 
 ![](img/00cccf7798ad6aecc710e6df04c3fbf7_31.png)
 
+
+![](img/00cccf7798ad6aecc710e6df04c3fbf7_33.png)
+
 ```cpp
 #include <iostream>
 #include <glm/glm.hpp>
 #include <glm/gtx/string_cast.hpp>
-
-![](img/00cccf7798ad6aecc710e6df04c3fbf7_33.png)
-
 int main() {
     glm::vec3 a(1.0f, 0.0f, 0.0f); // X轴方向
     glm::vec3 b(0.0f, 1.0f, 0.0f); // Y轴方向

@@ -92,11 +92,11 @@ void main() {
 
 让我们创建另一个文件，命名为 `file5.dart`。在这里，我们将从导入 `dart:io` 库开始，以便处理输入/输出操作。
 
-```dart
-import 'dart:io';
 
 ![](img/9098158414e2c103a8db45d98d03c395_26.png)
 
+```dart
+import 'dart:io';
 void main() {
   // 创建列表的代码将放在这里
 }

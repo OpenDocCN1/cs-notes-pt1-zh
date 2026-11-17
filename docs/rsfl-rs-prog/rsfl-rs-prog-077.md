@@ -36,11 +36,11 @@ macro_rules! result_type {
 
 ![](img/9ccfa8b60feff587b5bb515d85680373_7.png)
 
-```rust
-result_type!(MyResult = Result<i32, String>);
 
 ![](img/9ccfa8b60feff587b5bb515d85680373_8.png)
 
+```rust
+result_type!(MyResult = Result<i32, String>);
 fn my_function() -> MyResult {
     Ok(42)
 }
@@ -300,16 +300,16 @@ macro_rules! struct_with_new {
 
 ![](img/9ccfa8b60feff587b5bb515d85680373_52.png)
 
-```rust
-struct_with_new!(Point {
-    x: i32,
-    y: i32,
-});
 
 ![](img/9ccfa8b60feff587b5bb515d85680373_53.png)
 
 ![](img/9ccfa8b60feff587b5bb515d85680373_54.png)
 
+```rust
+struct_with_new!(Point {
+    x: i32,
+    y: i32,
+});
 fn main() {
     let point = Point::new(3, 4);
     println!("点: x = {}, y = {}", point.x, point.y);

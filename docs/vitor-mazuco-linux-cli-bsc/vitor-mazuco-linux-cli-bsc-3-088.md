@@ -20,15 +20,15 @@
 
 以下是具体操作命令：
 
+
+![](img/859dcc9f5a6a935dd3e02c94a27abf39_1.png)
+
 ```bash
 # 下载Node Exporter（请替换为实际的最新版本链接）
 wget https://github.com/prometheus/node_exporter/releases/download/v1.5.0/node_exporter-1.5.0.linux-amd64.tar.gz
 
 # 解压下载的文件
 tar -xzf node_exporter-1.5.0.linux-amd64.tar.gz
-
-![](img/859dcc9f5a6a935dd3e02c94a27abf39_1.png)
-
 # 进入解压后的目录
 cd node_exporter-1.5.0.linux-amd64/
 
@@ -109,6 +109,9 @@ sudo nano /etc/systemd/system/node_exporter.service
 
 2.  将以下内容复制到文件中：
 
+
+![](img/859dcc9f5a6a935dd3e02c94a27abf39_7.png)
+
 ```ini
 [Unit]
 Description=Node Exporter
@@ -119,29 +122,26 @@ User=prometheus
 Group=prometheus
 Type=simple
 ExecStart=/usr/local/bin/node_exporter
-
-![](img/859dcc9f5a6a935dd3e02c94a27abf39_7.png)
-
 [Install]
 WantedBy=multi-user.target
 ```
 
 3.  保存文件后，重新加载systemd配置并启动服务。
 
-```bash
-# 重新加载systemd配置
-sudo systemctl daemon-reload
 
 ![](img/859dcc9f5a6a935dd3e02c94a27abf39_9.png)
 
+
+![](img/859dcc9f5a6a935dd3e02c94a27abf39_11.png)
+
+```bash
+# 重新加载systemd配置
+sudo systemctl daemon-reload
 # 启用Node Exporter服务（开机自启）
 sudo systemctl enable node_exporter
 
 # 启动Node Exporter服务
 sudo systemctl start node_exporter
-
-![](img/859dcc9f5a6a935dd3e02c94a27abf39_11.png)
-
 # 检查服务运行状态
 sudo systemctl status node_exporter
 ```

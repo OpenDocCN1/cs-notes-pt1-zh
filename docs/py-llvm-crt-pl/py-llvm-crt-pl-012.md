@@ -79,21 +79,21 @@ int main() {
 
 ![](img/08fdd146d5749c528b60643192da451e_44.png)
 
-```python
-# 在 keywords 列表中添加
-keywords = [..., ‘while’]
 
 ![](img/08fdd146d5749c528b60643192da451e_46.png)
 
 ![](img/08fdd146d5749c528b60643192da451e_48.png)
 
-# 在 keywords 字典中添加
-keywords = {..., ‘while’: TokenType.WHILE}
 
 ![](img/08fdd146d5749c528b60643192da451e_50.png)
 
 ![](img/08fdd146d5749c528b60643192da451e_52.png)
 
+```python
+# 在 keywords 列表中添加
+keywords = [..., ‘while’]
+# 在 keywords 字典中添加
+keywords = {..., ‘while’: TokenType.WHILE}
 # 在 alt_keywords 字典中添加
 alt_keywords = {..., ‘we’: TokenType.WHILE}
 ```

@@ -78,14 +78,14 @@ __interrupt void Timer0_A0_ISR(void) {
 
 ![](img/43c2010572a3400d93f5d179620ccc99_11.png)
 
+
+![](img/43c2010572a3400d93f5d179620ccc99_13.png)
+
 ```c
 // 普通C函数
 void LED_Toggle(void) {
     // 切换LED
 }
-
-![](img/43c2010572a3400d93f5d179620ccc99_13.png)
-
 // 中断服务例程
 #pragma vector=TIMER0_A0_VECTOR
 __interrupt void Timer0_A0_ISR(void) {

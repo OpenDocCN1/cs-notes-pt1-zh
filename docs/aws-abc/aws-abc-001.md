@@ -32,12 +32,6 @@ API Gateway可以与许多不同的后端AWS服务集成。一个非常常见的
 ![](img/90d7483e7305e07edf6fdf817d4cb37d_7.png)
 
 你可以将AWS Lambda函数配置为API Gateway的后端，从而允许用户通过API Gateway来调用该Lambda函数。这通常通过以下方式实现：
-```yaml
-# 示例：在CloudFormation中关联API Gateway与Lambda
-MyApi:
-  Type: AWS::ApiGateway::RestApi
-  Properties:
-    ...
 
 ![](img/90d7483e7305e07edf6fdf817d4cb37d_8.png)
 
@@ -45,15 +39,21 @@ MyApi:
 
 ![](img/90d7483e7305e07edf6fdf817d4cb37d_10.png)
 
+
+![](img/90d7483e7305e07edf6fdf817d4cb37d_11.png)
+
+```yaml
+# 示例：在CloudFormation中关联API Gateway与Lambda
+MyApi:
+  Type: AWS::ApiGateway::RestApi
+  Properties:
+    ...
 MyResource:
   Type: AWS::ApiGateway::Resource
   Properties:
     RestApiId: !Ref MyApi
     ParentId: !GetAtt MyApi.RootResourceId
     PathPart: "myendpoint"
-
-![](img/90d7483e7305e07edf6fdf817d4cb37d_11.png)
-
 MyMethod:
   Type: AWS::ApiGateway::Method
   Properties:

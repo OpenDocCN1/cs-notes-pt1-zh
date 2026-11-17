@@ -63,15 +63,15 @@ def initUI(self):
 
 为了演示布局的效果，我们需要一些控件。让我们创建五个带有不同背景颜色的标签：
 
-```python
-# 创建五个标签
-label1 = QLabel(“标签 1”)
-label1.setStyleSheet(“background-color: red;”)
 
 ![](img/931479e9504648531dcc81a67fa2b566_1.png)
 
 ![](img/931479e9504648531dcc81a67fa2b566_2.png)
 
+```python
+# 创建五个标签
+label1 = QLabel(“标签 1”)
+label1.setStyleSheet(“background-color: red;”)
 label2 = QLabel(“标签 2”)
 label2.setStyleSheet(“background-color: yellow;”)
 

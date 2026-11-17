@@ -98,12 +98,12 @@ int main() {
 
 ![](img/0576aeb2bbdee3ff80e403f89f18e128_25.png)
 
-```c
-#include <unistd.h>
-#include <stdio.h>
 
 ![](img/0576aeb2bbdee3ff80e403f89f18e128_27.png)
 
+```c
+#include <unistd.h>
+#include <stdio.h>
 int main() {
     // 尝试将文件所有者改为自己（通常无意义，除非是root）
     if (chown("testfile", getuid(), (gid_t)-1) < 0) {

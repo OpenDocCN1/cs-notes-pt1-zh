@@ -78,15 +78,29 @@
 
 ![](img/4f3a6a1da6c9f2efa498be88753e58c2_49.png)
 
+
+![](img/4f3a6a1da6c9f2efa498be88753e58c2_51.png)
+
+
+![](img/4f3a6a1da6c9f2efa498be88753e58c2_53.png)
+
+![](img/4f3a6a1da6c9f2efa498be88753e58c2_55.png)
+
+![](img/4f3a6a1da6c9f2efa498be88753e58c2_56.png)
+
+
+![](img/4f3a6a1da6c9f2efa498be88753e58c2_58.png)
+
+![](img/4f3a6a1da6c9f2efa498be88753e58c2_60.png)
+
+![](img/4f3a6a1da6c9f2efa498be88753e58c2_62.png)
+
 ```pseudocode
 // 假设列表 A 的范围是 A[low...mid]，列表 B 的范围是 A[mid+1...high]
 // 结果将存回原数组 A[low...high] 或另一个数组 C
 i = low
 j = mid + 1
 k = low // 如果使用新数组 C，则 k=0
-
-![](img/4f3a6a1da6c9f2efa498be88753e58c2_51.png)
-
 while (i <= mid && j <= high)
     if (A[i] < A[j])
         C[k] = A[i]
@@ -95,25 +109,11 @@ while (i <= mid && j <= high)
         C[k] = A[j]
         j++
     k++
-
-![](img/4f3a6a1da6c9f2efa498be88753e58c2_53.png)
-
-![](img/4f3a6a1da6c9f2efa498be88753e58c2_55.png)
-
-![](img/4f3a6a1da6c9f2efa498be88753e58c2_56.png)
-
 // 复制剩余元素
 while (i <= mid)
     C[k] = A[i]
     i++
     k++
-
-![](img/4f3a6a1da6c9f2efa498be88753e58c2_58.png)
-
-![](img/4f3a6a1da6c9f2efa498be88753e58c2_60.png)
-
-![](img/4f3a6a1da6c9f2efa498be88753e58c2_62.png)
-
 while (j <= high)
     C[k] = A[j]
     j++

@@ -24,13 +24,13 @@
 为了更详细地说明父进程和子进程在文件描述符上的关系，让我们回顾一下与打开文件相关的数据结构。当一个进程打开文件时，会创建文件表项。当该进程调用`fork`时，会创建一个子进程，它继承了父进程的文件描述符。重要的是，子进程的文件描述符指针指向与父进程相同的文件表项。这意味着，在一个进程中对这些文件描述符进行的任何操作（如`lseek`）都会影响另一个进程。
 
 以下是一个演示此行为的代码示例：
+
+![](img/aec132c384b1b195fcaf43b022a27b0f_7.png)
+
 ```c
 #include <stdio.h>
 #include <unistd.h>
 #include <fcntl.h>
-
-![](img/aec132c384b1b195fcaf43b022a27b0f_7.png)
-
 void read_data(int fd) {
     off_t cur_offset = lseek(fd, 0, SEEK_CUR); // 获取当前偏移量
     printf("Current offset: %ld\n", (long)cur_offset);

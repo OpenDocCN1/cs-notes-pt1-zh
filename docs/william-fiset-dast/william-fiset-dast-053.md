@@ -70,13 +70,13 @@ im[pm[k]] = k
 
 ![](img/52f3d782b02b3277348220270eb95b77_5.png)
 
+
+![](img/52f3d782b02b3277348220270eb95b77_6.png)
+
 ```java
 private boolean less(int i, int j) {
     return ((T) values[im[i]]).compareTo((T) values[im[j]]) < 0;
 }
-
-![](img/52f3d782b02b3277348220270eb95b77_6.png)
-
 private void swap(int i, int j) {
     pm[im[j]] = i;
     pm[im[i]] = j;

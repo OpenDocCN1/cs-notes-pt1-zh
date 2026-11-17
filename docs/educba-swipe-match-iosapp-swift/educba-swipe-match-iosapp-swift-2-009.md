@@ -60,22 +60,22 @@ let viewModels = [sarish, george, priya, kagel, guitar, sundip]
 
 核心实现代码如下：
 
+
+![](img/b1610b3ecc9f74a929fd796b7fcb49b1_6.png)
+
+
+![](img/b1610b3ecc9f74a929fd796b7fcb49b1_8.png)
+
 ```swift
 func numberOfCards() -> Int {
     return viewModels.count
 }
-
-![](img/b1610b3ecc9f74a929fd796b7fcb49b1_6.png)
-
 func card(forItemAt index: Int) -> SwipeableCardView {
     let viewModel = viewModels[index]
     let cardView = SampleSwipeableCard()
     cardView.viewModel = viewModel
     return cardView
 }
-
-![](img/b1610b3ecc9f74a929fd796b7fcb49b1_8.png)
-
 func emptyView() -> UIView? {
     return nil
 }

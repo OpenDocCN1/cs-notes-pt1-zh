@@ -84,13 +84,13 @@ class Penguin: Bird {
 
 ![](img/c508778d35a67dc5cd9847f5c8e306ca_3.png)
 
+
+![](img/c508778d35a67dc5cd9847f5c8e306ca_5.png)
+
 ```swift
 protocol Bird {
     var name: String { get set }
 }
-
-![](img/c508778d35a67dc5cd9847f5c8e306ca_5.png)
-
 protocol Flyable {
     func fly()
 }

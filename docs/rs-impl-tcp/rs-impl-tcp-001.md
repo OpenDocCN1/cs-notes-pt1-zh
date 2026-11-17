@@ -146,13 +146,13 @@ etherparse = "0.8"
 
 ![](img/e709d71a082b45418e3b70befbd3ce3f_104.png)
 
-```rust
-use tun_tap::Iface;
 
 ![](img/e709d71a082b45418e3b70befbd3ce3f_106.png)
 
 ![](img/e709d71a082b45418e3b70befbd3ce3f_108.png)
 
+```rust
+use tun_tap::Iface;
 fn main() -> std::io::Result<()> {
     // 创建一个TUN接口，命名为 `tun0`
     let nic = Iface::without_packet_info("tun0", tun_tap::Mode::Tun)?;
@@ -272,8 +272,6 @@ IP数据包遵循RFC 791定义的格式。为了节省时间，我们使用 `eth
 
 ![](img/e709d71a082b45418e3b70befbd3ce3f_189.png)
 
-```rust
-use etherparse::{Ipv4HeaderSlice, TcpHeaderSlice};
 
 ![](img/e709d71a082b45418e3b70befbd3ce3f_191.png)
 
@@ -291,8 +289,6 @@ use etherparse::{Ipv4HeaderSlice, TcpHeaderSlice};
 
 ![](img/e709d71a082b45418e3b70befbd3ce3f_204.png)
 
-// 在循环中处理接收到的数据
-let nbytes = nic.recv(&mut buf[..])?;
 
 ![](img/e709d71a082b45418e3b70befbd3ce3f_206.png)
 
@@ -302,15 +298,6 @@ let nbytes = nic.recv(&mut buf[..])?;
 
 ![](img/e709d71a082b45418e3b70befbd3ce3f_212.png)
 
-// 解析以太网帧（TUN接口省略了链路层头部，直接是IP包）
-// 这里我们假设前4个字节是TUN的元信息（如果使用with_packet_info），但我们使用了without_packet_info
-let ip_packet = match Ipv4HeaderSlice::from_slice(&buf[..nbytes]) {
-    Ok(p) => p,
-    Err(_) => {
-        eprintln!("Ignoring non-IPv4 packet");
-        continue;
-    }
-};
 
 ![](img/e709d71a082b45418e3b70befbd3ce3f_214.png)
 
@@ -318,10 +305,6 @@ let ip_packet = match Ipv4HeaderSlice::from_slice(&buf[..nbytes]) {
 
 ![](img/e709d71a082b45418e3b70befbd3ce3f_218.png)
 
-// 检查协议类型，只处理TCP（协议号6）
-if ip_packet.protocol() != 0x06 {
-    continue; // 忽略非TCP数据包
-}
 
 ![](img/e709d71a082b45418e3b70befbd3ce3f_220.png)
 
@@ -331,6 +314,23 @@ if ip_packet.protocol() != 0x06 {
 
 ![](img/e709d71a082b45418e3b70befbd3ce3f_225.png)
 
+```rust
+use etherparse::{Ipv4HeaderSlice, TcpHeaderSlice};
+// 在循环中处理接收到的数据
+let nbytes = nic.recv(&mut buf[..])?;
+// 解析以太网帧（TUN接口省略了链路层头部，直接是IP包）
+// 这里我们假设前4个字节是TUN的元信息（如果使用with_packet_info），但我们使用了without_packet_info
+let ip_packet = match Ipv4HeaderSlice::from_slice(&buf[..nbytes]) {
+    Ok(p) => p,
+    Err(_) => {
+        eprintln!("Ignoring non-IPv4 packet");
+        continue;
+    }
+};
+// 检查协议类型，只处理TCP（协议号6）
+if ip_packet.protocol() != 0x06 {
+    continue; // 忽略非TCP数据包
+}
 // 解析TCP头部
 let tcp_slice = &buf[ip_packet.slice().len()..nbytes];
 let tcp_packet = match TcpHeaderSlice::from_slice(tcp_slice) {
@@ -393,15 +393,6 @@ TCP是面向连接的协议。每个连接由一个四元组唯一标识：`(源
 
 我们将定义一个 `Connection` 结构体来保存连接状态，并使用一个 `HashMap` 来管理所有活跃连接。
 
-```rust
-use std::collections::HashMap;
-use std::net::Ipv4Addr;
-
-#[derive(Hash, Eq, PartialEq, Debug, Clone, Copy)]
-struct Quad {
-    src: (Ipv4Addr, u16),
-    dst: (Ipv4Addr, u16),
-}
 
 ![](img/e709d71a082b45418e3b70befbd3ce3f_261.png)
 
@@ -417,6 +408,30 @@ struct Quad {
 
 ![](img/e709d71a082b45418e3b70befbd3ce3f_273.png)
 
+
+![](img/e709d71a082b45418e3b70befbd3ce3f_275.png)
+
+
+![](img/e709d71a082b45418e3b70befbd3ce3f_277.png)
+
+![](img/e709d71a082b45418e3b70befbd3ce3f_279.png)
+
+![](img/e709d71a082b45418e3b70befbd3ce3f_281.png)
+
+
+![](img/e709d71a082b45418e3b70befbd3ce3f_283.png)
+
+![](img/e709d71a082b45418e3b70befbd3ce3f_285.png)
+
+```rust
+use std::collections::HashMap;
+use std::net::Ipv4Addr;
+
+#[derive(Hash, Eq, PartialEq, Debug, Clone, Copy)]
+struct Quad {
+    src: (Ipv4Addr, u16),
+    dst: (Ipv4Addr, u16),
+}
 struct Connection {
     // 连接状态机（例如：Listen, SynReceived, Established, FinWait1等）
     state: State,
@@ -426,9 +441,6 @@ struct Connection {
     recv: RecvSequenceSpace,
     // 其他字段，如IP和TCP头部模板、重传队列等
 }
-
-![](img/e709d71a082b45418e3b70befbd3ce3f_275.png)
-
 // 发送序列号空间 (RFC 793 Section 3.2, Figure 4)
 struct SendSequenceSpace {
     una: u32, // 已发送但未确认的最老序列号
@@ -439,13 +451,6 @@ struct SendSequenceSpace {
     wl2: usize, // 用于窗口更新的段确认号
     iss: u32,  // 初始发送序列号
 }
-
-![](img/e709d71a082b45418e3b70befbd3ce3f_277.png)
-
-![](img/e709d71a082b45418e3b70befbd3ce3f_279.png)
-
-![](img/e709d71a082b45418e3b70befbd3ce3f_281.png)
-
 // 接收序列号空间 (RFC 793 Section 3.2, Figure 5)
 struct RecvSequenceSpace {
     nxt: u32, // 期望接收的下一个序列号
@@ -453,11 +458,6 @@ struct RecvSequenceSpace {
     up: bool, // 紧急指针标志
     irs: u32, // 初始接收序列号
 }
-
-![](img/e709d71a082b45418e3b70befbd3ce3f_283.png)
-
-![](img/e709d71a082b45418e3b70befbd3ce3f_285.png)
-
 enum State {
     Closed,
     Listen,
@@ -495,8 +495,6 @@ enum State {
 
 ![](img/e709d71a082b45418e3b70befbd3ce3f_308.png)
 
-```rust
-let mut connections: HashMap<Quad, Connection> = HashMap::new();
 
 ![](img/e709d71a082b45418e3b70befbd3ce3f_310.png)
 
@@ -506,11 +504,6 @@ let mut connections: HashMap<Quad, Connection> = HashMap::new();
 
 ![](img/e709d71a082b45418e3b70befbd3ce3f_316.png)
 
-// 在数据包处理循环中
-let quad = Quad {
-    src: (ip_packet.source_addr(), tcp_packet.source_port()),
-    dst: (ip_packet.destination_addr(), tcp_packet.destination_port()),
-};
 
 ![](img/e709d71a082b45418e3b70befbd3ce3f_317.png)
 
@@ -532,11 +525,6 @@ let quad = Quad {
 
 ![](img/e709d71a082b45418e3b70befbd3ce3f_333.png)
 
-// 获取或创建连接，并处理数据包
-let connection = connections.entry(quad).or_insert_with(|| {
-    // 如果连接不存在，尝试接受新连接（例如，处理SYN包）
-    Connection::accept(ip_packet, tcp_packet, &nic)
-});
 
 ![](img/e709d71a082b45418e3b70befbd3ce3f_335.png)
 
@@ -550,6 +538,18 @@ let connection = connections.entry(quad).or_insert_with(|| {
 
 ![](img/e709d71a082b45418e3b70befbd3ce3f_345.png)
 
+```rust
+let mut connections: HashMap<Quad, Connection> = HashMap::new();
+// 在数据包处理循环中
+let quad = Quad {
+    src: (ip_packet.source_addr(), tcp_packet.source_port()),
+    dst: (ip_packet.destination_addr(), tcp_packet.destination_port()),
+};
+// 获取或创建连接，并处理数据包
+let connection = connections.entry(quad).or_insert_with(|| {
+    // 如果连接不存在，尝试接受新连接（例如，处理SYN包）
+    Connection::accept(ip_packet, tcp_packet, &nic)
+});
 // 如果连接存在，调用其 on_packet 方法处理数据包
 if let Some(conn) = connection {
     conn.on_packet(ip_packet, tcp_packet, &data_payload, &nic)?;
@@ -848,6 +848,13 @@ impl Connection {
 
 ![](img/e709d71a082b45418e3b70befbd3ce3f_504.png)
 
+
+![](img/e709d71a082b45418e3b70befbd3ce3f_506.png)
+
+![](img/e709d71a082b45418e3b70befbd3ce3f_508.png)
+
+![](img/e709d71a082b45418e3b70befbd3ce3f_510.png)
+
 ```rust
 impl Connection {
     fn on_packet<'a>(
@@ -902,13 +909,6 @@ impl Connection {
         wrapping_lt(self.send.una, ack_num) && wrapping_le(ack_num, self.send.nxt)
     }
 }
-
-![](img/e709d71a082b45418e3b70befbd3ce3f_506.png)
-
-![](img/e709d71a082b45418e3b70befbd3ce3f_508.png)
-
-![](img/e709d71a082b45418e3b70befbd3ce3f_510.png)
-
 /// 辅助函数：处理32位无符号整数的环绕比较
 fn wrapping_lt(a: u32, b: u32) -> bool {
     (a.wrapping_sub(b) as i32) < 0

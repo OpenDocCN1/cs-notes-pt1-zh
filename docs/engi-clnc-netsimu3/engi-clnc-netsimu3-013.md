@@ -122,13 +122,20 @@ python flowmon-parse-results.py third.xml
 
 以下是一个简化的脚本结构示例：
 
+
+![](img/901819938fc25a39855358583152eedc_48.png)
+
+
+![](img/901819938fc25a39855358583152eedc_50.png)
+
+![](img/901819938fc25a39855358583152eedc_52.png)
+
+![](img/901819938fc25a39855358583152eedc_54.png)
+
 ```python
 import xml.dom.minidom
 import sys
 import matplotlib.pyplot as plt
-
-![](img/901819938fc25a39855358583152eedc_48.png)
-
 # 初始化列表来存储数据
 bitrates = []
 losses = []
@@ -147,13 +154,6 @@ for flow in flows:
     # losses.append(calculated_loss)
     # delays.append(calculated_delay)
     pass
-
-![](img/901819938fc25a39855358583152eedc_50.png)
-
-![](img/901819938fc25a39855358583152eedc_52.png)
-
-![](img/901819938fc25a39855358583152eedc_54.png)
-
 # 使用matplotlib绘制图表
 fig, axs = plt.subplots(3)
 axs[0].plot(bitrates, ‘b-‘)

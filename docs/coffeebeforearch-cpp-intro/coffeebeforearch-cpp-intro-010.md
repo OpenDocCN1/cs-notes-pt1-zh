@@ -106,6 +106,9 @@ C++20 引入了一种更简洁的模板函数定义方式，称为“简写函�
 
 ![](img/4c78d75e0fd918a83304b78368d585be_11.png)
 
+
+![](img/4c78d75e0fd918a83304b78368d585be_13.png)
+
 ```cpp
 // C++20 简写函数模板
 void print_array_abbreviated(const auto& arr) {
@@ -114,9 +117,6 @@ void print_array_abbreviated(const auto& arr) {
     }
     std::cout << '\n';
 }
-
-![](img/4c78d75e0fd918a83304b78368d585be_13.png)
-
 int main() {
     std::array<int, 3> my_int_array = {1, 2, 3};
     std::array<float, 3> my_float_array = {1.1f, 2.2f, 3.3f};

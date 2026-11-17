@@ -60,15 +60,15 @@ Props 允许您将数据从一个组件传递到另一个组件。将 props 视�
 
 以下是代码示例：
 
+
+![](img/567c6b6e645653c91aa8100448faa589_5.png)
+
 ```jsx
 // 在 index.js 中（父组件）
 ReactDOM.render(
   <App title="我的动态应用" />,
   document.getElementById('root')
 );
-
-![](img/567c6b6e645653c91aa8100448faa589_5.png)
-
 // 在 App.js 中（子组件）
 function App(props) {
   return (

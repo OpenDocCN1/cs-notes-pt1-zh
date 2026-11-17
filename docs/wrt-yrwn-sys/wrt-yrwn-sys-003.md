@@ -147,8 +147,6 @@ typedef unsigned long long uint64_t;
 
 ![](img/c36e8c7c75eaec6465c53d8b9aaa7537_33.png)
 
-```cpp
-#include “types.h”
 
 ![](img/c36e8c7c75eaec6465c53d8b9aaa7537_35.png)
 
@@ -156,6 +154,8 @@ typedef unsigned long long uint64_t;
 
 ![](img/c36e8c7c75eaec6465c53d8b9aaa7537_37.png)
 
+```cpp
+#include “types.h”
 // 之前: unsigned int magic_number;
 // 之后:
 uint32_t magic_number;

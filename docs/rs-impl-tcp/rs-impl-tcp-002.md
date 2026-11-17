@@ -75,11 +75,6 @@ struct ConnectionManager {
 
 `TcpListener`负责监听特定端口并接受连接：
 
-```rust
-pub struct TcpListener {
-    handle: Arc<Mutex<ConnectionManager>>,
-    port: u16,
-}
 
 ![](img/9c2a8d9517815d56e3f7ba056f67ae8c_21.png)
 
@@ -87,6 +82,11 @@ pub struct TcpListener {
 
 ![](img/9c2a8d9517815d56e3f7ba056f67ae8c_25.png)
 
+```rust
+pub struct TcpListener {
+    handle: Arc<Mutex<ConnectionManager>>,
+    port: u16,
+}
 impl TcpListener {
     pub fn bind(handle: Arc<Mutex<ConnectionManager>>, port: u16) -> io::Result<Self> {
         // 在连接管理器中注册端口监听
@@ -119,16 +119,16 @@ impl TcpListener {
 
 `TcpStream`表示一个已建立的TCP连接，支持数据读写：
 
-```rust
-pub struct TcpStream {
-    handle: Arc<Mutex<ConnectionManager>>,
-    quad: Quad,
-}
 
 ![](img/9c2a8d9517815d56e3f7ba056f67ae8c_43.png)
 
 ![](img/9c2a8d9517815d56e3f7ba056f67ae8c_45.png)
 
+```rust
+pub struct TcpStream {
+    handle: Arc<Mutex<ConnectionManager>>,
+    quad: Quad,
+}
 impl Read for TcpStream {
     fn read(&mut self, buf: &mut [u8]) -> io::Result<usize> {
         // 从接收缓冲区读取数据

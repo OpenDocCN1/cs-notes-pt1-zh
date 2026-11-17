@@ -646,15 +646,6 @@ if (block->type == BLOCK_TYPE_STRONG) {
 
 ![](img/ab18094230a798259ac1baa49f82bf9c_494.png)
 
-```c
-// 优化前
-for (int y = yMin; y < yMax; ++y) {
-    u32* pixel = (u32*)row + xMin;
-    for (int x = xMin; x < xMax; ++x) {
-        *pixel++ = color;
-    }
-    row += bufferWidth; // 每次都需要乘法计算
-}
 
 ![](img/ab18094230a798259ac1baa49f82bf9c_496.png)
 
@@ -684,6 +675,15 @@ for (int y = yMin; y < yMax; ++y) {
 
 ![](img/ab18094230a798259ac1baa49f82bf9c_521.png)
 
+```c
+// 优化前
+for (int y = yMin; y < yMax; ++y) {
+    u32* pixel = (u32*)row + xMin;
+    for (int x = xMin; x < xMax; ++x) {
+        *pixel++ = color;
+    }
+    row += bufferWidth; // 每次都需要乘法计算
+}
 // 优化后
 u32* pixel = (u32*)row + xMin;
 int stride = bufferWidth; // 预计算跨度

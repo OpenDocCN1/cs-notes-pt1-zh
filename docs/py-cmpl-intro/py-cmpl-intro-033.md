@@ -143,13 +143,13 @@ print(net_price(500, 0.1, 0))  # 输出 450.0
 
 我们将使用 `time` 模块。这个函数将从 `start` 数到 `end`，每秒打印一个数字。
 
-```python
-import time
 
 ![](img/4c1bb0f301ca3e307a1ee0fc96b39fd0_54.png)
 
 ![](img/4c1bb0f301ca3e307a1ee0fc96b39fd0_55.png)
 
+```python
+import time
 def count(end, start=0):
     for x in range(start, end + 1):
         print(x)

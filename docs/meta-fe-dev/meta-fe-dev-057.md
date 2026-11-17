@@ -37,11 +37,11 @@ const [v1, v2, v3] = veggies;
 
 `useState` 钩子允许你在组件中处理状态。让我们从讨论调用 `useState` 钩子时会发生什么开始。
 
-```javascript
-import React, { useState } from ‘react‘;
 
 ![](img/e9fd08c571547a615abed01e0f609e3e_3.png)
 
+```javascript
+import React, { useState } from ‘react‘;
 function App() {
   const stateArray = useState(‘Lemon‘);
   console.log(stateArray);

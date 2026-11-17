@@ -51,6 +51,22 @@ println!("Config: {:?}", config);
 
 以下是一个创建带有可选参数的宏的示例：
 
+
+![](img/705964c04e1873f8171b389f3e5fd375_15.png)
+
+![](img/705964c04e1873f8171b389f3e5fd375_16.png)
+
+![](img/705964c04e1873f8171b389f3e5fd375_17.png)
+
+![](img/705964c04e1873f8171b389f3e5fd375_18.png)
+
+
+![](img/705964c04e1873f8171b389f3e5fd375_19.png)
+
+![](img/705964c04e1873f8171b389f3e5fd375_20.png)
+
+![](img/705964c04e1873f8171b389f3e5fd375_21.png)
+
 ```rust
 macro_rules! call_with_log {
     ($func:ident($($arg:expr),* $(,)?)) => {
@@ -62,25 +78,9 @@ macro_rules! call_with_log {
 fn greet(name: &str) {
     println!("Hello, {}!", name);
 }
-
-![](img/705964c04e1873f8171b389f3e5fd375_15.png)
-
-![](img/705964c04e1873f8171b389f3e5fd375_16.png)
-
-![](img/705964c04e1873f8171b389f3e5fd375_17.png)
-
-![](img/705964c04e1873f8171b389f3e5fd375_18.png)
-
 fn add(a: i32, b: i32) -> i32 {
     a + b
 }
-
-![](img/705964c04e1873f8171b389f3e5fd375_19.png)
-
-![](img/705964c04e1873f8171b389f3e5fd375_20.png)
-
-![](img/705964c04e1873f8171b389f3e5fd375_21.png)
-
 fn main() {
     call_with_log!(greet("Alice"));
     println!("Result: {}", call_with_log!(add(1, 2)));
@@ -107,6 +107,9 @@ fn main() {
 
 ![](img/705964c04e1873f8171b389f3e5fd375_28.png)
 
+
+![](img/705964c04e1873f8171b389f3e5fd375_30.png)
+
 ```rust
 macro_rules! format_with_count {
     ($($item:expr),*) => {{
@@ -116,9 +119,6 @@ macro_rules! format_with_count {
         (count, items)
     }};
 }
-
-![](img/705964c04e1873f8171b389f3e5fd375_30.png)
-
 fn main() {
     let (count, items) = format_with_count!("apple", "banana", "cherry");
     println!("Count: {}, Items: {:?}", count, items);
@@ -139,6 +139,11 @@ fn main() {
 
 ![](img/705964c04e1873f8171b389f3e5fd375_36.png)
 
+
+![](img/705964c04e1873f8171b389f3e5fd375_37.png)
+
+![](img/705964c04e1873f8171b389f3e5fd375_39.png)
+
 ```rust
 macro_rules! my_vec {
     () => {
@@ -152,11 +157,6 @@ macro_rules! my_vec {
         }
     };
 }
-
-![](img/705964c04e1873f8171b389f3e5fd375_37.png)
-
-![](img/705964c04e1873f8171b389f3e5fd375_39.png)
-
 fn main() {
     let empty: Vec<i32> = my_vec!();
     let numbers = my_vec!(1, 2, 3, 4, 5);
@@ -179,12 +179,6 @@ fn main() {
 
 ![](img/705964c04e1873f8171b389f3e5fd375_43.png)
 
-```rust
-macro_rules! constants {
-    ($($name:ident = $value:expr);*) => {
-        $(const $name: i32 = $value;)*
-    };
-}
 
 ![](img/705964c04e1873f8171b389f3e5fd375_44.png)
 
@@ -192,6 +186,12 @@ macro_rules! constants {
 
 ![](img/705964c04e1873f8171b389f3e5fd375_46.png)
 
+```rust
+macro_rules! constants {
+    ($($name:ident = $value:expr);*) => {
+        $(const $name: i32 = $value;)*
+    };
+}
 constants! {
     MAX_SIZE = 1024;
     DEFAULT_TIMEOUT = 30;

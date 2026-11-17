@@ -93,11 +93,11 @@ int main() {
 
 ![](img/886b84566332d59cc5f9f14903564fe9_11.png)
 
-```cpp
-#include <iostream>
 
 ![](img/886b84566332d59cc5f9f14903564fe9_13.png)
 
+```cpp
+#include <iostream>
 class Point {
 public:
     // 设置坐标的接口

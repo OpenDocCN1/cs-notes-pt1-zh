@@ -70,15 +70,15 @@ if uploaded_image is not None:
 
 ![](img/ff9accb04cc771219a0bcc1315668a38_12.png)
 
+
+![](img/ff9accb04cc771219a0bcc1315668a38_13.png)
+
 ```python
 # 创建文件上传器，限制为MP4格式的视频
 uploaded_video = st.file_uploader(
     label='请上传一个视频',
     type='mp4'  # 单个类型可以直接用字符串
 )
-
-![](img/ff9accb04cc771219a0bcc1315668a38_13.png)
-
 if uploaded_video is not None:
     # 显示上传的视频
     st.video(uploaded_video)

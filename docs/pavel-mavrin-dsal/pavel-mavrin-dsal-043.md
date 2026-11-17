@@ -73,13 +73,13 @@ Aho-Corasick 算法的第一步是构建一个 **Trie 树**（前缀树），将
 在实际实现中，我们可以用动态规划的方式，在计算后缀链接的同时或之后，一次性计算出所有 `(v, c)` 的转移，并存储起来。这样，在扫描文本时，每次转移都是 `O(1)` 时间。
 
 **代码描述（伪代码）**：
+
+![](img/41fb4f6b1cef2af9be617e35e749b848_23.png)
+
 ```python
 # 假设 nodes 是 Trie 节点列表，root = 0
 # link[v] 是节点 v 的后缀链接
 # next[v][c] 是节点 v 在字符 c 下的转移
-
-![](img/41fb4f6b1cef2af9be617e35e749b848_23.png)
-
 def build_automaton():
     queue = [root]
     while queue:

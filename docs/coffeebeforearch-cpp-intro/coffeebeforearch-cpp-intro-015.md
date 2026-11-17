@@ -97,11 +97,11 @@ int main() {
 
 作为对比，如果我们回到最初的例子（没有引用，只是两个独立变量），并打印它们的地址：
 
-```cpp
-#include <iostream>
 
 ![](img/9e4484ae265fee9f208ccb033037c47b_13.png)
 
+```cpp
+#include <iostream>
 int main() {
     int a = 5;
     int b = a; // 拷贝，不是引用

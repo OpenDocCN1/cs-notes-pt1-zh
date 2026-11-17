@@ -116,19 +116,19 @@ if (3 > 2 || 2 > 5) { // 条件1为真，条件2为假 => 整体为真（因为�
 
 ![](img/efcbb718d249e309eb018e7c5d076766_6.png)
 
+
+![](img/efcbb718d249e309eb018e7c5d076766_8.png)
+
+
+![](img/efcbb718d249e309eb018e7c5d076766_10.png)
+
 ```c
 if (3 > 2) { // 条件为真
     printf("3 > 2 is true.\n");
 }
-
-![](img/efcbb718d249e309eb018e7c5d076766_8.png)
-
 if (!(3 > 2)) { // 对真条件取反，变为假
     printf("This won't print.\n");
 }
-
-![](img/efcbb718d249e309eb018e7c5d076766_10.png)
-
 if (!(3 < 2)) { // 对假条件取反，变为真
     printf("3 is NOT less than 2.\n"); // 会执行这行
 }

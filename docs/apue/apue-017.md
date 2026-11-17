@@ -38,15 +38,15 @@
 
 以下程序演示了在添加和删除硬链接时，可用磁盘空间的变化。
 
+
+![](img/a24215a83433c1c08ea4e2f8d6cf06a4_5.png)
+
 ```c
 // 示例代码：展示创建文件、硬链接、打开后unlink对磁盘空间的影响
 #include <stdio.h>
 #include <unistd.h>
 #include <fcntl.h>
 #include <sys/stat.h>
-
-![](img/a24215a83433c1c08ea4e2f8d6cf06a4_5.png)
-
 int main() {
     // 1. 显示当前可用空间
     system("df .");

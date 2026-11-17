@@ -121,11 +121,11 @@ public class StreamExample {
 
 ![](img/af25830157e35371d8bd7722b0f6912a_31.png)
 
-```java
-import java.util.stream.Stream;
 
 ![](img/af25830157e35371d8bd7722b0f6912a_33.png)
 
+```java
+import java.util.stream.Stream;
 public class StreamIterateExample {
     public static void main(String[] args) {
         Stream.iterate(1, count -> count + 1)
@@ -168,15 +168,15 @@ public class StreamConcatExample {
 
 以下是使用 `filter` 筛选出长度大于6的名字：
 
-```java
-import java.util.Arrays;
-import java.util.List;
-import java.util.stream.Stream;
 
 ![](img/af25830157e35371d8bd7722b0f6912a_41.png)
 
 ![](img/af25830157e35371d8bd7722b0f6912a_43.png)
 
+```java
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Stream;
 public class StreamFilterExample {
     public static void main(String[] args) {
         List<String> names = Arrays.asList("Melcandry", "Sansa", "John", "Catelyn");
@@ -199,13 +199,13 @@ public class StreamFilterExample {
 
 ![](img/af25830157e35371d8bd7722b0f6912a_51.png)
 
+
+![](img/af25830157e35371d8bd7722b0f6912a_52.png)
+
 ```java
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
-
-![](img/af25830157e35371d8bd7722b0f6912a_52.png)
-
 public class StreamFilterCollectExample {
     public static void main(String[] args) {
         List<String> names = Arrays.asList("Melcandry", "Sansa", "John", "Catelyn", "Tyrion");
@@ -223,10 +223,6 @@ public class StreamFilterCollectExample {
 
 在 `filter` 中可以使用逻辑运算符组合多个条件。
 
-```java
-import java.util.Arrays;
-import java.util.List;
-import java.util.stream.Collectors;
 
 ![](img/af25830157e35371d8bd7722b0f6912a_56.png)
 
@@ -234,6 +230,10 @@ import java.util.stream.Collectors;
 
 ![](img/af25830157e35371d8bd7722b0f6912a_58.png)
 
+```java
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
 public class StreamMultiFilterExample {
     public static void main(String[] args) {
         List<String> names = Arrays.asList("Sansa", "John", "Catelyn", "Joffrey");

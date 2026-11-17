@@ -170,6 +170,12 @@ print(playerNames[1]) // 输出 "Mohan"
 
 以下是数组的一些常用操作：
 
+
+![](img/5ce228af12a1a9c7a3031a7d1d4650a3_9.png)
+
+
+![](img/5ce228af12a1a9c7a3031a7d1d4650a3_11.png)
+
 ```swift
 // 获取元素数量
 print(playerNames.count)
@@ -185,18 +191,12 @@ playerNames.remove(at: 0)
 
 // 移除第一个元素
 playerNames.removeFirst()
-
-![](img/5ce228af12a1a9c7a3031a7d1d4650a3_9.png)
-
 // 移除最后一个元素
 playerNames.removeLast()
 
 // 排序
 playerNames.sort()
 print(playerNames)
-
-![](img/5ce228af12a1a9c7a3031a7d1d4650a3_11.png)
-
 // 检查是否包含某元素
 print(playerNames.contains("Tushar")) // 输出 true 或 false
 ```
@@ -220,6 +220,9 @@ print(dictionary["Mohan"]) // 输出 20
 
 以下是字典的一些常用操作：
 
+
+![](img/5ce228af12a1a9c7a3031a7d1d4650a3_13.png)
+
 ```swift
 // 获取键值对数量
 print(dictionary.count)
@@ -228,9 +231,6 @@ print(dictionary.count)
 dictionary["Mohan"] = 50
 // 或使用 updateValue 方法
 dictionary.updateValue(60, forKey: "Tushar")
-
-![](img/5ce228af12a1a9c7a3031a7d1d4650a3_13.png)
-
 // 移除键值对
 dictionary.removeValue(forKey: "Tushar")
 ```

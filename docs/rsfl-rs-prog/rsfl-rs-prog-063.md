@@ -101,11 +101,11 @@ num = "0.4"
 
 然后，我们可以修改结构体定义，为泛型 `T` 添加 `Num` 特质约束：
 
-```rust
-use num::Num;
 
 ![](img/0a97c3c1ebd3ed7a9257f5d5e1a4693c_17.png)
 
+```rust
+use num::Num;
 #[derive(Debug)]
 struct Point<T: Num> {
     x: T,

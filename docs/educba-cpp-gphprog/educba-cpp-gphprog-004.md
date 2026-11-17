@@ -75,22 +75,22 @@ float one_ps = 360.0 / max;
 
 接着，我们计算每个年份数据段的起始角度和结束角度。第一个数据段（1996年）的起始角度为0。
 
-```cpp
-int st1996 = 0;
-int en1996 = one_ps * n1996;
 
 ![](img/168050f7edfaa0c0e76a17ccba8fdc56_12.png)
 
-int st1997 = en1996;
-int en1997 = st1997 + (one_ps * n1997);
 
 ![](img/168050f7edfaa0c0e76a17ccba8fdc56_14.png)
 
-int st1998 = en1997;
-int en1998 = st1998 + (one_ps * n1998);
 
 ![](img/168050f7edfaa0c0e76a17ccba8fdc56_16.png)
 
+```cpp
+int st1996 = 0;
+int en1996 = one_ps * n1996;
+int st1997 = en1996;
+int en1997 = st1997 + (one_ps * n1997);
+int st1998 = en1997;
+int en1998 = st1998 + (one_ps * n1998);
 int st1999 = en1998;
 int en1999 = st1999 + (one_ps * n1999);
 ```
@@ -103,6 +103,11 @@ int en1999 = st1999 + (one_ps * n1999);
 
 以下是绘制四个年份数据扇形的代码。我们为每个扇形设置了不同的填充颜色。
 
+
+![](img/168050f7edfaa0c0e76a17ccba8fdc56_18.png)
+
+![](img/168050f7edfaa0c0e76a17ccba8fdc56_19.png)
+
 ```cpp
 // 设置填充样式和颜色，并绘制扇形
 setfillstyle(SOLID_FILL, YELLOW);
@@ -113,11 +118,6 @@ pieslice(320, 240, st1997, en1997, 100);
 
 setfillstyle(SOLID_FILL, BLUE);
 pieslice(320, 240, st1998, en1998, 100);
-
-![](img/168050f7edfaa0c0e76a17ccba8fdc56_18.png)
-
-![](img/168050f7edfaa0c0e76a17ccba8fdc56_19.png)
-
 setfillstyle(SOLID_FILL, GREEN);
 pieslice(320, 240, st1999, en1999, 100);
 ```

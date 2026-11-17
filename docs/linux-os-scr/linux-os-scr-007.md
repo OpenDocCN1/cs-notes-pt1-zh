@@ -19,40 +19,40 @@ LFS手册建议在初始的chroot环境中再启动一个bash shell。这是因�
 
 以下是创建和运行新chroot环境脚本的步骤：
 
-```bash
-# 创建 chroot2.sh 脚本
-cat > chroot2.sh << "EOF"
-#!/bin/bash
-set -e
 
 ![](img/77264a30aa8a858ec63338e684f04aba_4.png)
 
-# 设置LFS变量为空，因为我们在chroot环境中，路径已经是根“/”
-export LFS=""
 
 ![](img/77264a30aa8a858ec63338e684f04aba_6.png)
 
 ![](img/77264a30aa8a858ec63338e684f04aba_8.png)
 
-# 进入源代码目录
-cd /sources
 
 ![](img/77264a30aa8a858ec63338e684f04aba_10.png)
 
 ![](img/77264a30aa8a858ec63338e684f04aba_12.png)
 
-# 准备chroot环境并运行编译脚本
-./prepare_chroot.sh
-./package_install_check_7.sh
 
 ![](img/77264a30aa8a858ec63338e684f04aba_14.png)
 
 ![](img/77264a30aa8a858ec63338e684f04aba_16.png)
 
-EOF
 
 ![](img/77264a30aa8a858ec63338e684f04aba_18.png)
 
+```bash
+# 创建 chroot2.sh 脚本
+cat > chroot2.sh << "EOF"
+#!/bin/bash
+set -e
+# 设置LFS变量为空，因为我们在chroot环境中，路径已经是根“/”
+export LFS=""
+# 进入源代码目录
+cd /sources
+# 准备chroot环境并运行编译脚本
+./prepare_chroot.sh
+./package_install_check_7.sh
+EOF
 # 为脚本添加执行权限
 chmod +x chroot2.sh
 ```

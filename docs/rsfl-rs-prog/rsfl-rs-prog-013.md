@@ -103,13 +103,13 @@ ZZZZZZZZZZ
 2.  转换公式为：**`华氏度 = 摄氏度 × 9.0 / 5.0 + 32`**。
 3.  因为这个函数有返回值，所以调用时通常需要将其结果赋值给一个变量或直接使用（例如打印）。
 
+
+![](img/a513e57a3ae512bfe99d59d7b46be0a6_16.png)
+
 ```rust
 fn celsius_to_fahrenheit(celsius: f64) -> f64 {
     celsius * 9.0 / 5.0 + 32.0
 }
-
-![](img/a513e57a3ae512bfe99d59d7b46be0a6_16.png)
-
 fn main() {
     println!("{}", celsius_to_fahrenheit(20.0)); // 直接打印
     let converted = celsius_to_fahrenheit(10.0); // 赋值给变量
@@ -133,6 +133,11 @@ fn main() {
 2.  **隐式返回**：如果函数体的最后一行是一个表达式（**没有分号**），Rust 会自动将其作为返回值。这是最常用且简洁的写法。
 3.  即使返回值是一个简单的字面量（如数字10），上述规则同样适用。
 
+
+![](img/a513e57a3ae512bfe99d59d7b46be0a6_20.png)
+
+![](img/a513e57a3ae512bfe99d59d7b46be0a6_21.png)
+
 ```rust
 // 方法1：使用 return 关键字
 fn explicit_return() -> i32 {
@@ -143,11 +148,6 @@ fn explicit_return() -> i32 {
 fn implicit_return() -> i32 {
     10 // 注意：这一行没有分号
 }
-
-![](img/a513e57a3ae512bfe99d59d7b46be0a6_20.png)
-
-![](img/a513e57a3ae512bfe99d59d7b46be0a6_21.png)
-
 fn main() {
     println!("Explicit: {}", explicit_return());
     println!("Implicit: {}", implicit_return());

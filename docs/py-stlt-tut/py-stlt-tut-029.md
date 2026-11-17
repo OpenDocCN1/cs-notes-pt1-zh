@@ -92,14 +92,14 @@ for idx, chunk in enumerate(chunks):
 
 以下是整合后的代码：
 
+
+![](img/43fc69d8127a64b0d22df0b72826417b_15.png)
+
 ```python
 import speech_recognition as sr
 
 # 创建识别器实例
 recognizer = sr.Recognizer()
-
-![](img/43fc69d8127a64b0d22df0b72826417b_15.png)
-
 for idx, chunk in enumerate(chunks):
     chunk.export(f"{idx}.wav", format="wav")
     

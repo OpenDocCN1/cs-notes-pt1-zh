@@ -34,11 +34,11 @@ class InterruptManager {
 
 ![](img/97221e766c222cd97bf1e14d0769de1c_8.png)
 
-```cpp
-InterruptManager* InterruptManager::ActiveInterruptManager = 0;
 
 ![](img/97221e766c222cd97bf1e14d0769de1c_10.png)
 
+```cpp
+InterruptManager* InterruptManager::ActiveInterruptManager = 0;
 InterruptManager::InterruptManager(...) {
     ...
     if(ActiveInterruptManager != 0)

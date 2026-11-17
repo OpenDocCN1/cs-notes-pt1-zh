@@ -43,12 +43,12 @@ CREATE TABLE orders (
 接着，你进入了第三课，学习了如何更改表的结构。完成本课后，你现在能够在现有的数据库表中添加、删除和修改列及约束，使用 `COPY TABLE` 语法在表内和数据库之间复制数据。你也在实验中展示了修改表的能力，并通过额外资源学习了更多相关概念。
 
 以下是添加列和复制表的语法示例：
-```sql
--- 添加列
-ALTER TABLE employees ADD COLUMN hire_date DATE;
 
 ![](img/0c6ff6283577f73fc5c61b904da24ccd_9.png)
 
+```sql
+-- 添加列
+ALTER TABLE employees ADD COLUMN hire_date DATE;
 -- 复制表结构及数据
 CREATE TABLE new_table LIKE original_table;
 INSERT INTO new_table SELECT * FROM original_table;

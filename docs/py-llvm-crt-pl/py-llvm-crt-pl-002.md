@@ -148,6 +148,38 @@ class Parser:
 
 在实现解析逻辑之前，我们需要定义抽象语法树的节点结构。这些节点将代表我们程序中的不同元素。
 
+
+![](img/5e7a69b6b58793dc708ed1c66d1fb00a_55.png)
+
+![](img/5e7a69b6b58793dc708ed1c66d1fb00a_57.png)
+
+
+![](img/5e7a69b6b58793dc708ed1c66d1fb00a_59.png)
+
+
+![](img/5e7a69b6b58793dc708ed1c66d1fb00a_61.png)
+
+![](img/5e7a69b6b58793dc708ed1c66d1fb00a_62.png)
+
+
+![](img/5e7a69b6b58793dc708ed1c66d1fb00a_64.png)
+
+
+![](img/5e7a69b6b58793dc708ed1c66d1fb00a_66.png)
+
+![](img/5e7a69b6b58793dc708ed1c66d1fb00a_68.png)
+
+
+![](img/5e7a69b6b58793dc708ed1c66d1fb00a_70.png)
+
+![](img/5e7a69b6b58793dc708ed1c66d1fb00a_71.png)
+
+![](img/5e7a69b6b58793dc708ed1c66d1fb00a_72.png)
+
+![](img/5e7a69b6b58793dc708ed1c66d1fb00a_74.png)
+
+![](img/5e7a69b6b58793dc708ed1c66d1fb00a_76.png)
+
 ```python
 from abc import ABC, abstractmethod
 from enum import Enum
@@ -158,11 +190,6 @@ class NodeType(Enum):
     INFIX_EXPRESSION = "INFIX_EXPRESSION"
     INTEGER_LITERAL = "INTEGER_LITERAL"
     FLOAT_LITERAL = "FLOAT_LITERAL"
-
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_55.png)
-
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_57.png)
-
 class Node(ABC):
     @abstractmethod
     def node_type(self) -> NodeType:
@@ -177,9 +204,6 @@ class Statement(Node):
 
 class Expression(Node):
     pass
-
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_59.png)
-
 class Program(Node):
     def __init__(self):
         self.statements: list[Statement] = []
@@ -192,11 +216,6 @@ class Program(Node):
             "type": self.node_type().value,
             "statements": [{"type": stmt.node_type().value, **stmt.json()} for stmt in self.statements]
         }
-
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_61.png)
-
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_62.png)
-
 class ExpressionStatement(Statement):
     def __init__(self, expression: Expression = None):
         self.expression = expression
@@ -206,9 +225,6 @@ class ExpressionStatement(Statement):
 
     def json(self) -> dict:
         return {"expression": self.expression.json()}
-
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_64.png)
-
 class InfixExpression(Expression):
     def __init__(self, left: Expression, operator: str, right: Expression = None):
         self.left = left
@@ -225,11 +241,6 @@ class InfixExpression(Expression):
             "operator": self.operator,
             "right": self.right.json() if self.right else None
         }
-
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_66.png)
-
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_68.png)
-
 class IntegerLiteral(Expression):
     def __init__(self, value: int):
         self.value = value
@@ -239,17 +250,6 @@ class IntegerLiteral(Expression):
 
     def json(self) -> dict:
         return {"value": self.value}
-
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_70.png)
-
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_71.png)
-
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_72.png)
-
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_74.png)
-
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_76.png)
-
 class FloatLiteral(Expression):
     def __init__(self, value: float):
         self.value = value
@@ -453,10 +453,6 @@ class FloatLiteral(Expression):
 
 ![](img/5e7a69b6b58793dc708ed1c66d1fb00a_153.png)
 
-```python
-from parser import Parser
-from ast import Program
-import json
 
 ![](img/5e7a69b6b58793dc708ed1c66d1fb00a_155.png)
 
@@ -468,10 +464,6 @@ import json
 
 ![](img/5e7a69b6b58793dc708ed1c66d1fb00a_161.png)
 
-# ... 读取源代码并初始化词法分析器 ...
-
-parser = Parser(lexer)
-program = parser.parse_program()
 
 ![](img/5e7a69b6b58793dc708ed1c66d1fb00a_163.png)
 
@@ -483,6 +475,14 @@ program = parser.parse_program()
 
 ![](img/5e7a69b6b58793dc708ed1c66d1fb00a_171.png)
 
+```python
+from parser import Parser
+from ast import Program
+import json
+# ... 读取源代码并初始化词法分析器 ...
+
+parser = Parser(lexer)
+program = parser.parse_program()
 if parser_debug:
     with open('debug/ast.json', 'w') as f:
         json.dump(program.json(), f, indent=4)

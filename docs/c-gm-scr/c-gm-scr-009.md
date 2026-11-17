@@ -290,37 +290,6 @@
 
 ![](img/886a749eaaa9f80910ebb04a9f92609c_245.png)
 
-```c
-internal void
-draw_rotated_rect(render_buffer *renderer, v2 p, v2 half_size, f32 angle, u32 color) {
-    // 将角度从度转换为弧度
-    f32 angle_rad = degrees_to_radians(angle);
-
-    // 计算正弦和余弦
-    f32 cos_theta = cosf(angle_rad);
-    f32 sin_theta = sinf(angle_rad);
-
-    // 构建旋转矩阵
-    m2 rotation_matrix = {cos_theta, -sin_theta,
-                          sin_theta,  cos_theta};
-
-    // 定义未旋转的矩形四个顶点（相对于中心）
-    v2 points[4];
-    points[0] = v2{-half_size.x, -half_size.y}; // 左下
-    points[1] = v2{ half_size.x, -half_size.y}; // 右下
-    points[2] = v2{ half_size.x,  half_size.y}; // 右上
-    points[3] = v2{-half_size.x,  half_size.y}; // 左上
-
-    // 旋转每个顶点
-    for (int i = 0; i < 4; ++i) {
-        points[i] = multiply_m2_v2(rotation_matrix, points[i]);
-        // 加上中心位置，转换到世界坐标
-        points[i] = v2_add(points[i], p);
-        // 可选：在此处进行世界坐标到像素坐标的转换
-    }
-
-    // ... 后续进行绘制或碰撞检测
-}
 
 ![](img/886a749eaaa9f80910ebb04a9f92609c_247.png)
 
@@ -352,6 +321,37 @@ draw_rotated_rect(render_buffer *renderer, v2 p, v2 half_size, f32 angle, u32 co
 
 ![](img/886a749eaaa9f80910ebb04a9f92609c_275.png)
 
+```c
+internal void
+draw_rotated_rect(render_buffer *renderer, v2 p, v2 half_size, f32 angle, u32 color) {
+    // 将角度从度转换为弧度
+    f32 angle_rad = degrees_to_radians(angle);
+
+    // 计算正弦和余弦
+    f32 cos_theta = cosf(angle_rad);
+    f32 sin_theta = sinf(angle_rad);
+
+    // 构建旋转矩阵
+    m2 rotation_matrix = {cos_theta, -sin_theta,
+                          sin_theta,  cos_theta};
+
+    // 定义未旋转的矩形四个顶点（相对于中心）
+    v2 points[4];
+    points[0] = v2{-half_size.x, -half_size.y}; // 左下
+    points[1] = v2{ half_size.x, -half_size.y}; // 右下
+    points[2] = v2{ half_size.x,  half_size.y}; // 右上
+    points[3] = v2{-half_size.x,  half_size.y}; // 左上
+
+    // 旋转每个顶点
+    for (int i = 0; i < 4; ++i) {
+        points[i] = multiply_m2_v2(rotation_matrix, points[i]);
+        // 加上中心位置，转换到世界坐标
+        points[i] = v2_add(points[i], p);
+        // 可选：在此处进行世界坐标到像素坐标的转换
+    }
+
+    // ... 后续进行绘制或碰撞检测
+}
 // 2x2 矩阵与 2D 向量乘法
 internal v2
 multiply_m2_v2(m2 m, v2 v) {
@@ -638,20 +638,9 @@ multiply_m2_v2(m2 m, v2 v) {
 
 ![](img/886a749eaaa9f80910ebb04a9f92609c_517.png)
 
-```c
-// 计算边界框
-i32 min_x = (i32)floorf(min(min(points[0].x, points[1].x), min(points[2].x, points[3].x)));
-i32 max_x = (i32)ceilf(max(max(points[0].x, points[1].x), max(points[2].x, points[3].x)));
-i32 min_y = (i32)floorf(min(min(points[0].y, points[1].y), min(points[2].y, points[3].y)));
-i32 max_y = (i32)ceilf(max(max(points[0].y, points[1].y), max(points[2].y, points[3].y)));
 
 ![](img/886a749eaaa9f80910ebb04a9f92609c_519.png)
 
-// 钳制到屏幕范围
-min_x = clamp(min_x, 0, renderer->width - 1);
-max_x = clamp(max_x, 0, renderer->width - 1);
-min_y = clamp(min_y, 0, renderer->height - 1);
-max_y = clamp(max_y, 0, renderer->height - 1);
 
 ![](img/886a749eaaa9f80910ebb04a9f92609c_521.png)
 
@@ -673,6 +662,17 @@ max_y = clamp(max_y, 0, renderer->height - 1);
 
 ![](img/886a749eaaa9f80910ebb04a9f92609c_539.png)
 
+```c
+// 计算边界框
+i32 min_x = (i32)floorf(min(min(points[0].x, points[1].x), min(points[2].x, points[3].x)));
+i32 max_x = (i32)ceilf(max(max(points[0].x, points[1].x), max(points[2].x, points[3].x)));
+i32 min_y = (i32)floorf(min(min(points[0].y, points[1].y), min(points[2].y, points[3].y)));
+i32 max_y = (i32)ceilf(max(max(points[0].y, points[1].y), max(points[2].y, points[3].y)));
+// 钳制到屏幕范围
+min_x = clamp(min_x, 0, renderer->width - 1);
+max_x = clamp(max_x, 0, renderer->width - 1);
+min_y = clamp(min_y, 0, renderer->height - 1);
+max_y = clamp(max_y, 0, renderer->height - 1);
 // 只遍历边界框内的像素
 for (i32 y = min_y; y <= max_y; ++y) {
     for (i32 x = min_x; x <= max_x; ++x) {

@@ -25,23 +25,23 @@
 ![](img/4819c5f43593a74f62af660809ee2da6_11.png)
 
 **代码示例：**
-```python
-# 对字符串列表排序
-fruits = ['banana', 'orange', 'apple', 'coconut']
-fruits.sort()
-print(fruits)  # 输出: ['apple', 'banana', 'coconut', 'orange']
 
 ![](img/4819c5f43593a74f62af660809ee2da6_12.png)
 
 ![](img/4819c5f43593a74f62af660809ee2da6_14.png)
 
+
+![](img/4819c5f43593a74f62af660809ee2da6_16.png)
+
+```python
+# 对字符串列表排序
+fruits = ['banana', 'orange', 'apple', 'coconut']
+fruits.sort()
+print(fruits)  # 输出: ['apple', 'banana', 'coconut', 'orange']
 # 对数字列表排序
 numbers = [3, 1, 5, 2, 4]
 numbers.sort()
 print(numbers)  # 输出: [1, 2, 3, 4, 5]
-
-![](img/4819c5f43593a74f62af660809ee2da6_16.png)
-
 # 逆序排序
 fruits.sort(reverse=True)
 print(fruits)  # 输出: ['orange', 'coconut', 'banana', 'apple']
@@ -78,17 +78,17 @@ print(fruits)  # 输出: ['orange', 'coconut', 'banana', 'apple']
 3.  使用`reverse=True`参数实现逆序。
 
 **代码示例：**
-```python
-fruits_tuple = ('banana', 'orange', 'apple', 'coconut')
 
 ![](img/4819c5f43593a74f62af660809ee2da6_31.png)
 
-# 使用sorted函数排序，返回列表
-sorted_list = sorted(fruits_tuple)
-print(sorted_list)  # 输出: ['apple', 'banana', 'coconut', 'orange']
 
 ![](img/4819c5f43593a74f62af660809ee2da6_33.png)
 
+```python
+fruits_tuple = ('banana', 'orange', 'apple', 'coconut')
+# 使用sorted函数排序，返回列表
+sorted_list = sorted(fruits_tuple)
+print(sorted_list)  # 输出: ['apple', 'banana', 'coconut', 'orange']
 # 将排序结果转换回元组
 sorted_tuple = tuple(sorted(fruits_tuple))
 print(sorted_tuple)  # 输出: ('apple', 'banana', 'coconut', 'orange')
@@ -121,13 +121,22 @@ print(reverse_sorted_tuple)  # 输出: ('orange', 'coconut', 'banana', 'apple')
 ![](img/4819c5f43593a74f62af660809ee2da6_39.png)
 
 **代码示例：**
-```python
-fruits_dict = {'banana': 105, 'orange': 73, 'apple': 72, 'coconut': 354}
 
 ![](img/4819c5f43593a74f62af660809ee2da6_41.png)
 
 ![](img/4819c5f43593a74f62af660809ee2da6_43.png)
 
+
+![](img/4819c5f43593a74f62af660809ee2da6_45.png)
+
+
+![](img/4819c5f43593a74f62af660809ee2da6_47.png)
+
+
+![](img/4819c5f43593a74f62af660809ee2da6_49.png)
+
+```python
+fruits_dict = {'banana': 105, 'orange': 73, 'apple': 72, 'coconut': 354}
 # 1. 按键排序（返回排序后的键列表）
 sorted_keys = sorted(fruits_dict)
 print(sorted_keys)  # 输出: ['apple', 'banana', 'coconut', 'orange']
@@ -136,23 +145,14 @@ print(sorted_keys)  # 输出: ['apple', 'banana', 'coconut', 'orange']
 sorted_dict_by_key = dict(sorted(fruits_dict.items()))
 print(sorted_dict_by_key)
 # 输出: {'apple': 72, 'banana': 105, 'coconut': 354, 'orange': 73}
-
-![](img/4819c5f43593a74f62af660809ee2da6_45.png)
-
 # 3. 按键逆序排序
 reverse_sorted_dict_by_key = dict(sorted(fruits_dict.items(), reverse=True))
 print(reverse_sorted_dict_by_key)
 # 输出: {'orange': 73, 'coconut': 354, 'banana': 105, 'apple': 72}
-
-![](img/4819c5f43593a74f62af660809ee2da6_47.png)
-
 # 4. 按值排序（升序）
 sorted_dict_by_value = dict(sorted(fruits_dict.items(), key=lambda item: item[1]))
 print(sorted_dict_by_value)
 # 输出: {'apple': 72, 'orange': 73, 'banana': 105, 'coconut': 354}
-
-![](img/4819c5f43593a74f62af660809ee2da6_49.png)
-
 # 5. 按值逆序排序（降序）
 reverse_sorted_dict_by_value = dict(sorted(fruits_dict.items(), key=lambda item: item[1], reverse=True))
 print(reverse_sorted_dict_by_value)
@@ -188,6 +188,20 @@ print(reverse_sorted_dict_by_value)
 ![](img/4819c5f43593a74f62af660809ee2da6_59.png)
 
 **代码示例：**
+
+![](img/4819c5f43593a74f62af660809ee2da6_61.png)
+
+
+![](img/4819c5f43593a74f62af660809ee2da6_63.png)
+
+
+![](img/4819c5f43593a74f62af660809ee2da6_65.png)
+
+
+![](img/4819c5f43593a74f62af660809ee2da6_67.png)
+
+![](img/4819c5f43593a74f62af660809ee2da6_69.png)
+
 ```python
 class Fruit:
     def __init__(self, name, calories):
@@ -196,9 +210,6 @@ class Fruit:
 
     def __repr__(self):
         return f"{self.name}: {self.calories}"
-
-![](img/4819c5f43593a74f62af660809ee2da6_61.png)
-
 # 创建水果对象列表
 fruits = [
     Fruit('banana', 105),
@@ -206,9 +217,6 @@ fruits = [
     Fruit('orange', 73),
     Fruit('coconut', 354)
 ]
-
-![](img/4819c5f43593a74f62af660809ee2da6_63.png)
-
 # 1. 按名称属性排序
 sorted_by_name = sorted(fruits, key=lambda fruit: fruit.name)
 print(sorted_by_name)
@@ -218,18 +226,10 @@ print(sorted_by_name)
 reverse_sorted_by_name = sorted(fruits, key=lambda fruit: fruit.name, reverse=True)
 print(reverse_sorted_by_name)
 # 输出: [orange: 73, coconut: 354, banana: 105, apple: 72]
-
-![](img/4819c5f43593a74f62af660809ee2da6_65.png)
-
 # 3. 按热量属性排序
 sorted_by_calories = sorted(fruits, key=lambda fruit: fruit.calories)
 print(sorted_by_calories)
 # 输出: [apple: 72, orange: 73, banana: 105, coconut: 354]
-
-![](img/4819c5f43593a74f62af660809ee2da6_67.png)
-
-![](img/4819c5f43593a74f62af660809ee2da6_69.png)
-
 # 4. 按热量逆序排序
 reverse_sorted_by_calories = sorted(fruits, key=lambda fruit: fruit.calories, reverse=True)
 print(reverse_sorted_by_calories)

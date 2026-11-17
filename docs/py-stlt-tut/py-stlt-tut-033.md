@@ -50,6 +50,11 @@ st.markdown(
 3.  **在界面上显示**：在关键词上方，先显示视频标题。可以创建一个新的标题（如使用 `st.title()`），然后同样用 `st.markdown()` 来显示标题文本，并可以使用不同的HTML标签（如 `<h4>`）以示区分。
 
 实现此功能的代码修改如下：
+
+![](img/609b8cba821bf97edec7d612e7bb31ff_7.png)
+
+![](img/609b8cba821bf97edec7d612e7bb31ff_8.png)
+
 ```python
 # 提取视频标题（假设通过soup对象查找）
 title_element = soup.find('title') # 请根据实际页面结构调整选择器
@@ -61,11 +66,6 @@ st.markdown(
     f'<h4 style="color: #4ECDC4;">{video_title}</h4>',
     unsafe_allow_html=True
 )
-
-![](img/609b8cba821bf97edec7d612e7bb31ff_7.png)
-
-![](img/609b8cba821bf97edec7d612e7bb31ff_8.png)
-
 # 显示关键词（之前已实现的代码）
 st.title("Tags")
 st.markdown(

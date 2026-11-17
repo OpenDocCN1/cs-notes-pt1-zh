@@ -55,6 +55,11 @@ RSS 2.0标准规定了一些必需元素和许多可选元素。您可以依赖`
 
 幸运的是，我们有Beautiful Soup库，它可以处理XML和HTML，并且不会对RSS订阅源中的一些小问题抱怨。以下是一个从新闻网站获取头条新闻的示例程序，它使用了`BeautifulStoneSoup`类（专门用于XML）而非`BeautifulSoup`（专门用于HTML）。
 
+
+![](img/84d40c7e8fa113af7295934774137bff_1.png)
+
+![](img/84d40c7e8fa113af7295934774137bff_2.png)
+
 ```python
 from BeautifulSoup import BeautifulStoneSoup
 from urllib import urlopen
@@ -62,11 +67,6 @@ from textwrap import wrap
 
 url = 'http://www.example.com/feed/rss2'
 soup = BeautifulStoneSoup(urlopen(url).read())
-
-![](img/84d40c7e8fa113af7295934774137bff_1.png)
-
-![](img/84d40c7e8fa113af7295934774137bff_2.png)
-
 for item in soup('item'):
     title = item.title.string
     print '\n'.join(wrap(title))

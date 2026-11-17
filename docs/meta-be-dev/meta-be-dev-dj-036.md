@@ -69,11 +69,11 @@ if not request.user.has_perm('my_app.view_mymodel'):
 
 上一节我们介绍了如何通过组来批量管理权限，本节中我们来看看如何在视图函数中直接强制执行权限检查。为了在执行视图函数时强制执行权限，你可以使用`@permission_required`装饰器。
 
-```python
-from django.contrib.auth.decorators import permission_required
 
 ![](img/4517493be5bde69089a93ab4c1c8d42c_5.png)
 
+```python
+from django.contrib.auth.decorators import permission_required
 @permission_required('my_app.change_mymodel')
 def my_view(request):
     # 只有拥有 'my_app.change_mymodel' 权限的用户才能执行此视图

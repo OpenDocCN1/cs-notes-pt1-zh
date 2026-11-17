@@ -16,6 +16,9 @@
 
 我们将使用一个经典的动物继承示例。首先，创建一个基类 `Animal`，然后创建两个派生类 `Dog` 和 `Cat`。
 
+
+![](img/976b807a40418d570e9e186612673c24_3.png)
+
 ```cpp
 #include <iostream>
 
@@ -32,9 +35,6 @@ struct Dog : public Animal {
         std::cout << "Woof!" << std::endl;
     }
 };
-
-![](img/976b807a40418d570e9e186612673c24_3.png)
-
 // 派生类 Cat
 struct Cat : public Animal {
     void speak() {

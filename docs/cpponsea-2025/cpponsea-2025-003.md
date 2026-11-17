@@ -68,6 +68,9 @@ std::atomic<int> x{0}, y{0}, z{0};
 
 获取-释放排序在特定的原子变量上建立线程间的同步点。如果线程A以`release`语义向变量X写入，线程B以`acquire`语义从X中读取到A写入的值，那么线程B保证能看到线程A在写入X之前所有（在A看来）已完成的写入操作。
 
+
+![](img/a0af202987865020f48185835fd1de15_3.png)
+
 ```cpp
 std::atomic<bool> sync{false};
 bool data_ready = false; // 非原子
@@ -75,9 +78,6 @@ bool data_ready = false; // 非原子
 // 线程A (生产者)
 data_ready = true;              // 1. 准备数据
 sync.store(true, std::memory_order_release); // 2. 发布信号
-
-![](img/a0af202987865020f48185835fd1de15_3.png)
-
 // 线程B (消费者)
 if (sync.load(std::memory_order_acquire)) { // 3. 获取信号
     assert(data_ready == true); // 4. 断言成立：能看到第1步的写入

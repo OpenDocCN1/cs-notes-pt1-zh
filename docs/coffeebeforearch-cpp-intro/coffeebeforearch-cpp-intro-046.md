@@ -23,11 +23,11 @@
 
 以下是具体的代码示例：
 
-```cpp
-#include <fstream>
 
 ![](img/4344606b15a7a548bf075bf746b0594f_5.png)
 
+```cpp
+#include <fstream>
 int main() {
     // 创建一个输出文件流对象，并打开名为 "data.txt" 的文件
     std::ofstream output("data.txt");

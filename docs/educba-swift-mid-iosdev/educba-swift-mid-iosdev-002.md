@@ -120,6 +120,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
 
 以下是实现代码：
 
+
+![](img/0c92fdd64bffa2338eb8de7b3f1e8ff2_25.png)
+
 ```swift
 override func viewDidLoad() {
     super.viewDidLoad()
@@ -128,9 +131,6 @@ override func viewDidLoad() {
     let tapGesture = UITapGestureRecognizer(target: self, action: #selector(didTapView))
     self.view.addGestureRecognizer(tapGesture)
 }
-
-![](img/0c92fdd64bffa2338eb8de7b3f1e8ff2_25.png)
-
 @objc func didTapView() {
     self.view.endEditing(true) // 隐藏所有键盘
 }

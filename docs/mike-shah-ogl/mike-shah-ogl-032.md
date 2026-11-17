@@ -128,12 +128,12 @@ void preDraw() {
 
 然后，我们需要更新顶点着色器，将视图矩阵纳入顶点变换管线。顶点变换的顺序是：局部坐标 -> 模型矩阵 -> 世界坐标 -> 视图矩阵 -> 摄像机坐标 -> 投影矩阵 -> 裁剪坐标。
 
-```glsl
-// vertex_shader.glsl
-#version 330 core
 
 ![](img/ab3178697553442244a5662b18b02fff_9.png)
 
+```glsl
+// vertex_shader.glsl
+#version 330 core
 layout (location = 0) in vec3 position;
 
 uniform mat4 modelMatrix;

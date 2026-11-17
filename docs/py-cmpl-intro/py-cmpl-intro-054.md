@@ -47,11 +47,11 @@ class Cat(Animal):
 
 ![](img/fd124d4f4fdba10a181c73ffd5d33915_8.png)
 
-```python
-animals = [Dog(), Cat()]
 
 ![](img/fd124d4f4fdba10a181c73ffd5d33915_10.png)
 
+```python
+animals = [Dog(), Cat()]
 for animal in animals:
     animal.speak()
 ```
@@ -119,11 +119,11 @@ class Car:
 
 再次运行循环：
 
-```python
-animals = [Dog(), Cat(), Car()]
 
 ![](img/fd124d4f4fdba10a181c73ffd5d33915_32.png)
 
+```python
+animals = [Dog(), Cat(), Car()]
 for animal in animals:
     animal.speak()
     print(animal.alive)

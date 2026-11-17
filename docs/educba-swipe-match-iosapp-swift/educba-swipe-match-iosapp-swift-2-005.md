@@ -20,13 +20,13 @@
 
 ![](img/6520f3165e4704773e992dfe95cf10d6_7.png)
 
+
+![](img/6520f3165e4704773e992dfe95cf10d6_9.png)
+
 ```swift
 @objc private func handlePanGesture(_ recognizer: UIPanGestureRecognizer) {
     // 处理滑动手势的逻辑
 }
-
-![](img/6520f3165e4704773e992dfe95cf10d6_9.png)
-
 @objc private func handleTapGesture(_ recognizer: UITapGestureRecognizer) {
     // 处理点击手势的逻辑
 }

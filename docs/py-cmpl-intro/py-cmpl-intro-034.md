@@ -187,20 +187,20 @@ Python 许多内置函数都提供了有用的关键字参数。例如 `print()`
 
 ![](img/a333a25cc3dca4431fecef82dea2556e_79.png)
 
-```python
-def get_phone(country_code, area_code, first_digits, last_digits):
-    return f"{country_code}-{area_code}-{first_digits}-{last_digits}"
 
 ![](img/a333a25cc3dca4431fecef82dea2556e_81.png)
 
 ![](img/a333a25cc3dca4431fecef82dea2556e_83.png)
 
-# 使用关键字参数调用，顺序可以任意
-phone_number = get_phone(country_code="1", area_code="123", first_digits="456", last_digits="7890")
-print(phone_number)  # 输出：1-123-456-7890
 
 ![](img/a333a25cc3dca4431fecef82dea2556e_85.png)
 
+```python
+def get_phone(country_code, area_code, first_digits, last_digits):
+    return f"{country_code}-{area_code}-{first_digits}-{last_digits}"
+# 使用关键字参数调用，顺序可以任意
+phone_number = get_phone(country_code="1", area_code="123", first_digits="456", last_digits="7890")
+print(phone_number)  # 输出：1-123-456-7890
 # 也可以保持与定义一致的顺序，但使用关键字形式
 phone_number = get_phone(country_code="1", area_code="123", first_digits="456", last_digits="7890")
 ```

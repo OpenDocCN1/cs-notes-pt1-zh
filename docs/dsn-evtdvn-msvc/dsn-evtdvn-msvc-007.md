@@ -54,12 +54,12 @@
 
 这可以简化新旧系统之间的数据共享，同时确保它们保持同步。例如，我们可以使用以下伪代码概念来描述数据流：
 
-```sql
--- 在数据库层面捕获变更
-CDC_Capture(Old_Database) -> Kafka_Topic
 
 ![](img/7773daf1fbfb6e5fcd8456b9afb6ac75_4.png)
 
+```sql
+-- 在数据库层面捕获变更
+CDC_Capture(Old_Database) -> Kafka_Topic
 -- 新微服务消费变更事件
 New_Microservice <- Consume(Kafka_Topic)
 ```

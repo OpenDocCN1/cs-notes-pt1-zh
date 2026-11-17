@@ -215,24 +215,24 @@ def add_fudge(func):
 
 ![](img/460272a5d085c620652be12f9c399d3e_65.png)
 
-```python
-@add_fudge
-@add_sprinkles
-def get_ice_cream(flavor):
-    print(f"这是你的{flavor}味冰淇淋🍦")
 
 ![](img/460272a5d085c620652be12f9c399d3e_67.png)
 
 ![](img/460272a5d085c620652be12f9c399d3e_69.png)
 
+
+![](img/460272a5d085c620652be12f9c399d3e_71.png)
+
+```python
+@add_fudge
+@add_sprinkles
+def get_ice_cream(flavor):
+    print(f"这是你的{flavor}味冰淇淋🍦")
 get_ice_cream("香草")
 # 输出：
 # 你添加了巧克力酱🍫
 # 你添加了糖屑🎉
 # 这是你的香草味冰淇淋🍦
-
-![](img/460272a5d085c620652be12f9c399d3e_71.png)
-
 get_ice_cream("巧克力")
 # 输出：
 # 你添加了巧克力酱🍫

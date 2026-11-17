@@ -30,9 +30,6 @@
 
 ![](img/470b92bde461b83eda49abbb51782a03_3.png)
 
-```c
-// 步骤1：读取寄存器的当前值到一个临时变量
-uint32_t temp1 = *RCC_AHB1ENR_PTR;
 
 ![](img/470b92bde461b83eda49abbb51782a03_4.png)
 
@@ -40,14 +37,17 @@ uint32_t temp1 = *RCC_AHB1ENR_PTR;
 
 ![](img/470b92bde461b83eda49abbb51782a03_7.png)
 
-// 步骤2：使用按位或运算设置第三位（位2，因为从0开始计数）
-// 掩码值 0x08 的二进制为 0000 1000，即第三位为1
-temp1 = temp1 | 0x08;
 
 ![](img/470b92bde461b83eda49abbb51782a03_9.png)
 
 ![](img/470b92bde461b83eda49abbb51782a03_11.png)
 
+```c
+// 步骤1：读取寄存器的当前值到一个临时变量
+uint32_t temp1 = *RCC_AHB1ENR_PTR;
+// 步骤2：使用按位或运算设置第三位（位2，因为从0开始计数）
+// 掩码值 0x08 的二进制为 0000 1000，即第三位为1
+temp1 = temp1 | 0x08;
 // 步骤3：将修改后的值写回寄存器
 *RCC_AHB1ENR_PTR = temp1;
 ```

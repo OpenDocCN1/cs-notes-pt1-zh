@@ -70,10 +70,6 @@ with col3:
 
 具体代码如下：
 
-```python
-# 获取“名”和“姓”的输入值
-first_name = st.text_input("名")
-last_name = st.text_input("姓")
 
 ![](img/9139ac30a5db0aaed7c5c96672a83a16_8.png)
 
@@ -83,11 +79,15 @@ last_name = st.text_input("姓")
 
 ![](img/9139ac30a5db0aaed7c5c96672a83a16_11.png)
 
-# 获取“提交”按钮的状态
-submitted = st.form_submit_button("提交")
 
 ![](img/9139ac30a5db0aaed7c5c96672a83a16_12.png)
 
+```python
+# 获取“名”和“姓”的输入值
+first_name = st.text_input("名")
+last_name = st.text_input("姓")
+# 获取“提交”按钮的状态
+submitted = st.form_submit_button("提交")
 if submitted:
     # 检查必填字段是否为空
     if first_name == "" or last_name == "":

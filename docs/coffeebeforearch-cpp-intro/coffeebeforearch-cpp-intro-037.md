@@ -78,13 +78,13 @@ int main() {
 
 让我们看看如何实现：
 
+
+![](img/c96b49e5bb975cb09fbb506c5f46b7d5_11.png)
+
 ```cpp
 struct A {
     A() { std::cout << "Constructing A\n"; }
 };
-
-![](img/c96b49e5bb975cb09fbb506c5f46b7d5_11.png)
-
 struct B : virtual public A {  // 将A声明为虚拟基类
     B() { std::cout << "Constructing B\n"; }
 };

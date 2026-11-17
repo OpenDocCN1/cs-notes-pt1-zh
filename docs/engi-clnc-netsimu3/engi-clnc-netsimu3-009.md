@@ -142,26 +142,26 @@ switch (protocol)
 
 以下是处理FlowMonitor数据的Python脚本核心逻辑：
 
+
+![](img/d481ec03e01e2fe5b3f9a4893d20b763_22.png)
+
+![](img/d481ec03e01e2fe5b3f9a4893d20b763_24.png)
+
+
+![](img/d481ec03e01e2fe5b3f9a4893d20b763_26.png)
+
+![](img/d481ec03e01e2fe5b3f9a4893d20b763_28.png)
+
 ```python
 import xml.etree.ElementTree as ET
 import matplotlib.pyplot as plt
 
 tree = ET.parse(‘AODV.flowmon’) # 解析XML文件
 root = tree.getroot()
-
-![](img/d481ec03e01e2fe5b3f9a4893d20b763_22.png)
-
-![](img/d481ec03e01e2fe5b3f9a4893d20b763_24.png)
-
 flow_ids = []
 bitrates = []
 lost_packets = []
 delays = []
-
-![](img/d481ec03e01e2fe5b3f9a4893d20b763_26.png)
-
-![](img/d481ec03e01e2fe5b3f9a4893d20b763_28.png)
-
 for flow in root.findall(‘FlowStats/Flow’):
     # 提取每个流的数据
     tx_packets = float(flow.get(‘txPackets’))

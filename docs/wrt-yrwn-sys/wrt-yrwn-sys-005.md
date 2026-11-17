@@ -30,18 +30,18 @@ CPU与键盘、鼠标等硬件设备通信，需要通过一种称为“端口�
 
 首先，创建头文件 `port.h`：
 
-```cpp
-#ifndef PORT_H
-#define PORT_H
 
 ![](img/255810a0e158f70dcd8fb72cf29aa6ac_1.png)
 
-#include “types.h”
 
 ![](img/255810a0e158f70dcd8fb72cf29aa6ac_3.png)
 
 ![](img/255810a0e158f70dcd8fb72cf29aa6ac_5.png)
 
+```cpp
+#ifndef PORT_H
+#define PORT_H
+#include “types.h”
 class Port {
 protected:
     Port(uint16_t portnumber);
@@ -85,13 +85,6 @@ public:
 
 接着，在 `port.cpp` 中实现这些类：
 
-```cpp
-#include “port.h”
-
-Port::Port(uint16_t portnumber) {
-    this->portnumber = portnumber;
-}
-Port::~Port() {}
 
 ![](img/255810a0e158f70dcd8fb72cf29aa6ac_7.png)
 
@@ -101,6 +94,22 @@ Port::~Port() {}
 
 ![](img/255810a0e158f70dcd8fb72cf29aa6ac_12.png)
 
+
+![](img/255810a0e158f70dcd8fb72cf29aa6ac_14.png)
+
+
+![](img/255810a0e158f70dcd8fb72cf29aa6ac_16.png)
+
+
+![](img/255810a0e158f70dcd8fb72cf29aa6ac_18.png)
+
+```cpp
+#include “port.h”
+
+Port::Port(uint16_t portnumber) {
+    this->portnumber = portnumber;
+}
+Port::~Port() {}
 Port8Bit::Port8Bit(uint16_t portnumber) : Port(portnumber) {}
 Port8Bit::~Port8Bit() {}
 void Port8Bit::Write(uint8_t data) {
@@ -111,17 +120,11 @@ uint8_t Port8Bit::Read() {
     __asm__ volatile(“inb %1, %0” : “=a”(result) : “Nd”(portnumber));
     return result;
 }
-
-![](img/255810a0e158f70dcd8fb72cf29aa6ac_14.png)
-
 Port8BitSlow::Port8BitSlow(uint16_t portnumber) : Port8Bit(portnumber) {}
 Port8BitSlow::~Port8BitSlow() {}
 void Port8BitSlow::Write(uint8_t data) {
     __asm__ volatile(“outb %0, %1\njmp 1f\n1: jmp 1f\n1:” : : “a”(data), “Nd”(portnumber));
 }
-
-![](img/255810a0e158f70dcd8fb72cf29aa6ac_16.png)
-
 Port16Bit::Port16Bit(uint16_t portnumber) : Port(portnumber) {}
 Port16Bit::~Port16Bit() {}
 void Port16Bit::Write(uint16_t data) {
@@ -132,9 +135,6 @@ uint16_t Port16Bit::Read() {
     __asm__ volatile(“inw %1, %0” : “=a”(result) : “Nd”(portnumber));
     return result;
 }
-
-![](img/255810a0e158f70dcd8fb72cf29aa6ac_18.png)
-
 Port32Bit::Port32Bit(uint16_t portnumber) : Port(portnumber) {}
 Port32Bit::~Port32Bit() {}
 void Port32Bit::Write(uint32_t data) {

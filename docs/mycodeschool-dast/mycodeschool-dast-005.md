@@ -239,14 +239,14 @@ head = temp;
 
 ![](img/a640654184be69c31222a364361d27d2_85.png)
 
+
+![](img/a640654184be69c31222a364361d27d2_86.png)
+
 ```cpp
 // 1. 创建新节点
 Node* temp = new Node();
 temp->data = 4;
 temp->next = NULL;
-
-![](img/a640654184be69c31222a364361d27d2_86.png)
-
 // 2. 遍历链表找到最后一个节点
 Node* temp1 = head; // 从头部开始
 while(temp1->next != NULL) {

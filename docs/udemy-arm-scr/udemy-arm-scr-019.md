@@ -22,6 +22,11 @@
 我们需要使用 `EXPORT` 关键字来声明我们希望从C代码中访问的子程序。同时，可以移除或注释掉与LED初始化相关的代码，因为本教程专注于UART功能。
 
 修改后的 `uart.s` 文件关键部分如下：
+
+![](img/1f32b935d0cd38192028add8c2e2af61_1.png)
+
+![](img/1f32b935d0cd38192028add8c2e2af61_2.png)
+
 ```assembly
     EXPORT uart_init
     EXPORT uart_read_char
@@ -34,11 +39,6 @@ uart_init:
 uart_read_char:
     ; ... 读取字符的代码 ...
     BX LR
-
-![](img/1f32b935d0cd38192028add8c2e2af61_1.png)
-
-![](img/1f32b935d0cd38192028add8c2e2af61_2.png)
-
 uart_write_char:
     ; ... 写入字符的代码 ...
     BX LR
@@ -104,6 +104,9 @@ int fputc(int c, FILE *f) {
 ## 功能测试
 
 绑定完成后，我们就可以在C代码中自由地使用 `printf` 和 `scanf` 了。下面是一个简单的测试函数：
+
+![](img/1f32b935d0cd38192028add8c2e2af61_4.png)
+
 ```c
 void test_io(void) {
     int num;
@@ -119,9 +122,6 @@ void test_io(void) {
 
     printf("Hello, Assembly World!\n");
 }
-
-![](img/1f32b935d0cd38192028add8c2e2af61_4.png)
-
 int main(void) {
     uart_init();  // 初始化UART
     test_io();    // 运行测试

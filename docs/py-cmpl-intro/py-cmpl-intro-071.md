@@ -49,14 +49,14 @@ print(f"文本文件 '{file_path}' 已创建。")
 
 你也可以使用绝对路径，将文件保存到系统的任何位置，例如你的桌面。
 
+
+![](img/859204f45fe5aa639c7358065f684022_3.png)
+
 ```python
 # Windows 系统的绝对路径示例（使用双反斜杠或正斜杠）
 file_path_absolute = "C:\\Users\\YourName\\Desktop\\output.txt"
 # 或者
 file_path_absolute = "C:/Users/YourName/Desktop/output.txt"
-
-![](img/859204f45fe5aa639c7358065f684022_3.png)
-
 with open(file_path_absolute, "w") as file:
     file.write(text_data)
 ```
@@ -96,6 +96,11 @@ with open(file_path, "a") as file:
 
 如果你想写入一个列表中的所有项目，不能直接将列表传递给 `.write()` 方法，因为它只接受字符串。你需要遍历列表，逐项写入。
 
+
+![](img/859204f45fe5aa639c7358065f684022_9.png)
+
+![](img/859204f45fe5aa639c7358065f684022_11.png)
+
 ```python
 employees = ["Eugene", "Squidward", "SpongeBob", "Patrick"]
 file_path = "employees.txt"
@@ -103,11 +108,6 @@ file_path = "employees.txt"
 with open(file_path, "w") as file:
     for employee in employees:
         file.write(employee + "\n")  # 在每个名字后添加换行符
-
-![](img/859204f45fe5aa639c7358065f684022_9.png)
-
-![](img/859204f45fe5aa639c7358065f684022_11.png)
-
 print(f"列表已写入文件 '{file_path}'。")
 ```
 
@@ -140,24 +140,24 @@ Python的 `json` 模块可以轻松地将字典等对象转换为JSON格式的�
 
 让我们看一个例子，保存一个员工的详细信息：
 
-```python
-import json
 
 ![](img/859204f45fe5aa639c7358065f684022_20.png)
 
+
+![](img/859204f45fe5aa639c7358065f684022_22.png)
+
+
+![](img/859204f45fe5aa639c7358065f684022_24.png)
+
+```python
+import json
 # 准备要保存的字典数据
 employee_data = {
     "name": "SpongeBob",
     "age": 30,
     "job": "cook"
 }
-
-![](img/859204f45fe5aa639c7358065f684022_22.png)
-
 file_path = "employee.json"
-
-![](img/859204f45fe5aa639c7358065f684022_24.png)
-
 # 写入JSON文件
 with open(file_path, "w") as file:
     json.dump(employee_data, file)

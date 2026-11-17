@@ -53,14 +53,20 @@ sudo pip3 install flask
 
 以下是创建Flask应用的核心代码：
 
+
+![](img/c169be42078be7e3e5b27601c2c93c13_11.png)
+
+
+![](img/c169be42078be7e3e5b27601c2c93c13_13.png)
+
+
+![](img/c169be42078be7e3e5b27601c2c93c13_15.png)
+
 ```python
 #!/usr/bin/env python3
 from flask import Flask, jsonify
 
 app = Flask(__name__)
-
-![](img/c169be42078be7e3e5b27601c2c93c13_11.png)
-
 # 定义服务发现端点返回的数据
 services = [
     {
@@ -71,15 +77,9 @@ services = [
         }
     }
 ]
-
-![](img/c169be42078be7e3e5b27601c2c93c13_13.png)
-
 @app.route('/services', methods=['GET'])
 def get_services():
     return jsonify(services)
-
-![](img/c169be42078be7e3e5b27601c2c93c13_15.png)
-
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8080)
 ```

@@ -33,12 +33,12 @@ public class BinarySearchTree<T extends Comparable<T>> {
 
 ![](img/f9fd627387fa47f51d0a72a1d67b11ba_10.png)
 
-```java
-// 节点计数器
-private int nodeCount = 0;
 
 ![](img/f9fd627387fa47f51d0a72a1d67b11ba_12.png)
 
+```java
+// 节点计数器
+private int nodeCount = 0;
 // 树的根节点
 private Node root = null;
 ```

@@ -89,18 +89,18 @@ static inline uint32_t Shape_area_vcall(Shape const * const me) {
 
 虚函数表应作为常量存储在ROM中，并在基类的构造函数中初始化。
 
-```c
-/* shape.c */
-#include “shape.h”
 
 ![](img/904f985effe11bd10bc61ac6da1cf1b0_6.png)
 
-/* 1. 声明虚函数（仅在本模块使用） */
-static void Shape_draw(Shape const * const me);
-static uint32_t Shape_area(Shape const * const me);
 
 ![](img/904f985effe11bd10bc61ac6da1cf1b0_8.png)
 
+```c
+/* shape.c */
+#include “shape.h”
+/* 1. 声明虚函数（仅在本模块使用） */
+static void Shape_draw(Shape const * const me);
+static uint32_t Shape_area(Shape const * const me);
 /* 2. 定义并初始化常量虚函数表 */
 static ShapeVTable const shape_vtable = {
     &Shape_draw,  /* 显式使用取地址运算符 */
@@ -129,6 +129,9 @@ static uint32_t Shape_area(Shape const * const me) {
 
 每个子类都需要提供自己的虚函数表，并在其构造函数中重写从基类继承来的VPTR。
 
+
+![](img/904f985effe11bd10bc61ac6da1cf1b0_10.png)
+
 ```c
 /* rectangle.c */
 #include “rectangle.h”
@@ -139,9 +142,6 @@ static ShapeVTable const rectangle_vtable = {
     (void (*)(Shape const * const))&Rectangle_draw,   /* 需要强制类型转换 */
     (uint32_t (*)(Shape const * const))&Rectangle_area
 };
-
-![](img/904f985effe11bd10bc61ac6da1cf1b0_10.png)
-
 /* 2. 子类构造函数 */
 void Rectangle_ctor(Rectangle * const me,
                     int16_t x, int16_t y,
@@ -171,6 +171,9 @@ uint32_t Rectangle_area(Rectangle const * const me) {
 
 现在，我们可以像在C++中一样，使用基类指针来调用子类特有的方法了。
 
+
+![](img/904f985effe11bd10bc61ac6da1cf1b0_12.png)
+
 ```c
 /* main.c */
 #include “shape.h”
@@ -182,9 +185,6 @@ void drawGraph(Shape const *graph[]) {
         Shape_draw_vcall(graph[i]); /* 多态调用！ */
     }
 }
-
-![](img/904f985effe11bd10bc61ac6da1cf1b0_12.png)
-
 int main() {
     Shape s1;
     Rectangle r1;

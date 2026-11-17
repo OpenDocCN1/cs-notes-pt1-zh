@@ -183,6 +183,11 @@ struct Node {
 
 ![](img/312882b4ee745f9691f56cca19c9b10a_88.png)
 
+
+![](img/312882b4ee745f9691f56cca19c9b10a_90.png)
+
+![](img/312882b4ee745f9691f56cca19c9b10a_91.png)
+
 ```cpp
 Node* Delete(Node* root, int data) {
     // 情况：树为空或未找到节点
@@ -217,11 +222,6 @@ Node* Delete(Node* root, int data) {
     }
     return root;
 }
-
-![](img/312882b4ee745f9691f56cca19c9b10a_90.png)
-
-![](img/312882b4ee745f9691f56cca19c9b10a_91.png)
-
 // 辅助函数：查找以给定节点为根的子树中的最小节点
 Node* FindMin(Node* root) {
     while (root->left != nullptr) root = root->left;

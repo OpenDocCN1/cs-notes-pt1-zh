@@ -120,10 +120,6 @@ fn print_hello() {
 
 ![](img/5338d5dd404d3a99cbf4ed51a4891c34_27.png)
 
-```rust
-fn main() {
-    goodbye();
-}
 
 ![](img/5338d5dd404d3a99cbf4ed51a4891c34_28.png)
 
@@ -131,6 +127,10 @@ fn main() {
 
 ![](img/5338d5dd404d3a99cbf4ed51a4891c34_30.png)
 
+```rust
+fn main() {
+    goodbye();
+}
 fn goodbye() {
     println!("goodbye Bob");
 }

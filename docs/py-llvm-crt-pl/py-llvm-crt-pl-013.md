@@ -467,16 +467,16 @@ case NodeType.ForStatement:
 
 ![](img/dc94e1841bbf497ba6534dc3dc3b4751_189.png)
 
-```python
-def visit_break_statement(self, node):
-    """编译 break 语句：跳转到最近的 break_points 中的块"""
-    target_block = self.break_points[-1]
-    self.builder.branch(target_block)
 
 ![](img/dc94e1841bbf497ba6534dc3dc3b4751_191.png)
 
 ![](img/dc94e1841bbf497ba6534dc3dc3b4751_193.png)
 
+```python
+def visit_break_statement(self, node):
+    """编译 break 语句：跳转到最近的 break_points 中的块"""
+    target_block = self.break_points[-1]
+    self.builder.branch(target_block)
 def visit_continue_statement(self, node):
     """编译 continue 语句：跳转到最近的 continues 中的块"""
     target_block = self.continues[-1]

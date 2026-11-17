@@ -48,11 +48,11 @@
 
 ![](img/d8147ec1d2bf4a124432b69e1a01005a_21.png)
 
-```python
-temp = 25
 
 ![](img/d8147ec1d2bf4a124432b69e1a01005a_23.png)
 
+```python
+temp = 25
 if temp > 0 and temp < 30:
     print("温度适宜。")
 else:
@@ -87,11 +87,11 @@ else:
 
 ![](img/d8147ec1d2bf4a124432b69e1a01005a_36.png)
 
-```python
-temp = 40
 
 ![](img/d8147ec1d2bf4a124432b69e1a01005a_38.png)
 
+```python
+temp = 40
 if temp <= 0 or temp >= 30:
     print("温度不佳。")
 else:
@@ -130,13 +130,13 @@ else:
 
 ![](img/d8147ec1d2bf4a124432b69e1a01005a_53.png)
 
-```python
-sunny = False
 
 ![](img/d8147ec1d2bf4a124432b69e1a01005a_54.png)
 
 ![](img/d8147ec1d2bf4a124432b69e1a01005a_56.png)
 
+```python
+sunny = False
 if not sunny:
     print("今天是阴天。")
 else:

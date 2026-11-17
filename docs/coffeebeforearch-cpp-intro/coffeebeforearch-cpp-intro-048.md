@@ -12,13 +12,13 @@
 
 首先，让我们创建一个简单的函数模板，它本意是用于打印整数值。
 
-```cpp
-#include <iostream>
 
 ![](img/86b51393ad5a540c7368cbb278edfebd_3.png)
 
 ![](img/86b51393ad5a540c7368cbb278edfebd_5.png)
 
+```cpp
+#include <iostream>
 // 一个简单的函数模板，用于打印值
 void print(auto value) {
     std::cout << "打印整数值: " << value << '\n';

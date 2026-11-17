@@ -75,9 +75,6 @@
 
 以下是执行查询的核心代码步骤：
 
-```python
-# Python 1. 建立数据库连接
-connection = mysql.connector.connect(host='localhost', database='little_lemon', user='user', password='password')
 
 ![](img/8a96b62a7a0e2d19f7b9ce71f350760b_20.png)
 
@@ -87,14 +84,17 @@ connection = mysql.connector.connect(host='localhost', database='little_lemon', 
 
 ![](img/8a96b62a7a0e2d19f7b9ce71f350760b_23.png)
 
+
+![](img/8a96b62a7a0e2d19f7b9ce71f350760b_25.png)
+
+```python
+# Python 1. 建立数据库连接
+connection = mysql.connector.connect(host='localhost', database='little_lemon', user='user', password='password')
 # Python 2. 创建游标对象
 cursor = connection.cursor()
 
 # Python 3. 使用游标执行SQL查询
 cursor.execute("SELECT booking_time FROM bookings WHERE guest_name = 'John Doe'")
-
-![](img/8a96b62a7a0e2d19f7b9ce71f350760b_25.png)
-
 # Python 4. 获取查询结果
 records = cursor.fetchall()
 ```

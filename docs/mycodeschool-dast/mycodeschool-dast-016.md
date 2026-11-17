@@ -97,16 +97,16 @@
 
 ![](img/c438207c84c03a0a066706c1e948823f_42.png)
 
-```c
-struct Node {
-    int data;           // 存储数据
-    struct Node* next;  // 指向下一个节点的指针
-};
 
 ![](img/c438207c84c03a0a066706c1e948823f_44.png)
 
 ![](img/c438207c84c03a0a066706c1e948823f_45.png)
 
+```c
+struct Node {
+    int data;           // 存储数据
+    struct Node* next;  // 指向下一个节点的指针
+};
 struct Node* top = NULL; // 栈顶指针，初始化为空栈
 ```
 

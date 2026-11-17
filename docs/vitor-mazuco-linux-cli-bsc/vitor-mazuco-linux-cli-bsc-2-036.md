@@ -123,14 +123,14 @@ Linux内核本身非常稳定，但通过一些调整，我们可以进一步提
 ![](img/f8cb37094d03beb37dc5920f0860e4b8_41.png)
 
 例如，我们可以简单地修改主机名：
-```bash
-# 查看当前主机名
-cat /proc/sys/kernel/hostname
 
 ![](img/f8cb37094d03beb37dc5920f0860e4b8_43.png)
 
 ![](img/f8cb37094d03beb37dc5920f0860e4b8_44.png)
 
+```bash
+# 查看当前主机名
+cat /proc/sys/kernel/hostname
 # 使用 echo 修改主机名
 echo "new-hostname" > /proc/sys/kernel/hostname
 ```

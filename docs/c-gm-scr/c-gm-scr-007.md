@@ -196,11 +196,6 @@
 
 ![](img/06038cb1cd219389e961b5d06c0686c3_160.png)
 
-```c
-// 计算朝向目标位置（player_desired_p）的加速度
-v2 spring_acceleration = (player_desired_p - player_visual_p) * spring_stiffness;
-// 计算阻尼力（与当前速度方向相反）
-v2 damping_force = -player_visual_dp * damping_coefficient;
 
 ![](img/06038cb1cd219389e961b5d06c0686c3_162.png)
 
@@ -210,8 +205,6 @@ v2 damping_force = -player_visual_dp * damping_coefficient;
 
 ![](img/06038cb1cd219389e961b5d06c0686c3_168.png)
 
-// 合力
-v2 total_acceleration = spring_acceleration + damping_force;
 
 ![](img/06038cb1cd219389e961b5d06c0686c3_170.png)
 
@@ -245,8 +238,6 @@ v2 total_acceleration = spring_acceleration + damping_force;
 
 ![](img/06038cb1cd219389e961b5d06c0686c3_200.png)
 
-// 更新速度 (v = v0 + a * dt)
-player_visual_dp += total_acceleration * dt;
 
 ![](img/06038cb1cd219389e961b5d06c0686c3_201.png)
 
@@ -278,6 +269,15 @@ player_visual_dp += total_acceleration * dt;
 
 ![](img/06038cb1cd219389e961b5d06c0686c3_229.png)
 
+```c
+// 计算朝向目标位置（player_desired_p）的加速度
+v2 spring_acceleration = (player_desired_p - player_visual_p) * spring_stiffness;
+// 计算阻尼力（与当前速度方向相反）
+v2 damping_force = -player_visual_dp * damping_coefficient;
+// 合力
+v2 total_acceleration = spring_acceleration + damping_force;
+// 更新速度 (v = v0 + a * dt)
+player_visual_dp += total_acceleration * dt;
 // 更新位置 (p = p0 + v * dt)
 player_visual_p += player_visual_dp * dt;
 ```
@@ -366,10 +366,6 @@ player_visual_p += player_visual_dp * dt;
 
 ![](img/06038cb1cd219389e961b5d06c0686c3_302.png)
 
-```c
-// 计算挡板右侧与墙壁右侧的“挤压”距离
-f32 squeeze_distance = (player_visual_p.x + player_half_size.x) - arena_right_wall_p;
-f32 squeeze_factor = 0.0f;
 
 ![](img/06038cb1cd219389e961b5d06c0686c3_304.png)
 
@@ -391,12 +387,6 @@ f32 squeeze_factor = 0.0f;
 
 ![](img/06038cb1cd219389e961b5d06c0686c3_322.png)
 
-if (squeeze_distance > 0.0f) {
-    // 如果挤入墙壁，计算挤压因子
-    squeeze_factor = squeeze_distance;
-    // 同时将挡板位置推回，避免穿透
-    player_desired_p.x -= squeeze_factor;
-}
 
 ![](img/06038cb1cd219389e961b5d06c0686c3_324.png)
 
@@ -416,6 +406,16 @@ if (squeeze_distance > 0.0f) {
 
 ![](img/06038cb1cd219389e961b5d06c0686c3_338.png)
 
+```c
+// 计算挡板右侧与墙壁右侧的“挤压”距离
+f32 squeeze_distance = (player_visual_p.x + player_half_size.x) - arena_right_wall_p;
+f32 squeeze_factor = 0.0f;
+if (squeeze_distance > 0.0f) {
+    // 如果挤入墙壁，计算挤压因子
+    squeeze_factor = squeeze_distance;
+    // 同时将挡板位置推回，避免穿透
+    player_desired_p.x -= squeeze_factor;
+}
 // 根据挤压因子调整挡板高度：挤压时变矮，拉伸时变高
 player_half_size.y = base_height - fabsf(player_visual_dp.x) * scale_factor + squeeze_factor * squash_intensity;
 ```
@@ -542,13 +542,6 @@ player_half_size.y = base_height - fabsf(player_visual_dp.x) * scale_factor + sq
 
 ![](img/06038cb1cd219389e961b5d06c0686c3_446.png)
 
-```c
-// 定义轨迹点结构
-typedef struct {
-    v2 p;
-    f32 life;
-    u32 color;
-} trail_point;
 
 ![](img/06038cb1cd219389e961b5d06c0686c3_448.png)
 
@@ -572,19 +565,6 @@ typedef struct {
 
 ![](img/06038cb1cd219389e961b5d06c0686c3_466.png)
 
-// 在球体更新中，计时并添加新轨迹点
-ball->trail_timer -= dt;
-if (ball->trail_timer <= 0.0f) {
-    ball->trail_timer = trail_spawn_interval; // 重置计时器
-
-    trail_point* new_trail = &ball->trails[ball->next_trail_index];
-    new_trail->p = ball->p;
-    new_trail->life = 1.0f; // 初始生命周期为1
-    new_trail->color = ball->trail_color;
-
-    // 移动环形缓冲区索引
-    ball->next_trail_index = (ball->next_trail_index + 1) % ARRAY_COUNT(ball->trails);
-}
 
 ![](img/06038cb1cd219389e961b5d06c0686c3_468.png)
 
@@ -614,6 +594,26 @@ if (ball->trail_timer <= 0.0f) {
 
 ![](img/06038cb1cd219389e961b5d06c0686c3_494.png)
 
+```c
+// 定义轨迹点结构
+typedef struct {
+    v2 p;
+    f32 life;
+    u32 color;
+} trail_point;
+// 在球体更新中，计时并添加新轨迹点
+ball->trail_timer -= dt;
+if (ball->trail_timer <= 0.0f) {
+    ball->trail_timer = trail_spawn_interval; // 重置计时器
+
+    trail_point* new_trail = &ball->trails[ball->next_trail_index];
+    new_trail->p = ball->p;
+    new_trail->life = 1.0f; // 初始生命周期为1
+    new_trail->color = ball->trail_color;
+
+    // 移动环形缓冲区索引
+    ball->next_trail_index = (ball->next_trail_index + 1) % ARRAY_COUNT(ball->trails);
+}
 // 渲染所有存活的轨迹点
 for (int i = 0; i < ARRAY_COUNT(ball->trails); ++i) {
     trail_point* trail = &ball->trails[i];

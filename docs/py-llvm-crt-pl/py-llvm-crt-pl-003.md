@@ -221,30 +221,30 @@ class Compiler:
 
 ![](img/8aad44f1fb37348e563d0dabf579ace9_68.png)
 
+
+![](img/8aad44f1fb37348e563d0dabf579ace9_70.png)
+
+![](img/8aad44f1fb37348e563d0dabf579ace9_72.png)
+
+
+![](img/8aad44f1fb37348e563d0dabf579ace9_74.png)
+
+
+![](img/8aad44f1fb37348e563d0dabf579ace9_76.png)
+
 ```python
 # main.py
 from compiler import Compiler
 from llvm_light import IR
 from llvm_light.binding import llvm
 from ctypes import c_int, c_float, CFUNCTYPE
-
-![](img/8aad44f1fb37348e563d0dabf579ace9_70.png)
-
-![](img/8aad44f1fb37348e563d0dabf579ace9_72.png)
-
 # ... (之前的词法分析和语法分析代码) ...
-
-![](img/8aad44f1fb37348e563d0dabf579ace9_74.png)
-
 # 创建编译器实例并编译 AST
 compiler = Compiler()
 compiler.compile(program_node)
 
 # 设置目标平台信息
 compiler.module.triple = llvm.get_default_triple()
-
-![](img/8aad44f1fb37348e563d0dabf579ace9_76.png)
-
 # 将生成的 IR 代码写入文件以便调试
 compiler_debug = True
 if compiler_debug:

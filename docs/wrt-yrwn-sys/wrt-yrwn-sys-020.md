@@ -75,6 +75,9 @@ PIO模式支持28位和48位LBA寻址：
 
 在构造函数中，我们设置端口基地址、设备类型（主/从）以及每扇区字节数（默认为512）。
 
+
+![](img/47624b3337b5d790adb393b819a99da1_13.png)
+
 ```cpp
 class IDEChannel {
 public:
@@ -83,9 +86,6 @@ public:
     void read28(uint32_t sector, uint8_t* data, int count);
     void write28(uint32_t sector, uint8_t* data, int count);
     void flush();
-
-![](img/47624b3337b5d790adb393b819a99da1_13.png)
-
 private:
     uint16_t portBase;
     bool master;

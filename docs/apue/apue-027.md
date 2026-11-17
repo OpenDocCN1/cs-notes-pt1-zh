@@ -20,15 +20,15 @@
 
 ![](img/e1a2752fba5b7569041b0ce83a2195f4_7.png)
 
+
+![](img/e1a2752fba5b7569041b0ce83a2195f4_9.png)
+
 ```c
 #include <stdio.h>
 
 void func2() {
     printf("%s are great on anything.\n", FOOD);
 }
-
-![](img/e1a2752fba5b7569041b0ce83a2195f4_9.png)
-
 void func1() {
     func2();
 }

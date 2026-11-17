@@ -77,14 +77,14 @@ double cube(double num) {
 为了解决这个问题，C语言引入了**函数原型**的概念。函数原型只包含函数的返回类型、名称和参数列表，并以分号结尾，它告诉编译器函数的存在及其格式。
 
 以下是使用函数原型的示例：
+
+![](img/c01e1a9a6907e6c163d05278a2347f9d_6.png)
+
 ```c
 #include <stdio.h>
 
 // 函数原型
 double cube(double num);
-
-![](img/c01e1a9a6907e6c163d05278a2347f9d_6.png)
-
 int main() {
     printf("Answer: %f\n", cube(3.0));
     return 0;

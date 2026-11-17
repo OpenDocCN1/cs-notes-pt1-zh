@@ -122,13 +122,13 @@ const withMousePosition = (WrappedComponent) => {
 
 最后，我将在 `App` 组件的渲染部分使用这些增强后的版本。
 
+
+![](img/f295e6eb68e19fffa44082eb8ac4994d_3.png)
+
 ```jsx
 // 增强组件
 const PanelMouseTracker = withMousePosition(PanelMouseLogger);
 const PointMouseTracker = withMousePosition(PointMouseLogger);
-
-![](img/f295e6eb68e19fffa44082eb8ac4994d_3.png)
-
 // 在App组件中使用
 function App() {
   return (

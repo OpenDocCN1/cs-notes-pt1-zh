@@ -475,14 +475,6 @@ first_ball_move = false;
 
 ![](img/d64d01b71ce34c065794ea9c9a82a965_402.png)
 
-```c
-typedef enum {
-    GameMode_Normal,
-    GameMode_Wall,
-    GameMode_Construction,
-    GameMode_Spaced,
-    GameMode_Count
-} GameMode;
 
 ![](img/d64d01b71ce34c065794ea9c9a82a965_404.png)
 
@@ -500,6 +492,14 @@ typedef enum {
 
 ![](img/d64d01b71ce34c065794ea9c9a82a965_417.png)
 
+```c
+typedef enum {
+    GameMode_Normal,
+    GameMode_Wall,
+    GameMode_Construction,
+    GameMode_Spaced,
+    GameMode_Count
+} GameMode;
 GameMode current_game_mode = GameMode_Normal;
 ```
 

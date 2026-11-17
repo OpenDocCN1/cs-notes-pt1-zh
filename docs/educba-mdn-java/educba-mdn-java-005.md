@@ -28,11 +28,11 @@
 
 ![](img/fa26a2e7d764e756452b84587ff71b0f_14.png)
 
-```java
-import java.util.StringJoiner;
 
 ![](img/fa26a2e7d764e756452b84587ff71b0f_16.png)
 
+```java
+import java.util.StringJoiner;
 public class StringJoinerExample {
     public static void main(String[] args) {
         StringJoiner myString = new StringJoiner(",");
@@ -83,8 +83,6 @@ public class StringJoinerExample {
 
 ![](img/fa26a2e7d764e756452b84587ff71b0f_29.png)
 
-```java
-import java.util.Arrays;
 
 ![](img/fa26a2e7d764e756452b84587ff71b0f_31.png)
 
@@ -92,6 +90,8 @@ import java.util.Arrays;
 
 ![](img/fa26a2e7d764e756452b84587ff71b0f_35.png)
 
+```java
+import java.util.Arrays;
 public class ParallelSortExample1 {
     public static void main(String[] args) {
         int[] numbers = {9, 2, 7, 1, 5, 8, 3, 6, 4};
@@ -119,11 +119,11 @@ public class ParallelSortExample1 {
 
 ![](img/fa26a2e7d764e756452b84587ff71b0f_46.png)
 
-```java
-import java.util.Arrays;
 
 ![](img/fa26a2e7d764e756452b84587ff71b0f_48.png)
 
+```java
+import java.util.Arrays;
 public class ParallelSortExample2 {
     public static void main(String[] args) {
         int[] numbers = {9, 2, 7, 1, 5, 8, 3, 6, 4};
@@ -166,6 +166,9 @@ Java 8允许在接口中定义`default`和`static`方法，以便向后兼容。
 
 ![](img/fa26a2e7d764e756452b84587ff71b0f_64.png)
 
+
+![](img/fa26a2e7d764e756452b84587ff71b0f_66.png)
+
 ```java
 // Java 8 接口示例
 interface MyInterfaceP1 {
@@ -181,9 +184,6 @@ interface MyInterfaceP1 {
         System.out.println("This is method 2");
     }
 }
-
-![](img/fa26a2e7d764e756452b84587ff71b0f_66.png)
-
 class DemoClass26 implements MyInterfaceP1 {
     public static void main(String[] args) {
         DemoClass26 obj = new DemoClass26();
@@ -213,6 +213,11 @@ class DemoClass26 implements MyInterfaceP1 {
 
 ![](img/fa26a2e7d764e756452b84587ff71b0f_77.png)
 
+
+![](img/fa26a2e7d764e756452b84587ff71b0f_79.png)
+
+![](img/fa26a2e7d764e756452b84587ff71b0f_81.png)
+
 ```java
 // Java 9 接口示例
 interface MyInterfaceP2 {
@@ -232,11 +237,6 @@ interface MyInterfaceP2 {
         System.out.println("Doing something");
     }
 }
-
-![](img/fa26a2e7d764e756452b84587ff71b0f_79.png)
-
-![](img/fa26a2e7d764e756452b84587ff71b0f_81.png)
-
 class DemoClass27 implements MyInterfaceP2 {
     public static void main(String[] args) {
         DemoClass27 obj = new DemoClass27();
@@ -259,6 +259,11 @@ Java 9还支持**私有静态方法**，主要用于在接口的多个`static`�
 ![](img/fa26a2e7d764e756452b84587ff71b0f_86.png)
 
 ![](img/fa26a2e7d764e756452b84587ff71b0f_87.png)
+
+
+![](img/fa26a2e7d764e756452b84587ff71b0f_88.png)
+
+![](img/fa26a2e7d764e756452b84587ff71b0f_90.png)
 
 ```java
 // Java 9 接口示例（包含私有静态方法）
@@ -284,11 +289,6 @@ interface MyInterfaceP3 {
         method2();
     }
 }
-
-![](img/fa26a2e7d764e756452b84587ff71b0f_88.png)
-
-![](img/fa26a2e7d764e756452b84587ff71b0f_90.png)
-
 class DemoClass28 implements MyInterfaceP3 {
     public static void main(String[] args) {
         DemoClass28 obj = new DemoClass28();

@@ -20,12 +20,12 @@
 
 ![](img/ee09b2c2e51f74aee8e63de8e19cacca_7.png)
 
-```java
-import java.text.NumberFormat;
-import java.util.Locale;
 
 ![](img/ee09b2c2e51f74aee8e63de8e19cacca_9.png)
 
+```java
+import java.text.NumberFormat;
+import java.util.Locale;
 public class BasicCompactNumberExample {
     public static void main(String[] args) {
         // 创建短样式的紧凑数字格式实例
@@ -75,12 +75,12 @@ public class BasicCompactNumberExample {
 
 ![](img/ee09b2c2e51f74aee8e63de8e19cacca_27.png)
 
-```java
-import java.text.NumberFormat;
-import java.util.Locale;
 
 ![](img/ee09b2c2e51f74aee8e63de8e19cacca_29.png)
 
+```java
+import java.text.NumberFormat;
+import java.util.Locale;
 public class LocaleCompactNumberExample {
 
     private static void printCompactNumberFormat(long number) {
@@ -121,12 +121,12 @@ public class LocaleCompactNumberExample {
 
 以下是列出所有可用数字格式区域设置的代码：
 
-```java
-import java.text.NumberFormat;
-import java.util.Locale;
 
 ![](img/ee09b2c2e51f74aee8e63de8e19cacca_35.png)
 
+```java
+import java.text.NumberFormat;
+import java.util.Locale;
 public class AvailableLocalesExample {
     public static void main(String[] args) {
         System.out.println("Number Format Locales:");
@@ -148,14 +148,14 @@ public class AvailableLocalesExample {
 
 ![](img/ee09b2c2e51f74aee8e63de8e19cacca_39.png)
 
-```java
-import java.text.NumberFormat;
-import java.util.Locale;
 
 ![](img/ee09b2c2e51f74aee8e63de8e19cacca_41.png)
 
 ![](img/ee09b2c2e51f74aee8e63de8e19cacca_43.png)
 
+```java
+import java.text.NumberFormat;
+import java.util.Locale;
 public class FractionDigitsExample {
     public static void main(String[] args) {
         NumberFormat nf = NumberFormat.getCompactNumberInstance(Locale.US, NumberFormat.Style.SHORT);
@@ -271,15 +271,15 @@ public class RoundingModeExample {
 
 ![](img/ee09b2c2e51f74aee8e63de8e19cacca_71.png)
 
-```java
-import java.text.NumberFormat;
-import java.text.ParseException;
-import java.util.Locale;
 
 ![](img/ee09b2c2e51f74aee8e63de8e19cacca_73.png)
 
 ![](img/ee09b2c2e51f74aee8e63de8e19cacca_75.png)
 
+```java
+import java.text.NumberFormat;
+import java.text.ParseException;
+import java.util.Locale;
 public class ParseExample {
     public static void main(String[] args) throws ParseException {
         // 短样式解析
@@ -305,15 +305,15 @@ public class ParseExample {
 
 以下是启用分组分隔符解析的示例：
 
-```java
-import java.text.NumberFormat;
-import java.text.ParseException;
-import java.util.Locale;
 
 ![](img/ee09b2c2e51f74aee8e63de8e19cacca_77.png)
 
 ![](img/ee09b2c2e51f74aee8e63de8e19cacca_79.png)
 
+```java
+import java.text.NumberFormat;
+import java.text.ParseException;
+import java.util.Locale;
 public class ParseWithGroupingExample {
     public static void main(String[] args) throws ParseException {
         NumberFormat nf = NumberFormat.getCompactNumberInstance(Locale.US, NumberFormat.Style.SHORT);

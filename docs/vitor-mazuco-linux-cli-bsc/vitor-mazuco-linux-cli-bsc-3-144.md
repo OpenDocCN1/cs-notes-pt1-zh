@@ -45,12 +45,12 @@ DROP TABLESPACE tablespace_name
 
 ![](img/03ba0ad78b6ef4ec11736f8c35809e73_15.png)
 
-```sql
--- 创建一个空的表空间
-CREATE TABLESPACE space_1 DATAFILE 'space_1.dbf' SIZE 10M;
 
 ![](img/03ba0ad78b6ef4ec11736f8c35809e73_17.png)
 
+```sql
+-- 创建一个空的表空间
+CREATE TABLESPACE space_1 DATAFILE 'space_1.dbf' SIZE 10M;
 -- 删除这个空的表空间
 DROP TABLESPACE space_1;
 ```
@@ -64,19 +64,12 @@ DROP TABLESPACE space_1;
 
 ![](img/03ba0ad78b6ef4ec11736f8c35809e73_21.png)
 
-```sql
--- 创建第二个表空间
-CREATE TABLESPACE space_2 DATAFILE 'space_2.dbf' SIZE 10M;
 
 ![](img/03ba0ad78b6ef4ec11736f8c35809e73_23.png)
 
--- 在该表空间中创建一张表
-CREATE TABLE table2 (id NUMBER) TABLESPACE space_2;
 
 ![](img/03ba0ad78b6ef4ec11736f8c35809e73_25.png)
 
--- 尝试删除（不指定INCLUDING CONTENTS会失败）
-DROP TABLESPACE space_2; -- 此命令将报错
 
 ![](img/03ba0ad78b6ef4ec11736f8c35809e73_27.png)
 
@@ -84,6 +77,13 @@ DROP TABLESPACE space_2; -- 此命令将报错
 
 ![](img/03ba0ad78b6ef4ec11736f8c35809e73_31.png)
 
+```sql
+-- 创建第二个表空间
+CREATE TABLESPACE space_2 DATAFILE 'space_2.dbf' SIZE 10M;
+-- 在该表空间中创建一张表
+CREATE TABLE table2 (id NUMBER) TABLESPACE space_2;
+-- 尝试删除（不指定INCLUDING CONTENTS会失败）
+DROP TABLESPACE space_2; -- 此命令将报错
 -- 正确删除包含对象的表空间
 DROP TABLESPACE space_2 INCLUDING CONTENTS;
 ```
@@ -99,33 +99,33 @@ DROP TABLESPACE space_2 INCLUDING CONTENTS;
 
 最后，我们来看一个更复杂的场景：删除一个其内部表存在外键约束的表空间。
 
-```sql
--- 创建两个表空间
-CREATE TABLESPACE space_3 DATAFILE 'space_3.dbf' SIZE 10M;
-CREATE TABLESPACE space_4 DATAFILE 'space_4.dbf' SIZE 10M;
 
 ![](img/03ba0ad78b6ef4ec11736f8c35809e73_38.png)
 
--- 在space_3中创建表table3
-CREATE TABLE table3 (column1 NUMBER PRIMARY KEY) TABLESPACE space_3;
 
 ![](img/03ba0ad78b6ef4ec11736f8c35809e73_40.png)
 
--- 在space_4中创建表table4，并设置一个引用table3的外键约束
-CREATE TABLE table4 (
-    column2 NUMBER,
-    CONSTRAINT fk_ref FOREIGN KEY (column2) REFERENCES table3(column1)
-) TABLESPACE space_4;
 
 ![](img/03ba0ad78b6ef4ec11736f8c35809e73_42.png)
 
--- 尝试删除space_3（即使使用INCLUDING CONTENTS也会因外键约束而失败）
-DROP TABLESPACE space_3 INCLUDING CONTENTS; -- 此命令将报错
 
 ![](img/03ba0ad78b6ef4ec11736f8c35809e73_44.png)
 
 ![](img/03ba0ad78b6ef4ec11736f8c35809e73_46.png)
 
+```sql
+-- 创建两个表空间
+CREATE TABLESPACE space_3 DATAFILE 'space_3.dbf' SIZE 10M;
+CREATE TABLESPACE space_4 DATAFILE 'space_4.dbf' SIZE 10M;
+-- 在space_3中创建表table3
+CREATE TABLE table3 (column1 NUMBER PRIMARY KEY) TABLESPACE space_3;
+-- 在space_4中创建表table4，并设置一个引用table3的外键约束
+CREATE TABLE table4 (
+    column2 NUMBER,
+    CONSTRAINT fk_ref FOREIGN KEY (column2) REFERENCES table3(column1)
+) TABLESPACE space_4;
+-- 尝试删除space_3（即使使用INCLUDING CONTENTS也会因外键约束而失败）
+DROP TABLESPACE space_3 INCLUDING CONTENTS; -- 此命令将报错
 -- 正确删除存在约束的表空间
 DROP TABLESPACE space_3 INCLUDING CONTENTS CASCADE CONSTRAINTS;
 ```

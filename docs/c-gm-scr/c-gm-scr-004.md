@@ -149,12 +149,6 @@
 ![](img/2d11af16ffb245ab1947921d1bfbeeda_101.png)
 
 重构后的主要结构变化如下：
-```c
-// 之前
-Game_State {
-    Game_Mode current_game_mode;
-    // ...
-};
 
 ![](img/2d11af16ffb245ab1947921d1bfbeeda_103.png)
 
@@ -168,6 +162,12 @@ Game_State {
 
 ![](img/2d11af16ffb245ab1947921d1bfbeeda_113.png)
 
+```c
+// 之前
+Game_State {
+    Game_Mode current_game_mode;
+    // ...
+};
 // 之后
 Game_State {
     s32 current_level;
@@ -219,9 +219,6 @@ void simulate_level(s32 level) {
 ![](img/2d11af16ffb245ab1947921d1bfbeeda_137.png)
 
 能量道具的速度和碰撞检测代码如下：
-```c
-// 能量道具下落
-power_block->p.y += power_block_speed * dt;
 
 ![](img/2d11af16ffb245ab1947921d1bfbeeda_139.png)
 
@@ -247,6 +244,9 @@ power_block->p.y += power_block_speed * dt;
 
 ![](img/2d11af16ffb245ab1947921d1bfbeeda_158.png)
 
+```c
+// 能量道具下落
+power_block->p.y += power_block_speed * dt;
 // 与玩家碰撞检测
 if (rects_overlap(power_block->p, power_block_half_size,
                   player->p, player_half_size)) {
@@ -283,11 +283,6 @@ if (rects_overlap(power_block->p, power_block_half_size,
 ![](img/2d11af16ffb245ab1947921d1bfbeeda_175.png)
 
 无敌状态的检测和更新：
-```c
-// 更新无敌时间
-if (invincibility_time > 0) {
-    invincibility_time -= dt;
-}
 
 ![](img/2d11af16ffb245ab1947921d1bfbeeda_177.png)
 
@@ -305,6 +300,11 @@ if (invincibility_time > 0) {
 
 ![](img/2d11af16ffb245ab1947921d1bfbeeda_191.png)
 
+```c
+// 更新无敌时间
+if (invincibility_time > 0) {
+    invincibility_time -= dt;
+}
 // 检测是否无敌（用于渲染和逻辑）
 bool is_invincible_now = (invincibility_time > 0);
 ```
@@ -345,17 +345,17 @@ bool is_invincible_now = (invincibility_time > 0);
 ![](img/2d11af16ffb245ab1947921d1bfbeeda_218.png)
 
 球结构体和标志位定义：
+
+![](img/2d11af16ffb245ab1947921d1bfbeeda_220.png)
+
+![](img/2d11af16ffb245ab1947921d1bfbeeda_222.png)
+
 ```c
 #define BALL_FLAG_ACTIVE       (1 << 0)
 #define BALL_FLAG_DESTROY_ON_DP_DOWN (1 << 1) // 向下运动时销毁
 #define BALL_FLAG_RIVAL_A      (1 << 2) // 对手球类型A
 #define BALL_FLAG_RIVAL_B      (1 << 3) // 对手球类型B
 #define BALL_FLAG_ADJUST_SPEED (1 << 4) // 需要调整速度
-
-![](img/2d11af16ffb245ab1947921d1bfbeeda_220.png)
-
-![](img/2d11af16ffb245ab1947921d1bfbeeda_222.png)
-
 typedef struct {
     v2 p; // 位置
     v2 dp; // 速度
@@ -728,10 +728,6 @@ for (int y = 0; y < rows; ++y) {
 ![](img/2d11af16ffb245ab1947921d1bfbeeda_450.png)
 
 设置球的颜色和标志：
-```c
-// 球0为类型A
-balls[0].flags |= BALL_FLAG_RIVAL_A;
-balls[0].color = rival_a_color;
 
 ![](img/2d11af16ffb245ab1947921d1bfbeeda_452.png)
 
@@ -739,6 +735,10 @@ balls[0].color = rival_a_color;
 
 ![](img/2d11af16ffb245ab1947921d1bfbeeda_456.png)
 
+```c
+// 球0为类型A
+balls[0].flags |= BALL_FLAG_RIVAL_A;
+balls[0].color = rival_a_color;
 // 球1为类型B
 balls[1].flags |= BALL_FLAG_RIVAL_B;
 balls[1].color = rival_b_color;
@@ -780,13 +780,6 @@ balls[1].color = rival_b_color;
 ![](img/2d11af16ffb245ab1947921d1bfbeeda_486.png)
 
 对手机制的碰撞逻辑：
-```c
-bool can_destroy = false;
-if (HAS_FLAG(ball->flags, BALL_FLAG_RIVAL_A) && HAS_FLAG(block->flags, BLOCK_FLAG_RIVAL_A)) {
-    can_destroy = true;
-} else if (HAS_FLAG(ball->flags, BALL_FLAG_RIVAL_B) && HAS_FLAG(block->flags, BLOCK_FLAG_RIVAL_B)) {
-    can_destroy = true;
-}
 
 ![](img/2d11af16ffb245ab1947921d1bfbeeda_488.png)
 
@@ -812,6 +805,13 @@ if (HAS_FLAG(ball->flags, BALL_FLAG_RIVAL_A) && HAS_FLAG(block->flags, BLOCK_FLA
 
 ![](img/2d11af16ffb245ab1947921d1bfbeeda_510.png)
 
+```c
+bool can_destroy = false;
+if (HAS_FLAG(ball->flags, BALL_FLAG_RIVAL_A) && HAS_FLAG(block->flags, BLOCK_FLAG_RIVAL_A)) {
+    can_destroy = true;
+} else if (HAS_FLAG(ball->flags, BALL_FLAG_RIVAL_B) && HAS_FLAG(block->flags, BLOCK_FLAG_RIVAL_B)) {
+    can_destroy = true;
+}
 if (!can_destroy) {
     // 颜色不匹配，球穿过砖块，不执行任何破坏或反弹逻辑
     return;

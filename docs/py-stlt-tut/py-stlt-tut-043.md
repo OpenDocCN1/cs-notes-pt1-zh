@@ -63,6 +63,11 @@ components_html(html_content, height=400)
 
 ![](img/66fb7a821ab49a4a2b579e14a7920efc_8.png)
 
+
+![](img/66fb7a821ab49a4a2b579e14a7920efc_10.png)
+
+![](img/66fb7a821ab49a4a2b579e14a7920efc_11.png)
+
 ```python
 styled_html = """
 <style>
@@ -79,11 +84,6 @@ styled_html = """
     <p>这是一段示例文本。</p>
 </div>
 """
-
-![](img/66fb7a821ab49a4a2b579e14a7920efc_10.png)
-
-![](img/66fb7a821ab49a4a2b579e14a7920efc_11.png)
-
 components_html(styled_html, height=400)
 ```
 
@@ -115,6 +115,9 @@ components_html(styled_html, height=400)
 ```
 
 **Python 代码：**
+
+![](img/66fb7a821ab49a4a2b579e14a7920efc_19.png)
+
 ```python
 # 读取外部CSS文件
 with open('style.css', 'r') as file:
@@ -130,9 +133,6 @@ external_styled_html = f"""
     <p>这段文字的样式来自外部CSS文件。</p>
 </div>
 """
-
-![](img/66fb7a821ab49a4a2b579e14a7920efc_19.png)
-
 components_html(external_styled_html, height=400)
 ```
 

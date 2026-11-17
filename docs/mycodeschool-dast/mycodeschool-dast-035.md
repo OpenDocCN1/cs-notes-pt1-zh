@@ -25,15 +25,15 @@
 ![](img/7b46e0d76fe8df69ec2db9308aa696df_7.png)
 
 以下是C++中的函数签名和节点定义：
+
+![](img/7b46e0d76fe8df69ec2db9308aa696df_9.png)
+
 ```cpp
 struct Node {
     int data;
     Node* left;
     Node* right;
 };
-
-![](img/7b46e0d76fe8df69ec2db9308aa696df_9.png)
-
 bool isBST(Node* root);
 ```
 
@@ -52,6 +52,9 @@ bool isBST(Node* root);
 ![](img/7b46e0d76fe8df69ec2db9308aa696df_15.png)
 
 以下是实现此逻辑的伪代码框架：
+
+![](img/7b46e0d76fe8df69ec2db9308aa696df_17.png)
+
 ```cpp
 bool isSubtreeLesser(Node* root, int value) {
     // 检查以root为根的树中所有节点值是否都小于value
@@ -60,9 +63,6 @@ bool isSubtreeLesser(Node* root, int value) {
 bool isSubtreeGreater(Node* root, int value) {
     // 检查以root为根的树中所有节点值是否都大于value
 }
-
-![](img/7b46e0d76fe8df69ec2db9308aa696df_17.png)
-
 bool isBST(Node* root) {
     if (root == NULL) return true; // 空树是BST
     if (isSubtreeLesser(root->left, root->data) &&
@@ -101,6 +101,9 @@ bool isBST(Node* root) {
 ![](img/7b46e0d76fe8df69ec2db9308aa696df_26.png)
 
 以下是实现此逻辑的代码：
+
+![](img/7b46e0d76fe8df69ec2db9308aa696df_28.png)
+
 ```cpp
 bool isBSTUtil(Node* root, int minValue, int maxValue) {
     if (root == NULL) return true;
@@ -112,9 +115,6 @@ bool isBSTUtil(Node* root, int minValue, int maxValue) {
     else
         return false;
 }
-
-![](img/7b46e0d76fe8df69ec2db9308aa696df_28.png)
-
 bool isBST(Node* root) {
     return isBSTUtil(root, INT_MIN, INT_MAX);
 }

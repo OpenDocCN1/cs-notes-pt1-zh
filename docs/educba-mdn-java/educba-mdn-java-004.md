@@ -47,13 +47,13 @@ Stream收集器是`java.util.stream.Collectors`类提供的工具，用于将流
 
 ![](img/824b9a4e3845cecdad3fbce1316edf44_18.png)
 
+
+![](img/824b9a4e3845cecdad3fbce1316edf44_20.png)
+
 ```java
 import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
-
-![](img/824b9a4e3845cecdad3fbce1316edf44_20.png)
-
 public class GroupingByExample {
     public static void main(String[] args) {
         List<String> names = Arrays.asList("Steve", "John", "Aji", "John", "Aji", "Aji");
@@ -88,14 +88,14 @@ public class GroupingByExample {
 
 ![](img/824b9a4e3845cecdad3fbce1316edf44_32.png)
 
-```java
-import java.util.*;
-import java.util.stream.Collectors;
 
 ![](img/824b9a4e3845cecdad3fbce1316edf44_34.png)
 
 ![](img/824b9a4e3845cecdad3fbce1316edf44_35.png)
 
+```java
+import java.util.*;
+import java.util.stream.Collectors;
 class Student {
     int id;
     String name;
@@ -150,9 +150,6 @@ public class MapExample {
 
 ![](img/824b9a4e3845cecdad3fbce1316edf44_45.png)
 
-```java
-// ... Student 类定义同上
-import java.util.Set;
 
 ![](img/824b9a4e3845cecdad3fbce1316edf44_47.png)
 
@@ -160,6 +157,9 @@ import java.util.Set;
 
 ![](img/824b9a4e3845cecdad3fbce1316edf44_49.png)
 
+```java
+// ... Student 类定义同上
+import java.util.Set;
 public class FilterExample {
     public static void main(String[] args) {
         List<Student> studentList = new ArrayList<>();
@@ -197,6 +197,11 @@ public class FilterExample {
 3.  使用流的`collect`方法，传入`Collectors.averagingInt(s -> s.age)`。
 4.  打印计算出的平均年龄。
 
+
+![](img/824b9a4e3845cecdad3fbce1316edf44_61.png)
+
+![](img/824b9a4e3845cecdad3fbce1316edf44_63.png)
+
 ```java
 import java.util.*;
 import java.util.stream.Collectors;
@@ -211,11 +216,6 @@ class Student1 {
         this.age = age;
     }
 }
-
-![](img/824b9a4e3845cecdad3fbce1316edf44_61.png)
-
-![](img/824b9a4e3845cecdad3fbce1316edf44_63.png)
-
 public class AverageExample {
     public static void main(String[] args) {
         List<Student1> studentList = new ArrayList<>();
@@ -337,11 +337,11 @@ public class StringJoinerDemo2 {
 
 ![](img/824b9a4e3845cecdad3fbce1316edf44_87.png)
 
-```java
-import java.util.StringJoiner;
 
 ![](img/824b9a4e3845cecdad3fbce1316edf44_89.png)
 
+```java
+import java.util.StringJoiner;
 public class StringJoinerDemo3 {
     public static void main(String[] args) {
         StringJoiner myString = new StringJoiner(",", "[", "]");

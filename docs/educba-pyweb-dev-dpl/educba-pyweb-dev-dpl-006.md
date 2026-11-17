@@ -183,12 +183,12 @@ print("Hello, World!")
 以下是两种获取特定字段值的方法：
 
 **方法一：直接通过键查找**
-```python
-#!/usr/bin/env python
-import cgi
 
 ![](img/661fd3ee755e0ef19e4dcbef7219b7fb_1.png)
 
+```python
+#!/usr/bin/env python
+import cgi
 form = cgi.FieldStorage()
 # 获取名为‘name’的字段值
 user_name = form.getvalue('name', 'Unknown') # ‘Unknown’是默认值

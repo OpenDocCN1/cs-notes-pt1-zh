@@ -41,15 +41,15 @@ bool Widget::ContainsCoordinate(int32_t x, int32_t y)
 3. 为`CompositeWidget`添加添加子部件的方法
 
 以下是关键代码修改：
-```cpp
-class Widget : public KeyboardEventHandler {
-    // ... 现有代码
-};
 
 ![](img/ea253ac465ac5a1fbfb1430ecea87b67_5.png)
 
 ![](img/ea253ac465ac5a1fbfb1430ecea87b67_7.png)
 
+```cpp
+class Widget : public KeyboardEventHandler {
+    // ... 现有代码
+};
 class Desktop : public CompositeWidget, public MouseEventHandler {
     // ... 现有代码
 };
@@ -231,12 +231,12 @@ desktop->AddChild(window2);
 ### 连接输入设备
 
 将桌面连接到鼠标和键盘驱动程序：
-```cpp
-// 连接鼠标
-mouseDriver->SetEventHandler(desktop);
 
 ![](img/ea253ac465ac5a1fbfb1430ecea87b67_36.png)
 
+```cpp
+// 连接鼠标
+mouseDriver->SetEventHandler(desktop);
 // 连接键盘
 keyboardDriver->SetEventHandler(desktop);
 ```

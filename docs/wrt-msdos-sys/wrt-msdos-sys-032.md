@@ -38,10 +38,6 @@ VGA 及以上的显卡标准提供了 BIOS 中断来查询显示组合。这是�
 ![](img/b40b5f9afaa8c465d97b7773ada977a4_9.png)
 
 **代码示例：**
-```c
-union REGS regs;
-regs.x.ax = 0x1A00; // AH = 0x1A, AL = 0x00
-int86(0x10, &regs, &regs);
 
 ![](img/b40b5f9afaa8c465d97b7773ada977a4_11.png)
 
@@ -51,6 +47,10 @@ int86(0x10, &regs, &regs);
 
 ![](img/b40b5f9afaa8c465d97b7773ada977a4_16.png)
 
+```c
+union REGS regs;
+regs.x.ax = 0x1A00; // AH = 0x1A, AL = 0x00
+int86(0x10, &regs, &regs);
 if (regs.h.al == 0x1A) { // 功能调用成功
     // BL 寄存器包含主显示卡代码
     // BH 寄存器包含次显示卡代码
@@ -96,14 +96,14 @@ if (regs.h.al == 0x1A) { // 功能调用成功
 ![](img/b40b5f9afaa8c465d97b7773ada977a4_40.png)
 
 **代码示例：**
+
+![](img/b40b5f9afaa8c465d97b7773ada977a4_42.png)
+
 ```c
 union REGS regs;
 regs.h.ah = 0x12;
 regs.h.bl = 0x10;
 int86(0x10, &regs, &regs);
-
-![](img/b40b5f9afaa8c465d97b7773ada977a4_42.png)
-
 if (regs.h.bl != 0x10) { // 值被改变，说明 EGA BIOS 存在
     // 检测到 EGA 卡
     // CL 寄存器包含卡上的 DIP 开关设置

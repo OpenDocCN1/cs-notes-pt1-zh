@@ -52,9 +52,6 @@
 
 ![](img/ce8475ab5dbd1304bea8baf2cdafce72_26.png)
 
-```c
-#define EMS_INT 0x67
-#define EMS_NAME "EMMXXXX0"
 
 ![](img/ce8475ab5dbd1304bea8baf2cdafce72_28.png)
 
@@ -62,6 +59,9 @@
 
 ![](img/ce8475ab5dbd1304bea8baf2cdafce72_32.png)
 
+```c
+#define EMS_INT 0x67
+#define EMS_NAME "EMMXXXX0"
 int ems_installed() {
     union REGS regs;
     struct SREGS sregs;
@@ -134,15 +134,6 @@ int ems_version() {
 
 ![](img/ce8475ab5dbd1304bea8baf2cdafce72_69.png)
 
-```c
-// 获取总页面数
-int ems_page_count() {
-    union REGS regs;
-    regs.h.ah = 0x42; // 功能号：获取未分配页面数
-    int86(EMS_INT, ®s, ®s);
-    if (regs.h.ah != 0) return -1; // 出错
-    return regs.x.dx; // 总页面数在 DX 中
-}
 
 ![](img/ce8475ab5dbd1304bea8baf2cdafce72_71.png)
 
@@ -154,6 +145,15 @@ int ems_page_count() {
 
 ![](img/ce8475ab5dbd1304bea8baf2cdafce72_78.png)
 
+```c
+// 获取总页面数
+int ems_page_count() {
+    union REGS regs;
+    regs.h.ah = 0x42; // 功能号：获取未分配页面数
+    int86(EMS_INT, ®s, ®s);
+    if (regs.h.ah != 0) return -1; // 出错
+    return regs.x.dx; // 总页面数在 DX 中
+}
 // 获取空闲页面数
 int ems_free_pages() {
     union REGS regs;

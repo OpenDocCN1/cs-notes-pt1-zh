@@ -166,12 +166,12 @@ Done
 
 ![](img/cba9292ad50bce97310c8a8952eaf34f_13.png)
 
-```c
-// 在 C 文件中声明汇编函数
-extern void SysTick_Wait10MS(unsigned int delay_in_10ms_units);
 
 ![](img/cba9292ad50bce97310c8a8952eaf34f_15.png)
 
+```c
+// 在 C 文件中声明汇编函数
+extern void SysTick_Wait10MS(unsigned int delay_in_10ms_units);
 int main(void) {
     // 初始化 GPIO 和 SysTick（假设已有其他函数完成）
     GPIO_Init();

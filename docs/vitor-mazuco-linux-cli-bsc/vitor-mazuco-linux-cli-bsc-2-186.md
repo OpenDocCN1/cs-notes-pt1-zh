@@ -23,6 +23,12 @@ docker-machine ssh node1
 1.  使用文本编辑器（如Vim）创建一个名为 `PaStack1.yml` 的文件。
 2.  将以下YAML配置内容复制到文件中。**请特别注意缩进和空格**，YAML格式对此要求严格，错误的缩进会导致部署失败。
 
+
+![](img/2a5cd15ee31516d5afba21b582353a66_5.png)
+
+
+![](img/2a5cd15ee31516d5afba21b582353a66_7.png)
+
 ```yaml
 version: '3.8'
 services:
@@ -42,14 +48,8 @@ services:
       - data:/var/lib/postgresql/data
     networks:
       - webnet
-
-![](img/2a5cd15ee31516d5afba21b582353a66_5.png)
-
 volumes:
   data:
-
-![](img/2a5cd15ee31516d5afba21b582353a66_7.png)
-
 networks:
   webnet:
     driver: overlay

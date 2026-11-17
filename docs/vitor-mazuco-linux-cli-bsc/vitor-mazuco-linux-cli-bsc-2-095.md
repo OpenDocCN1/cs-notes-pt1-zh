@@ -46,13 +46,13 @@ db.createUser({
 ![](img/392e16ad858ae6cc2ca7119d16815acf_10.png)
 
 配置文件修改后的关键部分应类似如下：
+
+![](img/392e16ad858ae6cc2ca7119d16815acf_12.png)
+
 ```yaml
 net:
   port: 27017
   bindIp: 0.0.0.0
-
-![](img/392e16ad858ae6cc2ca7119d16815acf_12.png)
-
 security:
   authorization: enabled
 ```

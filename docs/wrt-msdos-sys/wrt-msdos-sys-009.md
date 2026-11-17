@@ -107,15 +107,15 @@ int sb_detect() {
 
 ![](img/eb8c21d56636fcc2d1e92b932add3218_9.png)
 
-```c
-#define SB_RESET_REG 0x6
-#define SB_READ_DATA_STATUS_REG 0xE
-#define SB_READ_DATA_REG 0xA
 
 ![](img/eb8c21d56636fcc2d1e92b932add3218_11.png)
 
 ![](img/eb8c21d56636fcc2d1e92b932add3218_13.png)
 
+```c
+#define SB_RESET_REG 0x6
+#define SB_READ_DATA_STATUS_REG 0xE
+#define SB_READ_DATA_REG 0xA
 int sb_reset(unsigned short port) {
     // 1. 写入 1 启动复位
     outportb(port + SB_RESET_REG, 1);

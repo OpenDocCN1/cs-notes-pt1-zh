@@ -59,6 +59,11 @@ void main() {
 
 以下是核心迭代公式的优化版本代码：
 
+
+![](img/ec94b99dcf9155ab35ae76e09623ab42_5.png)
+
+![](img/ec94b99dcf9155ab35ae76e09623ab42_7.png)
+
 ```c
 // 初始化
 x = 0.0;
@@ -66,11 +71,6 @@ y = 0.0;
 x2 = 0.0;
 y2 = 0.0;
 iteration = 0;
-
-![](img/ec94b99dcf9155ab35ae76e09623ab42_5.png)
-
-![](img/ec94b99dcf9155ab35ae76e09623ab42_7.png)
-
 // 迭代循环
 while ((x2 + y2) <= 4.0 && iteration < max_iteration) {
     y = (x + x) * y + y0; // 优化：2*x*y 写为 (x+x)*y

@@ -178,12 +178,6 @@
 ![](img/7011eb2fe997e9d598bb4046015d583f_143.png)
 
 **核心代码：**
-```c
-// 定义字符串结构体，用于存储文件数据
-typedef struct {
-    char* data;
-    u64 size;
-} string;
 
 ![](img/7011eb2fe997e9d598bb4046015d583f_145.png)
 
@@ -217,21 +211,6 @@ typedef struct {
 
 ![](img/7011eb2fe997e9d598bb4046015d583f_175.png)
 
-// 读取整个文件的函数
-internal string OS_ReadEntireFile(char* filepath) {
-    string result = {0};
-    // 使用Windows API打开和读取文件
-    HANDLE file_handle = CreateFileA(...);
-    if(file_handle != INVALID_HANDLE_VALUE) {
-        LARGE_INTEGER file_size;
-        GetFileSizeEx(file_handle, &file_size);
-        result.size = file_size.QuadPart;
-        result.data = VirtualAlloc(0, result.size, ...);
-        ReadFile(file_handle, result.data, ...);
-        CloseHandle(file_handle);
-    }
-    return result;
-}
 
 ![](img/7011eb2fe997e9d598bb4046015d583f_177.png)
 
@@ -257,6 +236,27 @@ internal string OS_ReadEntireFile(char* filepath) {
 
 ![](img/7011eb2fe997e9d598bb4046015d583f_199.png)
 
+```c
+// 定义字符串结构体，用于存储文件数据
+typedef struct {
+    char* data;
+    u64 size;
+} string;
+// 读取整个文件的函数
+internal string OS_ReadEntireFile(char* filepath) {
+    string result = {0};
+    // 使用Windows API打开和读取文件
+    HANDLE file_handle = CreateFileA(...);
+    if(file_handle != INVALID_HANDLE_VALUE) {
+        LARGE_INTEGER file_size;
+        GetFileSizeEx(file_handle, &file_size);
+        result.size = file_size.QuadPart;
+        result.data = VirtualAlloc(0, result.size, ...);
+        ReadFile(file_handle, result.data, ...);
+        CloseHandle(file_handle);
+    }
+    return result;
+}
 // 使用stb_image加载PNG数据
 internal bitmap LoadPNG(char* filepath) {
     bitmap result = {0};

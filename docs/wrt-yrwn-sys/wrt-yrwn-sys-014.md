@@ -88,13 +88,6 @@ GUI框架的起点是一个名为`Widget`的基础类。它代表屏幕上可绘
 
 以下是一个简化的代码结构框架，展示了上述类的部分关键实现：
 
-```cpp
-// 基础部件类
-class Widget {
-protected:
-    int x, y, width, height;
-    Widget* parent;
-    bool focusable = true;
 
 ![](img/bdb1077a8ca4413ce5db853e8f3b755b_11.png)
 
@@ -104,6 +97,13 @@ protected:
 
 ![](img/bdb1077a8ca4413ce5db853e8f3b755b_16.png)
 
+```cpp
+// 基础部件类
+class Widget {
+protected:
+    int x, y, width, height;
+    Widget* parent;
+    bool focusable = true;
 public:
     virtual void draw(GraphicsContext* gc);
     virtual void model_to_screen(int &x, int &y);

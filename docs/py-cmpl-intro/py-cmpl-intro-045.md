@@ -44,13 +44,13 @@
 *   `balance`：玩家的初始余额，我们设置为100。
 *   `symbols`：一个包含游戏符号的列表，我们将使用一些表情符号来代表水果和常见图标。
 
-```python
-import random
 
 ![](img/1247bd61a278dcd91103893c45c78f49_19.png)
 
 ![](img/1247bd61a278dcd91103893c45c78f49_21.png)
 
+```python
+import random
 def main():
     balance = 100
     symbols = ["🍒", "🍉", "🍋", "🔔", "⭐"]

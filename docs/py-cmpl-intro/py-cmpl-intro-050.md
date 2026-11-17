@@ -61,6 +61,9 @@ class Fish(Prey, Predator):
 
 以下是测试代码：
 
+
+![](img/bc73539bc91bcd4ebde1c7fe8b50844b_8.png)
+
 ```python
 rabbit = Rabbit()
 hawk = Hawk()
@@ -76,9 +79,6 @@ rabbit.flee()  # 输出：Bugs is fleeing
 
 hawk.hunt()    # 输出：Tony is hunting
 # hawk.flee()  # 这行会报错，因为Hawk没有flee方法
-
-![](img/bc73539bc91bcd4ebde1c7fe8b50844b_8.png)
-
 fish.flee()    # 输出：Nemo is fleeing
 fish.hunt()    # 输出：Nemo is hunting
 ```
@@ -123,13 +123,13 @@ class Animal:
 
 ![](img/bc73539bc91bcd4ebde1c7fe8b50844b_17.png)
 
+
+![](img/bc73539bc91bcd4ebde1c7fe8b50844b_19.png)
+
 ```python
 class Prey(Animal):
     def flee(self):
         print(f"{self.name} is fleeing")
-
-![](img/bc73539bc91bcd4ebde1c7fe8b50844b_19.png)
-
 class Predator(Animal):
     def hunt(self):
         print(f"{self.name} is hunting")

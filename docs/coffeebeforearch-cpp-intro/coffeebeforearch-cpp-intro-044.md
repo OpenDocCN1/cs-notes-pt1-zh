@@ -37,6 +37,9 @@ int main() {
 
 以下是使用命名空间修改后的代码：
 
+
+![](img/06da2b0b87f76a6b1e667cd7e50aeca2_5.png)
+
 ```cpp
 #include <iostream>
 
@@ -45,9 +48,6 @@ namespace A {
         std::cout << "Printing from function 1\n";
     }
 }
-
-![](img/06da2b0b87f76a6b1e667cd7e50aeca2_5.png)
-
 void print() {
     std::cout << "Printing from function 2\n";
 }

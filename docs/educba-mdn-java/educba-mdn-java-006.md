@@ -26,9 +26,6 @@
 
 ![](img/abbc069e6a32dad9222cddc0648fbeea_10.png)
 
-```java
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 
 ![](img/abbc069e6a32dad9222cddc0648fbeea_11.png)
 
@@ -40,6 +37,9 @@ import java.io.FileOutputStream;
 
 ![](img/abbc069e6a32dad9222cddc0648fbeea_17.png)
 
+```java
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 public class TryWithResourcesJava7 {
     public static void main(String[] args) throws FileNotFoundException {
         try (FileOutputStream fileOutputStream = new FileOutputStream("book.txt")) {
@@ -64,12 +64,12 @@ Java 7中的`try-with-resources`语句存在一个问题：它不允许在语句
 
 ![](img/abbc069e6a32dad9222cddc0648fbeea_23.png)
 
-```java
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 
 ![](img/abbc069e6a32dad9222cddc0648fbeea_25.png)
 
+```java
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 public class ProblemExample {
     public static void main(String[] args) throws FileNotFoundException {
         FileOutputStream fileOutputStream = new FileOutputStream("book.txt");
@@ -220,12 +220,12 @@ Java 9扩展了`@SafeVarargs`注解的使用范围，现在它也可以用于`pr
 
 以下是使用`@SafeVarargs`注解的示例：
 
-```java
-import java.util.ArrayList;
-import java.util.List;
 
 ![](img/abbc069e6a32dad9222cddc0648fbeea_62.png)
 
+```java
+import java.util.ArrayList;
+import java.util.List;
 public class SafeVarargsExample {
     // Java 9允许对私有方法使用@SafeVarargs
     @SafeVarargs

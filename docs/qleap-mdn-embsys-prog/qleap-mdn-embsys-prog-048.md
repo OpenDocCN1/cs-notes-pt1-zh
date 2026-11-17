@@ -22,12 +22,12 @@ C 标准提供了一个简单的断言工具来使用这些标准断言。你需
 
 例如，这里有一个 `int_div` 函数，用于执行 x 除以 y 的整数除法。但除法运算不允许除数为 0。因此，你断言 y 不为 0。然后打印 x 和 y 参数，并返回 x 除以 y 的结果。
 
-```c
-#include <assert.h>
-#include <stdio.h>
 
 ![](img/aff84b6f9eabd27c1b2e6965bdd84ce9_2.png)
 
+```c
+#include <assert.h>
+#include <stdio.h>
 int int_div(int x, int y) {
     assert(y != 0); // 断言除数不为0
     printf("Dividing %d by %d\n", x, y);

@@ -138,12 +138,12 @@ Kubernetes 提供了 `kubectl rollout` 命令来管理部署过程。
 
 以下是回滚 Deployment 的命令：
 
-```bash
-# 回滚到上一个版本
-kubectl rollout undo deployment/app-deployment
 
 ![](img/a63c5f6ee89f3ca5ed76870d09703228_39.png)
 
+```bash
+# 回滚到上一个版本
+kubectl rollout undo deployment/app-deployment
 # 回滚到特定版本（通过 revision 编号指定）
 kubectl rollout undo deployment/app-deployment --to-revision=2
 ```

@@ -165,11 +165,11 @@ else:
 
 ![](img/26574ae142fbb06f2cf03bdeb4f00980_49.png)
 
-```python
-for_sale = True
 
 ![](img/26574ae142fbb06f2cf03bdeb4f00980_51.png)
 
+```python
+for_sale = True
 if for_sale:
     print("This item is for sale.")
 else:

@@ -145,6 +145,11 @@ unsigned short gfx_values[] = {
 
 以下是绘制边框和填充字符的关键代码逻辑：
 
+
+![](img/7e20698c56b6384746801cd72420edec_57.png)
+
+![](img/7e20698c56b6384746801cd72420edec_58.png)
+
 ```c
 // 绘制边框（使用第一个字符集中的制表符）
 void draw_border(int x, int y, int w, int h) {
@@ -154,11 +159,6 @@ void draw_border(int x, int y, int w, int h) {
     put_char(x+w+1, y, 187, attribute); // 右上角
     // ... 类似地绘制垂直边和底边
 }
-
-![](img/7e20698c56b6384746801cd72420edec_57.png)
-
-![](img/7e20698c56b6384746801cd72420edec_58.png)
-
 // 填充图形窗口内的字符
 void fill_frame_buffer(int x, int y, int w, int h) {
     unsigned char char_index = 0;

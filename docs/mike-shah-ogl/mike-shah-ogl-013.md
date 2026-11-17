@@ -83,6 +83,11 @@ glVertexAttribPointer(1,        // 属性索引
 
 ![](img/7db9d5d2e1891c55f11a3621e01021e3_8.png)
 
+
+![](img/7db9d5d2e1891c55f11a3621e01021e3_10.png)
+
+![](img/7db9d5d2e1891c55f11a3621e01021e3_11.png)
+
 ```glsl
 #version 330 core
 
@@ -90,11 +95,6 @@ glVertexAttribPointer(1,        // 属性索引
 layout (location = 0) in vec3 position;
 // 指定位置1的属性是顶点颜色
 layout (location = 1) in vec3 vertexColor;
-
-![](img/7db9d5d2e1891c55f11a3621e01021e3_10.png)
-
-![](img/7db9d5d2e1891c55f11a3621e01021e3_11.png)
-
 // 输出到片段着色器的颜色变量
 out vec3 v_vertexColor;
 
@@ -115,6 +115,9 @@ void main() {
 
 以下是修改后的片段着色器：
 
+
+![](img/7db9d5d2e1891c55f11a3621e01021e3_16.png)
+
 ```glsl
 #version 330 core
 
@@ -123,9 +126,6 @@ in vec3 v_vertexColor;
 
 // 最终输出的颜色
 out vec4 fragColor;
-
-![](img/7db9d5d2e1891c55f11a3621e01021e3_16.png)
-
 void main() {
     // 使用传入的颜色值设置输出
     fragColor = vec4(v_vertexColor.r, v_vertexColor.g, v_vertexColor.b, 1.0);

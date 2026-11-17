@@ -22,6 +22,9 @@
 
 以下是实现递归阶乘函数的代码：
 
+
+![](img/5313160f6226255c68315776206b90c1_5.png)
+
 ```cpp
 #include <iostream>
 
@@ -32,9 +35,6 @@ int factorial(int n) {
         return n * factorial(n - 1);
     }
 }
-
-![](img/5313160f6226255c68315776206b90c1_5.png)
-
 int main() {
     int result = factorial(5);
     std::cout << result << std::endl;
@@ -58,6 +58,9 @@ int main() {
 
 以下是修改后的代码，将函数和变量标记为`constexpr`：
 
+
+![](img/5313160f6226255c68315776206b90c1_9.png)
+
 ```cpp
 #include <iostream>
 
@@ -68,9 +71,6 @@ constexpr int factorial(int n) {
         return n * factorial(n - 1);
     }
 }
-
-![](img/5313160f6226255c68315776206b90c1_9.png)
-
 int main() {
     constexpr int result = factorial(5);
     std::cout << result << std::endl;
@@ -96,6 +96,9 @@ int main() {
 
 ![](img/5313160f6226255c68315776206b90c1_15.png)
 
+
+![](img/5313160f6226255c68315776206b90c1_17.png)
+
 ```cpp
 #include <iostream>
 #include <random>
@@ -107,9 +110,6 @@ constexpr int factorial(int n) {
         return n * factorial(n - 1);
     }
 }
-
-![](img/5313160f6226255c68315776206b90c1_17.png)
-
 int main() {
     // 编译时计算
     constexpr int compile_time_result = factorial(5);

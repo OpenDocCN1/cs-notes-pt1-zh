@@ -55,11 +55,11 @@ fn main() {
 *   **原型设计与快速测试**：在验证想法时，使用 `panic!` 或 `unwrap()` 可以更快地编写和测试代码逻辑。
 *   **逻辑上不可能失败，但编译器无法证明的情况**：当你确信某个操作永远不会失败，但 Rust 编译器无法推断时，可以使用 `expect()` 来表明这是程序员的断言。
 
-```rust
-use std::net::IpAddr;
 
 ![](img/22b5dc59ed55189fb08cb1a32182b6f2_11.png)
 
+```rust
+use std::net::IpAddr;
 fn main() {
     // 我们知道 "127.0.0.1" 是有效的 IP 地址，但 `parse` 方法返回 Result。
     // 使用 `expect` 表明我们确信它会成功，如果失败则 panic（意味着我们写错了硬编码值）。

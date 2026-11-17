@@ -23,6 +23,11 @@ tar -czf <备份文件名>.tar.gz <要备份的目录或文件>
 良好的实践是为所有备份文件创建一个独立的专用目录。这可以是系统内的一个文件夹，也可以是挂载的外部硬盘路径。
 
 以下是创建并设置备份目录的步骤：
+
+![](img/6f5a85e37448ac16632dd2300905eb98_1.png)
+
+![](img/6f5a85e37448ac16632dd2300905eb98_3.png)
+
 ```bash
 # 创建名为“backups”的目录
 mkdir /backups
@@ -32,11 +37,6 @@ sudo groupadd archivers
 
 # 将备份目录的所有权赋予该组
 sudo chgrp archivers /backups
-
-![](img/6f5a85e37448ac16632dd2300905eb98_1.png)
-
-![](img/6f5a85e37448ac16632dd2300905eb98_3.png)
-
 # 设置目录权限，允许组内成员读写执行
 sudo chmod 770 /backups
 ```

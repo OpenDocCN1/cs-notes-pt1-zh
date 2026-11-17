@@ -95,14 +95,14 @@ print(f"在 script2 中，__name__ 的值是：{__name__}")
 
 ![](img/cdf91fcc0c4415f8238c1df2a644b2ee_12.png)
 
+
+![](img/cdf91fcc0c4415f8238c1df2a644b2ee_14.png)
+
 ```python
 # script1.py
 
 def favorite_food(food):
     print(f"你最喜欢的食物是：{food}")
-
-![](img/cdf91fcc0c4415f8238c1df2a644b2ee_14.png)
-
 def main():
     print("这是 script1 的主程序。")
     favorite_food("披萨")

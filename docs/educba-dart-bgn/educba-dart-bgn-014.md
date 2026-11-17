@@ -12,11 +12,11 @@
 
 首先，我们需要导入 `dart:io` 库以支持输入输出操作，并定义主函数 `main`。
 
-```dart
-import 'dart:io';
 
 ![](img/489025cbf8e7cf7a6a6b2b49cc76aee1_4.png)
 
+```dart
+import 'dart:io';
 void main() {
   // 变量声明
   String num1, num2;
@@ -84,11 +84,11 @@ void main() {
 
 ![](img/489025cbf8e7cf7a6a6b2b49cc76aee1_12.png)
 
-```dart
-import 'dart:io';
 
 ![](img/489025cbf8e7cf7a6a6b2b49cc76aee1_14.png)
 
+```dart
+import 'dart:io';
 void main() {
   // 声明字符串和双精度浮点数变量
   String str1, str2;

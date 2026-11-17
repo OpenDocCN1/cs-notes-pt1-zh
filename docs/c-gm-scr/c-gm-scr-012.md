@@ -405,8 +405,6 @@ CreateThread(NULL, 0, thread_proc, &value, 0, NULL);
 
 ![](img/6f18f54518e4455428d5825da1c39f49_273.png)
 
-```c
-typedef void OS_Job_Callback(struct OS_Job_Queue* queue, void* data);
 
 ![](img/6f18f54518e4455428d5825da1c39f49_275.png)
 
@@ -422,13 +420,15 @@ typedef void OS_Job_Callback(struct OS_Job_Queue* queue, void* data);
 
 ![](img/6f18f54518e4455428d5825da1c39f49_287.png)
 
+
+![](img/6f18f54518e4455428d5825da1c39f49_289.png)
+
+```c
+typedef void OS_Job_Callback(struct OS_Job_Queue* queue, void* data);
 struct OS_Job {
     OS_Job_Callback* callback;
     void* data;
 };
-
-![](img/6f18f54518e4455428d5825da1c39f49_289.png)
-
 struct OS_Job_Queue {
     // 作业存储
     OS_Job jobs[32];

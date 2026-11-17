@@ -39,10 +39,6 @@
 ### 1. 定义变量与提供商
 这部分与创建单实例时基本相同，定义了区域和实例类型等变量。
 
-```hcl
-variable "aws_region" {
-  default = "us-east-1"
-}
 
 ![](img/06b390541107287ecb29933e30a7f32c_16.png)
 
@@ -50,12 +46,16 @@ variable "aws_region" {
 
 ![](img/06b390541107287ecb29933e30a7f32c_20.png)
 
-variable "instance_type" {
-  default = "t2.micro"
-}
 
 ![](img/06b390541107287ecb29933e30a7f32c_22.png)
 
+```hcl
+variable "aws_region" {
+  default = "us-east-1"
+}
+variable "instance_type" {
+  default = "t2.micro"
+}
 provider "aws" {
   region = var.aws_region
 }

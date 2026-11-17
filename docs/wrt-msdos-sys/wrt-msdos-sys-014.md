@@ -86,23 +86,14 @@ NEXT i
 
 ![](img/55c78dc961b6edf6630a71a6f58ebf7b_31.png)
 
-```basic
-RANDOMIZE TIMER
-DIM snowX(49), snowY(49)
 
 ![](img/55c78dc961b6edf6630a71a6f58ebf7b_33.png)
 
 ![](img/55c78dc961b6edf6630a71a6f58ebf7b_35.png)
 
-' 初始化雪花位置
-FOR i = 0 TO 49
-    snowX(i) = INT(RND * 320)
-    snowY(i) = INT(RND * 200)
-NEXT i
 
 ![](img/55c78dc961b6edf6630a71a6f58ebf7b_37.png)
 
-SCREEN 7
 
 ![](img/55c78dc961b6edf6630a71a6f58ebf7b_39.png)
 
@@ -110,6 +101,15 @@ SCREEN 7
 
 ![](img/55c78dc961b6edf6630a71a6f58ebf7b_43.png)
 
+```basic
+RANDOMIZE TIMER
+DIM snowX(49), snowY(49)
+' 初始化雪花位置
+FOR i = 0 TO 49
+    snowX(i) = INT(RND * 320)
+    snowY(i) = INT(RND * 200)
+NEXT i
+SCREEN 7
 ' 主动画循环
 DO
     FOR i = 0 TO 49
@@ -182,9 +182,6 @@ PLAY "MB T200 L16 O2 E L4 E L2 E L4 E L4 E L2 E L4 G L4 C L4 D L1 E"
 
 ![](img/55c78dc961b6edf6630a71a6f58ebf7b_71.png)
 
-```basic
-' 设置更大的声音缓冲区
-SOUND 4000, 0
 
 ![](img/55c78dc961b6edf6630a71a6f58ebf7b_73.png)
 
@@ -192,13 +189,16 @@ SOUND 4000, 0
 
 ![](img/55c78dc961b6edf6630a71a6f58ebf7b_77.png)
 
-' 在程序开始处启动音乐
-PLAY "MB T200 L16 O2 E L4 E L2 E L4 E L4 E L2 E L4 G L4 C L4 D L1 E"
 
 ![](img/55c78dc961b6edf6630a71a6f58ebf7b_79.png)
 
 ![](img/55c78dc961b6edf6630a71a6f58ebf7b_81.png)
 
+```basic
+' 设置更大的声音缓冲区
+SOUND 4000, 0
+' 在程序开始处启动音乐
+PLAY "MB T200 L16 O2 E L4 E L2 E L4 E L4 E L2 E L4 G L4 C L4 D L1 E"
 DO
     ' ... (这里是雪花动画的代码) ...
 

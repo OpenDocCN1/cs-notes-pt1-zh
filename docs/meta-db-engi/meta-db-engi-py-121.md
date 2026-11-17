@@ -118,12 +118,6 @@ DEALLOCATE PREPARE stmt_name;
 有时，最初创建的数据需要更改。我们能够使用 `UPDATE` 和 `DELETE` 语句来执行这些操作。我们使用 `UPDATE` 查询来更改表中的信息，同时在每个查询中明确关键信息。当需要从表中删除信息时，我们再次使用 `DELETE` 查询，并确保明确关键信息。
 
 以下是基本语法示例：
-```sql
--- 插入数据
-INSERT INTO table_name (column1, column2) VALUES (value1, value2);
-
--- 更新数据
-UPDATE table_name SET column1 = new_value WHERE condition;
 
 ![](img/a348fe9704be9378d56a6e906abf27f0_23.png)
 
@@ -131,6 +125,12 @@ UPDATE table_name SET column1 = new_value WHERE condition;
 
 ![](img/a348fe9704be9378d56a6e906abf27f0_25.png)
 
+```sql
+-- 插入数据
+INSERT INTO table_name (column1, column2) VALUES (value1, value2);
+
+-- 更新数据
+UPDATE table_name SET column1 = new_value WHERE condition;
 -- 删除数据
 DELETE FROM table_name WHERE condition;
 ```

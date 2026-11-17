@@ -54,13 +54,13 @@ def say_hello(request):
 
 对应的代码如下：
 
+
+![](img/12b4984fa6d6b6f1f248fab190a97fe6_7.png)
+
 ```python
 # 在项目 urls.py 文件中
 from django.urls import path
 from your_app_name import views # 请将 your_app_name 替换为你的实际应用名
-
-![](img/12b4984fa6d6b6f1f248fab190a97fe6_7.png)
-
 urlpatterns = [
     path('sayhello/', views.say_hello, name='say_hello'),
 ]

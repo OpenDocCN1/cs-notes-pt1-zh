@@ -114,6 +114,15 @@ char *to_dotted(in_addr_t ip) {
 首先，我们创建脚本的基础框架，包括错误处理和用法说明。
 
 **以下是脚本开头部分：**
+
+![](img/0aa4836ec0290e8bfae03ac6578d7ed7_57.png)
+
+![](img/0aa4836ec0290e8bfae03ac6578d7ed7_59.png)
+
+![](img/0aa4836ec0290e8bfae03ac6578d7ed7_60.png)
+
+![](img/0aa4836ec0290e8bfae03ac6578d7ed7_62.png)
+
 ```bash
 #!/bin/bash
 
@@ -128,15 +137,6 @@ fail() {
 usage() {
     cat <<EOF >&2
 Usage: $0 <command> [arguments]
-
-![](img/0aa4836ec0290e8bfae03ac6578d7ed7_57.png)
-
-![](img/0aa4836ec0290e8bfae03ac6578d7ed7_59.png)
-
-![](img/0aa4836ec0290e8bfae03ac6578d7ed7_60.png)
-
-![](img/0aa4836ec0290e8bfae03ac6578d7ed7_62.png)
-
 Commands:
     alloc <network/cidr> [first] [amount]  分配IP地址
         Example: $0 alloc 192.168.10.0/24 10 15

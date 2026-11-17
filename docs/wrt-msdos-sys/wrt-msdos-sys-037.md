@@ -53,20 +53,20 @@ void main() {
 
 我们需要保存原有的中断9向量，并用我们自己的处理函数替换它。程序退出前必须恢复原向量。
 
-```c
-void interrupt (*old_kb_handler)(); // 保存原中断处理程序地址
 
 ![](img/a30261dd9006d09cfebc61c46e152e47_9.png)
 
+
+![](img/a30261dd9006d09cfebc61c46e152e47_11.png)
+
+```c
+void interrupt (*old_kb_handler)(); // 保存原中断处理程序地址
 void setup_keyboard_interrupt() {
     // 获取并保存原中断向量
     old_kb_handler = _dos_getvect(0x09);
     // 设置新的中断向量
     _dos_setvect(0x09, our_kb_handler);
 }
-
-![](img/a30261dd9006d09cfebc61c46e152e47_11.png)
-
 void restore_keyboard_interrupt() {
     // 程序退出前恢复原中断向量
     _dos_setvect(0x09, old_kb_handler);
@@ -145,12 +145,12 @@ volatile unsigned char keys[256];
 
 以下是主循环中处理移动和颜色变化的逻辑示例：
 
-```c
-int x = 160, y = 100; // 初始位置在屏幕中心
-int color = 15;       // 初始颜色为白色
 
 ![](img/a30261dd9006d09cfebc61c46e152e47_22.png)
 
+```c
+int x = 160, y = 100; // 初始位置在屏幕中心
+int color = 15;       // 初始颜色为白色
 while (!keys[KEY_ESC]) {
     wait_for_retrace();
 

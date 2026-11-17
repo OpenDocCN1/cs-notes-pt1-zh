@@ -28,11 +28,11 @@ import threading
 
 ![](img/df30b99d4a6a270538b1500402a6549f_3.png)
 
-```python
-import time
 
 ![](img/df30b99d4a6a270538b1500402a6549f_5.png)
 
+```python
+import time
 def walk_dog():
     time.sleep(8)  # 模拟遛狗需要8秒
     print("You finish walking the dog.")
@@ -68,14 +68,14 @@ get_mail()
 
 ![](img/df30b99d4a6a270538b1500402a6549f_11.png)
 
+
+![](img/df30b99d4a6a270538b1500402a6549f_12.png)
+
 ```python
 # 创建线程对象
 chore1 = threading.Thread(target=walk_dog)
 chore2 = threading.Thread(target=take_out_trash)
 chore3 = threading.Thread(target=get_mail)
-
-![](img/df30b99d4a6a270538b1500402a6549f_12.png)
-
 # 启动所有线程
 chore1.start()
 chore2.start()
@@ -98,6 +98,12 @@ chore3.start()
 
 以下是使用 `join()` 方法的步骤：
 
+
+![](img/df30b99d4a6a270538b1500402a6549f_20.png)
+
+
+![](img/df30b99d4a6a270538b1500402a6549f_22.png)
+
 ```python
 chore1 = threading.Thread(target=walk_dog)
 chore2 = threading.Thread(target=take_out_trash)
@@ -106,16 +112,10 @@ chore3 = threading.Thread(target=get_mail)
 chore1.start()
 chore2.start()
 chore3.start()
-
-![](img/df30b99d4a6a270538b1500402a6549f_20.png)
-
 # 等待所有线程完成
 chore1.join()
 chore2.join()
 chore3.join()
-
-![](img/df30b99d4a6a270538b1500402a6549f_22.png)
-
 print("All chores are complete.")
 ```
 
@@ -133,13 +133,13 @@ print("All chores are complete.")
 
 我们可以通过 `Thread` 构造函数的 `args` 关键字参数来传递参数。`args` 接收一个元组。
 
+
+![](img/df30b99d4a6a270538b1500402a6549f_30.png)
+
 ```python
 def walk_dog(first_name, last_name):
     time.sleep(8)
     print(f"You finish walking {first_name} {last_name}.")
-
-![](img/df30b99d4a6a270538b1500402a6549f_30.png)
-
 # 创建线程并传递参数
 chore1 = threading.Thread(target=walk_dog, args=("Scooby", "Doo",))
 ```
