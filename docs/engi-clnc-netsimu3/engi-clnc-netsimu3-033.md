@@ -36,7 +36,6 @@ sudo apt install -y g++ python3 python3-dev pkg-config sqlite3 cmake python3-set
 ## 下载ns-3.34源代码
 上一节我们准备好了系统环境，本节我们来获取ns-3.34的源代码。
 
-![](img/3aaf2ad7a86c9791ed4695848a8f808e_12.png)
 
 访问ns-3的官方网站（https://www.nsnam.org/），找到下载页面，选择最新的ns-3.34版本进行下载。你也可以直接使用wget命令下载。下载完成后，你通常会得到一个名为 `ns-allinone-3.34.tar.bz2` 的压缩包。
 

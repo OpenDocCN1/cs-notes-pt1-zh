@@ -8,7 +8,6 @@
 
 ## 安装与导入 React Player
 
-![](img/0e0997592531299bf3bbc6bace9b2a47_1.png)
 
 上一节我们介绍了课程目标，本节中我们来看看实现的第一步：安装和导入 `react-player` 包。
 

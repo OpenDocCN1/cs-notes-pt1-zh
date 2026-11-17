@@ -66,7 +66,6 @@ unsigned int adlib_notes[12] = {
 
 
 
-![](img/6fcfce86e56c5fbc5593c5681c169ec6_33.png)
 
 一个乐器由两个振荡器（载波器和调制器）及其连接方式定义。我们首先定义单个振荡器的参数结构：
 
@@ -99,7 +98,6 @@ typedef struct {
 ## 实现设置乐器函数
 
 
-![](img/6fcfce86e56c5fbc5593c5681c169ec6_36.png)
 
 `adlib_set_instrument` 函数接收一个乐器结构和一个声道号，并将所有参数写入对应的OPL2寄存器。这涉及大量的位操作。
 

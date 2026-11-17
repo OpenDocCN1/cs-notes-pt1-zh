@@ -685,7 +685,6 @@ p.x = center_x - total_width/2 + last_char_width/2;
 
 ![](img/c990a1d1bc1607ec62b9419da49f4cdf_583.png)
 
-![](img/c990a1d1bc1607ec62b9419da49f4cdf_585.png)
 
 
 

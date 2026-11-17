@@ -94,7 +94,6 @@ call tile_ed_draw
 
 ![](img/f3b5473da7cd833bfbb2f428af3b93bf_38.png)
 
-![](img/f3b5473da7cd833bfbb2f428af3b93bf_40.png)
 
 ### 添加“仅文本”按钮标志
 

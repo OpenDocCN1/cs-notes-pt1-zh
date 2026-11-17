@@ -97,7 +97,6 @@ for (unsigned int i = 0; i < faces.size(); i++) {
 
 ![](img/7ed0840798dea70630540bd57b2a6bbe_4.png)
 
-![](img/7ed0840798dea70630540bd57b2a6bbe_5.png)
 
 ```
 GL_TEXTURE_CUBE_MAP_POSITIVE_X

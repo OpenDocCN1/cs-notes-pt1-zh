@@ -34,7 +34,6 @@ self.present(imagePicker, animated: true, completion: nil)
 
 ## 实现代理方法
 
-![](img/fbd71bf2b9a098c4382775e381a93ce0_14.png)
 
 
 图像选择器控制器通过代理方法将用户的选择结果返回给我们的应用。我们需要实现两个核心的代理方法。

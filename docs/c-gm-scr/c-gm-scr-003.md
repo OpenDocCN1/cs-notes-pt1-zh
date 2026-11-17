@@ -188,7 +188,6 @@ ball_dp.x = (ball_p.x - player_p.x) * 10.0f;
 
 ![](img/d64d01b71ce34c065794ea9c9a82a965_192.png)
 
-![](img/d64d01b71ce34c065794ea9c9a82a965_194.png)
 
 
 

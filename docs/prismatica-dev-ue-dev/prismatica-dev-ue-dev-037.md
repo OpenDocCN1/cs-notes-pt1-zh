@@ -16,7 +16,6 @@
 
 在材质编辑器中搜索“Switch”，可以找到这个节点。它与“Static Switch”节点不同。切换节点有一个“Switch Value”输入、一个“Default”输入以及一系列可添加的输入引脚。
 
-![](img/1f56781511d4d1b7d2f32db5cb7a7b79_1.png)
 
 以下是该节点的核心组成部分：
 *   **Switch Value**：一个浮点值输入，用于决定选择哪个分支。

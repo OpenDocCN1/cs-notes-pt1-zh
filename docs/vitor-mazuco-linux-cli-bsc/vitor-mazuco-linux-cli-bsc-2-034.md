@@ -19,7 +19,6 @@ git clone https://github.com/CISOfy/lynis
 cd lynis
 ```
 
-![](img/cbc2422d9800933de6c9c4981d73b50d_5.png)
 
 进入Lynis目录后，你可以使用`./lynis audit system`命令来启动对系统的全面审计。执行此命令需要root权限，以确保能访问所有必要的系统文件和配置。
 

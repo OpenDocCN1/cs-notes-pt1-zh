@@ -80,7 +80,6 @@ Keil MDK（微控制器开发套件）是本视频课程中使用的另一个专
 
 你需要解决的最后一个问题涉及 Tiva C Launchpad 板上的 Stellaris In-Circuit Debugger。在项目视图中，右键点击“Debug”目标菜单，选择“Options for Target ‘Debug’”。接下来，点击“Debug”选项卡并展开下拉列表。Stellaris ICDI 选项缺失，因为 Keil MDK 默认不再支持它。然而，你可以通过从本视频课程的配套网页下载 MDK 扩展来添加 Stellaris ICDI 支持。
 
-![](img/c6310ad84cb61b574b82e56aa7526205_19.png)
 
 下载后，只需运行提供的安装程序即可。现在，当你为 Tiva C 打开任何 Keil 项目时，Stellaris ICDI 调试器就可用。
 

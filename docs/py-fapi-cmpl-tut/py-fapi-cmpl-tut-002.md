@@ -106,7 +106,6 @@ class RoleChecker:
 
 ![](img/7d5adcabc5e6be579c6937eaaf16dbca_21.png)
 
-![](img/7d5adcabc5e6be579c6937eaaf16dbca_22.png)
 
 
 ```python

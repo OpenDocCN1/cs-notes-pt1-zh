@@ -32,7 +32,6 @@ namespace MyNamespace {
 *   **提升项目可扩展性**：使大型代码库更易于管理。
 
 
-![](img/517a7c8986a041daa64dab6bb2b9f364_14.png)
 
 具体来说，命名空间能帮助我们：
 *   避免不同库之间的名称碰撞。
@@ -54,7 +53,6 @@ namespace MyNamespace {
 以下是不同C++标准对命名空间的增强：
 
 
-![](img/517a7c8986a041daa64dab6bb2b9f364_24.png)
 
 
 

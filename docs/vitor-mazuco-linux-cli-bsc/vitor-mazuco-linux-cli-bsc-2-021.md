@@ -34,7 +34,6 @@ sudo apt install pamusb-tools
 
 同时，我们还需要安装 `usbmount` 工具，它可以帮助系统自动挂载USB设备。
 
-![](img/df47c3cd4bca027d219448ec2dd8b28f_8.png)
 
 ```bash
 sudo apt install usbmount

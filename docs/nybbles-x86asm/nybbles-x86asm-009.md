@@ -102,7 +102,6 @@ endstruc
 
 ![](img/6f1a3f4d554820d9a408c83c8e015167_27.png)
 
-![](img/6f1a3f4d554820d9a408c83c8e015167_29.png)
 
 
 ## 总结

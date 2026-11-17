@@ -70,7 +70,6 @@ int ems_installed() {
 
 ![](img/ce8475ab5dbd1304bea8baf2cdafce72_44.png)
 
-![](img/ce8475ab5dbd1304bea8baf2cdafce72_46.png)
 
 
 
@@ -103,7 +102,6 @@ int ems_version() {
 
 
 
-![](img/ce8475ab5dbd1304bea8baf2cdafce72_75.png)
 
 
 

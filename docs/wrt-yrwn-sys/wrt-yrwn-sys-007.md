@@ -217,7 +217,6 @@ uint32_t KeyboardDriver::HandleInterrupt(uint32_t esp) {
 
 ![](img/97221e766c222cd97bf1e14d0769de1c_69.png)
 
-![](img/97221e766c222cd97bf1e14d0769de1c_71.png)
 
 
 ![](img/97221e766c222cd97bf1e14d0769de1c_75.png)

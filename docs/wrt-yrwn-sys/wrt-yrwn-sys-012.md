@@ -100,7 +100,6 @@ public:
 BaseAddressRegister GetBaseAddressRegister(uint16_t bus, uint16_t device, uint16_t function, uint16_t bar);
 ```
 
-![](img/af7ddacc287129bb555c29a156bc9d0d_17.png)
 
 
 
@@ -143,7 +142,6 @@ if(result.type == InputOutput)
 
 对于内存映射的BAR，处理更复杂，涉及判断地址宽度和计算可映射区域大小。我们暂时不深入实现。如果你感兴趣，可以参考lowlevel.eu上的代码，其原理是：向BAR写入全1，再读回，设备会将不可写的位清零，从而得到一个掩码，用于计算区域大小和对齐要求。
 
-![](img/af7ddacc287129bb555c29a156bc9d0d_17.png)
 
 ## 设备驱动的获取与匹配
 

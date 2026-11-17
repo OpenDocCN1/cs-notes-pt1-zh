@@ -245,7 +245,6 @@ size_t heapSize = (memorySizeKB * 1024) - heapStartAddress - 10*1024; // 减去1
 MemoryManager memoryManager(heapStartAddress, heapSize);
 ```
 
-![](img/78de33d16cf722ce44753100b4fc2326_52.png)
 
 ## 总结与展望
 

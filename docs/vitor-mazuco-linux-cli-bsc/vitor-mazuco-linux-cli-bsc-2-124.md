@@ -54,7 +54,6 @@ db.oldName.renameCollection("newName")
 *   `renameCollection` 是 MongoDB 的重命名函数。
 *   `"newName"` 是你为集合设定的新名称，需要用引号括起来。
 
-![](img/42db82fb5667d93d6e25c3b6d8f20be0_1.png)
 
 **重要提示**：执行此操作的用户必须在 MongoDB 中拥有重命名集合的权限。你可以查阅 MongoDB 官方手册以了解详细的权限配置。
 

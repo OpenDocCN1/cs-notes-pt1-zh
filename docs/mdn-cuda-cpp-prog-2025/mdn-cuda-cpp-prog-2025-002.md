@@ -94,7 +94,6 @@ auto end = std::chrono::high_resolution_clock::now();
 
 分析两个版本在时间线上的差异仍然需要手动将时间线上的事件与代码匹配，这可能有些繁琐。
 
-![](img/de84f289c39ec09225d5eb6b6018ccb9_7.png)
 
 幸运的是，我们有一个工具可以更轻松地将Nsight Systems中看到的内容与你的代码关联起来，这就是NVTX（NVIDIA Tools Extension）。当处理具有许多函数、GPU和CPU事件同时发生的复杂应用程序时，我们通常会使用NVTX。NVTX API允许你将自定义标记和范围直接插入到代码中。这样，当你在Nsight Systems报告中查看时，就会看到对应的标签。
 

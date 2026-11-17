@@ -321,7 +321,6 @@ V2 PixelsToWorld(V2I pixel_coordinate, Render_Buffer render_buffer, f32 scale) {
 
 
 
-![](img/2c5915bbf2791187d13c00d769bdde9e_282.png)
 
 ## 创建球与基础物理 ⚽
 

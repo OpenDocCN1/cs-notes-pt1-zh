@@ -152,7 +152,6 @@ handle_keys_state:
 ```
 
 
-![](img/8c4b950563863018c88400a3c014ef51_18.png)
 
 
 

@@ -29,7 +29,6 @@ IncludeOptional sites-enabled/*.conf
 
 如果你只想托管一个网站，通常无需修改默认配置。但若想托管多个网站，就需要启用并配置虚拟主机。
 
-![](img/44887a28188caa172e2e298543d89b08_18.png)
 
 
 让我们进入网站配置目录 `/etc/apache2/sites-available/`。这里有一个名为 `000-default.conf` 的默认配置文件，它控制着Apache的默认网站。

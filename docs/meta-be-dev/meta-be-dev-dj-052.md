@@ -30,7 +30,6 @@ class Menu(models.Model):
 
 打开`admin.py`文件，从`models.py`中导入`Menu`模型，并使用`admin.site.register()`方法进行注册。
 
-![](img/75df9cbcbde4f3ca602dfefb63acb9c9_1.png)
 
 ```python
 from django.contrib import admin

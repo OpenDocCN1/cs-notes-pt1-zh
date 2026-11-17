@@ -115,7 +115,6 @@ END SUB
 
 调用示例如下：
 
-![](img/1d2a4a71bb567c4183e62448bcb6a0d6_8.png)
 
 
 ```basic
