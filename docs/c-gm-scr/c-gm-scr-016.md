@@ -239,13 +239,11 @@
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_213.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_215.png)
 
 
 
 3.  **关卡保存问题**：修复了太空侵略者关卡完成后，进度未正确保存的问题。
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_220.png)
 
 
 
@@ -706,7 +704,6 @@ void profile_end(int slot_index) {
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_617.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_618.png)
 
 3.  **预计算**：矩形的轴、归一化后的轴、轴长度等可以在循环外预计算一次，避免每像素重复计算。
 
@@ -817,7 +814,6 @@ void profile_end(int slot_index) {
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_719.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_721.png)
 
 
 

@@ -100,9 +100,7 @@
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_95.png)
 
-![](img/d4175b7c7da94dffbf39910f5457f6a6_97.png)
 
-![](img/d4175b7c7da94dffbf39910f5457f6a6_99.png)
 
 
 
@@ -505,7 +503,6 @@ old_mouse_y = new_mouse_y;
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_469.png)
 
-![](img/d4175b7c7da94dffbf39910f5457f6a6_471.png)
 
 
 
@@ -1260,7 +1257,6 @@ sound_set_target_volume(power_block->sound_id, volume);
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_1098.png)
 
-![](img/d4175b7c7da94dffbf39910f5457f6a6_1100.png)
 
 
 

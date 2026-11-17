@@ -191,7 +191,6 @@ if (test6845(0x3B4)) {
 
 ![](img/b40b5f9afaa8c465d97b7773ada977a4_57.png)
 
-![](img/b40b5f9afaa8c465d97b7773ada977a4_59.png)
 
 本节课中我们一起学习了在 MS-DOS 环境下自动检测图形显卡的完整方法。
 

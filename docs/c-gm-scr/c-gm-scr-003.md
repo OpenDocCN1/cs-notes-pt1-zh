@@ -190,9 +190,7 @@ ball_dp.x = (ball_p.x - player_p.x) * 10.0f;
 
 ![](img/d64d01b71ce34c065794ea9c9a82a965_194.png)
 
-![](img/d64d01b71ce34c065794ea9c9a82a965_196.png)
 
-![](img/d64d01b71ce34c065794ea9c9a82a965_198.png)
 
 接下来，我们调整砖块的生成方式，使其排列更美观，并增加颜色渐变效果。
 

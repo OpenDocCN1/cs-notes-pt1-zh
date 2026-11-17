@@ -196,7 +196,6 @@
 
 ![](img/c990a1d1bc1607ec62b9419da49f4cdf_175.png)
 
-![](img/c990a1d1bc1607ec62b9419da49f4cdf_177.png)
 
 
 
@@ -574,7 +573,6 @@ for(u32 sound_index = 0; sound_index < immutable_sound_count; ++sound_index) {
 
 ![](img/c990a1d1bc1607ec62b9419da49f4cdf_500.png)
 
-![](img/c990a1d1bc1607ec62b9419da49f4cdf_502.png)
 
 ## 游戏打磨与优化 ✨
 
@@ -689,9 +687,7 @@ p.x = center_x - total_width/2 + last_char_width/2;
 
 ![](img/c990a1d1bc1607ec62b9419da49f4cdf_585.png)
 
-![](img/c990a1d1bc1607ec62b9419da49f4cdf_587.png)
 
-![](img/c990a1d1bc1607ec62b9419da49f4cdf_589.png)
 
 
 

@@ -527,7 +527,6 @@ void FillSoundBuffer(DWORD ByteToLock, DWORD BytesToWrite) {
 }
 ```
 
-![](img/7a07006fd44b8dede9f835fb4c96181a_414.png)
 
 
 

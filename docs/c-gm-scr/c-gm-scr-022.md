@@ -120,7 +120,6 @@
 
 ![](img/ab18094230a798259ac1baa49f82bf9c_105.png)
 
-![](img/ab18094230a798259ac1baa49f82bf9c_107.png)
 
 
 ## 游戏内容与待办事项
@@ -648,7 +647,6 @@ if (block->type == BLOCK_TYPE_STRONG) {
 
 ![](img/ab18094230a798259ac1baa49f82bf9c_507.png)
 
-![](img/ab18094230a798259ac1baa49f82bf9c_509.png)
 
 
 
@@ -729,9 +727,7 @@ for (int y = yMin; y < yMax; ++y) {
 
 ![](img/ab18094230a798259ac1baa49f82bf9c_557.png)
 
-![](img/ab18094230a798259ac1baa49f82bf9c_559.png)
 
-![](img/ab18094230a798259ac1baa49f82bf9c_561.png)
 
 
 

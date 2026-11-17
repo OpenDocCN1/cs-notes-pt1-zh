@@ -87,11 +87,9 @@
 
 ![](img/2c5915bbf2791187d13c00d769bdde9e_75.png)
 
-![](img/2c5915bbf2791187d13c00d769bdde9e_77.png)
 
 
 
-![](img/2c5915bbf2791187d13c00d769bdde9e_83.png)
 
 
 
@@ -327,9 +325,7 @@ V2 PixelsToWorld(V2I pixel_coordinate, Render_Buffer render_buffer, f32 scale) {
 
 ## 创建球与基础物理 ⚽
 
-![](img/2c5915bbf2791187d13c00d769bdde9e_284.png)
 
-![](img/2c5915bbf2791187d13c00d769bdde9e_285.png)
 
 
 
@@ -747,7 +743,6 @@ b32 AABBvsAABB(V2 p1, V2 half_size1, V2 p2, V2 half_size2) {
 
 ![](img/2c5915bbf2791187d13c00d769bdde9e_640.png)
 
-![](img/2c5915bbf2791187d13c00d769bdde9e_642.png)
 
 
 
@@ -773,9 +768,7 @@ if (ball_p.x + ball_half_size.x > arena_half_size.x) {
 
 ![](img/2c5915bbf2791187d13c00d769bdde9e_657.png)
 
-![](img/2c5915bbf2791187d13c00d769bdde9e_659.png)
 
-![](img/2c5915bbf2791187d13c00d769bdde9e_661.png)
 
 
 ### 球与砖块碰撞

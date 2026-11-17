@@ -77,7 +77,6 @@ XMS的主要优点是，相比EMS，你可以拥有更多的内存。在386及�
 *   `dest_handle`：目标句柄。如果为0，同理，表示目标在实模式内存中。
 *   `dest_offset`：目标偏移量。
 
-![](img/88e7f137dd013ce4dfdff07316304852_3.png)
 
 我们还有一个指向驱动程序的远函数指针`XMSpointer`，以及全局错误变量`XMSerror`和程序使用的句柄`XMSHandle`。
 

@@ -65,7 +65,6 @@ git config branch.new-bugfix.description
 git branch another-bugfix <commit-hash>
 ```
 
-![](img/71b46fcfab5080792b7131cf75c11a81_13.png)
 
 其中 `<commit-hash>` 是目标提交的ID（完整或缩写形式均可）。这样创建的分支将直接指向该历史提交。
 
