@@ -14,11 +14,9 @@
 
 以下是使用临时表解决问题的分步方法。
 
-![](img/5d64e87923cccdf39c9dd7556a31ae6a_1.png)
 
 第一步，我们创建一个名为 `TotalCustomer` 的临时表，用于存放每个州的客户总数。
 
-![](img/5d64e87923cccdf39c9dd7556a31ae6a_3.png)
 
 ```sql
 CREATE TABLE TotalCustomer AS

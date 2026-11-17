@@ -1,6 +1,5 @@
 # 019：现状与问题
 
-![](img/54537954ea0de5fe0a3dc985fca11608_0.png)
 
 ![](img/54537954ea0de5fe0a3dc985fca11608_0.png)
 

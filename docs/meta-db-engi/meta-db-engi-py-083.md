@@ -12,7 +12,6 @@
 
 以下是Python `datetime`库中几个核心函数：
 
-![](img/443a3edda57dc61ada8b786d3b286ee8_1.png)
 
 *   `datetime.now()`：用于获取当前的日期和时间。
 *   `datetime.date()`：用于获取当前的日期。
@@ -21,7 +20,6 @@
 
 ---
 
-![](img/443a3edda57dc61ada8b786d3b286ee8_3.png)
 
 ## 📝 导入与基本语法
 
@@ -31,7 +29,6 @@
 import datetime as dt
 ```
 
-![](img/443a3edda57dc61ada8b786d3b286ee8_5.png)
 
 通过以上代码，我们创建了一个别名`dt`。之后，我们就可以使用`dt`来调用库中的函数，而无需每次都输入完整的`datetime`。
 
@@ -39,7 +36,6 @@ import datetime as dt
 
 ---
 
-![](img/443a3edda57dc61ada8b786d3b286ee8_7.png)
 
 ## ⏰ 使用datetime.now()获取当前时间
 
@@ -52,7 +48,6 @@ current_time = dt.datetime.now()
 print(current_time)
 ```
 
-![](img/443a3edda57dc61ada8b786d3b286ee8_9.png)
 
 执行这段代码，Python将返回你所在位置的日期和时间。日期以`年-月-日`的格式显示，时间则以`时:分:秒`的格式显示。
 
@@ -83,7 +78,6 @@ print(future_date)
 
 ---
 
-![](img/443a3edda57dc61ada8b786d3b286ee8_11.png)
 
 ## 🍋 实战：帮助Little Lemon餐厅调整预订时间
 
@@ -103,17 +97,14 @@ import datetime as dt
 sql_select = “SELECT * FROM bookings”
 ```
 
-![](img/443a3edda57dc61ada8b786d3b286ee8_13.png)
 
 将该语句作为字符串参数传递给游标的`execute`模块。
 
-![](img/443a3edda57dc61ada8b786d3b286ee8_15.png)
 
 ```python
 cursor.execute(sql_select)
 ```
 
-![](img/443a3edda57dc61ada8b786d3b286ee8_17.png)
 
 在进入循环之前，指示Python打印`bookings`表的列名，以便查看每一行的项目。
 
@@ -121,7 +112,6 @@ cursor.execute(sql_select)
 print(cursor.column_names)
 ```
 
-![](img/443a3edda57dc61ada8b786d3b286ee8_19.png)
 
 你可以将这些值分配给变量，并创建一个名为`new_booking_slot`的新变量，用于保存更新后的时间段值。
 
@@ -142,7 +132,6 @@ for row in results:
 
 结果显示，`booking_id`是第一个值（索引0），`booking_slot`是第四个值（索引3）。
 
-![](img/443a3edda57dc61ada8b786d3b286ee8_21.png)
 
 ---
 

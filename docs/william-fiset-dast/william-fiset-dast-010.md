@@ -6,7 +6,6 @@
 
 ## 栈的实现概述
 
-![](img/bf1c97ada56d8f78a08354b1e31386df_1.png)
 
 上一节我们介绍了栈的理论概念和基于链表的实现原理。本节中，我们来看看具体的代码实现。我们将创建一个名为`Stack`的类，它内部使用Java的`LinkedList`来存储数据。
 
@@ -40,7 +39,6 @@ public Stack(T firstElem) {
 }
 ```
 
-![](img/bf1c97ada56d8f78a08354b1e31386df_3.png)
 
 ## 核心方法实现
 
@@ -60,7 +58,6 @@ public int size() {
 
 如果栈中没有元素，则栈为空。我们可以通过检查内部链表是否为空来判断。
 
-![](img/bf1c97ada56d8f78a08354b1e31386df_5.png)
 
 ```java
 public boolean isEmpty() {
@@ -93,11 +90,9 @@ public T pop() {
 
 ### 查看栈顶元素
 
-![](img/bf1c97ada56d8f78a08354b1e31386df_7.png)
 
 返回栈顶的元素但不移除它。这对应于获取链表的第一个元素。
 
-![](img/bf1c97ada56d8f78a08354b1e31386df_8.png)
 
 ```java
 public T peek() {
@@ -108,11 +103,9 @@ public T peek() {
 }
 ```
 
-![](img/bf1c97ada56d8f78a08354b1e31386df_9.png)
 
 ## 使用示例
 
-![](img/bf1c97ada56d8f78a08354b1e31386df_10.png)
 
 为了帮助理解，这里有一个简单的示例，展示如何使用我们实现的栈类。
 

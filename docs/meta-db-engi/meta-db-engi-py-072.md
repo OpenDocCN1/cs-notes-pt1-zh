@@ -51,10 +51,8 @@ connection = connector.connect(
 
 ---
 
-![](img/6d09288f2b0ad744bdbe60f87973b1e1_1.png)
 
 ![](img/6d09288f2b0ad744bdbe60f87973b1e1_1.png)
 
-![](img/6d09288f2b0ad744bdbe60f87973b1e1_2.png)
 
 ![](img/6d09288f2b0ad744bdbe60f87973b1e1_2.png)

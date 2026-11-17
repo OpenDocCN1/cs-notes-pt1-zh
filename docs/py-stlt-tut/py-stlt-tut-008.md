@@ -35,16 +35,12 @@ else:
 
 ### 使用回调函数和会话状态
 
-![](img/795160f2c71b7ef41e7282933ac2ec83_1.png)
 
-![](img/795160f2c71b7ef41e7282933ac2ec83_3.png)
 
 我们可以为复选框添加一个回调函数，并在函数内部通过 `key` 访问其状态。
 
 
-![](img/795160f2c71b7ef41e7282933ac2ec83_5.png)
 
-![](img/795160f2c71b7ef41e7282933ac2ec83_6.png)
 
 ```python
 import streamlit as st
@@ -67,7 +63,6 @@ st.checkbox('带回调的复选框',
 
 ## 单选按钮 🔘
 
-![](img/795160f2c71b7ef41e7282933ac2ec83_8.png)
 
 上一节我们介绍了复选框，它适合二元选择。本节中我们来看看**单选按钮**，它允许用户从一组互斥的选项中选择一个。
 
@@ -75,7 +70,6 @@ st.checkbox('带回调的复选框',
 
 以下是创建单选按钮的示例：
 
-![](img/795160f2c71b7ef41e7282933ac2ec83_10.png)
 
 ```python
 import streamlit as st
@@ -139,11 +133,9 @@ car = st.selectbox(
 st.write(f'你最喜欢的汽车是：{car}')
 ```
 
-![](img/795160f2c71b7ef41e7282933ac2ec83_12.png)
 
 运行后，页面上会出现一个下拉菜单，默认显示第一个选项“奥迪”。点击下拉箭头，可以选择“宝马”或“法拉利”，选择结果会实时显示在下方。
 
-![](img/795160f2c71b7ef41e7282933ac2ec83_14.png)
 
 ---
 
@@ -151,16 +143,13 @@ st.write(f'你最喜欢的汽车是：{car}')
 
 最后，我们来看看**多选下拉框**。它与普通下拉框类似，但允许用户同时选择多个选项。
 
-![](img/795160f2c71b7ef41e7282933ac2ec83_16.png)
 
-![](img/795160f2c71b7ef41e7282933ac2ec83_17.png)
 
 使用 `st.multiselect` 创建多选下拉框。参数 `label` 和 `options` 是必需的。
 
 以下是多选下拉框的示例：
 
 
-![](img/795160f2c71b7ef41e7282933ac2ec83_19.png)
 
 ```python
 import streamlit as st

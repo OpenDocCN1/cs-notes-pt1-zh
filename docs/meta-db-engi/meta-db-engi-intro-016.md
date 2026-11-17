@@ -2,11 +2,9 @@
 
 在本节课中，我们将学习数据库约束的概念，特别是两种常用的约束：`NOT NULL` 和 `DEFAULT`。我们将了解它们如何确保数据的准确性和可靠性，并通过具体的SQL语句示例来掌握其应用方法。
 
-![](img/ebe74ea1bd403a5f222bf8ccb23cdf5d_1.png)
 
 ## 数据库约束概述
 
-![](img/ebe74ea1bd403a5f222bf8ccb23cdf5d_3.png)
 
 为了确保数据库中数据的准确性和可靠性，必须限制可以存入数据库表的数据类型。
 
@@ -20,21 +18,15 @@
 *   **`NOT NULL`**：一种防止字段为空值的方法。
 *   **`DEFAULT`**：一种分配默认值的方法。
 
-![](img/ebe74ea1bd403a5f222bf8ccb23cdf5d_5.png)
 
-![](img/ebe74ea1bd403a5f222bf8ccb23cdf5d_6.png)
 
-![](img/ebe74ea1bd403a5f222bf8ccb23cdf5d_7.png)
 
-![](img/ebe74ea1bd403a5f222bf8ccb23cdf5d_8.png)
 
 ## NOT NULL 约束
 
 上一节我们介绍了约束的基本概念，本节中我们来看看 `NOT NULL` 约束的具体作用。
 
-![](img/ebe74ea1bd403a5f222bf8ccb23cdf5d_10.png)
 
-![](img/ebe74ea1bd403a5f222bf8ccb23cdf5d_11.png)
 
 `NOT NULL` SQL约束用于确保数据字段始终被填写，永远不会留空。
 
@@ -42,11 +34,9 @@
 
 `NOT NULL` 约束是通过SQL语句实现的。一个典型的 `NOT NULL` SQL语句从在数据库中创建一个基本表开始。
 
-![](img/ebe74ea1bd403a5f222bf8ccb23cdf5d_13.png)
 
 以下是创建该表的SQL语句示例：
 
-![](img/ebe74ea1bd403a5f222bf8ccb23cdf5d_15.png)
 
 ```sql
 CREATE TABLE customer (
@@ -65,13 +55,11 @@ CREATE TABLE customer (
 
 ## DEFAULT 约束
 
-![](img/ebe74ea1bd403a5f222bf8ccb23cdf5d_17.png)
 
 了解了如何强制字段不为空后，接下来我们看看 `DEFAULT` 约束如何在表中工作。
 
 `DEFAULT` 约束为列设置一个默认值，前提是没有指定其他值。这意味着，如果没有为列中的特定字段输入数据，那么表将自动插入一个默认值。
 
-![](img/ebe74ea1bd403a5f222bf8ccb23cdf5d_19.png)
 
 为了更好地理解默认值，让我们看一个存储足球俱乐部数据库球员记录的表。该表名为 `player_table`，包含两列。第一列是 `player_name`，列出球队中每位球员的姓名；第二列是 `city`，列出每位球员来自哪个城市。
 
@@ -81,7 +69,6 @@ CREATE TABLE customer (
 
 以下是创建该表的SQL语句：
 
-![](img/ebe74ea1bd403a5f222bf8ccb23cdf5d_21.png)
 
 ```sql
 CREATE TABLE player_table (
@@ -98,7 +85,6 @@ CREATE TABLE player_table (
 
 现在，当我向表中添加新球员的数据时，对于来自巴塞罗那的球员，我不需要输入 `Barcelona`，它会自动插入。
 
-![](img/ebe74ea1bd403a5f222bf8ccb23cdf5d_23.png)
 
 ## 课程总结
 

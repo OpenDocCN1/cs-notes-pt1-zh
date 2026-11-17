@@ -15,9 +15,7 @@
 
 例如，当我们创建一个函数时，就创建了一个属于该函数的作用域。花括号 `{}` 内的所有内容都被视为该函数的作用域。
 
-![](img/d5d657f175f4db8b2a6b79f9bd0cd2a1_1.png)
 
-![](img/d5d657f175f4db8b2a6b79f9bd0cd2a1_2.png)
 
 ```rust
 fn function() {
@@ -35,11 +33,8 @@ fn function() {
 
 ### 字符串字面量 (&str)
 
-![](img/d5d657f175f4db8b2a6b79f9bd0cd2a1_4.png)
 
-![](img/d5d657f175f4db8b2a6b79f9bd0cd2a1_5.png)
 
-![](img/d5d657f175f4db8b2a6b79f9bd0cd2a1_6.png)
 
 到目前为止，我们使用以下语法创建字符串字面量：
 ```rust
@@ -60,13 +55,9 @@ wisdom += " clean hands are happy hands"; // 错误：无法修改字符串字�
 
 Rust 提供了第二种字符串类型 `String`，它允许我们进行修改。由于这种类型管理堆上的数据，它能够存储编译时未知大小的文本。
 
-![](img/d5d657f175f4db8b2a6b79f9bd0cd2a1_8.png)
 
-![](img/d5d657f175f4db8b2a6b79f9bd0cd2a1_9.png)
 
-![](img/d5d657f175f4db8b2a6b79f9bd0cd2a1_10.png)
 
-![](img/d5d657f175f4db8b2a6b79f9bd0cd2a1_12.png)
 
 以下是创建 `String` 的方法：
 ```rust
@@ -83,7 +74,6 @@ s += ", Bob";
 println!("{:?}", s);
 ```
 
-![](img/d5d657f175f4db8b2a6b79f9bd0cd2a1_14.png)
 
 运行程序后，我们将得到输出：`"Hello, Bob"`。我们成功地修改了原始字符串。
 

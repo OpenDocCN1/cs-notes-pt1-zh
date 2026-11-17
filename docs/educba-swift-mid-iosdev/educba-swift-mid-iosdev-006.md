@@ -64,7 +64,6 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
 
 我们之前已经创建了一个方法来获取网络服务数据。该方法接收一个字典参数，并从字典中提取所需的数据，将其添加到`dataArray`中。
 
-![](img/25bbd06c50a4a7f6e04bfc79d71c16a0_6.png)
 
 以下是获取数据并重新加载表格视图的步骤：
 
@@ -84,13 +83,10 @@ fetchWebServiceData { dictionary in
 
 ## 运行与测试 🧪
 
-![](img/25bbd06c50a4a7f6e04bfc79d71c16a0_8.png)
 
 移除所有断点，运行应用。如果网络连接正常，表格视图将成功加载并显示从JSON网络服务获取的数据。
 
-![](img/25bbd06c50a4a7f6e04bfc79d71c16a0_10.png)
 
-![](img/25bbd06c50a4a7f6e04bfc79d71c16a0_12.png)
 
 ## 总结 🎯
 

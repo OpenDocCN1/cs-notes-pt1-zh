@@ -58,7 +58,6 @@ find . -type f -exec du -sh {} \; | sort -rh
 
 保存并退出编辑器后，需要为脚本文件添加可执行权限。
 
-![](img/d54605aed79999fc9aa9e7f7922dfb0d_1.png)
 
 ```bash
 chmod +x inventory.sh
@@ -86,7 +85,6 @@ chmod +x inventory.sh
 
 例如，在演示中，`/root` 目录下有8个子目录和11个文件，其中最大的文件是 `.vimrc`。
 
-![](img/d54605aed79999fc9aa9e7f7922dfb0d_3.png)
 
 你可以随时删除脚本生成的清单文件，并重新运行脚本以获取最新信息。
 
@@ -100,6 +98,5 @@ chmod +x inventory.sh
 
 这是一个非常简单的脚本，仅使用了基础命令。我们利用 `find -type f` 来查找所有文件（包括隐藏文件）。希望你喜欢本节课的内容，让我们继续下一课的学习。
 
-![](img/d54605aed79999fc9aa9e7f7922dfb0d_5.png)
 
 ![](img/d54605aed79999fc9aa9e7f7922dfb0d_5.png)

@@ -4,37 +4,28 @@
 
 ---
 
-![](img/2ed4c79ec313f220dc5a6d41ed500786_1.png)
 
 ## 概述
 
-![](img/2ed4c79ec313f220dc5a6d41ed500786_3.png)
 
 上一节我们介绍了计数器（Counter）函数，本节我们将聚焦于仪表（Gauge）函数。这些函数接收一个区间向量，并返回一个瞬时向量，其中包含每个输入时间序列的单个样本。它们对于分析指标的波动、变化率和未来趋势预测非常有用。
 
 以下是本节课将要学习的几个核心仪表函数。
 
-![](img/2ed4c79ec313f220dc5a6d41ed500786_5.png)
 
 ---
 
-![](img/2ed4c79ec313f220dc5a6d41ed500786_7.png)
 
 ### `changes()` 函数：统计数值变化次数
 
-![](img/2ed4c79ec313f220dc5a6d41ed500786_9.png)
 
-![](img/2ed4c79ec313f220dc5a6d41ed500786_11.png)
 
 `changes()` 函数用于统计在指定时间范围内，一个仪表的数值发生了多少次变化。这对于监控进程重启次数或服务状态翻转非常有效。
 
-![](img/2ed4c79ec313f220dc5a6d41ed500786_13.png)
 
-![](img/2ed4c79ec313f220dc5a6d41ed500786_15.png)
 
 例如，要查询某个进程在过去一小时内重启了多少次，可以使用以下PromQL查询：
 
-![](img/2ed4c79ec313f220dc5a6d41ed500786_17.png)
 
 ```promql
 changes(process_start_time_seconds[1h])
@@ -48,19 +39,14 @@ changes(process_start_time_seconds[1h])
 
 `deriv()` 函数用于计算一个仪表在指定时间范围内的瞬时变化速率（即导数）。它内部使用了**最小二乘法**（Least Squares Method）来估算时间序列的斜率。
 
-![](img/2ed4c79ec313f220dc5a6d41ed500786_19.png)
 
-![](img/2ed4c79ec313f220dc5a6d41ed500786_21.png)
 
 最小二乘法的核心公式是寻找一条直线，使得所有数据点到这条直线距离的平方和最小。其简单线性回归模型可表示为：
 `y = β₀ + β₁x + ε`
 其中 `β₁` 即为所求的斜率。
 
-![](img/2ed4c79ec313f220dc5a6d41ed500786_23.png)
 
-![](img/2ed4c79ec313f220dc5a6d41ed500786_25.png)
 
-![](img/2ed4c79ec313f220dc5a6d41ed500786_27.png)
 
 例如，要计算服务器驻留内存（RAM实际使用量）在过去两小时内的变化速度（字节/秒），可以使用：
 
@@ -68,63 +54,46 @@ changes(process_start_time_seconds[1h])
 deriv(process_resident_memory_bytes[2h])
 ```
 
-![](img/2ed4c79ec313f220dc5a6d41ed500786_29.png)
 
 执行后，图表会显示内存使用量的变化趋势线。上升趋势表示内存使用在增长，下降趋势则表示在释放。你可以根据需要调整时间范围，如 `[5m]` 或 `[1d]`。
 
-![](img/2ed4c79ec313f220dc5a6d41ed500786_31.png)
 
 ---
 
-![](img/2ed4c79ec313f220dc5a6d41ed500786_33.png)
 
-![](img/2ed4c79ec313f220dc5a6d41ed500786_34.png)
 
-![](img/2ed4c79ec313f220dc5a6d41ed500786_36.png)
 
 ### `predict_linear()` 函数：线性预测
 
-![](img/2ed4c79ec313f220dc5a6d41ed500786_38.png)
 
 `predict_linear()` 函数基于历史数据，使用线性回归来预测一个仪表在未来的某个时间点的值。这对于容量规划，如预测磁盘空间耗尽时间，至关重要。
 
-![](img/2ed4c79ec313f220dc5a6d41ed500786_40.png)
 
 例如，要基于过去一小时的样本，预测每个文件系统在4小时后的剩余空间，可以使用：
 
-![](img/2ed4c79ec313f220dc5a6d41ed500786_42.png)
 
-![](img/2ed4c79ec313f220dc5a6d41ed500786_44.png)
 
 ```promql
 predict_linear(node_filesystem_free_bytes{job="node"}[1h], 4 * 3600)
 ```
 
-![](img/2ed4c79ec313f220dc5a6d41ed500786_46.png)
 
-![](img/2ed4c79ec313f220dc5a6d41ed500786_48.png)
 
 在这个查询中：
 *   `node_filesystem_free_bytes{job="node"}[1h]` 是过去一小时的可用空间数据。
 *   `4 * 3600` 表示预测未来4秒（14400秒）后的值。
 
-![](img/2ed4c79ec313f220dc5a6d41ed500786_50.png)
 
-![](img/2ed4c79ec313f220dc5a6d41ed500786_52.png)
 
 如果系统磁盘使用量稳定增长，这个函数可以帮助你预估何时需要扩容。对于数据库或备份服务器这类磁盘写入频繁的主机，此功能尤为实用。
 
-![](img/2ed4c79ec313f220dc5a6d41ed500786_54.png)
 
-![](img/2ed4c79ec313f220dc5a6d41ed500786_56.png)
 
 ---
 
-![](img/2ed4c79ec313f220dc5a6d41ed500786_58.png)
 
 ### `holt_winters()` 函数：指数平滑与趋势预测
 
-![](img/2ed4c79ec313f220dc5a6d41ed500786_60.png)
 
 最后，我们介绍 `holt_winters()` 函数。它实现了**霍尔特-温特斯指数平滑法**，用于对时间序列进行平滑处理并预测未来趋势。这对于波动剧烈、难以直接观察趋势的指标非常有用。
 
@@ -134,37 +103,26 @@ predict_linear(node_filesystem_free_bytes{job="node"}[1h], 4 * 3600)
 
 例如，要平滑处理过去一小时的驻留内存使用量，设置平滑因子为0.1，趋势因子为0.5，可以使用：
 
-![](img/2ed4c79ec313f220dc5a6d41ed500786_62.png)
 
-![](img/2ed4c79ec313f220dc5a6d41ed500786_64.png)
 
 ```promql
 holt_winters(process_resident_memory_bytes[1h], 0.1, 0.5)
 ```
 
-![](img/2ed4c79ec313f220dc5a6d41ed500786_66.png)
 
-![](img/2ed4c79ec313f220dc5a6d41ed500786_68.png)
 
 执行后，你会得到一条平滑后的曲线，滤除了短期波动，更能清晰地反映内存使用的长期趋势。理解其背后的统计学原理，有助于你更有效地应用此函数。
 
-![](img/2ed4c79ec313f220dc5a6d41ed500786_70.png)
 
-![](img/2ed4c79ec313f220dc5a6d41ed500786_72.png)
 
-![](img/2ed4c79ec313f220dc5a6d41ed500786_73.png)
 
 ---
 
-![](img/2ed4c79ec313f220dc5a6d41ed500786_75.png)
 
 ## 总结
 
-![](img/2ed4c79ec313f220dc5a6d41ed500786_77.png)
 
-![](img/2ed4c79ec313f220dc5a6d41ed500786_78.png)
 
-![](img/2ed4c79ec313f220dc5a6d41ed500786_79.png)
 
 本节课我们一起学习了Prometheus中用于分析仪表（Gauge）指标的四个核心函数：
 1.  **`changes()`**：统计指定时间段内数值变化的次数，用于监控状态翻转。
@@ -172,7 +130,6 @@ holt_winters(process_resident_memory_bytes[1h], 0.1, 0.5)
 3.  **`predict_linear()`**：基于线性回归预测指标未来的值，适用于容量规划。
 4.  **`holt_winters()`**：使用指数平滑法平滑数据并预测趋势，适用于处理波动较大的序列。
 
-![](img/2ed4c79ec313f220dc5a6d41ed500786_81.png)
 
 ![](img/2ed4c79ec313f220dc5a6d41ed500786_83.png)
 

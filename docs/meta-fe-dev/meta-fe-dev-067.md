@@ -36,7 +36,6 @@ const [state, setState] = useState(initialState);
 *   可以在一个组件内调用多个状态钩子或副作用钩子。
 *   应保证多次钩子调用的顺序一致。
 
-![](img/c77bf2176c6aa3c273d03af75a02e75a_1.png)
 
 以下是关于 `fetch` 函数的内容。你学习了 JavaScript 中被称为“异步 JavaScript”的职责委托机制。`fetch` 函数本身看起来是 JavaScript 的一部分，但实际上它是从 JavaScript 调用浏览器 API 的一种方式。这引出了使用状态和副作用钩子获取数据的课程。你通过一个演示，学习了如何使用 `fetch` API 在 React 中从网络获取数据。
 
@@ -49,7 +48,6 @@ fetch(url)
 
 完成本课后，你应该更深入地理解了如果开发者不遵守 React 钩子规则会发生什么，并且能够描述在 JavaScript 和 React 中是如何获取数据的。
 
-![](img/c77bf2176c6aa3c273d03af75a02e75a_3.png)
 
 ## 第四课：useReducer 钩子与自定义钩子
 
@@ -64,7 +62,6 @@ const [state, dispatch] = useReducer(reducer, initialState);
 
 此外，你还接触了 `refs` 的概念，了解了它们如何用于超越虚拟 DOM 并访问底层 DOM 元素及其他应用。你也有机会探索如何编写自己的自定义钩子。
 
-![](img/c77bf2176c6aa3c273d03af75a02e75a_5.png)
 
 **核心概念代码示例：**
 ```javascript

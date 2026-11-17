@@ -108,9 +108,7 @@ void dump_as_object(Namespace& ns, const std::string& output_path) {
 *   **AOT**：在程序运行前完成全部编译。
 *   **JIT**：在程序运行时动态编译代码。
 
-![](img/c8463a46d22af1897aa413b8f3ac86aa_1.png)
 
-![](img/c8463a46d22af1897aa413b8f3ac86aa_3.png)
 
 两者并不互斥。我们可以在编译时使用JIT来执行宏展开，然后将最终结果进行AOT编译，生成可执行文件。这也是Serene编译器后续的发展方向。
 

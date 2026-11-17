@@ -97,7 +97,6 @@ pizza.contents()  # 输出: The Pizza has ['cheese', 'bread', 'tomato'] and take
 pasta.contents()  # 输出: The Pasta has ['penne', 'sauce'] and takes 55 minutes to prepare.
 ```
 
-![](img/9a6de63664709365506af2447dfafdee_3.png)
 
 运行上述代码，你将看到两个实例输出了各自不同的信息。这清晰地展示了代码复用：我们只编写了一次 `Recipe` 类和 `contents` 方法，但却能用于生成无数个具有不同数据的食谱对象。
 

@@ -4,9 +4,7 @@
 
 ## 概述 📋
 
-![](img/bd882857254978b7dc48214b975485f2_1.png)
 
-![](img/bd882857254978b7dc48214b975485f2_3.png)
 
 TCP拥塞控制是确保网络稳定和高效运行的关键机制。它主要包含三个阶段：**慢启动**、**拥塞避免**和**拥塞检测**。在NS3中，我们可以通过模拟来观察这些阶段如何影响数据传输。
 
@@ -54,11 +52,8 @@ CwndChange (Ptr<OutputStreamWrapper> stream, uint32_t oldCwnd, uint32_t newCwnd)
 
 在主函数中，程序完成了以下设置：
 
-![](img/bd882857254978b7dc48214b975485f2_5.png)
 
-![](img/bd882857254978b7dc48214b975485f2_7.png)
 
-![](img/bd882857254978b7dc48214b975485f2_9.png)
 
 1.  创建两个网络节点。
 2.  配置点对点链路的带宽（5 Mbps）和延迟（2ms）。
@@ -68,31 +63,20 @@ CwndChange (Ptr<OutputStreamWrapper> stream, uint32_t oldCwnd, uint32_t newCwnd)
 6.  启用PCAP跟踪，便于后续使用Wireshark分析。
 7.  配置GnuplotHelper，自动生成数据包计数与时间的关系图。
 
-![](img/bd882857254978b7dc48214b975485f2_11.png)
 
-![](img/bd882857254978b7dc48214b975485f2_13.png)
 
 ## 运行模拟与结果分析 📊
 
-![](img/bd882857254978b7dc48214b975485f2_15.png)
 
-![](img/bd882857254978b7dc48214b975485f2_17.png)
 
-![](img/bd882857254978b7dc48214b975485f2_18.png)
 
-![](img/bd882857254978b7dc48214b975485f2_20.png)
 
-![](img/bd882857254978b7dc48214b975485f2_22.png)
 
-![](img/bd882857254978b7dc48214b975485f2_24.png)
 
-![](img/bd882857254978b7dc48214b975485f2_26.png)
 
 编译并运行程序后，会生成多个数据文件。我们最关心的是记录拥塞窗口变化的 `seventh.cwnd` 文件。
 
-![](img/bd882857254978b7dc48214b975485f2_28.png)
 
-![](img/bd882857254978b7dc48214b975485f2_30.png)
 
 该文件包含三列数据：时间（秒）、旧拥塞窗口值、新拥塞窗口值。通过分析数据，可以清晰地看到窗口值经历指数增长、线性增长和因丢包导致的乘性减少这一循环过程。
 
@@ -108,9 +92,7 @@ plot “seventh.cwnd” using 1:2 with linespoints title “Old Cwnd”, \
      “seventh.cwnd” using 1:3 with linespoints title “New Cwnd”
 ```
 
-![](img/bd882857254978b7dc48214b975485f2_32.png)
 
-![](img/bd882857254978b7dc48214b975485f2_34.png)
 
 ![](img/bd882857254978b7dc48214b975485f2_35.png)
 
@@ -120,9 +102,7 @@ plot “seventh.cwnd” using 1:2 with linespoints title “Old Cwnd”, \
 
 ## 总结 🎯
 
-![](img/bd882857254978b7dc48214b975485f2_39.png)
 
-![](img/bd882857254978b7dc48214b975485f2_41.png)
 
 ![](img/bd882857254978b7dc48214b975485f2_43.png)
 

@@ -25,7 +25,6 @@
 
 在该注释行的下方，添加 `include` 标签，并指定 `_footer.html` 文件的相对路径。
 
-![](img/0ce02ff329dd83a58de81e665d234333_1.png)
 
 ```html
 <!-- footer content -->
@@ -75,10 +74,8 @@
 
 😊
 
-![](img/0ce02ff329dd83a58de81e665d234333_3.png)
 
 ![](img/0ce02ff329dd83a58de81e665d234333_3.png)
 
-![](img/0ce02ff329dd83a58de81e665d234333_4.png)
 
 ![](img/0ce02ff329dd83a58de81e665d234333_4.png)

@@ -2,21 +2,17 @@
 
 在本节课中，我们将学习网络模拟器3（NS3）所使用的一系列第三方工具。这些工具对于分析和可视化模拟结果至关重要，其中一些工具将伴随你的整个职业生涯。
 
-![](img/37052bd0e38d838dda5f306cebce956a_1.png)
 
 上一节我们介绍了NS3的基本架构，本节中我们来看看这些强大的辅助工具。
 
 ## Wireshark 数据包分析器
 
-![](img/37052bd0e38d838dda5f306cebce956a_3.png)
 
 Wireshark是一个网络数据包分析器或数据包追踪器。它可以分析各种网络数据包。如果你想设计自己的协议和自定义数据包结构，Wireshark也能进行分析。例如，它可以处理TCP、UDP、SNMP等多种协议。
 
-![](img/37052bd0e38d838dda5f306cebce956a_5.png)
 
 网络数据包分析器会捕获网络数据包，并尽可能详细地显示数据包信息，甚至可以达到比特级别的细节。NS3之所以包含Wireshark，是因为它能够处理一种名为“数据包捕获”的文件，通常简称为Pcap文件。
 
-![](img/37052bd0e38d838dda5f306cebce956a_7.png)
 
 以下是Wireshark的主要功能列表：
 *   它可以创建各种统计信息。
@@ -38,9 +34,7 @@ sudo dnf install wireshark
 
 ---
 
-![](img/37052bd0e38d838dda5f306cebce956a_9.png)
 
-![](img/37052bd0e38d838dda5f306cebce956a_11.png)
 
 ## NetAnim 网络动画器
 
@@ -53,7 +47,6 @@ sudo apt-get install qt4-dev-tools
 ```
 安装完成后，在NS3的`netanim-3.10x`目录下，运行`./netanim`命令来启动动画器。
 
-![](img/37052bd0e38d838dda5f306cebce956a_13.png)
 
 要在源代码中启用NetAnim，需要进行以下配置。首先，在头文件部分包含：
 ```cpp
@@ -70,7 +63,6 @@ anim.SetConstantPosition (node, x, y);
 
 ## Trace-Matrix 追踪矩阵分析器
 
-![](img/37052bd0e38d838dda5f306cebce956a_15.png)
 
 Trace-Matrix是一个第三方追踪矩阵分析软件。你可以从`tracematrix.net`或`SourceForge`网站下载其最新版本。
 
@@ -80,7 +72,6 @@ java -jar tracematrix.jar
 ```
 该软件处理的是NS3生成的`.tr`格式的追踪文件，这种文件包含ASCII格式的追踪数据。
 
-![](img/37052bd0e38d838dda5f306cebce956a_17.png)
 
 要在代码中启用ASCII追踪，需要在`Simulator::Run()`函数之前添加代码。例如，为CSMA和Wi-Fi助手类启用追踪：
 ```cpp
@@ -92,7 +83,6 @@ phy.EnableAsciiAll (ascii.CreateFileStream ("wifi.tr"));
 
 ---
 
-![](img/37052bd0e38d838dda5f306cebce956a_19.png)
 
 ## 数据包捕获 (PCAP) 与 TCPdump
 
@@ -106,7 +96,6 @@ csma.EnablePcapAll ("third");
 ```
 这段代码会为每个网络接口生成独立的PCAP文件，文件名格式类似于`third-0-0.pcap`、`third-0-1.pcap`等。
 
-![](img/37052bd0e38d838dda5f306cebce956a_21.png)
 
 TCPdump是一个命令行网络分析工具。你可以使用如下命令分析PCAP文件：
 ```bash
@@ -114,7 +103,6 @@ tcpdump -tt -r filed.pcap
 ```
 这对于希望深入理解TCP/IP协议栈的网络管理员来说非常有用。
 
-![](img/37052bd0e38d838dda5f306cebce956a_23.png)
 
 ---
 
@@ -122,7 +110,6 @@ tcpdump -tt -r filed.pcap
 
 Flow Monitor是NS3中一个非常强大的内置工具，能够提供详尽的流级别统计数据，例如数据包丢失、丢包、传输/接收能量以及收发数据包数量等。
 
-![](img/37052bd0e38d838dda5f306cebce956a_25.png)
 
 要使用Flow Monitor，首先需要在源代码中包含头文件：
 ```cpp
@@ -142,11 +129,9 @@ flowMonitor->SerializeToXmlFile ("flow-monitor.xml", true, true);
 
 ---
 
-![](img/37052bd0e38d838dda5f306cebce956a_27.png)
 
 ## PyViz 可视化工具
 
-![](img/37052bd0e38d838dda5f306cebce956a_29.png)
 
 PyViz是一个基于Python的可视化工具，但因其依赖包已从Ubuntu仓库移除，在较新系统中可能无法工作。它的功能与NetAnim类似，但更集成于NS3内部。
 
@@ -181,7 +166,6 @@ Gnuplot的强大之处在于，你可以将复杂的绘图指令写在一个脚�
 
 ---
 
-![](img/37052bd0e38d838dda5f306cebce956a_31.png)
 
 ![](img/37052bd0e38d838dda5f306cebce956a_33.png)
 

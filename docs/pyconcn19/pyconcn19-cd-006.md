@@ -1,12 +1,8 @@
 # 006：基于 Flask 的 REST API 开发实践
 
-![](img/72977ac83d12039791d9a75ce91c7c7a_0.png)
 
-![](img/72977ac83d12039791d9a75ce91c7c7a_1.png)
 
-![](img/72977ac83d12039791d9a75ce91c7c7a_0.png)
 
-![](img/72977ac83d12039791d9a75ce91c7c7a_1.png)
 
 在本教程中，我们将学习如何使用 Flask 框架开发 REST API。我们将从基础概念讲起，逐步深入到设计原则、工具选择以及使用原生 Flask 实现 API 的实践。本教程旨在为初学者提供一个清晰、实用的学习路径。
 
@@ -245,6 +241,5 @@ def protected_resource():
 
 希望本教程能为你使用 Flask 进行 API 开发提供一个良好的起点。
 
-![](img/72977ac83d12039791d9a75ce91c7c7a_3.png)
 
 ![](img/72977ac83d12039791d9a75ce91c7c7a_3.png)

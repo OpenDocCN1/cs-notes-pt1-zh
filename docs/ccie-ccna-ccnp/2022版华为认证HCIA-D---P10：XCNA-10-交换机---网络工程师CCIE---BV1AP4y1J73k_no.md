@@ -118,30 +118,21 @@ MAC地址（媒体访问控制地址）是数据链路层用于在网络内唯�
 
 ---
 
-![](img/57daf846d2a9202abd6ac6befd6dff3b_1.png)
 
 ## 二层交换机工作原理详解
 
 交换机的核心工作是基于MAC地址表进行数据帧的转发。其工作可分为控制层面和数据层面。
 
-![](img/57daf846d2a9202abd6ac6befd6dff3b_3.png)
 
-![](img/57daf846d2a9202abd6ac6befd6dff3b_4.png)
 
-![](img/57daf846d2a9202abd6ac6befd6dff3b_5.png)
 
-![](img/57daf846d2a9202abd6ac6befd6dff3b_6.png)
 
-![](img/57daf846d2a9202abd6ac6befd6dff3b_7.png)
 
-![](img/57daf846d2a9202abd6ac6befd6dff3b_9.png)
 
-![](img/57daf846d2a9202abd6ac6befd6dff3b_10.png)
 
 ### 控制层面：MAC地址表的学习
 MAC地址表（CAM表）记录了 `MAC地址 - 接口 - VLAN` 的映射关系。交换机通过以下方式学习表项：
 
-![](img/57daf846d2a9202abd6ac6befd6dff3b_12.png)
 
 1.  **动态学习（主要方式）**：
     *   交换机从某个接口收到一个**数据帧**时，会检查帧中的**源MAC地址**。
@@ -149,7 +140,6 @@ MAC地址表（CAM表）记录了 `MAC地址 - 接口 - VLAN` 的映射关系。
     *   于是，它将 `源MAC地址、接收接口、接口所属VLAN` 作为一个表项记录到MAC地址表中。
     *   **老化机制**： 动态学习的表项不是永久的。如果一段时间（默认300秒）内没有再次收到该MAC地址发来的帧，表项会被自动删除。如果接口状态变为down，相关表项也会立即删除。
 
-![](img/57daf846d2a9202abd6ac6befd6dff3b_14.png)
 
 2.  **静态配置（辅助方式）**：
     *   管理员可以手动添加MAC地址表项。
@@ -158,15 +148,11 @@ MAC地址表（CAM表）记录了 `MAC地址 - 接口 - VLAN` 的映射关系。
 ### 数据层面：数据帧的转发决策
 交换机收到一个数据帧后的处理流程如下：
 
-![](img/57daf846d2a9202abd6ac6befd6dff3b_16.png)
 
-![](img/57daf846d2a9202abd6ac6befd6dff3b_18.png)
 
-![](img/57daf846d2a9202abd6ac6befd6dff3b_19.png)
 
 ![](img/57daf846d2a9202abd6ac6befd6dff3b_21.png)
 
-![](img/57daf846d2a9202abd6ac6befd6dff3b_23.png)
 
 1.  **检查帧完整性**： 检查帧校验序列（FCS），如果是冲突碎片或错误帧，则直接丢弃。
 2.  **学习源MAC**： 将帧的源MAC地址和接收接口学习/更新到MAC地址表。
@@ -184,7 +170,6 @@ MAC地址表（CAM表）记录了 `MAC地址 - 接口 - VLAN` 的映射关系。
         *   这意味着发送方和接收方连接在交换机的同一个接口上（可能下联了一个集线器）。如果转发，会导致接收方收到重复帧。
         *   为了避免重复帧，交换机会将数据帧**丢弃**。
 
-![](img/57daf846d2a9202abd6ac6befd6dff3b_25.png)
 
 ### 通信流程示例（主机A访问主机B）
 假设主机A(IP_A, MAC_A) 首次访问同网段的主机B(IP_B, MAC_B)：
@@ -201,27 +186,18 @@ MAC地址表（CAM表）记录了 `MAC地址 - 接口 - VLAN` 的映射关系。
     *   查表，目的MAC_A已知，且出接口 != 入接口，执行**精确转发**给A。
 6.  A收到ARP应答，学习B的IP-MAC映射。此后双方即可进行单播通信，交换机进行精确转发。
 
-![](img/57daf846d2a9202abd6ac6befd6dff3b_27.png)
 
 ---
 
-![](img/57daf846d2a9202abd6ac6befd6dff3b_29.png)
 
-![](img/57daf846d2a9202abd6ac6befd6dff3b_30.png)
 
-![](img/57daf846d2a9202abd6ac6befd6dff3b_32.png)
 
-![](img/57daf846d2a9202abd6ac6befd6dff3b_34.png)
 
-![](img/57daf846d2a9202abd6ac6befd6dff3b_36.png)
 
-![](img/57daf846d2a9202abd6ac6befd6dff3b_37.png)
 
 ## 实验与验证
 
-![](img/57daf846d2a9202abd6ac6befd6dff3b_39.png)
 
-![](img/57daf846d2a9202abd6ac6befd6dff3b_41.png)
 
 通过模拟器（如eNSP）可以验证上述理论：
 1.  搭建包含PC、交换机、路由器的拓扑。
@@ -247,7 +223,6 @@ MAC地址表（CAM表）记录了 `MAC地址 - 接口 - VLAN` 的映射关系。
     *   **数据层面**： 基于目的MAC地址和MAC地址表，做出**泛洪、精确转发或丢弃**的转发决策。
     *   掌握了完整的**端到端通信流程**（结合ARP）。
 
-![](img/57daf846d2a9202abd6ac6befd6dff3b_43.png)
 
 ![](img/57daf846d2a9202abd6ac6befd6dff3b_45.png)
 

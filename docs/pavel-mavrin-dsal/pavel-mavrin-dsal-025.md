@@ -1,27 +1,17 @@
 # 025：替罪羊树与列表顺序维护
 
-![](img/0a833d5c8d4bb70cdebfb181e399ff0f_1.png)
 
-![](img/0a833d5c8d4bb70cdebfb181e399ff0f_3.png)
 
-![](img/0a833d5c8d4bb70cdebfb181e399ff0f_5.png)
 
-![](img/0a833d5c8d4bb70cdebfb181e399ff0f_7.png)
 
-![](img/0a833d5c8d4bb70cdebfb181e399ff0f_9.png)
 
-![](img/0a833d5c8d4bb70cdebfb181e399ff0f_11.png)
 
-![](img/0a833d5c8d4bb70cdebfb181e399ff0f_13.png)
 
-![](img/0a833d5c8d4bb70cdebfb181e399ff0f_15.png)
 
-![](img/0a833d5c8d4bb70cdebfb181e399ff0f_17.png)
 
 ## 概述
 在本节课中，我们将学习一种特殊的二叉搜索树——替罪羊树。这种树不使用旋转操作来维持平衡，因此适用于一些需要维护额外信息（如排序列表）的特殊场景。我们还将探讨如何利用替罪羊树来实现高效的列表顺序维护数据结构，该结构支持在常数时间内比较元素顺序和插入新元素。
 
-![](img/0a833d5c8d4bb70cdebfb181e399ff0f_19.png)
 
 ---
 

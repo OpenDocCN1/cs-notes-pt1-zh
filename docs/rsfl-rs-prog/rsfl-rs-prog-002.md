@@ -15,19 +15,13 @@ fn function_name() {
 }
 ```
 
-![](img/82c989eaa5e6ea7cec9d426fc654ee76_1.png)
 
-![](img/82c989eaa5e6ea7cec9d426fc654ee76_2.png)
 
-![](img/82c989eaa5e6ea7cec9d426fc654ee76_3.png)
 
 ## 代码块与花括号
 
-![](img/82c989eaa5e6ea7cec9d426fc654ee76_4.png)
 
-![](img/82c989eaa5e6ea7cec9d426fc654ee76_5.png)
 
-![](img/82c989eaa5e6ea7cec9d426fc654ee76_6.png)
 
 我们使用花括号 `{}` 来开启一个代码块。按照惯例，花括号通常与函数定义放在同一行开始，但编译器并不会阻止你使用其他格式。
 
@@ -56,15 +50,11 @@ fn main()
 println!("Hello Bob");
 ```
 
-![](img/82c989eaa5e6ea7cec9d426fc654ee76_8.png)
 
-![](img/82c989eaa5e6ea7cec9d426fc654ee76_9.png)
 
-![](img/82c989eaa5e6ea7cec9d426fc654ee76_10.png)
 
 在许多编程语言中，定义字符串通常使用双引号。在 Rust 中，**必须使用双引号**，单引号 `'` 有其它用途（表示字符类型）。
 
-![](img/82c989eaa5e6ea7cec9d426fc654ee76_11.png)
 
 ## 语句与分号
 
@@ -88,11 +78,8 @@ fn main() {
 
 ## 核心要点总结
 
-![](img/82c989eaa5e6ea7cec9d426fc654ee76_13.png)
 
-![](img/82c989eaa5e6ea7cec9d426fc654ee76_14.png)
 
-![](img/82c989eaa5e6ea7cec9d426fc654ee76_15.png)
 
 本节课我们一起学习了 Rust 程序的基本解剖结构：
 1.  使用 `fn` 关键字定义函数，`main` 函数是程序入口。
@@ -101,9 +88,7 @@ fn main() {
 4.  字符串必须使用双引号 `"` 定义。
 5.  语句末尾需要使用分号 `;` 表示结束。
 
-![](img/82c989eaa5e6ea7cec9d426fc654ee76_16.png)
 
-![](img/82c989eaa5e6ea7cec9d426fc654ee76_17.png)
 
 ![](img/82c989eaa5e6ea7cec9d426fc654ee76_18.png)
 

@@ -122,15 +122,10 @@ ORDER BY totalCustomer DESC;
 
 运行正确的查询后，我们将只看到客户总数大于10,000的`bankID`和`employed`组合。
 
-![](img/c8835a0b460008904692d14cfdbecc00_1.png)
 
-![](img/c8835a0b460008904692d14cfdbecc00_2.png)
 
-![](img/c8835a0b460008904692d14cfdbecc00_4.png)
 
-![](img/c8835a0b460008904692d14cfdbecc00_1.png)
 
-![](img/c8835a0b460008904692d14cfdbecc00_2.png)
 
 ## 总结
 

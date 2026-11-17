@@ -18,7 +18,6 @@
 
 以下是创建父类的代码：
 
-![](img/bc73539bc91bcd4ebde1c7fe8b50844b_1.png)
 
 ```python
 class Prey:
@@ -30,11 +29,9 @@ class Predator:
         print(f"{self.name} is hunting")
 ```
 
-![](img/bc73539bc91bcd4ebde1c7fe8b50844b_3.png)
 
 现在，我们创建几个子类。兔子是猎物，鹰是捕食者。
 
-![](img/bc73539bc91bcd4ebde1c7fe8b50844b_4.png)
 
 以下是创建子类的代码：
 
@@ -57,12 +54,10 @@ class Fish(Prey, Predator):
 
 让我们测试一下这些类的功能。首先创建各个类的对象。
 
-![](img/bc73539bc91bcd4ebde1c7fe8b50844b_6.png)
 
 以下是测试代码：
 
 
-![](img/bc73539bc91bcd4ebde1c7fe8b50844b_8.png)
 
 ```python
 rabbit = Rabbit()
@@ -85,21 +80,17 @@ fish.hunt()    # 输出：Nemo is hunting
 
 如你所见，`Fish` 对象成功地同时拥有了 `flee` 和 `hunt` 两个方法，这正是多重继承的威力。
 
-![](img/bc73539bc91bcd4ebde1c7fe8b50844b_10.png)
 
 ---
 
 ## 多级继承：继承的层级结构 🏗️
 
-![](img/bc73539bc91bcd4ebde1c7fe8b50844b_12.png)
 
-![](img/bc73539bc91bcd4ebde1c7fe8b50844b_13.png)
 
 理解了多重继承后，我们再来看看**多级继承**。在多级继承中，一个父类本身也可以是另一个类的子类，从而形成一种层级或链条关系。
 
 例如，我们可以创建一个所有动物的基类 `Animal`，让 `Prey` 和 `Predator` 继承它。这样，`Rabbit`、`Hawk`、`Fish` 这些“孙子辈”的类就能间接获得 `Animal` 类的特性。
 
-![](img/bc73539bc91bcd4ebde1c7fe8b50844b_15.png)
 
 首先，我们创建 `Animal` 这个“祖父”类。
 
@@ -121,10 +112,8 @@ class Animal:
 
 以下是修改父类继承关系的代码：
 
-![](img/bc73539bc91bcd4ebde1c7fe8b50844b_17.png)
 
 
-![](img/bc73539bc91bcd4ebde1c7fe8b50844b_19.png)
 
 ```python
 class Prey(Animal):
@@ -137,9 +126,7 @@ class Predator(Animal):
 
 子类 `Rabbit`、`Hawk`、`Fish` 的继承关系保持不变。但由于它们的父类现在继承自 `Animal`，它们也将自动获得 `eat` 和 `sleep` 方法。
 
-![](img/bc73539bc91bcd4ebde1c7fe8b50844b_21.png)
 
-![](img/bc73539bc91bcd4ebde1c7fe8b50844b_22.png)
 
 让我们创建对象并测试完整的继承链。
 

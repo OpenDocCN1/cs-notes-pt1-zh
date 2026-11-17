@@ -203,7 +203,6 @@ GLuint createShaderProgram(const std::string& vsSource, const std::string& fsSou
 
 所有准备工作完成后，我们进入主循环进行绘制。主循环通常包含处理输入、预绘制设置和正式绘制。
 
-![](img/d8aba52d49b2f674dd377c490c8205f0_28.png)
 
 在预绘制函数 `preDraw()` 中，我们设置每一帧的OpenGL状态：
 ```cpp

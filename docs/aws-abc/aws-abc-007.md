@@ -1,8 +1,6 @@
 # 007：G代表AWS Glue 🧩
 
-![](img/b6dc23cfc95f820d5c46840337b97bdc_0.png)
 
-![](img/b6dc23cfc95f820d5c46840337b97bdc_0.png)
 
 在本节课中，我们将学习AWS Glue，这是一个无服务器的数据集成服务。我们将了解它的核心功能，包括数据发现、ETL/ELT作业、数据清洗、转换以及数据目录管理。通过本教程，你将理解AWS Glue如何帮助整合和分析分散在不同来源的数据。
 
@@ -10,19 +8,13 @@ AWS ABCs系列课程按字母顺序介绍不同的AWS服务。今天的字母是
 
 AWS Glue是一个无服务器数据集成服务，它提供了完成大数据和数据分析任务所需的各种数据集成能力。这些能力包括数据发现、创建和运行ETL或ELT作业、数据清洗、数据转换以及为数据提供集中式目录管理。
 
-![](img/b6dc23cfc95f820d5c46840337b97bdc_2.png)
 
-![](img/b6dc23cfc95f820d5c46840337b97bdc_3.png)
 
-![](img/b6dc23cfc95f820d5c46840337b97bdc_4.png)
 
 数据通常分散在许多不同的来源中。为了有效地分析这些数据，通常需要使用ETL或ELT流程来创建数据的统一视图，并在分析前提升数据质量。
 
-![](img/b6dc23cfc95f820d5c46840337b97bdc_5.png)
 
-![](img/b6dc23cfc95f820d5c46840337b97bdc_6.png)
 
-![](img/b6dc23cfc95f820d5c46840337b97bdc_7.png)
 
 ![](img/b6dc23cfc95f820d5c46840337b97bdc_8.png)
 
@@ -51,13 +43,10 @@ ELT是一个非常相似的过程，区别在于数据会先被**加载**到目�
 
 ## AWS Glue数据目录 📚
 
-![](img/b6dc23cfc95f820d5c46840337b97bdc_15.png)
 
-![](img/b6dc23cfc95f820d5c46840337b97bdc_16.png)
 
 ![](img/b6dc23cfc95f820d5c46840337b97bdc_17.png)
 
-![](img/b6dc23cfc95f820d5c46840337b97bdc_18.png)
 
 AWS Glue为此提供了**AWS Glue数据目录**。这是一个用于存储数据元数据的集中式中心。AWS Glue数据目录可用于指导操作，例如在分析数据前对其进行转换。
 
@@ -85,7 +74,6 @@ AWS Glue为此提供了**AWS Glue数据目录**。这是一个用于存储数据
 
 ![](img/b6dc23cfc95f820d5c46840337b97bdc_25.png)
 
-![](img/b6dc23cfc95f820d5c46840337b97bdc_26.png)
 
 ![](img/b6dc23cfc95f820d5c46840337b97bdc_27.png)
 

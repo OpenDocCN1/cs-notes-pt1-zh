@@ -69,13 +69,10 @@ GRANT test_role TO user10;
 
 ### 第四步：验证权限
 
-![](img/afa93a6dde9b94dfcf6a9b75419be62d_1.png)
 
 让我们来验证权限是否生效。以 `user10` 身份登录并尝试查询之前授权的表。
 
-![](img/afa93a6dde9b94dfcf6a9b75419be62d_3.png)
 
-![](img/afa93a6dde9b94dfcf6a9b75419be62d_4.png)
 
 1.  使用 `user10` 登录数据库。
 2.  执行查询命令：

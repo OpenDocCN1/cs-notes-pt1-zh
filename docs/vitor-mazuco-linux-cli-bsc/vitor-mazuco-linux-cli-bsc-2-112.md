@@ -75,9 +75,7 @@ db.total_sales_by_state.find().sort({value: -1}) // 按销售额降序排列
 
 我们的目标是统计每位作者发表的文章数量。
 
-![](img/963ccb60d68f9addde857405d1c718bc_7.png)
 
-![](img/963ccb60d68f9addde857405d1c718bc_9.png)
 
 以下是操作步骤和命令：
 

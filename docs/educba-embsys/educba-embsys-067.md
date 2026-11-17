@@ -1,10 +1,7 @@
 构建嵌入式系统：04_03_04：通过软件延时实现LED切换 🔄
 
-![](img/aeb53a7fed96a9c2f9d5fdef1875e6cc_0.png)
 
-![](img/aeb53a7fed96a9c2f9d5fdef1875e6cc_1.png)
 
-![](img/aeb53a7fed96a9c2f9d5fdef1875e6cc_2.png)
 
 在本节课程中，我们将学习如何修改一个简单的LED点亮程序，使其变为LED切换（闪烁）程序。核心方法是引入一个软件延时，在LED点亮和熄灭之间制造一个可观察的时间间隔。
 

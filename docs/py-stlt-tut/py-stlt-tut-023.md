@@ -43,7 +43,6 @@ height = st.number_input("Height", value=img.height)
 
 我们同样先添加一个居中的标题。
 
-![](img/a59796c81d646915ab89f64d18e37b7e_1.png)
 
 ```python
 st.markdown("<h2 style='text-align: center;'>Rotation</h2>", unsafe_allow_html=True)
@@ -59,9 +58,7 @@ degree = st.number_input("Degrees")
 
 ## 添加滤镜控件
 
-![](img/a59796c81d646915ab89f64d18e37b7e_3.png)
 
-![](img/a59796c81d646915ab89f64d18e37b7e_4.png)
 
 最后，我们为编辑器添加滤镜功能。Pillow 库提供了多种内置的图像滤镜，如模糊、轮廓、细节增强等。
 
@@ -89,7 +86,6 @@ info.markdown("<h2 style='text-align: center;'>Information</h2>", unsafe_allow_h
 # 之后的其他控件代码放在这里
 ```
 
-![](img/a59796c81d646915ab89f64d18e37b7e_6.png)
 
 这样，界面结构就变得更加清晰：顶部是信息区，下方依次是调整大小、旋转和滤镜控件。
 

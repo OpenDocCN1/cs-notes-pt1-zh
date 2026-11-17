@@ -178,11 +178,9 @@ def withdraw():
 
 这意味着 `balance` 和 `is_running` 将成为 `main` 函数的局部变量。因此，我们需要将它们作为参数传递给 `show_balance`、`deposit` 和 `withdraw` 函数，并相应地修改这些函数的定义。
 
-![](img/6c97ea07414753b4b4f470589761d042_1.png)
 
 最后，我们使用 `if __name__ == "__main__":` 这个常见的Python惯用法来调用 `main` 函数，这确保了我们的程序既可以独立运行，也可以作为模块被导入。
 
-![](img/6c97ea07414753b4b4f470589761d042_3.png)
 
 ```python
 def main():

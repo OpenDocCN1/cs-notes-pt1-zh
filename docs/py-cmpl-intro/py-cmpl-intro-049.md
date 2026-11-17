@@ -4,15 +4,11 @@ Python超全入门教程：P49：Python继承入门
 
 ### 什么是继承？🤔
 
-![](img/00a95a7908a23bb5eaf52875ea6b1755_1.png)
 
 继承允许一个类从另一个类那里继承属性和方法。这类似于现实生活中的孩子可以从父母那里继承特征。通过让一个类继承另一个类的属性和方法，我们可以实现代码的复用和扩展。
 
-![](img/00a95a7908a23bb5eaf52875ea6b1755_2.png)
 
-![](img/00a95a7908a23bb5eaf52875ea6b1755_3.png)
 
-![](img/00a95a7908a23bb5eaf52875ea6b1755_4.png)
 
 ### 创建父类：动物类 🐾
 
@@ -40,9 +36,7 @@ class Animal:
 现在，我们将创建三个子类：`Dog`、`Cat` 和 `Mouse`。它们都将继承自 `Animal` 类。
 
 
-![](img/00a95a7908a23bb5eaf52875ea6b1755_6.png)
 
-![](img/00a95a7908a23bb5eaf52875ea6b1755_7.png)
 
 ```python
 class Dog(Animal):
@@ -75,7 +69,6 @@ cat.eat()              # 输出: Garfield is eating.
 mouse.sleep()          # 输出: Mickey is sleeping.
 ```
 
-![](img/00a95a7908a23bb5eaf52875ea6b1755_9.png)
 
 可以看到，子类对象成功使用了从父类继承来的属性和方法。
 
@@ -83,9 +76,7 @@ mouse.sleep()          # 输出: Mickey is sleeping.
 
 继承的核心优势在于避免代码重复。想象一下，如果没有继承，我们需要在 `Dog`、`Cat`、`Mouse` 每个类里都重复编写 `name`、`is_alive`、`eat()` 和 `sleep()`。这不仅代码冗长，而且一旦需要修改（比如把 `sleep` 方法输出的信息从 “is sleeping” 改为 “is asleep”），就必须在每个类里逐一修改，非常低效且容易出错。
 
-![](img/00a95a7908a23bb5eaf52875ea6b1755_11.png)
 
-![](img/00a95a7908a23bb5eaf52875ea6b1755_12.png)
 
 使用继承后，我们只需在父类 `Animal` 中修改一次：
 
@@ -125,16 +116,13 @@ mouse.speak() # 输出: Squeak!
 
 ### 总结 📚
 
-![](img/00a95a7908a23bb5eaf52875ea6b1755_14.png)
 
 本节课中我们一起学习了Python中的继承。
 *   **继承** 允许一个类（子类）获取另一个类（父类）的属性和方法，语法是 `class ChildClass(ParentClass):`。
 *   它的主要优点是 **代码复用** 和 **易于维护**。通用代码只需在父类中编写一次，所有子类即可使用。修改也只需在父类中进行。
 *   子类可以通过定义自己的方法来 **扩展** 功能，实现与父类或其他子类的差异化。
 
-![](img/00a95a7908a23bb5eaf52875ea6b1755_15.png)
 
-![](img/00a95a7908a23bb5eaf52875ea6b1755_16.png)
 
 ![](img/00a95a7908a23bb5eaf52875ea6b1755_17.png)
 

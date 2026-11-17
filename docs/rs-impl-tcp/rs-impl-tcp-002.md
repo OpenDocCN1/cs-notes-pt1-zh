@@ -42,7 +42,6 @@ Interface (连接管理器)
 └── 协调多个TcpStream的并发访问
 ```
 
-![](img/9c2a8d9517815d56e3f7ba056f67ae8c_12.png)
 
 ## 实现步骤
 
@@ -50,7 +49,6 @@ Interface (连接管理器)
 
 ![](img/9c2a8d9517815d56e3f7ba056f67ae8c_16.png)
 
-![](img/9c2a8d9517815d56e3f7ba056f67ae8c_17.png)
 
 ![](img/9c2a8d9517815d56e3f7ba056f67ae8c_19.png)
 

@@ -18,7 +18,6 @@ AWS Local Zones是一种将AWS计算、存储、数据库和其他服务部署�
 
 在深入了解Local Zones之前，让我们快速回顾一下相关的AWS全球基础设施概念。
 
-![](img/c8db91df49a7b5709fd66d714ca41fab_2.png)
 
 ![](img/c8db91df49a7b5709fd66d714ca41fab_3.png)
 
@@ -57,7 +56,6 @@ Local Zones可以帮助你运行对延迟敏感的应用，例如：
 
 ![](img/c8db91df49a7b5709fd66d714ca41fab_7.png)
 
-![](img/c8db91df49a7b5709fd66d714ca41fab_8.png)
 
 因为这些Local Zones在物理上更接近你的最终用户，从而显著降低了网络延迟。
 
@@ -117,7 +115,6 @@ AWS专用Local Zones是为特定客户或社区构建和使用的Local Zones。�
 
 ![](img/c8db91df49a7b5709fd66d714ca41fab_17.png)
 
-![](img/c8db91df49a7b5709fd66d714ca41fab_18.png)
 
 ![](img/c8db91df49a7b5709fd66d714ca41fab_19.png)
 

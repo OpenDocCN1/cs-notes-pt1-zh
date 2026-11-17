@@ -75,7 +75,6 @@
 
 找到绘制调用 `glDrawArrays`，将顶点数量参数从 `3` 改为 `6`：
 
-![](img/77e5d418465373fe39c6ed0a272312ea_4.png)
 
 ```cpp
 glDrawArrays(GL_TRIANGLES, 0, 6); // 绘制6个顶点，构成2个三角形
@@ -85,7 +84,6 @@ glDrawArrays(GL_TRIANGLES, 0, 6); // 绘制6个顶点，构成2个三角形
 
 ## 关于环绕顺序的灵活性
 
-![](img/77e5d418465373fe39c6ed0a272312ea_6.png)
 
 ![](img/77e5d418465373fe39c6ed0a272312ea_7.png)
 
@@ -96,7 +94,6 @@ OpenGL允许你自定义哪个环绕方向代表正面。你可以使用 `glFron
 
 这在需要与其他图形API（如DirectX，其默认值可能不同）保持一致时非常有用。
 
-![](img/77e5d418465373fe39c6ed0a272312ea_9.png)
 
 ## 总结
 

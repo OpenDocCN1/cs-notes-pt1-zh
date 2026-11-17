@@ -36,7 +36,6 @@ int main() {
 }
 ```
 
-![](img/168050f7edfaa0c0e76a17ccba8fdc56_5.png)
 
 这段代码的作用是检测并初始化图形驱动器，如果初始化失败则输出错误信息并退出。
 
@@ -56,7 +55,6 @@ printf("Enter the sales data for year 1999: ");
 scanf("%d", &n1999);
 ```
 
-![](img/168050f7edfaa0c0e76a17ccba8fdc56_7.png)
 
 ![](img/168050f7edfaa0c0e76a17ccba8fdc56_9.png)
 
@@ -134,7 +132,6 @@ pieslice(320, 240, st1999, en1999, 100);
 
 ## 总结
 
-![](img/168050f7edfaa0c0e76a17ccba8fdc56_27.png)
 
 ![](img/168050f7edfaa0c0e76a17ccba8fdc56_28.png)
 

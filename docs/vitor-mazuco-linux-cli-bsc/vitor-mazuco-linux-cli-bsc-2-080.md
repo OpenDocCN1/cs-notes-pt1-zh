@@ -64,7 +64,6 @@ connection.close()
 
 为了验证Python脚本的输出，我们可以直接在MySQL命令行客户端中执行相同的SQL查询。运行命令`SELECT * FROM Cliente;`，你将看到与Python脚本中`fetchall()`方法返回结果一致的所有数据记录。
 
-![](img/c2685d504bb8c94c57835ed838a7845e_5.png)
 
 ![](img/c2685d504bb8c94c57835ed838a7845e_5.png)
 

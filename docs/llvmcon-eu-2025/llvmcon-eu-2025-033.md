@@ -1,6 +1,5 @@
 # 033：将方言作为方言——为 IRDL 带来原生 C++ 注册
 
-![](img/fe7d6a79f6a435eb3e50e188617e529a_0.png)
 
 ![](img/fe7d6a79f6a435eb3e50e188617e529a_0.png)
 

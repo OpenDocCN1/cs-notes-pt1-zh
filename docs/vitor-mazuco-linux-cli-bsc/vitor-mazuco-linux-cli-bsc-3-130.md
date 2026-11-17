@@ -20,7 +20,6 @@
 
 以下是需要修改的核心部分：
 
-![](img/06b390541107287ecb29933e30a7f32c_12.png)
 
 1.  **资源类型变更**：将资源从 `aws_instance` 改为 `aws_launch_configuration`。
 2.  **参数名更新**：
@@ -96,9 +95,7 @@ data "aws_subnet_ids" "default" {
 }
 ```
 
-![](img/06b390541107287ecb29933e30a7f32c_24.png)
 
-![](img/06b390541107287ecb29933e30a7f32c_26.png)
 
 ### 4. 创建自动伸缩组
 这是集群的核心配置。它基于上面定义的启动模板，在指定的子网中创建和管理指定数量的实例。
@@ -150,7 +147,6 @@ resource "aws_security_group" "instance" {
 }
 ```
 
-![](img/06b390541107287ecb29933e30a7f32c_34.png)
 
 ![](img/06b390541107287ecb29933e30a7f32c_36.png)
 

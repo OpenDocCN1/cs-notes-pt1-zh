@@ -126,7 +126,6 @@ git clone https://github.com/mohittahiliani/PhD-GPSR.git
 
 编译过程可能需要15到20分钟，具体时间取决于你的电脑性能。编译完成后，终端会显示已成功构建的模块列表，其中应包含`GPSR`、`MM-GPSR`和`P-GPSR`。
 
-![](img/f4ce06ce562c8c8320926656f49fcc18_41.png)
 
 ![](img/f4ce06ce562c8c8320926656f49fcc18_42.png)
 

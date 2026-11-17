@@ -1,6 +1,5 @@
 # 008：Azure应用程序网关
 
-![](img/08b71ec27d14455cae66eb5d5886dfb2_0.png)
 
 ## 概述
 在本节课中，我们将要学习Azure应用程序网关。它是一种工作在OSI第7层的Web流量负载均衡器，用于管理流向Web应用程序的流量。我们将了解其工作原理、核心功能、路由选项以及如何通过一个简单的演示来配置它。
@@ -29,39 +28,30 @@ Azure应用程序网关是一个Web流量负载均衡器，它使你能够管理
 以下是其工作原理的示例：
 假设我们有两个后端池：一个用于处理图片（`image-server-pool`），另一个用于处理视频（`video-server-pool`）。
 
-![](img/08b71ec27d14455cae66eb5d5886dfb2_2.png)
 
 *   当用户访问 `abc.com/images` 时，流量会被路由到 `image-server-pool`。
 *   当用户访问 `abc.com/videos` 时，流量则会被路由到 `video-server-pool`。
 
-![](img/08b71ec27d14455cae66eb5d5886dfb2_3.png)
 
 ### 多站点路由
 多站点路由允许根据访问的域名（主机头）将流量导向不同的后端池。
 
-![](img/08b71ec27d14455cae66eb5d5886dfb2_5.png)
 
-![](img/08b71ec27d14455cae66eb5d5886dfb2_6.png)
 
 以下是其工作原理的示例：
 假设应用程序网关需要处理两个网站：`abc.com` 和 `xyz.com`。
 
-![](img/08b71ec27d14455cae66eb5d5886dfb2_7.png)
 
 *   访问 `abc.com` 的请求会被路由到为 `abc.com` 配置的后端池。
 *   访问 `xyz.com` 的请求则会被路由到为 `xyz.com` 配置的后端池。
 
 此外，应用程序网关还提供一个可选功能：**Web应用程序防火墙（WAF）**。启用WAF后，它可以保护你的Web应用免受SQL注入等基于Web的威胁。
 
-![](img/08b71ec27d14455cae66eb5d5886dfb2_9.png)
 
-![](img/08b71ec27d14455cae66eb5d5886dfb2_10.png)
 
 ---
 
-![](img/08b71ec27d14455cae66eb5d5886dfb2_12.png)
 
-![](img/08b71ec27d14455cae66eb5d5886dfb2_13.png)
 
 ## 应用程序网关的SKU
 Azure应用程序网关主要有两个SKU版本：**v1** 和 **v2**。
@@ -73,9 +63,7 @@ Azure应用程序网关主要有两个SKU版本：**v1** 和 **v2**。
 
 你可以根据需求选择适合的SKU版本。v2版本在定价上包含固定费用和容量单位费用两部分。
 
-![](img/08b71ec27d14455cae66eb5d5886dfb2_15.png)
 
-![](img/08b71ec27d14455cae66eb5d5886dfb2_16.png)
 
 以下是v1与v2的主要功能对比：
 *   **自动缩放**：仅v2支持。
@@ -116,7 +104,6 @@ Azure应用程序网关主要有两个SKU版本：**v1** 和 **v2**。
 
 ---
 
-![](img/08b71ec27d14455cae66eb5d5886dfb2_18.png)
 
 ![](img/08b71ec27d14455cae66eb5d5886dfb2_20.png)
 

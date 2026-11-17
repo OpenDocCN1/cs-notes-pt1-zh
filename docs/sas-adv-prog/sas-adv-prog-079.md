@@ -16,17 +16,13 @@ FROM census_data
 GROUP BY region;
 ```
 
-![](img/c5a013d1c8ef95dedbc00ad79aa14689_1.png)
 
-![](img/c5a013d1c8ef95dedbc00ad79aa14689_2.png)
 
 每个区域的人口总和随后会与未汇总的原始数据（如州名 `name` 和该州人口 `P_estimate1`）重新合并。
 
 以下是实现重新合并并计算百分比的关键步骤：
 
-![](img/c5a013d1c8ef95dedbc00ad79aa14689_1.png)
 
-![](img/c5a013d1c8ef95dedbc00ad79aa14689_2.png)
 
 1.  在查询中使用 `GROUP BY region` 对数据进行分组。
 2.  使用聚合函数 `SUM(P_estimate1)` 计算每个区域的总人口。
@@ -43,11 +39,8 @@ FROM census_data
 GROUP BY region;
 ```
 
-![](img/c5a013d1c8ef95dedbc00ad79aa14689_4.png)
 
-![](img/c5a013d1c8ef95dedbc00ad79aa14689_4.png)
 
-![](img/c5a013d1c8ef95dedbc00ad79aa14689_5.png)
 
 ![](img/c5a013d1c8ef95dedbc00ad79aa14689_5.png)
 

@@ -15,9 +15,7 @@ AWS Elastic Beanstalk与CI/CD：03_01_02：数据库导论 🗄️
 
 这个过程的核心是修改环境的配置，其本质是更新一个描述环境的JSON或YAML文件，例如更新 `.ebextensions` 目录下的配置文件来声明数据库依赖。
 
-![](img/c3236b446fd451d9ce05a5d9c3f0b471_1.png)
 
-![](img/c3236b446fd451d9ce05a5d9c3f0b471_2.png)
 
 ```yaml
 # 示例：在 .ebextensions 配置中声明数据库选项（概念示意）
@@ -29,9 +27,7 @@ option_settings:
     DBPassword: mypassword
 ```
 
-![](img/c3236b446fd451d9ce05a5d9c3f0b471_3.png)
 
-![](img/c3236b446fd451d9ce05a5d9c3f0b471_4.png)
 
 完成上述步骤后，您的应用程序环境将与一个托管的数据库实例关联。应用程序可以通过环境变量（如 `RDS_HOSTNAME`, `RDS_DB_NAME`）自动获取数据库连接信息，无需在代码中硬写配置。
 

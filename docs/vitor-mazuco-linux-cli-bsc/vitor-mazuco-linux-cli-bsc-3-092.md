@@ -1,16 +1,12 @@
 # 092：理解指标 - 第二部分 🖥️📊
 
-![](img/d8ba963b0ce3a888220e4ee4f2d7f13d_1.png)
 
-![](img/d8ba963b0ce3a888220e4ee4f2d7f13d_2.png)
 
 在本节课中，我们将继续学习系统指标，重点聚焦于磁盘和文件系统的监控。我们将学习如何在Linux和Windows系统中查看磁盘空间、输入输出（I/O）操作等关键指标，并理解其含义。
 
-![](img/d8ba963b0ce3a888220e4ee4f2d7f13d_4.png)
 
 ---
 
-![](img/d8ba963b0ce3a888220e4ee4f2d7f13d_6.png)
 
 上一节我们介绍了系统监控的基础概念，本节中我们来看看与磁盘相关的具体指标。
 
@@ -23,13 +19,10 @@
 *   **挂载点**：如根分区 `/`、`/boot`、`/run` 等。
 *   **设备名**：如 `sda1`、`sda2`、`sdb` 等，代表不同的物理或虚拟磁盘。
 
-![](img/d8ba963b0ce3a888220e4ee4f2d7f13d_8.png)
 
 最重要的通常是根分区 `/`，它包含了系统的大部分数据。我们可以使用 `node_filesystem_avail_bytes` 这个指标来查询可用磁盘空间。
 
-![](img/d8ba963b0ce3a888220e4ee4f2d7f13d_10.png)
 
-![](img/d8ba963b0ce3a888220e4ee4f2d7f13d_12.png)
 
 **示例查询**：
 ```promql
@@ -37,11 +30,8 @@ node_filesystem_avail_bytes{mountpoint="/"}
 ```
 此查询将返回根分区 `/` 的可用字节数。例如，一个44GB的磁盘可能会显示约40GB的可用空间。Linux系统会为root用户保留一部分空间（通常在 `/boot` 分区），但这部分通常较小。
 
-![](img/d8ba963b0ce3a888220e4ee4f2d7f13d_14.png)
 
-![](img/d8ba963b0ce3a888220e4ee4f2d7f13d_15.png)
 
-![](img/d8ba963b0ce3a888220e4ee4f2d7f13d_17.png)
 
 我们还可以查看 `node_filesystem_size_bytes` 来获取文件系统的总大小。这些指标能帮助我们了解磁盘的空间使用状况。
 
@@ -59,15 +49,11 @@ node_filesystem_avail_bytes{mountpoint="/"}
 *   **I/O操作速率**：使用 `rate()` 函数计算每秒的I/O操作数，例如 `rate(node_disk_io_time_seconds_total[10m])`。
 *   **平均I/O时间**：`node_disk_read_time_seconds_total` 和 `node_disk_write_time_seconds_total`，表示读写的平均耗时。
 
-![](img/d8ba963b0ce3a888220e4ee4f2d7f13d_19.png)
 
-![](img/d8ba963b0ce3a888220e4ee4f2d7f13d_21.png)
 
-![](img/d8ba963b0ce3a888220e4ee4f2d7f13d_23.png)
 
 通过比较读写速率，可以了解磁盘的工作负载模式。例如，数据库应用通常会产生大量的写入操作。监控这些指标的走势图（如过去10分钟或1小时）可以帮助我们发现异常峰值或持续高负载。
 
-![](img/d8ba963b0ce3a888220e4ee4f2d7f13d_25.png)
 
 ---
 
@@ -90,9 +76,7 @@ Linux和Windows的监控逻辑相似，但指标名称有所不同。现在，�
 
 ## 总结 📝
 
-![](img/d8ba963b0ce3a888220e4ee4f2d7f13d_27.png)
 
-![](img/d8ba963b0ce3a888220e4ee4f2d7f13d_29.png)
 
 本节课中我们一起学习了磁盘和文件系统监控的核心指标。
 我们首先探讨了Linux下如何查看文件系统的空间使用情况，例如总容量和可用空间。
@@ -100,9 +84,7 @@ Linux和Windows的监控逻辑相似，但指标名称有所不同。现在，�
 最后，我们对比了Windows系统下的逻辑磁盘监控，其核心思想与Linux相通。
 虽然可监控的指标非常多，但在实践中，我们通常只需关注与当前性能问题最相关的少数关键指标，并进行过滤和聚焦。
 
-![](img/d8ba963b0ce3a888220e4ee4f2d7f13d_30.png)
 
-![](img/d8ba963b0ce3a888220e4ee4f2d7f13d_32.png)
 
 ![](img/d8ba963b0ce3a888220e4ee4f2d7f13d_34.png)
 

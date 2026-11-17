@@ -1,6 +1,5 @@
 # 001：1. 基于 PyQt + QScintilla 的 IDE 对 RobotFramework 的 DSL 进行编程 🛠️
 
-![](img/add475af4bd5a95a0441664fbb88368c_0.png)
 
 ## 概述
 
@@ -237,6 +236,5 @@ editor.setBraceMatching(QsciScintilla.SloppyBraceMatch)
 
 欢迎通过微信与我进一步交流讨论。
 
-![](img/add475af4bd5a95a0441664fbb88368c_2.png)
 
 ![](img/add475af4bd5a95a0441664fbb88368c_2.png)

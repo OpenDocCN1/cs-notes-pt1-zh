@@ -36,39 +36,31 @@ LLVM为我们提供了一个数据结构，将区域组织成一棵树。这棵�
 
 这是程序的控制流图。我们并不太关心每个基本块内的指令，只关注由基本块构成的图结构。
 
-![](img/04311f6fb1c2e3b16ec82046005b3cd7_1.png)
 
-![](img/04311f6fb1c2e3b16ec82046005b3cd7_1.png)
 
 LLVM会将基本块分组为嵌套的C区域。你可以在右侧看到这些区域。
 
-![](img/04311f6fb1c2e3b16ec82046005b3cd7_3.png)
 
-![](img/04311f6fb1c2e3b16ec82046005b3cd7_3.png)
 
 这种将块分组为区域的操作是由称为**区域分析**的Pass完成的。
 
 ## 实现一个区域遍历Pass 💻
 
-![](img/04311f6fb1c2e3b16ec82046005b3cd7_5.png)
 
 现在，让我们来实现一个遍历LLVM提供给我们的区域的Pass。这是我们的分析Pass的头文件。整个头文件并不大。顺便说一下，我将使用传统的Pass管理器。
 
 对于这个例子，我们只需要实现一个类，我称之为`RegionsEX`。它只包含少数几个方法。
 
-![](img/04311f6fb1c2e3b16ec82046005b3cd7_5.png)
 
 我们需要实现其中的两个方法：`runOnFunction` 和 `getAnalysisUsage`。让我们从更简单的后者开始。
 
 ### 实现 `getAnalysisUsage`
 
-![](img/04311f6fb1c2e3b16ec82046005b3cd7_7.png)
 
 `getAnalysisUsage` 方法本身只有两行。第一行向LLVM说明我们将使用区域分析，这个分析由 `RegionInfoPass` 类提供给我们。另一行只是说明我们保留了LLVM迄今为止收集的所有信息，即我们的Pass不会以任何方式转换代码。
 
 记住，我们必须导入 `RegionInfo` 以便能够访问 `RegionInfoPass`。我们可以在CPP文件中完成这个操作。
 
-![](img/04311f6fb1c2e3b16ec82046005b3cd7_7.png)
 
 ### 实现 `runOnFunction`
 
@@ -163,9 +155,7 @@ opt -load ./libRegionsEX.so -regions-ex < example.opt.bc
 
 我们之前已经展示过如何编译LLVM Pass。这是我们的区域分析的输出。我向你展示了访问程序中两个不同区域的结果。
 
-![](img/04311f6fb1c2e3b16ec82046005b3cd7_9.png)
 
-![](img/04311f6fb1c2e3b16ec82046005b3cd7_9.png)
 
 我想你可以将我们在 `printLog` 方法中使用的不同命令与我们在输出中得到的结果联系起来。比如，这里是我们访问的两个区域的名称，这里是基本块的列表。
 

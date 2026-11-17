@@ -12,15 +12,11 @@
 
 ![](img/c7020f795e8a5b3d5ff5e77d2f6baa0f_4.png)
 
-![](img/c7020f795e8a5b3d5ff5e77d2f6baa0f_5.png)
 
-![](img/c7020f795e8a5b3d5ff5e77d2f6baa0f_6.png)
 
-![](img/c7020f795e8a5b3d5ff5e77d2f6baa0f_8.png)
 
 本节我们将利用上下文切换这一新工具，实现一个完全不同的延时函数。线程在调用延时函数时，会主动让出CPU，进入阻塞状态，直到延时结束才恢复运行。从线程角度看，阻塞式延时和轮询式延时没有区别；但从系统整体角度看，CPU资源得以释放给其他就绪线程，效率大大提升。
 
-![](img/c7020f795e8a5b3d5ff5e77d2f6baa0f_10.png)
 
 ## 从轮询到阻塞
 
@@ -33,13 +29,11 @@
 4.  延时时间到后（通常由系统时钟节拍中断服务程序管理），该线程被重新标记为“就绪”。
 5.  调度器在后续调度中会再次选中该线程运行。
 
-![](img/c7020f795e8a5b3d5ff5e77d2f6baa0f_13.png)
 
 ![](img/c7020f795e8a5b3d5ff5e77d2f6baa0f_14.png)
 
 这种将功能（如延时）从应用程序迁移到系统软件层，以更高效方式处理的趋势，在后续学习更高级的软件技术时会反复遇到。
 
-![](img/c7020f795e8a5b3d5ff5e77d2f6baa0f_16.png)
 
 ![](img/c7020f795e8a5b3d5ff5e77d2f6baa0f_17.png)
 
@@ -90,11 +84,9 @@ void main(void) {
 
 空闲线程需要在`OS_init()`中启动，并将其栈空间分配交给应用程序决定。
 
-![](img/c7020f795e8a5b3d5ff5e77d2f6baa0f_19.png)
 
 ### 2. 扩展线程控制块
 
-![](img/c7020f795e8a5b3d5ff5e77d2f6baa0f_21.png)
 
 我们需要为每个线程对象（`OS_thread`）添加两个新属性：
 *   **超时计数器**：用于实现延时。`OS_delay()`设置初值，`OS_tick()`每次递减，减到0时唤醒线程。
@@ -126,9 +118,7 @@ void main(void) {
 
 `OS_delay()`函数的签名与轮询式`BSP_delay()`相同。
 
-![](img/c7020f795e8a5b3d5ff5e77d2f6baa0f_28.png)
 
-![](img/c7020f795e8a5b3d5ff5e77d2f6baa0f_29.png)
 
 ```c
 void OS_delay(uint32_t ticks) {
@@ -177,9 +167,7 @@ void OS_tick(void) {
 *   在头文件中添加新函数的原型。
 *   将应用程序中原来的`BSP_delay()`调用替换为`OS_delay()`，将`BSP_tick()`调用替换为`OS_tick()`。
 
-![](img/c7020f795e8a5b3d5ff5e77d2f6baa0f_31.png)
 
-![](img/c7020f795e8a5b3d5ff5e77d2f6baa0f_33.png)
 
 代码编译无误后，运行程序。表面上看，LED闪烁效果与之前相同。但通过调试器或逻辑分析仪观察会发现，`OS_readySet`大部分时间为0，CPU绝大多数时间都在执行空闲线程。只有当某个线程延时结束被唤醒时，才会短暂执行该线程，然后很快又回到空闲线程。
 

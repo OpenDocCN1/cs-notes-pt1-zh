@@ -53,11 +53,8 @@ private:
 2.  在给定的起始地址 (`start`) 处创建第一个 `MemoryChunk`。
 3.  这个初始块标记为未分配 (`allocated = false`)，其 `size` 为整个堆区域的大小减去头本身的大小。它的 `next` 和 `prev` 指针都设为 `nullptr`。
 
-![](img/78de33d16cf722ce44753100b4fc2326_1.png)
 
-![](img/78de33d16cf722ce44753100b4fc2326_2.png)
 
-![](img/78de33d16cf722ce44753100b4fc2326_3.png)
 
 ```cpp
 MemoryManager::MemoryManager(size_t start, size_t size) {
@@ -79,7 +76,6 @@ MemoryManager::MemoryManager(size_t start, size_t size) {
 
 当请求分配内存时，`malloc` 函数会遍历链表，寻找第一个足够大且未被分配的块。
 
-![](img/78de33d16cf722ce44753100b4fc2326_5.png)
 
 以下是分配过程的关键步骤：
 
@@ -90,11 +86,8 @@ MemoryManager::MemoryManager(size_t start, size_t size) {
 3.  **直接分配**：如果找到的块大小不足以进行分割，则直接将整个块标记为已分配。
 4.  **返回指针**：返回给用户的是内存块头之后的数据区域起始地址，即 `(void*)((size_t)chunk + sizeof(MemoryChunk))`。
 
-![](img/78de33d16cf722ce44753100b4fc2326_7.png)
 
-![](img/78de33d16cf722ce44753100b4fc2326_9.png)
 
-![](img/78de33d16cf722ce44753100b4fc2326_11.png)
 
 ```cpp
 void* MemoryManager::malloc(size_t size) {
@@ -130,23 +123,17 @@ void* MemoryManager::malloc(size_t size) {
 }
 ```
 
-![](img/78de33d16cf722ce44753100b4fc2326_13.png)
 
 ## 内存释放与块合并
 
-![](img/78de33d16cf722ce44753100b4fc2326_15.png)
 
-![](img/78de33d16cf722ce44753100b4fc2326_17.png)
 
 释放内存 (`free`) 时，我们不仅要将块标记为未分配，还要尝试与相邻的未分配块合并，以防止内存碎片化。
 
-![](img/78de33d16cf722ce44753100b4fc2326_19.png)
 
-![](img/78de33d16cf722ce44753100b4fc2326_21.png)
 
 以下是释放与合并的过程：
 
-![](img/78de33d16cf722ce44753100b4fc2326_23.png)
 
 1.  **获取块头**：用户传入的是数据区指针，我们需要减去 `sizeof(MemoryChunk)` 来找到对应的 `MemoryChunk` 头。
 2.  **与前一块合并**：如果当前块的前一块存在且未分配，则将当前块合并到前一块。
@@ -185,11 +172,9 @@ void MemoryManager::free(void* ptr) {
 }
 ```
 
-![](img/78de33d16cf722ce44753100b4fc2326_25.png)
 
 ## 集成到C++的new/delete运算符
 
-![](img/78de33d16cf722ce44753100b4fc2326_27.png)
 
 为了让动态内存分配更符合C++习惯，我们可以重载全局的 `new` 和 `delete` 运算符，让它们调用我们的堆管理器。
 
@@ -232,11 +217,9 @@ void* operator new(size_t, void* ptr) {
 void operator delete(void*, void*) { /* placement delete 通常为空 */ }
 ```
 
-![](img/78de33d16cf722ce44753100b4fc2326_40.png)
 
 在实际使用时，可以先调用 `malloc` 分配原始内存，检查指针非空后，再用 `placement new` 构造对象：
 
-![](img/78de33d16cf722ce44753100b4fc2326_42.png)
 
 ```cpp
 // 示例：动态创建驱动程序对象
@@ -246,18 +229,14 @@ if(driver != nullptr) {
 }
 ```
 
-![](img/78de33d16cf722ce44753100b4fc2326_44.png)
 
 ## 堆的初始化与地址
 
-![](img/78de33d16cf722ce44753100b4fc2326_46.png)
 
-![](img/78de33d16cf722ce44753100b4fc2326_48.png)
 
 在实例化 `MemoryManager` 时，我们需要确定堆的起始地址和大小。一个简单但不够优雅的方法是将起始地址硬编码为内核栈之后的一个固定值（例如10MB）。大小可以从GRUB传递的多引导信息结构中获取（内存大小以KB为单位），然后减去堆的起始地址和一部分预留空间。
 
 
-![](img/78de33d16cf722ce44753100b4fc2326_50.png)
 
 ```cpp
 // 示例：从 multiboot 信息获取内存大小（KB），并转换为字节
@@ -270,17 +249,13 @@ MemoryManager memoryManager(heapStartAddress, heapSize);
 
 ## 总结与展望
 
-![](img/78de33d16cf722ce44753100b4fc2326_54.png)
 
-![](img/78de33d16cf722ce44753100b4fc2326_56.png)
 
-![](img/78de33d16cf722ce44753100b4fc2326_58.png)
 
 本节课中我们一起学习了如何实现一个简单的动态内存管理器（堆）。我们基于双向链表设计了一个内存块结构来跟踪内存的使用情况，实现了 `malloc` 和 `free` 的基本功能，包括内存分割与合并以减少碎片。最后，我们将其与C++的 `new`/`delete` 运算符进行了集成，并讨论了安全分配对象的注意事项。
 
 这个实现虽然简单且效率不高（例如分配需要线性遍历链表），但它是一个重要的起点，为操作系统提供了动态内存分配的能力。有了堆，我们就可以在运行时创建对象，例如接下来为检测到的PCI设备动态实例化驱动程序。
 
-![](img/78de33d16cf722ce44753100b4fc2326_60.png)
 
 ![](img/78de33d16cf722ce44753100b4fc2326_62.png)
 

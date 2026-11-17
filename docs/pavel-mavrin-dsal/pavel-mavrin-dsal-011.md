@@ -1,30 +1,18 @@
 # 011：动态规划（第二部分）
 
-![](img/2c0f649df45adfde22bce6b0ec2f87b9_1.png)
 
-![](img/2c0f649df45adfde22bce6b0ec2f87b9_2.png)
 
-![](img/2c0f649df45adfde22bce6b0ec2f87b9_4.png)
 
-![](img/2c0f649df45adfde22bce6b0ec2f87b9_5.png)
 
-![](img/2c0f649df45adfde22bce6b0ec2f87b9_7.png)
 
-![](img/2c0f649df45adfde22bce6b0ec2f87b9_9.png)
 
-![](img/2c0f649df45adfde22bce6b0ec2f87b9_11.png)
 
-![](img/2c0f649df45adfde22bce6b0ec2f87b9_13.png)
 
 在本节课中，我们将继续探讨动态规划的应用，并学习如何用它来解决几个更实际的问题。我们将重点分析两个经典案例：计算两个文本文件（或字符串）之间的差异（编辑距离），以及如何对文本进行最优排版（文本对齐问题）。最后，我们会简要介绍一个字符串最优编码的问题。
 
-![](img/2c0f649df45adfde22bce6b0ec2f87b9_15.png)
 
-![](img/2c0f649df45adfde22bce6b0ec2f87b9_17.png)
 
-![](img/2c0f649df45adfde22bce6b0ec2f87b9_18.png)
 
-![](img/2c0f649df45adfde22bce6b0ec2f87b9_20.png)
 
 ---
 
@@ -39,7 +27,6 @@
 2.  **删除**一个字符。
 3.  **插入**一个字符。
 
-![](img/2c0f649df45adfde22bce6b0ec2f87b9_22.png)
 
 我们的目标是找到将字符串 `A` 转换为字符串 `B` 所需的最少操作次数。这个最少操作数被称为 **莱文斯坦距离** 或 **编辑距离**。
 

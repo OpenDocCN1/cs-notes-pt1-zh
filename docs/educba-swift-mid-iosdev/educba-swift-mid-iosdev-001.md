@@ -32,7 +32,6 @@
 
 ---
 
-![](img/b4b9a5e6617a5ad405e7ae97b868af69_1.png)
 
 ## 设计用户界面 🎨
 
@@ -40,14 +39,12 @@
 
 ### 设计第一个视图控制器（ViewController）
 
-![](img/b4b9a5e6617a5ad405e7ae97b868af69_3.png)
 
 首先，为视图1设置一个背景色以便区分。然后，从对象库中拖拽以下元素到视图上：
 *   一个标签（UILabel），将其文本改为“Enter Details”，并调整其大小和位置。
 *   四个文本字段（UITextField）。文本字段会在界面中创建一个可编辑的文本区域，点击时会弹出键盘。我们将使用它们的`placeholder`属性来显示提示文本。
 *   一个按钮（UIButton），将其标题改为“Pass Data”，并设置其背景色和文字颜色。
 
-![](img/b4b9a5e6617a5ad405e7ae97b868af69_5.png)
 
 为了能够导航到第二个视图，我们需要为第一个视图控制器嵌入一个导航控制器（Navigation Controller）。在编辑器中，选择第一个视图控制器，然后点击菜单栏的 “Editor” -> “Embed In” -> “Navigation Controller”。
 
@@ -69,7 +66,6 @@
 
 ## 核心概念与代码准备 💡
 
-![](img/b4b9a5e6617a5ad405e7ae97b868af69_7.png)
 
 在开始编写连接和传递数据的代码之前，理解几个核心概念很重要。
 
@@ -91,13 +87,11 @@
 
 在`ViewController.swift`文件中，我们需要为四个文本字段和“Pass Data”按钮创建出口（IBOutlet）和动作（IBAction）。
 
-![](img/b4b9a5e6617a5ad405e7ae97b868af69_9.png)
 
 以下是需要创建的连接：
 1.  为四个UITextField创建IBOutlet，分别命名为 `firstNameTextField`, `lastNameTextField`, `emailTextField`, `phoneTextField`。
 2.  为“Pass Data”按钮创建一个IBAction方法，例如命名为`passDataButtonTapped`。
 
-![](img/b4b9a5e6617a5ad405e7ae97b868af69_11.png)
 
 ### 为第二个视图控制器创建连接
 

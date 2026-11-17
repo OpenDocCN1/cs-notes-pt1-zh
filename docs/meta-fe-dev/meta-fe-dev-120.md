@@ -10,26 +10,18 @@
 
 在开篇课程中，我们介绍了UX和UI设计的基础知识。
 
-![](img/eb4385d3a007fcefb6f811b4b37dc3b8_1.png)
 
 以下是该部分的核心学习内容：
 *   能够区分UX和UI。
 *   描述了什么是UX，其目标和质量构成要素。
 *   定义了UI以及不同类型的设计。
 
-![](img/eb4385d3a007fcefb6f811b4b37dc3b8_2.png)
 
-![](img/eb4385d3a007fcefb6f811b4b37dc3b8_3.png)
 
-![](img/eb4385d3a007fcefb6f811b4b37dc3b8_1.png)
-![](img/eb4385d3a007fcefb6f811b4b37dc3b8_2.png)
-![](img/eb4385d3a007fcefb6f811b4b37dc3b8_3.png)
 
 此外，我们开始接触Figma，并探索了以用户为中心的设计，以及UX设计中的共情工具和用户画像概念。
 
-![](img/eb4385d3a007fcefb6f811b4b37dc3b8_5.png)
 
-![](img/eb4385d3a007fcefb6f811b4b37dc3b8_5.png)
 
 ## 交互设计评估 🔍
 
@@ -37,51 +29,34 @@
 
 在这个主题中，我们探索了评估方法，并涵盖了无障碍设计。通过研究导航和表单设计的实际案例，我们还审视了评估的最佳实践原则。
 
-![](img/eb4385d3a007fcefb6f811b4b37dc3b8_7.png)
-![](img/eb4385d3a007fcefb6f811b4b37dc3b8_8.png)
-![](img/eb4385d3a007fcefb6f811b4b37dc3b8_9.png)
 
-![](img/eb4385d3a007fcefb6f811b4b37dc3b8_7.png)
 
-![](img/eb4385d3a007fcefb6f811b4b37dc3b8_8.png)
 
 ## 应用设计基础 🛠️
 
-![](img/eb4385d3a007fcefb6f811b4b37dc3b8_9.png)
 
 掌握了评估方法后，我们进一步学习了应用设计基础。
 
 在这个主题中，我们探索了使用Figma的基本功，并回顾了迭代设计的原则，包括线框图绘制、原型制作和可用性测试。
 
-![](img/eb4385d3a007fcefb6f811b4b37dc3b8_11.png)
-![](img/eb4385d3a007fcefb6f811b4b37dc3b8_12.png)
 
 ## 设计你的UI 🎨
 
-![](img/eb4385d3a007fcefb6f811b4b37dc3b8_11.png)
 
-![](img/eb4385d3a007fcefb6f811b4b37dc3b8_12.png)
 
 接下来，我们开始探索如何设计你的用户界面。
 
 在这里，你学习了如何优化设计，并创建基于组件的高保真设计。
 
-![](img/eb4385d3a007fcefb6f811b4b37dc3b8_14.png)
 
-![](img/eb4385d3a007fcefb6f811b4b37dc3b8_14.png)
 
 你还学习了如何使用情绪板，以及如何在Figma中创建设计系统。
 
-![](img/eb4385d3a007fcefb6f811b4b37dc3b8_16.png)
 
-![](img/eb4385d3a007fcefb6f811b4b37dc3b8_16.png)
 
 然后，我们学习了如何创建高保真设计原型，并在UI中包含微动效。
 
-![](img/eb4385d3a007fcefb6f811b4b37dc3b8_18.png)
-![](img/eb4385d3a007fcefb6f811b4b37dc3b8_19.png)
 
-![](img/eb4385d3a007fcefb6f811b4b37dc3b8_18.png)
 
 ![](img/eb4385d3a007fcefb6f811b4b37dc3b8_19.png)
 

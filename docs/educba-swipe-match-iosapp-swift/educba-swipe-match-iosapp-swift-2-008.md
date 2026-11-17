@@ -1,22 +1,16 @@
 # 008：导航转换 🧭
 
-![](img/1f6e285a50ae97f3a522578b5e094d5c_1.png)
 
-![](img/1f6e285a50ae97f3a522578b5e094d5c_3.png)
 
-![](img/1f6e285a50ae97f3a522578b5e094d5c_5.png)
 
 在本节课中，我们将学习如何将之前创建的各个组件文件整合到主视图控制器中，并设置卡片容器的数据源和委托，以实现完整的滑动匹配功能。
 
 ## 概述
 
-![](img/1f6e285a50ae97f3a522578b5e094d5c_7.png)
 
-![](img/1f6e285a50ae97f3a522578b5e094d5c_9.png)
 
 上一节我们创建了可滑动的卡片视图。本节中，我们将在主故事板中搭建界面，将 `SwipeableCardViewContainer` 容器与 `ViewController` 连接起来，并实现必要的数据源协议，让卡片能够显示和交互。
 
-![](img/1f6e285a50ae97f3a522578b5e094d5c_11.png)
 
 ## 在故事板中搭建界面
 
@@ -24,7 +18,6 @@
 
 以下是需要添加的组件步骤：
 
-![](img/1f6e285a50ae97f3a522578b5e094d5c_13.png)
 
 1.  **添加顶部静态视图**：这是一个作为背景或标题区域的视图。
     *   将其 `Frame` 设置为：`x: 5, y: 64, width: 365, height: 110`。
@@ -33,7 +26,6 @@
 2.  **添加可滑动卡片容器视图**：这是用于承载多层卡片的主要视图。
     *   将其 `Frame` 设置为：`x: 5, y: 186, width: 365, height: 400`。
 
-![](img/1f6e285a50ae97f3a522578b5e094d5c_15.png)
 
 3.  **添加提示标签**：当所有卡片都被滑动完毕后，需要显示提示信息。
     *   添加一个 `UILabel`，将其 `Frame` 设置为：`x: 135, y: 376, width: 106, height: 21`。
@@ -42,13 +34,10 @@
 
 ## 设置自动布局约束
 
-![](img/1f6e285a50ae97f3a522578b5e094d5c_17.png)
 
 为了确保界面在不同尺寸的设备上都能正确显示，我们需要为各个视图添加约束。
 
-![](img/1f6e285a50ae97f3a522578b5e094d5c_19.png)
 
-![](img/1f6e285a50ae97f3a522578b5e094d5c_20.png)
 
 以下是约束设置步骤：
 
@@ -65,11 +54,9 @@
 3.  **为“All caught up”标签添加约束**：
     *   在安全区域内 **水平居中** 和 **垂直居中**。
 
-![](img/1f6e285a50ae97f3a522578b5e094d5c_22.png)
 
 添加约束后，如果出现黄色警告线（表示帧位置与约束不符），可以选中视图，点击“Update Frames”来根据约束重新定位。如果存在红色冲突线，需要检查并调整约束，例如将某个固定边距改为灵活范围。
 
-![](img/1f6e285a50ae97f3a522578b5e094d5c_24.png)
 
 ## 连接出口与属性
 
@@ -91,9 +78,7 @@
 
 `SwipeableCardViewContainer` 需要一个数据源来提供卡片内容和数量。我们需要在 `SwipeableCardViewContainer.swift` 文件中实现其核心逻辑。
 
-![](img/1f6e285a50ae97f3a522578b5e094d5c_26.png)
 
-![](img/1f6e285a50ae97f3a522578b5e094d5c_28.png)
 
 以下是 `SwipeableCardViewContainer` 的核心实现步骤：
 
@@ -109,9 +94,7 @@
     *   将容器背景色设为 `.clear`。
     *   设置 `translatesAutoresizingMaskIntoConstraints = false`，因为我们使用自动布局约束。
 
-![](img/1f6e285a50ae97f3a522578b5e094d5c_30.png)
 
-![](img/1f6e285a50ae97f3a522578b5e094d5c_32.png)
 
 3.  **重载数据方法 `reloadData()`**：
     *   首先，移除所有现有的卡片视图。
@@ -119,14 +102,12 @@
     *   循环创建卡片（循环次数取 `总卡片数` 和 `numberOfVisibleCards` 中的较小值）。
     *   在每次循环中，调用 `addCardView(_:at:)` 方法添加新卡片。
 
-![](img/1f6e285a50ae97f3a522578b5e094d5c_34.png)
 
 4.  **添加卡片方法 `addCardView(_:at:)`**：
     *   设置卡片的 `delegate` 为 `self`（即容器自身）。
     *   调用 `setFrame(for:at:)` 方法根据索引设置卡片的位置和大小，实现层叠效果。
     *   将卡片视图添加到 `cardViews` 数组并插入到容器视图的底层。
 
-![](img/1f6e285a50ae97f3a522578b5e094d5c_35.png)
 
 5.  **设置卡片帧方法 `setFrame(for:at:)`**：
     *   计算卡片的 `frame`。其宽度和高度根据容器 `bounds` 和 `inset` 值计算。
@@ -154,13 +135,10 @@
     ```
 2.  **实现数据源协议**：让 `ViewController` 遵循 `SwipeableCardViewDataSource` 协议，并实现其必需的方法，例如 `numberOfCards()` 和 `card(forItemAt:)`，以提供实际的数据模型给卡片容器。
 
-![](img/1f6e285a50ae97f3a522578b5e094d5c_37.png)
 
-![](img/1f6e285a50ae97f3a522578b5e094d5c_39.png)
 
 ## 总结
 
-![](img/1f6e285a50ae97f3a522578b5e094d5c_41.png)
 
 ![](img/1f6e285a50ae97f3a522578b5e094d5c_43.png)
 

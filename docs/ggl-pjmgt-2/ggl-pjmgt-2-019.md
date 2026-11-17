@@ -1,6 +1,5 @@
 # 019：19_03_03_项目团队组建
 
-![](img/133b51a1abcba1dbeed11c715ff2b774_0.png)
 
 ![](img/133b51a1abcba1dbeed11c715ff2b774_0.png)
 
@@ -55,7 +54,6 @@
 *   那些专家是否已经在其他项目上忙碌？
 *   谁对项目资源拥有最终决定权？
 
-![](img/133b51a1abcba1dbeed11c715ff2b774_2.png)
 
 ![](img/133b51a1abcba1dbeed11c715ff2b774_2.png)
 

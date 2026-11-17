@@ -116,9 +116,7 @@ Apache Tomcat与Apache HTTP服务器不同。Apache HTTP服务器主要用于静
 
 要运行页面，可以右键单击项目中的`index.html`或`index.jsp`文件，选择“运行方式” -> “在服务器上运行”。Eclipse会打开一个内部浏览器显示页面。你也可以在“窗口” -> “Web浏览器”设置中更改为使用外部浏览器（如Google Chrome）。
 
-![](img/566d291f94f595e9f09b18439ae429c0_13.png)
 
-![](img/566d291f94f595e9f09b18439ae429c0_14.png)
 
 ## 第二步：创建简单主页
 在这一步中，我们将创建一个简单的主页。我们将使用不同的HTML标签。
@@ -188,7 +186,6 @@ Apache Tomcat与Apache HTTP服务器不同。Apache HTTP服务器主要用于静
 
 ![](img/566d291f94f595e9f09b18439ae429c0_39.png)
 
-![](img/566d291f94f595e9f09b18439ae429c0_41.png)
 
 现在，在`style.css`文件中，我们为各个部分添加样式。
 
@@ -310,7 +307,6 @@ footer {
 }
 ```
 
-![](img/566d291f94f595e9f09b18439ae429c0_67.png)
 
 最后，在`header`中添加一个导航栏。在`<header>`标签内的标题后面添加：
 ```html
@@ -319,11 +315,8 @@ footer {
 </nav>
 ```
 
-![](img/566d291f94f595e9f09b18439ae429c0_69.png)
 
-![](img/566d291f94f595e9f09b18439ae429c0_71.png)
 
-![](img/566d291f94f595e9f09b18439ae429c0_73.png)
 
 为导航栏添加CSS样式，将其定位到右上角：
 ```css

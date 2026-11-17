@@ -77,9 +77,7 @@ print(passing_grades)
 
 ---
 
-![](img/fc97e209f62c689e66208fa007612755_1.png)
 
-![](img/fc97e209f62c689e66208fa007612755_2.png)
 
 ### **总结**
 

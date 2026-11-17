@@ -20,11 +20,9 @@ pip install mysql-connector-python
 
 接着，你将学习如何安装一个前端的Python客户端，并将其连接到后端的MySQL数据库。
 
-![](img/d692291f32eefc509d04eb9b51bb5a79_1.png)
 
 然后，你将探索如何建立Python和MySQL之间的通信以执行CRUD操作。
 
-![](img/d692291f32eefc509d04eb9b51bb5a79_2.png)
 
 ### 第二课：游标对象与数据库操作
 
@@ -36,9 +34,7 @@ cursor = connection.cursor()
 
 访问游标对象后，你将使用Python创建一个MySQL数据库和表。
 
-![](img/d692291f32eefc509d04eb9b51bb5a79_4.png)
 
-![](img/d692291f32eefc509d04eb9b51bb5a79_5.png)
 
 然后，你将学习如何使用Python提交对MySQL数据库的更改。
 
@@ -50,9 +46,7 @@ connection.commit()
 
 在模块一的第三课也是最后一课中，你将探索MySQL数据库中游标的概念。
 
-![](img/d692291f32eefc509d04eb9b51bb5a79_7.png)
 
-![](img/d692291f32eefc509d04eb9b51bb5a79_8.png)
 
 你将学习游标在Python和MySQL中如何工作。
 
@@ -82,17 +76,13 @@ connection.commit()
 
 最后，你将通过完成一系列实验练习来结束第一课，在练习中展示你使用Python在MySQL数据库中执行CRUD操作的能力。
 
-![](img/d692291f32eefc509d04eb9b51bb5a79_10.png)
 
-![](img/d692291f32eefc509d04eb9b51bb5a79_11.png)
 
 ### 第二课：高级查询
 
-![](img/d692291f32eefc509d04eb9b51bb5a79_12.png)
 
 在模块二的第二课中，你将回顾使用Python在MySQL数据库中进行高级查询。
 
-![](img/d692291f32eefc509d04eb9b51bb5a79_13.png)
 
 以下是这些查询的概述：
 
@@ -102,11 +92,9 @@ connection.commit()
 
 接下来，你将学习如何执行一系列不同的**连接**操作，以使用Python从MySQL数据库的不同表中查找数据。
 
-![](img/d692291f32eefc509d04eb9b51bb5a79_15.png)
 
 你将有机会通过一系列实验来测试自己使用Python在MySQL数据库中进行高级查询的能力。
 
-![](img/d692291f32eefc509d04eb9b51bb5a79_16.png)
 
 ## 模块三：高级数据库客户端技术 ⚙️
 
@@ -116,7 +104,6 @@ connection.commit()
 
 你将首先学习识别MySQL函数的重要性，并回顾MySQL中可用的不同类型函数。
 
-![](img/d692291f32eefc509d04eb9b51bb5a79_18.png)
 
 一旦你回顾完MySQL函数的基础知识。
 
@@ -144,27 +131,20 @@ connection.commit()
 
 你将首先理解数据库连接池的概念。
 
-![](img/d692291f32eefc509d04eb9b51bb5a79_20.png)
 
 你将学习数据库连接池如何工作。
 
-![](img/d692291f32eefc509d04eb9b51bb5a79_21.png)
 
-![](img/d692291f32eefc509d04eb9b51bb5a79_22.png)
 
 并了解如何识别数据库连接池的优势。
 
-![](img/d692291f32eefc509d04eb9b51bb5a79_23.png)
 
-![](img/d692291f32eefc509d04eb9b51bb5a79_24.png)
 
 然后，你将回顾为数据库创建连接池的步骤，包括实现MySQL连接池模块的过程。
 
-![](img/d692291f32eefc509d04eb9b51bb5a79_25.png)
 
 ---
 
-![](img/d692291f32eefc509d04eb9b51bb5a79_26.png)
 
 ![](img/d692291f32eefc509d04eb9b51bb5a79_27.png)
 

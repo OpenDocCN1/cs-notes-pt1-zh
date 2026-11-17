@@ -8,9 +8,7 @@
 
 根据巴塞尔协议III的改革，操作风险资本（ORC）的计算采用标准法，其核心公式如下：
 
-![](img/6f3dff3145e072b5b69d89e8ee1df5be_1.png)
 
-![](img/6f3dff3145e072b5b69d89e8ee1df5be_2.png)
 
 **ORC = BIC × ILM**
 

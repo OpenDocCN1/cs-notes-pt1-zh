@@ -16,9 +16,7 @@
 
 以下是具体操作命令：
 
-![](img/b649ef9758e3334ee35d20ea7a1caf3d_1.png)
 
-![](img/b649ef9758e3334ee35d20ea7a1caf3d_2.png)
 
 ```bash
 # 进入 MongoDB 命令行
@@ -35,7 +33,6 @@ db.test_collection.insertOne({ name: "example", value: 123 })
 
 以下是备份特定数据库的命令格式：
 
-![](img/b649ef9758e3334ee35d20ea7a1caf3d_4.png)
 
 ```bash
 mongodump --gzip -d <database_name>

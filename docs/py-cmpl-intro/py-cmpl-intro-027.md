@@ -6,7 +6,6 @@
 
 首先，我们需要导入Python内置的`random`模块。这个模块提供了许多与随机数相关的有用方法。
 
-![](img/d5fcf51203be1eefe8016474cfacca47_1.png)
 
 ```python
 import random
@@ -22,11 +21,9 @@ print(help(random))
 
 上一节我们介绍了如何导入模块，本节中我们来看看如何生成随机整数。`randint()`方法可以生成指定范围内的随机整数。
 
-![](img/d5fcf51203be1eefe8016474cfacca47_3.png)
 
 以下是使用`randint()`生成随机整数的步骤：
 
-![](img/d5fcf51203be1eefe8016474cfacca47_5.png)
 
 1.  调用`random.randint(a, b)`方法。
 2.  参数`a`和`b`定义了随机数的范围，包含两端。

@@ -26,11 +26,9 @@
 
 在本地编辑器中，我可以为文件添加任意内容，例如输入“Just a check”。保存后，这些更改会自动同步回远程服务器。
 
-![](img/80b2c0fd1c1e04766a27edd1eca92703_5.png)
 
 ![](img/80b2c0fd1c1e04766a27edd1eca92703_5.png)
 
-![](img/80b2c0fd1c1e04766a27edd1eca92703_7.png)
 
 现在，如果再次登录到`open2`服务器查看该文件，会发现内容已经更新。
 
@@ -52,7 +50,6 @@
 
 Chef DK包含了用于构建、测试和部署Chef代码的一系列工具。我们可以从Chef官方网站下载它。
 
-![](img/80b2c0fd1c1e04766a27edd1eca92703_12.png)
 
 1.  访问下载页面：`downloads.chef.io`。
 2.  在页面上找到Chef开发工具包的下载链接并打开。
@@ -73,7 +70,6 @@ Chef DK包含了用于构建、测试和部署Chef代码的一系列工具。我
 wget [复制的下载链接URL]
 ```
 
-![](img/80b2c0fd1c1e04766a27edd1eca92703_14.png)
 
 ![](img/80b2c0fd1c1e04766a27edd1eca92703_14.png)
 
@@ -97,7 +93,6 @@ sudo dpkg -i [下载的.deb文件名]
 chef --version
 ```
 
-![](img/80b2c0fd1c1e04766a27edd1eca92703_16.png)
 
 该命令会显示Chef DK及其所有组件的版本号，例如：
 *   Chef DK版本：`3.4.38`

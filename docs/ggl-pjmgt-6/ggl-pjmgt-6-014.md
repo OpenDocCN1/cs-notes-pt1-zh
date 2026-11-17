@@ -1,6 +1,5 @@
 # 014：识别项目任务开展在线调研
 
-![](img/ea482bacb67c8d8a90c8ead3a9b2f41e_0.png)
 
 ![](img/ea482bacb67c8d8a90c8ead3a9b2f41e_0.png)
 
@@ -49,7 +48,6 @@
 *   研究其他行业的类似项目。
 *   回顾你的任务列表，并研究执行这些工作的具体细节。
 
-![](img/ea482bacb67c8d8a90c8ead3a9b2f41e_2.png)
 
 ![](img/ea482bacb67c8d8a90c8ead3a9b2f41e_2.png)
 

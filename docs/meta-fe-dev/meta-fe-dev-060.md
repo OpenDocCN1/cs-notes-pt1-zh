@@ -10,7 +10,6 @@
 
 浏览器标签页的更新就是一个副作用的例子。在本视频中，我将演示如何使用 `useEffect` 钩子在 React 中执行副作用，以及如何使用依赖数组来控制 `useEffect` 函数的运行时机。
 
-![](img/0f94c59f9c40d1fe72eccfba9b3959b5_1.png)
 
 ![](img/0f94c59f9c40d1fe72eccfba9b3959b5_1.png)
 
@@ -22,7 +21,6 @@
 
 在第5行，我通过调用 `useState` 钩子解构出了 `toggle` 变量，用于跟踪其状态，从而使 `return` 语句中的条件渲染成为可能。
 
-![](img/0f94c59f9c40d1fe72eccfba9b3959b5_3.png)
 
 ![](img/0f94c59f9c40d1fe72eccfba9b3959b5_3.png)
 
@@ -40,7 +38,6 @@
 React.useEffect
 ```
 
-![](img/0f94c59f9c40d1fe72eccfba9b3959b5_5.png)
 
 ![](img/0f94c59f9c40d1fe72eccfba9b3959b5_5.png)
 
@@ -52,7 +49,6 @@ React.useEffect
 
 让我们在浏览器中检查更新后的应用。
 
-![](img/0f94c59f9c40d1fe72eccfba9b3959b5_7.png)
 
 ![](img/0f94c59f9c40d1fe72eccfba9b3959b5_7.png)
 
@@ -60,7 +56,6 @@ React.useEffect
 
 假设老板改变了主意，他希望文档标题在组件初始渲染时被设置一次，之后就不再更新。
 
-![](img/0f94c59f9c40d1fe72eccfba9b3959b5_9.png)
 
 ![](img/0f94c59f9c40d1fe72eccfba9b3959b5_9.png)
 
@@ -72,7 +67,6 @@ React.useEffect
 
 更新应用后，让我们保存更改，并在浏览器中检查这如何影响应用的行为。
 
-![](img/0f94c59f9c40d1fe72eccfba9b3959b5_11.png)
 
 ![](img/0f94c59f9c40d1fe72eccfba9b3959b5_11.png)
 
@@ -80,13 +74,11 @@ React.useEffect
 
 依赖数组的作用是监视特定变量的变化，并基于此执行作为 `useEffect` 函数调用第一个参数传入的函数。
 
-![](img/0f94c59f9c40d1fe72eccfba9b3959b5_13.png)
 
 ![](img/0f94c59f9c40d1fe72eccfba9b3959b5_13.png)
 
 这意味着，如果我希望每当存储在 `toggle` 变量中的值更新时都运行 `useEffect` 钩子，就需要将 `toggle` 变量添加到依赖数组中。
 
-![](img/0f94c59f9c40d1fe72eccfba9b3959b5_15.png)
 
 ![](img/0f94c59f9c40d1fe72eccfba9b3959b5_15.png)
 

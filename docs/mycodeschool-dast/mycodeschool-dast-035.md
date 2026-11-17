@@ -1,12 +1,9 @@
 # 035：判断二叉树是否为二叉搜索树 🌳
 
-![](img/7b46e0d76fe8df69ec2db9308aa696df_1.png)
 
-![](img/7b46e0d76fe8df69ec2db9308aa696df_3.png)
 
 在本节课中，我们将解决一个关于二叉树的简单问题，这也是一个著名的编程面试题。问题是：给定一棵二叉树，我们需要判断它是否是一棵二叉搜索树。
 
-![](img/7b46e0d76fe8df69ec2db9308aa696df_5.png)
 
 ## 什么是二叉搜索树？ 🤔
 
@@ -22,11 +19,9 @@
 
 我们需要编写一个函数，它以二叉树根节点的指针（或引用）作为参数，并返回一个布尔值：如果该二叉树是BST则返回`true`，否则返回`false`。
 
-![](img/7b46e0d76fe8df69ec2db9308aa696df_7.png)
 
 以下是C++中的函数签名和节点定义：
 
-![](img/7b46e0d76fe8df69ec2db9308aa696df_9.png)
 
 ```cpp
 struct Node {
@@ -39,7 +34,6 @@ bool isBST(Node* root);
 
 ## 方法一：直观但低效的解法 ⏳
 
-![](img/7b46e0d76fe8df69ec2db9308aa696df_11.png)
 
 第一种方法直接根据定义进行验证。对于每个节点，我们需要检查：
 1.  其左子树中的所有节点值是否都小于或等于当前节点值。
@@ -47,13 +41,10 @@ bool isBST(Node* root);
 3.  其左子树本身是否是BST。
 4.  其右子树本身是否是BST。
 
-![](img/7b46e0d76fe8df69ec2db9308aa696df_13.png)
 
-![](img/7b46e0d76fe8df69ec2db9308aa696df_15.png)
 
 以下是实现此逻辑的伪代码框架：
 
-![](img/7b46e0d76fe8df69ec2db9308aa696df_17.png)
 
 ```cpp
 bool isSubtreeLesser(Node* root, int value) {
@@ -80,17 +71,13 @@ bool isBST(Node* root) {
 
 ## 方法二：高效的范围限定法 ⚡
 
-![](img/7b46e0d76fe8df69ec2db9308aa696df_19.png)
 
 上一节我们介绍了一种直观但低效的方法。本节中，我们来看看一种更高效的解决方案。
 
 核心思想是：为树中的每个节点定义一个**允许的取值范围**。在遍历树的过程中，我们动态地更新并检查每个节点的值是否在其合法范围内。
 
-![](img/7b46e0d76fe8df69ec2db9308aa696df_21.png)
 
-![](img/7b46e0d76fe8df69ec2db9308aa696df_22.png)
 
-![](img/7b46e0d76fe8df69ec2db9308aa696df_24.png)
 
 以下是具体的步骤：
 1.  根节点的初始范围是 **(-∞, +∞)**。
@@ -98,11 +85,9 @@ bool isBST(Node* root) {
 3.  当遍历到右子节点时，其取值范围的**下限**更新为其父节点的值，上限不变。
 4.  在访问每个节点时，检查其值是否在当前范围内。
 
-![](img/7b46e0d76fe8df69ec2db9308aa696df_26.png)
 
 以下是实现此逻辑的代码：
 
-![](img/7b46e0d76fe8df69ec2db9308aa696df_28.png)
 
 ```cpp
 bool isBSTUtil(Node* root, int minValue, int maxValue) {
@@ -125,15 +110,11 @@ bool isBST(Node* root) {
 
 ## 方法三：利用中序遍历的特性 🔄
 
-![](img/7b46e0d76fe8df69ec2db9308aa696df_30.png)
 
 除了范围限定法，还有一种巧妙的解决方案利用二叉搜索树的一个重要特性：**对BST进行中序遍历，会得到一个升序排序的序列**。
 
-![](img/7b46e0d76fe8df69ec2db9308aa696df_31.png)
 
-![](img/7b46e0d76fe8df69ec2db9308aa696df_32.png)
 
-![](img/7b46e0d76fe8df69ec2db9308aa696df_34.png)
 
 因此，我们可以在中序遍历的过程中，实时检查当前访问的节点值是否大于前一个访问的节点值。以下是实现思路：
 1.  初始化一个变量（如`prev`）来保存前一个访问的节点值，初始值可设为非常小的数。
@@ -141,11 +122,9 @@ bool isBST(Node* root) {
 3.  访问每个节点时，比较当前节点值与`prev`值。如果当前值小于等于`prev`，则不是BST。
 4.  更新`prev`为当前节点值，继续遍历。
 
-![](img/7b46e0d76fe8df69ec2db9308aa696df_36.png)
 
 这种方法同样只需要一次遍历，时间复杂度也是 **O(n)**，且空间复杂度可以优化为 **O(1)**（如果不考虑递归调用栈的话）。鼓励你尝试实现这个方案。
 
-![](img/7b46e0d76fe8df69ec2db9308aa696df_38.png)
 
 ## 总结 📚
 

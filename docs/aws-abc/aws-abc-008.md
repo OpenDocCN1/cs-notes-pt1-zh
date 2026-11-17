@@ -32,7 +32,6 @@ AWS Health提供关于AWS服务、账户和资源的个性化运行状况信息�
 
 一个简单的通过AWS CLI使用Health API查询开放事件的示例代码如下：
 
-![](img/b07c6d6493f7ae18554ac5c1e3611c5b_1.png)
 
 ```bash
 aws health describe-events --filter '{"eventStatusCodes": ["open"]}'

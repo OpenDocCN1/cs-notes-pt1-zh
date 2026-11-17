@@ -2,11 +2,9 @@
 
 在本节课中，我们将完成一个LLVM分析（Analysis）的实现，并运行它以验证结果。我们将学习如何遍历函数中的指令，筛选出仅使用常量整数的加法操作，并最终输出分析结果。
 
-![](img/9a3235087e23d64db3b7b1107afe66b7_1.png)
 
 上一节我们介绍了分析项目的结构和插件入口点。本节中，我们将深入实现分析逻辑的核心部分。
 
-![](img/9a3235087e23d64db3b7b1107afe66b7_3.png)
 
 ## 实现分析逻辑
 
@@ -20,7 +18,6 @@ namespace addconst {
 
 分析的第一步是初始化分析键（Analysis Key）。请注意，此处的值并不重要，因为LLVM内部使用该变量的地址作为唯一标识符。
 
-![](img/9a3235087e23d64db3b7b1107afe66b7_5.png)
 
 ```cpp
 AnalysisKey AddConstAnalysis::Key;
@@ -35,9 +32,7 @@ AddConstAnalysis::Result AddConstAnalysis::run(Function &F, FunctionAnalysisMana
 
 以下是分析逻辑的主要步骤：
 
-![](img/9a3235087e23d64db3b7b1107afe66b7_7.png)
 
-![](img/9a3235087e23d64db3b7b1107afe66b7_8.png)
 
 1.  **遍历基本块和指令**：我们首先遍历函数 `F` 中的所有基本块（Basic Block），然后遍历每个基本块中的所有指令。
 2.  **筛选二元操作符**：检查当前指令是否为二元操作符（Binary Operator）。如果不是，则跳过。
@@ -62,15 +57,12 @@ AddConstAnalysis::Result AddConstAnalysis::run(Function &F, FunctionAnalysisMana
 }
 ```
 
-![](img/9a3235087e23d64db3b7b1107afe66b7_10.png)
 
 ## 实现辅助函数
 
 现在，我们需要实现用于检查指令操作数是否全为常量整数的辅助函数 `isConstantOnly`。
 
-![](img/9a3235087e23d64db3b7b1107afe66b7_12.png)
 
-![](img/9a3235087e23d64db3b7b1107afe66b7_13.png)
 
 ```cpp
 bool isConstantOnly(Instruction *I) {
@@ -85,15 +77,12 @@ bool isConstantOnly(Instruction *I) {
 }
 ```
 
-![](img/9a3235087e23d64db3b7b1107afe66b7_15.png)
 
 ## 实现结果打印器（Printer Pass）
 
-![](img/9a3235087e23d64db3b7b1107afe66b7_17.png)
 
 为了查看分析结果，我们需要实现一个打印器（Printer Pass）。它也是一个LLVM Pass，负责获取分析结果并格式化输出。
 
-![](img/9a3235087e23d64db3b7b1107afe66b7_19.png)
 
 ```cpp
 PreservedAnalyses AddConstPrinterPass::run(Function &F, FunctionAnalysisManager &FAM) {
@@ -131,11 +120,9 @@ PreservedAnalyses AddConstPrinterPass::run(Function &F, FunctionAnalysisManager 
 
 ## 创建测试用例
 
-![](img/9a3235087e23d64db3b7b1107afe66b7_21.png)
 
 在运行分析之前，我们创建一个LLVM IR（`.ll`）文件作为测试用例。
 
-![](img/9a3235087e23d64db3b7b1107afe66b7_23.png)
 
 ```llvm
 ; examples/test.ll
@@ -164,7 +151,6 @@ Function: foo
 ```
 这表明我们的分析成功识别并收集了函数 `foo` 中仅使用常量整数的两个加法指令。
 
-![](img/9a3235087e23d64db3b7b1107afe66b7_25.png)
 
 ## 总结
 

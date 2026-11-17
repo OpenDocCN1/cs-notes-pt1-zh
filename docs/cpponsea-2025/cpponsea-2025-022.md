@@ -113,7 +113,6 @@ void addResource(T&& res) { // T&& 是转发引用
 
 ## 总结
 
-![](img/3ed15b86e438a6fd3bbafd80db30cbec_8.png)
 
 ![](img/3ed15b86e438a6fd3bbafd80db30cbec_9.png)
 

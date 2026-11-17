@@ -171,7 +171,6 @@ func main() {
 
 ## 5：使用管道进行进程间通信
 
-![](img/5fe9ce228f9e0e7c2bcf42247d3f7a8e_2.png)
 
 信号适用于简单的通知，但对于进程间复杂的数据交换，管道是更强大的工具。管道创建一个单向或双向的字节流通道。本节我们将学习如何在 Go 中创建和使用管道。
 
@@ -276,9 +275,7 @@ func main() {
 
 ## 8：纯 Go 系统调用
 
-![](img/5fe9ce228f9e0e7c2bcf42247d3f7a8e_6.png)
 
-![](img/5fe9ce228f9e0e7c2bcf42247d3f7a8e_8.png)
 
 作为 CGo 的替代，Go 的 `syscall` 和 `golang.org/x/sys/unix` 包提供了对系统调用的更直接的访问。这避免了 C 代码的依赖，但需要处理更多底层细节。
 
@@ -316,15 +313,12 @@ func main() {
 }
 ```
 
-![](img/5fe9ce228f9e0e7c2bcf42247d3f7a8e_10.png)
 
 这种方法提供了最大的控制权，但代码与操作系统内核版本紧密耦合，可移植性差。
 
 ## 总结
 
-![](img/5fe9ce228f9e0e7c2bcf42247d3f7a8e_12.png)
 
-![](img/5fe9ce228f9e0e7c2bcf42247d3f7a8e_14.png)
 
 ![](img/5fe9ce228f9e0e7c2bcf42247d3f7a8e_15.png)
 

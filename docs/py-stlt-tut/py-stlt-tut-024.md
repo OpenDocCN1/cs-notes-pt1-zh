@@ -14,15 +14,12 @@
 
 以下是创建按钮并检查其点击状态的代码：
 
-![](img/abfb878e12717d898e17ab52336d3c52_1.png)
 
-![](img/abfb878e12717d898e17ab52336d3c52_2.png)
 
 ```python
 s_b = st.button('Submit')
 ```
 
-![](img/abfb878e12717d898e17ab52336d3c52_4.png)
 
 接下来，我们需要在按钮被点击后执行图像处理逻辑。我们将使用 `Pillow` 库来操作图像。
 
@@ -78,11 +75,8 @@ from PIL.ImageFilter import *
         # 可以根据需要添加更多滤镜条件
 ```
 
-![](img/abfb878e12717d898e17ab52336d3c52_6.png)
 
-![](img/abfb878e12717d898e17ab52336d3c52_7.png)
 
-![](img/abfb878e12717d898e17ab52336d3c52_8.png)
 
 最后，我们不再显示 `edited` 图像，而是显示应用了所有效果（包括滤镜）的 `filtered_image`。
 
@@ -90,11 +84,9 @@ from PIL.ImageFilter import *
     st.image(filtered_image)
 ```
 
-![](img/abfb878e12717d898e17ab52336d3c52_10.png)
 
 保存并重新运行程序。上传一张图片，选择“模糊”滤镜，然后点击“提交”。可以看到图像变得模糊了。尝试组合使用不同的旋转角度、尺寸和滤镜，观察最终效果。
 
-![](img/abfb878e12717d898e17ab52336d3c52_12.png)
 
 ## 总结
 
@@ -104,11 +96,8 @@ from PIL.ImageFilter import *
 3.  根据下拉菜单的选择，使用 `filter` 方法为图像应用不同的滤镜效果（如模糊、细节增强、平滑）。
 4.  最终使用 `st.image()` 将处理后的图像展示在网页上。
 
-![](img/abfb878e12717d898e17ab52336d3c52_14.png)
 
-![](img/abfb878e12717d898e17ab52336d3c52_15.png)
 
-![](img/abfb878e12717d898e17ab52336d3c52_16.png)
 
 ![](img/abfb878e12717d898e17ab52336d3c52_17.png)
 

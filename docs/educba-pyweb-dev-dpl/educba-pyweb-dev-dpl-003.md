@@ -38,13 +38,10 @@
 
 ## 简单服务器与客户端示例
 
-![](img/8f0db7036a94bdec496d17691449bf47_1.png)
 
-![](img/8f0db7036a94bdec496d17691449bf47_2.png)
 
 前面我们了解了套接字通信的理论，现在让我们通过代码示例来看看一个简单的服务器和客户端是如何实现的。
 
-![](img/8f0db7036a94bdec496d17691449bf47_4.png)
 
 以下是一个极简的服务器示例。网络编程常用于创建数据库（如谷歌的信息收集数据库），或主要用于道德黑客等领域。病毒实际上并不常用，更多的是用于创建特洛伊木马主机。这是一个更好的例子，当你进入他人的计算机时，你可以将其计算机作为主机，并直接访问其中的所有信息。
 
@@ -65,7 +62,6 @@ while True:
 
 运行此服务器时，防火墙可能会警告并阻止连接。你需要配置防火墙以允许Python进行网络工作，或者直接断开网络。请注意，任何连接到网络的软件都存在潜在的安全风险，即使是你自己编写的软件。
 
-![](img/8f0db7036a94bdec496d17691449bf47_6.png)
 
 以下是对应的极简客户端示例：
 
@@ -79,9 +75,7 @@ s.connect((host, port))
 print(s.recv(1024).decode())
 ```
 
-![](img/8f0db7036a94bdec496d17691449bf47_8.png)
 
-![](img/8f0db7036a94bdec496d17691449bf47_9.png)
 
 ## 使用urllib访问网络资源
 
@@ -107,7 +101,6 @@ m = re.search(b'<a href="([^"]+)" .*?>about</a>', text, re.IGNORECASE)
 print(m.group(1))
 ```
 
-![](img/8f0db7036a94bdec496d17691449bf47_11.png)
 
 ## 检索和保存远程文件
 
@@ -124,19 +117,15 @@ urlretrieve('http://www.python.org', 'C:\\python_webpage.html')
 
 ## 使用SocketServer框架
 
-![](img/8f0db7036a94bdec496d17691449bf47_13.png)
 
 到目前为止，你可能觉得编写套接字服务器代码并不难。但如果我们想超越基础，获得一些帮助会很好。`socketserver`模块是标准库中几个服务器类的基础，包括`BaseHTTPServer`、`SimpleHTTPServer`、`CGIHTTPServer`等。`socketserver`包含四个基本的服务器类：`TCPServer`用于TCP流套接字，`UDPServer`用于UDP数据报套接字，以及更晦涩的`UnixStreamServer`和`UnixDatagramServer`。你可能不需要后两个，但很可能需要`TCPServer`，甚至可能不需要`UDPServer`。
 
 使用`socketserver`风格编写服务器时，你将大部分代码放在一个请求处理程序中。每次服务器收到请求时，都会实例化请求处理程序，并根据特定服务器和处理程序类的不同，调用其上的各种处理方法。你还可以子类化它们以创建具有自定义处理程序集的服务器。一个基本的处理程序类将所有操作放在一个名为`handle`的方法中，该方法由服务器调用。此方法可以通过属性`self.request`访问客户端套接字。
 
-![](img/8f0db7036a94bdec496d17691449bf47_15.png)
 
 如果你使用流（如TCP），可以使用`StreamRequestHandler`，它设置了另外两个属性`self.rfile`和`self.wfile`，用于读写。你可以使用这些类似文件的对象与客户端通信。
 
-![](img/8f0db7036a94bdec496d17691449bf47_17.png)
 
-![](img/8f0db7036a94bdec496d17691449bf47_19.png)
 
 以下是如何创建一个基于`socketserver`的最小服务器：
 

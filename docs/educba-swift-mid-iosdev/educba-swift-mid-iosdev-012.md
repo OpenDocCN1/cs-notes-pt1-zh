@@ -1,8 +1,6 @@
 # 012：相机、照片库与图像视图 📸
 
-![](img/fbd71bf2b9a098c4382775e381a93ce0_1.png)
 
-![](img/fbd71bf2b9a098c4382775e381a93ce0_2.png)
 
 在本节课中，我们将学习如何从设备的相机或照片库中获取图片，并将其显示在应用的图像视图（`UIImageView`）中。整个过程涉及创建图像选择器控制器、处理用户授权以及实现必要的代理方法。
 
@@ -16,14 +14,12 @@
 
 以下是创建和配置图像选择器控制器的步骤：
 
-![](img/fbd71bf2b9a098c4382775e381a93ce0_6.png)
 
 1.  **初始化选择器**：创建一个 `UIImagePickerController` 的实例。
 2.  **设置来源类型**：指定图片来源是相机（`.camera`）还是照片库（`.photoLibrary`）。
 3.  **设置代理**：将当前视图控制器设置为选择器的代理，以便接收用户操作的结果。
 4.  **模态呈现**：将选择器控制器以模态方式呈现给用户。
 
-![](img/fbd71bf2b9a098c4382775e381a93ce0_8.png)
 
 ```swift
 let imagePicker = UIImagePickerController()
@@ -32,9 +28,7 @@ imagePicker.delegate = self
 self.present(imagePicker, animated: true, completion: nil)
 ```
 
-![](img/fbd71bf2b9a098c4382775e381a93ce0_10.png)
 
-![](img/fbd71bf2b9a098c4382775e381a93ce0_12.png)
 
 ---
 
@@ -42,15 +36,12 @@ self.present(imagePicker, animated: true, completion: nil)
 
 ![](img/fbd71bf2b9a098c4382775e381a93ce0_14.png)
 
-![](img/fbd71bf2b9a098c4382775e381a93ce0_15.png)
 
 图像选择器控制器通过代理方法将用户的选择结果返回给我们的应用。我们需要实现两个核心的代理方法。
 
 以下是必须实现的 `UIImagePickerControllerDelegate` 方法：
 
-![](img/fbd71bf2b9a098c4382775e381a93ce0_17.png)
 
-![](img/fbd71bf2b9a098c4382775e381a93ce0_19.png)
 
 *   **`imagePickerController(_:didFinishPickingMediaWithInfo:)`**：当用户成功选择一张图片（或视频）时调用。我们需要从这个方法中获取选中的图片。
 *   **`imagePickerControllerDidCancel(_:)`**：当用户取消选择操作时调用。我们需要在这个方法中关闭选择器界面。

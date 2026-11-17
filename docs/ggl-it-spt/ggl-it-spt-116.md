@@ -18,13 +18,10 @@ Notepad++（可通过补充阅读材料获取）是一款优秀的开源文本�
 
 😊
 
-![](img/c9d9bf9f190db830f01dc87c117a99e3_1.png)
 
 如果你想从命令行界面编辑文件呢？遗憾的是，PowerShell终端中没有默认的优秀编辑器，但我们可以从命令行启动Notepad++文本编辑器，并以此方式开始修改文本。
 
-![](img/c9d9bf9f190db830f01dc87c117a99e3_3.png)
 
-![](img/c9d9bf9f190db830f01dc87c117a99e3_1.png)
 
 因此，启动Notepad++的命令是：
 
@@ -34,13 +31,10 @@ start notepad++
 
 ![](img/c9d9bf9f190db830f01dc87c117a99e3_3.png)
 
-![](img/c9d9bf9f190db830f01dc87c117a99e3_5.png)
 
-![](img/c9d9bf9f190db830f01dc87c117a99e3_5.png)
 
 然后只需加上文件名。如你所见，它打开了Notepad++并询问是否要创建此文件。如果你想了解专门在命令行界面中使用的文本编辑器，请查看关于高级文本编辑器VIm的补充阅读材料。
 
-![](img/c9d9bf9f190db830f01dc87c117a99e3_7.png)
 
 ---
 

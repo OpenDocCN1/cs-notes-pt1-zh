@@ -33,17 +33,13 @@ let no_name: Option<&str> = None;
 
 一个变量被声明为 `Option<T>` 类型，意味着它要么包含一个 `Some` 值，要么是 `None`。这强制我们在使用值之前，必须考虑它可能不存在的情况。
 
-![](img/f320e759847aa656ee8ef86737e7ac9e_1.png)
 
 ## 为什么 `Option` 优于 `null`
 
-![](img/f320e759847aa656ee8ef86737e7ac9e_3.png)
 
 上一节我们介绍了 `Option` 的基本形式，本节中我们来看看它如何避免空值错误。
 
-![](img/f320e759847aa656ee8ef86737e7ac9e_5.png)
 
-![](img/f320e759847aa656ee8ef86737e7ac9e_6.png)
 
 核心优势在于类型系统。`Option<T>` 和 `T` 是两种不同的类型。例如，`Option<&str>` 不是一个字符串切片（`&str`）。这意味着你不能意外地将一个可能为空的 `Option` 值当作一个确定存在的值来使用。
 
@@ -63,20 +59,15 @@ let b: Option<u8> = Some(20);
 
 既然不能直接使用 `Option` 值，我们该如何安全地获取其中可能包含的值呢？以下是几种基本方法。
 
-![](img/f320e759847aa656ee8ef86737e7ac9e_8.png)
 
 ### 使用 `unwrap_or`
 
-![](img/f320e759847aa656ee8ef86737e7ac9e_9.png)
 
 `unwrap_or` 方法提供了一种安全提取值的方式：如果 `Option` 是 `Some`，则返回内部的值；如果是 `None`，则返回你提供的默认值。
 
-![](img/f320e759847aa656ee8ef86737e7ac9e_11.png)
 
 
-![](img/f320e759847aa656ee8ef86737e7ac9e_13.png)
 
-![](img/f320e759847aa656ee8ef86737e7ac9e_14.png)
 
 ```rust
 let selected_user: Option<&str> = Some("Bob");
@@ -87,20 +78,15 @@ let user_name2 = no_user.unwrap_or("No user selected");
 println!("{:?}", user_name2); // 输出: "No user selected"
 ```
 
-![](img/f320e759847aa656ee8ef86737e7ac9e_16.png)
 
 ### 使用 `unwrap`（需谨慎）
 
-![](img/f320e759847aa656ee8ef86737e7ac9e_18.png)
 
 `unwrap` 方法更直接：如果 `Option` 是 `Some`，则返回值；如果是 `None`，则会导致程序恐慌（panic）并崩溃。
 
-![](img/f320e759847aa656ee8ef86737e7ac9e_19.png)
 
 
-![](img/f320e759847aa656ee8ef86737e7ac9e_21.png)
 
-![](img/f320e759847aa656ee8ef86737e7ac9e_22.png)
 
 ```rust
 let selected_number: Option<i32> = Some(10);

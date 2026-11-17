@@ -20,7 +20,6 @@ ADD column_name data_type;
 *   `ADD` 是关键字，表示要添加内容（此处为列）。你也可以使用其他关键字如 `DROP` 或 `MODIFY`。
 *   `column_name data_type` 定义了要添加的新列的名称及其数据类型。
 
-![](img/7048acbb3c9f781c0b820dc673643b7e_1.png)
 
 ## 实践示例：添加新列
 
@@ -47,7 +46,6 @@ ADD (age INT, country VARCHAR(50), nationality VARCHAR(255));
 
 添加列后，我们发现 `nationality`（国籍）和 `country`（国家）两列信息可能重复。为了简化表结构，我们可以删除 `nationality` 列。
 
-![](img/7048acbb3c9f781c0b820dc673643b7e_3.png)
 
 以下是删除列的SQL语句：
 
@@ -56,7 +54,6 @@ ALTER TABLE students
 DROP COLUMN nationality;
 ```
 
-![](img/7048acbb3c9f781c0b820dc673643b7e_5.png)
 
 *   语句开头同样是 `ALTER TABLE students`。
 *   使用 `DROP COLUMN` 关键字，后接要删除的列名 `nationality`。
@@ -66,13 +63,10 @@ DROP COLUMN nationality;
 
 上一节我们删除了冗余的列。本节中我们来看看如何修改现有列的定义。例如，我们觉得 `country` 列的50字符长度限制可能不够，希望将其扩展到100字符。
 
-![](img/7048acbb3c9f781c0b820dc673643b7e_7.png)
 
-![](img/7048acbb3c9f781c0b820dc673643b7e_8.png)
 
 以下是修改列定义的SQL语句：
 
-![](img/7048acbb3c9f781c0b820dc673643b7e_10.png)
 
 ```sql
 ALTER TABLE students

@@ -40,9 +40,7 @@ void main() {
 
 ---
 
-![](img/ec94b99dcf9155ab35ae76e09623ab42_1.png)
 
-![](img/ec94b99dcf9155ab35ae76e09623ab42_3.png)
 
 ## 实现曼德博分形绘制算法
 
@@ -60,9 +58,7 @@ void main() {
 以下是核心迭代公式的优化版本代码：
 
 
-![](img/ec94b99dcf9155ab35ae76e09623ab42_5.png)
 
-![](img/ec94b99dcf9155ab35ae76e09623ab42_7.png)
 
 ```c
 // 初始化

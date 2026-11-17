@@ -6,13 +6,10 @@
 
 上一节我们完成了模块的学习，现在我们来总结一下关键的知识点和获得的技能。
 
-![](img/90b5b95fcf13f39f6ce5ccda4bbb41d7_1.png)
 
-![](img/90b5b95fcf13f39f6ce5ccda4bbb41d7_3.png)
 
 你从探索Figma的基础知识开始。完成第一课的学习后，你现在能够：
 
-![](img/90b5b95fcf13f39f6ce5ccda4bbb41d7_5.png)
 
 以下是你在Figma基础部分掌握的核心技能：
 *   使用**画框（Frames）** 和**图层（Layers）**。
@@ -22,7 +19,6 @@
 *   描述**响应式设计（Responsive Design）** 的概念，并运用**网格（Grids）** 和**约束（Constraints）**。
 *   操作元素和图像，并描述基本的设计原则。
 
-![](img/90b5b95fcf13f39f6ce5ccda4bbb41d7_7.png)
 
 ---
 
@@ -33,7 +29,6 @@
 *   识别快速原型设计（Rapid Prototyping）的工具和方法。
 *   如何进行**可用性测试（Usability Testing）**。
 
-![](img/90b5b95fcf13f39f6ce5ccda4bbb41d7_9.png)
 
 ![](img/90b5b95fcf13f39f6ce5ccda4bbb41d7_10.png)
 

@@ -8,9 +8,7 @@
 
 首先，两者使用的汇编器不同。Keil使用其自家的ARM汇编器，而STM32CubeIDE使用GNU GCC汇编器。这导致了语法和伪指令的差异。
 
-![](img/ee345a13a9fae01ad3b77181ccec903a_1.png)
 
-![](img/ee345a13a9fae01ad3b77181ccec903a_3.png)
 
 一个关键区别在于程序的入口点。在Keil项目中，复位处理程序（Reset Handler）会跳转到 `__main` 标签。而在STM32CubeIDE的GCC项目中，入口点标签是 `main`，没有下划线。
 
@@ -26,34 +24,26 @@
 
 现在，我们有了一个干净的项目，可以开始移植代码。
 
-![](img/ee345a13a9fae01ad3b77181ccec903a_5.png)
 
-![](img/ee345a13a9fae01ad3b77181ccec903a_6.png)
 
 ## 转换过程详解
 我们将Keil项目中的汇编代码复制到新建的`main.s`文件中，然后逐项进行转换。
 
-![](img/ee345a13a9fae01ad3b77181ccec903a_8.png)
 
 ### 1. 转换符号定义（EQU）
 在Keil汇编器中，使用 `EQU` 伪指令定义符号常量，且符号名在行首。
 
-![](img/ee345a13a9fae01ad3b77181ccec903a_10.png)
 
-![](img/ee345a13a9fae01ad3b77181ccec903a_12.png)
 
-![](img/ee345a13a9fae01ad3b77181ccec903a_14.png)
 
 **Keil格式示例：**
 ```
 GPIOA_EN    EQU 0x40023830
 ```
 
-![](img/ee345a13a9fae01ad3b77181ccec903a_15.png)
 
 在GCC汇编器中，我们同样使用 `.equ` 伪指令，但语法格式不同。
 
-![](img/ee345a13a9fae01ad3b77181ccec903a_17.png)
 
 **GCC格式应为：**
 ```

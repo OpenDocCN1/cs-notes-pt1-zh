@@ -1,6 +1,5 @@
 # 008：Week-02, Segment-3 - read(2), write(2), lseek(2) 📖✍️🔍
 
-![](img/fd4ae7ceb5b943b2880cac7cb1925f08_1.png)
 
 在本节课中，我们将深入学习三个核心的系统调用：`read`、`write` 和 `lseek`。我们将探讨它们如何操作文件描述符，理解文件偏移量的概念，并通过实际代码示例演示它们的行为。此外，我们还将了解如何确保I/O操作的效率，并探索一些与文件描述符相关的奇特现象，例如创建稀疏文件。
 
@@ -16,13 +15,11 @@
 
 `read` 系统调用用于从文件描述符读取数据。其函数原型如下：
 
-![](img/fd4ae7ceb5b943b2880cac7cb1925f08_3.png)
 
 ```c
 ssize_t read(int fd, void *buf, size_t count);
 ```
 
-![](img/fd4ae7ceb5b943b2880cac7cb1925f08_5.png)
 
 以下是关于 `read` 的关键点：
 
@@ -36,25 +33,18 @@ ssize_t read(int fd, void *buf, size_t count);
 *   **部分读取**：`read` 不保证读取 `count` 指定的全部字节。如果剩余数据不足，或从面向记录的设备（如磁带、网络套接字）读取，它可能返回少于请求的字节数。这**不是**错误。
 *   **信号中断**：`read` 可能被信号中断，我们将在后续关于信号的课程中详细讨论。
 
-![](img/fd4ae7ceb5b943b2880cac7cb1925f08_7.png)
 
-![](img/fd4ae7ceb5b943b2880cac7cb1925f08_9.png)
 
 ---
 
-![](img/fd4ae7ceb5b943b2880cac7cb1925f08_11.png)
 
 ## write(2) 系统调用 📤
 
-![](img/fd4ae7ceb5b943b2880cac7cb1925f08_13.png)
 
 `write` 系统调用用于向文件描述符写入数据。其函数原型如下：
 
-![](img/fd4ae7ceb5b943b2880cac7cb1925f08_15.png)
 
-![](img/fd4ae7ceb5b943b2880cac7cb1925f08_16.png)
 
-![](img/fd4ae7ceb5b943b2880cac7cb1925f08_18.png)
 
 ```c
 ssize_t write(int fd, const void *buf, size_t count);
@@ -62,7 +52,6 @@ ssize_t write(int fd, const void *buf, size_t count);
 
 以下是关于 `write` 的关键点：
 
-![](img/fd4ae7ceb5b943b2880cac7cb1925f08_20.png)
 
 *   **参数**：与 `read` 类似，`fd` 是文件描述符，`buf` 指向包含待写数据的缓冲区，`count` 是请求写入的字节数。
 *   **缓冲区管理**：同样，必须确保缓冲区至少包含 `count` 字节的有效数据。
@@ -77,14 +66,11 @@ ssize_t write(int fd, const void *buf, size_t count);
 
 ## 代码示例：读写操作演示 💻
 
-![](img/fd4ae7ceb5b943b2880cac7cb1925f08_22.png)
 
 让我们通过一个简单的程序 `rwx.c` 来演示 `read` 和 `write` 的行为，特别是文件偏移量和 `O_APPEND` 标志的影响。
 
-![](img/fd4ae7ceb5b943b2880cac7cb1925f08_24.png)
 
 
-![](img/fd4ae7ceb5b943b2880cac7cb1925f08_26.png)
 
 ```c
 // rwx.c 示例代码框架
@@ -111,29 +97,23 @@ int main() {
 
 这个例子清楚地展示了 `read` 和 `write` 如何操作文件偏移量。
 
-![](img/fd4ae7ceb5b943b2880cac7cb1925f08_28.png)
 
 ---
 
-![](img/fd4ae7ceb5b943b2880cac7cb1925f08_30.png)
 
 ## lseek(2) 系统调用 🎯
 
-![](img/fd4ae7ceb5b943b2880cac7cb1925f08_32.png)
 
 `lseek` 系统调用用于显式地重新定位文件偏移量，类似于磁带机的快进或倒带功能。其函数原型如下：
 
-![](img/fd4ae7ceb5b943b2880cac7cb1925f08_34.png)
 
 ```c
 off_t lseek(int fd, off_t offset, int whence);
 ```
 
-![](img/fd4ae7ceb5b943b2880cac7cb1925f08_36.png)
 
 以下是关于 `lseek` 的关键点：
 
-![](img/fd4ae7ceb5b943b2880cac7cb1925f08_38.png)
 
 *   **参数**：
     *   `fd`：文件描述符。
@@ -148,39 +128,26 @@ off_t lseek(int fd, off_t offset, int whence);
     *   `lseek(fd, 0, SEEK_CUR)` 可用于获取当前偏移量，或测试文件描述符是否支持寻址（如管道、FIFO不支持）。
     *   可以寻求超过文件末尾的位置，这将创建一个“空洞”。
 
-![](img/fd4ae7ceb5b943b2880cac7cb1925f08_40.png)
 
-![](img/fd4ae7ceb5b943b2880cac7cb1925f08_42.png)
 
 ---
 
-![](img/fd4ae7ceb5b943b2880cac7cb1925f08_44.png)
 
-![](img/fd4ae7ceb5b943b2880cac7cb1925f08_46.png)
 
 ## 稀疏文件与文件空洞 🕳️
 
-![](img/fd4ae7ceb5b943b2880cac7cb1925f08_48.png)
 
-![](img/fd4ae7ceb5b943b2880cac7cb1925f08_50.png)
 
 上一节我们提到了 `lseek` 可以移动到文件末尾之后。本节中我们来看看这个操作的奇特结果：创建稀疏文件。
 
-![](img/fd4ae7ceb5b943b2880cac7cb1925f08_52.png)
 
-![](img/fd4ae7ceb5b943b2880cac7cb1925f08_54.png)
 
-![](img/fd4ae7ceb5b943b2880cac7cb1925f08_56.png)
 
-![](img/fd4ae7ceb5b943b2880cac7cb1925f08_58.png)
 
-![](img/fd4ae7ceb5b943b2880cac7cb1925f08_60.png)
 
 如果使用 `lseek` 将偏移量移动到文件末尾之后很远的地方，然后进行 `write` 操作，就会在文件中创建一个“空洞”。文件系统不会为空洞分配实际的磁盘块，但在逻辑上，读取空洞会返回一串零字节 (`\0`)。
 
-![](img/fd4ae7ceb5b943b2880cac7cb1925f08_61.png)
 
-![](img/fd4ae7ceb5b943b2880cac7cb1925f08_63.png)
 
 **示例行为：**
 1.  创建一个文件，写入10字节。
@@ -193,7 +160,6 @@ off_t lseek(int fd, off_t offset, int whence);
 *   工具（如 `cp`, `cat`）对稀疏文件的处理方式不同：有些能识别并保持稀疏性，有些则会“填满”空洞，写入实际的零字节。
 *   可以使用 `stat` 命令查看文件的“逻辑块大小”，这通常是高效I/O的缓冲区大小参考值。
 
-![](img/fd4ae7ceb5b943b2880cac7cb1925f08_65.png)
 
 ---
 
@@ -201,7 +167,6 @@ off_t lseek(int fd, off_t offset, int whence);
 
 在编写类似 `cat` 的复制程序时，缓冲区大小会影响系统调用次数和效率。我们通过一个基准测试来探索其关系。
 
-![](img/fd4ae7ceb5b943b2880cac7cb1925f08_67.png)
 
 **测试方法：** 使用不同缓冲区大小（从 3MB 到 1 字节）复制 100MB 的文件，测量耗时。
 
@@ -221,7 +186,6 @@ off_t lseek(int fd, off_t offset, int whence);
 2.  **`write`**：用于向文件描述符写入数据，其行为受 `O_APPEND` 标志影响，且是覆盖操作。
 3.  **`lseek`**：用于移动文件偏移量，支持相对或绝对定位，并可创建稀疏文件。
 
-![](img/fd4ae7ceb5b943b2880cac7cb1925f08_69.png)
 
 我们还探讨了文件空洞的概念以及如何通过选择合适的缓冲区大小来优化I/O效率。理解这些基础调用是进行更高级文件操作和系统编程的基石。
 

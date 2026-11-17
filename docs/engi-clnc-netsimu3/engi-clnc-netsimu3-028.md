@@ -158,7 +158,6 @@ if (tracing) {
 }
 ```
 
-![](img/3b914f0a109928b372c3be40505338ef_13.png)
 
 最后，设置模拟的起止时间并运行。
 
@@ -168,9 +167,7 @@ Simulator::Run();
 Simulator::Destroy();
 ```
 
-![](img/3b914f0a109928b372c3be40505338ef_15.png)
 
-![](img/3b914f0a109928b372c3be40505338ef_17.png)
 
 ## 使用分析工具
 
@@ -182,9 +179,7 @@ Simulator::Destroy();
 
 ### Trace Metrics分析
 
-![](img/3b914f0a109928b372c3be40505338ef_19.png)
 
-![](img/3b914f0a109928b372c3be40505338ef_21.png)
 
 ![](img/3b914f0a109928b372c3be40505338ef_23.png)
 
@@ -222,7 +217,6 @@ anim.SetConstantPosition(wifiStaNodes.Get(0), 30.0, 50.0);
 
 ## 总结
 
-![](img/3b914f0a109928b372c3be40505338ef_31.png)
 
 ![](img/3b914f0a109928b372c3be40505338ef_33.png)
 

@@ -20,7 +20,6 @@ pub trait Summary {
 
 ## 为具体类型实现 Trait
 
-![](img/bb159da96b8d01a1056f11a8c7534a58_1.png)
 
 上一节我们介绍了如何定义 Trait，本节中我们来看看如何为具体的类型实现它。
 
@@ -48,11 +47,9 @@ struct SocialPost {
 
 接下来，我们可以为这些结构体实现 `Summary` Trait。
 
-![](img/bb159da96b8d01a1056f11a8c7534a58_3.png)
 
 以下是实现 `Summary` Trait 的步骤：
 
-![](img/bb159da96b8d01a1056f11a8c7534a58_4.png)
 
 1.  **为 `NewsArticle` 实现 Trait**：
     我们使用 `impl Summary for NewsArticle` 语法。编译器会提示我们必须实现 Trait 中定义的所有方法（即 `summarize`）。我们实现一个 `summarize` 方法，返回一个包含标题、作者和地点的格式化字符串。
@@ -65,7 +62,6 @@ struct SocialPost {
     }
     ```
 
-![](img/bb159da96b8d01a1056f11a8c7534a58_6.png)
 
 2.  **为 `SocialPost` 实现 Trait**：
     同样地，我们为 `SocialPost` 实现 `Summary` Trait。这里我们实现 `summarize` 方法，返回一个包含用户名和内容的字符串。
@@ -107,13 +103,10 @@ fn main() {
 
 我们已经学会了如何为类型实现 Trait，现在让我们看看如何为 Trait 中的方法提供默认实现。
 
-![](img/bb159da96b8d01a1056f11a8c7534a58_8.png)
 
-![](img/bb159da96b8d01a1056f11a8c7534a58_9.png)
 
 首先，我们修改 `Summary` Trait 的定义，为 `summarize` 方法提供一个默认实现：
 
-![](img/bb159da96b8d01a1056f11a8c7534a58_10.png)
 
 ```rust
 pub trait Summary {
@@ -140,7 +133,6 @@ struct DetailedPost {
 
 以下是实现 `Summary` Trait 的两种方式：
 
-![](img/bb159da96b8d01a1056f11a8c7534a58_12.png)
 
 1.  **使用默认实现**：
     为 `SimpleNote` 实现 `Summary` 时，我们可以提供一个空的实现块 `{}`。由于 `summarize` 方法已有默认实现，我们无需再提供函数体。

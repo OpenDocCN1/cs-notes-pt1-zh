@@ -1,8 +1,6 @@
 # 005：Azure ExpressRoute 🚀
 
-![](img/deb43b6d55ec976a2856abd3807990df_0.png)
 
-![](img/deb43b6d55ec976a2856abd3807990df_1.png)
 
 在本模块中，我们将学习 Azure ExpressRoute。ExpressRoute 是一项服务，用于在 Azure 数据中心与您本地或托管环境中的基础设施之间建立私有连接。
 
@@ -18,7 +16,6 @@
 
 ## 什么是 Azure ExpressRoute？🔗
 
-![](img/deb43b6d55ec976a2856abd3807990df_3.png)
 
 现在，让我们首先理解什么是 Azure ExpressRoute。
 
@@ -60,7 +57,6 @@ Azure ExpressRoute 主要有两种连接模型：**服务提供商模型**和**�
 
 ---
 
-![](img/deb43b6d55ec976a2856abd3807990df_5.png)
 
 ## 服务提供商模型与直接模型对比 ⚖️
 

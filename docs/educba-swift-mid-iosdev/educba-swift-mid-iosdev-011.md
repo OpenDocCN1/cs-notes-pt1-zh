@@ -1,19 +1,14 @@
 # 011：在TableView中嵌入CollectionView 📱
 
-![](img/dec332cc9e5b662821754848224ce9c4_1.png)
 
-![](img/dec332cc9e5b662821754848224ce9c4_3.png)
 
 ## 概述
 在本节课中，我们将学习如何在UITableView的单元格内嵌入一个UICollectionView。这是一种常见的iOS界面设计模式，用于创建可垂直滚动的列表，其中每个列表项内部又包含一个可水平滚动的图片集。我们将通过修改数据源、调整滚动方向以及设置自动布局来完成这个功能。
 
-![](img/dec332cc9e5b662821754848224ce9c4_5.png)
 
-![](img/dec332cc9e5b662821754848224ce9c4_7.png)
 
 ---
 
-![](img/dec332cc9e5b662821754848224ce9c4_9.png)
 
 ## 创建多个分区
 上一节我们设置了基础的TableView和CollectionView。本节中，我们来看看如何为TableView创建多个分区，以展示更多内容。
@@ -26,19 +21,14 @@ func numberOfSections(in tableView: UITableView) -> Int {
 }
 ```
 
-![](img/dec332cc9e5b662821754848224ce9c4_11.png)
 
-![](img/dec332cc9e5b662821754848224ce9c4_13.png)
 
 执行此操作后，TableView将包含5个独立的分区。
 
 
 
-![](img/dec332cc9e5b662821754848224ce9c4_15.png)
 
-![](img/dec332cc9e5b662821754848224ce9c4_3.png)
 
-![](img/dec332cc9e5b662821754848224ce9c4_17.png)
 
 ---
 
@@ -52,14 +42,12 @@ func numberOfSections(in tableView: UITableView) -> Int {
 
 
 
-![](img/dec332cc9e5b662821754848224ce9c4_5.png)
 
 ---
 
 ## 设置单元格背景色
 为了更好地区分CollectionView的单元格，我们可以为其设置背景颜色。
 
-![](img/dec332cc9e5b662821754848224ce9c4_19.png)
 
 在自定义的CollectionViewCell类中，我们可以通过`cellForItemAt`数据源方法设置背景色。例如，将背景色设置为浅灰色：
 
@@ -74,7 +62,6 @@ func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath:
 
 
 
-![](img/dec332cc9e5b662821754848224ce9c4_9.png)
 
 ---
 
@@ -85,9 +72,7 @@ func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath:
 
 
 
-![](img/dec332cc9e5b662821754848224ce9c4_21.png)
 
-![](img/dec332cc9e5b662821754848224ce9c4_13.png)
 
 ![](img/dec332cc9e5b662821754848224ce9c4_23.png)
 
@@ -98,7 +83,6 @@ func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath:
 ## 添加自动布局约束
 为了确保界面在不同尺寸的设备上都能正确显示，我们需要为CollectionView添加自动布局约束。
 
-![](img/dec332cc9e5b662821754848224ce9c4_27.png)
 
 以下是需要添加的约束：
 *   **Leading**（左对齐）： 与TableView单元格的左边缘对齐。
@@ -106,13 +90,11 @@ func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath:
 *   **Top**（顶部对齐）： 与TableView单元格的顶部对齐。
 *   **Bottom**（底部对齐）： 与TableView单元格的底部对齐。
 
-![](img/dec332cc9e5b662821754848224ce9c4_29.png)
 
 这些约束确保了CollectionView会跟随其所在的TableView单元格的大小变化而调整自身大小。
 
 
 
-![](img/dec332cc9e5b662821754848224ce9c4_31.png)
 
 ![](img/dec332cc9e5b662821754848224ce9c4_19.png)
 

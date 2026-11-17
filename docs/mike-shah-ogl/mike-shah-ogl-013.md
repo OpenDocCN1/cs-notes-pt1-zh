@@ -67,7 +67,6 @@ glVertexAttribPointer(1,        // 属性索引
                       nullptr); // 偏移量
 ```
 
-![](img/7db9d5d2e1891c55f11a3621e01021e3_6.png)
 
 完成设置后，记得在适当的时候禁用属性数组。
 
@@ -81,7 +80,6 @@ glVertexAttribPointer(1,        // 属性索引
 
 以下是修改后的顶点着色器核心部分：
 
-![](img/7db9d5d2e1891c55f11a3621e01021e3_8.png)
 
 
 ![](img/7db9d5d2e1891c55f11a3621e01021e3_10.png)
@@ -107,7 +105,6 @@ void main() {
 
 ### 2. 修改片段着色器
 
-![](img/7db9d5d2e1891c55f11a3621e01021e3_13.png)
 
 ![](img/7db9d5d2e1891c55f11a3621e01021e3_14.png)
 
@@ -116,7 +113,6 @@ void main() {
 以下是修改后的片段着色器：
 
 
-![](img/7db9d5d2e1891c55f11a3621e01021e3_16.png)
 
 ```glsl
 #version 330 core
@@ -134,15 +130,12 @@ void main() {
 
 ## 运行结果
 
-![](img/7db9d5d2e1891c55f11a3621e01021e3_18.png)
 
 完成以上所有修改并编译运行程序后，你将看到一个顶点分别为红、蓝、绿色的三角形，并且颜色在三角形表面平滑地插值过渡。
 
 ## 总结
 
-![](img/7db9d5d2e1891c55f11a3621e01021e3_20.png)
 
-![](img/7db9d5d2e1891c55f11a3621e01021e3_21.png)
 
 ![](img/7db9d5d2e1891c55f11a3621e01021e3_22.png)
 

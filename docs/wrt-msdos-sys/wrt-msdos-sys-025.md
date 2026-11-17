@@ -220,7 +220,6 @@ SCREEN 0
 
 ---
 
-![](img/4f58559fe4f56934abc79fe5123d6e47_1.png)
 
 ## 编译与运行
 
@@ -232,37 +231,27 @@ SCREEN 0
 - 关闭数组边界检查等运行时检查。
 - 优化速度。
 
-![](img/4f58559fe4f56934abc79fe5123d6e47_5.png)
 
-![](img/4f58559fe4f56934abc79fe5123d6e47_7.png)
 
 ![](img/4f58559fe4f56934abc79fe5123d6e47_8.png)
 
 ![](img/4f58559fe4f56934abc79fe5123d6e47_9.png)
 
-![](img/4f58559fe4f56934abc79fe5123d6e47_10.png)
 
 使用PowerBasic编译器进行编译，生成EXE文件。在MS-DOS或DOSBox中运行该程序，即可看到火箭发射、爆炸成烟花的效果。
 
-![](img/4f58559fe4f56934abc79fe5123d6e47_12.png)
 
 ![](img/4f58559fe4f56934abc79fe5123d6e47_14.png)
 
 ![](img/4f58559fe4f56934abc79fe5123d6e47_16.png)
 
-![](img/4f58559fe4f56934abc79fe5123d6e47_18.png)
 
-![](img/4f58559fe4f56934abc79fe5123d6e47_19.png)
 
 ---
 
-![](img/4f58559fe4f56934abc79fe5123d6e47_21.png)
 
-![](img/4f58559fe4f56934abc79fe5123d6e47_22.png)
 
-![](img/4f58559fe4f56934abc79fe5123d6e47_23.png)
 
-![](img/4f58559fe4f56934abc79fe5123d6e47_25.png)
 
 ![](img/4f58559fe4f56934abc79fe5123d6e47_26.png)
 
@@ -270,11 +259,8 @@ SCREEN 0
 
 ## 总结
 
-![](img/4f58559fe4f56934abc79fe5123d6e47_30.png)
 
-![](img/4f58559fe4f56934abc79fe5123d6e47_32.png)
 
-![](img/4f58559fe4f56934abc79fe5123d6e47_34.png)
 
 ![](img/4f58559fe4f56934abc79fe5123d6e47_36.png)
 
@@ -291,17 +277,13 @@ SCREEN 0
 
 ![](img/4f58559fe4f56934abc79fe5123d6e47_40.png)
 
-![](img/4f58559fe4f56934abc79fe5123d6e47_42.png)
 
 ![](img/4f58559fe4f56934abc79fe5123d6e47_44.png)
 
 ![](img/4f58559fe4f56934abc79fe5123d6e47_46.png)
 
-![](img/4f58559fe4f56934abc79fe5123d6e47_47.png)
 
-![](img/4f58559fe4f56934abc79fe5123d6e47_48.png)
 
-![](img/4f58559fe4f56934abc79fe5123d6e47_49.png)
 
 ![](img/4f58559fe4f56934abc79fe5123d6e47_50.png)
 

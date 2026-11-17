@@ -10,7 +10,6 @@ Python超全入门教程：P09：温度转换程序
 
 以下是程序初始化的步骤：
 
-![](img/830376e5a166efbebe97cae31b515a21_1.png)
 
 1.  询问温度单位。
 2.  询问温度数值。
@@ -27,9 +26,7 @@ temp = float(input("请输入温度值: "))
 
 上一节我们获取了用户输入，本节中我们来看看如何根据不同的单位执行不同的转换逻辑。我们将使用 `if-elif-else` 语句来处理三种情况：摄氏度转华氏度、华氏度转摄氏度以及无效的单位输入。
 
-![](img/830376e5a166efbebe97cae31b515a21_3.png)
 
-![](img/830376e5a166efbebe97cae31b515a21_4.png)
 
 以下是核心的条件判断结构：
 
@@ -45,15 +42,12 @@ else:
     print(f"‘{unit}’ 不是一个有效的温度单位。")
 ```
 
-![](img/830376e5a166efbebe97cae31b515a21_6.png)
 
 ---
 
-![](img/830376e5a166efbebe97cae31b515a21_8.png)
 
 ### 摄氏度转华氏度
 
-![](img/830376e5a166efbebe97cae31b515a21_10.png)
 
 如果用户输入的单位是摄氏度（‘C‘），我们需要将其转换为华氏度。转换公式如下：
 
@@ -61,7 +55,6 @@ else:
 
 在代码中，我们使用这个公式进行计算，并使用 `round()` 函数将结果四舍五入到一位小数，使输出更整洁。
 
-![](img/830376e5a166efbebe97cae31b515a21_12.png)
 
 ```python
 if unit == "C" or unit == "c":
@@ -69,19 +62,15 @@ if unit == "C" or unit == "c":
     print(f"温度为 {converted_temp} 华氏度。")
 ```
 
-![](img/830376e5a166efbebe97cae31b515a21_14.png)
 
 ---
 
-![](img/830376e5a166efbebe97cae31b515a21_15.png)
 
 ### 华氏度转摄氏度
 
-![](img/830376e5a166efbebe97cae31b515a21_17.png)
 
 如果用户输入的单位是华氏度（‘F‘），我们则执行相反的转换。转换公式如下：
 
-![](img/830376e5a166efbebe97cae31b515a21_19.png)
 
 **公式：** `摄氏度 = (华氏度 - 32) × 5/9`
 
@@ -93,7 +82,6 @@ elif unit == "F" or unit == "f":
     print(f"温度为 {converted_temp} 摄氏度。")
 ```
 
-![](img/830376e5a166efbebe97cae31b515a21_21.png)
 
 ---
 

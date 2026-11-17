@@ -14,7 +14,6 @@
 
 ![](img/f50787a48fc38bca0b94a2fc47cf7c96_12.png)
 
-![](img/f50787a48fc38bca0b94a2fc47cf7c96_14.png)
 
 ![](img/f50787a48fc38bca0b94a2fc47cf7c96_16.png)
 
@@ -84,9 +83,7 @@
 
 ![](img/f50787a48fc38bca0b94a2fc47cf7c96_76.png)
 
-![](img/f50787a48fc38bca0b94a2fc47cf7c96_78.png)
 
-![](img/f50787a48fc38bca0b94a2fc47cf7c96_80.png)
 
 ![](img/f50787a48fc38bca0b94a2fc47cf7c96_82.png)
 
@@ -243,7 +240,6 @@ menu_add_item(&game_state.menu, "Tetris", ...);
 
 ![](img/f50787a48fc38bca0b94a2fc47cf7c96_210.png)
 
-![](img/f50787a48fc38bca0b94a2fc47cf7c96_212.png)
 
 ![](img/f50787a48fc38bca0b94a2fc47cf7c96_214.png)
 
@@ -354,7 +350,6 @@ menu_add_item(&game_state.menu, "Tetris", ...);
 
 ![](img/f50787a48fc38bca0b94a2fc47cf7c96_302.png)
 
-![](img/f50787a48fc38bca0b94a2fc47cf7c96_304.png)
 
 ![](img/f50787a48fc38bca0b94a2fc47cf7c96_306.png)
 
@@ -379,9 +374,7 @@ menu_add_item(&game_state.menu, "Tetris", ...);
 
 ![](img/f50787a48fc38bca0b94a2fc47cf7c96_310.png)
 
-![](img/f50787a48fc38bca0b94a2fc47cf7c96_312.png)
 
-![](img/f50787a48fc38bca0b94a2fc47cf7c96_314.png)
 
 ![](img/f50787a48fc38bca0b94a2fc47cf7c96_316.png)
 
@@ -463,9 +456,7 @@ menu_add_item(&game_state.menu, "Tetris", ...);
 
 以下是控制方块移动速度的逻辑：
 
-![](img/f50787a48fc38bca0b94a2fc47cf7c96_377.png)
 
-![](img/f50787a48fc38bca0b94a2fc47cf7c96_379.png)
 
 ![](img/f50787a48fc38bca0b94a2fc47cf7c96_381.png)
 
@@ -590,7 +581,6 @@ void simulate_tetris_level() {
 
 ![](img/f50787a48fc38bca0b94a2fc47cf7c96_484.png)
 
-![](img/f50787a48fc38bca0b94a2fc47cf7c96_486.png)
 
 ## 游戏逻辑与关卡流程
 
@@ -670,7 +660,6 @@ void simulate_tetris_level() {
 
 ![](img/f50787a48fc38bca0b94a2fc47cf7c96_555.png)
 
-![](img/f50787a48fc38bca0b94a2fc47cf7c96_557.png)
 
 ![](img/f50787a48fc38bca0b94a2fc47cf7c96_559.png)
 
@@ -798,9 +787,7 @@ void simulate_tetris_level() {
 
 在开发过程中，我们也对代码结构和渲染效果进行了优化。
 
-![](img/f50787a48fc38bca0b94a2fc47cf7c96_647.png)
 
-![](img/f50787a48fc38bca0b94a2fc47cf7c96_649.png)
 
 ![](img/f50787a48fc38bca0b94a2fc47cf7c96_651.png)
 

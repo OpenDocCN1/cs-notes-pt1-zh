@@ -22,7 +22,6 @@ pub fn notify(item: &impl Summary) {
 
 ### 显式泛型语法
 
-![](img/475f9ad9db816c8a0ca5413131cb0a50_1.png)
 
 接下来，我们使用显式泛型语法，这是实现相同功能的完整形式。
 
@@ -55,13 +54,10 @@ pub fn notify_long<T: Summary>(item: &T) {
     }
     ```
 
-![](img/475f9ad9db816c8a0ca5413131cb0a50_3.png)
 
-![](img/475f9ad9db816c8a0ca5413131cb0a50_4.png)
 
 ## 实际应用示例
 
-![](img/475f9ad9db816c8a0ca5413131cb0a50_5.png)
 
 为了使用这些函数，我们需要创建一个结构体并为其实现 `Summary` Trait。
 
@@ -102,15 +98,11 @@ fn main() {
 
 我们只需按照函数签名定义的要求，传递实现了 `Summary` Trait 的结构体引用即可。
 
-![](img/475f9ad9db816c8a0ca5413131cb0a50_7.png)
 
 ## 组合多个 Trait 约束
 
-![](img/475f9ad9db816c8a0ca5413131cb0a50_8.png)
 
-![](img/475f9ad9db816c8a0ca5413131cb0a50_9.png)
 
-![](img/475f9ad9db816c8a0ca5413131cb0a50_10.png)
 
 有时，我们需要一个类型同时实现多个 Trait，以便使用来自所有这些 Trait 的方法。使用 `+` 运算符语法可以实现这一点。
 

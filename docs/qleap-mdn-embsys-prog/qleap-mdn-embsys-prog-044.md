@@ -24,11 +24,9 @@
 
 我们的目标是将`Blinky1`和`Blinky2`线程转换为活动对象。以下是转换的核心步骤。
 
-![](img/549526906f94beed2e991e33d563ad0e_2.png)
 
 ### 创建Blinky1活动对象
 
-![](img/549526906f94beed2e991e33d563ad0e_4.png)
 
 首先，我们需要创建`Blinky1`活动对象类，它继承自QP框架中的`QActive`基类。
 
@@ -90,7 +88,6 @@ case BUTTON_PRESSED_SIG: {
 
 ---
 
-![](img/549526906f94beed2e991e33d563ad0e_6.png)
 
 ## 关键变化：栈与事件队列
 
@@ -109,7 +106,6 @@ Blinky1 blinky1; // Blinky1活动对象实例
 Blinky2 blinky2; // Blinky2活动对象实例
 ```
 
-![](img/549526906f94beed2e991e33d563ad0e_8.png)
 
 启动活动对象时，我们使用`QActive_start()` API，并传入事件队列及其长度，而不再提供栈指针。
 

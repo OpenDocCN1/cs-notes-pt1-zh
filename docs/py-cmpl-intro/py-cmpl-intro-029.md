@@ -44,9 +44,7 @@ while player not in options:
 
 ## 显示选择与判断胜负
 
-![](img/a3fde07756852e79dfcdf5c985c6be6c_1.png)
 
-![](img/a3fde07756852e79dfcdf5c985c6be6c_2.png)
 
 在获取双方选择后，我们先将其显示出来。
 
@@ -73,7 +71,6 @@ else:
     print("You lose!")
 ```
 
-![](img/a3fde07756852e79dfcdf5c985c6be6c_4.png)
 
 ---
 
@@ -126,7 +123,6 @@ print("Thanks for playing!")
 3.  使用`if-elif-else`语句实现游戏的胜负逻辑。
 4.  使用一个由布尔变量控制的`while`循环来实现游戏的重复进行。
 
-![](img/a3fde07756852e79dfcdf5c985c6be6c_6.png)
 
 ![](img/a3fde07756852e79dfcdf5c985c6be6c_7.png)
 

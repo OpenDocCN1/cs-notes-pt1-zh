@@ -62,7 +62,6 @@ add_subdirectory(lib)
 
 ---
 
-![](img/d5cca722ee09ab241dee558873a78a90_1.png)
 
 ## 库CMake文件配置 📦
 
@@ -102,7 +101,6 @@ using Result = llvm::SmallVector<llvm::BinaryOperator *, 4>;
 Result run(llvm::Function &F, llvm::FunctionAnalysisManager &FAM);
 ```
 
-![](img/d5cca722ee09ab241dee558873a78a90_3.png)
 
 最后，一个分析还必须有一个`AnalysisKey`，它提供了一个基于地址的标识符，用于唯一识别该分析。
 
@@ -153,7 +151,6 @@ llvmGetPassPluginInfo() {
 
 首先，注册我们的分析Pass，以便其他Pass可以请求它。然后，注册一个打印Pass，以便可以通过OPT使用它。这两个注册方法都需要回调函数。
 
-![](img/d5cca722ee09ab241dee558873a78a90_5.png)
 
 为了注册一个分析，我们需要一个分析管理器（在我们的案例中是`FunctionAnalysisManager`），并用它来注册我们的`AddConstAnalysis`实例。
 
@@ -164,9 +161,7 @@ void registerAnalysisCallback(llvm::FunctionAnalysisManager &FAM) {
 }
 ```
 
-![](img/d5cca722ee09ab241dee558873a78a90_7.png)
 
-![](img/d5cca722ee09ab241dee558873a78a90_8.png)
 
 我们还需要实现将插件注册到LLVM OPT管道的回调函数。它接收三个参数：Pass名称、Pass管理器和一个管道元素数组（目前暂不使用）。
 
@@ -180,7 +175,6 @@ bool registerPassBuilderCallbacks(llvm::PassBuilder &PB,
 }
 ```
 
-![](img/d5cca722ee09ab241dee558873a78a90_10.png)
 
 我们将打印Pass引用为`print-add-const`。如果传入的Pass名称是这个值，那么我们就将一个打印Pass的实例添加到Pass管理器中，并返回`true`。
 
@@ -193,11 +187,9 @@ if (Name == "print-add-const") {
 
 请注意，我们的打印Pass构造函数接收一个输出流。这里我们使用了`llvm::errs()`，它是一个标准错误输出流。否则，返回`false`，因为没有匹配的Pass。
 
-![](img/d5cca722ee09ab241dee558873a78a90_12.png)
 
 还有最后一件事需要做，那就是实现LLVM OPT工具的实际入口点。这非常简单，我们只需让`llvmGetPassPluginInfo`函数返回插件信息即可。
 
-![](img/d5cca722ee09ab241dee558873a78a90_13.png)
 
 ```cpp
 // OPT插件入口点

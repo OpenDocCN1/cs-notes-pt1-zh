@@ -31,12 +31,9 @@ CPU与键盘、鼠标等硬件设备通信，需要通过一种称为“端口�
 首先，创建头文件 `port.h`：
 
 
-![](img/255810a0e158f70dcd8fb72cf29aa6ac_1.png)
 
 
-![](img/255810a0e158f70dcd8fb72cf29aa6ac_3.png)
 
-![](img/255810a0e158f70dcd8fb72cf29aa6ac_5.png)
 
 ```cpp
 #ifndef PORT_H
@@ -95,7 +92,6 @@ public:
 ![](img/255810a0e158f70dcd8fb72cf29aa6ac_12.png)
 
 
-![](img/255810a0e158f70dcd8fb72cf29aa6ac_14.png)
 
 
 ![](img/255810a0e158f70dcd8fb72cf29aa6ac_16.png)
@@ -170,19 +166,15 @@ clean:
 
 ## 改进屏幕输出：实现光标和换行
 
-![](img/255810a0e158f70dcd8fb72cf29aa6ac_26.png)
 
-![](img/255810a0e158f70dcd8fb72cf29aa6ac_28.png)
 
 我们当前的 `printf` 函数有一个问题：每次调用都从屏幕左上角开始写入，会覆盖之前的内容。我们需要实现一个光标系统来跟踪下一个字符的写入位置。
 
 屏幕是80字符宽、25行高。光标位置可以通过公式计算：
 
-![](img/255810a0e158f70dcd8fb72cf29aa6ac_30.png)
 
 **内存位置 = 80 * y + x**
 
-![](img/255810a0e158f70dcd8fb72cf29aa6ac_32.png)
 
 其中 `x` 是列号，`y` 是行号。
 

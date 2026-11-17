@@ -16,9 +16,7 @@ wget -qO - https://www.mongodb.org/static/pgp/server-4.2.asc | sudo apt-key add 
 ```
 请注意，命令中的版本号 `4.2` 可以根据你的需求进行修改，例如改为 `4.4` 或 `4.6`。
 
-![](img/13efec61ce803111a960bcf5c5392f14_1.png)
 
-![](img/13efec61ce803111a960bcf5c5392f14_3.png)
 
 ## 配置MongoDB软件源列表
 
@@ -32,7 +30,6 @@ echo "deb [ arch=amd64 ] https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/
 
 ## 更新软件包列表并安装MongoDB
 
-![](img/13efec61ce803111a960bcf5c5392f14_5.png)
 
 在添加新的软件源后，需要更新本地的软件包列表，然后执行安装。
 
@@ -43,17 +40,13 @@ sudo apt install -y mongodb-org
 ```
 安装过程会下载大约270MB的软件包，其中包括MongoDB服务器、客户端和Shell工具。
 
-![](img/13efec61ce803111a960bcf5c5392f14_7.png)
 
 ## 启动并启用MongoDB服务
 
-![](img/13efec61ce803111a960bcf5c5392f14_9.png)
 
 安装完成后，我们需要启动MongoDB服务，并设置为开机自动启动。
 
-![](img/13efec61ce803111a960bcf5c5392f14_11.png)
 
-![](img/13efec61ce803111a960bcf5c5392f14_13.png)
 
 以下是管理MongoDB服务的命令：
 ```bash
@@ -75,15 +68,12 @@ mongod --version
 ```
 MongoDB的主要配置文件位于 `/etc/mongod.conf`。该文件定义了数据存储目录、日志文件路径、网络绑定接口和端口等关键设置。默认情况下，MongoDB监听在 `127.0.0.1:27017`。
 
-![](img/13efec61ce803111a960bcf5c5392f14_15.png)
 
 ## 连接MongoDB Shell进行测试
 
-![](img/13efec61ce803111a960bcf5c5392f14_17.png)
 
 最后，我们可以连接到MongoDB Shell，进行简单的数据库操作测试。
 
-![](img/13efec61ce803111a960bcf5c5392f14_18.png)
 
 输入以下命令启动MongoDB Shell：
 ```bash

@@ -13,9 +13,7 @@ Python超全入门教程：P42：理解 `if __name__ == "__main__"` 🐍
 
 我们可以通过一个简单的打印语句来验证这一点。
 
-![](img/cdf91fcc0c4415f8238c1df2a644b2ee_1.png)
 
-![](img/cdf91fcc0c4415f8238c1df2a644b2ee_2.png)
 
 ```python
 # 在一个名为 script1.py 的文件中
@@ -26,9 +24,7 @@ print(__name__)
 
 ### `if __name__ == "__main__"` 的作用
 
-![](img/cdf91fcc0c4415f8238c1df2a644b2ee_4.png)
 
-![](img/cdf91fcc0c4415f8238c1df2a644b2ee_6.png)
 
 基于 `__name__` 变量的特性，我们可以在代码中使用 `if __name__ == "__main__"` 这个条件判断语句。它的作用是：**只有当这个文件被直接运行时，才执行其下方的代码块**。
 
@@ -36,11 +32,9 @@ print(__name__)
 1.  **模块化与复用性**：其他程序可以导入这个文件中的函数和类，而不会触发该文件作为独立程序时的执行逻辑。
 2.  **避免意外执行**：确保只有在主动运行该文件时，其中的“主程序”部分才会启动。
 
-![](img/cdf91fcc0c4415f8238c1df2a644b2ee_8.png)
 
 ---
 
-![](img/cdf91fcc0c4415f8238c1df2a644b2ee_10.png)
 
 ### 实践演示：创建两个脚本
 
@@ -93,10 +87,8 @@ print(f"在 script2 中，__name__ 的值是：{__name__}")
 
 以下是 `script1.py` 的改进版本：
 
-![](img/cdf91fcc0c4415f8238c1df2a644b2ee_12.png)
 
 
-![](img/cdf91fcc0c4415f8238c1df2a644b2ee_14.png)
 
 ```python
 # script1.py

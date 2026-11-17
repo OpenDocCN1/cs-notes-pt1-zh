@@ -1,6 +1,5 @@
 # 008：文档资源与帮助工具
 
-![](img/aeaaeef575cee35747dac29e99ad733e_0.png)
 
 ![](img/aeaaeef575cee35747dac29e99ad733e_0.png)
 
@@ -42,7 +41,6 @@
 
 最后一个资源，因为我知道很多用户和我一样是终端用户，可能想要OpenGL的手册页。如果你在飞机上、没有网络，或者像我一样喜欢快速搜索和浏览，你可以安装OpenGL的手册页。
 
-![](img/aeaaeef575cee35747dac29e99ad733e_6.png)
 
 如果你在Linux或Mac系统上，可以使用类似下面的命令来安装：
 
@@ -55,7 +53,6 @@ sudo apt-get install manpages-dev  # 对于基于Debian的系统
 
 输入密码后，等待片刻下载完成。完成后，我们可以尝试查看手册页，例如 `glBufferData` 的手册页。这样，无论身在何处，我们都能快速访问这些描述命令工作原理的手册页，而且它同样易于搜索，这是我非常喜欢的一点。
 
-![](img/aeaaeef575cee35747dac29e99ad733e_8.png)
 
 ![](img/aeaaeef575cee35747dac29e99ad733e_8.png)
 

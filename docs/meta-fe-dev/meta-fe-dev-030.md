@@ -8,7 +8,6 @@
 
 React 默认不支持多页面应用的路由功能。为了实现类似传统网站的多页面导航体验，我们需要借助一个名为 **React Router** 的第三方库。本节课将指导你完成 React Router 的安装，并利用其核心组件构建一个基础的导航栏。
 
-![](img/236c0f33aca94f6cf84e8aae61a0a8c8_1.png)
 
 ## 检查初始应用
 
@@ -92,14 +91,11 @@ import { Link } from ‘react-router-dom’;
 
 现在，当我点击导航栏中的任何一个链接时，浏览器中就会加载正确的内容。
 
-![](img/236c0f33aca94f6cf84e8aae61a0a8c8_6.png)
 
-![](img/236c0f33aca94f6cf84e8aae61a0a8c8_6.png)
 
 ## 总结
 
 在本节课中，我们一起学习了如何安装 React Router 库，并利用其关键功能（如 `BrowserRouter`、`Routes`、`Route` 和 `Link`）来创建一个可工作的导航栏。你现在已经掌握了为用户提供应用内导航的基础方法，为学习更高效的导航模式做好了准备。
 
-![](img/236c0f33aca94f6cf84e8aae61a0a8c8_8.png)
 
 ![](img/236c0f33aca94f6cf84e8aae61a0a8c8_8.png)

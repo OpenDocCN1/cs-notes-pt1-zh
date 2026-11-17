@@ -4,7 +4,6 @@
 
 ## 概述
 
-![](img/127e3f3e8ebaf3f952c22ecd684cf7ba_1.png)
 
 假设我们需要一份报告，根据各州的估计人口来显示每个州的客户百分比。所需的数据分别位于 `customer`（客户）表和 `state_population`（州人口）表中。
 
@@ -20,7 +19,6 @@ FROM customer
 GROUP BY State;
 ```
 
-![](img/127e3f3e8ebaf3f952c22ecd684cf7ba_3.png)
 
 创建临时表后，我们需要将其与 `state_population` 表进行连接，然后计算每个州的客户百分比。
 
@@ -33,7 +31,6 @@ FROM state_population sp
 JOIN Tot_customer tc ON sp.State = tc.State;
 ```
 
-![](img/127e3f3e8ebaf3f952c22ecd684cf7ba_5.png)
 
 这个解决方案是有效的，但它需要进行一次连接操作并依赖一个临时表。我们希望即使客户列表不断增长，也能生成这份报告，以确保每个州的客户百分比始终准确。
 
@@ -43,7 +40,6 @@ JOIN Tot_customer tc ON sp.State = tc.State;
 
 ## 使用内联视图的解决方案
 
-![](img/127e3f3e8ebaf3f952c22ecd684cf7ba_7.png)
 
 针对此问题的另一个解决方案是使用内联视图。内联视图允许我们在一个查询中定义子查询，而无需创建物理临时表。
 

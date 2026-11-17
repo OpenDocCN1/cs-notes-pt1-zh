@@ -18,7 +18,6 @@
 
 ![](img/2c5915bbf2791187d13c00d769bdde9e_15.png)
 
-![](img/2c5915bbf2791187d13c00d769bdde9e_16.png)
 
 ![](img/2c5915bbf2791187d13c00d769bdde9e_18.png)
 
@@ -32,9 +31,7 @@
 
 ![](img/2c5915bbf2791187d13c00d769bdde9e_28.png)
 
-![](img/2c5915bbf2791187d13c00d769bdde9e_30.png)
 
-![](img/2c5915bbf2791187d13c00d769bdde9e_32.png)
 
 ![](img/2c5915bbf2791187d13c00d769bdde9e_34.png)
 
@@ -92,21 +89,16 @@
 
 ![](img/2c5915bbf2791187d13c00d769bdde9e_77.png)
 
-![](img/2c5915bbf2791187d13c00d769bdde9e_79.png)
 
-![](img/2c5915bbf2791187d13c00d769bdde9e_81.png)
 
 ![](img/2c5915bbf2791187d13c00d769bdde9e_83.png)
 
-![](img/2c5915bbf2791187d13c00d769bdde9e_85.png)
 
-![](img/2c5915bbf2791187d13c00d769bdde9e_87.png)
 
 ![](img/2c5915bbf2791187d13c00d769bdde9e_89.png)
 
 ![](img/2c5915bbf2791187d13c00d769bdde9e_91.png)
 
-![](img/2c5915bbf2791187d13c00d769bdde9e_93.png)
 
 上一节我们创建了基础的平台层和引擎，使我们能够渲染图形和处理输入。本节中，我们将在此基础上构建实际的游戏内容。我们的目标是制作一个打砖块游戏的克隆，并逐步添加更有趣的玩法。
 
@@ -134,9 +126,7 @@
 
 ![](img/2c5915bbf2791187d13c00d769bdde9e_115.png)
 
-![](img/2c5915bbf2791187d13c00d769bdde9e_117.png)
 
-![](img/2c5915bbf2791187d13c00d769bdde9e_119.png)
 
 ---
 
@@ -164,9 +154,7 @@
 
 ![](img/2c5915bbf2791187d13c00d769bdde9e_141.png)
 
-![](img/2c5915bbf2791187d13c00d769bdde9e_143.png)
 
-![](img/2c5915bbf2791187d13c00d769bdde9e_145.png)
 
 ![](img/2c5915bbf2791187d13c00d769bdde9e_147.png)
 
@@ -178,7 +166,6 @@
 
 为了创建打砖块游戏，第一步是让鼠标光标控制屏幕上的小方块（即玩家板），而不是使用键盘。这能提供更有趣的游戏体验。
 
-![](img/2c5915bbf2791187d13c00d769bdde9e_155.png)
 
 ![](img/2c5915bbf2791187d13c00d769bdde9e_156.png)
 
@@ -204,7 +191,6 @@
 
 ![](img/2c5915bbf2791187d13c00d769bdde9e_176.png)
 
-![](img/2c5915bbf2791187d13c00d769bdde9e_178.png)
 
 ![](img/2c5915bbf2791187d13c00d769bdde9e_180.png)
 
@@ -281,9 +267,7 @@ V2 PixelsToWorld(V2I pixel_coordinate, Render_Buffer render_buffer, f32 scale) {
 }
 ```
 
-![](img/2c5915bbf2791187d13c00d769bdde9e_228.png)
 
-![](img/2c5915bbf2791187d13c00d769bdde9e_230.png)
 
 ![](img/2c5915bbf2791187d13c00d769bdde9e_232.png)
 
@@ -323,9 +307,7 @@ V2 PixelsToWorld(V2I pixel_coordinate, Render_Buffer render_buffer, f32 scale) {
 
 ![](img/2c5915bbf2791187d13c00d769bdde9e_262.png)
 
-![](img/2c5915bbf2791187d13c00d769bdde9e_264.png)
 
-![](img/2c5915bbf2791187d13c00d769bdde9e_266.png)
 
 ![](img/2c5915bbf2791187d13c00d769bdde9e_268.png)
 
@@ -339,9 +321,7 @@ V2 PixelsToWorld(V2I pixel_coordinate, Render_Buffer render_buffer, f32 scale) {
 
 ![](img/2c5915bbf2791187d13c00d769bdde9e_278.png)
 
-![](img/2c5915bbf2791187d13c00d769bdde9e_279.png)
 
-![](img/2c5915bbf2791187d13c00d769bdde9e_280.png)
 
 ![](img/2c5915bbf2791187d13c00d769bdde9e_282.png)
 
@@ -351,17 +331,13 @@ V2 PixelsToWorld(V2I pixel_coordinate, Render_Buffer render_buffer, f32 scale) {
 
 ![](img/2c5915bbf2791187d13c00d769bdde9e_285.png)
 
-![](img/2c5915bbf2791187d13c00d769bdde9e_287.png)
 
-![](img/2c5915bbf2791187d13c00d769bdde9e_289.png)
 
 ![](img/2c5915bbf2791187d13c00d769bdde9e_291.png)
 
 ![](img/2c5915bbf2791187d13c00d769bdde9e_293.png)
 
-![](img/2c5915bbf2791187d13c00d769bdde9e_295.png)
 
-![](img/2c5915bbf2791187d13c00d769bdde9e_297.png)
 
 ![](img/2c5915bbf2791187d13c00d769bdde9e_299.png)
 
@@ -391,7 +367,6 @@ V2 PixelsToWorld(V2I pixel_coordinate, Render_Buffer render_buffer, f32 scale) {
 
 ![](img/2c5915bbf2791187d13c00d769bdde9e_320.png)
 
-![](img/2c5915bbf2791187d13c00d769bdde9e_321.png)
 
 ![](img/2c5915bbf2791187d13c00d769bdde9e_323.png)
 
@@ -428,9 +403,7 @@ V2 PixelsToWorld(V2I pixel_coordinate, Render_Buffer render_buffer, f32 scale) {
 
 ![](img/2c5915bbf2791187d13c00d769bdde9e_351.png)
 
-![](img/2c5915bbf2791187d13c00d769bdde9e_353.png)
 
-![](img/2c5915bbf2791187d13c00d769bdde9e_355.png)
 
 ![](img/2c5915bbf2791187d13c00d769bdde9e_357.png)
 
@@ -452,9 +425,7 @@ ball_p = add_v2(ball_p, mul_v2(ball_dp, dt));
 
 ![](img/2c5915bbf2791187d13c00d769bdde9e_369.png)
 
-![](img/2c5915bbf2791187d13c00d769bdde9e_371.png)
 
-![](img/2c5915bbf2791187d13c00d769bdde9e_373.png)
 
 ![](img/2c5915bbf2791187d13c00d769bdde9e_375.png)
 
@@ -462,9 +433,7 @@ ball_p = add_v2(ball_p, mul_v2(ball_dp, dt));
 
 ![](img/2c5915bbf2791187d13c00d769bdde9e_379.png)
 
-![](img/2c5915bbf2791187d13c00d769bdde9e_381.png)
 
-![](img/2c5915bbf2791187d13c00d769bdde9e_382.png)
 
 通过调整初始速度，我们可以控制球的移动快慢，为碰撞检测做准备。
 
@@ -772,9 +741,7 @@ b32 AABBvsAABB(V2 p1, V2 half_size1, V2 p2, V2 half_size2) {
     *   **左右墙壁**：如果球碰到左右墙壁，反转其X轴速度 (`ball_dp.x = -ball_dp.x`)，并可能将球的位置修正到刚好接触墙壁的位置，防止穿透。
     *   **上下墙壁**：如果球碰到上墙壁，同样反转Y轴速度。如果球碰到下墙壁（即玩家板没接住），可以触发游戏结束逻辑。
 
-![](img/2c5915bbf2791187d13c00d769bdde9e_634.png)
 
-![](img/2c5915bbf2791187d13c00d769bdde9e_636.png)
 
 ![](img/2c5915bbf2791187d13c00d769bdde9e_638.png)
 
@@ -782,9 +749,7 @@ b32 AABBvsAABB(V2 p1, V2 half_size1, V2 p2, V2 half_size2) {
 
 ![](img/2c5915bbf2791187d13c00d769bdde9e_642.png)
 
-![](img/2c5915bbf2791187d13c00d769bdde9e_644.png)
 
-![](img/2c5915bbf2791187d13c00d769bdde9e_646.png)
 
 **墙壁碰撞处理示例（右墙）**：
 ```c
@@ -812,11 +777,9 @@ if (ball_p.x + ball_half_size.x > arena_half_size.x) {
 
 ![](img/2c5915bbf2791187d13c00d769bdde9e_661.png)
 
-![](img/2c5915bbf2791187d13c00d769bdde9e_663.png)
 
 ### 球与砖块碰撞
 
-![](img/2c5915bbf2791187d13c00d769bdde9e_665.png)
 
 ![](img/2c5915bbf2791187d13c00d769bdde9e_666.png)
 
@@ -846,9 +809,7 @@ if (ball_p.x + ball_half_size.x > arena_half_size.x) {
 
 ![](img/2c5915bbf2791187d13c00d769bdde9e_690.png)
 
-![](img/2c5915bbf2791187d13c00d769bdde9e_692.png)
 
-![](img/2c5915bbf2791187d13c00d769bdde9e_694.png)
 
 ![](img/2c5915bbf2791187d13c00d769bdde9e_696.png)
 
@@ -908,9 +869,7 @@ if (AABBvsAABB(block_p, block_half_size, ball_p, ball_half_size)) {
 
 ![](img/2c5915bbf2791187d13c00d769bdde9e_723.png)
 
-![](img/2c5915bbf2791187d13c00d769bdde9e_725.png)
 
-![](img/2c5915bbf2791187d13c00d769bdde9e_727.png)
 
 ![](img/2c5915bbf2791187d13c00d769bdde9e_729.png)
 
@@ -989,9 +948,7 @@ if (AABBvsAABB(block_p, block_half_size, ball_p, ball_half_size)) {
 
 ![](img/2c5915bbf2791187d13c00d769bdde9e_794.png)
 
-![](img/2c5915bbf2791187d13c00d769bdde9e_796.png)
 
-![](img/2c5915bbf2791187d13c00d769bdde9e_797.png)
 
 ![](img/2c5915bbf2791187d13c00d769bdde9e_798.png)
 
@@ -1017,9 +974,7 @@ if (AABBvsAABB(block_p, block_half_size, ball_p, ball_half_size)) {
 
 ![](img/2c5915bbf2791187d13c00d769bdde9e_817.png)
 
-![](img/2c5915bbf2791187d13c00d769bdde9e_819.png)
 
-![](img/2c5915bbf2791187d13c00d769bdde9e_821.png)
 
 ![](img/2c5915bbf2791187d13c00d769bdde9e_822.png)
 
@@ -1045,9 +1000,7 @@ if (AABBvsAABB(block_p, block_half_size, ball_p, ball_half_size)) {
 
 ![](img/2c5915bbf2791187d13c00d769bdde9e_839.png)
 
-![](img/2c5915bbf2791187d13c00d769bdde9e_841.png)
 
-![](img/2c5915bbf2791187d13c00d769bdde9e_843.png)
 
 ![](img/2c5915bbf2791187d13c00d769bdde9e_845.png)
 
@@ -1074,7 +1027,6 @@ if (AABBvsAABB(block_p, block_half_size, ball_p, ball_half_size)) {
 3.  **游戏平衡**：调整球的速度、玩家板的影响系数、砖块的布局和数量，来获得最佳的游戏难度和乐趣。
 4.  **修复坐标问题**：确保从窗口获取的渲染尺寸是客户区大小 (`GetClientRect`)，而不是整个窗口的大小 (`GetWindowRect`)，这样才能保证鼠标坐标和渲染坐标的对齐。
 
-![](img/2c5915bbf2791187d13c00d769bdde9e_857.png)
 
 ![](img/2c5915bbf2791187d13c00d769bdde9e_859.png)
 
@@ -1108,7 +1060,6 @@ if (AABBvsAABB(block_p, block_half_size, ball_p, ball_half_size)) {
 
 ![](img/2c5915bbf2791187d13c00d769bdde9e_887.png)
 
-![](img/2c5915bbf2791187d13c00d769bdde9e_889.png)
 
 ![](img/2c5915bbf2791187d13c00d769bdde9e_891.png)
 
@@ -1126,13 +1077,11 @@ if (AABBvsAABB(block_p, block_half_size, ball_p, ball_half_size)) {
 
 ![](img/2c5915bbf2791187d13c00d769bdde9e_903.png)
 
-![](img/2c5915bbf2791187d13c00d769bdde9e_905.png)
 
 ![](img/2c5915bbf2791187d13c00d769bdde9e_907.png)
 
 ![](img/2c5915bbf2791187d13c00d769bdde9e_909.png)
 
-![](img/2c5915bbf2791187d13c00d769bdde9e_911.png)
 
 ![](img/2c5915bbf2791187d13c00d769bdde9e_913.png)
 
@@ -1150,9 +1099,7 @@ if (AABBvsAABB(block_p, block_half_size, ball_p, ball_half_size)) {
 
 ![](img/2c5915bbf2791187d13c00d769bdde9e_925.png)
 
-![](img/2c5915bbf2791187d13c00d769bdde9e_927.png)
 
-![](img/2c5915bbf2791187d13c00d769bdde9e_929.png)
 
 我们介绍了简单的AABB碰撞检测，并探讨了其局限性。为了解决高速运动下的碰撞问题，我们引入了扫描碰撞检测的概念。虽然实现一个完美的碰撞系统充满挑战，但这是游戏开发中至关重要且有趣的一环。
 

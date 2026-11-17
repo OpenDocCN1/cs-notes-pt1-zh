@@ -10,11 +10,9 @@
 
 ## 使用参数
 
-![](img/a513e57a3ae512bfe99d59d7b46be0a6_1.png)
 
 上一节我们介绍了函数的基本结构，本节中我们来看看如何让函数接收外部输入，即参数。
 
-![](img/a513e57a3ae512bfe99d59d7b46be0a6_2.png)
 
 参数允许我们向函数传递数据，使得同一个函数可以处理不同的输入，从而大大提高代码的复用性。
 
@@ -42,11 +40,9 @@ Hello James
 ```
 这样，我们无需为每个名字创建单独的函数，极大地提升了代码的复用性。
 
-![](img/a513e57a3ae512bfe99d59d7b46be0a6_4.png)
 
 ---
 
-![](img/a513e57a3ae512bfe99d59d7b46be0a6_5.png)
 
 ## 多个参数
 
@@ -69,11 +65,8 @@ fn main() {
 }
 ```
 
-![](img/a513e57a3ae512bfe99d59d7b46be0a6_7.png)
 
-![](img/a513e57a3ae512bfe99d59d7b46be0a6_8.png)
 
-![](img/a513e57a3ae512bfe99d59d7b46be0a6_9.png)
 
 运行后，控制台将输出：
 ```
@@ -87,15 +80,11 @@ ZZZZZZZZZZ
 
 到目前为止，我们的函数都只是执行操作。但函数另一个强大的功能是**返回一个值**。例如，我们可以创建一个将摄氏温度转换为华氏温度的函数。
 
-![](img/a513e57a3ae512bfe99d59d7b46be0a6_11.png)
 
-![](img/a513e57a3ae512bfe99d59d7b46be0a6_12.png)
 
-![](img/a513e57a3ae512bfe99d59d7b46be0a6_13.png)
 
 在 Rust 中，如果函数需要返回值，必须在函数签名中使用箭头 `->` 指定返回类型。
 
-![](img/a513e57a3ae512bfe99d59d7b46be0a6_14.png)
 
 以下是摄氏度转华氏度的函数 `celsius_to_fahrenheit`：
 
@@ -104,7 +93,6 @@ ZZZZZZZZZZ
 3.  因为这个函数有返回值，所以调用时通常需要将其结果赋值给一个变量或直接使用（例如打印）。
 
 
-![](img/a513e57a3ae512bfe99d59d7b46be0a6_16.png)
 
 ```rust
 fn celsius_to_fahrenheit(celsius: f64) -> f64 {
@@ -117,9 +105,7 @@ fn main() {
 }
 ```
 
-![](img/a513e57a3ae512bfe99d59d7b46be0a6_17.png)
 
-![](img/a513e57a3ae512bfe99d59d7b46be0a6_18.png)
 
 ---
 
@@ -134,9 +120,7 @@ fn main() {
 3.  即使返回值是一个简单的字面量（如数字10），上述规则同样适用。
 
 
-![](img/a513e57a3ae512bfe99d59d7b46be0a6_20.png)
 
-![](img/a513e57a3ae512bfe99d59d7b46be0a6_21.png)
 
 ```rust
 // 方法1：使用 return 关键字
@@ -154,17 +138,13 @@ fn main() {
 }
 ```
 
-![](img/a513e57a3ae512bfe99d59d7b46be0a6_22.png)
 
-![](img/a513e57a3ae512bfe99d59d7b46be0a6_24.png)
 
 **关键点**：当使用隐式返回时，最后一行代码**不能**有分号 `;`，因为分号会将表达式转换为语句，而语句没有值。
 
-![](img/a513e57a3ae512bfe99d59d7b46be0a6_25.png)
 
 ---
 
-![](img/a513e57a3ae512bfe99d59d7b46be0a6_27.png)
 
 ## 综合示例：加法函数
 
@@ -192,9 +172,7 @@ fn main() {
 
 运行后，你将看到相加的结果被正确计算和输出。通过改变传入的参数，我们可以轻松地复用这个函数进行不同的计算。
 
-![](img/a513e57a3ae512bfe99d59d7b46be0a6_29.png)
 
-![](img/a513e57a3ae512bfe99d59d7b46be0a6_30.png)
 
 ---
 

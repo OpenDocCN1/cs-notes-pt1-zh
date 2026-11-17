@@ -13,15 +13,11 @@ sudo apt install gnuplot
 
 安装完成后，您可以在终端输入`gnuplot`命令来启动它。如果已经安装，系统会显示Gnuplot的终端界面，等待您输入命令。
 
-![](img/950d4ea74303d5551c06c9a9a347574b_1.png)
 
-![](img/950d4ea74303d5551c06c9a9a347574b_3.png)
 
 ## Gnuplot基础功能
 
-![](img/950d4ea74303d5551c06c9a9a347574b_5.png)
 
-![](img/950d4ea74303d5551c06c9a9a347574b_7.png)
 
 Gnuplot不仅能处理数据文件，还能直接绘制数学函数。例如，在Gnuplot终端中输入以下命令可以绘制正弦函数：
 ```gnuplot
@@ -29,11 +25,9 @@ plot sin(x)
 ```
 这里，`x`是Gnuplot默认识别的变量。同样，您可以绘制余弦函数`cos(x)`或线性方程`4*x + 10`。
 
-![](img/950d4ea74303d5551c06c9a9a347574b_9.png)
 
 ## 准备数据文件与脚本文件 📁
 
-![](img/950d4ea74303d5551c06c9a9a347574b_11.png)
 
 为了演示如何使用数据文件绘图，我们需要创建两个文件：一个数据文件和一个Gnuplot脚本文件。
 
@@ -79,13 +73,9 @@ set ylabel "Driver‘s Information"
 plot "my_data.txt" using 1:2 with lines title "Speed in kmph"
 ```
 
-![](img/950d4ea74303d5551c06c9a9a347574b_13.png)
 
-![](img/950d4ea74303d5551c06c9a9a347574b_14.png)
 
-![](img/950d4ea74303d5551c06c9a9a347574b_16.png)
 
-![](img/950d4ea74303d5551c06c9a9a347574b_18.png)
 
 保存文件后，在终端运行以下命令来生成图表：
 ```bash
@@ -97,21 +87,14 @@ gnuplot my_gnu_code.plt
 
 ## 在同一图表中添加多条曲线 📈
 
-![](img/950d4ea74303d5551c06c9a9a347574b_22.png)
 
-![](img/950d4ea74303d5551c06c9a9a347574b_24.png)
 
-![](img/950d4ea74303d5551c06c9a9a347574b_26.png)
 
-![](img/950d4ea74303d5551c06c9a9a347574b_28.png)
 
 上一节我们绘制了单条曲线，本节中我们来看看如何在同一张图中叠加多条曲线，以便进行对比。
 
-![](img/950d4ea74303d5551c06c9a9a347574b_30.png)
 
-![](img/950d4ea74303d5551c06c9a9a347574b_32.png)
 
-![](img/950d4ea74303d5551c06c9a9a347574b_34.png)
 
 修改`my_gnu_code.plt`文件，在`plot`命令后添加更多数据系列，用逗号分隔：
 ```gnuplot
@@ -128,25 +111,18 @@ plot "my_data.txt" using 1:2 with lines lw 2 title "Speed in kmph", \
 *   `with linespoints` 表示图形同时包含线条和数据点。
 *   `lw 2` 是 `linewidth 2` 的缩写，用于增加第一条曲线的线条粗细。
 
-![](img/950d4ea74303d5551c06c9a9a347574b_36.png)
 
-![](img/950d4ea74303d5551c06c9a9a347574b_38.png)
 
-![](img/950d4ea74303d5551c06c9a9a347574b_40.png)
 
 再次运行`gnuplot my_gnucode.plt`命令，生成的PDF中将同时显示速度和年龄两条曲线。
 
-![](img/950d4ea74303d5551c06c9a9a347574b_42.png)
 
-![](img/950d4ea74303d5551c06c9a9a347574b_44.png)
 
 ## 探索不同的绘图样式 🎨
 
-![](img/950d4ea74303d5551c06c9a9a347574b_46.png)
 
 Gnuplot支持多种绘图样式。以下是几种常见的样式示例，您可以替换`with`后面的关键词来尝试：
 
-![](img/950d4ea74303d5551c06c9a9a347574b_48.png)
 
 1.  **`with impulses`**：绘制脉冲图（垂直线）。
     ```gnuplot
@@ -167,7 +143,6 @@ Gnuplot支持多种绘图样式。以下是几种常见的样式示例，您可�
 
 有时我们需要生成图像文件（如PNG）用于网页或演示文稿。此外，在图表中添加参考线（如平均线、最低标准线）可以更清晰地传达信息。
 
-![](img/950d4ea74303d5551c06c9a9a347574b_56.png)
 
 ![](img/950d4ea74303d5551c06c9a9a347574b_58.png)
 
@@ -187,15 +162,11 @@ plot "my_data.txt" using 1:4 with linespoints lw 2 title "Salary in rupees", \
 ```
 运行此脚本后，将生成`salary.png`文件。图中的水平线直观地标出了20000的最低薪水标准，我们可以快速看出有哪些数据点位于此标准之下。
 
-![](img/950d4ea74303d5551c06c9a9a347574b_60.png)
 
-![](img/950d4ea74303d5551c06c9a9a347574b_62.png)
 
-![](img/950d4ea74303d5551c06c9a9a347574b_64.png)
 
 ## 总结 📝
 
-![](img/950d4ea74303d5551c06c9a9a347574b_66.png)
 
 ![](img/950d4ea74303d5551c06c9a9a347574b_68.png)
 

@@ -1,6 +1,5 @@
 # 004：让画面动起来！
 
-![](img/e8ce7a7224129c1095a0bb2b0dc2996f_0.png)
 
 ![](img/e8ce7a7224129c1095a0bb2b0dc2996f_0.png)
 
@@ -70,7 +69,6 @@
 
 然后我们可以开始迭代，从Y到Y+高度，遍历所有扫描线。我们需要一个能处理远指针的函数。标准C的 `memcpy` 只接受 `void*` 指针，在小内存模型中就是近指针，所以这不行。但是，有一个函数叫 `movedata`，它接受段和偏移量。
 
-![](img/e8ce7a7224129c1095a0bb2b0dc2996f_2.png)
 
 我们可以这样使用 `movedata`：`movedata(source_segment, source_offset, dest_segment, dest_offset, num_bytes)`。如何获取段和偏移量？我们可以使用 `FP_SEG` 和 `FP_OFF` 宏来从远指针中提取段和偏移量。
 

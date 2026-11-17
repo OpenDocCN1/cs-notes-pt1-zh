@@ -12,9 +12,7 @@
 
 以下是函数实现的步骤：
 
-![](img/04c8cc350a3ad4cf6360399156b4afe7_1.png)
 
-![](img/04c8cc350a3ad4cf6360399156b4afe7_2.png)
 
 1.  将字符串转换为字节数组，以便逐个元素遍历。
 2.  创建一个迭代器来遍历字节数组。
@@ -36,17 +34,13 @@ fn get_first_word(sentence: &String) -> usize {
 }
 ```
 
-![](img/04c8cc350a3ad4cf6360399156b4afe7_4.png)
 
-![](img/04c8cc350a3ad4cf6360399156b4afe7_5.png)
 
 ## 理解 `enumerate` 方法
 
-![](img/04c8cc350a3ad4cf6360399156b4afe7_7.png)
 
 `enumerate` 方法将迭代器中的元素包装成元组，元组包含索引和元素的引用。这让我们能同时访问索引和值。
 
-![](img/04c8cc350a3ad4cf6360399156b4afe7_9.png)
 
 以下是一个简单的例子，展示 `enumerate` 的用法：
 
@@ -68,15 +62,11 @@ Index: 2, Element: C
 
 ## 测试函数并发现问题
 
-![](img/04c8cc350a3ad4cf6360399156b4afe7_11.png)
 
 现在，我们在 `main` 函数中测试 `get_first_word`。
 
-![](img/04c8cc350a3ad4cf6360399156b4afe7_13.png)
 
-![](img/04c8cc350a3ad4cf6360399156b4afe7_14.png)
 
-![](img/04c8cc350a3ad4cf6360399156b4afe7_15.png)
 
 ```rust
 fn main() {

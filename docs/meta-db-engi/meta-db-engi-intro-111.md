@@ -18,11 +18,9 @@ Lucky Shrub园艺中心需要为其数据库创建几个重复但复杂的查询
 
 ### 变量的语法
 
-![](img/516243dea977bc5b192b62883521ced5_1.png)
 
 在MySQL中，用户定义的变量由字母数字字符组成。您只需键入`@`符号，后跟您想为变量命名的名称。然后使用等号运算符为变量赋值。确保以分号结束语法。
 
-![](img/516243dea977bc5b192b62883521ced5_2.png)
 
 **代码示例：**
 ```sql
@@ -49,7 +47,6 @@ DECLARE minimum_order_cost DECIMAL(10,2) DEFAULT 0.00;
 
 ### 在SELECT语句中创建变量
 
-![](img/516243dea977bc5b192b62883521ced5_4.png)
 
 正如您之前所学，您也可以在SELECT语句中创建变量。然而，在SELECT语句中为变量赋值时，需要使用赋值运算符语法。这会指示MySQL为变量赋值。标准的等号运算符仅检查一个值是否等于另一个值。
 
@@ -63,7 +60,6 @@ Lucky Shrub可以创建一个`max_order`变量，用于从其`orders`表中检�
 SELECT @max_order := MAX(Cost) FROM orders;
 ```
 
-![](img/516243dea977bc5b192b62883521ced5_6.png)
 
 然后，他们可以通过键入`SELECT @max_order;`来访问该值。输出将显示最昂贵的订单。
 

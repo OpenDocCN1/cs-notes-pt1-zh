@@ -14,14 +14,10 @@
 
 您现在知道，前端Python应用程序会向连接器API发送连接请求。API将此连接转发给后端的MySQL数据库，随后可以建立游标连接。一旦连接建立，数据就可以在Python和MySQL之间传输。
 
-![](img/f753f8d7a821fa58a6ff2b8333ff046d_1.png)
 
-![](img/f753f8d7a821fa58a6ff2b8333ff046d_2.png)
 
 您还了解了可用于创建此连接的不同API，并且作为数据库工程师，您将主要依赖 **`mysql.connector`** Python API。
 
-![](img/f753f8d7a821fa58a6ff2b8333ff046d_1.png)
-![](img/f753f8d7a821fa58a6ff2b8333ff046d_2.png)
 
 在第一课中，您还学习了如何在系统上安装和配置Python软件，以便在Python和MySQL之间建立连接。
 
@@ -77,19 +73,14 @@
 *   **`cursor.Dict`** 子类
 *   **`buffered cursor`** 类
 
-![](img/f753f8d7a821fa58a6ff2b8333ff046d_4.png)
 
 您还了解了**交错SQL请求**，这涉及使用部分SQL查询来发起后续请求。
 
-![](img/f753f8d7a821fa58a6ff2b8333ff046d_4.png)
 
-![](img/f753f8d7a821fa58a6ff2b8333ff046d_6.png)
 
-![](img/f753f8d7a821fa58a6ff2b8333ff046d_6.png)
 
 接着，您探索了创建和使用子类的语法，并且也通过Little Lemon数据库的示例探索了子类的应用。
 
-![](img/f753f8d7a821fa58a6ff2b8333ff046d_8.png)
 
 ![](img/f753f8d7a821fa58a6ff2b8333ff046d_8.png)
 

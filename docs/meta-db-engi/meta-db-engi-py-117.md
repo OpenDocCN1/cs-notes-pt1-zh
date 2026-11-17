@@ -16,15 +16,11 @@
 
 首先，你需要设计一个结构良好的实体关系数据模型，即 **ER 图**。
 
-![](img/ce7b93a72de5232bf0b1f0f93d5d7a4e_1.png)
 
-![](img/ce7b93a72de5232bf0b1f0f93d5d7a4e_2.png)
 
-![](img/ce7b93a72de5232bf0b1f0f93d5d7a4e_3.png)
 
 你需要确保该图符合三个基本范式。通过遵循这些范式，你将确保数据库的完整性，并避免插入、更新和删除异常。正如你在之前的课程中所了解的，有许多专业工具可用于设计 ER 图。
 
-![](img/ce7b93a72de5232bf0b1f0f93d5d7a4e_4.png)
 
 在本项目中，你将使用 **MySQL Workbench**。你应该在其他课程中已经熟悉了 MySQL Workbench，因此现在让我们快速回顾一下基础知识。
 
@@ -32,17 +28,13 @@
 
 MySQL Workbench 是一个统一的视觉化工具，用于数据库建模和数据管理。它的主要优势在于开源、跨平台，并提供可视化 SQL 编辑器的支持。它还可以让你将数据模型转换为 MySQL 服务器中的物理数据库模式。
 
-![](img/ce7b93a72de5232bf0b1f0f93d5d7a4e_6.png)
 
-![](img/ce7b93a72de5232bf0b1f0f93d5d7a4e_7.png)
 
-![](img/ce7b93a72de5232bf0b1f0f93d5d7a4e_8.png)
 
 如果你尚未在操作系统中安装 MySQL Workbench，可以从 `dev.mysql.com/downloads` 下载并安装。
 
 以下是安装时需要确保安装的组件：
 
-![](img/ce7b93a72de5232bf0b1f0f93d5d7a4e_10.png)
 
 *   MySQL 服务器
 *   MySQL Workbench
@@ -52,7 +44,6 @@ MySQL Workbench 是一个统一的视觉化工具，用于数据库建模和数�
 
 ## 提交项目与版本控制 💾
 
-![](img/ce7b93a72de5232bf0b1f0f93d5d7a4e_12.png)
 
 创建好 Little Lemon 数据库后，你需要提交你的项目。
 
@@ -64,15 +55,11 @@ MySQL Workbench 是一个统一的视觉化工具，用于数据库建模和数�
 
 要注册 GitHub 并开始使用，请访问官方网站 `github.com`。
 
-![](img/ce7b93a72de5232bf0b1f0f93d5d7a4e_14.png)
 
-![](img/ce7b93a72de5232bf0b1f0f93d5d7a4e_15.png)
 
-![](img/ce7b93a72de5232bf0b1f0f93d5d7a4e_16.png)
 
 ## 总结与开始 🎯
 
-![](img/ce7b93a72de5232bf0b1f0f93d5d7a4e_17.png)
 
 ![](img/ce7b93a72de5232bf0b1f0f93d5d7a4e_18.png)
 

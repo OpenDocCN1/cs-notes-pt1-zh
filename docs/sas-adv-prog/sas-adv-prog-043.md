@@ -2,11 +2,9 @@
 
 在本节课中，我们将学习如何使用SAS的PROC SQL过程步来执行两个表之间的内连接操作。我们将从探索数据表开始，逐步构建连接查询，并学习如何结合WHERE和ORDER BY子句来筛选和排序结果。
 
-![](img/b30674a45b82531df6178f287061c578_1.png)
 
 ## 探索数据表
 
-![](img/b30674a45b82531df6178f287061c578_3.png)
 
 首先，我们需要了解将要连接的两个数据表。以下查询用于查看两个表中的所有数据。
 
@@ -23,7 +21,6 @@ SELECT * FROM SQ_SMALL_TRANSACTION;
 
 以下是执行内连接的基本查询结构。我们首先指定主表，然后使用`INNER JOIN`关键字连接第二个表，并通过`ON`子句指定连接条件。
 
-![](img/b30674a45b82531df6178f287061c578_5.png)
 
 ```sql
 SELECT c.first_name, c.last_name, t.transaction_date, t.merchant, t.amount
@@ -38,13 +35,10 @@ ON c.account_ID = t.account_ID;
 
 ## 处理列名歧义
 
-![](img/b30674a45b82531df6178f287061c578_7.png)
 
-![](img/b30674a45b82531df6178f287061c578_8.png)
 
 如果我们想在结果中看到`account_ID`列，直接将其加入`SELECT`列表会导致错误。
 
-![](img/b30674a45b82531df6178f287061c578_10.png)
 
 ```sql
 -- 此查询会导致错误
@@ -58,7 +52,6 @@ ON c.account_ID = t.account_ID;
 
 为了解决这个问题，我们必须在`SELECT`子句中明确限定列名。在内连接中，由于只返回匹配的行，选择任意一个表中的`account_ID`都可以。
 
-![](img/b30674a45b82531df6178f287061c578_12.png)
 
 ```sql
 SELECT c.first_name, c.last_name, t.transaction_date, t.merchant, t.amount, c.account_ID
@@ -69,7 +62,6 @@ ON c.account_ID = t.account_ID;
 
 现在，查询可以成功运行，并且`account_ID`作为最后一列出现在结果中。
 
-![](img/b30674a45b82531df6178f287061c578_14.png)
 
 ## 结合其他子句
 
@@ -77,7 +69,6 @@ ON c.account_ID = t.account_ID;
 
 我们可以像在普通查询中一样，在连接查询后使用`WHERE`子句来筛选行，使用`ORDER BY`子句来排序结果。
 
-![](img/b30674a45b82531df6178f287061c578_16.png)
 
 以下是一个结合了所有子句的完整示例。我们将筛选出州为‘NY’的客户，并按照交易金额降序排列结果。
 
@@ -90,7 +81,6 @@ WHERE c.state = ‘NY’
 ORDER BY t.amount DESC;
 ```
 
-![](img/b30674a45b82531df6178f287061c578_18.png)
 
 运行此查询后，生成的结果报告将只包含州为‘NY’的行，并且所有行按照交易金额从高到低排列。
 

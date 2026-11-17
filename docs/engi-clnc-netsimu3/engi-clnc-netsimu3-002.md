@@ -22,22 +22,17 @@
 
 使用`ns3`命名空间，并定义一个日志组件用于文档记录：
 
-![](img/7e4234c57aec8f7d9c11d4ed785fb8fb_1.png)
 
-![](img/7e4234c57aec8f7d9c11d4ed785fb8fb_3.png)
 
 ```cpp
 using namespace ns3;
 NS_LOG_COMPONENT_DEFINE ("FirstScriptExample");
 ```
 
-![](img/7e4234c57aec8f7d9c11d4ed785fb8fb_5.png)
 
 程序的主函数开始，并处理命令行参数。设置时间分辨率为纳秒：
 
-![](img/7e4234c57aec8f7d9c11d4ed785fb8fb_7.png)
 
-![](img/7e4234c57aec8f7d9c11d4ed785fb8fb_9.png)
 
 ```cpp
 int main (int argc, char *argv[]) {
@@ -46,13 +41,10 @@ int main (int argc, char *argv[]) {
     LogComponentEnable ("UdpEchoServerApplication", LOG_LEVEL_INFO);
 ```
 
-![](img/7e4234c57aec8f7d9c11d4ed785fb8fb_11.png)
 
-![](img/7e4234c57aec8f7d9c11d4ed785fb8fb_13.png)
 
 ### 创建网络节点与设备
 
-![](img/7e4234c57aec8f7d9c11d4ed785fb8fb_15.png)
 
 以下是创建两个网络节点并配置点对点连接的步骤：
 
@@ -96,7 +88,6 @@ int main (int argc, char *argv[]) {
 
 网络基础设施搭建好后，我们需要在上面运行应用程序。以下是创建UDP回声服务器和客户端的步骤：
 
-![](img/7e4234c57aec8f7d9c11d4ed785fb8fb_17.png)
 
 1.  **创建UDP回声服务器**：在第二个节点（索引1）上监听端口9。
     ```cpp
@@ -106,7 +97,6 @@ int main (int argc, char *argv[]) {
     serverApps.Stop (Seconds (10.0));
     ```
 
-![](img/7e4234c57aec8f7d9c11d4ed785fb8fb_19.png)
 
 2.  **创建UDP回声客户端**：在第一个节点（索引0）上配置，使其向服务器的IP地址和端口发送数据包。
     ```cpp
@@ -138,13 +128,11 @@ At time 2.00369s server sent 1024 bytes to 10.1.1.1 port 49153
 At time 2.00737s client received 1024 bytes from 10.1.1.2 port 9
 ```
 
-![](img/7e4234c57aec8f7d9c11d4ed785fb8fb_21.png)
 
 ## 集成NetAnim网络动画
 
 为了更直观地观察数据包的流动，我们可以为`first.cc`添加NetAnim支持。
 
-![](img/7e4234c57aec8f7d9c11d4ed785fb8fb_23.png)
 
 首先，在源代码中包含NetAnim模块的头文件：
 
@@ -154,7 +142,6 @@ At time 2.00737s client received 1024 bytes from 10.1.1.2 port 9
 
 然后，在`Simulator::Run()`语句之前，添加以下代码来创建动画接口并设置节点位置：
 
-![](img/7e4234c57aec8f7d9c11d4ed785fb8fb_25.png)
 
 ```cpp
 AnimationInterface anim ("first.xml");
@@ -164,7 +151,6 @@ anim.SetConstantPosition (nodes.Get (1), 20.0, 20.0);
 
 重新编译并运行程序后，会生成一个`first.xml`文件。使用NS3自带的NetAnim工具打开此文件：
 
-![](img/7e4234c57aec8f7d9c11d4ed785fb8fb_27.png)
 
 ```bash
 cd netanim-3.108
@@ -175,11 +161,9 @@ cd netanim-3.108
 
 ## 启用ASCII追踪
 
-![](img/7e4234c57aec8f7d9c11d4ed785fb8fb_29.png)
 
 除了图形化动画，我们还可以生成ASCII格式的包追踪文件，用于详细分析每个数据包。
 
-![](img/7e4234c57aec8f7d9c11d4ed785fb8fb_31.png)
 
 在`Simulator::Run()`语句之前，添加以下代码启用ASCII追踪：
 
@@ -188,23 +172,17 @@ AsciiTraceHelper ascii;
 pointToPoint.EnableAsciiAll (ascii.CreateFileStream ("first.tr"));
 ```
 
-![](img/7e4234c57aec8f7d9c11d4ed785fb8fb_33.png)
 
-![](img/7e4234c57aec8f7d9c11d4ed785fb8fb_35.png)
 
 重新运行程序后，会生成一个`first.tr`文件。该文件以文本形式详细记录了模拟过程中每个数据包在队列中的进入、离开、丢弃等事件。
 
 ## 使用TraceMatrix分析追踪文件
 
-![](img/7e4234c57aec8f7d9c11d4ed785fb8fb_37.png)
 
 `first.tr`文件可以被TraceMatrix工具进一步分析。TraceMatrix是一个基于Java的图形化分析工具。
 
-![](img/7e4234c57aec8f7d9c11d4ed785fb8fb_39.png)
 
-![](img/7e4234c57aec8f7d9c11d4ed785fb8fb_40.png)
 
-![](img/7e4234c57aec8f7d9c11d4ed785fb8fb_42.png)
 
 1.  确保系统已安装Java。
 2.  下载并解压TraceMatrix软件包。
@@ -218,7 +196,6 @@ pointToPoint.EnableAsciiAll (ascii.CreateFileStream ("first.tr"));
 
 ## 总结
 
-![](img/7e4234c57aec8f7d9c11d4ed785fb8fb_44.png)
 
 ![](img/7e4234c57aec8f7d9c11d4ed785fb8fb_46.png)
 

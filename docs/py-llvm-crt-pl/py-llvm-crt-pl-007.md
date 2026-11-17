@@ -42,9 +42,7 @@ def parse_statement(self):
 
 `parse_assignment_statement` 函数负责构建 `AssignStatement` 节点。它首先跳过标识符和等号令牌，然后解析等号右侧的表达式。
 
-![](img/1a7f64e3f160408dd6d49598871f9218_1.png)
 
-![](img/1a7f64e3f160408dd6d49598871f9218_3.png)
 
 ```python
 def parse_assignment_statement(self):

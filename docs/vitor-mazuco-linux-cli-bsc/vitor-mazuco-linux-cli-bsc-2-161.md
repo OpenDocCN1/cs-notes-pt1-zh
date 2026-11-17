@@ -22,17 +22,14 @@ docker container logs trivia
 
 有时我们只关心最近的几条日志。以下是筛选日志的方法。
 
-![](img/8251713821df2e668f79fe3f0ea6d5a5_1.png)
 
 我们可以使用 `--tail` 选项来指定查看最后几条日志记录。例如，查看最后5条记录：
 
-![](img/8251713821df2e668f79fe3f0ea6d5a5_3.png)
 
 ```bash
 docker container logs --tail 5 trivia
 ```
 
-![](img/8251713821df2e668f79fe3f0ea6d5a5_5.png)
 
 同样，查看最后7条记录：
 
@@ -44,7 +41,6 @@ docker container logs --tail 7 trivia
 
 ## 实时跟踪日志
 
-![](img/8251713821df2e668f79fe3f0ea6d5a5_7.png)
 
 上一节我们介绍了如何查看历史日志，本节中我们来看看如何实时监控日志的产生。
 
@@ -56,7 +52,6 @@ docker container logs --tail 7 trivia
 docker container logs --tail 5 --follow trivia
 ```
 
-![](img/8251713821df2e668f79fe3f0ea6d5a5_9.png)
 
 这是一个非常有用的选项，可以让你持续监控容器的运行状态。
 
@@ -64,7 +59,6 @@ docker container logs --tail 5 --follow trivia
 
 除了查看日志，我们还可以配置Docker使用不同的日志驱动。这可以全局设置，也可以针对单个容器设置。
 
-![](img/8251713821df2e668f79fe3f0ea6d5a5_11.png)
 
 例如，我们可以在运行容器时，通过 `--log-driver` 参数指定日志驱动。以下命令创建一个使用 `none` 日志驱动的临时容器（这意味着不产生任何日志输出）：
 
@@ -74,7 +68,6 @@ docker run --log-driver none --name test alpine echo "Hello 1, 2, 3"
 
 容器执行 `echo` 命令后会退出。由于日志驱动设置为 `none`，该容器不会产生任何日志输出。
 
-![](img/8251713821df2e668f79fe3f0ea6d5a5_13.png)
 
 如果我们尝试查看这个容器的日志：
 

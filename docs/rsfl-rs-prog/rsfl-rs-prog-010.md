@@ -22,17 +22,13 @@ let data = (10, 3.5, false);
 
 如果要打印元组，我们必须使用调试模式。这意味着在格式化占位符中需要添加 `:?`。
 
-![](img/86a31d77c724fd0b9cdb3bf4ca8c65ca_1.png)
 
-![](img/86a31d77c724fd0b9cdb3bf4ca8c65ca_2.png)
 
 ```rust
 println!("data = {:?}", data);
 ```
 
-![](img/86a31d77c724fd0b9cdb3bf4ca8c65ca_3.png)
 
-![](img/86a31d77c724fd0b9cdb3bf4ca8c65ca_4.png)
 
 运行上述代码，你将看到类似 `data = (10, 3.5, false)` 的输出。
 
@@ -40,9 +36,7 @@ println!("data = {:?}", data);
 
 你也可以为元组提供类型注解。类型注解的写法如下：
 
-![](img/86a31d77c724fd0b9cdb3bf4ca8c65ca_6.png)
 
-![](img/86a31d77c724fd0b9cdb3bf4ca8c65ca_7.png)
 
 ```rust
 let data: (i32, f32, bool) = (10, 3.5, false);
@@ -54,7 +48,6 @@ let data: (i32, f32, bool) = (10, 3.5, false);
 
 上一节我们介绍了如何创建元组，本节中我们来看看如何访问其中的数据。有两种主要方法：解构和使用索引。
 
-![](img/86a31d77c724fd0b9cdb3bf4ca8c65ca_9.png)
 
 ### 方法一：解构
 
@@ -67,17 +60,12 @@ println!("N: {}, D: {}, B: {}", number, decimal, boolean);
 
 运行这段代码，你将能够单独使用 `number`、`decimal` 和 `boolean` 这三个变量。
 
-![](img/86a31d77c724fd0b9cdb3bf4ca8c65ca_11.png)
 
-![](img/86a31d77c724fd0b9cdb3bf4ca8c65ca_12.png)
 
 ### 方法二：使用索引
 
-![](img/86a31d77c724fd0b9cdb3bf4ca8c65ca_13.png)
 
-![](img/86a31d77c724fd0b9cdb3bf4ca8c65ca_14.png)
 
-![](img/86a31d77c724fd0b9cdb3bf4ca8c65ca_15.png)
 
 我们也可以通过索引来访问元组中的特定元素。元组的索引从 `0` 开始。
 
@@ -101,9 +89,7 @@ println!("宝藏位于坐标: {:?}", coordinates);
 
 你可以像之前一样，通过解构或索引来使用坐标的各个部分：
 
-![](img/86a31d77c724fd0b9cdb3bf4ca8c65ca_17.png)
 
-![](img/86a31d77c724fd0b9cdb3bf4ca8c65ca_19.png)
 
 ```rust
 // 解构
@@ -123,13 +109,10 @@ let empty: () = ();
 
 单元类型通常用于表示不返回任何有意义值的表达式，我们会在未来的课程中更深入地探讨它。
 
-![](img/86a31d77c724fd0b9cdb3bf4ca8c65ca_21.png)
 
 ## 总结
 
-![](img/86a31d77c724fd0b9cdb3bf4ca8c65ca_22.png)
 
-![](img/86a31d77c724fd0b9cdb3bf4ca8c65ca_23.png)
 
 ![](img/86a31d77c724fd0b9cdb3bf4ca8c65ca_24.png)
 

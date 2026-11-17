@@ -18,7 +18,6 @@ DROP USER username;
 
 ## 删除无关联对象的用户
 
-![](img/d1ac6b82ff3f35d0ace933f1d8be2765_1.png)
 
 首先，我们来看一个最简单的场景：删除一个没有创建任何对象的用户。
 
@@ -31,7 +30,6 @@ DROP USER username;
 
 ## 删除有关联对象的用户
 
-![](img/d1ac6b82ff3f35d0ace933f1d8be2765_3.png)
 
 上一节我们介绍了删除简单用户的方法，本节中我们来看看更常见的情况：用户拥有自己创建的对象（例如数据库表）。此时直接删除用户会失败。
 
@@ -45,13 +43,11 @@ DROP USER username;
 
 ## 使用 CASCADE 选项
 
-![](img/d1ac6b82ff3f35d0ace933f1d8be2765_5.png)
 
 当用户拥有对象时，必须使用 `CASCADE` 关键字来强制删除。该选项会同时删除该用户以及其拥有的所有数据库对象。
 
 核心命令格式为：
 
-![](img/d1ac6b82ff3f35d0ace933f1d8be2765_7.png)
 
 ```sql
 DROP USER username CASCADE;
@@ -67,15 +63,12 @@ DROP USER vitor4 CASCADE;
 
 ## 注意事项与警告
 
-![](img/d1ac6b82ff3f35d0ace933f1d8be2765_9.png)
 
 在进行用户删除操作时，有两点必须牢记：
 
-![](img/d1ac6b82ff3f35d0ace933f1d8be2765_10.png)
 
 以下是关键注意事项：
 
-![](img/d1ac6b82ff3f35d0ace933f1d8be2765_12.png)
 
 *   **切勿删除系统用户**：绝对不要删除如 `SYS` 或 `SYSTEM` 这样的核心系统用户。删除这些用户将导致数据库完全损坏。
 *   **确认会话状态**：在删除用户前，请确保该用户没有活跃的登录会话。如果有，需要先终止这些会话。

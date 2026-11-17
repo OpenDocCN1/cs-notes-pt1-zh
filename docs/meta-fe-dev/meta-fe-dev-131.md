@@ -10,13 +10,10 @@
 
 当然，这不应与你可以连接以从网络获取数据的第三方 API 混淆。为了成功完成本课任务，你需要在 React 中实现此功能之前，了解如何在纯 JavaScript 中处理对第三方数据的请求。
 
-![](img/f15d121dade1f3a2fe53e7f65adf2126_1.png)
 
-![](img/f15d121dade1f3a2fe53e7f65adf2126_2.png)
 
 幸运的是，其机制大体相同，只是 React 坚持使用专门的 Hook（即 `useEffect` Hook）来处理副作用。
 
-![](img/f15d121dade1f3a2fe53e7f65adf2126_3.png)
 
 ## 使用 Fetch 方法获取数据
 
@@ -28,9 +25,7 @@
 
 ## 理解 Promise
 
-![](img/f15d121dade1f3a2fe53e7f65adf2126_5.png)
 
-![](img/f15d121dade1f3a2fe53e7f65adf2126_6.png)
 
 一个 Promise 是一个可能在稍后时间被履行的对象。实际上，JavaScript 中的每个 Promise 都可以存在于三种状态之一：**等待中（Pending）**、**已履行（Fulfilled）** 和 **已拒绝（Rejected）**。
 
@@ -38,9 +33,7 @@
 
 ## 在 React 中处理副作用
 
-![](img/f15d121dade1f3a2fe53e7f65adf2126_8.png)
 
-![](img/f15d121dade1f3a2fe53e7f65adf2126_9.png)
 
 因为调用 `fetch` 方法构成了一个副作用（即 React 之外的事情），获取这些数据需要使用 `useEffect` Hook 来更新状态。你可以使用 `useState` Hook 或 `useReducer` Hook 来管理状态。
 
@@ -50,13 +43,10 @@
 
 你还需要能够将数据提交到 API，就像在本课程之前的课程中所做的那样。你将获得一些练习，目标是完成 API 单元测试。
 
-![](img/f15d121dade1f3a2fe53e7f65adf2126_11.png)
 
 最后，像往常一样，你还需要使用 Git 来跟踪最新的更新。
 
-![](img/f15d121dade1f3a2fe53e7f65adf2126_12.png)
 
-![](img/f15d121dade1f3a2fe53e7f65adf2126_13.png)
 
 本课中有相当多的任务需要完成。让我们开始吧。
 

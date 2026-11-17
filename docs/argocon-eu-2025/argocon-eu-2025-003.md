@@ -1,10 +1,8 @@
 # 003：Argo 知识问答！
 
-![](img/8cd6feef33a57a58b9df3efa6977de5f_0.png)
 
 ![](img/8cd6feef33a57a58b9df3efa6977de5f_0.png)
 
-![](img/8cd6feef33a57a58b9df3efa6977de5f_2.png)
 
 在本节中，我们将通过一个模拟的问答环节，快速回顾和测试关于 Argo 项目及其子项目的核心知识。我们将逐一解析问答中涉及的关键概念，帮助你巩固理解。
 
@@ -83,6 +81,5 @@
 
 本节课中我们一起学习了 ArgoCD 的自动同步与漂移检测、Argo Rollouts 的部署策略及其扩展的 Kubernetes 资源、Argo Events 的事件源与触发器角色，以及 Argo Workflows 的编排优势。通过问答形式，我们快速回顾了这些核心概念，希望帮助你加深对 Argo 项目生态的理解。
 
-![](img/8cd6feef33a57a58b9df3efa6977de5f_4.png)
 
 ![](img/8cd6feef33a57a58b9df3efa6977de5f_4.png)

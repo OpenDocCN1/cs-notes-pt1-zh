@@ -69,7 +69,6 @@
 
 ## 总结
 
-![](img/3316aa757afca35aa625a56f26fdf51d_1.png)
 
 ![](img/3316aa757afca35aa625a56f26fdf51d_2.png)
 

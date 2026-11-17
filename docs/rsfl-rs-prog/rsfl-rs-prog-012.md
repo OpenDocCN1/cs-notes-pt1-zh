@@ -10,19 +10,13 @@
 
 上一节我们介绍了将所有代码置于 `main` 函数中的局限性，本节中我们来看看一个具体的例子。
 
-![](img/5338d5dd404d3a99cbf4ed51a4891c34_1.png)
 
-![](img/5338d5dd404d3a99cbf4ed51a4891c34_2.png)
 
-![](img/5338d5dd404d3a99cbf4ed51a4891c34_3.png)
 
-![](img/5338d5dd404d3a99cbf4ed51a4891c34_4.png)
 
 一种方法是，在程序中每个需要的地方复制粘贴这段代码。这确实可以工作，程序会编译并打印三次“hello Bob”。
 
-![](img/5338d5dd404d3a99cbf4ed51a4891c34_5.png)
 
-![](img/5338d5dd404d3a99cbf4ed51a4891c34_6.png)
 
 但如果你需要更新这段代码呢？例如，将“hello Bob”改为“goodbye Bob”。这需要你在三个地方手动修改，不仅繁琐，还大大增加了出错的可能性，比如拼写错误。
 
@@ -39,15 +33,11 @@
 2.  为函数起一个名字，遵循蛇形命名法（例如 `print_hello`）。
 3.  在花括号 `{}` 内编写函数体代码。
 
-![](img/5338d5dd404d3a99cbf4ed51a4891c34_8.png)
 
-![](img/5338d5dd404d3a99cbf4ed51a4891c34_9.png)
 
-![](img/5338d5dd404d3a99cbf4ed51a4891c34_10.png)
 
 例如，我们可以创建一个打印“hello Bob”的函数：
 
-![](img/5338d5dd404d3a99cbf4ed51a4891c34_11.png)
 
 ```rust
 fn print_hello() {
@@ -71,21 +61,14 @@ fn main() {
 
 例如，将函数内的打印内容从“hello”改为“hi”，重新运行程序，所有调用该函数的地方都会输出“hi”。此外，大多数代码编辑器都支持一键重命名函数，这能自动更新程序中所有对该函数的引用。
 
-![](img/5338d5dd404d3a99cbf4ed51a4891c34_13.png)
 
-![](img/5338d5dd404d3a99cbf4ed51a4891c34_14.png)
 
-![](img/5338d5dd404d3a99cbf4ed51a4891c34_15.png)
 
 ## 函数的更多功能 📦
 
-![](img/5338d5dd404d3a99cbf4ed51a4891c34_16.png)
 
-![](img/5338d5dd404d3a99cbf4ed51a4891c34_17.png)
 
-![](img/5338d5dd404d3a99cbf4ed51a4891c34_18.png)
 
-![](img/5338d5dd404d3a99cbf4ed51a4891c34_19.png)
 
 上一节我们创建了一个简单的函数，本节中我们来看看函数体内可以包含多少代码。
 
@@ -104,28 +87,18 @@ fn print_hello() {
 
 在 Rust 中，你可以在 `main` 函数之前或之后定义其他函数。这是因为 `main` 是一个特殊的函数，它总是首先执行。
 
-![](img/5338d5dd404d3a99cbf4ed51a4891c34_21.png)
 
-![](img/5338d5dd404d3a99cbf4ed51a4891c34_22.png)
 
-![](img/5338d5dd404d3a99cbf4ed51a4891c34_23.png)
 
 例如，在 `main` 函数之后定义一个 `goodbye` 函数：
 
-![](img/5338d5dd404d3a99cbf4ed51a4891c34_24.png)
-
-![](img/5338d5dd404d3a99cbf4ed51a4891c34_25.png)
-
-![](img/5338d5dd404d3a99cbf4ed51a4891c34_26.png)
-
-![](img/5338d5dd404d3a99cbf4ed51a4891c34_27.png)
 
 
-![](img/5338d5dd404d3a99cbf4ed51a4891c34_28.png)
 
-![](img/5338d5dd404d3a99cbf4ed51a4891c34_29.png)
 
-![](img/5338d5dd404d3a99cbf4ed51a4891c34_30.png)
+
+
+
 
 ```rust
 fn main() {
@@ -136,19 +109,15 @@ fn goodbye() {
 }
 ```
 
-![](img/5338d5dd404d3a99cbf4ed51a4891c34_31.png)
 
 程序运行时会正常调用 `goodbye` 函数，没有任何问题。
 
 ## 总结 📝
 
-![](img/5338d5dd404d3a99cbf4ed51a4891c34_33.png)
 
 本节课中我们一起学习了 Rust 函数的基础知识。我们了解到，函数通过封装可重用的代码块，能有效避免重复、简化代码更新，并提升程序的可维护性。我们学习了如何使用 `fn` 关键字定义函数，如何调用函数，以及函数定义可以放置的位置。
 
-![](img/5338d5dd404d3a99cbf4ed51a4891c34_34.png)
 
-![](img/5338d5dd404d3a99cbf4ed51a4891c34_35.png)
 
 ![](img/5338d5dd404d3a99cbf4ed51a4891c34_36.png)
 

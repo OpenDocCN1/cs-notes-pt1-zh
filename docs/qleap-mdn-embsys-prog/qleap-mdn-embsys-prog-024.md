@@ -4,11 +4,8 @@
 
 在本节课中，我们将学习如何自动化上下文切换过程，这是构建实时操作系统（RTOS）的核心步骤。我们将基于上一课手动推导的算法，开始构建一个名为“Miro”的极简RTOS内核。
 
-![](img/3ff95a2c2e3cf093be36d09f2459737c_2.png)
 
-![](img/3ff95a2c2e3cf093be36d09f2459737c_4.png)
 
-![](img/3ff95a2c2e3cf093be36d09f2459737c_6.png)
 
 ## 概述
 
@@ -37,9 +34,7 @@ typedef struct OS_thread {
 } OS_thread;
 ```
 
-![](img/3ff95a2c2e3cf093be36d09f2459737c_12.png)
 
-![](img/3ff95a2c2e3cf093be36d09f2459737c_14.png)
 
 ## 实现线程启动函数
 
@@ -51,9 +46,7 @@ typedef struct OS_thread {
 *   **构建栈帧**：在栈上按正确顺序放置初始寄存器值，包括程序计数器（PC）指向线程函数。
 *   **栈预填充**：用特定模式（如`0xDEADBEEF`）填充剩余栈空间，便于调试时观察栈使用情况。
 
-![](img/3ff95a2c2e3cf093be36d09f2459737c_16.png)
 
-![](img/3ff95a2c2e3cf093be36d09f2459737c_18.png)
 
 ```c
 void OS_thread_start(OS_thread *me,
@@ -88,9 +81,7 @@ NVIC_SYSPRI14 = (NVIC_SYSPRI14 & 0x00FFFFFF) | (NVIC_PENDSV_PRI << 16);
 
 现在，我们来实现触发上下文切换的调度器函数 `OS_sched`。
 
-![](img/3ff95a2c2e3cf093be36d09f2459737c_24.png)
 
-![](img/3ff95a2c2e3cf093be36d09f2459737c_26.png)
 
 以下是调度器 `OS_sched` 的核心逻辑：
 *   **线程指针**：维护两个全局的`volatile`指针：`OS_curr`（指向当前运行线程）和`OS_next`（指向下一个要运行的线程）。

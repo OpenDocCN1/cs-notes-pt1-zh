@@ -36,7 +36,6 @@ Thrust的做法则不同：它在底层使用CUDA启动计算，然后使用`cud
 
 以下是一个示例，展示了使用Thrust（同步）和CUB（异步）在CPU等待时间上的差异：
 
-![](img/de84f289c39ec09225d5eb6b6018ccb9_3.png)
 
 ```cpp
 // 同步版本 (Thrust) - CPU等待时间随元素数量增加
@@ -55,7 +54,6 @@ auto end = std::chrono::high_resolution_clock::now();
 // 如果需要等待结果，可以显式调用 cudaDeviceSynchronize()
 ```
 
-![](img/de84f289c39ec09225d5eb6b6018ccb9_5.png)
 
 使用CUB启动异步工作后，CPU被立即释放，因此它可以在GPU执行其他操作时并行工作。在我们的案例中，我们可以在GPU进行计算时，开始将数据写入磁盘。然后，我们只需要在GPU完成模拟步骤后进行同步。由于我们无论如何都需要等待GPU，我们并没有损失任何时间。相反，等待步骤变得更短，从而更高效地利用了系统。因此，我们可以预期这种方法会带来显著的性能提升。
 
@@ -102,7 +100,6 @@ auto end = std::chrono::high_resolution_clock::now();
 
 例如，你可以在主循环中添加一个范围，命名为“Write Step”，并包含迭代ID。这样，在Nsight Systems中，你会看到“Write Step”实际上由`fopen`、`fwrite`和`fclose`组成。你不需要知道写入磁盘的具体底层调用，只需要知道在这个阶段你正在进行“写入磁盘”操作。
 
-![](img/de84f289c39ec09225d5eb6b6018ccb9_9.png)
 
 ### 练习：使用NVTX标注代码步骤
 
@@ -181,13 +178,11 @@ auto end = std::chrono::high_resolution_clock::now();
 
 为了确保特定的内存页位于RAM中并且不会被移动到磁盘，我们需要所谓的页锁定内存或固定内存。通过固定这些内存页，你可以确保操作系统不允许将这些内存页从RAM移回磁盘。
 
-![](img/de84f289c39ec09225d5eb6b6018ccb9_11.png)
 
 那么，这与GPU有什么关系呢？事实证明，GPU只能从固定内存中直接读取数据。那么，在我们没有为CPU和GPU之间的数据传输做任何特殊处理的情况下，事情是如何工作的呢？
 
 在幕后，CUDA运行时使用一个小的固定缓冲区作为传输的暂存区。当你从常规的可分页内存复制数据时，驱动程序会将数据块移动到固定暂存缓冲区，然后将其发送到GPU，等待完成，然后重复这个过程。这个过程有效地使复制操作变成了同步的，即使我们使用了`cudaMemcpyAsync`，因为它需要反复执行这个过程，从而阻塞了其他操作。
 
-![](img/de84f289c39ec09225d5eb6b6018ccb9_13.png)
 
 好消息是，我们可以通过自己分配固定内存来避免这种情况。在Thrust中，有一个简单的接口：`thrust::universal_host_pinned_vector`。它允许我们分配保证是固定的内存，从而绕过这个隐藏的、导致复制同步化的暂存步骤。
 
@@ -205,11 +200,9 @@ auto end = std::chrono::high_resolution_clock::now();
 
 1.  **优先使用异步性**：当可以重叠主机和设备工作时，应使用异步操作。例如，将Thrust替换为CUB，利用其异步编程模型，使CPU任务与GPU任务重叠。调用CUB时，主机以异步方式启动设备计算，这意味着它不会等待GPU完成。无论GPU上要解决的问题规模多大，主机几乎都会立即返回，然后CPU可以继续执行其他工作，而GPU则在后台进行可能很耗时的计算。
 
-![](img/de84f289c39ec09225d5eb6b6018ccb9_15.png)
 
 2.  **使用Nsight Systems进行性能分析**：我们学会了如何生成报告、打开报告，并查看CPU和GPU上的执行情况，识别时间浪费点或GPU利用率不足的情况。该工具也让我们能够可视化异步操作。
 
-![](img/de84f289c39ec09225d5eb6b6018ccb9_17.png)
 
 3.  **使用NVTX简化代码映射**：NVTX允许我们通过手动在代码中有意义的地方添加范围标记，使性能可视化变得更加容易。我们可以直接将代码段映射到Nsight Systems报告中的事件。
 
@@ -217,7 +210,6 @@ auto end = std::chrono::high_resolution_clock::now();
 
 5.  **使用固定内存加速传输**：默认情况下，主机内存是可分页的，可能位于磁盘上。为了确保复制快速且非阻塞，我们应该使用正确的Thrust主机容器（如`thrust::universal_host_pinned_vector`）来确保内存是固定的，从而使复制操作非阻塞且快速。
 
-![](img/de84f289c39ec09225d5eb6b6018ccb9_19.png)
 
 ![](img/de84f289c39ec09225d5eb6b6018ccb9_21.png)
 

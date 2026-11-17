@@ -116,7 +116,6 @@ ansible web_servers -m user -a ‘name=webtest password={{ “123456” | passwo
 
 执行成功后，你就可以使用用户名 `webtest` 和密码 `123456` 通过 SSH 登录远程主机了。请注意，出于安全考虑，实际环境中应使用强密码。
 
-![](img/d8e93b3329c7c025af4ae99a6c7f4c2c_26.png)
 
 ![](img/d8e93b3329c7c025af4ae99a6c7f4c2c_28.png)
 

@@ -1,11 +1,9 @@
 # HCIA-DATACOM教程：P15：XCNA15-NA综合实验
 
-![](img/9804df15e7eb3c47c64cca45eb7bb8c7_1.png)
 
 ## 概述
 在本节课中，我们将通过一个综合实验，应用之前NA阶段学到的所有核心知识点。这个实验模拟了一个包含总部和分部的网络环境，我们将完成从基础VLAN划分、SVI配置、动态路由协议（OSPF）部署，到NAT地址转换、VRRP网关冗余，以及GRE VPN隧道建立等一系列配置任务。通过动手实践，你将巩固对网络基础架构的理解。
 
-![](img/9804df15e7eb3c47c64cca45eb7bb8c7_3.png)
 
 ---
 
@@ -22,19 +20,14 @@
 6.  **分部网络地址转换**：配置NAT，使分部内网主机可以访问互联网。
 7.  **总部与分部间VPN互通**：在总部（R1）和分部（R2）的边界路由器之间建立GRE VPN隧道，并通过OSPF交换路由，实现总部与分部内网之间的安全通信。
 
-![](img/9804df15e7eb3c47c64cca45eb7bb8c7_5.png)
 
 ---
 
-![](img/9804df15e7eb3c47c64cca45eb7bb8c7_7.png)
 
-![](img/9804df15e7eb3c47c64cca45eb7bb8c7_9.png)
 
 ## 实验配置步骤
 
-![](img/9804df15e7eb3c47c64cca45eb7bb8c7_11.png)
 
-![](img/9804df15e7eb3c47c64cca45eb7bb8c7_13.png)
 
 ### 第一步：总部基础网络配置
 上一节我们分析了实验需求，本节中我们首先来完成总部网络的基础配置，包括设备命名、VLAN划分和接口配置。
@@ -80,16 +73,13 @@
 ```
 配置完成后，总部内不同VLAN的主机之间以及主机与服务器之间应能正常通信。
 
-![](img/9804df15e7eb3c47c64cca45eb7bb8c7_15.png)
 
-![](img/9804df15e7eb3c47c64cca45eb7bb8c7_17.png)
 
 ---
 
 ### 第二步：配置动态路由协议（OSPF）
 上一节我们实现了总部内网的互通，本节中我们通过配置OSPF动态路由协议，让内网路由能够传递到边界设备。
 
-![](img/9804df15e7eb3c47c64cca45eb7bb8c7_19.png)
 
 **1. 总部OSPF配置**
 在总部边界路由器R1和核心交换机SW1上配置OSPF，宣告内网网段和互联网段。
@@ -109,16 +99,12 @@
 ```
 配置后，R1应能通过OSPF学习到总部内网的路由。
 
-![](img/9804df15e7eb3c47c64cca45eb7bb8c7_21.png)
 
 **2. 配置默认路由与下发**
 在R1上配置指向运营商（ISP）的默认路由，并通过OSPF将其下发到内网。
 
-![](img/9804df15e7eb3c47c64cca45eb7bb8c7_23.png)
 
-![](img/9804df15e7eb3c47c64cca45eb7bb8c7_25.png)
 
-![](img/9804df15e7eb3c47c64cca45eb7bb8c7_27.png)
 
 ```bash
 # 在R1上配置静态默认路由
@@ -129,11 +115,8 @@
 
 ---
 
-![](img/9804df15e7eb3c47c64cca45eb7bb8c7_29.png)
 
-![](img/9804df15e7eb3c47c64cca45eb7bb8c7_31.png)
 
-![](img/9804df15e7eb3c47c64cca45eb7bb8c7_33.png)
 
 ### 第三步：配置NAT实现上网与服务器发布
 上一节我们通过OSPF打通了内网到边界的路由，本节中我们配置NAT，使内网可以访问互联网，并将内部服务器发布到公网。
@@ -152,7 +135,6 @@
 [R1-GigabitEthernet0/0/0] nat outbound 2000
 ```
 
-![](img/9804df15e7eb3c47c64cca45eb7bb8c7_35.png)
 
 **3. 配置NAT Server发布内部服务器**
 在R1的出接口上配置NAT Server，将内部服务器192.168.99.1映射为公网IP 20.1.1.3。
@@ -162,11 +144,9 @@
 ```
 配置完成后，总部内网主机可以访问互联网，外网主机也可以通过公网IP 20.1.1.3访问内部的服务器A。
 
-![](img/9804df15e7eb3c47c64cca45eb7bb8c7_37.png)
 
 ---
 
-![](img/9804df15e7eb3c47c64cca45eb7bb8c7_39.png)
 
 ### 第四步：分部网关冗余配置（VRRP）
 现在我们将视线转向分部网络。分部网络的核心需求是实现网关的冗余备份，我们使用VRRP协议来完成。
@@ -183,12 +163,10 @@
 [SW7-GigabitEthernet0/0/2] port trunk allow-pass vlan all
 ```
 
-![](img/9804df15e7eb3c47c64cca45eb7bb8c7_41.png)
 
 **2. 配置VRRP虚拟网关**
 在SW7和SW8上为VLAN 30和40的SVI接口配置VRRP。通过调整优先级，指定主备设备。
 
-![](img/9804df15e7eb3c47c64cca45eb7bb8c7_43.png)
 
 ```bash
 # 在SW7上配置VLAN 30的VRRP，并设置较高优先级使其成为Master
@@ -205,7 +183,6 @@ VLAN 40的配置逻辑类似，但主备角色相反（SW8为Master， SW7为Bac
 
 ---
 
-![](img/9804df15e7eb3c47c64cca45eb7bb8c7_45.png)
 
 ### 第五步：分部动态路由与NAT配置
 上一节我们为分部网络配置了高可用的网关，本节中我们配置分部的OSPF和NAT，使其能够访问互联网。

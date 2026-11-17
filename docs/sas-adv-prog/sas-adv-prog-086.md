@@ -24,7 +24,6 @@ SELECT column_name(s) FROM table2;
 
 关键点在于，每个`SELECT`语句中的列数必须相同，并且对应列的数据类型需要兼容。
 
-![](img/c9ecfed8b982b32d6a6bc2665c0dd91d_1.png)
 
 ## UNION的工作流程
 
@@ -44,7 +43,6 @@ SELECT column_name(s) FROM table2;
 
 根据我们的业务需求，具体的SQL查询步骤如下：
 
-![](img/c9ecfed8b982b32d6a6bc2665c0dd91d_3.png)
 
 1.  从邮件营销表（例如 `sales_email`）中选取客户ID。
 2.  从电话营销表（例如 `sales_phone`）中选取客户ID。

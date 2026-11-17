@@ -61,9 +61,7 @@ if __name__ == '__main__':
 
 在`init_ui`方法中，我们将安排控件的位置并设置它们的样式。
 
-![](img/031e0e715ecc648991b096b0e2ecb24e_1.png)
 
-![](img/031e0e715ecc648991b096b0e2ecb24e_3.png)
 
 首先，设置窗口标题。
 ```python
@@ -89,7 +87,6 @@ vbox.addLayout(hbox)
 self.setLayout(vbox)
 ```
 
-![](img/031e0e715ecc648991b096b0e2ecb24e_5.png)
 
 为了让时间标签看起来更美观，我们将其文本居中对齐，并应用一些CSS样式。
 
@@ -114,7 +111,6 @@ self.setStyleSheet("""
 """)
 ```
 
-![](img/031e0e715ecc648991b096b0e2ecb24e_11.png)
 
 ---
 

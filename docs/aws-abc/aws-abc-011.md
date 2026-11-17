@@ -39,11 +39,9 @@ Amazon Kinesis并非单一服务，而是一个服务家族，主要包括以下
 
 了解了Data Streams的实时处理能力后，我们来看看Kinesis Data Firehose。它同样是一个数据摄取服务，但其侧重点不同。
 
-![](img/710976f6e118c7cd57236f06cd9e497b_5.png)
 
 ![](img/710976f6e118c7cd57236f06cd9e497b_6.png)
 
-![](img/710976f6e118c7cd57236f06cd9e497b_7.png)
 
 与Data Streams不同，Data Firehose在摄取流数据后，并不会立即进行复杂处理，而是将数据**持续地、自动地**输送到指定的存储和分析目的地，例如数据湖、数据存储和数据分析工具。它更侧重于数据的可靠传输和加载。
 

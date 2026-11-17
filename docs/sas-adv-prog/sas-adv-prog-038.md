@@ -6,11 +6,9 @@
 
 ## 探索 DICTIONARY.TABLES 表
 
-![](img/b1619f3c97a782f0112023a80c4b7ed8_1.png)
 
 首先，我们从探索 `DICTIONARY.TABLES` 表开始。这个表位于SAS的字典库中，包含了所有可用表的信息。
 
-![](img/b1619f3c97a782f0112023a80c4b7ed8_3.png)
 
 为了限制输出行数，我们使用 `NOBS=100` 选项。以下是查询该表结构的代码：
 
@@ -20,7 +18,6 @@ DESCRIBE TABLE dictionary.tables;
 
 运行上述代码后，我们可以在日志中查看结果。`DESCRIBE TABLE` 语句会显示列名、列类型以及相关的标签信息。了解实际的列名非常重要。
 
-![](img/b1619f3c97a782f0112023a80c4b7ed8_5.png)
 
 接下来，我们执行一个查询来查看表中的具体数据：
 
@@ -34,7 +31,6 @@ QUIT;
 
 ---
 
-![](img/b1619f3c97a782f0112023a80c4b7ed8_7.png)
 
 ## 筛选特定库中的表
 
@@ -42,7 +38,6 @@ QUIT;
 
 以下是查询SQ库中所有表的代码：
 
-![](img/b1619f3c97a782f0112023a80c4b7ed8_9.png)
 
 ```sas
 PROC SQL;
@@ -51,13 +46,10 @@ PROC SQL;
 QUIT;
 ```
 
-![](img/b1619f3c97a782f0112023a80c4b7ed8_11.png)
 
-![](img/b1619f3c97a782f0112023a80c4b7ed8_13.png)
 
 注意，库名 `‘SQ‘` 必须使用大写。运行此查询后，我们将看到SQ库中的每一个表及其详细信息，总计大约有27个表。
 
-![](img/b1619f3c97a782f0112023a80c4b7ed8_15.png)
 
 在SAS中，`DICTIONARY.TABLES` 的等价视图是 `SASHELP.VTABLE`。我们可以通过以下方式获得相同的信息：
 
@@ -69,25 +61,21 @@ RUN;
 
 默认情况下，`PROC PRINT` 不使用列标签，而是显示实际的列名。了解字典表和SASHELP视图的这两种用法，取决于你的具体使用场景。
 
-![](img/b1619f3c97a782f0112023a80c4b7ed8_17.png)
 
 ---
 
 ## 探索 DICTIONARY.COLUMNS 表
 
-![](img/b1619f3c97a782f0112023a80c4b7ed8_19.png)
 
 上一节我们介绍了如何查询表信息，本节中我们来看看如何获取表中列的详细信息。我们将使用 `DICTIONARY.COLUMNS` 表。
 
 首先，查看该表的结构：
 
-![](img/b1619f3c97a782f0112023a80c4b7ed8_21.png)
 
 ```sas
 DESCRIBE TABLE dictionary.columns;
 ```
 
-![](img/b1619f3c97a782f0112023a80c4b7ed8_23.png)
 
 查看日志，可以看到列名与 `DICTIONARY.TABLES` 类似，但包含的是关于列的不同信息。接着，我们查询SQ库中所有表的列信息：
 
@@ -98,7 +86,6 @@ PROC SQL;
 QUIT;
 ```
 
-![](img/b1619f3c97a782f0112023a80c4b7ed8_25.png)
 
 在结果中，我们可以看到库名（仅为SQ）、成员名（表名），以及每个表中每一列的详细信息，包括列名、类型、长度、位置等。这是比较不同表中同名列的属性（如类型、长度和格式）是否一致的绝佳方法。
 
@@ -113,17 +100,14 @@ RUN;
 
 ---
 
-![](img/b1619f3c97a782f0112023a80c4b7ed8_27.png)
 
 ## 探索 DICTIONARY.LIBNAMES 表
 
 最后，我们来探索 `DICTIONARY.LIBNAMES` 表，它包含了已定义库的信息。
 
-![](img/b1619f3c97a782f0112023a80c4b7ed8_29.png)
 
 首先，查看其结构：
 
-![](img/b1619f3c97a782f0112023a80c4b7ed8_31.png)
 
 ```sas
 DESCRIBE TABLE dictionary.libnames;
@@ -131,7 +115,6 @@ DESCRIBE TABLE dictionary.libnames;
 
 查看日志，可以看到列数较少，但包含了库名、引擎、库路径等信息。接着，查询所有库的信息：
 
-![](img/b1619f3c97a782f0112023a80c4b7ed8_33.png)
 
 ```sas
 PROC SQL;
@@ -139,11 +122,9 @@ PROC SQL;
 QUIT;
 ```
 
-![](img/b1619f3c97a782f0112023a80c4b7ed8_35.png)
 
 结果中显示了每个库的名称、使用的引擎、库的物理路径等信息。如果我们只想查看SQ库，可以添加 `WHERE` 子句：
 
-![](img/b1619f3c97a782f0112023a80c4b7ed8_37.png)
 
 ```sas
 PROC SQL;
@@ -160,11 +141,9 @@ PROC SQL;
 QUIT;
 ```
 
-![](img/b1619f3c97a782f0112023a80c4b7ed8_39.png)
 
 运行后，将列出所有已连接的库（你的列表可能略有不同）。这是检查所有可用库的一个好方法。
 
-![](img/b1619f3c97a782f0112023a80c4b7ed8_41.png)
 
 同样，在SAS编程（如DATA步或PROC步）中，也可以使用等价视图 `SASHELP.VLIBNAM`：
 

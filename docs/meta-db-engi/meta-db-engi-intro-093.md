@@ -71,7 +71,6 @@ CREATE TABLE Bookings (
 SHOW COLUMNS FROM Bookings;
 ```
 
-![](img/303360b8d00ef7457cc4d7fa954cd683_6.png)
 
 输出结果显示，所有列都被赋予了所需的约束和数据类型。值得注意的是，`CustomerID`列被标记为`MUL`（Multiple），这意味着它不是唯一键，多行可以拥有相同的键值。这是合理的，因为每位顾客可能在不同时间进行多次预订。
 

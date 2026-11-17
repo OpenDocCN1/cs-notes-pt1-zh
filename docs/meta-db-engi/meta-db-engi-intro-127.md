@@ -14,21 +14,14 @@
 *   **数据检索语句**（`SELECT`语句）：用于从数据库返回数据。
 *   **数据修改语句**（`INSERT`, `UPDATE`, `DELETE`等）：用于更改数据库内的数据。
 
-![](img/f6ae9bbeaae8d6835f34740a4418cd83_1.png)
 
-![](img/f6ae9bbeaae8d6835f34740a4418cd83_2.png)
 
-![](img/f6ae9bbeaae8d6835f34740a4418cd83_3.png)
 
-![](img/f6ae9bbeaae8d6835f34740a4418cd83_4.png)
 
 通过学习优化数据库，你可以更快速、更高效地处理数据。
 
-![](img/f6ae9bbeaae8d6835f34740a4418cd83_5.png)
 
-![](img/f6ae9bbeaae8d6835f34740a4418cd83_6.png)
 
-![](img/f6ae9bbeaae8d6835f34740a4418cd83_7.png)
 
 在本课中，你还学习了如何对`SELECT`查询实施不同的优化技术。以下是针对`SELECT`查询的一些关键优化技巧：
 
@@ -43,11 +36,8 @@
 1.  **主索引（聚集索引）**：决定了表中数据的物理存储顺序。
 2.  **二级索引（非聚集索引）**：独立于数据存储结构，提供额外的查找路径。
 
-![](img/f6ae9bbeaae8d6835f34740a4418cd83_9.png)
 
-![](img/f6ae9bbeaae8d6835f34740a4418cd83_10.png)
 
-![](img/f6ae9bbeaae8d6835f34740a4418cd83_11.png)
 
 你复习了创建二级索引的语法，其基本结构如下：
 ```sql
@@ -64,17 +54,12 @@ CREATE INDEX index_name ON table_name (column1, column2, ...);
 *   `COMMIT`：提交事务，使所有更改永久化。
 *   `ROLLBACK`：回滚事务，撤销自事务开始以来的所有更改。
 
-![](img/f6ae9bbeaae8d6835f34740a4418cd83_13.png)
 
-![](img/f6ae9bbeaae8d6835f34740a4418cd83_14.png)
 
-![](img/f6ae9bbeaae8d6835f34740a4418cd83_15.png)
 
 你可以使用`START TRANSACTION`开始事务。如果执行查询时遇到错误，你可以在SQL语句末尾添加`ROLLBACK`语句，使数据库返回到`START TRANSACTION`时的状态。
 
-![](img/f6ae9bbeaae8d6835f34740a4418cd83_16.png)
 
-![](img/f6ae9bbeaae8d6835f34740a4418cd83_17.png)
 
 **使用MySQL公用表表达式优化`SELECT`查询**。你现在可以使用CTE将复杂的查询编译成简单的代码块。这些代码块可以在需要时通过调用CTE来重写查询，从而简化查询并使其更易于阅读和维护。
 
@@ -88,11 +73,9 @@ SELECT * FROM cte_name;
 ```
 你使用`WITH`子句开始代码块，然后在下面列出查询，最后键入你的`SELECT`语句并跟上CTE的名称。
 
-![](img/f6ae9bbeaae8d6835f34740a4418cd83_19.png)
 
 你还可以使用`UNION`操作符在语句之间执行多个CTE。
 
-![](img/f6ae9bbeaae8d6835f34740a4418cd83_20.png)
 
 **使用MySQL预处理语句**。你现在可以利用预处理语句来限制MySQL必须编译和解析代码的次数，从而提高执行效率，特别是在需要重复执行结构相同但参数不同的SQL语句时。
 
@@ -104,13 +87,10 @@ SELECT * FROM cte_name;
 
 ## 总结 🏁
 
-![](img/f6ae9bbeaae8d6835f34740a4418cd83_22.png)
 
 完成本模块后，你现在应该能够运用广泛的数据库优化技术。你可以部署这些技术来确保你的语句在MySQL中能够被快速、高效地编译、解析和执行。
 
-![](img/f6ae9bbeaae8d6835f34740a4418cd83_23.png)
 
-![](img/f6ae9bbeaae8d6835f34740a4418cd83_24.png)
 
 ![](img/f6ae9bbeaae8d6835f34740a4418cd83_25.png)
 

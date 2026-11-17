@@ -10,9 +10,7 @@
 
 首先，我们的程序是一个MS-DOS的COM文件。COM文件是一个可以直接加载到内存中执行的64K内存映像。操作系统将控制权完全交给我们的程序。
 
-![](img/bb072de0f739b6f12c9145a4d449c482_1.png)
 
-![](img/bb072de0f739b6f12c9145a4d449c482_3.png)
 
 程序入口点首先需要跳过数据区，跳转到真正的启动代码。
 
@@ -46,7 +44,6 @@ allocate_control_ram:
 
 这种模式的优点是，由于屏幕是正方形，我们可以用一个字（word）寄存器来存储像素地址：高字节是Y坐标，低字节是X坐标。这样，我们无需进行乘法运算即可定位像素，非常方便。
 
-![](img/bb072de0f739b6f12c9145a4d449c482_5.png)
 
 ```assembly
 set_mode_q:
@@ -138,7 +135,6 @@ fire_buttons:
 
 工具的操作被建模为一系列状态，例如“无文件状态”、“新建文件状态”、“加载文件状态”。我们有一个状态数组，每个状态包含一个处理函数（回调）。
 
-![](img/bb072de0f739b6f12c9145a4d449c482_17.png)
 
 ```assembly
 ; 状态定义宏
@@ -167,7 +163,6 @@ def_state LOAD_FILE, load_file_state_callback
 
 ![](img/bb072de0f739b6f12c9145a4d449c482_31.png)
 
-![](img/bb072de0f739b6f12c9145a4d449c482_33.png)
 
 ## 文本输入系统
 
@@ -183,11 +178,9 @@ def_state LOAD_FILE, load_file_state_callback
 ; 当前光标索引
 ```
 
-![](img/bb072de0f739b6f12c9145a4d449c482_35.png)
 
 我们使用宏来方便地定义文本字段及其关联的缓冲区。
 
-![](img/bb072de0f739b6f12c9145a4d449c482_37.png)
 
 ```assembly
 ; 定义文本字段宏
@@ -217,15 +210,11 @@ def_text_field BANK_FILENAME, 11, 0, 20, offset valid_filename_keys
 
 ![](img/bb072de0f739b6f12c9145a4d449c482_45.png)
 
-![](img/bb072de0f739b6f12c9145a4d449c482_47.png)
 
-![](img/bb072de0f739b6f12c9145a4d449c482_49.png)
 
 虽然本课重点在编辑器工具，但工具和游戏共享同一个底层引擎。引擎已实现的功能包括：
 
-![](img/bb072de0f739b6f12c9145a4d449c482_51.png)
 
-![](img/bb072de0f739b6f12c9145a4d449c482_53.png)
 
 *   **视频系统**：支持两层背景（带透明度）、精灵（带透明度和调色板）、字体、线条和矩形的绘制。渲染目标是后台缓冲区，然后快速翻页（flip）到VRAM。
 *   **输入系统**：键盘和鼠标输入已集成，游戏手柄支持待完成。
@@ -234,17 +223,13 @@ def_text_field BANK_FILENAME, 11, 0, 20, offset valid_filename_keys
 
 引擎被设计为既可运行在DOSBox（用于开发/教学），也可移植到真实的复古硬件或我们正在设计的街机板上。
 
-![](img/bb072de0f739b6f12c9145a4d449c482_55.png)
 
 ---
 
-![](img/bb072de0f739b6f12c9145a4d449c482_57.png)
 
-![](img/bb072de0f739b6f12c9145a4d449c482_59.png)
 
 ## 总结
 
-![](img/bb072de0f739b6f12c9145a4d449c482_61.png)
 
 本节课中，我们一起探索了一个用x86汇编语言编写的MS-DOS游戏编辑器工具的构建过程。我们从程序启动、分段内存管理和VGA图形模式设置开始，逐步深入到输入系统、用户界面按钮的实现、基于状态机的程序流程控制，以及文本输入系统的设计。
 

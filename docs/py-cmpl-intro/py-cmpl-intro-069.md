@@ -67,9 +67,7 @@ finally:
 
 ## 总结
 
-![](img/f84b071dcd3c117ffe111ce284a269c0_1.png)
 
-![](img/f84b071dcd3c117ffe111ce284a269c0_2.png)
 
 ![](img/f84b071dcd3c117ffe111ce284a269c0_4.png)
 

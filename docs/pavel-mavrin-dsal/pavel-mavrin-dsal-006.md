@@ -1,48 +1,27 @@
 # 006：栈、队列与摊还分析
 
-![](img/9e7c5e501b64fef97ba9698170c9c4c2_1.png)
 
-![](img/9e7c5e501b64fef97ba9698170c9c4c2_3.png)
 
-![](img/9e7c5e501b64fef97ba9698170c9c4c2_4.png)
 
-![](img/9e7c5e501b64fef97ba9698170c9c4c2_6.png)
 
-![](img/9e7c5e501b64fef97ba9698170c9c4c2_8.png)
 
-![](img/9e7c5e501b64fef97ba9698170c9c4c2_10.png)
 
-![](img/9e7c5e501b64fef97ba9698170c9c4c2_12.png)
 
-![](img/9e7c5e501b64fef97ba9698170c9c4c2_14.png)
 
-![](img/9e7c5e501b64fef97ba9698170c9c4c2_16.png)
 
-![](img/9e7c5e501b64fef97ba9698170c9c4c2_18.png)
 
-![](img/9e7c5e501b64fef97ba9698170c9c4c2_20.png)
 
-![](img/9e7c5e501b64fef97ba9698170c9c4c2_22.png)
 
-![](img/9e7c5e501b64fef97ba9698170c9c4c2_24.png)
 
-![](img/9e7c5e501b64fef97ba9698170c9c4c2_26.png)
 
-![](img/9e7c5e501b64fef97ba9698170c9c4c2_28.png)
 
-![](img/9e7c5e501b64fef97ba9698170c9c4c2_30.png)
 
-![](img/9e7c5e501b64fef97ba9698170c9c4c2_32.png)
 
-![](img/9e7c5e501b64fef97ba9698170c9c4c2_34.png)
 
-![](img/9e7c5e501b64fef97ba9698170c9c4c2_35.png)
 
-![](img/9e7c5e501b64fef97ba9698170c9c4c2_37.png)
 
 在本节课中，我们将学习两种非常简单但应用广泛的数据结构：栈和队列。我们还将探讨如何分析这些数据结构中某些操作的平均时间复杂度，即摊还分析。
 
-![](img/9e7c5e501b64fef97ba9698170c9c4c2_39.png)
 
 ![](img/9e7c5e501b64fef97ba9698170c9c4c2_41.png)
 

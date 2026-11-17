@@ -2,7 +2,6 @@ UNIX高级编程：P52：探索 `/usr/share/doc` 文档目录 📚
 
 在本节课中，我们将一起探索 NetBSD 操作系统 `/usr/share/doc` 目录下的历史文档资源。这些文档包含了大量经典的 Unix 研究论文和补充资料，尽管年代久远，但其核心概念至今依然适用。
 
-![](img/5cc8b667f1156dbb7862fc2bfeb77209_1.png)
 
 ---
 
@@ -28,11 +27,9 @@ more /usr/share/doc/papers/ffs.ascii
 
 你会发现许多作者的名字都非常熟悉。例如，这里有一篇关于密码安全的论文，作者是 Ken Thompson 和 Robert Morris Sr.。后者后来成为了美国国家安全局的首席科学家，而他的儿子 Robert Tappan Morris 则发布了互联网上第一个计算机蠕虫病毒——莫里斯蠕虫。
 
-![](img/5cc8b667f1156dbb7862fc2bfeb77209_3.png)
 
 ---
 
-![](img/5cc8b667f1156dbb7862fc2bfeb77209_5.png)
 
 在文档目录中，我们还能找到 Stephen Bourne 撰写的《Unix Shell 介绍》。Stephen Bourne 正是 **Bourne Shell** 的作者。这份文档涵盖了 Shell 的所有实用功能，包括输入输出重定向、管道和过滤器等核心概念。
 
@@ -40,7 +37,6 @@ more /usr/share/doc/papers/ffs.ascii
 `command1 | command2`
 这表示将 `command1` 的输出作为 `command2` 的输入。
 
-![](img/5cc8b667f1156dbb7862fc2bfeb77209_7.png)
 
 此外，目录中还有 VI 编辑器的参考手册，以及经典的 **BSD IPC 教程**。这些教程详细讨论了我们已覆盖和即将在后续视频中讲解的进程间通信内容。这两份文档也可以从我们的课程网站以 PDF 格式获取。
 
@@ -54,11 +50,9 @@ more /usr/share/doc/papers/ffs.ascii
 
 同时，还有一份由 VI 的创作者 Bill Joy 编写的更详细的教程。所有这些文档都位于 `/usr/share/doc` 目录中。由于我们拥有操作系统的源代码，因此也能查找到这些文档的来源。`README` 文件列出了所有文档的位置，并让你了解还有哪些其他文档可用，但同时也指出部分历史文档可能缺失。
 
-![](img/5cc8b667f1156dbb7862fc2bfeb77209_9.png)
 
 ---
 
-![](img/5cc8b667f1156dbb7862fc2bfeb77209_10.png)
 
 那么，为何不亲自花点时间探索一下这个目录呢？里面包含了大量有用的信息，你会发现其中很多内容特别适用于我们的课程。
 

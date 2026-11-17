@@ -8,7 +8,6 @@
 
 ## 从静态函数回到对象
 
-![](img/97221e766c222cd97bf1e14d0769de1c_1.png)
 
 我们面临的问题是，当硬件中断发生时，CPU会从C++世界跳转到汇编代码，最终进入一个静态的C++处理函数。为了利用面向对象的特性，我们需要从这个静态函数回到`InterruptManager`对象实例中，以便访问与PIC通信的端口。
 
@@ -48,7 +47,6 @@ InterruptManager::InterruptManager(...) {
 }
 ```
 
-![](img/97221e766c222cd97bf1e14d0769de1c_12.png)
 
 现在，在汇编代码调用的静态处理函数`HandleInterrupt`中，我们可以通过这个静态指针调用对象实例的`DoHandleInterrupt`方法。
 
@@ -70,11 +68,9 @@ extern "C" void HandleInterrupt(...) {
 
 ![](img/97221e766c222cd97bf1e14d0769de1c_20.png)
 
-![](img/97221e766c222cd97bf1e14d0769de1c_22.png)
 
 ## 向PIC发送中断结束信号
 
-![](img/97221e766c222cd97bf1e14d0769de1c_24.png)
 
 在`DoHandleInterrupt`方法中，我们现在可以向PIC发送中断处理完成的确认信号（EOI - End Of Interrupt）。这是通过向PIC的命令端口（主PIC为0x20，从PIC为0xA0）写入特定值（0x20）来实现的。
 
@@ -95,7 +91,6 @@ void InterruptManager::DoHandleInterrupt(...) {
 
 ![](img/97221e766c222cd97bf1e14d0769de1c_26.png)
 
-![](img/97221e766c222cd97bf1e14d0769de1c_28.png)
 
 ![](img/97221e766c222cd97bf1e14d0769de1c_29.png)
 
@@ -111,7 +106,6 @@ void InterruptManager::DoHandleInterrupt(...) {
 
 ## 创建中断处理器基类
 
-![](img/97221e766c222cd97bf1e14d0769de1c_37.png)
 
 为了以面向对象的方式处理不同的硬件中断（如键盘、鼠标），我们创建一个`InterruptHandler`基类。每个具体的驱动程序（如键盘驱动）都将继承自这个类。
 
@@ -130,9 +124,7 @@ public:
 };
 ```
 
-![](img/97221e766c222cd97bf1e14d0769de1c_39.png)
 
-![](img/97221e766c222cd97bf1e14d0769de1c_41.png)
 
 `InterruptManager`类需要维护一个`InterruptHandler`指针数组。在构造函数中，`InterruptHandler`将自己注册到管理器的这个数组中。在`DoHandleInterrupt`方法中，管理器会查找并调用对应中断号的处理器的`HandleInterrupt`方法。
 
@@ -198,9 +190,7 @@ KeyboardDriver::KeyboardDriver(InterruptManager* manager)
 
 ![](img/97221e766c222cd97bf1e14d0769de1c_63.png)
 
-![](img/97221e766c222cd97bf1e14d0769de1c_65.png)
 
-![](img/97221e766c222cd97bf1e14d0769de1c_67.png)
 
 ```cpp
 uint32_t KeyboardDriver::HandleInterrupt(uint32_t esp) {
@@ -229,13 +219,11 @@ uint32_t KeyboardDriver::HandleInterrupt(uint32_t esp) {
 
 ![](img/97221e766c222cd97bf1e14d0769de1c_71.png)
 
-![](img/97221e766c222cd97bf1e14d0769de1c_73.png)
 
 ![](img/97221e766c222cd97bf1e14d0769de1c_75.png)
 
 **请注意**：从键盘读取的原始扫描码与物理按键对应，而不是字符。不同布局的键盘（如美式、德式）对同一扫描码的解释不同。因此，你需要根据你的键盘布局创建一个完整的扫描码到字符的映射表。
 
-![](img/97221e766c222cd97bf1e14d0769de1c_76.png)
 
 ![](img/97221e766c222cd97bf1e14d0769de1c_78.png)
 

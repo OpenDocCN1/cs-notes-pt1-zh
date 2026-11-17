@@ -20,11 +20,9 @@ const result = <p>Hello world</p>;
 
 ## 嵌入表达式
 
-![](img/c3ce7792f7c3515f58a1ff2ceb3bf975_1.png)
 
 现在，让我们探索JSX的另一个重要特性：**嵌入表达式**。
 
-![](img/c3ce7792f7c3515f58a1ff2ceb3bf975_3.png)
 
 嵌入表达式允许开发者将JavaScript变量的值插入到最终React元素的HTML中。表达式被包裹在花括号`{}`中。
 
@@ -54,13 +52,10 @@ const element = <h1>Hello, {formatName(user.firstName, user.lastName)}!</h1>;
 
 与之前的例子一样，函数为JavaScript变量生成的值将被输出到HTML中。
 
-![](img/c3ce7792f7c3515f58a1ff2ceb3bf975_5.png)
 
-![](img/c3ce7792f7c3515f58a1ff2ceb3bf975_6.png)
 
 ### 3. 在HTML属性中使用表达式
 
-![](img/c3ce7792f7c3515f58a1ff2ceb3bf975_7.png)
 
 表达式同样可以用于HTML属性。这在需要动态插入内容时非常有用，例如插入个人资料图片的地址。
 

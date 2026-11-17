@@ -15,11 +15,9 @@
 *   例如，提交前（pre-commit）、更新后（post-update）等时机的脚本示例。
 *   默认的提交信息模板。
 
-![](img/f41be75639a95822edf2cb78cc4b065a_1.png)
 
 ## 创建自定义模板目录
 
-![](img/f41be75639a95822edf2cb78cc4b065a_3.png)
 
 我们需要创建一个自定义的模板目录。这个目录通常是隐藏的。
 
@@ -56,11 +54,9 @@ mkdir hooks info
 
 ## 配置Git使用自定义模板
 
-![](img/f41be75639a95822edf2cb78cc4b065a_5.png)
 
 创建好模板目录和脚本后，需要将其配置为Git的全局默认模板。
 
-![](img/f41be75639a95822edf2cb78cc4b065a_7.png)
 
 ```bash
 git config --global init.templatedir '~/.my-git-template'
@@ -94,9 +90,7 @@ git config --global init.templatedir '~/.my-git-template'
     ```
     使用 `git log` 查看提交记录，确认提交信息来自我们的模板。
 
-![](img/f41be75639a95822edf2cb78cc4b065a_9.png)
 
-![](img/f41be75639a95822edf2cb78cc4b065a_10.png)
 
 ## 总结
 

@@ -1,28 +1,20 @@
 # 002：Lambda表达式与方法引用
 
-![](img/9fff66dcfa89fcd1a18f28dd0e3cbd16_0.png)
 
-![](img/9fff66dcfa89fcd1a18f28dd0e3cbd16_2.png)
 
-![](img/9fff66dcfa89fcd1a18f28dd0e3cbd16_3.png)
 
 在本节课中，我们将继续学习Java 8的Lambda表达式，并深入了解方法引用这一简化Lambda表达式的强大工具。我们将通过多个实例，学习如何将Lambda表达式应用于集合迭代，以及如何使用四种不同类型的方法引用来编写更简洁的代码。
 
-![](img/9fff66dcfa89fcd1a18f28dd0e3cbd16_5.png)
 
-![](img/9fff66dcfa89fcd1a18f28dd0e3cbd16_7.png)
 
 ## 使用Lambda表达式迭代集合
 
 上一节我们介绍了Lambda表达式的基本语法，本节中我们来看看如何将其应用于集合的迭代操作。
 
-![](img/9fff66dcfa89fcd1a18f28dd0e3cbd16_9.png)
 
-![](img/9fff66dcfa89fcd1a18f28dd0e3cbd16_11.png)
 
 以下是一个使用`forEach`方法和Lambda表达式遍历列表的示例：
 
-![](img/9fff66dcfa89fcd1a18f28dd0e3cbd16_13.png)
 
 ```java
 import java.util.*;
@@ -52,19 +44,14 @@ Java 8提供了四种主要的方法引用类型。
 
 ## 方法引用类型一：引用特定对象的实例方法
 
-![](img/9fff66dcfa89fcd1a18f28dd0e3cbd16_15.png)
 
-![](img/9fff66dcfa89fcd1a18f28dd0e3cbd16_17.png)
 
 第一种类型是引用特定对象的实例方法，格式为 `对象::实例方法名`。
 
-![](img/9fff66dcfa89fcd1a18f28dd0e3cbd16_19.png)
 
-![](img/9fff66dcfa89fcd1a18f28dd0e3cbd16_21.png)
 
 以下是实现此功能的步骤：
 
-![](img/9fff66dcfa89fcd1a18f28dd0e3cbd16_23.png)
 
 1.  定义一个函数式接口。
 2.  创建一个包含目标实例方法的类。
@@ -72,14 +59,10 @@ Java 8提供了四种主要的方法引用类型。
 4.  使用方法引用将该对象的方法赋值给接口引用。
 5.  通过接口引用调用方法。
 
-![](img/9fff66dcfa89fcd1a18f28dd0e3cbd16_25.png)
 
 
-![](img/9fff66dcfa89fcd1a18f28dd0e3cbd16_27.png)
 
-![](img/9fff66dcfa89fcd1a18f28dd0e3cbd16_28.png)
 
-![](img/9fff66dcfa89fcd1a18f28dd0e3cbd16_29.png)
 
 ```java
 // 1. 定义函数式接口
@@ -106,9 +89,7 @@ public class MethodRefExample1 {
 }
 ```
 
-![](img/9fff66dcfa89fcd1a18f28dd0e3cbd16_31.png)
 
-![](img/9fff66dcfa89fcd1a18f28dd0e3cbd16_33.png)
 
 ## 方法引用类型二：引用类的静态方法
 
@@ -120,13 +101,10 @@ public class MethodRefExample1 {
 2.  使用函数式接口（如`BiFunction`）来引用该静态方法。
 3.  通过接口的`apply`方法传入参数并获取结果。
 
-![](img/9fff66dcfa89fcd1a18f28dd0e3cbd16_35.png)
 
 
-![](img/9fff66dcfa89fcd1a18f28dd0e3cbd16_37.png)
 
 
-![](img/9fff66dcfa89fcd1a18f28dd0e3cbd16_39.png)
 
 ```java
 import java.util.function.BiFunction;
@@ -148,29 +126,22 @@ public class MethodRefExample2 {
 }
 ```
 
-![](img/9fff66dcfa89fcd1a18f28dd0e3cbd16_41.png)
 
 ## 方法引用类型三：引用特定类型的任意对象的实例方法
 
-![](img/9fff66dcfa89fcd1a18f28dd0e3cbd16_43.png)
 
-![](img/9fff66dcfa89fcd1a18f28dd0e3cbd16_44.png)
 
 第三种类型是引用特定类型的任意对象的实例方法，格式为 `类名::实例方法名`。这在处理集合排序等操作时非常有用。
 
-![](img/9fff66dcfa89fcd1a18f28dd0e3cbd16_46.png)
 
 以下是实现此功能的步骤：
 
-![](img/9fff66dcfa89fcd1a18f28dd0e3cbd16_48.png)
 
 1.  创建一个字符串数组。
 2.  使用`Arrays.sort`方法并传入`String::compareToIgnoreCase`方法引用进行不区分大小写的排序。
 3.  遍历并打印排序后的数组。
 
-![](img/9fff66dcfa89fcd1a18f28dd0e3cbd16_50.png)
 
-![](img/9fff66dcfa89fcd1a18f28dd0e3cbd16_52.png)
 
 ```java
 import java.util.Arrays;
@@ -201,12 +172,9 @@ public class MethodRefExample3 {
 4.  通过接口引用调用方法，从而触发构造函数。
 
 
-![](img/9fff66dcfa89fcd1a18f28dd0e3cbd16_54.png)
-
-![](img/9fff66dcfa89fcd1a18f28dd0e3cbd16_55.png)
 
 
-![](img/9fff66dcfa89fcd1a18f28dd0e3cbd16_57.png)
+
 
 ```java
 // 1. 定义函数式接口
@@ -231,7 +199,6 @@ public class MethodRefExample4 {
 }
 ```
 
-![](img/9fff66dcfa89fcd1a18f28dd0e3cbd16_59.png)
 
 ## 总结
 

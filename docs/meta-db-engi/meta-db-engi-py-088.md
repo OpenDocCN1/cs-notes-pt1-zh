@@ -8,25 +8,21 @@
 
 上一节我们介绍了连接池的基本概念，本节中我们来看看如何具体构建一个连接池。
 
-![](img/112589b4502bdf9ed744380bfdddc8f8_1.png)
 
 ## 导入连接池模块
 
 `MySQLConnectionPool`模块位于`mysql.connector.pooling`目录中。你可以使用`import`语法和`from`关键字将其导入工作环境，以访问其功能。
 
-![](img/112589b4502bdf9ed744380bfdddc8f8_3.png)
 
 ```python
 from mysql.connector.pooling import MySQLConnectionPool
 ```
 
-![](img/112589b4502bdf9ed744380bfdddc8f8_5.png)
 
 这段代码指示Python访问子目录并返回`MySQLConnectionPool`库。
 
 ## 连接池模块的功能与属性
 
-![](img/112589b4502bdf9ed744380bfdddc8f8_7.png)
 
 `MySQLConnectionPool`模块包含许多有用的函数和属性。以下是其中几个核心概念：
 
@@ -42,7 +38,6 @@ from mysql.connector.pooling import MySQLConnectionPool
 
 ## 为Little Lemon构建连接池
 
-![](img/112589b4502bdf9ed744380bfdddc8f8_9.png)
 
 现在你已经熟悉了连接池模块，让我们来帮助Little Lemon公司构建一个连接池。
 
@@ -65,7 +60,6 @@ pool = MySQLConnectionPool(
 )
 ```
 
-![](img/112589b4502bdf9ed744380bfdddc8f8_11.png)
 
 所有这些代码都作为参数传递给`MySQLConnectionPool`模块并赋值给`pool`变量。
 
@@ -75,7 +69,6 @@ pool = MySQLConnectionPool(
 users = ["Anna", "Brian", "Clara", "David"]
 ```
 
-![](img/112589b4502bdf9ed744380bfdddc8f8_13.png)
 
 用Little Lemon宾客名单的成员填充此列表。
 
@@ -85,9 +78,7 @@ users = ["Anna", "Brian", "Clara", "David"]
 sql_select = "SELECT * FROM Bookings WHERE BookingID = %s"
 ```
 
-![](img/112589b4502bdf9ed744380bfdddc8f8_15.png)
 
-![](img/112589b4502bdf9ed744380bfdddc8f8_16.png)
 
 现在，你需要使用`for`循环。可以将其与`range`函数结合使用。`range`函数与`pool_size`属性一起使用。
 
@@ -95,15 +86,12 @@ sql_select = "SELECT * FROM Bookings WHERE BookingID = %s"
 for i in range(pool.pool_size):
 ```
 
-![](img/112589b4502bdf9ed744380bfdddc8f8_18.png)
 
 这意味着无论池有多大，循环总是会运行到结束。
 
-![](img/112589b4502bdf9ed744380bfdddc8f8_20.png)
 
 下一步是设置应用程序的连接。编写一个语句，检查池中是否成功建立了连接。此语句还可以避免代码中出现任何错误。
 
-![](img/112589b4502bdf9ed744380bfdddc8f8_22.png)
 
 ```python
     connection = pool.get_connection()
@@ -112,7 +100,6 @@ for i in range(pool.pool_size):
 
 然后，编写一个语句，从现有的活动池连接实例化一个新游标。此操作必须为与池成功建立的每个新活动连接执行。
 
-![](img/112589b4502bdf9ed744380bfdddc8f8_24.png)
 
 ```python
         cursor = connection.cursor()
@@ -140,7 +127,6 @@ for i in range(pool.pool_size):
 
 你还可以创建一个`else`语句，如果找不到活动连接，则在屏幕上生成错误消息。
 
-![](img/112589b4502bdf9ed744380bfdddc8f8_26.png)
 
 ```python
     else:

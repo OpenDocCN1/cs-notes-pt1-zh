@@ -1,6 +1,5 @@
 # 020：Git介绍 🚀
 
-![](img/57fd9561c788bd5cfd2ab0486bbfa2b1_1.png)
 
 在本节课中，我们将要学习一个非常重要的主题：Git。Git是一个完全免费的开源版本控制系统，被广泛用于管理各种类型的项目，无论是网站、程序还是应用程序的开发。
 
@@ -24,7 +23,6 @@ Git最初由Linux内核的创造者Linus Torvalds开发，旨在帮助Linux内�
 
 以下是Git中的四种核心对象类型：
 
-![](img/57fd9561c788bd5cfd2ab0486bbfa2b1_3.png)
 
 *   **Blob**： 代表一个文件的数据内容。可以理解为文件内容的二进制大对象。
 *   **Tree**： 代表一个目录。它记录了目录结构，并包含指向其下Blob（文件）和其他Tree（子目录）的指针。
@@ -51,9 +49,7 @@ Git拥有非常详尽和优秀的官方文档。对于希望深入学习Git的�
 
 **官方网址：** [https://git-scm.com/](https://git-scm.com/)
 
-![](img/57fd9561c788bd5cfd2ab0486bbfa2b1_5.png)
 
-![](img/57fd9561c788bd5cfd2ab0486bbfa2b1_7.png)
 
 ## 总结
 

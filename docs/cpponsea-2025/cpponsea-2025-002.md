@@ -1,6 +1,5 @@
 # 002：不要被 C++ 重载集淹没
 
-![](img/850194d5ca28e415c2cdfff332ac5be1_1.png)
 
 ![](img/850194d5ca28e415c2cdfff332ac5be1_3.png)
 
@@ -10,7 +9,6 @@
 
 在本节课中，我们将要学习 C++ 中一个强大但有时令人困惑的特性：函数重载集。我们将从基础概念开始，逐步深入到重载解析的规则、名称查找、以及一些高级技巧和常见陷阱。通过本教程，你将理解什么是重载集，如何找到它们，以及编译器如何选择调用哪个函数。
 
-![](img/850194d5ca28e415c2cdfff332ac5be1_8.png)
 
 ![](img/850194d5ca28e415c2cdfff332ac5be1_9.png)
 
@@ -39,15 +37,11 @@ long double log(long double);
 template <typename T> double log(T); // 用于整数类型，返回 double
 ```
 
-![](img/850194d5ca28e415c2cdfff332ac5be1_17.png)
 
 现在，你只需要调用 `std::log`，编译器会根据你传入的参数类型自动选择正确的函数版本。这就是重载集的便利之处。
 
-![](img/850194d5ca28e415c2cdfff332ac5be1_19.png)
 
-![](img/850194d5ca28e415c2cdfff332ac5be1_20.png)
 
-![](img/850194d5ca28e415c2cdfff332ac5be1_21.png)
 
 ## 重载的规则与限制 📏
 
@@ -59,9 +53,7 @@ template <typename T> double log(T); // 用于整数类型，返回 double
 
 首先，重载函数必须通过参数类型（数量或类型）来区分。**仅返回值类型不同的函数不能重载**。这是因为在底层，函数签名（用于链接的名称）通常不包含返回类型信息。
 
-![](img/850194d5ca28e415c2cdfff332ac5be1_27.png)
 
-![](img/850194d5ca28e415c2cdfff332ac5be1_28.png)
 
 ```cpp
 // 错误：仅返回值不同，无法重载
@@ -72,9 +64,7 @@ long double fromString(const std::string&);
 
 ![](img/850194d5ca28e415c2cdfff332ac5be1_30.png)
 
-![](img/850194d5ca28e415c2cdfff332ac5be1_31.png)
 
-![](img/850194d5ca28e415c2cdfff332ac5be1_32.png)
 
 但是，有一个有趣的例外：函数模板。模板允许你通过模板参数来指定返回类型，因为模板本身是一种特殊的“配方”，用于生成具体的函数。
 
@@ -92,7 +82,6 @@ std::vector<int> v3{1,2,3,4,5}; // 调用初始化列表构造函数
 
 注意 `v2(5)` 和 `v3{...}` 的区别。使用圆括号 `()` 调用的是填充构造函数，而使用花括号 `{}` 调用的是初始化列表构造函数。当使用空花括号 `{}` 时，会优先调用默认构造函数。我们稍后在讨论重载解析优先级时会再次看到这一点。
 
-![](img/850194d5ca28e415c2cdfff332ac5be1_38.png)
 
 ![](img/850194d5ca28e415c2cdfff332ac5be1_40.png)
 
@@ -133,19 +122,14 @@ foo(static_cast<long>(x)); // 明确选择 foo(long)
 
 ![](img/850194d5ca28e415c2cdfff332ac5be1_49.png)
 
-![](img/850194d5ca28e415c2cdfff332ac5be1_50.png)
 
 如果 `bar` 在另一个命名空间 `C` 中，而 `C` 中没有 `foo`，那么名称查找会向上层命名空间 `A` 搜索，并找到 `foo(int)`，调用就不会有歧义。
 
-![](img/850194d5ca28e415c2cdfff332ac5be1_52.png)
 
-![](img/850194d5ca28e415c2cdfff332ac5be1_53.png)
 
-![](img/850194d5ca28e415c2cdfff332ac5be1_55.png)
 
 **重载集本身不是一个可以直接操作的类型**。例如，你不能直接获取一个重载集的类型信息：
 
-![](img/850194d5ca28e415c2cdfff332ac5be1_57.png)
 
 ```cpp
 // 错误：无法解析对重载函数的引用
@@ -154,23 +138,18 @@ auto t = typeid(A::B::foo);
 auto t = typeid(static_cast<void(*)(long)>(A::B::foo));
 ```
 
-![](img/850194d5ca28e415c2cdfff332ac5be1_59.png)
 
-![](img/850194d5ca28e415c2cdfff332ac5be1_61.png)
 
 ## 名称查找：如何找到重载集？🔍
 
 在编译器决定调用哪个函数之前，它必须先找到候选函数集，即重载集。这个过程称为“名称查找”。
 
-![](img/850194d5ca28e415c2cdfff332ac5be1_63.png)
 
-![](img/850194d5ca28e415c2cdfff332ac5be1_65.png)
 
 基本规则是：从调用点所在的当前作用域开始，逐级向外层作用域搜索，直到找到该名称的声明。**一旦在某个作用域找到了该名称，搜索就会停止**，并将该作用域内所有该名称的函数（以及通过参数依赖查找找到的函数，见下文）加入重载集。
 
 对于类成员函数的调用（如 `obj.foo()` 或 `ptr->foo()`），搜索范围限定在该类及其基类中。
 
-![](img/850194d5ca28e415c2cdfff332ac5be1_67.png)
 
 ![](img/850194d5ca28e415c2cdfff332ac5be1_68.png)
 
@@ -182,9 +161,7 @@ ADL 是 C++ 中一个强大且有时令人惊讶的特性。对于未限定的�
 
 ![](img/850194d5ca28e415c2cdfff332ac5be1_72.png)
 
-![](img/850194d5ca28e415c2cdfff332ac5be1_74.png)
 
-![](img/850194d5ca28e415c2cdfff332ac5be1_76.png)
 
 ```cpp
 namespace Other {
@@ -203,13 +180,10 @@ namespace A {
 }
 ```
 
-![](img/850194d5ca28e415c2cdfff332ac5be1_78.png)
 
-![](img/850194d5ca28e415c2cdfff332ac5be1_80.png)
 
 在 `bar` 中调用 `foo(s)`，首先在 `namespace B` 中找到 `foo(char)` 和 `foo(long)`。然后，因为参数 `s` 的类型 `Other::S` 属于 `Other` 命名空间，ADL 会将该命名空间中的 `foo(Other::S)` 也加入重载集。最终，`foo(Other::S)` 是精确匹配，会被调用。
 
-![](img/850194d5ca28e415c2cdfff332ac5be1_81.png)
 
 ![](img/850194d5ca28e415c2cdfff332ac5be1_83.png)
 
@@ -219,7 +193,6 @@ ADL 是实现**运算符重载**和**泛型编程**的关键。例如，`std::co
 
 ![](img/850194d5ca28e415c2cdfff332ac5be1_86.png)
 
-![](img/850194d5ca28e415c2cdfff332ac5be1_88.png)
 
 ![](img/850194d5ca28e415c2cdfff332ac5be1_89.png)
 
@@ -240,22 +213,16 @@ ADL 是实现**运算符重载**和**泛型编程**的关键。例如，`std::co
 
 让我们通过一个例子来理解：
 
-![](img/850194d5ca28e415c2cdfff332ac5be1_95.png)
 
-![](img/850194d5ca28e415c2cdfff332ac5be1_97.png)
 
-![](img/850194d5ca28e415c2cdfff332ac5be1_98.png)
 
-![](img/850194d5ca28e415c2cdfff332ac5be1_99.png)
 
 
 ![](img/850194d5ca28e415c2cdfff332ac5be1_101.png)
 
 ![](img/850194d5ca28e415c2cdfff332ac5be1_103.png)
 
-![](img/850194d5ca28e415c2cdfff332ac5be1_105.png)
 
-![](img/850194d5ca28e415c2cdfff332ac5be1_107.png)
 
 ```cpp
 void select(int) {}      // 1. 精确匹配 int
@@ -275,7 +242,6 @@ int main() {
 }
 ```
 
-![](img/850194d5ca28e415c2cdfff332ac5be1_109.png)
 
 ![](img/850194d5ca28e415c2cdfff332ac5be1_110.png)
 
@@ -289,19 +255,14 @@ int main() {
 *   如果一个函数接受 `std::initializer_list` 参数，并且调用时使用了花括号，那么只要列表中的元素类型可以转换，这个函数将**优先于其他所有函数**被选择。
 *   对于构造函数，使用空花括号 `{}` 会**优先调用默认构造函数**，而不是接受 `std::initializer_list` 的构造函数。
 
-![](img/850194d5ca28e415c2cdfff332ac5be1_116.png)
 
 这解释了为什么 `std::vector<int> v{5}` 创建一个包含单个元素 `5` 的向量，而 `std::vector<int> v(5)` 创建五个值为 `0` 的元素。
 
-![](img/850194d5ca28e415c2cdfff332ac5be1_118.png)
 
-![](img/850194d5ca28e415c2cdfff332ac5be1_120.png)
 
-![](img/850194d5ca28e415c2cdfff332ac5be1_122.png)
 
 ## 当重载遇到模板 🌀
 
-![](img/850194d5ca28e415c2cdfff332ac5be1_124.png)
 
 模板函数也参与重载解析，但规则更复杂一些。核心思想是：**函数模板是生成重载集的“配方”**。
 
@@ -321,11 +282,9 @@ int main() {
 
 ![](img/850194d5ca28e415c2cdfff332ac5be1_134.png)
 
-![](img/850194d5ca28e415c2cdfff332ac5be1_135.png)
 
 **一个重要规则**：在重载解析排名相同时，非模板函数优先于模板特化。
 
-![](img/850194d5ca28e415c2cdfff332ac5be1_137.png)
 
 考虑以下例子：
 
@@ -334,7 +293,6 @@ int main() {
 ![](img/850194d5ca28e415c2cdfff332ac5be1_141.png)
 
 
-![](img/850194d5ca28e415c2cdfff332ac5be1_143.png)
 
 ![](img/850194d5ca28e415c2cdfff332ac5be1_145.png)
 
@@ -378,9 +336,7 @@ std::optional<int> o = MaybeInt{}; // 我们期望调用 operator optional<int>(
 
 在继承体系中，派生类中定义的函数会**隐藏**基类中同名的函数（即使参数列表不同），而不是重载它们。
 
-![](img/850194d5ca28e415c2cdfff332ac5be1_149.png)
 
-![](img/850194d5ca28e415c2cdfff332ac5be1_151.png)
 
 ![](img/850194d5ca28e415c2cdfff332ac5be1_153.png)
 
@@ -396,15 +352,11 @@ d.foo(42); // 调用 Derived::foo(double)，int 被转换为 double
 // d.foo(42); 如果想调用基类的，需要显式指定：d.Base::foo(42);
 ```
 
-![](img/850194d5ca28e415c2cdfff332ac5be1_155.png)
 
-![](img/850194d5ca28e415c2cdfff332ac5be1_157.png)
 
-![](img/850194d5ca28e415c2cdfff332ac5be1_159.png)
 
 要引入基类的重载集，需要在派生类中使用 `using` 声明：
 
-![](img/850194d5ca28e415c2cdfff332ac5be1_161.png)
 
 ```cpp
 struct Derived2 : Base {
@@ -415,9 +367,7 @@ Derived2 d2;
 d2.foo(42); // 现在重载集包含 foo(int) 和 foo(double)，调用 foo(int)
 ```
 
-![](img/850194d5ca28e415c2cdfff332ac5be1_163.png)
 
-![](img/850194d5ca28e415c2cdfff332ac5be1_165.png)
 
 ### const 和引用限定符
 
@@ -436,11 +386,8 @@ public:
 };
 ```
 
-![](img/850194d5ca28e415c2cdfff332ac5be1_167.png)
 
-![](img/850194d5ca28e415c2cdfff332ac5be1_168.png)
 
-![](img/850194d5ca28e415c2cdfff332ac5be1_170.png)
 
 ## 实用技巧与总结 🛠️
 
@@ -448,7 +395,6 @@ public:
 
 ![](img/850194d5ca28e415c2cdfff332ac5be1_174.png)
 
-![](img/850194d5ca28e415c2cdfff332ac5be1_176.png)
 
 ![](img/850194d5ca28e415c2cdfff332ac5be1_178.png)
 
@@ -468,11 +414,9 @@ public:
 
 ![](img/850194d5ca28e415c2cdfff332ac5be1_183.png)
 
-![](img/850194d5ca28e415c2cdfff332ac5be1_185.png)
 
 ---
 
-![](img/850194d5ca28e415c2cdfff332ac5be1_187.png)
 
 本节课中我们一起学习了 C++ 重载集的方方面面。我们从基本概念出发，探讨了名称查找（包括 ADL）如何构建重载集，以及重载解析的详细规则如何选出最佳函数。我们还深入研究了模板、继承带来的复杂性，并分享了一些避免陷阱的实用技巧。
 

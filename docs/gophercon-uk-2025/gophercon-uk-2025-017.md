@@ -2,7 +2,6 @@
 
 ![](img/c68ad20435b5d7d3cdcc2df142b9605b_0.png)
 
-![](img/c68ad20435b5d7d3cdcc2df142b9605b_2.png)
 
 ## 概述
 

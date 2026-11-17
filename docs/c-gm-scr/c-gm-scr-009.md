@@ -6,11 +6,9 @@
 
 ![](img/886a749eaaa9f80910ebb04a9f92609c_4.png)
 
-![](img/886a749eaaa9f80910ebb04a9f92609c_5.png)
 
 ![](img/886a749eaaa9f80910ebb04a9f92609c_7.png)
 
-![](img/886a749eaaa9f80910ebb04a9f92609c_9.png)
 
 ![](img/886a749eaaa9f80910ebb04a9f92609c_11.png)
 
@@ -29,11 +27,8 @@
 
 ---
 
-![](img/886a749eaaa9f80910ebb04a9f92609c_23.png)
 
-![](img/886a749eaaa9f80910ebb04a9f92609c_25.png)
 
-![](img/886a749eaaa9f80910ebb04a9f92609c_27.png)
 
 ![](img/886a749eaaa9f80910ebb04a9f92609c_29.png)
 
@@ -44,9 +39,7 @@
 ## 回顾与目标设定
 上一节我们专注于游戏玩法，改进了场地、动画并添加了粒子系统。本节中，我们将暂时后退一步，专注于增强游戏引擎的图形功能，使其更加健壮，以便实现更酷的效果。
 
-![](img/886a749eaaa9f80910ebb04a9f92609c_35.png)
 
-![](img/886a749eaaa9f80910ebb04a9f92609c_37.png)
 
 ![](img/886a749eaaa9f80910ebb04a9f92609c_39.png)
 
@@ -78,9 +71,7 @@
 
 ![](img/886a749eaaa9f80910ebb04a9f92609c_64.png)
 
-![](img/886a749eaaa9f80910ebb04a9f92609c_66.png)
 
-![](img/886a749eaaa9f80910ebb04a9f92609c_68.png)
 
 ![](img/886a749eaaa9f80910ebb04a9f92609c_70.png)
 
@@ -108,7 +99,6 @@
 
 ![](img/886a749eaaa9f80910ebb04a9f92609c_92.png)
 
-![](img/886a749eaaa9f80910ebb04a9f92609c_94.png)
 
 ![](img/886a749eaaa9f80910ebb04a9f92609c_96.png)
 
@@ -123,25 +113,19 @@
 
 ![](img/886a749eaaa9f80910ebb04a9f92609c_104.png)
 
-![](img/886a749eaaa9f80910ebb04a9f92609c_106.png)
 
 ![](img/886a749eaaa9f80910ebb04a9f92609c_108.png)
 
-![](img/886a749eaaa9f80910ebb04a9f92609c_110.png)
 
-![](img/886a749eaaa9f80910ebb04a9f92609c_112.png)
 
 ![](img/886a749eaaa9f80910ebb04a9f92609c_114.png)
 
 ![](img/886a749eaaa9f80910ebb04a9f92609c_116.png)
 
-![](img/886a749eaaa9f80910ebb04a9f92609c_118.png)
 
 现在，我们需要添加一个绘制旋转矩形的函数。
 
-![](img/886a749eaaa9f80910ebb04a9f92609c_120.png)
 
-![](img/886a749eaaa9f80910ebb04a9f92609c_122.png)
 
 ![](img/886a749eaaa9f80910ebb04a9f92609c_124.png)
 
@@ -173,14 +157,11 @@
 
 ![](img/886a749eaaa9f80910ebb04a9f92609c_146.png)
 
-![](img/886a749eaaa9f80910ebb04a9f92609c_148.png)
 
-![](img/886a749eaaa9f80910ebb04a9f92609c_150.png)
 
 ## 实现旋转矩形绘制函数
 我们将创建一个名为`draw_rotated_rect`的函数。它的基本思路是接收位置、尺寸、角度和颜色作为参数。
 
-![](img/886a749eaaa9f80910ebb04a9f92609c_152.png)
 
 ![](img/886a749eaaa9f80910ebb04a9f92609c_154.png)
 
@@ -202,11 +183,9 @@
 
 ![](img/886a749eaaa9f80910ebb04a9f92609c_170.png)
 
-![](img/886a749eaaa9f80910ebb04a9f92609c_172.png)
 
 为了旋转这些点，我们需要将其视为矩阵变换。一个2D旋转矩阵定义如下：
 
-![](img/886a749eaaa9f80910ebb04a9f92609c_174.png)
 
 ![](img/886a749eaaa9f80910ebb04a9f92609c_176.png)
 
@@ -222,7 +201,6 @@
 
 ![](img/886a749eaaa9f80910ebb04a9f92609c_188.png)
 
-![](img/886a749eaaa9f80910ebb04a9f92609c_190.png)
 
 **公式：**
 ```
@@ -230,13 +208,11 @@
 [ sin(θ)   cos(θ) ]
 ```
 
-![](img/886a749eaaa9f80910ebb04a9f92609c_192.png)
 
 ![](img/886a749eaaa9f80910ebb04a9f92609c_194.png)
 
 ![](img/886a749eaaa9f80910ebb04a9f92609c_195.png)
 
-![](img/886a749eaaa9f80910ebb04a9f92609c_197.png)
 
 ![](img/886a749eaaa9f80910ebb04a9f92609c_199.png)
 
@@ -256,13 +232,10 @@
 
 ![](img/886a749eaaa9f80910ebb04a9f92609c_213.png)
 
-![](img/886a749eaaa9f80910ebb04a9f92609c_215.png)
 
-![](img/886a749eaaa9f80910ebb04a9f92609c_217.png)
 
 ![](img/886a749eaaa9f80910ebb04a9f92609c_219.png)
 
-![](img/886a749eaaa9f80910ebb04a9f92609c_221.png)
 
 ![](img/886a749eaaa9f80910ebb04a9f92609c_223.png)
 
@@ -366,9 +339,7 @@ multiply_m2_v2(m2 m, v2 v) {
 
 ![](img/886a749eaaa9f80910ebb04a9f92609c_279.png)
 
-![](img/886a749eaaa9f80910ebb04a9f92609c_281.png)
 
-![](img/886a749eaaa9f80910ebb04a9f92609c_283.png)
 
 ![](img/886a749eaaa9f80910ebb04a9f92609c_285.png)
 
@@ -386,7 +357,6 @@ multiply_m2_v2(m2 m, v2 v) {
 
 ![](img/886a749eaaa9f80910ebb04a9f92609c_299.png)
 
-![](img/886a749eaaa9f80910ebb04a9f92609c_301.png)
 
 ![](img/886a749eaaa9f80910ebb04a9f92609c_303.png)
 
@@ -394,7 +364,6 @@ multiply_m2_v2(m2 m, v2 v) {
 
 ![](img/886a749eaaa9f80910ebb04a9f92609c_307.png)
 
-![](img/886a749eaaa9f80910ebb04a9f92609c_309.png)
 
 ---
 
@@ -416,9 +385,7 @@ multiply_m2_v2(m2 m, v2 v) {
 
 ![](img/886a749eaaa9f80910ebb04a9f92609c_327.png)
 
-![](img/886a749eaaa9f80910ebb04a9f92609c_329.png)
 
-![](img/886a749eaaa9f80910ebb04a9f92609c_331.png)
 
 ## 碰撞检测：点与旋转矩形
 仅仅绘制旋转矩形还不够，我们还需要检测像素点是否在旋转矩形内，以便进行填充绘制。这与轴对齐边界框（AABB）的检测不同，我们需要进行**定向边界框（OBB）**的检测。
@@ -437,21 +404,15 @@ multiply_m2_v2(m2 m, v2 v) {
 
 ![](img/886a749eaaa9f80910ebb04a9f92609c_345.png)
 
-![](img/886a749eaaa9f80910ebb04a9f92609c_347.png)
 
-![](img/886a749eaaa9f80910ebb04a9f92609c_349.png)
 
-![](img/886a749eaaa9f80910ebb04a9f92609c_351.png)
 
 ![](img/886a749eaaa9f80910ebb04a9f92609c_353.png)
 
-![](img/886a749eaaa9f80910ebb04a9f92609c_355.png)
 
 基本思想是：对于矩形的每条边，我们将其视为一个轴。要测试一个点`P`是否在矩形内，我们将点`P`投影到每条边的法线轴（或从矩形中心到顶点的向量）上，并检查投影是否在矩形在该轴上的投影范围内。
 
-![](img/886a749eaaa9f80910ebb04a9f92609c_357.png)
 
-![](img/886a749eaaa9f80910ebb04a9f92609c_359.png)
 
 ![](img/886a749eaaa9f80910ebb04a9f92609c_361.png)
 
@@ -497,7 +458,6 @@ multiply_m2_v2(m2 m, v2 v) {
 4.  将该向量分别投影到两个主轴上。
 5.  检查每个投影值是否在矩形在该轴上的最小和最大投影值之间。如果所有条件都满足，则点在矩形内。
 
-![](img/886a749eaaa9f80910ebb04a9f92609c_396.png)
 
 ![](img/886a749eaaa9f80910ebb04a9f92609c_398.png)
 
@@ -509,11 +469,8 @@ multiply_m2_v2(m2 m, v2 v) {
 
 ![](img/886a749eaaa9f80910ebb04a9f92609c_404.png)
 
-![](img/886a749eaaa9f80910ebb04a9f92609c_406.png)
 
-![](img/886a749eaaa9f80910ebb04a9f92609c_408.png)
 
-![](img/886a749eaaa9f80910ebb04a9f92609c_410.png)
 
 ---
 
@@ -521,13 +478,9 @@ multiply_m2_v2(m2 m, v2 v) {
 
 ![](img/886a749eaaa9f80910ebb04a9f92609c_413.png)
 
-![](img/886a749eaaa9f80910ebb04a9f92609c_415.png)
 
-![](img/886a749eaaa9f80910ebb04a9f92609c_417.png)
 
-![](img/886a749eaaa9f80910ebb04a9f92609c_419.png)
 
-![](img/886a749eaaa9f80910ebb04a9f92609c_421.png)
 
 ![](img/886a749eaaa9f80910ebb04a9f92609c_423.png)
 
@@ -541,11 +494,8 @@ multiply_m2_v2(m2 m, v2 v) {
 
 ![](img/886a749eaaa9f80910ebb04a9f92609c_433.png)
 
-![](img/886a749eaaa9f80910ebb04a9f92609c_435.png)
 
-![](img/886a749eaaa9f80910ebb04a9f92609c_437.png)
 
-![](img/886a749eaaa9f80910ebb04a9f92609c_439.png)
 
 ![](img/886a749eaaa9f80910ebb04a9f92609c_441.png)
 
@@ -606,7 +556,6 @@ multiply_m2_v2(m2 m, v2 v) {
 
 ![](img/886a749eaaa9f80910ebb04a9f92609c_491.png)
 
-![](img/886a749eaaa9f80910ebb04a9f92609c_493.png)
 
 ![](img/886a749eaaa9f80910ebb04a9f92609c_495.png)
 
@@ -618,7 +567,6 @@ multiply_m2_v2(m2 m, v2 v) {
 2.  将这些边界值钳制到屏幕缓冲区范围内。
 3.  只在这个缩小后的矩形区域内循环遍历像素。
 
-![](img/886a749eaaa9f80910ebb04a9f92609c_501.png)
 
 ![](img/886a749eaaa9f80910ebb04a9f92609c_503.png)
 
@@ -726,7 +674,6 @@ for (i32 y = min_y; y <= max_y; ++y) {
 
 ![](img/886a749eaaa9f80910ebb04a9f92609c_577.png)
 
-![](img/886a749eaaa9f80910ebb04a9f92609c_579.png)
 
 ![](img/886a749eaaa9f80910ebb04a9f92609c_580.png)
 
@@ -752,7 +699,6 @@ for (i32 y = min_y; y <= max_y; ++y) {
 
 ![](img/886a749eaaa9f80910ebb04a9f92609c_598.png)
 
-![](img/886a749eaaa9f80910ebb04a9f92609c_600.png)
 
 ![](img/886a749eaaa9f80910ebb04a9f92609c_602.png)
 
@@ -792,7 +738,6 @@ angle = atan2(velocity.y, velocity.x) // 结果在 -π 到 π 弧度之间
 
 整合后，游戏中的粒子效果（如球体轨迹、方块爆炸）变得更加生动和逼真。
 
-![](img/886a749eaaa9f80910ebb04a9f92609c_632.png)
 
 ![](img/886a749eaaa9f80910ebb04a9f92609c_634.png)
 
@@ -826,7 +771,6 @@ angle = atan2(velocity.y, velocity.x) // 结果在 -π 到 π 弧度之间
 
 ![](img/886a749eaaa9f80910ebb04a9f92609c_660.png)
 
-![](img/886a749eaaa9f80910ebb04a9f92609c_662.png)
 
 ![](img/886a749eaaa9f80910ebb04a9f92609c_664.png)
 
@@ -836,7 +780,6 @@ angle = atan2(velocity.y, velocity.x) // 结果在 -π 到 π 弧度之间
 
 ![](img/886a749eaaa9f80910ebb04a9f92609c_669.png)
 
-![](img/886a749eaaa9f80910ebb04a9f92609c_670.png)
 
 ![](img/886a749eaaa9f80910ebb04a9f92609c_672.png)
 
@@ -908,7 +851,6 @@ angle = atan2(velocity.y, velocity.x) // 结果在 -π 到 π 弧度之间
 
 ![](img/886a749eaaa9f80910ebb04a9f92609c_726.png)
 
-![](img/886a749eaaa9f80910ebb04a9f92609c_728.png)
 
 ![](img/886a749eaaa9f80910ebb04a9f92609c_730.png)
 

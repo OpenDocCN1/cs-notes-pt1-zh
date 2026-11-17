@@ -1,6 +1,5 @@
 # 018：释放 Go 工具链
 
-![](img/1f7f31b1bf2a900aefcf60c3fdb8ab4d_0.png)
 
 ![](img/1f7f31b1bf2a900aefcf60c3fdb8ab4d_0.png)
 
@@ -143,6 +142,5 @@ Orchestra 项目已被捐赠给 **OpenTelemetry 社区**。社区正在整合类
 
 核心在于，Go 通过其工具链的灵活性和强大的标准库，提供了一种独特而强大的元编程途径，使得无需语言运行时支持也能实现高级功能，从而在保持语言简洁性的同时，满足了现代软件工程对可观测性、安全性等横切关注点的需求。
 
-![](img/1f7f31b1bf2a900aefcf60c3fdb8ab4d_2.png)
 
 ![](img/1f7f31b1bf2a900aefcf60c3fdb8ab4d_2.png)

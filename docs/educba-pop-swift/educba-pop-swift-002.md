@@ -4,13 +4,10 @@
 
 上一节我们介绍了项目的基本设置，本节中我们来看看如何构建显示水果列表的界面。
 
-![](img/3b2e0bb4a54850114740a3d7f759992b_1.png)
 
 ## 创建项目与界面
 
-![](img/3b2e0bb4a54850114740a3d7f759992b_3.png)
 
-![](img/3b2e0bb4a54850114740a3d7f759992b_4.png)
 
 首先，我们创建一个新的Xcode项目。选择“Single View App”模板，将项目命名为“FavouriteList”。在项目设置中，确保界面选项选择了“Storyboard”，并取消勾选“Use Core Data”、“Include Unit Tests”和“Include UI Tests”。
 
@@ -32,19 +29,14 @@
 
 为了管理这个自定义单元格，我们需要为其创建一个对应的Swift类。
 
-![](img/3b2e0bb4a54850114740a3d7f759992b_6.png)
 
-![](img/3b2e0bb4a54850114740a3d7f759992b_7.png)
 
 ## 创建自定义单元格类
 
-![](img/3b2e0bb4a54850114740a3d7f759992b_9.png)
 
 以下是创建自定义单元格类的步骤：
 
-![](img/3b2e0bb4a54850114740a3d7f759992b_11.png)
 
-![](img/3b2e0bb4a54850114740a3d7f759992b_12.png)
 
 1.  在Xcode中，右键点击项目导航器，选择“New Group”，创建一个名为“Cell Class”的组。
 2.  在该组内，选择“File” -> “New” -> “File…”，创建一个新的Cocoa Touch Class。
@@ -55,32 +47,25 @@
     *   将单元格中的 `UIButton` 拖拽到代码中，创建一个名为 `favoriteButton` 的 `IBOutlet`。
     *   同样为这个按钮创建一个 `IBAction`，命名为 `favoriteButtonAction`。我们稍后将通过这个动作来触发委托。
 
-![](img/3b2e0bb4a54850114740a3d7f759992b_14.png)
 
 连接完成后，我们可以将单元格和按钮的背景色恢复为白色，并清空标签的默认文本。
 
-![](img/3b2e0bb4a54850114740a3d7f759992b_16.png)
 
 ## 配置视图控制器
 
-![](img/3b2e0bb4a54850114740a3d7f759992b_18.png)
 
 现在，我们需要在主视图控制器中配置表格视图。
 
-![](img/3b2e0bb4a54850114740a3d7f759992b_20.png)
 
 1.  首先，在 `ViewController.swift` 中，为故事板中的表格视图创建一个 `IBOutlet`，命名为 `favoriteTableView`。
 2.  接着，我们需要一个数据源来填充表格。在 `ViewController` 类中，定义一个字符串数组 `fruitListArray`，并初始化一些水果名称。
 
-![](img/3b2e0bb4a54850114740a3d7f759992b_22.png)
 
-![](img/3b2e0bb4a54850114740a3d7f759992b_24.png)
 
 ```swift
 var fruitListArray: [String] = ["Apple", "Mango", "Banana", "Cherry", "Grapes"]
 ```
 
-![](img/3b2e0bb4a54850114740a3d7f759992b_26.png)
 
 3.  为了让表格视图显示数据，我们需要让 `ViewController` 遵守 `UITableViewDataSource` 协议。通常我们使用扩展来实现协议，使代码结构更清晰。
 
@@ -123,9 +108,7 @@ override func viewDidLoad() {
 }
 ```
 
-![](img/3b2e0bb4a54850114740a3d7f759992b_28.png)
 
-![](img/3b2e0bb4a54850114740a3d7f759992b_30.png)
 
 ## 添加资源图片
 

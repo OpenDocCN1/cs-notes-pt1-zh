@@ -19,7 +19,6 @@ git branch
 
 执行后，我们可以看到当前的所有分支，例如 `master`、`bug`、`berries` 和 `mellon`。
 
-![](img/ee43dddbee7f02b95a35eab9bb3af7ef_1.png)
 
 ### 使用 `checkout` 切换分支
 
@@ -52,7 +51,6 @@ Git 会提示错误，要求你先提交或贮藏（stash）更改。
 
 为了成功切换，你需要撤销刚才的修改。可以手动编辑文件删除新增行，或者使用 `git checkout -- <文件名>` 来丢弃该文件的更改：
 
-![](img/ee43dddbee7f02b95a35eab9bb3af7ef_3.png)
 
 ```bash
 git checkout -- shopping_list.txt
@@ -62,11 +60,9 @@ git checkout -- shopping_list.txt
 
 在深入 `reset` 之前，了解如何查看更改很重要。`git diff` 命令可以显示工作目录与暂存区（或上一次提交）之间的差异。
 
-![](img/ee43dddbee7f02b95a35eab9bb3af7ef_5.png)
 
 首先，让我们再次修改购物清单，添加“garlic”和“onion”：
 
-![](img/ee43dddbee7f02b95a35eab9bb3af7ef_7.png)
 
 ```bash
 # 添加更改后，运行
@@ -75,17 +71,13 @@ git diff
 
 命令输出会以 `-` 和 `+` 符号高亮显示具体被添加或删除的行，让你清晰看到“onion”被加入了文件。
 
-![](img/ee43dddbee7f02b95a35eab9bb3af7ef_9.png)
 
 另一个有用的命令是 `git diff HEAD`，它可以比较工作目录与最新提交（HEAD）之间的差异。
 
-![](img/ee43dddbee7f02b95a35eab9bb3af7ef_11.png)
 
 ### 理解 `reset` 命令
 
-![](img/ee43dddbee7f02b95a35eab9bb3af7ef_13.png)
 
-![](img/ee43dddbee7f02b95a35eab9bb3af7ef_14.png)
 
 `reset` 命令用于将当前分支的 HEAD 指针重置到指定的提交，并根据使用的选项影响暂存区和工作目录。主要有三种模式：
 
@@ -93,7 +85,6 @@ git diff
 2.  **`--mixed`**（默认）：移动 HEAD 指针，并重置暂存区以匹配新的提交，但不改变工作目录。更改会保留在工作目录中，但变为未暂存状态。
 3.  **`--hard`**：移动 HEAD 指针，并重置暂存区和工作目录，完全匹配新的提交。**此操作会丢弃所有未提交的更改**，需谨慎使用。
 
-![](img/ee43dddbee7f02b95a35eab9bb3af7ef_16.png)
 
 以下是每种模式的示例：
 
@@ -117,11 +108,9 @@ git reset --hard HEAD~1
 *   `git diff`：显示工作目录与暂存区的差异。
 *   `git diff --cached`：显示暂存区与上一次提交（HEAD）的差异。
 
-![](img/ee43dddbee7f02b95a35eab9bb3af7ef_18.png)
 
 执行 `soft` 重置后，使用 `git diff --cached` 可能仍会显示之前暂存的更改。而执行 `mixed` 重置后，`git diff --cached` 将显示为空，但 `git diff` 会显示工作目录中的更改。执行 `hard` 重置后，`git diff` 和 `git diff --cached` 都将显示为空，因为所有更改都已丢弃。
 
-![](img/ee43dddbee7f02b95a35eab9bb3af7ef_19.png)
 
 ### `hard` 重置的用途
 

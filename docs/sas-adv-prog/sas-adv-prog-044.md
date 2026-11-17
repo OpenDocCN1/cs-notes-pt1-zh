@@ -10,11 +10,9 @@
 1.  **FROM子句**：用逗号`,`分隔要连接的表名，替代`INNER JOIN`。
 2.  **连接条件**：将`ON`子句改为`WHERE`子句。
 
-![](img/7735246b084d785ffa78a08aa28bea23_1.png)
 
 以下是两种语法的对比示例：
 
-![](img/7735246b084d785ffa78a08aa28bea23_2.png)
 
 **标准语法：**
 ```sql
@@ -37,9 +35,7 @@ WHERE table1.column = table2.column;
 
 以下代码使用了`WHERE`构造，但产生的输出结果与之前使用`INNER JOIN`的代码完全一致。
 
-![](img/7735246b084d785ffa78a08aa28bea23_4.png)
 
-![](img/7735246b084d785ffa78a08aa28bea23_4.png)
 
 ## 使用注意事项
 
@@ -49,7 +45,6 @@ WHERE table1.column = table2.column;
 
 而使用`INNER JOIN`和`ON`的语法结构则有助于避免这个问题，因为它明确地将连接条件与表关联在一起。
 
-![](img/7735246b084d785ffa78a08aa28bea23_6.png)
 
 ---
 

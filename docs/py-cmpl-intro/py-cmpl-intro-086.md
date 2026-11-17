@@ -60,7 +60,6 @@ class MainWindow(QMainWindow):
 
 **为单个按钮设置特定样式**
 
-![](img/841752c4669751e5aec222bc1c8a531b_1.png)
 
 如果只想改变某个特定按钮的样式，我们需要使用其对象名进行选择。以下是具体方法：
 
@@ -104,7 +103,6 @@ class MainWindow(QMainWindow):
             }
 ```
 
-![](img/841752c4669751e5aec222bc1c8a531b_3.png)
 
 ![](img/841752c4669751e5aec222bc1c8a531b_5.png)
 

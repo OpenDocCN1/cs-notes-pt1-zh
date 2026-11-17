@@ -4,7 +4,6 @@
 
 你已经了解到，Django项目可以变得非常庞大。对于一个有抱负的开发者来说，Django项目包含许多活动部件，这很容易让人望而生畏。在本视频中，我将为你提供一个宏观概述，并演示Django如何使用模型、视图和模板（通常称为MVT架构）来组织一个项目。
 
-![](img/eeff767a48f8f793c4acd05a8ae1d663_1.png)
 
 ![](img/eeff767a48f8f793c4acd05a8ae1d663_1.png)
 
@@ -38,7 +37,6 @@ def hello_world(request):
 
 ![](img/eeff767a48f8f793c4acd05a8ae1d663_3.png)
 
-![](img/eeff767a48f8f793c4acd05a8ae1d663_5.png)
 
 ![](img/eeff767a48f8f793c4acd05a8ae1d663_5.png)
 
@@ -62,7 +60,6 @@ class MenuItem(models.Model):
 
 如果你熟悉关系数据库的概念，可能会好奇这是如何实现的。目前，你只需要知道Django将类中的代码映射到数据库中存储的相应表即可。
 
-![](img/eeff767a48f8f793c4acd05a8ae1d663_7.png)
 
 好的，让我再次运行服务器。这次，当我访问URL时，输出将显示文本“pasta type of Italian cuisine”。
 
@@ -74,7 +71,6 @@ Django根据URL中发送的数值，动态地从数据库表中获取了文本�
 
 对于最后一个示例，我需要修改视图以返回一个模板。我在应用文件夹内创建了这个模板。请注意，如果我展开这个文件夹，里面会有一个名为`menucard.html`的文件。
 
-![](img/eeff767a48f8f793c4acd05a8ae1d663_9.png)
 
 ![](img/eeff767a48f8f793c4acd05a8ae1d663_9.png)
 
@@ -82,7 +78,6 @@ Django根据URL中发送的数值，动态地从数据库表中获取了文本�
 
 如果我再次打开网页并刷新页面，输出将显示应用了HTML和CSS的样式。
 
-![](img/eeff767a48f8f793c4acd05a8ae1d663_11.png)
 
 ![](img/eeff767a48f8f793c4acd05a8ae1d663_11.png)
 
@@ -94,7 +89,6 @@ MVT架构允许开发者轻松地更新数据库、逻辑代码、呈现方式�
 
 正如我在视频开头所说，你很快就会更详细地探索这个MVT概念。同样值得记住的是，你已经熟悉将要处理的代码，因为它主要是Python。
 
-![](img/eeff767a48f8f793c4acd05a8ae1d663_13.png)
 
 ## 总结
 
@@ -102,6 +96,5 @@ MVT架构允许开发者轻松地更新数据库、逻辑代码、呈现方式�
 
 在本节课中，我们一起学习了Django如何影响模型、视图和模板（MVT）架构。我们通过三个示例看到了数据（模型）、业务逻辑（视图）和用户界面（模板）是如何分离的。这种分离使得代码更易于维护、测试和扩展，是构建健壮后端应用的基础。记住，MVT是Django高效开发的核心模式。
 
-![](img/eeff767a48f8f793c4acd05a8ae1d663_15.png)
 
 ![](img/eeff767a48f8f793c4acd05a8ae1d663_15.png)

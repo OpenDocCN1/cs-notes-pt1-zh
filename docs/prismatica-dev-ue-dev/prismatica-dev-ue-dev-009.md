@@ -16,7 +16,6 @@ Output = (Normal_X, Normal_Y, Normal_Z)  // 在世界坐标系下
 
 在材质编辑器中，它的图标和连接方式如下：
 
-![](img/972c51eedc96e1340e2378faa3d47eda_1.png)
 
 ## 与顶点法线世界空间节点的区别
 

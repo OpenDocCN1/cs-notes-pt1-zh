@@ -12,15 +12,11 @@
 
 因此，`VARCHAR`在存储空间利用上通常更高效，这也是它更常用的原因。
 
-![](img/f50d236bf07a9c0051241fd7f4a9ebf7_1.png)
 
 以下是演示两者区别的代码示例：
 
-![](img/f50d236bf07a9c0051241fd7f4a9ebf7_3.png)
 
-![](img/f50d236bf07a9c0051241fd7f4a9ebf7_5.png)
 
-![](img/f50d236bf07a9c0051241fd7f4a9ebf7_7.png)
 
 ```sql
 -- 创建一个CHAR类型的列，最大长度为3
@@ -32,7 +28,6 @@ SELECT col, LENGTH(col) FROM test_char;
 ```
 执行后，`‘ABC’`显示长度为3，`‘AB’`显示长度可能为3（因为填充了空格），具体取决于客户端设置。
 
-![](img/f50d236bf07a9c0051241fd7f4a9ebf7_9.png)
 
 ```sql
 -- 创建一个VARCHAR类型的列，最大长度为255
@@ -44,9 +39,7 @@ SELECT col, LENGTH(col) FROM test_varchar;
 ```
 执行后，`‘ABC’`和`‘AB’`将分别显示长度为3和2，反映了它们的实际长度。
 
-![](img/f50d236bf07a9c0051241fd7f4a9ebf7_11.png)
 
-![](img/f50d236bf07a9c0051241fd7f4a9ebf7_13.png)
 
 ## 枚举类型：ENUM
 
@@ -77,9 +70,7 @@ SELECT * FROM subjects;
 ```
 记住，`ENUM`通常只需要1个字节的存储空间（对于少于256个枚举值的情况），而`VARCHAR`则需要更多。如果记录数量庞大，这种存储效率的差异会非常明显。
 
-![](img/f50d236bf07a9c0051241fd7f4a9ebf7_15.png)
 
-![](img/f50d236bf07a9c0051241fd7f4a9ebf7_16.png)
 
 ## JSON类型
 
@@ -112,9 +103,7 @@ SELECT id, preferences->'$.theme' AS theme FROM users;
 ```
 在`JSON`中，键必须是唯一的字符串。
 
-![](img/f50d236bf07a9c0051241fd7f4a9ebf7_18.png)
 
-![](img/f50d236bf07a9c0051241fd7f4a9ebf7_19.png)
 
 ![](img/f50d236bf07a9c0051241fd7f4a9ebf7_20.png)
 

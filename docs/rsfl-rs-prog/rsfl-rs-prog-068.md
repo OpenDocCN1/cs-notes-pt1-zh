@@ -119,15 +119,12 @@ fn main() {
 
 运行后，我们得到的输出是：`这个值是 42`。
 
-![](img/bd7cc8bdb224f5d5bed61b84c6987861_1.png)
 
 如果没有这个 `Debug` 约束，Rust 将不知道在这里该做什么。
 
-![](img/bd7cc8bdb224f5d5bed61b84c6987861_2.png)
 
 ## 总结
 
-![](img/bd7cc8bdb224f5d5bed61b84c6987861_3.png)
 
 本节课中我们一起学习了 Rust 中 Trait 的条件实现和一揽子实现。
 

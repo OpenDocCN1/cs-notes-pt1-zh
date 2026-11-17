@@ -14,7 +14,6 @@
 
 ## 开始使用
 
-![](img/66bc49f8bac2df3da239ae8180071974_1.png)
 
 让我们开始创建一个新文件 `span.cpp`。我们需要包含一些头文件：`<iostream>` 用于打印输出，以及 `<span>`。不出所料，`std::span` 定义在 `<span>` 头文件中。我们还可以包含之前见过的 `<vector>`。
 
@@ -71,7 +70,6 @@ g++ -std=c++20 -o span span.cpp
 ./span
 ```
 
-![](img/66bc49f8bac2df3da239ae8180071974_3.png)
 
 运行后，你会看到打印出了整个 `vector` 的内容：`1 2 3 4 5`。我们没有复制 `vector`，只是通过 `span` 查看了它。
 
@@ -79,7 +77,6 @@ g++ -std=c++20 -o span span.cpp
 
 如果我们只想查看 `vector` 的一部分呢？我们可以创建一个 `std::span` 来指定我们感兴趣的范围。
 
-![](img/66bc49f8bac2df3da239ae8180071974_5.png)
 
 例如，我们可以创建一个从 `vector` 开头开始、包含两个元素的 `span`。
 
@@ -88,13 +85,11 @@ g++ -std=c++20 -o span span.cpp
     print_sub_vector(std::span(my_vector.begin(), 2));
 ```
 
-![](img/66bc49f8bac2df3da239ae8180071974_7.png)
 
 `std::span` 的构造函数可以接受一个起始迭代器和一个元素数量。这里，我们从 `my_vector.begin()` 开始，取2个元素。运行程序，会打印出 `1 2`。
 
 我们也可以不从开头开始。例如，打印中间三个元素（索引1到3）。
 
-![](img/66bc49f8bac2df3da239ae8180071974_9.png)
 
 ```cpp
     // 打印中间三个元素（索引1, 2, 3）
@@ -103,11 +98,9 @@ g++ -std=c++20 -o span span.cpp
 
 运行程序，会打印出 `2 3 4`。
 
-![](img/66bc49f8bac2df3da239ae8180071974_11.png)
 
 通过使用 `std::span`，我们的 `print_sub_vector` 函数本身不需要知道范围的细节。它只是接收一个抽象的 `span` 并打印它。而在调用函数的地方，我们可以灵活地决定要传递哪一部分元素。
 
-![](img/66bc49f8bac2df3da239ae8180071974_13.png)
 
 ## 总结
 

@@ -21,7 +21,6 @@
 
 我们将创建一个简单的复制集。如下图所示，一个复制集包含一个主服务器和若干个从服务器。
 
-![](img/42981aa7e1d3b659c6db1bfdcdc48a47_1.png)
 
 ![](img/42981aa7e1d3b659c6db1bfdcdc48a47_1.png)
 
@@ -169,6 +168,5 @@ mongod --bind_ip 0.0.0.0 --dbpath /data/mongodb/server2/db --replSet myReplicaSe
 
 通过这个简单的复制集，你实现了数据的高可用性。主服务器负责处理所有写操作，并从服务器自动同步数据，在主服务器发生故障时，可以从服务器中选举出新的主服务器，保障服务不中断。
 
-![](img/42981aa7e1d3b659c6db1bfdcdc48a47_7.png)
 
 ![](img/42981aa7e1d3b659c6db1bfdcdc48a47_7.png)

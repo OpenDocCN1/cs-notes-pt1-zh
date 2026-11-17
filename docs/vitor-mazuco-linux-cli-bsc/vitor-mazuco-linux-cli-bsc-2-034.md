@@ -27,7 +27,6 @@ cd lynis
 sudo ./lynis audit system
 ```
 
-![](img/cbc2422d9800933de6c9c4981d73b50d_7.png)
 
 运行后，Lynis会开始检查多项内容。
 
@@ -65,7 +64,6 @@ Lynis的审计过程是系统性的，它会遍历系统的各个层面。以下
 
 对于每个发现的问题，Lynis通常会提供一个链接或标识符（如CVE编号），你可以据此查找详细的漏洞描述和解决方案。
 
-![](img/cbc2422d9800933de6c9c4981d73b50d_17.png)
 
 ![](img/cbc2422d9800933de6c9c4981d73b50d_19.png)
 

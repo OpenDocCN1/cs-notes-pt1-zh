@@ -59,7 +59,6 @@ WorldPositionOffset = VertexNormal * 40.0 * Time_Parameter;
 ## 在蓝图和材质中动态更新
 材质参数集合的真正威力在于可以在运行时通过蓝图动态修改。
 
-![](img/990287a3b6ee506acfdbd6eefd307afc_5.png)
 
 ### 设置参数值
 在蓝图中，你可以使用以下节点来更新集合中的参数：
@@ -73,7 +72,6 @@ WorldPositionOffset = VertexNormal * 40.0 * Time_Parameter;
 
 例如，你可以用时间轴或计时器，在开始下雨时，将 `Rain_Intensity` 参数从0渐变到1。
 
-![](img/990287a3b6ee506acfdbd6eefd307afc_7.png)
 
 ### 获取参数值
 你也可以从集合中读取参数值，用于其他逻辑计算。

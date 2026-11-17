@@ -1,6 +1,5 @@
 # 017：网络层介绍 🌐
 
-![](img/f1e4a8f6d2956ce50fdd1ca20d068a18_0.png)
 
 ![](img/f1e4a8f6d2956ce50fdd1ca20d068a18_1.png)
 

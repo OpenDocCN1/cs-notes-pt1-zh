@@ -2,53 +2,41 @@ MongoDB教程：P114：唯一索引 🔑
 
 在本节课中，我们将学习如何在MongoDB中创建和使用唯一索引。唯一索引能确保集合中某个字段的值是唯一的，这对于防止数据重复（如用户名、邮箱）和提升查询效率至关重要。
 
-![](img/67a2317a1c51a4ee631fad612905614d_1.png)
 
 ---
 
-![](img/67a2317a1c51a4ee631fad612905614d_3.png)
 
-![](img/67a2317a1c51a4ee631fad612905614d_4.png)
 
 ### 什么是唯一索引？
 
-![](img/67a2317a1c51a4ee631fad612905614d_6.png)
 
 唯一索引是MongoDB中的一种索引类型，它强制要求被索引的字段在集合中的所有文档里**值必须唯一**。这意味着该字段的任意两个值都不能相同。
 
-![](img/67a2317a1c51a4ee631fad612905614d_8.png)
 
 其核心概念可以用一个简单的公式来描述：
 **`db.collection.createIndex( { field: 1 }, { unique: true } )`**
 
-![](img/67a2317a1c51a4ee631fad612905614d_10.png)
 
 这个命令在指定的 `field` 上创建了一个升序（`1`）的唯一索引。
 
-![](img/67a2317a1c51a4ee631fad612905614d_11.png)
 
 ---
 
-![](img/67a2317a1c51a4ee631fad612905614d_13.png)
 
 ### 创建唯一索引
 
 上一节我们介绍了唯一索引的概念，本节中我们来看看如何实际创建一个唯一索引。
 
-![](img/67a2317a1c51a4ee631fad612905614d_15.png)
 
-![](img/67a2317a1c51a4ee631fad612905614d_17.png)
 
 假设我们有一个 `users` 集合，我们希望确保 `username` 字段的值不重复。以下是创建索引的步骤：
 
-![](img/67a2317a1c51a4ee631fad612905614d_18.png)
 
 1.  首先，连接到你的MongoDB数据库。
 2.  使用 `createIndex` 方法，指定字段和 `unique: true` 选项。
 
 具体操作如下：
 
-![](img/67a2317a1c51a4ee631fad612905614d_20.png)
 
 ```javascript
 // 在 `username` 字段上创建唯一索引
@@ -69,7 +57,6 @@ db.users.createIndex( { username: 1 }, { unique: true } )
     // 成功插入
     ```
 
-![](img/67a2317a1c51a4ee631fad612905614d_22.png)
 
 2.  尝试再次插入相同用户名的文档将会失败，并返回一个重复键错误。
     ```javascript
@@ -97,7 +84,6 @@ db.people.createIndex( { name: 1, age: 1 }, { unique: true } )
 - `{ name: “Alice”, age: 30 }`
 - `{ name: “Bob”, age: 25 }`
 
-![](img/67a2317a1c51a4ee631fad612905614d_24.png)
 
 但是，尝试再次插入 `{ name: “Alice”, age: 25 }` 将会失败。
 
@@ -105,11 +91,9 @@ db.people.createIndex( { name: 1, age: 1 }, { unique: true } )
 
 ### 处理已存在重复数据的集合
 
-![](img/67a2317a1c51a4ee631fad612905614d_26.png)
 
 如果我们在一个已经包含重复数据的集合上创建唯一索引，操作会失败。MongoDB提供了 `dropDups` 选项（**注意：此选项在MongoDB 3.0+ 版本中已废弃**）来在创建索引时自动删除重复文档，但**极其不推荐使用**，因为它会不可预测地删除数据。
 
-![](img/67a2317a1c51a4ee631fad612905614d_28.png)
 
 更安全的做法是：
 1.  在应用程序层面或通过查询手动清理重复数据。

@@ -1,16 +1,13 @@
 # 008：Java 12中的紧凑数字格式 📊
 
-![](img/ee09b2c2e51f74aee8e63de8e19cacca_1.png)
 
 在本节课中，我们将要学习Java 12引入的一个新特性：紧凑数字格式。这是一种将十进制数字格式化为紧凑形式的工具，例如将“10000”显示为“10K”。我们将通过多个示例，了解如何创建和使用紧凑数字格式，以及如何控制其显示方式。
 
-![](img/ee09b2c2e51f74aee8e63de8e19cacca_3.png)
 
 ## 概述
 
 紧凑数字格式是`NumberFormat`类的一个子类，它提供了一种将长数字（如千、百万、十亿）格式化为更短、更易读形式的方法。`NumberFormat`是所有数字格式的抽象基类，它提供了格式化和解析数字的接口。Java 12通过`NumberFormat.getCompactNumberInstance()`方法扩展了此功能。
 
-![](img/ee09b2c2e51f74aee8e63de8e19cacca_5.png)
 
 ## 创建基本的紧凑数字格式
 
@@ -18,10 +15,8 @@
 
 以下是创建一个使用美国英语区域设置和短样式格式的示例代码：
 
-![](img/ee09b2c2e51f74aee8e63de8e19cacca_7.png)
 
 
-![](img/ee09b2c2e51f74aee8e63de8e19cacca_9.png)
 
 ```java
 import java.text.NumberFormat;
@@ -47,36 +42,25 @@ public class BasicCompactNumberExample {
 }
 ```
 
-![](img/ee09b2c2e51f74aee8e63de8e19cacca_11.png)
 
 运行此代码，短样式输出为“10K”、“120K”、“2M”、“2B”，而长样式输出为“10 thousand”、“120 thousand”、“2 million”、“2 billion”。
 
 ## 为不同区域设置应用格式
 
-![](img/ee09b2c2e51f74aee8e63de8e19cacca_13.png)
 
-![](img/ee09b2c2e51f74aee8e63de8e19cacca_15.png)
 
-![](img/ee09b2c2e51f74aee8e63de8e19cacca_17.png)
 
 了解了基本用法后，我们可以探索如何为不同的区域设置（如法国、中国）创建紧凑数字格式。
 
-![](img/ee09b2c2e51f74aee8e63de8e19cacca_18.png)
 
-![](img/ee09b2c2e51f74aee8e63de8e19cacca_20.png)
 
 以下是一个展示不同区域设置下数字格式差异的示例：
 
-![](img/ee09b2c2e51f74aee8e63de8e19cacca_22.png)
-
-![](img/ee09b2c2e51f74aee8e63de8e19cacca_23.png)
-
-![](img/ee09b2c2e51f74aee8e63de8e19cacca_25.png)
-
-![](img/ee09b2c2e51f74aee8e63de8e19cacca_27.png)
 
 
-![](img/ee09b2c2e51f74aee8e63de8e19cacca_29.png)
+
+
+
 
 ```java
 import java.text.NumberFormat;
@@ -109,20 +93,17 @@ public class LocaleCompactNumberExample {
 }
 ```
 
-![](img/ee09b2c2e51f74aee8e63de8e19cacca_31.png)
 
 此示例展示了同一个数字在不同语言和文化环境下的不同紧凑表示形式。
 
 ## 获取可用的区域设置
 
-![](img/ee09b2c2e51f74aee8e63de8e19cacca_33.png)
 
 有时，我们可能需要知道系统支持哪些区域设置。`NumberFormat`类提供了相应的方法。
 
 以下是列出所有可用数字格式区域设置的代码：
 
 
-![](img/ee09b2c2e51f74aee8e63de8e19cacca_35.png)
 
 ```java
 import java.text.NumberFormat;
@@ -140,18 +121,14 @@ public class AvailableLocalesExample {
 
 ## 控制小数位数
 
-![](img/ee09b2c2e51f74aee8e63de8e19cacca_37.png)
 
 我们可以控制紧凑数字格式中小数部分的位数。这通过`setMinimumFractionDigits`和`setMaximumFractionDigits`方法实现。
 
 以下是设置小数位数的示例：
 
-![](img/ee09b2c2e51f74aee8e63de8e19cacca_39.png)
 
 
-![](img/ee09b2c2e51f74aee8e63de8e19cacca_41.png)
 
-![](img/ee09b2c2e51f74aee8e63de8e19cacca_43.png)
 
 ```java
 import java.text.NumberFormat;
@@ -187,33 +164,23 @@ public class FractionDigitsExample {
 }
 ```
 
-![](img/ee09b2c2e51f74aee8e63de8e19cacca_45.png)
 
-![](img/ee09b2c2e51f74aee8e63de8e19cacca_47.png)
 
-![](img/ee09b2c2e51f74aee8e63de8e19cacca_49.png)
 
-![](img/ee09b2c2e51f74aee8e63de8e19cacca_51.png)
 
 默认情况下，最小和最大小数位数均为0。调整这些值可以控制输出数字的精度。
 
 ## 设置舍入模式
 
-![](img/ee09b2c2e51f74aee8e63de8e19cacca_53.png)
 
 紧凑数字格式支持设置舍入模式。默认模式是`HALF_EVEN`。我们可以使用`setRoundingMode`方法进行更改。
 
-![](img/ee09b2c2e51f74aee8e63de8e19cacca_55.png)
 
 以下是演示不同舍入模式效果的示例：
 
-![](img/ee09b2c2e51f74aee8e63de8e19cacca_56.png)
 
-![](img/ee09b2c2e51f74aee8e63de8e19cacca_57.png)
 
-![](img/ee09b2c2e51f74aee8e63de8e19cacca_58.png)
 
-![](img/ee09b2c2e51f74aee8e63de8e19cacca_60.png)
 
 ```java
 import java.math.RoundingMode;
@@ -253,28 +220,20 @@ public class RoundingModeExample {
 }
 ```
 
-![](img/ee09b2c2e51f74aee8e63de8e19cacca_62.png)
 
-![](img/ee09b2c2e51f74aee8e63de8e19cacca_64.png)
 
 ## 解析紧凑数字字符串
 
-![](img/ee09b2c2e51f74aee8e63de8e19cacca_66.png)
 
-![](img/ee09b2c2e51f74aee8e63de8e19cacca_68.png)
 
 除了格式化，`NumberFormat`还可以将紧凑数字字符串（如“1K”）解析回数字。这是通过`parse`方法实现的。
 
 以下是使用`parse`方法的示例：
 
-![](img/ee09b2c2e51f74aee8e63de8e19cacca_70.png)
-
-![](img/ee09b2c2e51f74aee8e63de8e19cacca_71.png)
 
 
-![](img/ee09b2c2e51f74aee8e63de8e19cacca_73.png)
 
-![](img/ee09b2c2e51f74aee8e63de8e19cacca_75.png)
+
 
 ```java
 import java.text.NumberFormat;
@@ -306,9 +265,7 @@ public class ParseExample {
 以下是启用分组分隔符解析的示例：
 
 
-![](img/ee09b2c2e51f74aee8e63de8e19cacca_77.png)
 
-![](img/ee09b2c2e51f74aee8e63de8e19cacca_79.png)
 
 ```java
 import java.text.NumberFormat;

@@ -21,11 +21,8 @@
 4.  在设备列表中，你应该能看到已连接的采集设备（例如“Cam Link 4K”）。选中它。
 5.  如果一切连接正确，预览窗口将立即显示来自摄像机的实时画面。
 
-![](img/2f8c3dbbab77f9b7ba4211ac6f6438cd_1.png)
 
-![](img/2f8c3dbbab77f9b7ba4211ac6f6438cd_2.png)
 
-![](img/2f8c3dbbab77f9b7ba4211ac6f6438cd_3.png)
 
 ![](img/2f8c3dbbab77f9b7ba4211ac6f6438cd_4.png)
 

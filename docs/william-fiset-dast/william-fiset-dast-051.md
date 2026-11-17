@@ -6,7 +6,6 @@
 
 上一节我们探讨了AVL树的理论操作，本节中我们来看看其具体的代码实现。
 
-![](img/07d81f9fd4e51f44b327832f10487ce5_1.png)
 
 首先，本节所使用的完整源代码可以在Github仓库中找到：
 > Github链接: github.com/sphysia/data_structures
@@ -60,7 +59,6 @@ private class Node {
 *   **`height`**： 以该节点为根的子树的高度。叶子节点的高度为0。
 *   **`left`， `right`**： 指向左、右子节点的指针。
 
-![](img/07d81f9fd4e51f44b327832f10487ce5_3.png)
 
 ## 辅助方法：更新与平衡工具
 
@@ -176,7 +174,6 @@ private Node balance(Node node) {
 
 掌握了平衡工具后，我们来看AVL树最核心的插入和删除操作，它们都是递归实现的。
 
-![](img/07d81f9fd4e51f44b327832f10487ce5_5.png)
 
 ### 插入操作
 

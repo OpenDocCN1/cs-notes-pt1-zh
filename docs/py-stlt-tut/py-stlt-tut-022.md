@@ -22,7 +22,6 @@ from PIL import Image
 pip install pillow
 ```
 
-![](img/cf7adf213f9732ce6cfe9237241201f3_1.png)
 
 ---
 
@@ -48,9 +47,7 @@ streamlit run image_editor.py
 
 ---
 
-![](img/cf7adf213f9732ce6cfe9237241201f3_3.png)
 
-![](img/cf7adf213f9732ce6cfe9237241201f3_4.png)
 
 ### 添加文件上传功能
 界面创建好后，我们需要让用户能够上传图片。以下是实现文件上传器的步骤。
@@ -61,9 +58,7 @@ streamlit run image_editor.py
 uploaded_file = st.file_uploader("上传你的图片", type=['jpg', 'jpeg', 'png'])
 ```
 
-![](img/cf7adf213f9732ce6cfe9237241201f3_6.png)
 
-![](img/cf7adf213f9732ce6cfe9237241201f3_7.png)
 
 ---
 

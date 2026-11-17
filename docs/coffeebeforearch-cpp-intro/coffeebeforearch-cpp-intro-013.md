@@ -10,7 +10,6 @@ STL算法与标准库容器紧密配合。容器（如 `std::array`）为我们�
 
 首先，我们需要包含必要的头文件，并创建一个待排序的数组。
 
-![](img/aab151b8dda55764fb73fb2fa7f72b2e_1.png)
 
 ```cpp
 #include <algorithm> // 用于 std::sort
@@ -64,7 +63,6 @@ std::ranges::sort(my_array);
 print(my_array);
 ```
 
-![](img/aab151b8dda55764fb73fb2fa7f72b2e_3.png)
 
 这种方法让代码意图更加清晰：你只是想排序这个数组。
 
@@ -73,7 +71,6 @@ print(my_array);
 将以上部分组合起来，得到完整的示例程序：
 
 
-![](img/aab151b8dda55764fb73fb2fa7f72b2e_5.png)
 
 ```cpp
 #include <algorithm>
@@ -109,7 +106,6 @@ int main() {
 }
 ```
 
-![](img/aab151b8dda55764fb73fb2fa7f72b2e_7.png)
 
 编译和运行此程序（需支持C++20），你将看到数组从 `53 21 2 85 2` 被排序为 `2 2 21 53 85`。
 
@@ -120,7 +116,6 @@ int main() {
 2.  它需要接收两个迭代器来定义排序范围，并且要求容器支持随机访问迭代器。
 3.  从C++20开始，可以使用 `std::ranges::sort` 和范围语法，直接传递容器对象，使代码更加简洁易读。
 
-![](img/aab151b8dda55764fb73fb2fa7f72b2e_9.png)
 
 ![](img/aab151b8dda55764fb73fb2fa7f72b2e_11.png)
 

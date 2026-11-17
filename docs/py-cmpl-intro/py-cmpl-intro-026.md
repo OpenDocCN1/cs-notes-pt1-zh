@@ -4,11 +4,8 @@ Python入门教程：P26：创建小卖部程序 🍿
 
 ---
 
-![](img/808ba6fb02c0d6f1c65c742a88b0d0cb_1.png)
 
-![](img/808ba6fb02c0d6f1c65c742a88b0d0cb_2.png)
 
-![](img/808ba6fb02c0d6f1c65c742a88b0d0cb_3.png)
 
 ### 创建菜单字典
 
@@ -147,7 +144,6 @@ print(f"Total: ${total:.2f}")
 
 ### 总结
 
-![](img/808ba6fb02c0d6f1c65c742a88b0d0cb_5.png)
 
 ![](img/808ba6fb02c0d6f1c65c742a88b0d0cb_6.png)
 

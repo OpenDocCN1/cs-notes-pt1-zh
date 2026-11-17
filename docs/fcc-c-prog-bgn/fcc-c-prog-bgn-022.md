@@ -20,7 +20,6 @@ while (条件为真) {
 
 ### 创建一个基础的while循环
 
-![](img/4d9d0ef5a6eaa299bf42effddfe72f91_1.png)
 
 让我们通过一个简单的例子来理解`while`循环的工作原理。首先，我们需要一个变量来控制循环的次数。
 
@@ -79,9 +78,7 @@ while (index <= 5) {
 
 除了标准的`while`循环，C语言还提供了`do...while`循环。它与`while`循环的关键区别在于**执行顺序**。
 
-![](img/4d9d0ef5a6eaa299bf42effddfe72f91_6.png)
 
-![](img/4d9d0ef5a6eaa299bf42effddfe72f91_7.png)
 
 *   **`while`循环**：先检查条件，条件为真才执行循环体。
 *   **`do...while`循环**：先执行一次循环体，然后再检查条件。这意味着循环体**至少会执行一次**。
@@ -106,9 +103,7 @@ do {
     ```
     程序会先执行一次循环体，打印出`6`，并将`index`增加为`7`，然后检查条件 `7 <= 5` 为假，循环结束。
 
-![](img/4d9d0ef5a6eaa299bf42effddfe72f91_9.png)
 
-![](img/4d9d0ef5a6eaa299bf42effddfe72f91_10.png)
 
 因此，`do...while`循环适用于那些**无论条件如何，都需要至少执行一次**的场景。
 
@@ -124,7 +119,6 @@ do {
 
 ![](img/4d9d0ef5a6eaa299bf42effddfe72f91_14.png)
 
-![](img/4d9d0ef5a6eaa299bf42effddfe72f91_15.png)
 
 ![](img/4d9d0ef5a6eaa299bf42effddfe72f91_17.png)
 

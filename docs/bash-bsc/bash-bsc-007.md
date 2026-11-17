@@ -76,11 +76,9 @@ journalctl
 ```
 这会显示系统启动过程中的详细日志，有助于诊断启动错误。
 
-![](img/9e20c82dab40f5bb886938212836fdae_1.png)
 
 ---
 
-![](img/9e20c82dab40f5bb886938212836fdae_3.png)
 
 ## 进程管理 ⚙️
 
@@ -120,7 +118,6 @@ killall caja
 
 网络问题是常见的系统故障。`ifconfig` 命令可以查看网络接口的配置信息，如IP地址。
 
-![](img/9e20c82dab40f5bb886938212836fdae_5.png)
 
 **命令**：
 ```bash
@@ -128,7 +125,6 @@ ifconfig
 ```
 要测试网络连通性，可以使用 `ping` 命令。
 
-![](img/9e20c82dab40f5bb886938212836fdae_7.png)
 
 **命令**：
 ```bash
@@ -136,11 +132,8 @@ ping youtube.com
 ```
 `ping` 会持续向目标发送数据包，直到你按 `Ctrl+C` 停止。它还会显示往返时间的统计信息。
 
-![](img/9e20c82dab40f5bb886938212836fdae_9.png)
 
-![](img/9e20c82dab40f5bb886938212836fdae_10.png)
 
-![](img/9e20c82dab40f5bb886938212836fdae_11.png)
 
 ---
 

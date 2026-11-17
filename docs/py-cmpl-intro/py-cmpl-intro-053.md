@@ -4,11 +4,9 @@
 
 ## 什么是多态性？🤔
 
-![](img/4613933901af91f6b5ef86db8d5eb0fb_1.png)
 
 多态性是一个编程概念。它是一个希腊词汇，意为“多种形式”或“多张面孔”。
 
-![](img/4613933901af91f6b5ef86db8d5eb0fb_2.png)
 
 *   **Poly** 意为“多”。
 *   **Morph** 意为“形式”。
@@ -70,13 +68,10 @@ class Triangle(Shape):
 2.  实例化不同的形状对象（`Circle`, `Square`, `Triangle`）并添加到列表中。
 3.  遍历列表，对每个形状调用其`area`方法。
 
-![](img/4613933901af91f6b5ef86db8d5eb0fb_4.png)
 
 
-![](img/4613933901af91f6b5ef86db8d5eb0fb_6.png)
 
 
-![](img/4613933901af91f6b5ef86db8d5eb0fb_8.png)
 
 ```python
 shapes = []
@@ -91,11 +86,9 @@ for shape in shapes:
 
 ## 扩展多态性：披萨的例子 🍕
 
-![](img/4613933901af91f6b5ef86db8d5eb0fb_10.png)
 
 为了更深入地理解，我们引入一个`Pizza`类。最初，`Pizza`类与`Shape`无关，因此无法放入`shapes`列表或调用`area`方法。
 
-![](img/4613933901af91f6b5ef86db8d5eb0fb_12.png)
 
 ```python
 class Pizza:
@@ -109,7 +102,6 @@ class Pizza:
 
 为了让`Pizza`也能计算面积并被视为一种形状，我们可以让它继承自`Circle`类。
 
-![](img/4613933901af91f6b5ef86db8d5eb0fb_14.png)
 
 ```python
 class Pizza(Circle):
@@ -132,7 +124,6 @@ shapes.append(Pizza("pepperoni", 15))
 *   我们创建了`Shape`类层次结构，并演示了如何将`Circle`、`Square`、`Triangle`甚至`Pizza`对象统一放入一个列表，并调用共同的`area`方法。
 *   多态性提高了代码的**灵活性和可扩展性**，使得添加新功能（如新的形状）变得更容易，而无需修改处理这些对象的通用代码。
 
-![](img/4613933901af91f6b5ef86db8d5eb0fb_16.png)
 
 ![](img/4613933901af91f6b5ef86db8d5eb0fb_17.png)
 

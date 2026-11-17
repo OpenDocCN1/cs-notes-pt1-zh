@@ -8,29 +8,21 @@
 
 恭喜你，你已接近这门顶点课程的尾声，也即将完成数据库工程师的学习旅程。在这个最终模块中，你需要通过同行评审练习和分级评估来展示你的知识。但在开始之前，让我们先回顾一下你在本课程中帮助小柠檬餐厅完成的任务。
 
-![](img/80bcca7c1454a9bba39e7cd3ce2e8731_1.png)
 
 ---
 
-![](img/80bcca7c1454a9bba39e7cd3ce2e8731_2.png)
 
-![](img/80bcca7c1454a9bba39e7cd3ce2e8731_3.png)
 
-![](img/80bcca7c1454a9bba39e7cd3ce2e8731_4.png)
 
-![](img/80bcca7c1454a9bba39e7cd3ce2e8731_5.png)
 
 ## 任务回顾
 
-![](img/80bcca7c1454a9bba39e7cd3ce2e8731_6.png)
 
 以下是你在本课程中协助小柠檬餐厅完成的一系列核心任务。
 
 ### 数据库设计与构建
 
-![](img/80bcca7c1454a9bba39e7cd3ce2e8731_8.png)
 
-![](img/80bcca7c1454a9bba39e7cd3ce2e8731_9.png)
 
 在第一个任务集中，你帮助小柠檬餐厅构建了一个关系型数据库系统。具体步骤如下：
 
@@ -47,25 +39,17 @@
 *   **存储过程**：你帮助小柠檬餐厅使用存储过程来创建可重用的代码，他们可以根据需要调用和执行。
 *   **预处理语句**：你还依赖了预处理语句，这些语句只需编译一次，然后可以重复使用。
 
-![](img/80bcca7c1454a9bba39e7cd3ce2e8731_11.png)
 
 ### 构建餐桌预订系统
 
-![](img/80bcca7c1454a9bba39e7cd3ce2e8731_12.png)
 
-![](img/80bcca7c1454a9bba39e7cd3ce2e8731_13.png)
 
-![](img/80bcca7c1454a9bba39e7cd3ce2e8731_14.png)
 
-![](img/80bcca7c1454a9bba39e7cd3ce2e8731_15.png)
 
 你协助小柠檬餐厅的另一个任务是构建一个餐桌预订系统，用于跟踪来访餐厅的客人。此任务主要包括使用SQL查询和事务。
 
-![](img/80bcca7c1454a9bba39e7cd3ce2e8731_16.png)
 
-![](img/80bcca7c1454a9bba39e7cd3ce2e8731_17.png)
 
-![](img/80bcca7c1454a9bba39e7cd3ce2e8731_18.png)
 
 以下是使用的一些SQL查询和事务示例：
 
@@ -79,13 +63,10 @@
 
 ### 生成商业洞察
 
-![](img/80bcca7c1454a9bba39e7cd3ce2e8731_20.png)
 
 在接下来的任务中，你帮助小柠檬餐厅利用其数据生成商业洞察。你使用数据可视化工具Tableau来完成此任务。
 
-![](img/80bcca7c1454a9bba39e7cd3ce2e8731_21.png)
 
-![](img/80bcca7c1454a9bba39e7cd3ce2e8731_22.png)
 
 以下是完成此任务所遵循的步骤：
 
@@ -94,9 +75,7 @@
 3.  **创建可视化**：下一步是使用其UI元素创建数据的可视化。
 4.  **构建仪表板**：最后，使用Tableau以仪表板的形式生成交互式、实时的数据可视化。
 
-![](img/80bcca7c1454a9bba39e7cd3ce2e8731_24.png)
 
-![](img/80bcca7c1454a9bba39e7cd3ce2e8731_25.png)
 
 这些步骤有助于为小柠檬餐厅的重要商业问题提供清晰且相关的答案。
 
@@ -112,17 +91,12 @@
 
 ---
 
-![](img/80bcca7c1454a9bba39e7cd3ce2e8731_27.png)
 
-![](img/80bcca7c1454a9bba39e7cd3ce2e8731_28.png)
 
 ## 总结
 
-![](img/80bcca7c1454a9bba39e7cd3ce2e8731_29.png)
 
-![](img/80bcca7c1454a9bba39e7cd3ce2e8731_30.png)
 
-![](img/80bcca7c1454a9bba39e7cd3ce2e8731_31.png)
 
 ![](img/80bcca7c1454a9bba39e7cd3ce2e8731_32.png)
 

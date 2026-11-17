@@ -1,6 +1,5 @@
 # 011：Week-03-Segment-2 - UID与GID 🔑
 
-![](img/4188fcdf45f00263dc964022cdbd38e3_1.png)
 
 在本节课中，我们将深入学习进程的用户ID（UID）和组ID（GID），这是理解UNIX文件权限的基础。我们将探讨进程如何通过改变其有效ID来获取不同的权限，以及系统如何利用这些ID进行权限检查。
 
@@ -8,7 +7,6 @@
 
 上一节我们介绍了`stat`结构体，本节中我们来看看进程的身份标识。每个在UNIX系统上运行的进程都关联着六个或更多的UID和GID。
 
-![](img/4188fcdf45f00263dc964022cdbd38e3_3.png)
 
 以下是主要的ID类型：
 *   **真实用户ID（Real User ID）** 和 **真实组ID（Real Group ID）**：代表进程的真实所有者，即启动进程的用户。
@@ -20,7 +18,6 @@
 
 ## Set-UID 与 Set-GID 机制
 
-![](img/4188fcdf45f00263dc964022cdbd38e3_5.png)
 
 为了允许可执行文件以改变（通常是提升）的权限运行，包括`root`权限，UNIX提供了Set-UID和Set-GID位。
 
@@ -37,7 +34,6 @@ int setuid(uid_t uid); // 设置真实、有效及保存的设置用户ID
 int seteuid(uid_t euid); // 设置有效用户ID
 ```
 
-![](img/4188fcdf45f00263dc964022cdbd38e3_7.png)
 
 **重要规则**：调用`seteuid()`仅改变有效用户ID，且仅当目标ID是当前真实用户ID或保存的设置用户ID时才被允许。而调用`setuid()`会同时设置真实、有效及保存的设置用户ID，且一旦将ID设置为非特权值，就无法再恢复提升的权限。
 
@@ -56,26 +52,21 @@ int seteuid(uid_t euid); // 设置有效用户ID
 
 当进程以提升的有效用户ID运行时，有时需要判断其真实用户ID是否具有访问某个资源的权限。直接的方法是先降低权限尝试访问，再恢复权限，但这很繁琐且非原子操作。
 
-![](img/4188fcdf45f00263dc964022cdbd38e3_9.png)
 
 为此，系统提供了`access()`系统调用。
 
-![](img/4188fcdf45f00263dc964022cdbd38e3_11.png)
 
 ```c
 int access(const char *pathname, int mode);
 int faccessat(int dirfd, const char *pathname, int mode, int flags);
 ```
 
-![](img/4188fcdf45f00263dc964022cdbd38e3_13.png)
 
-![](img/4188fcdf45f00263dc964022cdbd38e3_14.png)
 
 `access()`根据传入的路径和模式（如`R_OK`, `W_OK`, `X_OK`, `F_OK`），检查**真实用户ID和真实组ID**是否具有相应权限，而不是检查有效ID。这使特权程序能够安全地代表真实用户进行前置权限验证。
 
 ## 课程总结
 
-![](img/4188fcdf45f00263dc964022cdbd38e3_16.png)
 
 本节课中我们一起学习了UNIX进程身份标识的核心概念：
 1.  进程拥有**真实**和**有效**的用户ID与组ID。

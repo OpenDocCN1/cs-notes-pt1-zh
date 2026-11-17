@@ -8,13 +8,11 @@
 
 以下是常见的错误场景：使用AWS EC2 T2 Micro实例时，如果服务器被关闭后重启，其IP地址会动态变化。这会导致之前通过引导（bootstrap）配置的节点（如Web服务器、数据库服务器）无法与Chef服务器正常通信。
 
-![](img/8aac93e8863723bbe6546bc0d2db5ee2_1.png)
 
 ![](img/8aac93e8863723bbe6546bc0d2db5ee2_1.png)
 
 每次发生IP地址变更时，你都需要重新运行引导命令来配置节点。解决此问题的方法是再次引导节点。
 
-![](img/8aac93e8863723bbe6546bc0d2db5ee2_3.png)
 
 ![](img/8aac93e8863723bbe6546bc0d2db5ee2_3.png)
 
@@ -68,7 +66,6 @@ SHOW TABLES;
 
 结果显示为空，表示没有表。接下来，我们创建一个名为 `user_signup` 的表，用于定义注册表单的字段结构。
 
-![](img/8aac93e8863723bbe6546bc0d2db5ee2_5.png)
 
 以下是创建表的SQL语句。我们定义了多个字段，并规定它们不能为空（`NOT NULL`），以确保数据的完整性。
 
@@ -103,7 +100,6 @@ SHOW TABLES;
 DESCRIBE user_signup;
 ```
 
-![](img/8aac93e8863723bbe6546bc0d2db5ee2_7.png)
 
 ![](img/8aac93e8863723bbe6546bc0d2db5ee2_7.png)
 
@@ -116,7 +112,6 @@ DESCRIBE user_signup;
 
 其次，我们手动设置了一个MySQL数据库。我们创建了名为 `registration` 的数据库，并在其中定义了 `user_signup` 表，该表包含了注册表单所需的所有字段。
 
-![](img/8aac93e8863723bbe6546bc0d2db5ee2_9.png)
 
 ![](img/8aac93e8863723bbe6546bc0d2db5ee2_9.png)
 

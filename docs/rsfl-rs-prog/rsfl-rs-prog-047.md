@@ -6,15 +6,11 @@
 
 ## 使用 `unwrap` 和 `expect` 方法
 
-![](img/857de14c8ca87762d0aaf406bc934204_1.png)
 
 `Result` 类型定义了许多辅助方法来执行更具体的任务。有时使用 `match` 来处理 `Result` 可能显得过于繁琐。
 
-![](img/857de14c8ca87762d0aaf406bc934204_2.png)
 
-![](img/857de14c8ca87762d0aaf406bc934204_3.png)
 
-![](img/857de14c8ca87762d0aaf406bc934204_4.png)
 
 例如，假设你想打开一个文件。我们会像任何 Rust 开发者一样调用 `File::open`。
 
@@ -48,17 +44,13 @@ let file = File::open("file.txt").expect("文件缺失");
 
 ## 什么是错误传播？📤
 
-![](img/857de14c8ca87762d0aaf406bc934204_6.png)
 
-![](img/857de14c8ca87762d0aaf406bc934204_7.png)
 
 当函数实现调用了可能失败的操作时，你可以选择不在函数内部处理错误，而是将错误返回给调用代码，让调用者决定如何处理。这被称为**传播错误**。
 
-![](img/857de14c8ca87762d0aaf406bc934204_8.png)
 
 这给了调用代码更多的控制权，因为调用者可能拥有更多信息或逻辑来决定应如何处理错误，而这些信息在你的函数上下文中可能无法获得。
 
-![](img/857de14c8ca87762d0aaf406bc934204_10.png)
 
 ## 实现错误传播 🛠️
 
@@ -71,9 +63,7 @@ use std::fs::File;
 use std::io::{self, Read}; // 使用花括号分组导入
 ```
 
-![](img/857de14c8ca87762d0aaf406bc934204_12.png)
 
-![](img/857de14c8ca87762d0aaf406bc934204_13.png)
 
 接下来，我们创建一个名为 `get_data` 的函数。注意它的返回类型：`Result<String, io::Error>`。这表明函数要么返回一个成功的 `String`，要么返回一个 `io::Error`。
 
@@ -99,9 +89,7 @@ fn get_data() -> Result<String, io::Error> {
 }
 ```
 
-![](img/857de14c8ca87762d0aaf406bc934204_15.png)
 
-![](img/857de14c8ca87762d0aaf406bc934204_16.png)
 
 在这个函数中：
 1.  我们尝试打开 `data.txt` 文件。
@@ -111,13 +99,10 @@ fn get_data() -> Result<String, io::Error> {
 
 关键点在于，`get_data` 函数本身**不处理**错误。它只是将成功的结果或遇到的错误“传递”出去。
 
-![](img/857de14c8ca87762d0aaf406bc934204_18.png)
 
-![](img/857de14c8ca87762d0aaf406bc934204_19.png)
 
 现在，在我们的 `main` 函数中调用它：
 
-![](img/857de14c8ca87762d0aaf406bc934204_20.png)
 
 ```rust
 fn main() {
@@ -134,9 +119,7 @@ fn main() {
 *   我们深入探讨了**错误传播**的概念：即函数将错误返回给调用者，而不是在内部处理。
 *   我们通过一个完整的示例，创建了一个返回 `Result` 类型的函数，演示了如何使用 `match` 来提前返回错误或将成功结果传递出去。
 
-![](img/857de14c8ca87762d0aaf406bc934204_22.png)
 
-![](img/857de14c8ca87762d0aaf406bc934204_23.png)
 
 ![](img/857de14c8ca87762d0aaf406bc934204_24.png)
 

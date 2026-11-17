@@ -46,7 +46,6 @@ model = glm::scale(model, glm::vec3(0.5f, 0.5f, 0.5f)); // 缩放
 ```
 运行此代码，物体会以其自身轴心进行旋转。
 
-![](img/314254f168c08c88afec78c7b60a9289_6.png)
 
 ![](img/314254f168c08c88afec78c7b60a9289_8.png)
 

@@ -4,7 +4,6 @@
 
 上一节我们介绍了函数的基本形式、编写和使用方法。本节中我们来看看如何处理那些功能相似，但操作不同类型或参数数量不同的函数。
 
-![](img/b4fa52ff939f53dc8070181f5a1e3454_1.png)
 
 ## 概述
 
@@ -31,13 +30,11 @@ int main() {
 
 ## 不使用重载的函数
 
-![](img/b4fa52ff939f53dc8070181f5a1e3454_3.png)
 
 假设我们需要打印这两个数组。一种方法是创建两个名称不同的函数。
 
 以下是打印整型数组的函数：
 
-![](img/b4fa52ff939f53dc8070181f5a1e3454_5.png)
 
 ```cpp
 void print_int_array(std::array<int, 3> my_array) {
@@ -68,7 +65,6 @@ print_float_array(my_float_array);
 
 这种方法可以工作，但要求使用者记住两个不同的函数名，接口设计不够优雅。
 
-![](img/b4fa52ff939f53dc8070181f5a1e3454_7.png)
 
 ## 引入函数重载
 
@@ -101,7 +97,6 @@ print_array(my_int_array);   // 调用整型版本
 print_array(my_float_array); // 调用浮点型版本
 ```
 
-![](img/b4fa52ff939f53dc8070181f5a1e3454_9.png)
 
 编译器会根据传入参数 `my_int_array` 和 `my_float_array` 的类型，自动选择对应的函数版本。这简化了接口，使用者只需记住一个函数名。
 
@@ -109,7 +104,6 @@ print_array(my_float_array); // 调用浮点型版本
 
 编译器必须能够明确区分不同的重载函数。如果两个函数的签名完全相同，即使函数体不同，也会导致编译错误。
 
-![](img/b4fa52ff939f53dc8070181f5a1e3454_11.png)
 
 例如，以下代码会导致“重定义”错误：
 
@@ -131,9 +125,7 @@ void print_array(std::array<int, 3> my_array) {
 
 ## 当前方案的局限性
 
-![](img/b4fa52ff939f53dc8070181f5a1e3454_13.png)
 
-![](img/b4fa52ff939f53dc8070181f5a1e3454_15.png)
 
 虽然函数重载解决了命名问题，但我们仍然存在**代码重复**。两个 `print_array` 函数的函数体几乎完全一样，唯一的区别是参数类型。
 

@@ -2,9 +2,7 @@
 
 在本节课中，我们将要学习如何使用数组来实现队列数据结构。上一节我们介绍了队列作为一种抽象数据类型（ADT），本节中我们来看看如何用具体的代码来实现它。
 
-![](img/21d37c0bccfe1eeb011e68af1c022890_1.png)
 
-![](img/21d37c0bccfe1eeb011e68af1c022890_2.png)
 
 ## 概述 📋
 
@@ -32,31 +30,22 @@
 *   **入队**：将 `rear` 向后移动一位，然后在新的 `rear` 位置放入新元素。
 *   **出队**：将 `front` 向后移动一位，原 `front` 位置的元素即被“移除”。
 
-![](img/21d37c0bccfe1eeb011e68af1c022890_4.png)
 
-![](img/21d37c0bccfe1eeb011e68af1c022890_5.png)
 
-![](img/21d37c0bccfe1eeb011e68af1c022890_7.png)
 
 ## 基本操作的伪代码
 
 以下是队列基本操作的初步伪代码实现。
 
-![](img/21d37c0bccfe1eeb011e68af1c022890_9.png)
 
 ### 检查队列是否为空
 
-![](img/21d37c0bccfe1eeb011e68af1c022890_11.png)
 
-![](img/21d37c0bccfe1eeb011e68af1c022890_12.png)
 
-![](img/21d37c0bccfe1eeb011e68af1c022890_13.png)
 
 如果 `front` 和 `rear` 都等于 `-1`，则队列为空。
 
-![](img/21d37c0bccfe1eeb011e68af1c022890_15.png)
 
-![](img/21d37c0bccfe1eeb011e68af1c022890_16.png)
 
 ```pseudocode
 function IsEmpty()
@@ -70,7 +59,6 @@ function IsEmpty()
 
 入队操作需要考虑队列是否已满以及是否为空等边界情况。
 
-![](img/21d37c0bccfe1eeb011e68af1c022890_18.png)
 
 ```pseudocode
 function Enqueue(x)
@@ -93,7 +81,6 @@ function Enqueue(x)
 
 ### 出队操作 (Dequeue)
 
-![](img/21d37c0bccfe1eeb011e68af1c022890_20.png)
 
 出队操作需要考虑队列是否为空以及是否只剩下一个元素。
 
@@ -111,23 +98,17 @@ function Dequeue()
         front = front + 1
 ```
 
-![](img/21d37c0bccfe1eeb011e68af1c022890_22.png)
 
-![](img/21d37c0bccfe1eeb011e68af1c022890_24.png)
 
 ## 线性数组实现的问题 🚧
 
-![](img/21d37c0bccfe1eeb011e68af1c022890_26.png)
 
 使用上述简单方法，随着元素不断入队和出队，`rear` 指针会逐渐移向数组末端。即使数组前端（`front` 之前）有空闲位置，我们也无法再利用它们，因为 `rear` 无法“绕回”到数组开头。这造成了空间浪费。
 
-![](img/21d37c0bccfe1eeb011e68af1c022890_28.png)
 
-![](img/21d37c0bccfe1eeb011e68af1c022890_29.png)
 
 ## 解决方案：循环数组 🔄
 
-![](img/21d37c0bccfe1eeb011e68af1c022890_31.png)
 
 为了解决空间浪费问题，我们引入**循环数组**的概念。在逻辑上，我们将数组视为一个首尾相接的环。
 
@@ -136,25 +117,19 @@ function Dequeue()
 计算前一个位置的公式是：
 `previous_index = (current_index + array_size - 1) % array_size`
 
-![](img/21d37c0bccfe1eeb011e68af1c022890_33.png)
 
 其中 `%` 是取模运算符。
 
-![](img/21d37c0bccfe1eeb011e68af1c022890_35.png)
 
 ## 基于循环数组的完整实现
 
-![](img/21d37c0bccfe1eeb011e68af1c022890_37.png)
 
 现在，我们修改伪代码，使用循环数组的逻辑。
 
 ### 修改后的入队操作
 
-![](img/21d37c0bccfe1eeb011e68af1c022890_39.png)
 
-![](img/21d37c0bccfe1eeb011e68af1c022890_40.png)
 
-![](img/21d37c0bccfe1eeb011e68af1c022890_41.png)
 
 ```pseudocode
 function Enqueue(x)
@@ -174,7 +149,6 @@ function Enqueue(x)
 
 ### 修改后的出队操作
 
-![](img/21d37c0bccfe1eeb011e68af1c022890_43.png)
 
 ```pseudocode
 function Dequeue()
@@ -200,11 +174,8 @@ function Front()
         return A[front]
 ```
 
-![](img/21d37c0bccfe1eeb011e68af1c022890_45.png)
 
-![](img/21d37c0bccfe1eeb011e68af1c022890_46.png)
 
-![](img/21d37c0bccfe1eeb011e68af1c022890_47.png)
 
 ## 总结 🎯
 

@@ -1,6 +1,5 @@
 # 115：复合索引 🗂️
 
-![](img/ded657e481bc9c3984a422cb22ccd96d_1.png)
 
 在本节课中，我们将要学习如何在 MongoDB 中创建和使用复合索引。复合索引是一种包含多个字段的索引，它能显著提升涉及多个字段查询的性能。
 
@@ -16,23 +15,18 @@
 use suites
 ```
 
-![](img/ded657e481bc9c3984a422cb22ccd96d_3.png)
 
 为了演示复合索引的效果，我们先执行一个查询，查找所有非美国的客户，并观察其执行时间。
 
-![](img/ded657e481bc9c3984a422cb22ccd96d_5.png)
 
 ```javascript
 db.customers.find({ country: { $ne: "USA" } }).explain("executionStats")
 ```
 
-![](img/ded657e481bc9c3984a422cb22ccd96d_7.png)
 
-![](img/ded657e481bc9c3984a422cb22ccd96d_8.png)
 
 执行结果显示，该查询返回了611条文档，耗时大约5秒。
 
-![](img/ded657e481bc9c3984a422cb22ccd96d_10.png)
 
 ## 创建复合索引
 
@@ -40,11 +34,9 @@ db.customers.find({ country: { $ne: "USA" } }).explain("executionStats")
 
 创建复合索引的命令与创建单字段索引类似，区别在于需要在 `keys` 对象中指定多个字段及其排序方向（1为升序，-1为降序）。
 
-![](img/ded657e481bc9c3984a422cb22ccd96d_12.png)
 
 以下是创建复合索引的命令：
 
-![](img/ded657e481bc9c3984a422cb22ccd96d_14.png)
 
 ```javascript
 db.customers.createIndex({ country: 1, stateProvince: 1, name: 1 })
@@ -60,13 +52,10 @@ db.customers.createIndex({ country: 1, stateProvince: 1, name: 1 })
 db.customers.find({ country: { $ne: "USA" } }).explain("executionStats")
 ```
 
-![](img/ded657e481bc9c3984a422cb22ccd96d_16.png)
 
 这次，查询返回相同数量的文档（611条），但执行时间从大约5秒减少到了3秒。虽然我们的数据库规模不大，但性能提升已经非常明显。
 
-![](img/ded657e481bc9c3984a422cb22ccd96d_18.png)
 
-![](img/ded657e481bc9c3984a422cb22ccd96d_19.png)
 
 对于包含数百万甚至数十亿文档的大型数据库，合理使用复合索引带来的性能提升将是巨大的。它可以有效减少查询的响应时间，提升应用程序的整体速度。
 
@@ -74,13 +63,11 @@ db.customers.find({ country: { $ne: "USA" } }).explain("executionStats")
 
 以下是关于使用索引的一些关键建议：
 
-![](img/ded657e481bc9c3984a422cb22ccd96d_21.png)
 
 *   **为高频查询字段创建索引**：不仅要在单个字段上创建索引，更应为所有经常出现在查询条件中的字段创建合适的索引。
 *   **理解复合索引的顺序**：复合索引中字段的顺序很重要。它应遵循“等值匹配字段在前，范围查询字段在后”的原则，以最大化索引效率。
 *   **权衡利弊**：索引会占用额外的存储空间，并在插入、更新和删除文档时带来少量开销。因此，需要根据实际读写模式来设计索引策略。
 
-![](img/ded657e481bc9c3984a422cb22ccd96d_23.png)
 
 ## 总结
 

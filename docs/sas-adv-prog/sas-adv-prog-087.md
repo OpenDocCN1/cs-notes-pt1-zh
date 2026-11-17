@@ -4,19 +4,16 @@
 
 ## 概述与数据探索
 
-![](img/0e9e12dcdf193f5ef7c7e0ca391bbad8_1.png)
 
 首先，我们来查看将要使用的两个数据表：`sales_email`和`sales_phone`。
 
 
 
-![](img/0e9e12dcdf193f5ef7c7e0ca391bbad8_1.png)
 
 可以看到两个表的结构。第一个表`sales_email`包含`customer_id`和`email_response`两列，其中`email_response`记录了“accepted”或“declined”。第二个表`sales_phone`包含`customer_id`、`sales_rep`和`response`三列。
 
 我们的目标是合并这两个表，找出所有做出过回应的不重复客户。
 
-![](img/0e9e12dcdf193f5ef7c7e0ca391bbad8_3.png)
 
 ## 初次尝试与错误分析
 
@@ -32,35 +29,25 @@ SELECT * FROM sq.sales_phone;
 
 
 
-![](img/0e9e12dcdf193f5ef7c7e0ca391bbad8_5.png)
 
 
 
-![](img/0e9e12dcdf193f5ef7c7e0ca391bbad8_5.png)
-
-![](img/0e9e12dcdf193f5ef7c7e0ca391bbad8_7.png)
 
 
 
-![](img/0e9e12dcdf193f5ef7c7e0ca391bbad8_8.png)
 
-![](img/0e9e12dcdf193f5ef7c7e0ca391bbad8_7.png)
+
 
 现在运行这个查询，我们得到了一个错误。
 
 
 
-![](img/0e9e12dcdf193f5ef7c7e0ca391bbad8_8.png)
-
-![](img/0e9e12dcdf193f5ef7c7e0ca391bbad8_10.png)
 
 
 
-![](img/0e9e12dcdf193f5ef7c7e0ca391bbad8_11.png)
 
-![](img/0e9e12dcdf193f5ef7c7e0ca391bbad8_10.png)
 
-![](img/0e9e12dcdf193f5ef7c7e0ca391bbad8_11.png)
+
 
 错误信息指出：第一个贡献表的第二列与第二个贡献表的第二列数据类型不同。`UNION`操作要求对应列的数据类型必须兼容。
 
@@ -68,7 +55,6 @@ SELECT * FROM sq.sales_phone;
 
 回到代码中。我记得两个表中都有`customer_id`列。因此，这次我将添加`CORRESPONDING`关键字。这个关键字会根据列名进行匹配，在这里就是匹配`customer_id`列。
 
-![](img/0e9e12dcdf193f5ef7c7e0ca391bbad8_13.png)
 
 修改后的查询如下：
 ```sql
@@ -80,13 +66,10 @@ SELECT * FROM sq.sales_phone;
 
 
 
-![](img/0e9e12dcdf193f5ef7c7e0ca391bbad8_14.png)
-
-![](img/0e9e12dcdf193f5ef7c7e0ca391bbad8_13.png)
 
 
 
-![](img/0e9e12dcdf193f5ef7c7e0ca391bbad8_14.png)
+
 
 ## 指定列名以提升代码明确性
 
@@ -102,11 +85,9 @@ SELECT customer_id FROM sq.sales_phone;
 ```
 运行这个查询，我们得到了相同的结果。明确指定列名使代码更易于理解和维护。
 
-![](img/0e9e12dcdf193f5ef7c7e0ca391bbad8_16.png)
 
 ## 统计唯一客户数量
 
-![](img/0e9e12dcdf193f5ef7c7e0ca391bbad8_17.png)
 
 我们的最终目标是统计唯一客户的数量。虽然可以手动数出来，但实际工作中通常会处理更大的表，所以我们需要让SQL来计数。
 
@@ -127,15 +108,12 @@ FROM (
 
 
 
-![](img/0e9e12dcdf193f5ef7c7e0ca391bbad8_19.png)
 
 查看结果，我们看到有8位不同的客户做出了回应。
 
 
 
-![](img/0e9e12dcdf193f5ef7c7e0ca391bbad8_21.png)
 
-![](img/0e9e12dcdf193f5ef7c7e0ca391bbad8_19.png)
 
 ## 总结
 

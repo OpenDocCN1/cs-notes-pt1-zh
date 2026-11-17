@@ -22,14 +22,12 @@
 
 让我们以Ubuntu Server 16.04.2的ISO文件为例，进行实际操作演示。我们将使用`md5sum`这个命令来计算文件的MD5哈希值。
 
-![](img/384bca95703d12ae997ee41526eb97e1_1.png)
 
 **命令语法如下：**
 ```bash
 md5sum [文件名]
 ```
 
-![](img/384bca95703d12ae997ee41526eb97e1_3.png)
 
 **操作流程：**
 1.  打开终端，并切换到存放你下载的ISO文件的目录。
@@ -37,37 +35,23 @@ md5sum [文件名]
 3.  命令会输出一长串字符和数字，这就是该ISO文件的MD5哈希值。
 4.  将此哈希值与Ubuntu官方网站上该ISO文件页面公布的MD5哈希值进行比对。
 
-![](img/384bca95703d12ae997ee41526eb97e1_5.png)
 
 如果两个哈希值**完全相同**，如下图所示，则证明你下载的ISO文件是完整且真实的，可以放心安装。
 
-![](img/384bca95703d12ae997ee41526eb97e1_1.png)
 
-![](img/384bca95703d12ae997ee41526eb97e1_3.png)
 
-![](img/384bca95703d12ae997ee41526eb97e1_7.png)
 
-![](img/384bca95703d12ae997ee41526eb97e1_5.png)
 
 ![](img/384bca95703d12ae997ee41526eb97e1_7.png)
 
-![](img/384bca95703d12ae997ee41526eb97e1_9.png)
 
-![](img/384bca95703d12ae997ee41526eb97e1_9.png)
 
-![](img/384bca95703d12ae997ee41526eb97e1_11.png)
 
-![](img/384bca95703d12ae997ee41526eb97e1_11.png)
 
-![](img/384bca95703d12ae997ee41526eb97e1_13.png)
 
-![](img/384bca95703d12ae997ee41526eb97e1_13.png)
 
-![](img/384bca95703d12ae997ee41526eb97e1_15.png)
 
-![](img/384bca95703d12ae997ee41526eb97e1_15.png)
 
-![](img/384bca95703d12ae997ee41526eb97e1_17.png)
 
 ## 总结
 

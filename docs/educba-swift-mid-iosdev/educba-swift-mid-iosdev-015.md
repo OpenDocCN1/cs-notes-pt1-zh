@@ -19,7 +19,6 @@ greet() // 调用函数
 
 ### 带参数的函数
 
-![](img/5ce228af12a1a9c7a3031a7d1d4650a3_1.png)
 
 函数可以接受多个参数。以下是创建一个接受多个参数的函数的方法：
 
@@ -33,7 +32,6 @@ func details(name: String, age: Int, hobby: String, dream: String) {
 details(name: "John", age: 24, hobby: "coding", dream: "software engineer")
 ```
 
-![](img/5ce228af12a1a9c7a3031a7d1d4650a3_3.png)
 
 ### 带返回值的函数
 
@@ -137,9 +135,7 @@ variableValue = 30 // 正确
 
 有时需要将一种数据类型转换为另一种。
 
-![](img/5ce228af12a1a9c7a3031a7d1d4650a3_5.png)
 
-![](img/5ce228af12a1a9c7a3031a7d1d4650a3_7.png)
 
 ```swift
 var myInt: Int = 10
@@ -171,10 +167,8 @@ print(playerNames[1]) // 输出 "Mohan"
 以下是数组的一些常用操作：
 
 
-![](img/5ce228af12a1a9c7a3031a7d1d4650a3_9.png)
 
 
-![](img/5ce228af12a1a9c7a3031a7d1d4650a3_11.png)
 
 ```swift
 // 获取元素数量
@@ -221,7 +215,6 @@ print(dictionary["Mohan"]) // 输出 20
 以下是字典的一些常用操作：
 
 
-![](img/5ce228af12a1a9c7a3031a7d1d4650a3_13.png)
 
 ```swift
 // 获取键值对数量
@@ -237,7 +230,6 @@ dictionary.removeValue(forKey: "Tushar")
 
 ## 章节5：集合
 
-![](img/5ce228af12a1a9c7a3031a7d1d4650a3_15.png)
 
 上一节我们介绍了字典，本节中我们来看看Swift中的集合。集合存储相同数据类型且无序、不重复的值。
 

@@ -20,16 +20,13 @@ import threading
 
 我们通过访问`threading`模块，然后调用`Thread`构造函数并传入一个目标函数来创建线程。
 
-![](img/df30b99d4a6a270538b1500402a6549f_1.png)
 
 ### 一个顺序执行的例子
 
 为了演示，假设我们有一系列家务要做：遛狗、取邮件和倒垃圾。我们首先定义三个函数来处理这些家务。
 
-![](img/df30b99d4a6a270538b1500402a6549f_3.png)
 
 
-![](img/df30b99d4a6a270538b1500402a6549f_5.png)
 
 ```python
 import time
@@ -46,7 +43,6 @@ def get_mail():
     print("You get the mail.")
 ```
 
-![](img/df30b99d4a6a270538b1500402a6549f_7.png)
 
 现在，让我们按顺序调用这些函数，看看会发生什么。
 
@@ -62,14 +58,11 @@ get_mail()
 
 上一节我们看到了顺序执行的局限性。本节中，我们来看看如何使用多线程来同时执行所有任务。
 
-![](img/df30b99d4a6a270538b1500402a6549f_9.png)
 
 我们可以为每个家务创建一个线程对象，并同时启动它们。
 
-![](img/df30b99d4a6a270538b1500402a6549f_11.png)
 
 
-![](img/df30b99d4a6a270538b1500402a6549f_12.png)
 
 ```python
 # 创建线程对象
@@ -86,23 +79,18 @@ chore3.start()
 
 ### 使用 `join()` 方法等待线程完成
 
-![](img/df30b99d4a6a270538b1500402a6549f_14.png)
 
 在上面的例子中，主线程在启动所有子线程后会立即继续执行。如果我们想在所有家务完成后打印一条确认信息，就需要让主线程等待所有子线程结束。
 
-![](img/df30b99d4a6a270538b1500402a6549f_16.png)
 
 这时，我们可以使用线程对象的 `join()` 方法。
 
-![](img/df30b99d4a6a270538b1500402a6549f_18.png)
 
 以下是使用 `join()` 方法的步骤：
 
 
-![](img/df30b99d4a6a270538b1500402a6549f_20.png)
 
 
-![](img/df30b99d4a6a270538b1500402a6549f_22.png)
 
 ```python
 chore1 = threading.Thread(target=walk_dog)
@@ -119,22 +107,18 @@ chore3.join()
 print("All chores are complete.")
 ```
 
-![](img/df30b99d4a6a270538b1500402a6549f_24.png)
 
 现在，`print(“All chores are complete.”)` 这行代码会等到所有线程（即所有家务）都完成后才执行。
 
-![](img/df30b99d4a6a270538b1500402a6549f_26.png)
 
 ### 向线程函数传递参数
 
 有时，我们的目标函数需要接收参数。例如，`walk_dog` 函数可能需要知道狗的名字。
 
-![](img/df30b99d4a6a270538b1500402a6549f_28.png)
 
 我们可以通过 `Thread` 构造函数的 `args` 关键字参数来传递参数。`args` 接收一个元组。
 
 
-![](img/df30b99d4a6a270538b1500402a6549f_30.png)
 
 ```python
 def walk_dog(first_name, last_name):
@@ -144,17 +128,14 @@ def walk_dog(first_name, last_name):
 chore1 = threading.Thread(target=walk_dog, args=("Scooby", "Doo",))
 ```
 
-![](img/df30b99d4a6a270538b1500402a6549f_32.png)
 
 **重要提示**：如果只有一个参数，必须在元组末尾加上逗号，例如 `args=(“Scooby”,)`，以向Python表明这是一个元组，而不是一个普通的括号表达式。
 
-![](img/df30b99d4a6a270538b1500402a6549f_34.png)
 
 ---
 
 ### 总结
 
-![](img/df30b99d4a6a270538b1500402a6549f_36.png)
 
 本节课中我们一起学习了Python多线程的基础知识。
 

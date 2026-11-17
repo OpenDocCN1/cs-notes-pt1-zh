@@ -61,13 +61,10 @@ LLVM安装完成后，我们就可以开始构建Serene项目了。项目根目�
 
 该脚本接收子命令作为参数，并执行相应的操作。在运行脚本前，请确保位于Serene项目的根目录下。
 
-![](img/99c2abdffacc17fd11a975f25f75ec1f_1.png)
 
-![](img/99c2abdffacc17fd11a975f25f75ec1f_3.png)
 
 以下是`b`脚本支持的一些重要子命令：
 
-![](img/99c2abdffacc17fd11a975f25f75ec1f_5.png)
 
 *   `./b build`：清理旧构建，重新生成构建系统并从头编译所有内容（Debug模式）。
 *   `./b build-release`：功能同上，但使用Release模式编译。
@@ -76,31 +73,25 @@ LLVM安装完成后，我们就可以开始构建Serene项目了。项目根目�
 *   `./b test`：清理并构建整个项目，然后运行所有测试用例。
 *   `./b memcheck`：使用Valgrind工具构建并运行项目，用于调试内存泄漏问题。
 
-![](img/99c2abdffacc17fd11a975f25f75ec1f_7.png)
 
 ### 示例：构建与运行
 
-![](img/99c2abdffacc17fd11a975f25f75ec1f_9.png)
 
 首先，使用`build`命令进行完整构建：
 
-![](img/99c2abdffacc17fd11a975f25f75ec1f_11.png)
 
 ```bash
 ./b build
 ```
 
-![](img/99c2abdffacc17fd11a975f25f75ec1f_13.png)
 
 如果后续修改了源代码，可以使用`compile`命令进行增量编译，这比重新构建要快得多：
 
-![](img/99c2abdffacc17fd11a975f25f75ec1f_15.png)
 
 ```bash
 ./b compile
 ```
 
-![](img/99c2abdffacc17fd11a975f25f75ec1f_17.png)
 
 编译成功后，可以使用`run`命令来运行编译器。例如，编译一个Serene源文件并输出其MLIR表示：
 

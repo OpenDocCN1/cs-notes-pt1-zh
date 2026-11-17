@@ -2,7 +2,6 @@
 
 ## 概述
 
-![](img/c2925b3789a89f97a5f08986bdf6d900_1.png)
 
 在本节课中，我们将学习如何使用 `ctags` 工具来高效地浏览和管理代码库。`ctags` 能够为代码库建立索引，允许我们在编辑器内快速跳转到函数定义，并返回原处，从而显著提升代码阅读和开发的效率。
 
@@ -59,9 +58,7 @@ get_input    get_input.c    /^get_input() {$/
 
 这需要使用功能更强大的 `exuberant-ctags` 版本。首先确保已安装：
 
-![](img/c2925b3789a89f97a5f08986bdf6d900_3.png)
 
-![](img/c2925b3789a89f97a5f08986bdf6d900_4.png)
 
 ```bash
 # 例如在基于 Debian 的系统上
@@ -74,7 +71,6 @@ sudo apt-get install exuberant-ctags
 ctags -R --c-kinds=+p --fields=+iaS --extra=+q -f ~/global_tags /usr/include /usr/src
 ```
 
-![](img/c2925b3789a89f97a5f08986bdf6d900_6.png)
 
 这个命令会：
 *   `-R`：递归处理目录。
@@ -82,23 +78,17 @@ ctags -R --c-kinds=+p --fields=+iaS --extra=+q -f ~/global_tags /usr/include /us
 *   `-f ~/global_tags`：将输出的 tags 文件保存到主目录下的 `global_tags`。
 *   最后指定要索引的目录路径。
 
-![](img/c2925b3789a89f97a5f08986bdf6d900_8.png)
 
-![](img/c2925b3789a89f97a5f08986bdf6d900_10.png)
 
 ---
 
-![](img/c2925b3789a89f97a5f08986bdf6d900_12.png)
 
-![](img/c2925b3789a89f97a5f08986bdf6d900_13.png)
 
 ## 配置编辑器使用多个 tags 文件
 
-![](img/c2925b3789a89f97a5f08986bdf6d900_15.png)
 
 为了让编辑器同时使用本地项目的 `tags` 文件和全局的 `global_tags` 文件，需要在编辑器配置中设置 `tags` 路径。
 
-![](img/c2925b3789a89f97a5f08986bdf6d900_16.png)
 
 对于 `vim`，可以在 `~/.vimrc` 文件中添加：
 
@@ -108,14 +98,12 @@ set tags=./tags,./TAGS,tags,TAGS,~/global_tags
 
 这样，编辑器会按顺序在这些位置查找 tags 文件。
 
-![](img/c2925b3789a89f97a5f08986bdf6d900_18.png)
 
 配置完成后，你就可以在代码中自由跳转了：
 *   从项目代码跳转到本地函数定义。
 *   从项目代码跳转到标准库函数（如 `fprintf`）的源代码定义。
 *   甚至可以从宏或常量的使用处跳转到其定义（如 `BUFSIZ`）。
 
-![](img/c2925b3789a89f97a5f08986bdf6d900_20.png)
 
 每次跳转都会形成一个栈，连续按 `Ctrl + t` 可以按跳转顺序逐级返回。
 
@@ -129,7 +117,6 @@ set tags=./tags,./TAGS,tags,TAGS,~/global_tags
 
 ## 总结
 
-![](img/c2925b3789a89f97a5f08986bdf6d900_22.png)
 
 本节课中，我们一起学习了 `ctags` 这个强大的代码浏览工具。我们掌握了：
 1.  使用 `ctags` 为本地项目生成索引。

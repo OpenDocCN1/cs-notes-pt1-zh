@@ -8,7 +8,6 @@ SAS高级程序员专项课程：P33：使用PROC SQL创建表结构 🗂️
 
 上一节我们介绍了PROC SQL的基本概念，本节中我们来看看如何基于现有表快速创建新表结构。第一种方法是使用CREATE TABLE语句中的LIKE子句。此方法会复制您在LIKE子句后引用的表的列结构。
 
-![](img/8191ba8e04bc5a33a7526d9329d360e3_1.png)
 
 **核心语法**：
 ```sql
@@ -33,7 +32,6 @@ CREATE TABLE work.high_credit LIKE SQ.cuser (DROP=address phone_number);
 
 ---
 
-![](img/8191ba8e04bc5a33a7526d9329d360e3_3.png)
 
 ### 定义全新的空表
 
@@ -45,7 +43,6 @@ CREATE TABLE work.high_credit LIKE SQ.cuser (DROP=address phone_number);
 *   **长度**：对于字符型列，指定其最大长度。
 *   **格式**：为列指定一个输出格式，例如日期格式。
 
-![](img/8191ba8e04bc5a33a7526d9329d360e3_5.png)
 
 例如，以下CREATE TABLE语句将创建一个包含四列的`employee`表：
 

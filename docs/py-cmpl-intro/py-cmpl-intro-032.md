@@ -2,15 +2,12 @@
 
 在本节课中，我们将要学习Python中一个非常核心的概念：**函数**。函数可以被看作是一段可重复使用的代码块，它能帮助我们避免编写重复的代码，让程序结构更清晰、更易于维护。
 
-![](img/bee196f05b79316ff548e06f4c7ff8b8_1.png)
 
 ## 什么是函数？🤔
 
-![](img/bee196f05b79316ff548e06f4c7ff8b8_3.png)
 
 函数是一个可重复调用的代码块。你可以将函数想象成一个预先打包好的工具，每当需要执行特定任务时，只需“调用”这个工具即可，而无需每次都重写一遍工具内部的运作步骤。
 
-![](img/bee196f05b79316ff548e06f4c7ff8b8_4.png)
 
 要调用一个函数，你需要在函数名后面加上一对圆括号 `()`。
 
@@ -18,7 +15,6 @@
 
 让我们通过一个场景来理解。假设我需要唱三遍“生日快乐歌”。如果不使用函数，我可能需要重复写三遍相同的代码，或者使用循环。
 
-![](img/bee196f05b79316ff548e06f4c7ff8b8_6.png)
 
 以下是重复代码的示例：
 ```python
@@ -27,11 +23,8 @@ print("Happy birthday to you")
 print("Happy birthday to you")
 ```
 
-![](img/bee196f05b79316ff548e06f4c7ff8b8_7.png)
 
-![](img/bee196f05b79316ff548e06f4c7ff8b8_8.png)
 
-![](img/bee196f05b79316ff548e06f4c7ff8b8_9.png)
 
 虽然这样可以完成任务，但代码显得冗长且重复。更好的方法是：将这段代码写一次，然后在需要时重复使用它。这正是函数的作用。
 
@@ -59,17 +52,13 @@ happy_birthday()
 
 ## 向函数传递数据：参数与实参 📤
 
-![](img/bee196f05b79316ff548e06f4c7ff8b8_11.png)
 
 函数的一个强大之处在于，你可以向它传递数据，这些数据被称为**实参**。函数内部接收这些数据的临时变量则被称为**形参**。
 
-![](img/bee196f05b79316ff548e06f4c7ff8b8_13.png)
 
 你可以在调用函数时，将数据放在圆括号内传递进去。例如，我们修改 `happy_birthday` 函数，让它接收一个名字：
 
-![](img/bee196f05b79316ff548e06f4c7ff8b8_15.png)
 
-![](img/bee196f05b79316ff548e06f4c7ff8b8_17.png)
 
 ```python
 def happy_birthday(name):
@@ -83,7 +72,6 @@ happy_birthday("Steve")
 happy_birthday("Joe")
 ```
 
-![](img/bee196f05b79316ff548e06f4c7ff8b8_19.png)
 
 ## 传递多个参数 📦
 
@@ -96,9 +84,7 @@ def happy_birthday(name, age):
     print(f"You are {age} years old")
 ```
 
-![](img/bee196f05b79316ff548e06f4c7ff8b8_21.png)
 
-![](img/bee196f05b79316ff548e06f4c7ff8b8_22.png)
 
 调用时传递两个参数：
 ```python
@@ -109,9 +95,7 @@ happy_birthday("Joe", 40)
 
 **请注意**：形参和实参的顺序非常重要。如果顺序错乱，结果也会出错。
 
-![](img/bee196f05b79316ff548e06f4c7ff8b8_24.png)
 
-![](img/bee196f05b79316ff548e06f4c7ff8b8_25.png)
 
 ## 一个更实用的例子：发票函数 💰
 
@@ -123,7 +107,6 @@ def display_invoice(username, amount, due_date):
     print(f"Your bill of ${amount:.2f} is due on {due_date}")
 ```
 
-![](img/bee196f05b79316ff548e06f4c7ff8b8_27.png)
 
 调用示例：
 ```python
@@ -155,9 +138,7 @@ def divide(x, y):
     return z
 ```
 
-![](img/bee196f05b79316ff548e06f4c7ff8b8_29.png)
 
-![](img/bee196f05b79316ff548e06f4c7ff8b8_31.png)
 
 调用这些函数并将返回值赋给变量：
 ```python
@@ -205,9 +186,7 @@ print(full_name) # 输出：Spongebob Squarepants
 3.  **参数与实参**：调用函数时可以传递数据（实参），函数通过形参来接收这些数据。数量和顺序必须匹配。
 4.  **返回值**：使用 `return` 语句可以将函数计算的结果发送回调用处，这个值可以被赋值给变量或用于其他操作。
 
-![](img/bee196f05b79316ff548e06f4c7ff8b8_33.png)
 
-![](img/bee196f05b79316ff548e06f4c7ff8b8_34.png)
 
 ![](img/bee196f05b79316ff548e06f4c7ff8b8_35.png)
 

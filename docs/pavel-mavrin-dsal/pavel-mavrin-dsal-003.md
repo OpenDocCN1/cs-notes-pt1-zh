@@ -1,28 +1,17 @@
 # 003：快速排序与顺序统计量
 
-![](img/9bac2980c72a4cdddcf698c946ca1b1f_1.png)
 
-![](img/9bac2980c72a4cdddcf698c946ca1b1f_3.png)
 
-![](img/9bac2980c72a4cdddcf698c946ca1b1f_5.png)
 
-![](img/9bac2980c72a4cdddcf698c946ca1b1f_6.png)
 
-![](img/9bac2980c72a4cdddcf698c946ca1b1f_8.png)
 
-![](img/9bac2980c72a4cdddcf698c946ca1b1f_10.png)
 
-![](img/9bac2980c72a4cdddcf698c946ca1b1f_12.png)
 
-![](img/9bac2980c72a4cdddcf698c946ca1b1f_14.png)
 
-![](img/9bac2980c72a4cdddcf698c946ca1b1f_16.png)
 
-![](img/9bac2980c72a4cdddcf698c946ca1b1f_18.png)
 
 在本节课中，我们将要学习一种新的排序算法——快速排序。它与我们之前学过的算法有所不同，因为它是一种随机化算法。首先，我们将探讨什么是随机化算法以及如何衡量其性能。然后，我们会详细学习快速排序的原理和实现。最后，我们还会了解一个与排序紧密相关的问题：如何在未排序的数组中快速找到第K小的元素（顺序统计量问题）。
 
-![](img/9bac2980c72a4cdddcf698c946ca1b1f_20.png)
 
 ## 什么是随机化算法？
 
@@ -30,7 +19,6 @@
 
 通常，一个算法有输入数据和输出数据。例如，排序算法的输入是一个数组，输出是排序后的同一个数组。
 
-![](img/9bac2980c72a4cdddcf698c946ca1b1f_10.png)
 
 随机化算法则多了一个输入源：随机数生成器。
 

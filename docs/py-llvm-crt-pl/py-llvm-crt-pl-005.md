@@ -169,9 +169,7 @@ def _parse_let_statement(self) -> LetStatement | None:
 
 ## 符号表（环境）的实现
 
-![](img/a0d778095e052556de77a9f6fc132d41_1.png)
 
-![](img/a0d778095e052556de77a9f6fc132d41_3.png)
 
 为了管理变量，我们需要创建一个 `Environment` 类作为符号表。
 
@@ -269,11 +267,9 @@ def _resolve_value(self, node: ASTNode) -> Tuple[ir.Value, ir.Type]:
 
 ## 测试与验证
 
-![](img/a0d778095e052556de77a9f6fc132d41_5.png)
 
 现在，我们可以测试我们的实现了。以下是一些有效的示例代码：
 
-![](img/a0d778095e052556de77a9f6fc132d41_6.png)
 
 ```
 let a: int = 10;

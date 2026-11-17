@@ -79,9 +79,7 @@ widget.Bind(event, handler_function)
 *   `event`：要监听的事件类型，例如 `wx.EVT_BUTTON` 表示按钮点击事件。
 *   `handler_function`：当事件发生时要执行的函数。
 
-![](img/79feeaec1bb747dabca4b6ceb32e936a_1.png)
 
-![](img/79feeaec1bb747dabca4b6ceb32e936a_2.png)
 
 ### 实现文件打开与保存功能
 

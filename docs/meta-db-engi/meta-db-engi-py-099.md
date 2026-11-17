@@ -91,7 +91,6 @@ M和G还需要使用MySQL Workbench进行反向工程来构建数据模型。这
 
 MySQL Workbench会从内部的MySQL架构创建新的ER图。你可以将数据模型打印为PNG图像，与他人分享，或者应用更改并通过正向工程功能将其推送到数据库。
 
-![](img/20d1faf0496822167f5edb62e6b01174_1.png)
 
 ## 总结
 
@@ -101,6 +100,5 @@ MySQL Workbench会从内部的MySQL架构创建新的ER图。你可以将数据�
 
 做得好！
 
-![](img/20d1faf0496822167f5edb62e6b01174_3.png)
 
 ![](img/20d1faf0496822167f5edb62e6b01174_3.png)

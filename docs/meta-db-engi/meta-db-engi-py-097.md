@@ -8,11 +8,9 @@
 
 ## MySQL Workbench简介
 
-![](img/c01c6a3abe0c3836c31bcfbdcaae30f9_1.png)
 
 MySQL Workbench是由Oracle开发的一款统一的数据库建模与管理可视化工具。它包含多个对创建、编辑和管理数据库非常有用的关键功能。
 
-![](img/c01c6a3abe0c3836c31bcfbdcaae30f9_3.png)
 
 以下是MySQL Workbench的一些关键特性：
 
@@ -22,7 +20,6 @@ MySQL Workbench是由Oracle开发的一款统一的数据库建模与管理可�
 *   **代码辅助功能**：它为编写SQL语句提供了自动完成和高亮显示功能。
 *   **数据迁移支持**：它便于在不同版本的MySQL之间，以及MySQL与其他关系型数据库系统之间进行数据迁移。
 
-![](img/c01c6a3abe0c3836c31bcfbdcaae30f9_5.png)
 
 在本课程中，您将使用MySQL Workbench来建模和管理MySQL数据库中的数据。但首先，您需要在您的操作系统上下载、安装和设置MySQL Workbench。
 
@@ -32,7 +29,6 @@ MySQL Workbench是由Oracle开发的一款统一的数据库建模与管理可�
 
 以下是安装步骤：
 
-![](img/c01c6a3abe0c3836c31bcfbdcaae30f9_7.png)
 
 1.  **下载**：从 `dev.mysql.com/downloads` 下载一份MySQL Workbench。请确保为您特定的操作系统下载正确的版本。
 2.  **安装**：下载完成后，双击文件在您的计算机上进行安装。
@@ -43,31 +39,25 @@ MySQL Workbench是由Oracle开发的一款统一的数据库建模与管理可�
 
 成功安装MySQL Workbench后，下一步就是启动它并建立数据库连接。我们将从打开软件和了解主界面开始。
 
-![](img/c01c6a3abe0c3836c31bcfbdcaae30f9_9.png)
 
 启动程序并查看MySQL Workbench主屏幕。主屏幕包含欢迎信息、文档、博客和讨论论坛的链接，并提供对各种工具和功能的访问。
 
-![](img/c01c6a3abe0c3836c31bcfbdcaae30f9_11.png)
 
 您可以使用主屏幕侧边栏访问MySQL连接、模型和MySQL Workbench迁移向导。选择“连接”选项可以查看连接到本地和远程MySQL实例的列表。
 
-![](img/c01c6a3abe0c3836c31bcfbdcaae30f9_13.png)
 
 连接功能可用于加载、配置、分组和查看每个MySQL连接的信息。
 
 “模型”部分显示最近使用的模型。每个条目列出了模型最后打开的日期和时间及其关联的数据库。您也可以选择加号来添加新模型，选择文件夹按钮来浏览和打开已保存的模型，或选择“更多”按钮来访问其他命令。
 
-![](img/c01c6a3abe0c3836c31bcfbdcaae30f9_15.png)
 
 您还可以打开“迁移”选项卡，以显示使用向导的先决条件概述、启动迁移过程、打开ODBC管理器或查看文档。
 
-![](img/c01c6a3abe0c3836c31bcfbdcaae30f9_16.png)
 
 ### 创建新用户
 
 创建新用户是连接到MySQL数据库最安全的方式，因为您可以管理用户角色和权限。请确保已选择MySQL连接。
 
-![](img/c01c6a3abe0c3836c31bcfbdcaae30f9_18.png)
 
 以下是创建新用户的步骤：
 
@@ -83,7 +73,6 @@ MySQL Workbench是由Oracle开发的一款统一的数据库建模与管理可�
 
 ### 创建新连接
 
-![](img/c01c6a3abe0c3836c31bcfbdcaae30f9_20.png)
 
 创建用户后，下一步是从MySQL Workbench主屏幕创建新的MySQL连接。
 
@@ -98,7 +87,6 @@ MySQL Workbench是由Oracle开发的一款统一的数据库建模与管理可�
 4.  **测试连接**：单击“测试连接”按钮以检查设置是否有效。系统会提示您输入为 `admin1` 用户设置的密码。
 5.  **保存连接**：如果设置正确，MySQL Workbench应确认连接成功。如果没有，请返回表单并检查您输入的信息是否正确。选择“确定”以保存连接。
 
-![](img/c01c6a3abe0c3836c31bcfbdcaae30f9_22.png)
 
 您的新MySQL连接已添加到主屏幕。现在，您可以使用此连接开始处理数据库模式和SQL查询。
 

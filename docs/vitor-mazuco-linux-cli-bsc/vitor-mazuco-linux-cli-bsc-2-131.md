@@ -2,11 +2,9 @@
 
 在本节课中，我们将要学习MongoDB中一个重要的概念——封顶集合。我们将了解它的定义、作用、创建方法以及如何将普通集合转换为封顶集合。
 
-![](img/9c3638cf1c9311a737e1f335567cbfa5_1.png)
 
 ## 理解封顶集合概念
 
-![](img/9c3638cf1c9311a737e1f335567cbfa5_2.png)
 
 首先，我们来理解什么是MongoDB中的封顶集合概念，以及它如何发挥作用。
 
@@ -32,7 +30,6 @@
 db.createCollection("集合名", { capped: true, size: 字节数 })
 ```
 
-![](img/9c3638cf1c9311a737e1f335567cbfa5_4.png)
 
 例如，创建一个名为 `cappedLogs`、大小限制为20000字节的封顶集合：
 ```javascript
@@ -47,7 +44,6 @@ db.createCollection("cappedLogs", { capped: true, size: 20000 })
 db.createCollection("cappedLogs", { capped: true, size: 20000, max: 3000 })
 ```
 
-![](img/9c3638cf1c9311a737e1f335567cbfa5_6.png)
 
 当你以此方式创建集合时，你将把集合限制在最多3000个文档。当插入新文档导致数量超过此限制时，最旧的文档将被自动移除。这是一种非常有趣的集合管理方式。
 
@@ -82,11 +78,9 @@ db.cappedLogs.isCapped()
     db.normalCollection.isCapped() // 此时应返回 false
     ```
 
-![](img/9c3638cf1c9311a737e1f335567cbfa5_8.png)
 
 现在，这个普通集合的 `isCapped()` 值为 `false`。接下来，我们将测试如何转换这种类型的集合。
 
-![](img/9c3638cf1c9311a737e1f335567cbfa5_10.png)
 
 我们将使用 `convertToCapped` 命令来将一个非封顶集合转换为封顶集合。命令格式如下：
 ```javascript
@@ -103,7 +97,6 @@ db.runCommand({ "convertToCapped": "normalCollection", size: 10000 })
 db.normalCollection.isCapped() // 此时应返回 true
 ```
 
-![](img/9c3638cf1c9311a737e1f335567cbfa5_12.png)
 
 ![](img/9c3638cf1c9311a737e1f335567cbfa5_13.png)
 

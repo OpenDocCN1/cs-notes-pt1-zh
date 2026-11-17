@@ -25,7 +25,6 @@
 
 ![](img/d26cb076b3efb95a18fba6f8d4628c80_1.png)
 
-![](img/d26cb076b3efb95a18fba6f8d4628c80_2.png)
 
 我们涵盖了员工入职的最佳实践：
 *   **入职流程方法**：系统化地引导新员工融入组织和岗位。
@@ -43,7 +42,6 @@
 
 ---
 
-![](img/d26cb076b3efb95a18fba6f8d4628c80_4.png)
 
 ![](img/d26cb076b3efb95a18fba6f8d4628c80_5.png)
 

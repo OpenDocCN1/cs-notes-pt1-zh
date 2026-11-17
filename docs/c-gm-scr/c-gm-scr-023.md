@@ -34,9 +34,7 @@
 
 ![](img/c990a1d1bc1607ec62b9419da49f4cdf_31.png)
 
-![](img/c990a1d1bc1607ec62b9419da49f4cdf_33.png)
 
-![](img/c990a1d1bc1607ec62b9419da49f4cdf_35.png)
 
 ![](img/c990a1d1bc1607ec62b9419da49f4cdf_37.png)
 
@@ -80,9 +78,7 @@
 
 ## 概述与目标 🎯
 
-![](img/c990a1d1bc1607ec62b9419da49f4cdf_72.png)
 
-![](img/c990a1d1bc1607ec62b9419da49f4cdf_74.png)
 
 ![](img/c990a1d1bc1607ec62b9419da49f4cdf_76.png)
 
@@ -102,22 +98,18 @@
 
 ![](img/c990a1d1bc1607ec62b9419da49f4cdf_88.png)
 
-![](img/c990a1d1bc1607ec62b9419da49f4cdf_90.png)
 
-![](img/c990a1d1bc1607ec62b9419da49f4cdf_92.png)
 
 ![](img/c990a1d1bc1607ec62b9419da49f4cdf_94.png)
 
 ![](img/c990a1d1bc1607ec62b9419da49f4cdf_96.png)
 
-![](img/c990a1d1bc1607ec62b9419da49f4cdf_97.png)
 
 以下是今天的主要任务：
 1.  **修复音频系统**：上次直播我们改进了音频，但效果不佳，并且在直播结束时出现了崩溃，今天需要快速修复。
 2.  **进行一些打磨工作**：可能包括调整游戏难度、优化视觉效果等。
 3.  **添加配置选项**：例如解锁帧率限制。
 
-![](img/c990a1d1bc1607ec62b9419da49f4cdf_99.png)
 
 ![](img/c990a1d1bc1607ec62b9419da49f4cdf_101.png)
 
@@ -129,9 +121,7 @@
 
 如果你希望跟随学习，可以在我的网站下载游戏和源代码。你也可以在YouTube上观看整个开发过程的直播录像。
 
-![](img/c990a1d1bc1607ec62b9419da49f4cdf_109.png)
 
-![](img/c990a1d1bc1607ec62b9419da49f4cdf_111.png)
 
 ![](img/c990a1d1bc1607ec62b9419da49f4cdf_113.png)
 
@@ -171,11 +161,8 @@
 
 ![](img/c990a1d1bc1607ec62b9419da49f4cdf_145.png)
 
-![](img/c990a1d1bc1607ec62b9419da49f4cdf_147.png)
 
-![](img/c990a1d1bc1607ec62b9419da49f4cdf_149.png)
 
-![](img/c990a1d1bc1607ec62b9419da49f4cdf_151.png)
 
 ![](img/c990a1d1bc1607ec62b9419da49f4cdf_152.png)
 
@@ -211,15 +198,11 @@
 
 ![](img/c990a1d1bc1607ec62b9419da49f4cdf_177.png)
 
-![](img/c990a1d1bc1607ec62b9419da49f4cdf_179.png)
 
-![](img/c990a1d1bc1607ec62b9419da49f4cdf_181.png)
 
-![](img/c990a1d1bc1607ec62b9419da49f4cdf_183.png)
 
 ### 核心问题分析
 
-![](img/c990a1d1bc1607ec62b9419da49f4cdf_185.png)
 
 ![](img/c990a1d1bc1607ec62b9419da49f4cdf_187.png)
 
@@ -239,9 +222,7 @@
 
 ![](img/c990a1d1bc1607ec62b9419da49f4cdf_201.png)
 
-![](img/c990a1d1bc1607ec62b9419da49f4cdf_203.png)
 
-![](img/c990a1d1bc1607ec62b9419da49f4cdf_205.png)
 
 ![](img/c990a1d1bc1607ec62b9419da49f4cdf_207.png)
 
@@ -281,7 +262,6 @@
 
 ![](img/c990a1d1bc1607ec62b9419da49f4cdf_238.png)
 
-![](img/c990a1d1bc1607ec62b9419da49f4cdf_239.png)
 
 ![](img/c990a1d1bc1607ec62b9419da49f4cdf_241.png)
 
@@ -311,7 +291,6 @@
 
 ![](img/c990a1d1bc1607ec62b9419da49f4cdf_267.png)
 
-![](img/c990a1d1bc1607ec62b9419da49f4cdf_269.png)
 
 ![](img/c990a1d1bc1607ec62b9419da49f4cdf_271.png)
 
@@ -321,9 +300,7 @@
 
 为了解决这个问题，我们需要在访问共享的 `playing_sound` 数据时进行同步。我们将为每个 `playing_sound` 结构体添加一个简单的锁机制。这里我们使用一个原子操作来实现一个“自旋锁”。
 
-![](img/c990a1d1bc1607ec62b9419da49f4cdf_276.png)
 
-![](img/c990a1d1bc1607ec62b9419da49f4cdf_278.png)
 
 ![](img/c990a1d1bc1607ec62b9419da49f4cdf_280.png)
 
@@ -343,7 +320,6 @@
 
 ![](img/c990a1d1bc1607ec62b9419da49f4cdf_296.png)
 
-![](img/c990a1d1bc1607ec62b9419da49f4cdf_297.png)
 
 ![](img/c990a1d1bc1607ec62b9419da49f4cdf_299.png)
 
@@ -353,7 +329,6 @@
 
 ![](img/c990a1d1bc1607ec62b9419da49f4cdf_305.png)
 
-![](img/c990a1d1bc1607ec62b9419da49f4cdf_307.png)
 
 ![](img/c990a1d1bc1607ec62b9419da49f4cdf_309.png)
 
@@ -363,7 +338,6 @@
 
 ![](img/c990a1d1bc1607ec62b9419da49f4cdf_315.png)
 
-![](img/c990a1d1bc1607ec62b9419da49f4cdf_317.png)
 
 ![](img/c990a1d1bc1607ec62b9419da49f4cdf_319.png)
 
@@ -375,9 +349,7 @@
 
 ![](img/c990a1d1bc1607ec62b9419da49f4cdf_325.png)
 
-![](img/c990a1d1bc1607ec62b9419da49f4cdf_327.png)
 
-![](img/c990a1d1bc1607ec62b9419da49f4cdf_329.png)
 
 ![](img/c990a1d1bc1607ec62b9419da49f4cdf_331.png)
 
@@ -542,9 +514,7 @@ for(u32 sound_index = 0; sound_index < immutable_sound_count; ++sound_index) {
 
 ![](img/c990a1d1bc1607ec62b9419da49f4cdf_444.png)
 
-![](img/c990a1d1bc1607ec62b9419da49f4cdf_446.png)
 
-![](img/c990a1d1bc1607ec62b9419da49f4cdf_448.png)
 
 ![](img/c990a1d1bc1607ec62b9419da49f4cdf_450.png)
 
@@ -601,7 +571,6 @@ for(u32 sound_index = 0; sound_index < immutable_sound_count; ++sound_index) {
 
 ![](img/c990a1d1bc1607ec62b9419da49f4cdf_496.png)
 
-![](img/c990a1d1bc1607ec62b9419da49f4cdf_498.png)
 
 ![](img/c990a1d1bc1607ec62b9419da49f4cdf_500.png)
 
@@ -609,9 +578,7 @@ for(u32 sound_index = 0; sound_index < immutable_sound_count; ++sound_index) {
 
 ## 游戏打磨与优化 ✨
 
-![](img/c990a1d1bc1607ec62b9419da49f4cdf_503.png)
 
-![](img/c990a1d1bc1607ec62b9419da49f4cdf_505.png)
 
 ![](img/c990a1d1bc1607ec62b9419da49f4cdf_507.png)
 
@@ -619,9 +586,7 @@ for(u32 sound_index = 0; sound_index < immutable_sound_count; ++sound_index) {
 
 ![](img/c990a1d1bc1607ec62b9419da49f4cdf_511.png)
 
-![](img/c990a1d1bc1607ec62b9419da49f4cdf_513.png)
 
-![](img/c990a1d1bc1607ec62b9419da49f4cdf_515.png)
 
 解决了核心的音频崩溃后，我们可以进行一些提升游戏体验的打磨工作。
 
@@ -637,7 +602,6 @@ for(u32 sound_index = 0; sound_index < immutable_sound_count; ++sound_index) {
 
 ![](img/c990a1d1bc1607ec62b9419da49f4cdf_525.png)
 
-![](img/c990a1d1bc1607ec62b9419da49f4cdf_527.png)
 
 在游戏主菜单中，我们发现分数数字没有像其他文本一样居中显示，这影响了视觉效果。
 
@@ -729,11 +693,8 @@ p.x = center_x - total_width/2 + last_char_width/2;
 
 ![](img/c990a1d1bc1607ec62b9419da49f4cdf_589.png)
 
-![](img/c990a1d1bc1607ec62b9419da49f4cdf_591.png)
 
-![](img/c990a1d1bc1607ec62b9419da49f4cdf_593.png)
 
-![](img/c990a1d1bc1607ec62b9419da49f4cdf_595.png)
 
 ![](img/c990a1d1bc1607ec62b9419da49f4cdf_597.png)
 
@@ -745,19 +706,15 @@ p.x = center_x - total_width/2 + last_char_width/2;
 
 ![](img/c990a1d1bc1607ec62b9419da49f4cdf_605.png)
 
-![](img/c990a1d1bc1607ec62b9419da49f4cdf_607.png)
 
 为了让游戏运行更平滑，我们之前锁定了帧率。现在，我们通过游戏的配置文件（.fig）来提供是否锁定帧率的选项，让玩家可以自行选择。
 
-![](img/c990a1d1bc1607ec62b9419da49f4cdf_609.png)
 
 ![](img/c990a1d1bc1607ec62b9419da49f4cdf_610.png)
 
 ![](img/c990a1d1bc1607ec62b9419da49f4cdf_612.png)
 
-![](img/c990a1d1bc1607ec62b9419da49f4cdf_614.png)
 
-![](img/c990a1d1bc1607ec62b9419da49f4cdf_616.png)
 
 ![](img/c990a1d1bc1607ec62b9419da49f4cdf_618.png)
 
@@ -850,7 +807,6 @@ while(running) {
 *   **鼠标光标**：我们改进了逻辑，在游戏窗口激活时，每帧都将鼠标光标重置到屏幕中心，以防止它意外移出窗口。虽然在全屏双显示器下可能仍有极端情况，但这是一个常见的解决方案。
 *   **俄罗斯方块关卡反馈**：在俄罗斯方块关卡中，当方块旋转时，我们添加了声音效果和粒子特效，让游戏反馈更加清晰和有趣。
 
-![](img/c990a1d1bc1607ec62b9419da49f4cdf_679.png)
 
 ![](img/c990a1d1bc1607ec62b9419da49f4cdf_681.png)
 
@@ -926,7 +882,6 @@ while(running) {
 
 ![](img/c990a1d1bc1607ec62b9419da49f4cdf_741.png)
 
-![](img/c990a1d1bc1607ec62b9419da49f4cdf_743.png)
 
 ![](img/c990a1d1bc1607ec62b9419da49f4cdf_745.png)
 

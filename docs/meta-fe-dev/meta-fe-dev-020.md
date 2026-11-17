@@ -1,6 +1,5 @@
 # 20：父子数据流 👨‍👦
 
-![](img/669dc4bfe9cde169990ec243e71eb219_1.png)
 
 在本节课中，我们将要学习 React 中一个核心概念：父子组件之间的数据流。我们将探讨如何通过父组件向子组件传递数据，从而避免代码重复，并实现数据的高效更新。
 
@@ -50,7 +49,6 @@ export default PromoHeading;
 
 此外，请考虑以下可能性：在多个组件中输入相同文本时，你可能会犯打字错误。另外，如果你的老板决定再次更改折扣呢？这意味着你将不得不再次更改所有相关组件中的文本。
 
-![](img/669dc4bfe9cde169990ec243e71eb219_3.png)
 
 ## 建立单一数据源
 
@@ -58,7 +56,6 @@ export default PromoHeading;
 
 现在，让我们使用这种方法来更新 `Promo` 组件。首先，你创建一个单一数据源：一个名为 `data` 的 JavaScript 对象。
 
-![](img/669dc4bfe9cde169990ec243e71eb219_5.png)
 
 ```jsx
 const data = {
@@ -99,11 +96,9 @@ function PromoHeading(props) {
 
 了解了这一点，你现在可以以类似 `PromoHeading` 组件的方式编写 `Sidebar` 组件和 `Footer` 组件。
 
-![](img/669dc4bfe9cde169990ec243e71eb219_7.png)
 
 ## 数据流的单向性
 
-![](img/669dc4bfe9cde169990ec243e71eb219_9.png)
 
 请记住，在 React 中，**props 数据总是从父组件流向子组件**。这种单向数据流确保了数据的可预测性和可维护性。
 

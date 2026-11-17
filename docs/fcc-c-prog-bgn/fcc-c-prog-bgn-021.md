@@ -115,7 +115,6 @@ printf("%s\n", student2.name); // 输出 Pam
 
 ## 总结
 
-![](img/0dba5aeedaaf6d07d17a39cbd30e5f62_5.png)
 
 ![](img/0dba5aeedaaf6d07d17a39cbd30e5f62_6.png)
 

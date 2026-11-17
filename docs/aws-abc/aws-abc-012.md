@@ -8,13 +8,10 @@
 
 ![](img/6976cf488686c0fa7da8fdbcb1869055_1.png)
 
-![](img/6976cf488686c0fa7da8fdbcb1869055_2.png)
 
 AWS Lambda允许您创建所谓的**AWS Lambda函数**。这些函数包含您的代码，并在响应事件或触发器时运行。这意味着Lambda函数不会像托管在Amazon EC2等地方的应用程序那样持续运行代码。相反，您的代码仅在需要运行时才响应事件执行。
 
-![](img/6976cf488686c0fa7da8fdbcb1869055_3.png)
 
-![](img/6976cf488686c0fa7da8fdbcb1869055_4.png)
 
 ![](img/6976cf488686c0fa7da8fdbcb1869055_5.png)
 
@@ -22,15 +19,12 @@ AWS Lambda允许您创建所谓的**AWS Lambda函数**。这些函数包含您�
 
 Lambda函数的最长运行时间可达15分钟。您可以将函数的超时时间配置为1秒到15分钟之间的任意值。
 
-![](img/6976cf488686c0fa7da8fdbcb1869055_7.png)
 
-![](img/6976cf488686c0fa7da8fdbcb1869055_8.png)
 
 ![](img/6976cf488686c0fa7da8fdbcb1869055_9.png)
 
 ![](img/6976cf488686c0fa7da8fdbcb1869055_10.png)
 
-![](img/6976cf488686c0fa7da8fdbcb1869055_11.png)
 
 以下是Lambda函数的一些典型应用场景：
 *   文件处理应用
@@ -47,9 +41,7 @@ Lambda函数的最长运行时间可达15分钟。您可以将函数的超时时
 
 ![](img/6976cf488686c0fa7da8fdbcb1869055_13.png)
 
-![](img/6976cf488686c0fa7da8fdbcb1869055_14.png)
 
-![](img/6976cf488686c0fa7da8fdbcb1869055_15.png)
 
 ![](img/6976cf488686c0fa7da8fdbcb1869055_16.png)
 
@@ -75,23 +67,17 @@ Lambda函数的最长运行时间可达15分钟。您可以将函数的超时时
 
 一旦您的Lambda函数被调用，AWS Lambda服务将启动您的代码，并在一个称为**执行环境**的单元中运行它。执行环境为您的Lambda函数提供了一个安全且隔离的运行时环境。在合理的情况下，执行环境会被重复使用，但管理执行环境生命周期的整个过程由AWS服务自身管理，而非由您管理。
 
-![](img/6976cf488686c0fa7da8fdbcb1869055_21.png)
 
 ![](img/6976cf488686c0fa7da8fdbcb1869055_22.png)
 
 ![](img/6976cf488686c0fa7da8fdbcb1869055_23.png)
 
-![](img/6976cf488686c0fa7da8fdbcb1869055_24.png)
 
 您的Lambda函数的扩展由AWS处理，这是一件好事，因为它减轻了您的一部分运维负担。但您无法通过配置来控制Lambda函数扩展的某些方面。
 
-![](img/6976cf488686c0fa7da8fdbcb1869055_25.png)
 
-![](img/6976cf488686c0fa7da8fdbcb1869055_26.png)
 
-![](img/6976cf488686c0fa7da8fdbcb1869055_27.png)
 
-![](img/6976cf488686c0fa7da8fdbcb1869055_28.png)
 
 ## 总结 📝
 

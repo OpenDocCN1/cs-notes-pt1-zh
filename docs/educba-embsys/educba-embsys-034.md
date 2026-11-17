@@ -1,14 +1,10 @@
 # 034：Switch Case 练习解答 第1部分
 
-![](img/a1f492fc4ab90a4dbb4443bd995becfa_0.png)
 
-![](img/a1f492fc4ab90a4dbb4443bd995becfa_1.png)
 
 ## 概述
 
-![](img/a1f492fc4ab90a4dbb4443bd995becfa_3.png)
 
-![](img/a1f492fc4ab90a4dbb4443bd995becfa_4.png)
 
 在本节课中，我们将学习如何使用C语言中的`switch-case`语句来构建一个简单的几何图形面积计算程序。我们将通过一个具体的编程练习，实现根据用户输入的不同代码来计算圆形、三角形和梯形的面积。
 

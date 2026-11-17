@@ -20,9 +20,7 @@ mkdir /backups
 
 ## 执行完整备份
 
-![](img/a8dbc6a07138715c52f8a598e2a8ede8_3.png)
 
-![](img/a8dbc6a07138715c52f8a598e2a8ede8_4.png)
 
 创建好目录后，就可以运行 `mongodump` 命令来备份整个MongoDB实例了。
 

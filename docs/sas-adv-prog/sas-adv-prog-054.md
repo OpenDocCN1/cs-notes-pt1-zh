@@ -10,71 +10,54 @@
 
 我们运行查询并查看结果。
 
-![](img/232717e0e2862788e9ac0adbca4b814e_1.png)
 
 请注意观察两个 `account_id` 列。它们完全相同吗？
 
-![](img/232717e0e2862788e9ac0adbca4b814e_1.png)
 
 可以看到一些差异：有些行两个值都缺失，有些行两个值都有。有时左边的值缺失，有时右边的值缺失。这是因为我们同时从两个表中选择了 `account_id` 列。我们的目标是合并这两列。
 
 ---
 
-![](img/232717e0e2862788e9ac0adbca4b814e_3.png)
 
 我将移除 `T.account_id`，即来自 `small_transaction` 表的账户 ID。然后运行查询。
 
 ---
 
-![](img/232717e0e2862788e9ac0adbca4b814e_3.png)
 
-![](img/232717e0e2862788e9ac0adbca4b814e_5.png)
 
 现在你看到有多少个缺失的 `account_id` 值？
 
 ---
 
-![](img/232717e0e2862788e9ac0adbca4b814e_5.png)
 
-![](img/232717e0e2862788e9ac0adbca4b814e_7.png)
 
-![](img/232717e0e2862788e9ac0adbca4b814e_7.png)
 
 我看到有五个。让我们回到代码，改为选择 `T.account_id`，即交易表的账户 ID。
 
 ---
 
-![](img/232717e0e2862788e9ac0adbca4b814e_9.png)
 
-![](img/232717e0e2862788e9ac0adbca4b814e_9.png)
 
 我们将代码中的 `C` 改为 `T`。
 
-![](img/232717e0e2862788e9ac0adbca4b814e_11.png)
 
 ---
 
-![](img/232717e0e2862788e9ac0adbca4b814e_11.png)
 
 然后运行查询。现在我看到 `account_id` 有三个缺失值。
 
-![](img/232717e0e2862788e9ac0adbca4b814e_13.png)
 
 因此，根据你选择哪个 `account_id`，你会得到不同的值。
 
-![](img/232717e0e2862788e9ac0adbca4b814e_15.png)
 
 ---
 
-![](img/232717e0e2862788e9ac0adbca4b814e_13.png)
 
 我们可以使用 `COALESCE` 函数来合并这两个列。
 
 ---
 
-![](img/232717e0e2862788e9ac0adbca4b814e_15.png)
 
-![](img/232717e0e2862788e9ac0adbca4b814e_17.png)
 
 回到编辑器，使用 `COALESCE` 函数。我们将两个 `account_id` 作为参数传入。
 
@@ -84,7 +67,6 @@
 
 ---
 
-![](img/232717e0e2862788e9ac0adbca4b814e_17.png)
 
 现在查看 `account_id` 列，可以看到我们只有一个缺失值。
 
@@ -100,7 +82,6 @@
 
 ---
 
-![](img/232717e0e2862788e9ac0adbca4b814e_19.png)
 
 ---
 

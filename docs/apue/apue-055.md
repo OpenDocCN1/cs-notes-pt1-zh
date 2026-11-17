@@ -1,10 +1,8 @@
 # 055：Week 09, Segment 3 - INET域中的数据报套接字 🔌
 
-![](img/97fccfd7aeb227ab36ebca2e1bd20c12_1.png)
 
 在本节课中，我们将学习如何在互联网域中使用数据报套接字进行进程间通信。我们将通过一个具体的代码示例，演示如何创建UDP套接字，实现两个不同主机之间的通信，并分析网络数据包的传输过程。
 
-![](img/97fccfd7aeb227ab36ebca2e1bd20c12_3.png)
 
 ---
 
@@ -37,7 +35,6 @@ bind(sockfd, (struct sockaddr *) &servaddr, sizeof(servaddr));
 getsockname(sockfd, (struct sockaddr *) &servaddr, &len);
 ```
 
-![](img/97fccfd7aeb227ab36ebca2e1bd20c12_5.png)
 
 接下来，我们想打印这个端口号。但我们必须小心，首先需要将其从网络字节序转换为主机字节序。TCP/IP网络规定使用大端字节序。为了方便，我们使用`ntohs`和`htons`等函数来处理转换，这些函数在大端系统上可能只是空操作。
 ```c
@@ -73,7 +70,6 @@ sendto(sockfd, msg, strlen(msg), 0, (struct sockaddr *) &servaddr, sizeof(servad
 
 为了观察数据包的发送，我们使用`tcpdump`工具捕获并显示本机与远程主机之间的所有数据包。当我们发送消息时，可以看到UDP数据包被成功发送。如果我们重复发送，而读取器已终止，我们不仅会看到UDP数据包被发出，还会从远程端收到一个ICMP数据包，通知我们目标端口不可达。这个错误发生在UDP上下文之外。
 
-![](img/97fccfd7aeb227ab36ebca2e1bd20c12_7.png)
 
 ---
 
@@ -95,7 +91,6 @@ sendto(sockfd, msg, strlen(msg), 0, (struct sockaddr *) &servaddr, sizeof(servad
 
 首先，尝试让读取器工具更用户友好，允许用户指定IP地址和端口号。
 
-![](img/97fccfd7aeb227ab36ebca2e1bd20c12_9.png)
 
 其次，尝试使用`ntohs`和`htons`函数，看看如果不使用这些函数会发生什么。
 

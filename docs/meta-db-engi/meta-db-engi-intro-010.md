@@ -8,7 +8,6 @@ SQL是与数据库交互的标准语言。与其他编程语言一样，需要�
 
 ## 使用DDL创建数据库和表
 
-![](img/55e0ab481500487c56869c494928274f_1.png)
 
 上一节我们介绍了SQL的基本概念，本节中我们来看看如何使用数据定义语言（DDL）来构建数据库的结构。
 
@@ -26,13 +25,11 @@ CREATE DATABASE database_name;
 CREATE DATABASE College;
 ```
 
-![](img/55e0ab481500487c56869c494928274f_3.png)
 
 创建数据库后，下一步是创建表。😊
 
 创建表同样使用DDL，语法如下：
 
-![](img/55e0ab481500487c56869c494928274f_5.png)
 
 ```sql
 CREATE TABLE table_name (
@@ -44,7 +41,6 @@ CREATE TABLE table_name (
 
 例如，在“College”数据库中创建一个“student”表，用于存储学生信息：
 
-![](img/55e0ab481500487c56869c494928274f_7.png)
 
 ```sql
 CREATE TABLE student (
@@ -63,11 +59,9 @@ CREATE TABLE student (
 
 DML用于插入、更新和删除数据库中的记录。
 
-![](img/55e0ab481500487c56869c494928274f_9.png)
 
 要向表中插入数据，使用 `INSERT INTO` 语句。其语法是插入一行数据到指定表中。
 
-![](img/55e0ab481500487c56869c494928274f_11.png)
 
 以下是插入数据的基本语法：
 
@@ -76,7 +70,6 @@ INSERT INTO table_name (column1, column2, ...)
 VALUES (value1, value2, ...);
 ```
 
-![](img/55e0ab481500487c56869c494928274f_13.png)
 
 例如，向“student”表中添加一名学生的数据：
 
@@ -89,7 +82,6 @@ VALUES (1, ‘John‘, ‘Murphy‘, ‘1999-05-15‘);
 
 以下是更新数据的基本语法：
 
-![](img/55e0ab481500487c56869c494928274f_15.png)
 
 ```sql
 UPDATE table_name
@@ -99,7 +91,6 @@ WHERE condition;
 
 例如，将ID为2的学生的出生日期更新为新的日期：
 
-![](img/55e0ab481500487c56869c494928274f_17.png)
 
 ```sql
 UPDATE student
@@ -109,11 +100,9 @@ WHERE ID = 2;
 
 如果需要从表中删除数据，可以使用 `DELETE` 语句。😊
 
-![](img/55e0ab481500487c56869c494928274f_19.png)
 
 以下是删除数据的基本语法：
 
-![](img/55e0ab481500487c56869c494928274f_21.png)
 
 ```sql
 DELETE FROM table_name
@@ -122,14 +111,12 @@ WHERE condition;
 
 例如，删除ID为3的学生记录：
 
-![](img/55e0ab481500487c56869c494928274f_23.png)
 
 ```sql
 DELETE FROM student
 WHERE ID = 3;
 ```
 
-![](img/55e0ab481500487c56869c494928274f_25.png)
 
 执行此语句后，该学生的数据将从表中移除。
 
@@ -139,7 +126,6 @@ WHERE ID = 3;
 
 这时就需要用到SQL的数据查询语言（DQL）。DQL的主要语句是 `SELECT`，顾名思义，它用于从数据库中选择数据。
 
-![](img/55e0ab481500487c56869c494928274f_27.png)
 
 一个 `SELECT` 语句的基本语法如下：
 
@@ -149,7 +135,6 @@ FROM table_name
 WHERE condition;
 ```
 
-![](img/55e0ab481500487c56869c494928274f_29.png)
 
 例如，查询“student”表，找出ID为1的学生的姓名：
 

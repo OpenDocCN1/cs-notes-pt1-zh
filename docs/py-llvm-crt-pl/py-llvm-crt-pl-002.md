@@ -1,14 +1,10 @@
 # 002：Pratt 解析器 🧩
 
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_1.png)
 
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_3.png)
 
 在本节课中，我们将为我们的算术语言构建解析器。我们将使用一种称为 **Pratt 解析** 的技术。Pratt 解析是一种高效的运算符优先级解析算法，非常适合处理表达式。我们将从设置解析器的基础结构开始，包括定义优先级、创建抽象语法树节点，并最终实现解析逻辑。
 
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_5.png)
 
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_7.png)
 
 ## 导入与基础设置
 
@@ -21,11 +17,9 @@ from typing import Callable
 from enum import Enum, auto
 ```
 
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_9.png)
 
 接下来，我们定义运算符的优先级。优先级决定了表达式中运算符的执行顺序。
 
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_11.png)
 
 ```python
 class PrecedenceType(Enum):
@@ -39,11 +33,9 @@ class PrecedenceType(Enum):
     P_INDEX = auto()
 ```
 
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_13.png)
 
 然后，我们创建一个字典来映射具体的 Token 类型到其优先级。
 
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_15.png)
 
 ```python
 PRECEDENCE_MAPPING = {
@@ -56,21 +48,15 @@ PRECEDENCE_MAPPING = {
 }
 ```
 
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_17.png)
 
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_19.png)
 
 ## 解析器类结构
 
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_21.png)
 
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_23.png)
 
 现在，我们开始构建解析器类。解析器将接收词法分析器生成的 Token 流，并将其转换为抽象语法树。
 
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_25.png)
 
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_27.png)
 
 ```python
 class Parser:
@@ -85,21 +71,14 @@ class Parser:
         self._next_token()
 ```
 
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_29.png)
 
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_31.png)
 
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_33.png)
 
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_35.png)
 
 解析器需要一些辅助方法来管理 Token 流和错误处理。
 
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_37.png)
 
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_39.png)
 
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_41.png)
 
 ```python
     def _next_token(self):
@@ -130,55 +109,35 @@ class Parser:
         return PRECEDENCE_MAPPING.get(self.peek_token.token_type, PrecedenceType.P_LOWEST)
 ```
 
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_43.png)
 
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_44.png)
 
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_46.png)
 
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_47.png)
 
 ## 抽象语法树节点定义
 
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_49.png)
 
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_51.png)
 
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_53.png)
 
 在实现解析逻辑之前，我们需要定义抽象语法树的节点结构。这些节点将代表我们程序中的不同元素。
 
 
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_55.png)
-
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_57.png)
 
 
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_59.png)
 
 
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_61.png)
-
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_62.png)
 
 
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_64.png)
 
 
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_66.png)
-
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_68.png)
 
 
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_70.png)
 
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_71.png)
 
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_72.png)
 
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_74.png)
 
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_76.png)
+
+
+
 
 ```python
 from abc import ABC, abstractmethod
@@ -261,17 +220,13 @@ class FloatLiteral(Expression):
         return {"value": self.value}
 ```
 
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_78.png)
 
 ## 核心解析方法
 
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_80.png)
 
 有了 AST 节点后，我们可以实现解析器的核心方法。`parse_program` 方法是解析的入口点。
 
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_82.png)
 
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_84.png)
 
 ```python
     def parse_program(self) -> Program:
@@ -284,21 +239,14 @@ class FloatLiteral(Expression):
         return program
 ```
 
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_86.png)
 
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_88.png)
 
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_90.png)
 
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_92.png)
 
 `_parse_statement` 方法根据当前 Token 类型决定如何解析语句。目前，我们只处理表达式语句。
 
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_94.png)
 
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_96.png)
 
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_98.png)
 
 ```python
     def _parse_statement(self) -> Statement:
@@ -312,13 +260,10 @@ class FloatLiteral(Expression):
         return stmt
 ```
 
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_100.png)
 
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_102.png)
 
 `_parse_expression` 方法是 Pratt 解析的核心。它根据优先级递归地解析表达式。
 
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_104.png)
 
 ```python
     def _parse_expression(self, precedence: PrecedenceType) -> Expression:
@@ -340,37 +285,24 @@ class FloatLiteral(Expression):
         return left_expr
 ```
 
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_106.png)
 
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_108.png)
 
 ## 前缀与中缀解析函数
 
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_110.png)
 
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_112.png)
 
 我们需要为不同的 Token 类型注册前缀和中缀解析函数。前缀函数处理像 `-5` 这样的表达式，中缀函数处理像 `5 + 5` 这样的表达式。
 
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_114.png)
 
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_116.png)
 
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_118.png)
 
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_119.png)
 
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_121.png)
 
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_122.png)
 
 以下是前缀解析函数的注册和实现：
 
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_124.png)
 
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_126.png)
 
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_128.png)
 
 ```python
         self.prefix_parse_functions = {
@@ -403,21 +335,14 @@ class FloatLiteral(Expression):
         return expr
 ```
 
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_130.png)
 
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_132.png)
 
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_134.png)
 
 以下是中缀解析函数的注册和实现：
 
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_136.png)
 
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_138.png)
 
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_140.png)
 
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_142.png)
 
 ```python
         self.infix_parse_functions = {
@@ -437,43 +362,27 @@ class FloatLiteral(Expression):
         return expr
 ```
 
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_143.png)
 
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_145.png)
 
 ## 测试解析器
 
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_147.png)
 
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_149.png)
 
 最后，我们可以在主程序中测试我们的解析器，并将生成的 AST 输出为 JSON 格式以便调试。
 
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_151.png)
-
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_153.png)
 
 
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_155.png)
-
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_157.png)
-
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_158.png)
-
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_160.png)
-
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_161.png)
 
 
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_163.png)
 
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_165.png)
 
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_167.png)
 
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_169.png)
 
-![](img/5e7a69b6b58793dc708ed1c66d1fb00a_171.png)
+
+
+
+
+
 
 ```python
 from parser import Parser

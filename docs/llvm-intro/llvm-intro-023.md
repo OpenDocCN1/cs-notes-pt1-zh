@@ -1,16 +1,12 @@
 # 023：LLVM测试套件 - 第二部分 🧪
 
-![](img/15b3cff60dffb016c5d2aad0b4de7b5f_0.png)
 
-![](img/15b3cff60dffb016c5d2aad0b4de7b5f_2.png)
 
 在本节课中，我们将学习如何使用LLVM集成测试器（Lit）来创建我们自己的测试。我们将从零开始构建一个测试套件，并了解如何配置和运行测试。
 
-![](img/15b3cff60dffb016c5d2aad0b4de7b5f_3.png)
 
 ---
 
-![](img/15b3cff60dffb016c5d2aad0b4de7b5f_5.png)
 
 ## 概述
 
@@ -18,11 +14,9 @@
 
 ## 为什么使用测试运行器？
 
-![](img/15b3cff60dffb016c5d2aad0b4de7b5f_7.png)
 
 如果你正在为LLVM开发工具，那么使用测试结构是必要的，因为LLVM编译器的主要测试运行器就是Lit。即使在LLVM结构之外，Lit也提供了一些有趣的功能。
 
-![](img/15b3cff60dffb016c5d2aad0b4de7b5f_9.png)
 
 以下是使用Lit的几个主要原因：
 
@@ -32,7 +26,6 @@
 
 ## 安装Lit
 
-![](img/15b3cff60dffb016c5d2aad0b4de7b5f_11.png)
 
 安装Lit工具有两种方法：
 
@@ -43,13 +36,10 @@
 
 ## 创建测试套件结构
 
-![](img/15b3cff60dffb016c5d2aad0b4de7b5f_13.png)
 
 为了简化演示，我创建了一个简单的测试套件。该套件具有以下结构：
 
-![](img/15b3cff60dffb016c5d2aad0b4de7b5f_15.png)
 
-![](img/15b3cff60dffb016c5d2aad0b4de7b5f_16.png)
 
 ```
 mytest/
@@ -71,15 +61,12 @@ mytest/
 *   `lit.cfg.py` 是Lit配置文件，用于加载测试套件的所有配置。
 *   `test/` 目录下包含各个程序的测试目录。
 
-![](img/15b3cff60dffb016c5d2aad0b4de7b5f_18.png)
 
-![](img/15b3cff60dffb016c5d2aad0b4de7b5f_19.png)
 
 ## 配置文件详解
 
 `lit.cfg.py` 是一个简单的Python脚本，我们需要将配置传递给工具。首先需要导入lit模块。
 
-![](img/15b3cff60dffb016c5d2aad0b4de7b5f_21.png)
 
 该文件中有许多可用配置，但只有两个是必需的：
 
@@ -90,22 +77,18 @@ mytest/
 
 ## 测试程序示例
 
-![](img/15b3cff60dffb016c5d2aad0b4de7b5f_23.png)
 
 在 `test/` 目录下，我们有一些程序目录。第一个是 `palindrome/`（回文检查程序）。
 
-![](img/15b3cff60dffb016c5d2aad0b4de7b5f_25.png)
 
 *   `palindrome.cpp` 是一个程序源文件。这是一个非常简单的程序，用于验证一个单词是否是回文。它从外部输入读取一个单词，如果单词是回文则输出1，否则输出0。
 *   `input.txt` 是输入文件，我传入了单词 "Reviver"。
 *   `output.txt` 是预期输出文件，内容就是 `1`，因为 "Reviver" 是一个回文。
 *   `palindrome.test` 是用于测试程序是否正确的Shell脚本。
 
-![](img/15b3cff60dffb016c5d2aad0b4de7b5f_27.png)
 
 ## 测试脚本解析
 
-![](img/15b3cff60dffb016c5d2aad0b4de7b5f_29.png)
 
 以下是测试文件的内容。第一行，我编译了程序。第二行，我调用程序并将实际输出与预期输出进行比较。
 
@@ -124,7 +107,6 @@ Lit为我们提供了一些在Shell脚本中使用的宏，最常见的宏是：
 
 最后需要知道的是，**最后一行代码的退出代码将指示测试是否通过**。如果退出代码是0，测试将通过；如果退出代码是1或任何非零数字，测试将不会通过。
 
-![](img/15b3cff60dffb016c5d2aad0b4de7b5f_31.png)
 
 对于 `square/` 程序，我也在做同样的事情。
 
@@ -140,7 +122,6 @@ Lit为我们提供了一些在Shell脚本中使用的宏，最常见的宏是：
 lit test/square/
 ```
 
-![](img/15b3cff60dffb016c5d2aad0b4de7b5f_33.png)
 
 输出将类似以下内容：第一行指示工具在你传递的目录中找到的测试数量（如果对整个目录运行，会找到两个测试）。之后的每一行将指示找到的测试名称（例如 `palindrome.test` 和 `square.test`）以及测试是否失败。
 

@@ -14,15 +14,11 @@ openssl version
 
 ## 生成私钥
 
-![](img/e7b8c44efea4d0ce95a5ad932343cdba_1.png)
 
-![](img/e7b8c44efea4d0ce95a5ad932343cdba_3.png)
 
 上一节我们确认了OpenSSL的可用性，本节中我们将生成一个安全的私钥。这是创建证书的第一步。
 
-![](img/e7b8c44efea4d0ce95a5ad932343cdba_5.png)
 
-![](img/e7b8c44efea4d0ce95a5ad932343cdba_7.png)
 
 我们将创建一个8192位的RSA私钥，这是目前最安全且推荐的长度。
 
@@ -34,9 +30,7 @@ openssl genrsa -out mongodb.key 8192
 
 ## 生成自签名证书
 
-![](img/e7b8c44efea4d0ce95a5ad932343cdba_9.png)
 
-![](img/e7b8c44efea4d0ce95a5ad932343cdba_11.png)
 
 现在，我们将基于上一步生成的私钥来创建自签名证书。这个证书将用于MongoDB服务器的身份验证。
 
@@ -79,7 +73,6 @@ sudo chown -R mongodb:mongodb /etc/ssl/mongodb
 sudo chmod 600 /etc/ssl/mongodb/*
 ```
 
-![](img/e7b8c44efea4d0ce95a5ad932343cdba_13.png)
 
 ## 配置MongoDB使用SSL
 
@@ -96,7 +89,6 @@ net:
 ```
 请确保缩进正确，并且文件路径准确无误。保存配置文件后，重启MongoDB服务使更改生效。
 
-![](img/e7b8c44efea4d0ce95a5ad932343cdba_15.png)
 
 以下是重启服务的命令：
 ```bash
@@ -105,13 +97,10 @@ sudo systemctl restart mongod
 
 ## 使用SSL连接MongoDB
 
-![](img/e7b8c44efea4d0ce95a5ad932343cdba_17.png)
 
-![](img/e7b8c44efea4d0ce95a5ad932343cdba_19.png)
 
 配置完成后，我们需要使用SSL来连接MongoDB实例。连接命令需要指定证书和密钥的完整路径。
 
-![](img/e7b8c44efea4d0ce95a5ad932343cdba_21.png)
 
 以下是使用SSL进行认证连接的示例命令：
 ```bash
@@ -119,9 +108,7 @@ mongo --host mongo1 --port 27017 --username admin --password 123456 --ssl --sslC
 ```
 如果连接成功，你将能够访问所有数据库，且数据完好无损。如果出现错误，请仔细检查配置文件的缩进和路径设置。
 
-![](img/e7b8c44efea4d0ce95a5ad932343cdba_23.png)
 
-![](img/e7b8c44efea4d0ce95a5ad932343cdba_25.png)
 
 ## 总结
 

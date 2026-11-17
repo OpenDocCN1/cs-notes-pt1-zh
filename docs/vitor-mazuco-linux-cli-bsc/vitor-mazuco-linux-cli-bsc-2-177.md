@@ -81,16 +81,13 @@ docker build -t test-breach .
 
 构建完成后，切换回用户`victor`并运行容器：
 
-![](img/16ed58bd543865bc421831b68357072e_1.png)
 
-![](img/16ed58bd543865bc421831b68357072e_2.png)
 
 ```bash
 exit
 docker run --rm -v $(pwd)/top-secret.txt:/secret/top-secret.txt test-breach
 ```
 
-![](img/16ed58bd543865bc421831b68357072e_4.png)
 
 你会发现，容器成功输出了`top-secret.txt`的内容。这意味着**普通用户通过Docker绕过了系统的文件权限控制**，这是一个严重的安全隐患。
 
@@ -103,15 +100,11 @@ docker run --rm -v $(pwd)/top-secret.txt:/secret/top-secret.txt test-breach
 以下是修改后的`Dockerfile`安全实践：
 
 
-![](img/16ed58bd543865bc421831b68357072e_6.png)
-
-![](img/16ed58bd543865bc421831b68357072e_7.png)
 
 
-![](img/16ed58bd543865bc421831b68357072e_9.png)
 
 
-![](img/16ed58bd543865bc421831b68357072e_10.png)
+
 
 ```dockerfile
 # 安全实践的 Dockerfile
@@ -136,21 +129,17 @@ CMD ["cat", "/secret/top-secret.txt"]
 *   `useradd -u 4000 -g demogroup demo-user`：创建了一个UID为4000的新用户，并指定其主组为`demogroup`。
 *   `USER demo-user`：指定后续命令以`demo-user`用户身份执行。
 
-![](img/16ed58bd543865bc421831b68357072e_12.png)
 
 ---
 
 ### 验证安全配置
 
-![](img/16ed58bd543865bc421831b68357072e_14.png)
 
 现在，让我们验证新的安全配置是否生效。
 
-![](img/16ed58bd543865bc421831b68357072e_16.png)
 
 首先，由`root`用户重新构建Docker镜像：
 
-![](img/16ed58bd543865bc421831b68357072e_17.png)
 
 ```bash
 sudo su -

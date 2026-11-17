@@ -8,7 +8,6 @@
 
 上一节我们介绍了Python的基本数据类型，本节中我们来看看如何在这些类型之间进行转换。
 
-![](img/18a7e380e5ef1c7651fed7a7299c3114_1.png)
 
 ## 为什么需要类型转换？💡
 
@@ -52,7 +51,6 @@ print(type(student))# 输出：<class ‘bool’>
 **1. 转换为浮点数**
 我们可以将整数 `age` 转换为浮点数：
 
-![](img/18a7e380e5ef1c7651fed7a7299c3114_3.png)
 
 ```python
 age = float(age)
@@ -112,7 +110,6 @@ print(name) # 输出：False
 最常见的例子是整数和浮点数之间的运算：
 
 
-![](img/18a7e380e5ef1c7651fed7a7299c3114_5.png)
 
 ```python
 x = 2    # 整数
@@ -123,7 +120,6 @@ print(x)         # 输出：1.0
 print(type(x))   # 输出：<class ‘float’>
 ```
 
-![](img/18a7e380e5ef1c7651fed7a7299c3114_6.png)
 
 在这个例子中，Python自动将整数 `2` 隐式转换为浮点数 `2.0` 以执行除法，最终结果也是浮点数。
 

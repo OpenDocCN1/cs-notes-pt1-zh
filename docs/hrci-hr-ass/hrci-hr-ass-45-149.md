@@ -1,6 +1,5 @@
 # 149：66_每周介绍：合规与风险管理培训 📋
 
-![](img/ea0193fe42dd479d0f2fdbaba46e46c3_0.png)
 
 ![](img/ea0193fe42dd479d0f2fdbaba46e46c3_0.png)
 
@@ -8,9 +7,7 @@
 
 
 
-![](img/ea0193fe42dd479d0f2fdbaba46e46c3_2.png)
 
-![](img/ea0193fe42dd479d0f2fdbaba46e46c3_2.png)
 
 首先，我们将学习风险管理政策与程序。这包括理解正式的风险管理政策，以及企业常用的风险管理策略。
 
@@ -23,9 +20,7 @@
 
 
 
-![](img/ea0193fe42dd479d0f2fdbaba46e46c3_4.png)
 
-![](img/ea0193fe42dd479d0f2fdbaba46e46c3_4.png)
 
 为了总结本周的学习内容，我们将回顾正式的风险管理程序。我们将重点介绍三个关键环节。
 
@@ -43,7 +38,6 @@
 
 
 
-![](img/ea0193fe42dd479d0f2fdbaba46e46c3_6.png)
 
 ![](img/ea0193fe42dd479d0f2fdbaba46e46c3_6.png)
 

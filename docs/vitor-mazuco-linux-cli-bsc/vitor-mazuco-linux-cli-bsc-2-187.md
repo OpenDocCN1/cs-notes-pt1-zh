@@ -57,17 +57,13 @@ networks:
 *   **`volumes`**：定义了名为 `data` 的卷。
 *   **`networks`**：定义了一个名为 `webnet` 的覆盖网络，用于服务间通信。
 
-![](img/f08f9d868cdfc6754f86a8631cf657da_1.png)
 
 编辑完成后，保存并退出Vim编辑器。建议在专业的IDE（如Visual Studio Code）中检查文件的缩进格式，确保无误。
 
-![](img/f08f9d868cdfc6754f86a8631cf657da_3.png)
 
-![](img/f08f9d868cdfc6754f86a8631cf657da_5.png)
 
 ## 部署服务栈
 
-![](img/f08f9d868cdfc6754f86a8631cf657da_7.png)
 
 现在，我们可以使用 `docker stack deploy` 命令来部署这个服务栈。
 
@@ -89,11 +85,9 @@ docker service ls
 
 ## 测试应用
 
-![](img/f08f9d868cdfc6754f86a8631cf657da_9.png)
 
 部署完成后，我们可以测试应用是否正常运行。
 
-![](img/f08f9d868cdfc6754f86a8631cf657da_11.png)
 
 由于Web服务映射到了主机的3000端口，你可以通过浏览器或命令行工具访问该应用。在命令行中，可以使用 `curl` 命令进行测试：
 ```bash
@@ -101,13 +95,10 @@ curl http://localhost:3000
 ```
 或者，如果你知道Swarm集群中任一节点的IP地址，也可以在浏览器中访问 `http://<节点IP>:3000`。
 
-![](img/f08f9d868cdfc6754f86a8631cf657da_13.png)
 
-![](img/f08f9d868cdfc6754f86a8631cf657da_15.png)
 
 页面会返回一个简单的HTML响应，并显示处理该请求的容器ID。由于我们部署了3个Web副本，负载均衡器会将请求分发到不同的容器上。
 
-![](img/f08f9d868cdfc6754f86a8631cf657da_17.png)
 
 **以下是测试负载均衡的方法：**
 多次执行 `curl` 命令，观察返回的容器ID是否变化。
@@ -119,13 +110,10 @@ curl http://localhost:3000
 ```
 如果每次返回的容器ID不同，说明Swarm的负载均衡正在正常工作，请求被均匀地分配到了不同的容器实例上。
 
-![](img/f08f9d868cdfc6754f86a8631cf657da_19.png)
 
-![](img/f08f9d868cdfc6754f86a8631cf657da_21.png)
 
 ## 清理服务栈
 
-![](img/f08f9d868cdfc6754f86a8631cf657da_23.png)
 
 当你需要移除整个服务栈（包括服务、网络和卷）时，可以使用以下命令：
 ```bash

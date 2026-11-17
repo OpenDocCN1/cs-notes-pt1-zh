@@ -1,18 +1,14 @@
 # 006：GPIO输入驱动开发（第一部分）🚀
 
-![](img/13915789904c9ccaa5e43416575fdcd4_1.png)
 
 在本节课中，我们将学习如何配置STM32微控制器的GPIO引脚作为输入。我们将以开发板上的一个按键（连接至PC13引脚）为例，逐步讲解如何初始化GPIO端口、配置输入模式，并理解相关的寄存器操作。
 
-![](img/13915789904c9ccaa5e43416575fdcd4_3.png)
 
-![](img/13915789904c9ccaa5e43416575fdcd4_5.png)
 
 ---
 
 ## 概述
 
-![](img/13915789904c9ccaa5e43416575fdcd4_7.png)
 
 上一节我们介绍了如何配置GPIO输出以控制LED。本节中，我们来看看如何配置GPIO输入来读取外部按键的状态。我们将创建一个新的工程，初始化GPIO端口，并设置PC13引脚为输入模式，为后续读取按键值做好准备。
 
@@ -25,14 +21,10 @@
 3.  将项目也命名为“GPIO_input”。
 4.  在设备选择窗口中，选择“STM32F411VETx”。
 
-![](img/13915789904c9ccaa5e43416575fdcd4_9.png)
 
-![](img/13915789904c9ccaa5e43416575fdcd4_1.png)
 
 5.  在接下来的对话框中，选择“CMSIS”下的“CORE”以及“Device”下的“Startup”。然后点击“OK”。
 
-![](img/13915789904c9ccaa5e43416575fdcd4_3.png)
-![](img/13915789904c9ccaa5e43416575fdcd4_5.png)
 
 ## 添加并配置源文件
 
@@ -43,13 +35,11 @@
 3.  在“App”组下，点击“Add New Item”。
 4.  选择“Asm File (.s)”，并命名为“main”，然后点击“Add”。
 
-![](img/13915789904c9ccaa5e43416575fdcd4_7.png)
 
 5.  配置调试选项：点击工具栏的“Options for Target”按钮（或按Alt+F7）。
 6.  在“Debug”选项卡中，选择“Use: ST-Link Debugger”。
 7.  在“Utilities”选项卡中，确保“Use Target Driver for Flash Programming”也选择了“ST-Link Debugger”，然后点击“OK”。
 
-![](img/13915789904c9ccaa5e43416575fdcd4_11.png)
 
 ## 硬件连接与原理
 
@@ -175,6 +165,5 @@ GPIO_Init
 
 在下一部分，我们将完善这个驱动，学习如何读取`IDR`（输入数据寄存器）的值来获取按键状态，并实现一个简单的按键检测循环。
 
-![](img/13915789904c9ccaa5e43416575fdcd4_13.png)
 
 ![](img/13915789904c9ccaa5e43416575fdcd4_13.png)

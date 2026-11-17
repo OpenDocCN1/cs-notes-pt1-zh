@@ -6,7 +6,6 @@
 
 ## 准备工作
 
-![](img/eb8c21d56636fcc2d1e92b932add3218_1.png)
 
 上一节我们介绍了VGA和键盘编程的基础。本节中我们来看看如何与声卡这类更复杂的硬件交互。首先，我们需要包含必要的头文件并声明一些全局变量和函数。
 
@@ -35,9 +34,7 @@ void sb_init();
 
 ## 实现检测函数
 
-![](img/eb8c21d56636fcc2d1e92b932add3218_3.png)
 
-![](img/eb8c21d56636fcc2d1e92b932add3218_5.png)
 
 检测函数 `sb_detect` 是我们的核心。它的任务是遍历可能的I/O基地址，尝试复位声卡的数字信号处理器，并确认其响应。
 
@@ -97,7 +94,6 @@ int sb_detect() {
 
 以下是复位操作的步骤：
 
-![](img/eb8c21d56636fcc2d1e92b932add3218_7.png)
 
 1.  **触发复位**：向 `端口基地址 + 0x6` 写入 `1`。
 2.  **短暂延迟**：等待约3微秒（实际代码中延迟更长以确保稳定）。
@@ -105,12 +101,9 @@ int sb_detect() {
 4.  **检查状态**：轮询读取状态端口 `端口基地址 + 0xE`，直到其最高位为 `1`，表示数据就绪。
 5.  **验证响应**：从数据端口 `端口基地址 + 0xA` 读取一个字节，如果其值为 `0xAA`，则表明复位成功且设备是SoundBlaster。
 
-![](img/eb8c21d56636fcc2d1e92b932add3218_9.png)
 
 
-![](img/eb8c21d56636fcc2d1e92b932add3218_11.png)
 
-![](img/eb8c21d56636fcc2d1e92b932add3218_13.png)
 
 ```c
 #define SB_RESET_REG 0x6
@@ -139,9 +132,7 @@ int sb_reset(unsigned short port) {
 }
 ```
 
-![](img/eb8c21d56636fcc2d1e92b932add3218_15.png)
 
-![](img/eb8c21d56636fcc2d1e92b932add3218_17.png)
 
 ## 编写主程序进行测试
 
@@ -167,9 +158,7 @@ int main() {
 编译并运行此程序，如果系统中安装了SoundBlaster兼容声卡且 `BLASTER` 环境变量设置正确，程序将输出类似以下的信息：
 `成功检测到SoundBlaster声卡！基地址: 0x220 IRQ: 7 DMA: 1`
 
-![](img/eb8c21d56636fcc2d1e92b932add3218_19.png)
 
-![](img/eb8c21d56636fcc2d1e92b932add3218_21.png)
 
 ## 总结
 

@@ -150,7 +150,6 @@ stbi_image_free(data);
 2.  在片段着色器中，声明一个 `uniform sampler2D` 变量来代表纹理，并使用 `texture` 函数根据纹理坐标进行采样。
 3.  在主程序中，通过 `glUniform1i` 将纹理单元（例如 `GL_TEXTURE0` 对应数字0）赋值给着色器中的采样器。
 
-![](img/af7fdad47c9f21ae3179e9ae8a1ca4b6_7.png)
 
 **总结**
 

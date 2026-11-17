@@ -1,10 +1,8 @@
 # 033：二叉树的层序遍历 🧮
 
-![](img/b3c5c72f9afe807aa497eae30e6d7e07_1.png)
 
 在本节课中，我们将学习如何为二叉树编写层序遍历的代码。层序遍历是一种按树的层级顺序访问所有节点的方法，即先访问同一层的所有节点，再访问下一层的节点。
 
-![](img/b3c5c72f9afe807aa497eae30e6d7e07_3.png)
 
 ## 算法核心思想
 
@@ -21,11 +19,9 @@
 
 ## 代码实现
 
-![](img/b3c5c72f9afe807aa497eae30e6d7e07_5.png)
 
 现在，让我们用C++代码来实现上述算法。首先，我们定义二叉树节点的结构。
 
-![](img/b3c5c72f9afe807aa497eae30e6d7e07_6.png)
 
 ```cpp
 struct Node {
@@ -38,11 +34,8 @@ struct Node {
 接下来，我们编写层序遍历函数 `levelOrder`。
 
 
-![](img/b3c5c72f9afe807aa497eae30e6d7e07_8.png)
 
-![](img/b3c5c72f9afe807aa497eae30e6d7e07_9.png)
 
-![](img/b3c5c72f9afe807aa497eae30e6d7e07_10.png)
 
 ```cpp
 #include <queue>
@@ -82,11 +75,8 @@ void levelOrder(Node* root) {
 }
 ```
 
-![](img/b3c5c72f9afe807aa497eae30e6d7e07_12.png)
 
-![](img/b3c5c72f9afe807aa497eae30e6d7e07_14.png)
 
-![](img/b3c5c72f9afe807aa497eae30e6d7e07_15.png)
 
 ## 复杂度分析
 
@@ -94,23 +84,16 @@ void levelOrder(Node* root) {
 
 ### 时间复杂度
 
-![](img/b3c5c72f9afe807aa497eae30e6d7e07_17.png)
 
-![](img/b3c5c72f9afe807aa497eae30e6d7e07_18.png)
 
-![](img/b3c5c72f9afe807aa497eae30e6d7e07_20.png)
 
 每个节点恰好被访问一次（出队并打印），每次访问操作（包括检查子节点和入队）的时间是常数级的。因此，对于包含 **n** 个节点的树，总时间复杂度为 **O(n)**。无论树的形状如何，这个结论都成立。
 
-![](img/b3c5c72f9afe807aa497eae30e6d7e07_22.png)
 
-![](img/b3c5c72f9afe807aa497eae30e6d7e07_24.png)
 
-![](img/b3c5c72f9afe807aa497eae30e6d7e07_25.png)
 
 ### 空间复杂度
 
-![](img/b3c5c72f9afe807aa497eae30e6d7e07_27.png)
 
 空间复杂度衡量的是算法使用的额外内存随输入规模增长的速度。在本算法中，主要额外内存消耗来自队列。
 

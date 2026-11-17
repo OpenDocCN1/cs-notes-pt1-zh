@@ -25,9 +25,7 @@ class Rectangle:
 2.  在该方法上方使用`@property`装饰器。
 3.  在方法内部返回处理后的属性值。
 
-![](img/82edf07292c146460f84139a48053788_1.png)
 
-![](img/82edf07292c146460f84139a48053788_2.png)
 
 ```python
 class Rectangle:
@@ -47,25 +45,20 @@ class Rectangle:
 
 现在，当我们访问`rectangle.width`时，实际上调用的是`width()`方法，它会返回格式化后的字符串，而不是原始的`_width`值。
 
-![](img/82edf07292c146460f84139a48053788_4.png)
 
 ## 使用Setter方法写入属性
 
 我们已经学会了如何安全地读取属性，接下来看看如何安全地设置属性。Setter方法允许我们在给属性赋值时添加验证逻辑。
 
-![](img/82edf07292c146460f84139a48053788_6.png)
 
-![](img/82edf07292c146460f84139a48053788_8.png)
 
 以下是创建setter方法的步骤：
 
-![](img/82edf07292c146460f84139a48053788_10.png)
 
 1.  首先确保已用`@property`定义了getter方法。
 2.  使用`@属性名.setter`装饰器来定义setter方法。
 3.  在方法内部对传入的值进行验证。
 
-![](img/82edf07292c146460f84139a48053788_12.png)
 
 ```python
 class Rectangle:
@@ -86,7 +79,6 @@ class Rectangle:
             print("Height must be greater than 0")
 ```
 
-![](img/82edf07292c146460f84139a48053788_14.png)
 
 现在，当我们尝试设置`rectangle.width = -5`时，setter方法会拦截这个操作，检查值是否大于0，并打印错误信息，而内部的`_width`属性不会被修改。
 
@@ -118,11 +110,9 @@ class Rectangle:
 
 ## 完整代码示例与运行
 
-![](img/82edf07292c146460f84139a48053788_16.png)
 
 让我们将以上所有部分组合起来，看看完整的类是如何工作的。
 
-![](img/82edf07292c146460f84139a48053788_18.png)
 
 ```python
 class Rectangle:
@@ -185,9 +175,7 @@ del rectangle.width      # 打印: Width has been deleted
 *   `@属性名.setter` 可以创建setter方法，在赋值时添加验证逻辑。
 *   `@属性名.deleter` 可以创建deleter方法，在删除属性时执行特定操作。
 
-![](img/82edf07292c146460f84139a48053788_20.png)
 
-![](img/82edf07292c146460f84139a48053788_21.png)
 
 ![](img/82edf07292c146460f84139a48053788_22.png)
 

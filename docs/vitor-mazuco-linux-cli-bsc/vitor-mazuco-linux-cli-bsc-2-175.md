@@ -61,7 +61,6 @@ docker images --filter=reference="*:latest"
 
 例如，要列出在某个特定镜像（如 `ubuntu:latest`）之前创建的所有镜像：
 
-![](img/a90262ca2044746c0e561c61a519c473_5.png)
 
 ```bash
 docker images --filter=before=ubuntu:latest
@@ -73,11 +72,9 @@ docker images --filter=before=ubuntu:latest
 docker images --filter=since=ubuntu:20.04
 ```
 
-![](img/a90262ca2044746c0e561c61a519c473_7.png)
 
 ### 过滤悬空镜像
 
-![](img/a90262ca2044746c0e561c61a519c473_9.png)
 
 “悬空镜像”是指那些没有标签且未被任何容器引用的中间层镜像。它们会占用磁盘空间，可以使用以下命令进行查找和清理：
 

@@ -1,20 +1,16 @@
 MongoDB基础：P99：集合操作 🗂️
 
-![](img/e83a52a24068807e6cf0f87eb0bac36e_1.png)
 
 在本节课中，我们将学习如何在MongoDB中操作集合。集合是数据库中的一种结构，文档则存放在集合内部。我们将涵盖集合的创建、查看和删除等基本操作。
 
-![](img/e83a52a24068807e6cf0f87eb0bac36e_3.png)
 
 ---
 
 ### 集合的创建
 
-![](img/e83a52a24068807e6cf0f87eb0bac36e_5.png)
 
 集合的创建语法非常简单。你可以使用 `db.createCollection()` 命令来显式创建一个集合。
 
-![](img/e83a52a24068807e6cf0f87eb0bac36e_7.png)
 
 **基本语法**：
 ```javascript
@@ -24,7 +20,6 @@ db.createCollection("集合名称", 选项)
 
 实际上，你并非必须使用上述命令来创建集合。MongoDB提供了一种更便捷的自动创建方式。
 
-![](img/e83a52a24068807e6cf0f87eb0bac36e_9.png)
 
 ### 自动创建集合
 
@@ -46,7 +41,6 @@ show collections
 ```
 执行后，你会看到之前课程中创建的 `blog` 集合，以及我们刚刚创建的 `myCollection`。
 
-![](img/e83a52a24068807e6cf0f87eb0bac36e_11.png)
 
 接下来，我们演示自动创建集合。直接向一个名为 `vitor` 的新集合中插入一个文档。
 ```javascript
@@ -54,7 +48,6 @@ db.vitor.insertOne({name: "MongoDB Course"})
 ```
 这样，我们就自动创建了一个名为 `vitor` 的集合，并向其中插入了一个文档。这种方式无需预先执行创建集合的命令。
 
-![](img/e83a52a24068807e6cf0f87eb0bac36e_12.png)
 
 ### 集合的删除
 

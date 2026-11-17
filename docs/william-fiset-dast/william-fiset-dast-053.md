@@ -1,6 +1,5 @@
 **数据结构课程：P53：索引优先队列源码解析** 🚀
 
-![](img/52f3d782b02b3277348220270eb95b77_0.png)
 
 在本节课中，我们将一起学习索引优先队列（Indexed Priority Queue）的源代码实现。我们将重点关注一个最小索引二叉堆（Min Indexed Binary Heap）的实现细节，并理解其核心机制。
 
@@ -26,11 +25,9 @@ public class MinIndexedBinaryHeap<T extends Comparable<T>> extends MinIndexedDHe
 
 ### **深入D堆实现**
 
-![](img/52f3d782b02b3277348220270eb95b77_2.png)
 
 现在，让我们深入查看 `MinIndexedDHeap` 类，所有核心逻辑都在这里发生。
 
-![](img/52f3d782b02b3277348220270eb95b77_3.png)
 
 以下是该类的主要实例变量：
 
@@ -68,10 +65,8 @@ im[pm[k]] = k
 
 堆操作依赖于比较和交换元素。`less` 方法比较两个键对应的值，`swap` 方法交换堆中两个位置的所有相关数据。
 
-![](img/52f3d782b02b3277348220270eb95b77_5.png)
 
 
-![](img/52f3d782b02b3277348220270eb95b77_6.png)
 
 ```java
 private boolean less(int i, int j) {
@@ -86,7 +81,6 @@ private void swap(int i, int j) {
 }
 ```
 
-![](img/52f3d782b02b3277348220270eb95b77_7.png)
 
 **2. 上浮与下沉**
 
@@ -117,7 +111,6 @@ private void swap(int i, int j) {
     }
     ```
 
-![](img/52f3d782b02b3277348220270eb95b77_9.png)
 
 **3. 主要公开API**
 
@@ -150,7 +143,6 @@ private void swap(int i, int j) {
 *   **`peekMinKeyIndex` / `pollMinKeyIndex`**：查看或取出最小值的键。
 *   **`peekMinValue` / `pollMinValue`**：查看或取出最小值。
 
-![](img/52f3d782b02b3277348220270eb95b77_11.png)
 
 ---
 

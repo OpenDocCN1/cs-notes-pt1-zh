@@ -8,41 +8,30 @@
 
 
 
-![](img/ea6364b9e5486d4ecc8061d68a907158_1.png)
 
-![](img/ea6364b9e5486d4ecc8061d68a907158_1.png)
 
-![](img/ea6364b9e5486d4ecc8061d68a907158_2.png)
 
-![](img/ea6364b9e5486d4ecc8061d68a907158_2.png)
 
-![](img/ea6364b9e5486d4ecc8061d68a907158_4.png)
 
 另一种选择是使用 **`IS NULL`** 或 **`IS NOT NULL`** 比较运算符。
 
 
 
-![](img/ea6364b9e5486d4ecc8061d68a907158_4.png)
 
 这些比较运算符可以同时用于数值型或字符型的缺失值。
 
 如果您的数据来自一个能区分“缺失值”和“空值”的数据库管理系统环境，那么 **`IS NULL`** 运算符是ANSI标准。
 
-![](img/ea6364b9e5486d4ecc8061d68a907158_6.png)
 
-![](img/ea6364b9e5486d4ecc8061d68a907158_6.png)
 
 您可能还会遇到 **`IS MISSING`** 运算符。在SAS中，**`IS MISSING`** 这个特殊的WHERE运算符与 **`IS NULL`** 运算符是相同且可以互换的，但 **`IS MISSING`** 运算符不是ANSI标准。
 
-![](img/ea6364b9e5486d4ecc8061d68a907158_8.png)
 
-![](img/ea6364b9e5486d4ecc8061d68a907158_8.png)
 
 为了在SAS和数据库环境中保持一致性，建议使用 **`IS NULL`** 这个特殊的WHERE运算符。
 
 
 
-![](img/ea6364b9e5486d4ecc8061d68a907158_10.png)
 
 ![](img/ea6364b9e5486d4ecc8061d68a907158_10.png)
 

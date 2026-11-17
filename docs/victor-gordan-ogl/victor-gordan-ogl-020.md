@@ -43,9 +43,7 @@ glGenBuffers(1, &skyboxEBO);
 
 ## 加载天空盒纹理
 
-![](img/7ed0840798dea70630540bd57b2a6bbe_1.png)
 
-![](img/7ed0840798dea70630540bd57b2a6bbe_2.png)
 
 接下来，我们需要加载天空盒的六个面纹理。
 
@@ -110,7 +108,6 @@ GL_TEXTURE_CUBE_MAP_POSITIVE_Z
 GL_TEXTURE_CUBE_MAP_NEGATIVE_Z
 ```
 
-![](img/7ed0840798dea70630540bd57b2a6bbe_6.png)
 
 这是我们写入路径的顺序。注意到有什么奇怪的地方吗？通常，在OpenGL中，前方是负Z方向，但对于立方体贴图，前方是正Z方向。这意味着立方体贴图在左手坐标系中工作，而OpenGL的大部分内容在右手坐标系中工作。这可能会非常令人困惑，老实说，我不知道他们为什么选择这样做。但请记住，如果不小心，你可能会因此遇到一些小错误。在我的情况下，我的右侧纹理由于某种原因一直倒置显示。为了解决这个问题，我只需在图像编辑器中翻转纹理。所以请准备好处理这类问题，因为据我所知，这在天空盒中经常发生。
 
@@ -141,7 +138,6 @@ void main() {
 片段着色器将接收纹理坐标，并使用立方体贴图纹理进行采样。
 
 
-![](img/7ed0840798dea70630540bd57b2a6bbe_8.png)
 
 ```glsl
 #version 330 core
@@ -167,7 +163,6 @@ glDrawElements(GL_TRIANGLES, 36, GL_UNSIGNED_INT, 0);
 glDepthMask(GL_TRUE);
 ```
 
-![](img/7ed0840798dea70630540bd57b2a6bbe_10.png)
 
 ## 总结
 

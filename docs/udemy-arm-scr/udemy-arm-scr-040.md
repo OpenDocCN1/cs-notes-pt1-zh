@@ -1,20 +1,15 @@
 # 040：编写 SysTick 定时器驱动
 
-![](img/31a00097cea802ce8520180d2a299d3b_0.png)
 
-![](img/31a00097cea802ce8520180d2a299d3b_2.png)
 
-![](img/31a00097cea802ce8520180d2a299d3b_4.png)
 
 在本节课中，我们将要学习如何为 ARM Cortex-M 微控制器编写 SysTick 定时器的驱动程序。我们将从初始化 GPIO 开始，然后配置 SysTick 定时器，为后续实现延时功能打下基础。
 
-![](img/31a00097cea802ce8520180d2a299d3b_6.png)
 
 ## 初始化 GPIO
 
 上一节我们介绍了驱动的基本结构，本节中我们来看看如何初始化 GPIO 端口。以下是初始化 GPIO 子程序的步骤。
 
-![](img/31a00097cea802ce8520180d2a299d3b_8.png)
 
 首先，我们需要启用 GPIOF 端口的时钟访问。
 
@@ -27,9 +22,7 @@ GPIO_Init:
     NOP
 ```
 
-![](img/31a00097cea802ce8520180d2a299d3b_10.png)
 
-![](img/31a00097cea802ce8520180d2a299d3b_12.png)
 
 接下来，我们需要设置红色 LED 引脚的方向为输出。
 
@@ -50,13 +43,10 @@ GPIO_Init:
     BX LR
 ```
 
-![](img/31a00097cea802ce8520180d2a299d3b_14.png)
 
-![](img/31a00097cea802ce8520180d2a299d3b_16.png)
 
 完成 GPIO 初始化后，我们就可以在 `__main` 函数中调用它。
 
-![](img/31a00097cea802ce8520180d2a299d3b_18.png)
 
 ```assembly
 __main:
@@ -67,11 +57,9 @@ __main:
 
 在 GPIO 初始化之后，我们需要初始化 SysTick 定时器。以下是实现 `SysTick_Init` 子程序的步骤。
 
-![](img/31a00097cea802ce8520180d2a299d3b_20.png)
 
 首先，在修改任何配置之前，建议先禁用定时器。
 
-![](img/31a00097cea802ce8520180d2a299d3b_22.png)
 
 ```assembly
 SysTick_Init:
@@ -82,7 +70,6 @@ SysTick_Init:
 
 然后，我们将最大值加载到重载寄存器中。
 
-![](img/31a00097cea802ce8520180d2a299d3b_24.png)
 
 ```assembly
     LDR R1, =NVIC_ST_RELOAD_R
@@ -90,11 +77,9 @@ SysTick_Init:
     STR R0, [R1]
 ```
 
-![](img/31a00097cea802ce8520180d2a299d3b_26.png)
 
 接着，通过向当前值寄存器写入任意值（例如 0）来清除它。
 
-![](img/31a00097cea802ce8520180d2a299d3b_28.png)
 
 ```assembly
     LDR R1, =NVIC_ST_CURRENT_R
@@ -102,7 +87,6 @@ SysTick_Init:
     STR R0, [R1]
 ```
 
-![](img/31a00097cea802ce8520180d2a299d3b_30.png)
 
 最后，我们选择时钟源并启用 SysTick 定时器。
 
@@ -114,7 +98,6 @@ SysTick_Init:
     BX LR
 ```
 
-![](img/31a00097cea802ce8520180d2a299d3b_32.png)
 
 初始化完成后，我们在主函数中调用它。
 
@@ -122,11 +105,9 @@ SysTick_Init:
     BL SysTick_Init
 ```
 
-![](img/31a00097cea802ce8520180d2a299d3b_34.png)
 
 ## 总结
 
-![](img/31a00097cea802ce8520180d2a299d3b_36.png)
 
 ![](img/31a00097cea802ce8520180d2a299d3b_37.png)
 

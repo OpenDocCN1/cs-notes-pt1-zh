@@ -69,29 +69,21 @@ DNS委派是指将域名的解析权分配给一组名称服务器。将域名�
         ```
         命令应返回IP地址 `172.208.34.20`，证明DNS解析已成功配置。
 
-![](img/afaf0bd12ac5a6041696efc026c3d843_1.png)
 
-![](img/afaf0bd12ac5a6041696efc026c3d843_2.png)
 
 ![](img/afaf0bd12ac5a6041696efc026c3d843_4.png)
 
-![](img/afaf0bd12ac5a6041696efc026c3d843_5.png)
 
-![](img/afaf0bd12ac5a6041696efc026c3d843_1.png)
 
-![](img/afaf0bd12ac5a6041696efc026c3d843_2.png)
 
-![](img/afaf0bd12ac5a6041696efc026c3d843_7.png)
 
 ![](img/afaf0bd12ac5a6041696efc026c3d843_8.png)
 
 ![](img/afaf0bd12ac5a6041696efc026c3d843_4.png)
 
-![](img/afaf0bd12ac5a6041696efc026c3d843_5.png)
 
 ## 总结📚
 
-![](img/afaf0bd12ac5a6041696efc026c3d843_7.png)
 
 ![](img/afaf0bd12ac5a6041696efc026c3d843_8.png)
 

@@ -16,13 +16,11 @@ from functools import reduce
 
 上一节我们介绍了`reduce()`的基本概念，本节中我们来看看它的具体应用。
 
-![](img/b675c5d3f46218ee5d9c19714456dffe_1.png)
 
 ### 示例：计算价格总和
 
 假设我们有一个包含多个价格的列表，目标是计算所有价格的总和。
 
-![](img/b675c5d3f46218ee5d9c19714456dffe_3.png)
 
 首先，我们创建一个价格列表：
 
@@ -30,26 +28,21 @@ from functools import reduce
 prices = [10.99, 4.99, 7.50, 12.75, 14.49]
 ```
 
-![](img/b675c5d3f46218ee5d9c19714456dffe_5.png)
 
 接下来，我们使用`reduce()`函数来计算总和。我们需要定义一个函数来告诉`reduce()`如何组合两个元素。在这个例子中，就是简单的加法。
 
 以下是使用`reduce()`的步骤：
 
-![](img/b675c5d3f46218ee5d9c19714456dffe_7.png)
 
 1.  定义一个加法函数。
 2.  将该函数和价格列表传递给`reduce()`。
 3.  接收并打印结果。
 
 
-![](img/b675c5d3f46218ee5d9c19714456dffe_9.png)
 
 
-![](img/b675c5d3f46218ee5d9c19714456dffe_11.png)
 
 
-![](img/b675c5d3f46218ee5d9c19714456dffe_13.png)
 
 ```python
 from functools import reduce
@@ -60,7 +53,6 @@ total = reduce(add, prices)
 print(f"总价为：${total:.2f}")
 ```
 
-![](img/b675c5d3f46218ee5d9c19714456dffe_15.png)
 
 运行这段代码，输出结果为：`总价为：$50.72`。
 
@@ -71,7 +63,6 @@ print(f"总价为：${total:.2f}")
 以下是使用`lambda`表达式重写的代码：
 
 
-![](img/b675c5d3f46218ee5d9c19714456dffe_17.png)
 
 ```python
 from functools import reduce
@@ -81,19 +72,15 @@ total = reduce(lambda x, y: x + y, prices)
 print(f"总价为：${total:.2f}")
 ```
 
-![](img/b675c5d3f46218ee5d9c19714456dffe_19.png)
 
 这段代码的功能与之前完全相同。`lambda x, y: x + y`定义了一个匿名函数，它接受两个参数`x`和`y`，并返回它们的和。
 
-![](img/b675c5d3f46218ee5d9c19714456dffe_21.png)
 
 ## 工作原理详解
 
-![](img/b675c5d3f46218ee5d9c19714456dffe_23.png)
 
 `reduce()`函数的工作流程可以分解为以下几个步骤，以列表`[10.99, 4.99, 7.50, 12.75, 14.49]`为例：
 
-![](img/b675c5d3f46218ee5d9c19714456dffe_25.png)
 
 1.  取前两个元素：`10.99` 和 `4.99`，执行 `add(10.99, 4.99)`，得到 `15.98`。
 2.  将上一步的结果 `15.98` 与第三个元素 `7.50` 结合，执行 `add(15.98, 7.50)`，得到 `23.48`。
@@ -120,15 +107,11 @@ print(f"总价为：${total:.2f}")
 
 ## 总结
 
-![](img/b675c5d3f46218ee5d9c19714456dffe_27.png)
 
-![](img/b675c5d3f46218ee5d9c19714456dffe_28.png)
 
 本节课中我们一起学习了Python的`reduce()`函数。
 
-![](img/b675c5d3f46218ee5d9c19714456dffe_29.png)
 
-![](img/b675c5d3f46218ee5d9c19714456dffe_30.png)
 
 *   **功能**：`reduce()`函数用于将一个集合中的所有元素通过指定的函数累积计算，最终缩减为一个单一的值。
 *   **导入**：使用前需要从`functools`模块导入：`from functools import reduce`。

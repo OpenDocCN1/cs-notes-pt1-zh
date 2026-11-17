@@ -92,7 +92,6 @@ Kelly, Customer Service
 2.  **写入数据**：使用`fprintf(文件指针, "格式字符串", ...);`函数，其用法与`printf`类似，但第一个参数指定了目标文件。
 3.  **关闭文件**：操作完成后，务必使用`fclose(文件指针);`来确保数据保存和资源释放。
 
-![](img/5c839c53df2bac814f19bdf52a70dd62_1.png)
 
 ![](img/5c839c53df2bac814f19bdf52a70dd62_3.png)
 

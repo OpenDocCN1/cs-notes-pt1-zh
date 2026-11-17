@@ -16,7 +16,6 @@
 glDrawElementsInstanced(GL_TRIANGLES, indices.size(), GL_UNSIGNED_INT, 0, instanceCount);
 ```
 
-![](img/ba7fe33e894d1303ad5acad7df86da59_1.png)
 
 ![](img/ba7fe33e894d1303ad5acad7df86da59_2.png)
 
@@ -24,7 +23,6 @@ glDrawElementsInstanced(GL_TRIANGLES, indices.size(), GL_UNSIGNED_INT, 0, instan
 
 唯一的问题是，这会将所有网格绘制在完全相同的位置上，因此目前是无效的。
 
-![](img/ba7fe33e894d1303ad5acad7df86da59_4.png)
 
 ## 为每个实例设置不同位置
 
@@ -47,9 +45,7 @@ mat4 transform = instanceTransforms[gl_InstanceID];
 
 因此，要在拥有大量变换矩阵的同时，又不将生成逻辑完全放在顶点着色器内，最佳方法是将变换矩阵存储在附加到网格VAO的顶点缓冲区中。
 
-![](img/ba7fe33e894d1303ad5acad7df86da59_6.png)
 
-![](img/ba7fe33e894d1303ad5acad7df86da59_7.png)
 
 ## 实现实例化变换
 

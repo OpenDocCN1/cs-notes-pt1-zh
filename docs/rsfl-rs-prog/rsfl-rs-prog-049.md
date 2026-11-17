@@ -8,19 +8,13 @@
 
 ## 使用 `Result` 的场景
 
-![](img/22b5dc59ed55189fb08cb1a32182b6f2_1.png)
 
-![](img/22b5dc59ed55189fb08cb1a32182b6f2_2.png)
 
 当错误是预期内的、可以被修复或妥善处理时，应优先使用 `Result`。
 
-![](img/22b5dc59ed55189fb08cb1a32182b6f2_3.png)
 
-![](img/22b5dc59ed55189fb08cb1a32182b6f2_4.png)
 
-![](img/22b5dc59ed55189fb08cb1a32182b6f2_5.png)
 
-![](img/22b5dc59ed55189fb08cb1a32182b6f2_6.png)
 
 以下是适合使用 `Result` 的典型情况：
 
@@ -45,9 +39,7 @@ fn main() {
 
 当程序遇到无法或不应继续执行的“坏状态”时，应使用 `panic!`。坏状态通常指程序的假设、契约或不变式被破坏。
 
-![](img/22b5dc59ed55189fb08cb1a32182b6f2_8.png)
 
-![](img/22b5dc59ed55189fb08cb1a32182b6f2_9.png)
 
 以下是适合使用 `panic!` 的典型情况：
 
@@ -56,7 +48,6 @@ fn main() {
 *   **逻辑上不可能失败，但编译器无法证明的情况**：当你确信某个操作永远不会失败，但 Rust 编译器无法推断时，可以使用 `expect()` 来表明这是程序员的断言。
 
 
-![](img/22b5dc59ed55189fb08cb1a32182b6f2_11.png)
 
 ```rust
 use std::net::IpAddr;
@@ -72,11 +63,8 @@ fn main() {
 
 假设我们想快速测试一个获取字符串首字符的函数：
 
-![](img/22b5dc59ed55189fb08cb1a32182b6f2_13.png)
 
-![](img/22b5dc59ed55189fb08cb1a32182b6f2_14.png)
 
-![](img/22b5dc59ed55189fb08cb1a32182b6f2_15.png)
 
 ```rust
 fn get_first_char(s: &str) -> char {
@@ -135,13 +123,9 @@ fn main() {
 }
 ```
 
-![](img/22b5dc59ed55189fb08cb1a32182b6f2_17.png)
 
-![](img/22b5dc59ed55189fb08cb1a32182b6f2_18.png)
 
-![](img/22b5dc59ed55189fb08cb1a32182b6f2_19.png)
 
-![](img/22b5dc59ed55189fb08cb1a32182b6f2_20.png)
 
 通过使用 `Guess` 类型，我们保证了只要有一个 `Guess` 实例，它的值就一定是有效的。这遵循了“使用类型系统来保证正确性”的 Rust 哲学。
 

@@ -32,7 +32,6 @@ call bank_new
 
 工具的核心是状态机，每个状态（如调色板模式、瓦片模式）都有一个对应的“查看器回调函数”。这个函数负责绘制该状态下的主界面。
 
-![](img/7ea208c4edf7efe48f15ef747124c1a1_9.png)
 
 ![](img/7ea208c4edf7efe48f15ef747124c1a1_11.png)
 
@@ -95,23 +94,17 @@ RGB值将以文本输入框的形式显示在每种颜色旁边，允许用户�
 3.  **宏的改进**：将频繁使用的十进制数字转字符串代码封装成了宏 `S$dec2`，使调用处的代码更清晰。
 4.  **调色板设置拆分**：将设置调色板的操作拆分为 `set_palette_index` 和 `set_palette_rgb` 两个宏，这样更便于批量加载整个调色板。
 
-![](img/7ea208c4edf7efe48f15ef747124c1a1_17.png)
 
-![](img/7ea208c4edf7efe48f15ef747124c1a1_19.png)
 
-![](img/7ea208c4edf7efe48f15ef747124c1a1_21.png)
 
 ## 总结与后续工作
 
-![](img/7ea208c4edf7efe48f15ef747124c1a1_23.png)
 
 ![](img/7ea208c4edf7efe48f15ef747124c1a1_24.png)
 
 ![](img/7ea208c4edf7efe48f15ef747124c1a1_26.png)
 
-![](img/7ea208c4edf7efe48f15ef747124c1a1_28.png)
 
-![](img/7ea208c4edf7efe48f15ef747124c1a1_29.png)
 
 ![](img/7ea208c4edf7efe48f15ef747124c1a1_31.png)
 
@@ -127,11 +120,8 @@ RGB值将以文本输入框的形式显示在每种颜色旁边，允许用户�
 *   绘制了调色板选择界面，并规划了交互逻辑。
 *   修复了开发过程中遇到的几个关键错误，并优化了代码结构。
 
-![](img/7ea208c4edf7efe48f15ef747124c1a1_39.png)
 
-![](img/7ea208c4edf7efe48f15ef747124c1a1_41.png)
 
-![](img/7ea208c4edf7efe48f15ef747124c1a1_43.png)
 
 ![](img/7ea208c4edf7efe48f15ef747124c1a1_45.png)
 

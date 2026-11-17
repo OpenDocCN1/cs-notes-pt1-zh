@@ -4,11 +4,9 @@
 
 ---
 
-![](img/f070b8534d13ccf1c975e907cbd24abb_1.png)
 
 ## 概述与准备工作
 
-![](img/f070b8534d13ccf1c975e907cbd24abb_3.png)
 
 上一节我们实现了游戏的核心循环和动画。本节中，我们来看看如何判定游戏结束并向玩家展示结果。
 
@@ -22,11 +20,9 @@
 #define MAX_SCORE 5
 ```
 
-![](img/f070b8534d13ccf1c975e907cbd24abb_5.png)
 
 ### 完善调色板处理
 
-![](img/f070b8534d13ccf1c975e907cbd24abb_7.png)
 
 为了在文本打印时使用标准的VGA颜色，我们需要读取并保留VGA卡上默认的前16种颜色，而不是覆盖它们。
 
@@ -50,7 +46,6 @@ for(i = 16; i < 256; i++) {
 
 ## 在图形模式下打印文本
 
-![](img/f070b8534d13ccf1c975e907cbd24abb_9.png)
 
 在MS-DOS图形模式下，标准的C库`printf`函数会导致屏幕滚动，并不适合在固定位置显示信息。我们需要使用BIOS中断来手动控制光标和字符打印。
 
@@ -58,7 +53,6 @@ for(i = 16; i < 256; i++) {
 *   **设置光标位置**：中断`0x10`，功能`0x02`。
 *   **写字符及属性**：中断`0x10`，功能`0x09`。
 
-![](img/f070b8534d13ccf1c975e907cbd24abb_11.png)
 
 ### 实现打印函数
 
@@ -90,11 +84,9 @@ void print_text(int x, int y, char color, char far *str) {
 }
 ```
 
-![](img/f070b8534d13ccf1c975e907cbd24abb_13.png)
 
 ### 在游戏中显示分数
 
-![](img/f070b8534d13ccf1c975e907cbd24abb_15.png)
 
 现在，我们可以在游戏循环中使用这个函数来显示双方玩家的分数。
 
@@ -108,11 +100,9 @@ print_text(0, 0, 0x0F, buffer); // 0x0F是亮白色
 
 然后，在`handle_game`函数中，当分数更新时（例如球出界后），调用上述代码刷新分数显示。为了避免每帧都调用缓慢的BIOS中断，我们只在分数实际发生变化时才更新文本。
 
-![](img/f070b8534d13ccf1c975e907cbd24abb_17.png)
 
 ---
 
-![](img/f070b8534d13ccf1c975e907cbd24abb_19.png)
 
 ## 实现游戏结束逻辑
 
@@ -120,13 +110,10 @@ print_text(0, 0, 0x0F, buffer); // 0x0F是亮白色
 
 ### 检测胜利条件
 
-![](img/f070b8534d13ccf1c975e907cbd24abb_21.png)
 
-![](img/f070b8534d13ccf1c975e907cbd24abb_23.png)
 
 在球出界并加分后，加入胜利条件检查：
 
-![](img/f070b8534d13ccf1c975e907cbd24abb_25.png)
 
 ```c
 int handle_ball(...) {
@@ -152,7 +139,6 @@ int handle_ball(...) {
 }
 ```
 
-![](img/f070b8534d13ccf1c975e907cbd24abb_27.png)
 
 ### 创建游戏结束处理函数
 
@@ -207,11 +193,9 @@ void handle_game_over(int winner) {
 
 ---
 
-![](img/f070b8534d13ccf1c975e907cbd24abb_29.png)
 
 ## 总结
 
-![](img/f070b8534d13ccf1c975e907cbd24abb_31.png)
 
 本节课中我们一起学习了如何为MS-DOS图形模式游戏画上句号。我们主要完成了以下工作：
 

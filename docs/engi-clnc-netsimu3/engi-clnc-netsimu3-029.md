@@ -37,7 +37,6 @@ sudo apt install libboost-signals-dev libboost-filesystem-dev
 sudo apt install wireshark
 ```
 
-![](img/52c402136a02583284e3bed802ea45ec_5.png)
 
 在安装Wireshark时，系统会询问是否允许非超级用户捕获数据包。根据你的安全策略选择“是”或“否”。
 
@@ -91,9 +90,7 @@ cd ns-allinone-3.31
 
 ## 验证安装
 
-![](img/52c402136a02583284e3bed802ea45ec_19.png)
 
-![](img/52c402136a02583284e3bed802ea45ec_20.png)
 
 构建成功后，我们需要验证NS-3是否安装正确。进入NS-3的主目录并运行一个简单的测试。
 

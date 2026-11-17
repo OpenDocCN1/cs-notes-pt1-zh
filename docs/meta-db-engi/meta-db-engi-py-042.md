@@ -120,7 +120,6 @@ def hello(self):
 
 ## 总结 📚
 
-![](img/8791cafe15c5994abba6df25d6f07558_3.png)
 
 ![](img/8791cafe15c5994abba6df25d6f07558_4.png)
 

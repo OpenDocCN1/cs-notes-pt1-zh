@@ -14,9 +14,7 @@ let number = 10;
 
 默认情况下，`number` 是不可变的。我们可以打印它的值：
 
-![](img/2a1f852fe4b6d91903dc9f2189d652a7_1.png)
 
-![](img/2a1f852fe4b6d91903dc9f2189d652a7_2.png)
 
 ```rust
 println!("number is equal to {}", number);
@@ -52,11 +50,9 @@ number = 20; // 现在这是允许的
 println!("number is equal to {}", number);
 ```
 
-![](img/2a1f852fe4b6d91903dc9f2189d652a7_4.png)
 
 我们还可以对可变变量进行运算，例如自增操作：
 
-![](img/2a1f852fe4b6d91903dc9f2189d652a7_6.png)
 
 ```rust
 let mut number = 10;
@@ -64,7 +60,6 @@ number += 1; // number 现在等于 11
 println!("number is equal to {}", number);
 ```
 
-![](img/2a1f852fe4b6d91903dc9f2189d652a7_8.png)
 
 记住一个简单的规则：如果你认为一个变量的值将来可能需要改变，就使用 `let mut` 来声明它。
 
@@ -83,9 +78,7 @@ println!("My name is {}", first_name);
 
 ## 常量
 
-![](img/2a1f852fe4b6d91903dc9f2189d652a7_10.png)
 
-![](img/2a1f852fe4b6d91903dc9f2189d652a7_11.png)
 
 现在，让我们转向常量。常量与不可变变量有相似之处，但也有几个关键区别。
 
@@ -102,11 +95,9 @@ const ONE_HOUR: u32 = ONE_MINUTE * 60;
 1.  常量的值必须在编译时确定，不能是运行时计算的结果。
 2.  常量总是不可变的。
 
-![](img/2a1f852fe4b6d91903dc9f2189d652a7_13.png)
 
 常量通常用于表示程序中永不改变的重要值，例如数学常数：
 
-![](img/2a1f852fe4b6d91903dc9f2189d652a7_14.png)
 
 ```rust
 const PI: f64 = 3.1415;

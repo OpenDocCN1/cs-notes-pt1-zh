@@ -1,6 +1,5 @@
 # 014：缺失（以及未来）的 C++ 范围概念
 
-![](img/a871a92de121a0dafcc04c73ca831928_0.png)
 
 ## 概述
 
@@ -32,7 +31,6 @@ auto result = std::ranges::to<std::string>(
 
 `std::ranges::to` 在构造容器时，如果输入范围是 **sized range**（已知大小），则可以预先分配（`reserve`）内存，然后直接拷贝，这非常高效。如果是 **forward range**，则可以使用 `distance` 计算大小，虽然需要遍历一次，但仍比多次重新分配（`push_back`）高效。然而，对于纯 **input range**，它只能遍历一次，无法预先分配内存，只能使用低效的 `push_back`。
 
-![](img/a871a92de121a0dafcc04c73ca831928_2.png)
 
 在我们的管道中，`read_file` 可能是一个 sized input range（例如，可以通过文件系统查询文件大小）。但经过 `transform` 和 `join` 后，我们失去了大小信息，因为 `join` 需要将内部多个字符串的大小相加，而转换函数可能将单个字符扩展为多个字符，我们无法预先知道总大小。
 
@@ -99,7 +97,6 @@ auto result = std::ranges::to<std::string>(approx_sized_pipeline);
 
 通过结合 `for_each_while` 和块处理，我们可以写出既优雅又高性能的范围代码，直接处理连续内存块，避免迭代器开销。
 
-![](img/a871a92de121a0dafcc04c73ca831928_4.png)
 
 ### 优化后的文件处理方案
 
@@ -109,7 +106,6 @@ auto result = std::ranges::to<std::string>(approx_sized_pipeline);
 
 更好的设计是提供 `read_file_buffers`，它返回一个 `std::span` 的范围（每个 span 代表一个文件缓冲区）。然后，我们在这个“缓冲区范围”上进行 `transform`（处理每个缓冲区）、`split`、`join_with`，最后再将所有缓冲区 `join` 起来。这样，内部操作都在大连续块上进行，非常高效。
 
-![](img/a871a92de121a0dafcc04c73ca831928_6.png)
 
 `read_file` 可以基于 `read_file_buffers` 实现，只需一个特殊的 `for_each_while` 接收器，将每个缓冲区作为单个元素转发。
 
@@ -156,7 +152,6 @@ constexpr auto to_array(R&& r) -> std::array</*...*/, constexpr_size<R>> {
 
 标准范围是同质的（homogeneous）：所有元素类型相同。但有时我们需要处理**异构**的元素序列，例如一个包含不同类型值的 `std::tuple`。
 
-![](img/a871a92de121a0dafcc04c73ca831928_8.png)
 
 `std::tuple` 不是范围，因为它没有迭代器。但是，我们可以为它实现 `for_each_while`！我们可以用一个泛型 lambda 遍历 tuple，lambda 会对每种不同类型的元素进行实例化。我们称这种只有 `for_each_while` 而没有迭代器的类型为 **生成器**（generator）。如果生成器输出多种类型，则称为**异构生成器**。
 

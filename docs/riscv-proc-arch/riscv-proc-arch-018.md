@@ -1,6 +1,5 @@
 # 018：虚拟内存 #3 - 按需分页
 
-![](img/6e9ac7ebae3d3122c5212eadf948f0f5_0.png)
 
 ![](img/6e9ac7ebae3d3122c5212eadf948f0f5_0.png)
 
@@ -160,6 +159,5 @@
 
 无论如何，感谢观看，希望在下个视频中见到你。
 
-![](img/6e9ac7ebae3d3122c5212eadf948f0f5_2.png)
 
 ![](img/6e9ac7ebae3d3122c5212eadf948f0f5_2.png)

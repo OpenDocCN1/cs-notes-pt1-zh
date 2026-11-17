@@ -28,11 +28,9 @@ def get_day_of_week(day):
         return "Not a valid day"
 ```
 
-![](img/6203ee42e15fe88ea29eac366076c7a0_1.png)
 
 上面的代码功能正常，但当条件分支很多时，会显得冗长。接下来，我们看看如何使用`match case`语句重写它。
 
-![](img/6203ee42e15fe88ea29eac366076c7a0_3.png)
 
 ```python
 def get_day_of_week(day):

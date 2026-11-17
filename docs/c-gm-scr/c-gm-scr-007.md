@@ -20,23 +20,17 @@
 
 ---
 
-![](img/06038cb1cd219389e961b5d06c0686c3_17.png)
 
 ![](img/06038cb1cd219389e961b5d06c0686c3_19.png)
 
 ![](img/06038cb1cd219389e961b5d06c0686c3_21.png)
 
-![](img/06038cb1cd219389e961b5d06c0686c3_23.png)
 
-![](img/06038cb1cd219389e961b5d06c0686c3_25.png)
 
-![](img/06038cb1cd219389e961b5d06c0686c3_27.png)
 
-![](img/06038cb1cd219389e961b5d06c0686c3_29.png)
 
 ## 概述
 
-![](img/06038cb1cd219389e961b5d06c0686c3_31.png)
 
 ![](img/06038cb1cd219389e961b5d06c0686c3_33.png)
 
@@ -48,7 +42,6 @@
 
 ![](img/06038cb1cd219389e961b5d06c0686c3_39.png)
 
-![](img/06038cb1cd219389e961b5d06c0686c3_41.png)
 
 ![](img/06038cb1cd219389e961b5d06c0686c3_43.png)
 
@@ -60,7 +53,6 @@
 
 ![](img/06038cb1cd219389e961b5d06c0686c3_49.png)
 
-![](img/06038cb1cd219389e961b5d06c0686c3_51.png)
 
 ![](img/06038cb1cd219389e961b5d06c0686c3_52.png)
 
@@ -82,7 +74,6 @@
 
 ![](img/06038cb1cd219389e961b5d06c0686c3_63.png)
 
-![](img/06038cb1cd219389e961b5d06c0686c3_65.png)
 
 ![](img/06038cb1cd219389e961b5d06c0686c3_67.png)
 
@@ -102,7 +93,6 @@
 
 ![](img/06038cb1cd219389e961b5d06c0686c3_80.png)
 
-![](img/06038cb1cd219389e961b5d06c0686c3_82.png)
 
 ![](img/06038cb1cd219389e961b5d06c0686c3_84.png)
 
@@ -146,9 +136,7 @@
 
 首先，我们希望玩家挡板的移动更加生动，而不是僵硬地跟随鼠标。我们将实现一个简单的弹簧系统，让挡板的视觉位置平滑地“追赶”目标位置（即鼠标位置）。
 
-![](img/06038cb1cd219389e961b5d06c0686c3_120.png)
 
-![](img/06038cb1cd219389e961b5d06c0686c3_122.png)
 
 ### 核心概念与代码
 
@@ -182,13 +170,9 @@
 
 ![](img/06038cb1cd219389e961b5d06c0686c3_146.png)
 
-![](img/06038cb1cd219389e961b5d06c0686c3_148.png)
 
-![](img/06038cb1cd219389e961b5d06c0686c3_150.png)
 
-![](img/06038cb1cd219389e961b5d06c0686c3_152.png)
 
-![](img/06038cb1cd219389e961b5d06c0686c3_154.png)
 
 ![](img/06038cb1cd219389e961b5d06c0686c3_156.png)
 
@@ -218,13 +202,11 @@
 
 ![](img/06038cb1cd219389e961b5d06c0686c3_180.png)
 
-![](img/06038cb1cd219389e961b5d06c0686c3_182.png)
 
 ![](img/06038cb1cd219389e961b5d06c0686c3_184.png)
 
 ![](img/06038cb1cd219389e961b5d06c0686c3_186.png)
 
-![](img/06038cb1cd219389e961b5d06c0686c3_188.png)
 
 ![](img/06038cb1cd219389e961b5d06c0686c3_190.png)
 
@@ -255,11 +237,9 @@
 
 ![](img/06038cb1cd219389e961b5d06c0686c3_215.png)
 
-![](img/06038cb1cd219389e961b5d06c0686c3_217.png)
 
 ![](img/06038cb1cd219389e961b5d06c0686c3_219.png)
 
-![](img/06038cb1cd219389e961b5d06c0686c3_221.png)
 
 ![](img/06038cb1cd219389e961b5d06c0686c3_223.png)
 
@@ -286,9 +266,7 @@ player_visual_p += player_visual_dp * dt;
 
 ![](img/06038cb1cd219389e961b5d06c0686c3_233.png)
 
-![](img/06038cb1cd219389e961b5d06c0686c3_235.png)
 
-![](img/06038cb1cd219389e961b5d06c0686c3_237.png)
 
 ![](img/06038cb1cd219389e961b5d06c0686c3_239.png)
 
@@ -350,9 +328,7 @@ player_visual_p += player_visual_dp * dt;
 
 ![](img/06038cb1cd219389e961b5d06c0686c3_288.png)
 
-![](img/06038cb1cd219389e961b5d06c0686c3_290.png)
 
-![](img/06038cb1cd219389e961b5d06c0686c3_291.png)
 
 ![](img/06038cb1cd219389e961b5d06c0686c3_292.png)
 
@@ -454,9 +430,7 @@ player_half_size.y = base_height - fabsf(player_visual_dp.x) * scale_factor + sq
 
 ![](img/06038cb1cd219389e961b5d06c0686c3_369.png)
 
-![](img/06038cb1cd219389e961b5d06c0686c3_371.png)
 
-![](img/06038cb1cd219389e961b5d06c0686c3_372.png)
 
 ![](img/06038cb1cd219389e961b5d06c0686c3_374.png)
 
@@ -464,11 +438,9 @@ player_half_size.y = base_height - fabsf(player_visual_dp.x) * scale_factor + sq
 
 ![](img/06038cb1cd219389e961b5d06c0686c3_376.png)
 
-![](img/06038cb1cd219389e961b5d06c0686c3_378.png)
 
 接下来，我们为移动的球体添加视觉拖尾，以增强其速度感和轨迹可见性。
 
-![](img/06038cb1cd219389e961b5d06c0686c3_380.png)
 
 ![](img/06038cb1cd219389e961b5d06c0686c3_382.png)
 
@@ -482,9 +454,7 @@ player_half_size.y = base_height - fabsf(player_visual_dp.x) * scale_factor + sq
 
 ![](img/06038cb1cd219389e961b5d06c0686c3_392.png)
 
-![](img/06038cb1cd219389e961b5d06c0686c3_394.png)
 
-![](img/06038cb1cd219389e961b5d06c0686c3_396.png)
 
 ### 实现思路
 
@@ -492,11 +462,8 @@ player_half_size.y = base_height - fabsf(player_visual_dp.x) * scale_factor + sq
 
 ![](img/06038cb1cd219389e961b5d06c0686c3_400.png)
 
-![](img/06038cb1cd219389e961b5d06c0686c3_402.png)
 
-![](img/06038cb1cd219389e961b5d06c0686c3_404.png)
 
-![](img/06038cb1cd219389e961b5d06c0686c3_406.png)
 
 ![](img/06038cb1cd219389e961b5d06c0686c3_408.png)
 
@@ -528,9 +495,7 @@ player_half_size.y = base_height - fabsf(player_visual_dp.x) * scale_factor + sq
 
 ![](img/06038cb1cd219389e961b5d06c0686c3_432.png)
 
-![](img/06038cb1cd219389e961b5d06c0686c3_434.png)
 
-![](img/06038cb1cd219389e961b5d06c0686c3_436.png)
 
 ![](img/06038cb1cd219389e961b5d06c0686c3_438.png)
 
@@ -580,11 +545,8 @@ player_half_size.y = base_height - fabsf(player_visual_dp.x) * scale_factor + sq
 
 ![](img/06038cb1cd219389e961b5d06c0686c3_480.png)
 
-![](img/06038cb1cd219389e961b5d06c0686c3_482.png)
 
-![](img/06038cb1cd219389e961b5d06c0686c3_484.png)
 
-![](img/06038cb1cd219389e961b5d06c0686c3_486.png)
 
 ![](img/06038cb1cd219389e961b5d06c0686c3_488.png)
 
@@ -635,7 +597,6 @@ for (int i = 0; i < ARRAY_COUNT(ball->trails); ++i) {
 
 ![](img/06038cb1cd219389e961b5d06c0686c3_500.png)
 
-![](img/06038cb1cd219389e961b5d06c0686c3_502.png)
 
 ![](img/06038cb1cd219389e961b5d06c0686c3_504.png)
 
@@ -687,7 +648,6 @@ for (int i = 0; i < ARRAY_COUNT(ball->trails); ++i) {
 
 ## 实现动态墙壁 🧱
 
-![](img/06038cb1cd219389e961b5d06c0686c3_546.png)
 
 ![](img/06038cb1cd219389e961b5d06c0686c3_548.png)
 
@@ -715,7 +675,6 @@ for (int i = 0; i < ARRAY_COUNT(ball->trails); ++i) {
 
 ![](img/06038cb1cd219389e961b5d06c0686c3_568.png)
 
-![](img/06038cb1cd219389e961b5d06c0686c3_570.png)
 
 ![](img/06038cb1cd219389e961b5d06c0686c3_572.png)
 
@@ -729,9 +688,7 @@ for (int i = 0; i < ARRAY_COUNT(ball->trails); ++i) {
 
 类似于玩家挡板，我们为左侧、右侧和顶部墙壁分别存储其视觉位置和速度（`arena_left_visual_p`, `arena_left_visual_dp` 等）。墙壁也有一个目标位置（即其初始静止位置）。
 
-![](img/06038cb1cd219389e961b5d06c0686c3_582.png)
 
-![](img/06038cb1cd219389e961b5d06c0686c3_584.png)
 
 ![](img/06038cb1cd219389e961b5d06c0686c3_586.png)
 
@@ -765,7 +722,6 @@ if (ball_collides_with_right_wall) {
 }
 ```
 
-![](img/06038cb1cd219389e961b5d06c0686c3_606.png)
 
 ![](img/06038cb1cd219389e961b5d06c0686c3_608.png)
 
@@ -799,7 +755,6 @@ if (ball_collides_with_right_wall) {
 
 ![](img/06038cb1cd219389e961b5d06c0686c3_636.png)
 
-![](img/06038cb1cd219389e961b5d06c0686c3_638.png)
 
 ![](img/06038cb1cd219389e961b5d06c0686c3_639.png)
 
@@ -837,7 +792,6 @@ if (ball_collides_with_right_wall) {
 
 ![](img/06038cb1cd219389e961b5d06c0686c3_669.png)
 
-![](img/06038cb1cd219389e961b5d06c0686c3_671.png)
 
 ![](img/06038cb1cd219389e961b5d06c0686c3_673.png)
 
@@ -855,9 +809,7 @@ if (ball_collides_with_right_wall) {
 
 ![](img/06038cb1cd219389e961b5d06c0686c3_685.png)
 
-![](img/06038cb1cd219389e961b5d06c0686c3_687.png)
 
-![](img/06038cb1cd219389e961b5d06c0686c3_689.png)
 
 ![](img/06038cb1cd219389e961b5d06c0686c3_691.png)
 
@@ -895,11 +847,8 @@ if (ball_collides_with_right_wall) {
 
 ![](img/06038cb1cd219389e961b5d06c0686c3_719.png)
 
-![](img/06038cb1cd219389e961b5d06c0686c3_721.png)
 
-![](img/06038cb1cd219389e961b5d06c0686c3_723.png)
 
-![](img/06038cb1cd219389e961b5d06c0686c3_725.png)
 
 ![](img/06038cb1cd219389e961b5d06c0686c3_727.png)
 
@@ -944,13 +893,11 @@ else {
 }
 ```
 
-![](img/06038cb1cd219389e961b5d06c0686c3_752.png)
 
 ![](img/06038cb1cd219389e961b5d06c0686c3_754.png)
 
 ![](img/06038cb1cd219389e961b5d06c0686c3_756.png)
 
-![](img/06038cb1cd219389e961b5d06c0686c3_758.png)
 
 ![](img/06038cb1cd219389e961b5d06c0686c3_760.png)
 
@@ -992,7 +939,6 @@ else {
 
 ![](img/06038cb1cd219389e961b5d06c0686c3_790.png)
 
-![](img/06038cb1cd219389e961b5d06c0686c3_792.png)
 
 1.  **弹性挡板**：使用弹簧物理模拟，让挡板移动更加生动，并添加了撞墙时的挤压拉伸效果。
 2.  **球体拖尾**：通过环形缓冲区和生命周期管理，实现了带有淡出效果的轨迹，增强了速度感。
@@ -1007,7 +953,6 @@ else {
 
 ![](img/06038cb1cd219389e961b5d06c0686c3_800.png)
 
-![](img/06038cb1cd219389e961b5d06c0686c3_802.png)
 
 ![](img/06038cb1cd219389e961b5d06c0686c3_804.png)
 

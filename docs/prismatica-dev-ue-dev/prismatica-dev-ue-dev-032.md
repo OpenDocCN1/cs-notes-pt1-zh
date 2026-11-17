@@ -52,7 +52,6 @@ PreSkinnedLocalPosition -> VertexInterpolator -> Base Color (或其他需要位�
 
 了解了位置节点后，我们再来看看它的“伙伴”——**预蒙皮顶点法线**节点。
 
-![](img/cc4c8bfd1e39641f32657c0004628b6c_3.png)
 
 ![](img/cc4c8bfd1e39641f32657c0004628b6c_4.png)
 

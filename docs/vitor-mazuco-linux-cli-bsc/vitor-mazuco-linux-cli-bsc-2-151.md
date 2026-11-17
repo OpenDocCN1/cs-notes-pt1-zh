@@ -20,27 +20,20 @@ db.serverStatus().globalLock
 
 执行该命令后，你会看到一些关键信息。其中，`currentQueue.total` 这个数字可能指示并发性问题。如果这个值非常高，可能意味着存在问题。这通常发生在多个请求等待锁释放时。这个队列不能太长，否则确实可能存在某种问题。
 
-![](img/e99df92d0b37c278cc0d49fba7c45e81_1.png)
 
-![](img/e99df92d0b37c278cc0d49fba7c45e81_3.png)
 
 另一个关键指标是 `totalTime`。这个值基本上是数据库处于锁定状态的总时间。它不应该比数据库的总运行时间（uptime）长太多。如果它远大于数据库的运行时间，说明数据库可能长时间处于阻塞状态，需要引起注意。
 
 ## 内存使用情况监控 💾
 
-![](img/e99df92d0b37c278cc0d49fba7c45e81_5.png)
 
-![](img/e99df92d0b37c278cc0d49fba7c45e81_6.png)
 
 上一节我们分析了事务阻塞，本节中我们来看看内存使用情况。我们可以查看MongoDB的内存指标。
 
-![](img/e99df92d0b37c278cc0d49fba7c45e81_8.png)
 
-![](img/e99df92d0b37c278cc0d49fba7c45e81_9.png)
 
 以下是查看内存使用情况的关键命令和字段：
 
-![](img/e99df92d0b37c278cc0d49fba7c45e81_11.png)
 
 ```bash
 db.serverStatus().mem
@@ -56,15 +49,11 @@ db.serverStatus().mem
 
 上一节我们检查了内存使用，本节中我们来调整存储引擎缓存。默认情况下，MongoDB的WiredTiger存储引擎会保留50%的可用RAM用于数据缓存。
 
-![](img/e99df92d0b37c278cc0d49fba7c45e81_13.png)
 
 例如，如果你的机器有8GB RAM，那么至少有4GB会被WiredTiger使用。这个缓存大小对于确保系统正常运行非常重要，因此值得检查是否需要调整。
 
-![](img/e99df92d0b37c278cc0d49fba7c45e81_15.png)
 
-![](img/e99df92d0b37c278cc0d49fba7c45e81_17.png)
 
-![](img/e99df92d0b37c278cc0d49fba7c45e81_18.png)
 
 以下是查看和评估缓存配置的命令：
 
@@ -77,7 +66,6 @@ db.serverStatus().wiredTiger.cache
 *   `"bytes currently in the cache"`：这是缓存中数据的当前大小（单位是字节）。这个值显然不应该大于 `maximum bytes configured`。
 *   `"tracked dirty bytes in the cache"`：这是缓存中“脏数据”的大小。这个值应该远小于 `bytes currently in the cache`。
 
-![](img/e99df92d0b37c278cc0d49fba7c45e81_20.png)
 
 通过观察这些值，我们可以判断是否需要增加缓存。此外，`bytes read into cache` 字段也很有用。如果你的应用程序进行大量读取操作，这个值会增长，你可能需要考虑增加缓存大小。同样，如果写入量很大，也可能需要调整。
 
@@ -85,7 +73,6 @@ db.serverStatus().wiredTiger.cache
 
 上一节我们讨论了缓存调整，本节中我们来看看连接监控。服务器对连接数有物理限制（如CPU、内存）。应用程序与数据库之间的大量连接可能会使数据库过载，从而限制其处理能力。
 
-![](img/e99df92d0b37c278cc0d49fba7c45e81_22.png)
 
 通常，让MongoDB在10个连接下稳定工作，比在120个连接下全部崩溃要好。你可以限制连接数，直到你决定升级基础设施。
 

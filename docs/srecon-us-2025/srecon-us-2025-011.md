@@ -1,6 +1,5 @@
 # 011：SRE大会-2025-美洲-｜-srecon-｜-分布式-｜-缓存-｜-OpenTelemetry-｜-安全-｜-AIOps-p11-P11-Mapping-a-Better-Future-with-STPA--BV1TmLDz7EZZ_p11-
 
-![](img/c208e49e190590ef1f0bf8b967d76556_1.png)
 
 ![](img/c208e49e190590ef1f0bf8b967d76556_1.png)
 
@@ -137,12 +136,10 @@ STPA分析包含四个关键步骤：
 
 如果你想学习更多关于STPA的知识，可以参考麻省理工学院（STPA的发源地）发布的相关资料，Google也开始发布如何应用STPA的资源。
 
-![](img/c208e49e190590ef1f0bf8b967d76556_3.png)
 
 （演讲结束，进入问答环节）
 
 ![](img/c208e49e190590ef1f0bf8b967d76556_3.png)
 
-![](img/c208e49e190590ef1f0bf8b967d76556_5.png)
 
 ![](img/c208e49e190590ef1f0bf8b967d76556_5.png)

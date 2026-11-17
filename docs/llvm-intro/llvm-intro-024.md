@@ -26,7 +26,6 @@
 
 这个过程可以用以下代码流程描述：
 
-![](img/523fb2a566da04e318a2ea31a5c4e5ef_1.png)
 
 ```bash
 # 1. 构建测试套件（基线）
@@ -42,7 +41,6 @@ opt -load=MyPass.so -mypass ${EXECUTABLE}.bc -o ${EXECUTABLE}.optimized.bc
 clang ${EXECUTABLE}.optimized.bc -o ${EXECUTABLE}.optimized
 ```
 
-![](img/523fb2a566da04e318a2ea31a5c4e5ef_3.png)
 
 感谢观看。在下一个视频中，我将向大家展示如何具体应用这个补丁并使用它。
 

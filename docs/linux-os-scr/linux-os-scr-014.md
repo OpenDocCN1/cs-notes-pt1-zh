@@ -47,7 +47,6 @@
 ./script_name.sh
 ```
 
-![](img/c2c4b16d856edd337379bb6f72e89a15_25.png)
 
 ![](img/c2c4b16d856edd337379bb6f72e89a15_27.png)
 

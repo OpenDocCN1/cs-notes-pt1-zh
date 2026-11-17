@@ -8,7 +8,6 @@
 
 过滤技术中，WHERE子句是一个基础且重要的工具。它用于筛选满足特定条件的记录。
 
-![](img/c033410f9862d5cdbc41d2f105f6b6bc_1.png)
 
 以下是WHERE子句的基本用法：
 ```sql
@@ -18,13 +17,11 @@ SELECT booking_id, bill_amount FROM orders WHERE bill_amount = 40;
 
 然而，Little Lemon需要的是账单金额**大于或等于**40美元的记录。这需要引入比较运算符。
 
-![](img/c033410f9862d5cdbc41d2f105f6b6bc_3.png)
 
 ## 使用比较运算符 🔧
 
 比较运算符允许我们指定更精确的过滤条件。
 
-![](img/c033410f9862d5cdbc41d2f105f6b6bc_5.png)
 
 例如，我们可以将等于运算符（`=`）替换为大于或等于运算符（`>=`）：
 ```sql
@@ -34,7 +31,6 @@ SELECT booking_id, bill_amount FROM orders WHERE bill_amount >= 40;
 
 ## 排序技术：ORDER BY子句 📈
 
-![](img/c033410f9862d5cdbc41d2f105f6b6bc_7.png)
 
 为了进一步组织数据，我们可以使用ORDER BY子句对结果进行排序。这是一个可选的子句，可以附加在SELECT语句末尾。
 
@@ -58,9 +54,7 @@ ORDER BY bill_amount ASC;
 """
 ```
 
-![](img/c033410f9862d5cdbc41d2f105f6b6bc_9.png)
 
-![](img/c033410f9862d5cdbc41d2f105f6b6bc_10.png)
 
 以下是使用Python连接MySQL并执行查询的完整步骤：
 

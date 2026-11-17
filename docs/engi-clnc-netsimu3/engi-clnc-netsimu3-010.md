@@ -4,9 +4,7 @@
 
 ## 概述
 
-![](img/7b334764ebad78de243e4aaff84b4dab_1.png)
 
-![](img/7b334764ebad78de243e4aaff84b4dab_3.png)
 
 本教程将分为三个主要步骤。首先，我们将详细解释源代码的结构和功能。其次，我们将学习如何利用OpenStreetMap创建一个真实的交通场景。最后，我们将对多种路由协议进行性能分析。本示例代码超过1500行，我们将分块进行讲解，以便于理解。
 
@@ -56,9 +54,7 @@
 *   `nodePause`: 0
 *   `wavePacketSize`: 200 字节
 
-![](img/7b334764ebad78de243e4aaff84b4dab_5.png)
 
-![](img/7b334764ebad78de243e4aaff84b4dab_7.png)
 
 此外，还定义了安全消息的传输范围（50米到500米，每50米一个间隔），用于计算不同距离下的包投递率。
 
@@ -75,9 +71,7 @@
 
 首先，将 `vanet-routing-compare.cc` 文件复制到 `scratch` 目录并编译运行。默认情况下，它使用AODV协议运行一个10秒的简短场景。
 
-![](img/7b334764ebad78de243e4aaff84b4dab_9.png)
 
-![](img/7b334764ebad78de243e4aaff84b4dab_10.png)
 
 我们可以通过命令行参数运行不同协议的仿真进行比较：
 1.  **AODV (默认)**: `./waf --run "scratch/vanet-routing-compare --protocol=2"`
@@ -88,9 +82,7 @@
 
 运行后，终端会输出关键性能指标，例如不同距离（50m, 100m, ..., 500m）下的BSM包投递率（PDR）和网络总吞吐量（Goodput）。初步观察显示，在本示例的短时仿真中，DSR协议的吞吐量表现最佳。
 
-![](img/7b334764ebad78de243e4aaff84b4dab_12.png)
 
-![](img/7b334764ebad78de243e4aaff84b4dab_14.png)
 
 ### 生成的文件
 
@@ -102,25 +94,18 @@
 
 ### 网络动画可视化
 
-![](img/7b334764ebad78de243e4aaff84b4dab_16.png)
 
 通过修改源代码，在仿真运行前添加网络动画接口，可以生成 `.xml` 动画文件。使用NetAnim工具打开此文件，可以直观地观察车辆节点的移动和它们之间的数据包交换过程。这对于理解网络动态和调试非常有帮助。
 
-![](img/7b334764ebad78de243e4aaff84b4dab_18.png)
 
 ## 总结
 
-![](img/7b334764ebad78de243e4aaff84b4dab_20.png)
 
-![](img/7b334764ebad78de243e4aaff84b4dab_22.png)
 
 本节课中我们一起学习了ns-3中VANET路由比较示例的第一部分。我们详细解读了超过1500行的源代码结构，了解了如何配置车辆网络仿真参数，以及如何运行仿真来比较AODV、OLSR、DSDV和DSR等路由协议。我们还看到了如何通过命令行覆盖默认参数，并初步查看了仿真输出的结果文件和简单的网络动画。
 
-![](img/7b334764ebad78de243e4aaff84b4dab_24.png)
 
-![](img/7b334764ebad78de243e4aaff84b4dab_26.png)
 
-![](img/7b334764ebad78de243e4aaff84b4dab_28.png)
 
 ![](img/7b334764ebad78de243e4aaff84b4dab_30.png)
 

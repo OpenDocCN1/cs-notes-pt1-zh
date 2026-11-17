@@ -2,9 +2,7 @@
 
 在本节课中，我们将学习如何使用SAS中的汇总函数来分析表格数据。我们将通过一个具体的例子，探索如何计算一列数据的统计量，以及如何跨行进行计算。
 
-![](img/1c3b978c5dcf22ac7d5d4454ffc14c21_1.png)
 
-![](img/1c3b978c5dcf22ac7d5d4454ffc14c21_2.png)
 
 ## 概述
 
@@ -49,7 +47,6 @@ QUIT;
 
 现在，我们可以在结果中看到所有描述性统计量。
 
-![](img/1c3b978c5dcf22ac7d5d4454ffc14c21_4.png)
 
 ## 使用 PROC MEANS 的替代方法
 
@@ -61,9 +58,7 @@ PROC MEANS DATA=state_population N MEAN STD MIN MAX MAXDEC=0;
 RUN;
 ```
 
-![](img/1c3b978c5dcf22ac7d5d4454ffc14c21_6.png)
 
-![](img/1c3b978c5dcf22ac7d5d4454ffc14c21_7.png)
 
 运行此代码将产生与之前SQL查询相同的统计结果。这为数据分析提供了另一种有效的方法。
 
@@ -88,7 +83,6 @@ QUIT;
 
 当在汇总函数中指定多个参数时，SAS会跨这些列进行计算。结果将显示每个州在这三个估计值中的最小值、平均值和最大值。
 
-![](img/1c3b978c5dcf22ac7d5d4454ffc14c21_9.png)
 
 ## 关于列列表快捷方式的注意事项
 

@@ -1,10 +1,8 @@
 # 009：部署持续通知 📨
 
-![](img/36a1866fda39426af7d4b250da5bc9b8_0.png)
 
 在本节课中，我们将学习如何为AWS CodePipeline配置持续通知。通过设置通知，您可以在代码提交、构建和部署的每个阶段自动收到更新，从而无需手动登录控制台即可跟踪项目状态。
 
-![](img/36a1866fda39426af7d4b250da5bc9b8_2.png)
 
 上一节我们完成了CI/CD管道的搭建，本节中我们来看看如何配置通知功能，以便及时了解部署动态。
 
@@ -82,19 +80,15 @@ git push origin master
 
 但我会通过一次新的部署来展示整个过程。这是我们的管道。在此之前，我将对代码进行一些更改。
 
-![](img/36a1866fda39426af7d4b250da5bc9b8_12.png)
 
 假设将“Congratulations”改为“Congratulations you all”。保存文件。
 
-![](img/36a1866fda39426af7d4b250da5bc9b8_12.png)
 
-![](img/36a1866fda39426af7d4b250da5bc9b8_14.png)
 
 检查Git状态。已修改的文件是`index.html`。
 
 提交此`index.html`文件。然后将其推送到GitHub。
 
-![](img/36a1866fda39426af7d4b250da5bc9b8_14.png)
 
 在此处查看。刷新页面。它应该会获取新代码并开始部署。等待一分钟。再次刷新。可以看到部署正在进行中。
 
@@ -104,11 +98,9 @@ git push origin master
 
 再次查看此处。部署现在应该已完成。是的，已成功。
 
-![](img/36a1866fda39426af7d4b250da5bc9b8_16.png)
 
 ![](img/36a1866fda39426af7d4b250da5bc9b8_16.png)
 
-![](img/36a1866fda39426af7d4b250da5bc9b8_18.png)
 
 现在可以打开网站并检查。“Congratulations you all”已显示。
 

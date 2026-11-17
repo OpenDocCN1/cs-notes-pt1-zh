@@ -8,19 +8,16 @@
 
 作为数据库工程师，您可以使用日期和时间函数从数据库中提取时间与日期值。您也可以使用Python原生`datetime`库中提供的函数来完成类似任务。本节将介绍Python中可用的不同`datetime`函数及其使用方法。
 
-![](img/43307e27fff38c1e54fc72c53f0a82dd_1.png)
 
 ---
 
 ## Python的datetime类
 
-![](img/43307e27fff38c1e54fc72c53f0a82dd_3.png)
 
 `datetime`是Python的一个类，内置了多个可用于格式化和更改时间、日期变量的函数。它是Python的原生库，无需使用Pip即可导入。
 
 以下是Python `datetime`库提供的主要函数：
 
-![](img/43307e27fff38c1e54fc72c53f0a82dd_5.png)
 
 *   `datetime.now()`：用于获取当前日期和时间。
 *   `datetime.date()`：用于仅获取当前日期。
@@ -31,7 +28,6 @@
 
 ## 导入与基本语法
 
-![](img/43307e27fff38c1e54fc72c53f0a82dd_7.png)
 
 要使用`datetime`类，首先需要导入它。通常我们会为其创建一个别名以简化代码。
 
@@ -39,7 +35,6 @@
 import datetime as dt
 ```
 
-![](img/43307e27fff38c1e54fc72c53f0a82dd_9.png)
 
 通过以上代码，我们导入了`datetime`库并为其创建了别名`dt`。现在，您可以使用`dt`来调用库中的函数，而无需每次都输入完整的`datetime`。
 
@@ -47,13 +42,11 @@ import datetime as dt
 
 ## 使用datetime.now()获取当前时间
 
-![](img/43307e27fff38c1e54fc72c53f0a82dd_11.png)
 
 现在，您的Python环境中已创建了一个`datetime`对象。让我们看看如何使用`datetime.now()`函数。
 
 首先，创建一个名为`current_time`的变量。然后，使用模块别名`dt`调用`datetime.now()`函数。最后，指示Python打印当前的日期和时间值。
 
-![](img/43307e27fff38c1e54fc72c53f0a82dd_13.png)
 
 ```python
 current_time = dt.datetime.now()
@@ -71,7 +64,6 @@ print(dt.datetime.now().time())  # 仅打印时间
 
 ---
 
-![](img/43307e27fff38c1e54fc72c53f0a82dd_15.png)
 
 ## 使用timedelta进行时间计算
 
@@ -87,21 +79,17 @@ print(future_date)
 
 执行后，Python将返回一周后的日期。
 
-![](img/43307e27fff38c1e54fc72c53f0a82dd_17.png)
 
 ---
 
-![](img/43307e27fff38c1e54fc72c53f0a82dd_19.png)
 
 ## 实战：为Little Lemon餐厅更新预订时间
 
 现在您已经了解了`datetime`的基本工作原理，让我们来帮助Little Lemon餐厅解决实际问题。
 
-![](img/43307e27fff38c1e54fc72c53f0a82dd_21.png)
 
 如前所述，Little Lemon餐厅遇到了日程冲突，需要将每个预订时段向后推迟一小时。您可以通过指示Python从`bookings`表中检索数据，然后为每个预订时间增加一小时来完成此任务。
 
-![](img/43307e27fff38c1e54fc72c53f0a82dd_23.png)
 
 以下是实现步骤：
 
@@ -118,7 +106,6 @@ print(future_date)
 
 ---
 
-![](img/43307e27fff38c1e54fc72c53f0a82dd_25.png)
 
 ## 总结
 

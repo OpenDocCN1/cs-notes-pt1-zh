@@ -19,11 +19,9 @@ Python的创造者非常喜欢英国喜剧团体“蒙提·派森的飞行马戏
 *   使用Facebook。
 *   使用Google或Spotify。
 
-![](img/ab0de05699b3d3e33aa4a5e4776667e1_1.png)
 
 Python是一门如此普遍的语言，无论你是否意识到，你很可能都已经使用过它。
 
-![](img/ab0de05699b3d3e33aa4a5e4776667e1_2.png)
 
 ## Python在工业与科技领域的应用
 

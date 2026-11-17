@@ -1,14 +1,10 @@
 # 039：为SysTick寄存器分配符号名称 🎯
 
-![](img/a5f2a90e33f5d060f9ef65d15043e912_1.png)
 
-![](img/a5f2a90e33f5d060f9ef65d15043e912_3.png)
 
-![](img/a5f2a90e33f5d060f9ef65d15043e912_5.png)
 
 在本节课中，我们将学习如何为SysTick定时器编写驱动程序。我们将通过为相关的寄存器分配符号名称来开始这个过程，这是编写底层硬件驱动代码的第一步。
 
-![](img/a5f2a90e33f5d060f9ef65d15043e912_7.png)
 
 ## 概述
 
@@ -35,21 +31,15 @@ SysTick定时器是ARM Cortex-M系列处理器的一个核心外设。这意味�
 *   **重载值寄存器 (SysTick Reload Value Register)**：用于设置定时器递减计数的初始值。
 *   **当前值寄存器 (SysTick Current Value Register)**：用于读取定时器当前的计数值。
 
-![](img/a5f2a90e33f5d060f9ef65d15043e912_9.png)
 
 ## 查找寄存器地址
 
-![](img/a5f2a90e33f5d060f9ef65d15043e912_11.png)
 
-![](img/a5f2a90e33f5d060f9ef65d15043e912_13.png)
 
-![](img/a5f2a90e33f5d060f9ef65d15043e912_15.png)
 
 由于SysTick是核心外设，其寄存器地址在ARM架构中是固定的。我们需要从《Cortex-M4通用用户指南》中查找这些地址，而不是从特定芯片（如TM4C）的数据手册中查找。
 
-![](img/a5f2a90e33f5d060f9ef65d15043e912_17.png)
 
-![](img/a5f2a90e33f5d060f9ef65d15043e912_19.png)
 
 在文档中，我们可以找到SysTick寄存器的内存映射。例如，控制与状态寄存器的地址是 `0xE000E010`。
 

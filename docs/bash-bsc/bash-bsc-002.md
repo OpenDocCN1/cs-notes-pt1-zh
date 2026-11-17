@@ -1,6 +1,5 @@
 # 002：创建与编辑文本文件 📝
 
-![](img/b12dadec2764e0057cef6ae741edfb14_0.png)
 
 在本节课中，我们将学习如何在Bash终端中读取和编辑文本文件。这是Linux系统管理、配置和脚本编写的基础技能，因为系统配置、程序设置乃至脚本本身都以文本文件的形式存在。
 
@@ -49,11 +48,9 @@ cat 文件1 文件2 | less
 
 ### 使用 `echo` 命令创建文件
 
-![](img/b12dadec2764e0057cef6ae741edfb14_2.png)
 
 `echo` 命令可以将文本输出到屏幕。结合输出重定向符号（`>`），可以将文本写入一个新文件。
 
-![](img/b12dadec2764e0057cef6ae741edfb14_4.png)
 
 **命令格式**：
 ```bash
@@ -83,11 +80,9 @@ echo “This is an appended line” >> junk2.txt
 
 ### 启动 Nano 并创建文件
 
-![](img/b12dadec2764e0057cef6ae741edfb14_6.png)
 
 直接在终端输入 `nano` 命令，即可启动编辑器并开始创建新文件。
 
-![](img/b12dadec2764e0057cef6ae741edfb14_8.png)
 
 **命令格式**：
 ```bash
@@ -102,22 +97,17 @@ nano 文件名
 
 Nano 编辑器界面底部会显示常用的快捷键提示。以下是两个最核心的操作：
 
-![](img/b12dadec2764e0057cef6ae741edfb14_10.png)
 
 *   **保存文件**：按下 `Ctrl + O`（即 Control 键和字母 O），然后输入文件名并按回车确认。
 *   **退出 Nano**：按下 `Ctrl + X`。如果文件有未保存的修改，Nano 会询问你是否保存。
 
-![](img/b12dadec2764e0057cef6ae741edfb14_12.png)
 
 ### 编辑系统文件
 
-![](img/b12dadec2764e0057cef6ae741edfb14_14.png)
 
 系统配置文件（通常位于 `/etc` 目录下）受到权限保护。普通用户可以用 `nano` 查看，但无法直接保存修改。
 
-![](img/b12dadec2764e0057cef6ae741edfb14_16.png)
 
-![](img/b12dadec2764e0057cef6ae741edfb14_18.png)
 
 如果需要编辑这类文件，必须使用 `sudo` 命令来获取管理员权限。
 

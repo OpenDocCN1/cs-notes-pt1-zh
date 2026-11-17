@@ -1,6 +1,5 @@
 # 009：P09-RISC-V-Assembly-Code-#9---Floating-Point-Instructions-(pt.-1)
 
-![](img/05b734b110acee2b860298b91d5f1f36_0.png)
 
 ![](img/05b734b110acee2b860298b91d5f1f36_0.png)
 

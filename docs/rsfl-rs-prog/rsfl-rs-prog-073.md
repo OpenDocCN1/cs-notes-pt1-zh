@@ -6,25 +6,16 @@
 
 ## 编译器如何推断生命周期
 
-![](img/aa1b8f0b9fa0250d854307e15ac5a015_1.png)
 
-![](img/aa1b8f0b9fa0250d854307e15ac5a015_2.png)
 
-![](img/aa1b8f0b9fa0250d854307e15ac5a015_3.png)
 
-![](img/aa1b8f0b9fa0250d854307e15ac5a015_4.png)
 
 当函数或方法的引用参数和返回值没有显式生命周期注解时，编译器会使用三条规则来推断它们的生命周期。如果应用完这三条规则后，仍有引用的生命周期无法确定，编译器将报错停止。
 
-![](img/aa1b8f0b9fa0250d854307e15ac5a015_5.png)
 
-![](img/aa1b8f0b9fa0250d854307e15ac5a015_6.png)
 
-![](img/aa1b8f0b9fa0250d854307e15ac5a015_7.png)
 
-![](img/aa1b8f0b9fa0250d854307e15ac5a015_8.png)
 
-![](img/aa1b8f0b9fa0250d854307e15ac5a015_9.png)
 
 以下是编译器应用的三条生命周期省略规则：
 
@@ -34,25 +25,17 @@
 
 **第三条规则**：如果存在**多个**输入生命周期参数，但其中一个是 `&self` 或 `&mut self`（即这是一个方法），那么 `self` 的生命周期将被赋予所有输出生命周期参数。这条规则使得方法的读写更加简洁，因为所需的符号更少。
 
-![](img/aa1b8f0b9fa0250d854307e15ac5a015_11.png)
 
-![](img/aa1b8f0b9fa0250d854307e15ac5a015_12.png)
 
 ## 规则应用示例：`first_word` 函数
 
-![](img/aa1b8f0b9fa0250d854307e15ac5a015_13.png)
 
-![](img/aa1b8f0b9fa0250d854307e15ac5a015_14.png)
 
-![](img/aa1b8f0b9fa0250d854307e15ac5a015_15.png)
 
-![](img/aa1b8f0b9fa0250d854307e15ac5a015_16.png)
 
-![](img/aa1b8f0b9fa0250d854307e15ac5a015_17.png)
 
 让我们模拟编译器如何应用这些规则来确定 `first_word` 函数签名中引用的生命周期。
 
-![](img/aa1b8f0b9fa0250d854307e15ac5a015_18.png)
 
 初始的函数签名没有任何生命周期注解：
 ```rust
@@ -71,27 +54,17 @@ fn first_word<'a>(s: &'a str) -> &'a str
 
 至此，函数签名中的所有引用都有了生命周期，编译器可以继续进行分析，而无需程序员显式标注。在实际编码中，我们通常不需要显式写出这些注解，因为 Rust 可以轻松推断出来。
 
-![](img/aa1b8f0b9fa0250d854307e15ac5a015_20.png)
 
-![](img/aa1b8f0b9fa0250d854307e15ac5a015_21.png)
 
-![](img/aa1b8f0b9fa0250d854307e15ac5a015_22.png)
 
-![](img/aa1b8f0b9fa0250d854307e15ac5a015_23.png)
 
 ## 规则应用示例：`longest` 函数
 
-![](img/aa1b8f0b9fa0250d854307e15ac5a015_24.png)
 
-![](img/aa1b8f0b9fa0250d854307e15ac5a015_25.png)
 
-![](img/aa1b8f0b9fa0250d854307e15ac5a015_26.png)
 
-![](img/aa1b8f0b9fa0250d854307e15ac5a015_27.png)
 
-![](img/aa1b8f0b9fa0250d854307e15ac5a015_28.png)
 
-![](img/aa1b8f0b9fa0250d854307e15ac5a015_29.png)
 
 现在让我们看一个更复杂的例子 `longest` 函数，并应用生命周期省略规则。
 
@@ -100,7 +73,6 @@ fn first_word<'a>(s: &'a str) -> &'a str
 fn longest(x: &str, y: &str) -> &str
 ```
 
-![](img/aa1b8f0b9fa0250d854307e15ac5a015_31.png)
 
 首先应用**第一条规则**：每个引用参数获得自己的生命周期。这里有两个参数，因此得到两个生命周期 `'a` 和 `'b`。
 ```rust
@@ -122,21 +94,14 @@ fn longest<'a>(x: &'a str, y: &str) -> &'a str {
 }
 ```
 
-![](img/aa1b8f0b9fa0250d854307e15ac5a015_33.png)
 
-![](img/aa1b8f0b9fa0250d854307e15ac5a015_34.png)
 
 ## 结构体方法中的生命周期
 
-![](img/aa1b8f0b9fa0250d854307e15ac5a015_35.png)
 
-![](img/aa1b8f0b9fa0250d854307e15ac5a015_36.png)
 
-![](img/aa1b8f0b9fa0250d854307e15ac5a015_37.png)
 
-![](img/aa1b8f0b9fa0250d854307e15ac5a015_38.png)
 
-![](img/aa1b8f0b9fa0250d854307e15ac5a015_39.png)
 
 在为带有生命周期的结构体实现方法时，其语法与泛型类型参数类似。生命周期参数的声明和使用位置，取决于它们是与结构体字段相关，还是与方法参数和返回值相关。
 
@@ -146,13 +111,9 @@ fn longest<'a>(x: &'a str, y: &str) -> &'a str {
 
 以下是几个方法示例：
 
-![](img/aa1b8f0b9fa0250d854307e15ac5a015_41.png)
 
-![](img/aa1b8f0b9fa0250d854307e15ac5a015_42.png)
 
-![](img/aa1b8f0b9fa0250d854307e15ac5a015_43.png)
 
-![](img/aa1b8f0b9fa0250d854307e15ac5a015_44.png)
 
 1.  **一个简单的 `level` 方法**：其唯一参数是 `&self`，返回值是 `i32`（非引用）。虽然需要在 `impl` 后声明生命周期并在结构体名后使用，但由于第一条省略规则，我们不需要标注 `self` 引用的生命周期。
     ```rust
@@ -163,9 +124,7 @@ fn longest<'a>(x: &'a str, y: &str) -> &'a str {
     }
     ```
 
-![](img/aa1b8f0b9fa0250d854307e15ac5a015_45.png)
 
-![](img/aa1b8f0b9fa0250d854307e15ac5a015_46.png)
 
 2.  **应用第三条规则的例子**：考虑一个带有额外参数的方法。
     ```rust
@@ -184,11 +143,8 @@ fn longest<'a>(x: &'a str, y: &str) -> &'a str {
 
 本节课中我们一起学习了 Rust 编译器的三条生命周期省略规则。第一条规则为每个引用参数分配独立生命周期；第二条规则在单个输入生命周期时将其赋予输出；第三条规则在方法中优先将 `self` 的生命周期赋予输出。
 
-![](img/aa1b8f0b9fa0250d854307e15ac5a015_48.png)
 
-![](img/aa1b8f0b9fa0250d854307e15ac5a015_49.png)
 
-![](img/aa1b8f0b9fa0250d854307e15ac5a015_50.png)
 
 ![](img/aa1b8f0b9fa0250d854307e15ac5a015_51.png)
 

@@ -155,7 +155,6 @@
 
 ![](img/6f18f54518e4455428d5825da1c39f49_113.png)
 
-![](img/6f18f54518e4455428d5825da1c39f49_115.png)
 
 ![](img/6f18f54518e4455428d5825da1c39f49_117.png)
 
@@ -171,14 +170,11 @@
 
 ![](img/6f18f54518e4455428d5825da1c39f49_127.png)
 
-![](img/6f18f54518e4455428d5825da1c39f49_128.png)
 
-![](img/6f18f54518e4455428d5825da1c39f49_129.png)
 
 **核心概念：**
 我们维护一个指向第一个空闲声音的索引 (`first_free_sound`)。当需要播放新声音时，首先尝试从空闲列表中获取，如果没有空闲声音，再按顺序使用新的声音槽位。
 
-![](img/6f18f54518e4455428d5825da1c39f49_131.png)
 
 ![](img/6f18f54518e4455428d5825da1c39f49_132.png)
 
@@ -186,9 +182,7 @@
 
 ![](img/6f18f54518e4455428d5825da1c39f49_136.png)
 
-![](img/6f18f54518e4455428d5825da1c39f49_138.png)
 
-![](img/6f18f54518e4455428d5825da1c39f49_139.png)
 
 ![](img/6f18f54518e4455428d5825da1c39f49_140.png)
 
@@ -216,9 +210,7 @@ void stop_sound(Playing_Sound* sound) {
 
 ![](img/6f18f54518e4455428d5825da1c39f49_146.png)
 
-![](img/6f18f54518e4455428d5825da1c39f49_148.png)
 
-![](img/6f18f54518e4455428d5825da1c39f49_150.png)
 
 ![](img/6f18f54518e4455428d5825da1c39f49_152.png)
 
@@ -319,15 +311,10 @@ HANDLE CreateThread(
 
 ![](img/6f18f54518e4455428d5825da1c39f49_216.png)
 
-![](img/6f18f54518e4455428d5825da1c39f49_218.png)
 
-![](img/6f18f54518e4455428d5825da1c39f49_220.png)
 
-![](img/6f18f54518e4455428d5825da1c39f49_222.png)
 
-![](img/6f18f54518e4455428d5825da1c39f49_224.png)
 
-![](img/6f18f54518e4455428d5825da1c39f49_226.png)
 
 ```c
 DWORD WINAPI thread_proc(LPVOID data) {
@@ -492,9 +479,7 @@ struct OS_Job_Queue {
 
 我们创建一个专门用于音频更新的作业队列，并为其分配一个工作线程。
 
-![](img/6f18f54518e4455428d5825da1c39f49_310.png)
 
-![](img/6f18f54518e4455428d5825da1c39f49_312.png)
 
 ```c
 OS_Job_Queue audio_queue;
@@ -536,7 +521,6 @@ void game_update_and_render(...) {
 
 ![](img/6f18f54518e4455428d5825da1c39f49_333.png)
 
-![](img/6f18f54518e4455428d5825da1c39f49_335.png)
 
 ![](img/6f18f54518e4455428d5825da1c39f49_337.png)
 
@@ -640,9 +624,7 @@ DWORD WINAPI audio_thread_proc(LPVOID data) {
 
 ![](img/6f18f54518e4455428d5825da1c39f49_387.png)
 
-![](img/6f18f54518e4455428d5825da1c39f49_389.png)
 
-![](img/6f18f54518e4455428d5825da1c39f49_391.png)
 
 ---
 

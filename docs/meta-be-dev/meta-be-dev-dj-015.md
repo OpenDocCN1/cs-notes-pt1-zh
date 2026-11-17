@@ -8,7 +8,6 @@
 
 该周期始于用户在浏览器中输入一个URL。此URL被发送到Web服务器，Django随后在其`urls.py`文件中寻找匹配项。一旦找到匹配的URL，它就会被映射到对应的视图函数。在视图文件中，视图函数接收HTTP请求并将其封装为一个`request`对象。视图函数随后定义适当的HTTP响应，并将其作为`HTTP response`对象发回。此响应由Django处理，最终客户端收到HTTP响应。
 
-![](img/2b5e561487af7fe12b5400bde0b457a5_1.png)
 
 ## 在代码中探索请求与响应对象
 
@@ -39,7 +38,6 @@ def home(request):
 
 保存文件并在浏览器中打开本地主机URL。输入URL的确切位置，即`/main/home`。
 
-![](img/2b5e561487af7fe12b5400bde0b457a5_3.png)
 
 请注意，路径显示在浏览器的主窗口中，并且其顺序与你在URL模式列表中按下`main`然后`home`的顺序相同。
 
@@ -63,7 +61,6 @@ def home(request):
 
 ## 进一步操作响应对象
 
-![](img/2b5e561487af7fe12b5400bde0b457a5_9.png)
 
 为了进一步探索，我们可以创建另一个HTTP响应对象并将其赋值给一个变量。
 
@@ -123,7 +120,6 @@ def home(request):
 
 最后需要了解的是，你可以更新HTTP请求和响应对象的头部信息。
 
-![](img/2b5e561487af7fe12b5400bde0b457a5_19.png)
 
 ![](img/2b5e561487af7fe12b5400bde0b457a5_15.png)
 
@@ -143,7 +139,6 @@ def home(request):
 
 ![](img/2b5e561487af7fe12b5400bde0b457a5_19.png)
 
-![](img/2b5e561487af7fe12b5400bde0b457a5_21.png)
 
 ## 实际应用场景
 
@@ -151,7 +146,6 @@ def home(request):
 
 ![](img/2b5e561487af7fe12b5400bde0b457a5_21.png)
 
-![](img/2b5e561487af7fe12b5400bde0b457a5_23.png)
 
 ![](img/2b5e561487af7fe12b5400bde0b457a5_23.png)
 

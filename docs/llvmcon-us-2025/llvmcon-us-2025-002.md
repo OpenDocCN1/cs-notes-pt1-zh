@@ -1,6 +1,5 @@
 # 002：2025年更新
 
-![](img/bf75cd350857cefc068d245cffc26020_0.png)
 
 ![](img/bf75cd350857cefc068d245cffc26020_0.png)
 

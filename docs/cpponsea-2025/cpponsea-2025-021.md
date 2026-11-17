@@ -147,7 +147,6 @@ void q_learn_update(State s, Action a, double reward, State next_s) {
 
 ![](img/fa6f7e9b1fb67db54d197345948984ed_17.png)
 
-![](img/fa6f7e9b1fb67db54d197345948984ed_19.png)
 
 ```cpp
 // 伪代码：贪吃蛇的增强状态定义
@@ -159,23 +158,15 @@ struct SnakeState {
 std::map<SnakeState, std::map<Action, double>> Q_table; // 二维Q表
 ```
 
-![](img/fa6f7e9b1fb67db54d197345948984ed_21.png)
 
-![](img/fa6f7e9b1fb67db54d197345948984ed_23.png)
 
-![](img/fa6f7e9b1fb67db54d197345948984ed_25.png)
 
-![](img/fa6f7e9b1fb67db54d197345948984ed_27.png)
 
-![](img/fa6f7e9b1fb67db54d197345948984ed_28.png)
 
-![](img/fa6f7e9b1fb67db54d197345948984ed_30.png)
 
-![](img/fa6f7e9b1fb67db54d197345948984ed_32.png)
 
 智能体根据这个增强后的状态来选择动作。奖励可以设置为：吃到苹果+10，撞墙或撞身体-10，每存活一步-0.1（鼓励快速找到苹果）。通过大量的训练（让程序自己玩很多很多局），Q表会逐渐填充，智能体最终能学会寻找苹果并避免撞墙或撞到自己。
 
-![](img/fa6f7e9b1fb67db54d197345948984ed_34.png)
 
 在实现时，可以用`std::deque`来高效地表示蛇的身体（头部推进，尾部弹出，吃到苹果时不弹出）。
 
@@ -196,7 +187,6 @@ std::map<SnakeState, std::map<Action, double>> Q_table; // 二维Q表
 
 ![](img/fa6f7e9b1fb67db54d197345948984ed_38.png)
 
-![](img/fa6f7e9b1fb67db54d197345948984ed_40.png)
 
 ![](img/fa6f7e9b1fb67db54d197345948984ed_42.png)
 

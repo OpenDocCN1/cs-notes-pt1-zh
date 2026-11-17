@@ -15,9 +15,7 @@
 *   **全外连接**：返回左表和右表中的所有行。当某一行在另一个表中没有匹配时，另一个表的对应列将显示为缺失值。
     *   **SQL代码示例**：`SELECT * FROM table1 FULL JOIN table2 ON table1.key = table2.key;`
 
-![](img/fc5f5927cf034f068a5cd6bc53d2d61d_1.png)
 
-![](img/fc5f5927cf034f068a5cd6bc53d2d61d_1.png)
 
 ## 外连接语法解析
 
@@ -35,7 +33,6 @@
 *   **左表** 是`FROM`子句中列出的第一个表。结果表中，来自左表的列将首先出现。
 *   **右表** 是`FROM`子句中列出的第二个表。结果表中，来自右表的列将随后出现。
 
-![](img/fc5f5927cf034f068a5cd6bc53d2d61d_3.png)
 
 ![](img/fc5f5927cf034f068a5cd6bc53d2d61d_3.png)
 

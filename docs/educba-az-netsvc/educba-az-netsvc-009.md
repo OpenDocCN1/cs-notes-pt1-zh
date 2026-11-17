@@ -1,8 +1,6 @@
 # 009：Azure DNS简介
 
-![](img/2936f0eb70fe01d8a9c3bb3f6d8b31bf_0.png)
 
-![](img/2936f0eb70fe01d8a9c3bb3f6d8b31bf_2.png)
 
 在本节课中，我们将要学习Azure DNS服务。我们将了解其基本概念、核心功能以及它在Azure网络架构中的作用。
 
@@ -14,7 +12,6 @@ Azure DNS是微软提供的一项域名托管服务，它利用微软的Azure基
 
 上一节我们介绍了课程概述，本节中我们来看看Azure DNS的具体定义。
 
-![](img/2936f0eb70fe01d8a9c3bb3f6d8b31bf_4.png)
 
 与传统的DNS系统一样，Azure DNS的核心职责是进行名称解析。它负责将域名解析为IP地址，反之亦然。这项服务专门用于解析可通过互联网访问的Azure资源和服务（例如您的Web服务器）的名称和IP地址。
 

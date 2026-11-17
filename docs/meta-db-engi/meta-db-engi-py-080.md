@@ -10,7 +10,6 @@
 
 上一节我们介绍了数据库联接的基本概念，本节中我们来看看如何在Python中实现它。联接是使用SQL的`JOIN`子句创建的。它针对两个目标表之间的一个公共列。这些公共列用于将表连接在一起并提取所需的记录。
 
-![](img/c8e706fcbe2b8242d012a6856d0916c0_1.png)
 
 MySQL中使用的联接类型包括：
 *   **左联接** (`LEFT JOIN`)
@@ -24,9 +23,7 @@ MySQL中使用的联接类型包括：
 
 让我们通过一个内联接的例子来了解其语法和创建过程。
 
-![](img/c8e706fcbe2b8242d012a6856d0916c0_3.png)
 
-![](img/c8e706fcbe2b8242d012a6856d0916c0_4.png)
 
 首先，需要创建一个SQL查询字符串，并将其传递给一个Python变量。
 
@@ -36,13 +33,11 @@ join_query = “SELECT * FROM table1 INNER JOIN table2 ON table1.common_column =
 
 然后，使用游标对象的`execute`方法来运行此查询。
 
-![](img/c8e706fcbe2b8242d012a6856d0916c0_6.png)
 
 ```python
 cursor.execute(join_query)
 ```
 
-![](img/c8e706fcbe2b8242d012a6856d0916c0_8.png)
 
 查询执行后，可以将结果检索到另一个变量中。对包含联接结果的游标对象使用`fetchall`方法。
 
@@ -54,7 +49,6 @@ results = cursor.fetchall()
 
 ## 实战案例：小柠檬餐厅菜单功能
 
-![](img/c8e706fcbe2b8242d012a6856d0916c0_10.png)
 
 现在你已经熟悉了使用Python联接不同表数据的过程，让我们看看如何帮助小柠檬餐厅创建这个查询。
 
@@ -72,13 +66,11 @@ INNER JOIN Menu ON MenuItems.ItemID = Menu.ItemID;
 “””
 ```
 
-![](img/c8e706fcbe2b8242d012a6856d0916c0_12.png)
 
 假设MySQL Connector/Python API已经建立了前后端之间的连接，并且游标对象也已准备就绪。这意味着你现在可以执行你的联接查询了。
 
 使用游标对象的`execute`方法运行查询。
 
-![](img/c8e706fcbe2b8242d012a6856d0916c0_14.png)
 
 ```python
 cursor.execute(join_query)
@@ -86,17 +78,14 @@ cursor.execute(join_query)
 
 当查询执行后，你可以使用`fetchall`方法将游标对象中的所有结果提取到一个名为`results`的新变量中。
 
-![](img/c8e706fcbe2b8242d012a6856d0916c0_16.png)
 
 ```python
 results = cursor.fetchall()
 ```
 
-![](img/c8e706fcbe2b8242d012a6856d0916c0_18.png)
 
 结果将以元组列表的形式被检索，每个元组代表一行数据。
 
-![](img/c8e706fcbe2b8242d012a6856d0916c0_20.png)
 
 小柠檬餐厅可以查看每个单独条目的顺序。他们只需调用游标上的`column_names`属性，即可按顺序返回列名。
 

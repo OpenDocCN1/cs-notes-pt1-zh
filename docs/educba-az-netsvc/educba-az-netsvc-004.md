@@ -34,7 +34,6 @@
 
 ![](img/fecce3a75782a72efbb18f76714b0f19_6.png)
 
-![](img/fecce3a75782a72efbb18f76714b0f19_8.png)
 
 使用远程桌面协议连接到虚拟机：
 
@@ -83,7 +82,6 @@
 
 现在，我们需要将之前创建的虚拟网络连接到这个虚拟中心。
 
-![](img/fecce3a75782a72efbb18f76714b0f19_10.png)
 
 以下是创建虚拟网络连接的步骤：
 
@@ -163,7 +161,6 @@ New-SelfSignedCertificate -Type Custom -DnsName P2SChildCert -KeySpec Signature 
 
 现在，从本地计算机连接到点对站VPN：
 
-![](img/fecce3a75782a72efbb18f76714b0f19_19.png)
 
 1.  在虚拟WAN的“用户VPN配置”页面，找到已创建的配置。
 2.  点击“下载用户VPN配置”。选择身份验证类型为“Azure证书”，生成并下载配置文件。
@@ -171,7 +168,6 @@ New-SelfSignedCertificate -Type Custom -DnsName P2SChildCert -KeySpec Signature 
 4.  安装后，在Windows设置中打开“VPN”设置，可以看到一个名为 `TestWAN` 的点对站连接。
 5.  点击“连接”。
 
-![](img/fecce3a75782a72efbb18f76714b0f19_21.png)
 
 连接成功后，即使虚拟机没有公共IP，我们也可以使用其私有IP地址（例如 `10.0.2.5`）在浏览器中访问，并看到IIS服务器上“Welcome to EducBA Nty class”的页面。这证明点对站VPN连接已成功建立。
 

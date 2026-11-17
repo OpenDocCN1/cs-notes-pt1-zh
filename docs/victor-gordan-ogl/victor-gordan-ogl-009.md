@@ -12,7 +12,6 @@
 
 首先，创建一个名为 `camera.h` 的头文件。为了防止C++重复包含，我们使用预处理器指令。摄像机类将包含位置、朝向、上方向等核心向量，以及屏幕尺寸、移动速度和视角灵敏度等参数。
 
-![](img/dc47724a6b3229113861cbd7f5284628_1.png)
 
 以下是 `camera.h` 文件的核心内容：
 
@@ -102,9 +101,7 @@ void Camera::Matrix(float FOVdeg, float nearPlane, float farPlane, GLuint shader
 
 ## 实现键盘输入控制
 
-![](img/dc47724a6b3229113861cbd7f5284628_3.png)
 
-![](img/dc47724a6b3229113861cbd7f5284628_4.png)
 
 为了允许用户通过键盘控制摄像机移动，我们需要在 `Camera` 类中添加一个 `Inputs` 函数。该函数将处理WASD键（前后左右移动）、空格键（上升）、Ctrl键（下降）以及Shift键（加速）的输入。
 
@@ -158,7 +155,6 @@ void Camera::Inputs(GLFWwindow* window) {
 
 ## 总结
 
-![](img/dc47724a6b3229113861cbd7f5284628_6.png)
 
 ![](img/dc47724a6b3229113861cbd7f5284628_7.png)
 

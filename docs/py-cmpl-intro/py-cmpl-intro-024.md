@@ -11,10 +11,8 @@
 以下是游戏所需的核心数据结构：
 
 
-![](img/b94cb2384287477683c64cf51c55ff26_1.png)
 
 
-![](img/b94cb2384287477683c64cf51c55ff26_3.png)
 
 ```python
 questions = (
@@ -39,21 +37,16 @@ question_num = 0
 
 ---
 
-![](img/b94cb2384287477683c64cf51c55ff26_5.png)
 
-![](img/b94cb2384287477683c64cf51c55ff26_7.png)
 
 ## 显示问题与选项 💬
 
-![](img/b94cb2384287477683c64cf51c55ff26_9.png)
 
-![](img/b94cb2384287477683c64cf51c55ff26_11.png)
 
 上一节我们定义了游戏的数据。本节中，我们来看看如何将这些数据显示给用户。我们将遍历问题列表，并同时显示对应的问题和选项。
 
 以下是显示逻辑的核心代码：
 
-![](img/b94cb2384287477683c64cf51c55ff26_13.png)
 
 ```python
 for question in questions:
@@ -65,7 +58,6 @@ for question in questions:
     question_num += 1
 ```
 
-![](img/b94cb2384287477683c64cf51c55ff26_15.png)
 
 ---
 
@@ -75,7 +67,6 @@ for question in questions:
 
 以下是处理用户输入和计分的步骤：
 
-![](img/b94cb2384287477683c64cf51c55ff26_17.png)
 
 1.  获取用户输入并将其转换为大写。
 2.  将用户的猜测添加到 `guesses` 列表中。
@@ -95,25 +86,19 @@ for question in questions:
 
 ---
 
-![](img/b94cb2384287477683c64cf51c55ff26_19.png)
 
 ## 显示最终结果 📊
 
 当所有问题都回答完毕后，我们需要向用户展示最终结果，包括正确答案、用户的答案以及最终得分百分比。
 
-![](img/b94cb2384287477683c64cf51c55ff26_21.png)
 
-![](img/b94cb2384287477683c64cf51c55ff26_23.png)
 
 以下是显示结果的代码：
 
-![](img/b94cb2384287477683c64cf51c55ff26_25.png)
 
 
-![](img/b94cb2384287477683c64cf51c55ff26_27.png)
 
 
-![](img/b94cb2384287477683c64cf51c55ff26_29.png)
 
 ```python
 print("----------------------")
@@ -134,11 +119,9 @@ print(f"Your score is: {score}%")
 
 ---
 
-![](img/b94cb2384287477683c64cf51c55ff26_31.png)
 
 ## 总结 🎉
 
-![](img/b94cb2384287477683c64cf51c55ff26_33.png)
 
 ![](img/b94cb2384287477683c64cf51c55ff26_34.png)
 

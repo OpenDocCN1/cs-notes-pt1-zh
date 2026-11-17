@@ -16,9 +16,7 @@
 
 首先，我们使用一个包含10万份文档的模拟数据库。我们需要检查集合中文档的总数，以及不包含`language`字段的文档数量。
 
-![](img/0197ecb13bc8042a57746a017c30e960_1.png)
 
-![](img/0197ecb13bc8042a57746a017c30e960_3.png)
 
 执行以下命令查看文档总数：
 ```javascript
@@ -30,7 +28,6 @@ db.collection.countDocuments({ language: { $exists: false } })
 ```
 结果显示，总文档数为100,000，其中约12,700份文档没有`language`字段。
 
-![](img/0197ecb13bc8042a57746a017c30e960_5.png)
 
 在创建新索引前，需要移除上一节可能创建的旧索引。使用以下命令删除指定名称的索引：
 ```javascript
@@ -42,7 +39,6 @@ db.collection.dropIndex("index_name")
 
 为了直观展示部分索引的性能优势，我们进行一个查询测试。
 
-![](img/0197ecb13bc8042a57746a017c30e960_7.png)
 
 首先，在不使用索引的情况下，执行一个查询所有名字中包含“Sarah”的文档的命令：
 ```javascript
@@ -70,29 +66,19 @@ db.collection.find({ "name.first": /Sarah/ }).explain("executionStats")
 *   `{ field: { $gt: 100 } }`
 *   `{ $and: [ { field1: { $exists: true } }, { field2: { $eq: "value" } } ] }`
 
-![](img/0197ecb13bc8042a57746a017c30e960_9.png)
 
-![](img/0197ecb13bc8042a57746a017c30e960_11.png)
 
-![](img/0197ecb13bc8042a57746a017c30e960_12.png)
 
 这使得开发者可以更精确地控制索引范围，针对高频或关键的查询路径建立索引，从而在复杂的数据场景中获得最佳性能。
 
-![](img/0197ecb13bc8042a57746a017c30e960_13.png)
 
-![](img/0197ecb13bc8042a57746a017c30e960_14.png)
 
-![](img/0197ecb13bc8042a57746a017c30e960_15.png)
 
-![](img/0197ecb13bc8042a57746a017c30e960_16.png)
 
 ## 总结
 
-![](img/0197ecb13bc8042a57746a017c30e960_17.png)
 
-![](img/0197ecb13bc8042a57746a017c30e960_18.png)
 
-![](img/0197ecb13bc8042a57746a017c30e960_19.png)
 
 ![](img/0197ecb13bc8042a57746a017c30e960_20.png)
 

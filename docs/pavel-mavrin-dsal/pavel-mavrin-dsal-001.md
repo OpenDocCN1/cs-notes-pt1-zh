@@ -1,30 +1,17 @@
 # 001：算法、时间复杂度和归并排序 🚀
 
-![](img/77975d1ad1e14a2cca8afceb39cdaffb_1.png)
 
-![](img/77975d1ad1e14a2cca8afceb39cdaffb_2.png)
 
-![](img/77975d1ad1e14a2cca8afceb39cdaffb_4.png)
 
-![](img/77975d1ad1e14a2cca8afceb39cdaffb_6.png)
 
-![](img/77975d1ad1e14a2cca8afceb39cdaffb_8.png)
 
-![](img/77975d1ad1e14a2cca8afceb39cdaffb_10.png)
 
-![](img/77975d1ad1e14a2cca8afceb39cdaffb_12.png)
 
-![](img/77975d1ad1e14a2cca8afceb39cdaffb_14.png)
 
-![](img/77975d1ad1e14a2cca8afceb39cdaffb_16.png)
 
-![](img/77975d1ad1e14a2cca8afceb39cdaffb_18.png)
 
-![](img/77975d1ad1e14a2cca8afceb39cdaffb_19.png)
 
-![](img/77975d1ad1e14a2cca8afceb39cdaffb_21.png)
 
-![](img/77975d1ad1e14a2cca8afceb39cdaffb_23.png)
 
 在本节课中，我们将学习算法的基础概念，了解如何衡量算法的效率（时间复杂度），并通过一个经典算法——归并排序，来实践这些理论。
 

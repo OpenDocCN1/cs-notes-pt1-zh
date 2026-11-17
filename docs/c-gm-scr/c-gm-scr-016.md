@@ -2,7 +2,6 @@
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_1.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_3.png)
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_5.png)
 
@@ -24,7 +23,6 @@
 
 ## 概述
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_23.png)
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_25.png)
 
@@ -42,9 +40,7 @@
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_37.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_39.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_41.png)
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_43.png)
 
@@ -64,9 +60,7 @@
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_59.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_61.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_63.png)
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_65.png)
 
@@ -74,13 +68,11 @@
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_67.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_69.png)
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_71.png)
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_73.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_75.png)
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_77.png)
 
@@ -100,11 +92,9 @@
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_93.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_95.png)
 
 ## 当前状态与问题
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_97.png)
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_99.png)
 
@@ -114,9 +104,7 @@
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_104.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_106.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_108.png)
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_110.png)
 
@@ -140,9 +128,7 @@
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_127.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_129.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_131.png)
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_133.png)
 
@@ -166,15 +152,12 @@
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_151.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_153.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_155.png)
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_157.png)
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_159.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_160.png)
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_161.png)
 
@@ -184,19 +167,14 @@
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_165.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_167.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_169.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_171.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_173.png)
 
 在开始优化之前，我们先修复一些小问题。
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_175.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_177.png)
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_179.png)
 
@@ -263,17 +241,13 @@
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_215.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_217.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_218.png)
 
 3.  **关卡保存问题**：修复了太空侵略者关卡完成后，进度未正确保存的问题。
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_220.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_222.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_224.png)
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_226.png)
 
@@ -301,13 +275,11 @@
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_249.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_251.png)
 
 ---
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_253.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_254.png)
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_256.png)
 
@@ -319,7 +291,6 @@
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_262.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_264.png)
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_266.png)
 
@@ -351,7 +322,6 @@
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_290.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_291.png)
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_293.png)
 
@@ -383,13 +353,11 @@
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_318.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_320.png)
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_321.png)
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_323.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_325.png)
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_326.png)
 
@@ -413,7 +381,6 @@
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_342.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_344.png)
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_345.png)
 
@@ -437,7 +404,6 @@
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_361.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_363.png)
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_365.png)
 
@@ -476,9 +442,7 @@
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_389.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_391.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_393.png)
 
 ```c
 // 性能分析数据结构
@@ -502,7 +466,6 @@ void profile_end(int slot_index) {
 }
 ```
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_395.png)
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_397.png)
 
@@ -514,17 +477,12 @@ void profile_end(int slot_index) {
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_403.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_405.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_407.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_409.png)
 
 我们在游戏循环的关键位置插入`profile_begin`和`profile_end`调用，并在屏幕上绘制结果。
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_411.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_413.png)
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_415.png)
 
@@ -542,11 +500,9 @@ void profile_end(int slot_index) {
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_429.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_431.png)
 
 ---
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_433.png)
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_434.png)
 
@@ -558,15 +514,10 @@ void profile_end(int slot_index) {
 
 ## 分析性能瓶颈
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_442.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_444.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_446.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_448.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_450.png)
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_452.png)
 
@@ -616,7 +567,6 @@ void profile_end(int slot_index) {
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_487.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_489.png)
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_491.png)
 
@@ -650,42 +600,28 @@ void profile_end(int slot_index) {
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_517.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_519.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_521.png)
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_523.png)
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_525.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_527.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_529.png)
 
 `draw_rotated_rect`函数为每个像素计算它是否在旋转后的矩形内。原始算法使用了分离轴定理，但实现上可以优化。
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_531.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_533.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_535.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_537.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_539.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_541.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_543.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_545.png)
 
 ### 原始算法分析
 原始代码为每个像素计算了3次向量减法和4次点积，以判断像素相对于矩形四个顶点的位置。
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_547.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_549.png)
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_551.png)
 
@@ -728,9 +664,7 @@ void profile_end(int slot_index) {
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_575.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_577.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_579.png)
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_581.png)
 
@@ -742,13 +676,9 @@ void profile_end(int slot_index) {
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_589.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_591.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_593.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_595.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_596.png)
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_598.png)
 
@@ -760,7 +690,6 @@ void profile_end(int slot_index) {
                    (pixel_pos.y - p0.y) * axis_x_norm.y;
     ```
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_600.png)
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_602.png)
 
@@ -770,11 +699,8 @@ void profile_end(int slot_index) {
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_607.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_609.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_611.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_613.png)
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_615.png)
 
@@ -784,23 +710,14 @@ void profile_end(int slot_index) {
 
 3.  **预计算**：矩形的轴、归一化后的轴、轴长度等可以在循环外预计算一次，避免每像素重复计算。
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_620.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_622.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_624.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_626.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_628.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_630.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_632.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_634.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_636.png)
 
 ### 优化效果
 经过上述优化，`draw_rotated_rect`的性能显著提升。在全屏菜单中，其耗时从约25毫秒降低到约14毫秒。
@@ -813,9 +730,7 @@ void profile_end(int slot_index) {
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_644.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_646.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_648.png)
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_649.png)
 
@@ -829,15 +744,10 @@ void profile_end(int slot_index) {
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_657.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_659.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_661.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_663.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_665.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_666.png)
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_667.png)
 
@@ -853,17 +763,12 @@ void profile_end(int slot_index) {
 
 ## 优化位图绘制 🖼️
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_678.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_680.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_682.png)
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_684.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_686.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_688.png)
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_690.png)
 
@@ -887,11 +792,8 @@ void profile_end(int slot_index) {
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_708.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_710.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_712.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_714.png)
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_715.png)
 
@@ -917,11 +819,8 @@ void profile_end(int slot_index) {
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_721.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_723.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_725.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_727.png)
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_729.png)
 
@@ -931,7 +830,6 @@ void profile_end(int slot_index) {
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_735.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_737.png)
 
 2.  **优化Alpha混合**：Alpha混合（颜色插值）是每像素都要进行的繁重操作。我们通过预乘Alpha和提取颜色分量来减少循环内的计算。
     ```c
@@ -966,7 +864,6 @@ void profile_end(int slot_index) {
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_743.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_745.png)
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_747.png)
 
@@ -993,9 +890,7 @@ void profile_end(int slot_index) {
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_763.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_765.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_767.png)
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_769.png)
 
@@ -1023,9 +918,7 @@ void profile_end(int slot_index) {
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_789.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_791.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_793.png)
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_795.png)
 
@@ -1057,7 +950,6 @@ void profile_end(int slot_index) {
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_819.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_821.png)
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_823.png)
 
@@ -1071,13 +963,11 @@ void profile_end(int slot_index) {
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_831.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_833.png)
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_835.png)
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_837.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_839.png)
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_841.png)
 
@@ -1089,9 +979,7 @@ void profile_end(int slot_index) {
 
 ---
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_848.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_850.png)
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_852.png)
 
@@ -1133,9 +1021,7 @@ void profile_end(int slot_index) {
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_888.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_890.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_892.png)
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_893.png)
 
@@ -1143,11 +1029,9 @@ void profile_end(int slot_index) {
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_897.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_899.png)
 
 经过一系列的分析和优化，我们取得了显著的成果：
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_901.png)
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_903.png)
 
@@ -1175,15 +1059,10 @@ void profile_end(int slot_index) {
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_927.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_929.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_931.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_933.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_935.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_936.png)
 
 | 阶段 | 菜单帧时间 (4K全屏) | 性能提升倍数 |
 | :--- | :--- | :--- |
@@ -1191,11 +1070,8 @@ void profile_end(int slot_index) {
 | 优化旋转矩形后 | ~44 毫秒 | 1.5x |
 | 优化位图与最终调整后 | **~12.4 毫秒** | **~5.3x** |
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_938.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_939.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_941.png)
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_943.png)
 
@@ -1205,17 +1081,12 @@ void profile_end(int slot_index) {
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_948.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_949.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_950.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_952.png)
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_953.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_955.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_956.png)
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_958.png)
 
@@ -1255,7 +1126,6 @@ void profile_end(int slot_index) {
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_991.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_993.png)
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_995.png)
 
@@ -1281,9 +1151,7 @@ void profile_end(int slot_index) {
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_1014.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_1016.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_1018.png)
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_1020.png)
 
@@ -1303,9 +1171,7 @@ void profile_end(int slot_index) {
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_1036.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_1038.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_1040.png)
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_1042.png)
 
@@ -1327,13 +1193,10 @@ void profile_end(int slot_index) {
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_1058.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_1060.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_1062.png)
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_1064.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_1066.png)
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_1068.png)
 
@@ -1355,7 +1218,6 @@ void profile_end(int slot_index) {
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_1086.png)
 
-![](img/d2b281400e0d90c00f492f0adbc6943a_1088.png)
 
 ![](img/d2b281400e0d90c00f492f0adbc6943a_1089.png)
 

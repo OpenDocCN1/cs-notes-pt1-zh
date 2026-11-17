@@ -12,9 +12,7 @@
 
 以下是 `Book` 类的定义：
 
-![](img/1293bd48ba719dd7e0dbc27f488f38e2_1.png)
 
-![](img/1293bd48ba719dd7e0dbc27f488f38e2_2.png)
 
 ```python
 class Book:
@@ -62,13 +60,11 @@ class Library:
 *   `def add_book(self, book):` 定义了一个方法，它接受一个 `book` 参数（一个 `Book` 对象）。
 *   `self.books.append(book)` 使用列表的 `append` 方法，将传入的 `book` 对象添加到 `self.books` 列表中。
 
-![](img/1293bd48ba719dd7e0dbc27f488f38e2_4.png)
 
 ## 实践操作：创建对象并建立关系 🛠️
 
 上一节我们介绍了如何定义类和方法，本节中我们来看看如何实际使用它们。
 
-![](img/1293bd48ba719dd7e0dbc27f488f38e2_6.png)
 
 以下是创建对象并建立聚合关系的步骤：
 
@@ -82,13 +78,11 @@ class Library:
     *   `my_library.add_book(book2)`
     *   `my_library.add_book(book3)`
 
-![](img/1293bd48ba719dd7e0dbc27f488f38e2_8.png)
 
 此时，`my_library` 对象通过其 `books` 列表，包含了三个 `Book` 对象的引用。这些 `Book` 对象是独立创建的，即使没有图书馆，它们依然存在。
 
 ## 查看聚合内容：列出所有图书 📃
 
-![](img/1293bd48ba719dd7e0dbc27f488f38e2_10.png)
 
 为了验证我们的聚合关系，我们可以在 `Library` 类中添加一个方法来列出所有图书。
 
@@ -105,11 +99,9 @@ class Library:
         return book_list
 ```
 
-![](img/1293bd48ba719dd7e0dbc27f488f38e2_12.png)
 
 这个方法遍历 `self.books` 列表中的每一个 `Book` 对象，并将其标题和作者格式化成字符串，最后返回一个字符串列表。
 
-![](img/1293bd48ba719dd7e0dbc27f488f38e2_14.png)
 
 我们可以这样使用它：
 
@@ -123,7 +115,6 @@ for book_info in my_library.list_books():
 
 ## 总结 📝
 
-![](img/1293bd48ba719dd7e0dbc27f488f38e2_16.png)
 
 本节课中我们一起学习了Python中的**聚合**关系。我们了解到：
 
@@ -133,7 +124,6 @@ for book_info in my_library.list_books():
 *   使用 `add_book` 方法可以建立聚合关系。
 *   使用 `list_books` 方法可以查看聚合的内容。
 
-![](img/1293bd48ba719dd7e0dbc27f488f38e2_18.png)
 
 ![](img/1293bd48ba719dd7e0dbc27f488f38e2_19.png)
 

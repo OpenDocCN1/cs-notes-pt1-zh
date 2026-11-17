@@ -37,7 +37,6 @@ run;
 
 我们也可以将`DATEPART`函数嵌套在`MONTH`函数内部，直接提取数字月份。
 
-![](img/3b4396b9be40b2d89ec8e2c29e51b41c_1.png)
 
 创建新值后，你可以将列命名为`month`，然后在`GROUP BY`子句中使用该列配合汇总函数。
 
@@ -54,7 +53,6 @@ proc sql;
 quit;
 ```
 
-![](img/3b4396b9be40b2d89ec8e2c29e51b41c_3.png)
 
 ## 总结
 

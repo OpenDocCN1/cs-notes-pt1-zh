@@ -41,7 +41,6 @@ where
 
 在花括号内，我们添加代码（这里同样使用 `unimplemented!`）。可以看到，当泛型变得复杂时，`where` 子句使代码更易于阅读和编辑。
 
-![](img/48415a44500682ce88fdd7118f243963_1.png)
 
 ---
 
@@ -53,7 +52,6 @@ where
 
 首先，我们假设已有以下定义：
 
-![](img/48415a44500682ce88fdd7118f243963_3.png)
 
 ```rust
 pub trait Summary {
@@ -93,13 +91,10 @@ fn returns_summarizable() -> impl Summary {
 
 为了更好地理解没有错误的情况，让我们看一个更完整的例子。我们将回到“推特”时代，创建一个 `Tweet` 结构体。
 
-![](img/48415a44500682ce88fdd7118f243963_5.png)
 
 首先，定义 `Summary` trait 和 `Tweet` 结构体，并为 `Tweet` 实现 `Summary`。
 
-![](img/48415a44500682ce88fdd7118f243963_6.png)
 
-![](img/48415a44500682ce88fdd7118f243963_7.png)
 
 ```rust
 pub trait Summary {
@@ -147,7 +142,6 @@ fn main() {
 
 ---
 
-![](img/48415a44500682ce88fdd7118f243963_9.png)
 
 ## 总结
 本节课中我们一起学习了两个 Rust 的核心特性：

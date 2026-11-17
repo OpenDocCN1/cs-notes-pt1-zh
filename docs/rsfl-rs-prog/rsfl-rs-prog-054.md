@@ -6,15 +6,11 @@
 
 上一节我们介绍了字符串的基本概念，本节中我们来看看如何向一个已有的字符串追加内容。Rust 提供了两种主要方法：`push_str` 用于追加字符串切片，`push` 用于追加单个字符。
 
-![](img/3589fff6bfcb4772bb380aef8ac99d1e_1.png)
 
-![](img/3589fff6bfcb4772bb380aef8ac99d1e_2.png)
 
 首先，我们创建一个可变的字符串变量作为起点。
 
-![](img/3589fff6bfcb4772bb380aef8ac99d1e_3.png)
 
-![](img/3589fff6bfcb4772bb380aef8ac99d1e_4.png)
 
 ```rust
 let mut text = String::from("Bob");
@@ -29,7 +25,6 @@ println!("{:?}", text); // 输出: "Bob loves apples"
 
 为了更清晰地展示所有权机制，我们可以用一个变量来存储要追加的内容。
 
-![](img/3589fff6bfcb4772bb380aef8ac99d1e_6.png)
 
 ```rust
 let mut text = String::from("James");
@@ -41,9 +36,7 @@ println!("{:?}", ending); // 仍然可以正常使用 `ending`
 
 即使 `ending` 是一个 `String` 类型，`push_str` 方法也会要求我们传入其切片形式（`&ending`），Rust 会确保这一点，避免意外的所有权转移。
 
-![](img/3589fff6bfcb4772bb380aef8ac99d1e_8.png)
 
-![](img/3589fff6bfcb4772bb380aef8ac99d1e_9.png)
 
 除了追加整个字符串，我们还可以使用 `push` 方法向字符串末尾添加单个字符。
 
@@ -57,7 +50,6 @@ println!("{:?}", text); // 输出: "hello!"
 
 ## 字符串拼接：`+` 运算符与 `format!` 宏
 
-![](img/3589fff6bfcb4772bb380aef8ac99d1e_11.png)
 
 在 Python 等语言中，使用 `+` 运算符拼接字符串非常简单直接。但在 Rust 中，`+` 运算符的行为稍有不同，涉及到所有权和引用的概念。
 
@@ -92,9 +84,7 @@ println!("{:?}", s4); // 输出: "tic-tac-toe"
 // 此时 s1 已不可用
 ```
 
-![](img/3589fff6bfcb4772bb380aef8ac99d1e_13.png)
 
-![](img/3589fff6bfcb4772bb380aef8ac99d1e_14.png)
 
 因此，对于复杂的字符串拼接，更推荐使用 `format!` 宏。它的工作方式类似于 `println!` 宏，但不是将结果打印到屏幕，而是将其作为一个新的 `String` 返回。
 
@@ -112,7 +102,6 @@ println!("{:?}", s4); // 输出: "tic-tac-toe"
 1.  **代码可读性高**：格式清晰，一目了然。
 2.  **不取得参数所有权**：`format!` 宏生成的代码使用参数的引用，因此不会消耗 `s1`、`s2`、`s3` 的所有权。拼接操作后，你仍然可以继续使用它们。
 
-![](img/3589fff6bfcb4772bb380aef8ac99d1e_16.png)
 
 ```rust
 println!("{:?}, {:?}, {:?}", s1, s2, s3); // 全部可以正常使用
@@ -122,7 +111,6 @@ println!("{:?}, {:?}, {:?}", s1, s2, s3); // 全部可以正常使用
 
 ## 总结 🎯
 
-![](img/3589fff6bfcb4772bb380aef8ac99d1e_18.png)
 
 ![](img/3589fff6bfcb4772bb380aef8ac99d1e_19.png)
 

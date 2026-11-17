@@ -4,9 +4,7 @@
 
 ## 核心语言中的字符串类型
 
-![](img/94eaecbd0759eff51e96ad53b0a88521_1.png)
 
-![](img/94eaecbd0759eff51e96ad53b0a88521_2.png)
 
 在 Rust 核心语言中，只有一种字符串类型：**字符串切片**。我们之前已经见过很多次，它看起来像这样：
 ```rust
@@ -20,15 +18,11 @@ let s = "Bob";
 
 `String` 类型由 Rust 的标准库提供，而非内置于核心语言中。它是一种可增长、可变、拥有所有权的 UTF-8 编码字符串类型。当 Rust 开发者提到“字符串”时，他们可能指的是 `String` 类型或字符串切片类型，而不仅仅是其中一种。虽然本系列的这一部分将主要关注 `String` 类型，但这两种类型在 Rust 标准库中都大量使用，并且都是 UTF-8 编码的。
 
-![](img/94eaecbd0759eff51e96ad53b0a88521_4.png)
 
-![](img/94eaecbd0759eff51e96ad53b0a88521_5.png)
 
 ## 与向量的相似性
 
-![](img/94eaecbd0759eff51e96ad53b0a88521_7.png)
 
-![](img/94eaecbd0759eff51e96ad53b0a88521_8.png)
 
 现在，许多适用于向量的操作也同样适用于 `String` 类型。这是因为 `String` 实际上是围绕一个字节向量（`Vec<u8>`）的包装器，附带一些额外的保证、限制和能力。
 
@@ -63,9 +57,7 @@ let text = String::from("Hello, Bob");
 
 ## UTF-8 编码的重要性
 
-![](img/94eaecbd0759eff51e96ad53b0a88521_10.png)
 
-![](img/94eaecbd0759eff51e96ad53b0a88521_11.png)
 
 请记住，字符串是 UTF-8 编码的，这意味着我们可以在其中包含任何正确编码的数据。这就是为什么以下所有内容都是有效的，即使包含特殊字符：
 ```rust
@@ -75,9 +67,7 @@ let emoji = String::from("😊");
 
 ---
 
-![](img/94eaecbd0759eff51e96ad53b0a88521_13.png)
 
-![](img/94eaecbd0759eff51e96ad53b0a88521_14.png)
 
 ![](img/94eaecbd0759eff51e96ad53b0a88521_15.png)
 

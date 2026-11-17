@@ -110,9 +110,7 @@ struct ValueOpLowering : public mlir::OpRewritePattern<serene::ValueOp> {
 
 ### 应用转换
 
-![](img/7fc36f385cafc413fc16da11459887b3_1.png)
 
-![](img/7fc36f385cafc413fc16da11459887b3_3.png)
 
 定义好重写模式后，我们将它们添加到模式集中，并应用部分转换。
 
@@ -173,15 +171,10 @@ void StdToLLVMDialectPass::runOnModule() {
 
 以下是一个简单Serene程序降级后的输出示例：
 
-![](img/7fc36f385cafc413fc16da11459887b3_5.png)
 
-![](img/7fc36f385cafc413fc16da11459887b3_6.png)
 
-![](img/7fc36f385cafc413fc16da11459887b3_8.png)
 
-![](img/7fc36f385cafc413fc16da11459887b3_10.png)
 
-![](img/7fc36f385cafc413fc16da11459887b3_11.png)
 
 **原始SLIR**:
 ```mlir
@@ -192,7 +185,6 @@ module {
 }
 ```
 
-![](img/7fc36f385cafc413fc16da11459887b3_13.png)
 
 **降级到标准方言后**:
 ```mlir
@@ -216,9 +208,7 @@ module {
 
 ## 总结
 
-![](img/7fc36f385cafc413fc16da11459887b3_15.png)
 
-![](img/7fc36f385cafc413fc16da11459887b3_17.png)
 
 ![](img/7fc36f385cafc413fc16da11459887b3_19.png)
 

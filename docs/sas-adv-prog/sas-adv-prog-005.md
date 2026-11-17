@@ -4,7 +4,6 @@
 
 ## 启动与终止SQL过程
 
-![](img/d24b363abb0eb8bde9d0d75664619b3b_1.png)
 
 PROC SQL过程步以 `PROC SQL` 语句开始，以 `QUIT` 语句结束。一个PROC SQL步骤中可以包含多个语句，每个语句定义一个操作并立即执行。该过程步不需要使用 `RUN` 语句。
 
@@ -20,7 +19,6 @@ QUIT;
 
 与PROC SQL中的许多语句一样，SELECT语句由称为“子句”的构建块组成，并以分号结束。正因为SELECT语句被分解为子句，SQL被描述为一种模块化语言。
 
-![](img/d24b363abb0eb8bde9d0d75664619b3b_3.png)
 
 ## SELECT语句的基本结构
 
@@ -29,7 +27,6 @@ QUIT;
 *   必须指定要检索的列名列表，列名之间用逗号分隔。
 *   在FROM子句中，必须指定包含这些列的表名。
 
-![](img/d24b363abb0eb8bde9d0d75664619b3b_5.png)
 
 ```sql
 SELECT column1, column2
@@ -56,7 +53,6 @@ HAVING SUM(column2) > 500
 ORDER BY column1 DESC;
 ```
 
-![](img/d24b363abb0eb8bde9d0d75664619b3b_7.png)
 
 ## PROC SQL中的其他语句
 

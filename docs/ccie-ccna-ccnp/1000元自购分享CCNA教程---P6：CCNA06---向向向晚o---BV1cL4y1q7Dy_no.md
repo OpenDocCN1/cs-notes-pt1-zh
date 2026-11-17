@@ -10,7 +10,6 @@
 
 数据链路层主要包含各种局域网（LAN）和广域网（WAN）协议。其中，以太网（Ethernet）是当前应用最广泛的局域网协议，而PPP（点对点协议）则是重要的广域网协议。本课程将重点讲解以太网。
 
-![](img/eeb67a67a8b0dd37f3fbd68d0c5b6e1f_1.png)
 
 ---
 
@@ -45,13 +44,10 @@
 
 ### 2. 节点标识符：MAC地址
 
-![](img/eeb67a67a8b0dd37f3fbd68d0c5b6e1f_3.png)
 
-![](img/eeb67a67a8b0dd37f3fbd68d0c5b6e1f_4.png)
 
 在以太网中，每个网络接口都有一个唯一的二层标识符，称为**MAC地址**（Media Access Control Address）。
 
-![](img/eeb67a67a8b0dd37f3fbd68d0c5b6e1f_6.png)
 
 *   **作用**：在一个**广播域（网络）内**唯一标识一个接口。类似于接口的“身份证号”。
 *   **格式**：48位（6个字节），通常以十六进制表示，如 `AAAA.BBBB.CCCC`。
@@ -59,7 +55,6 @@
     *   **MAC地址**是二层地址，由设备制造商固化，通常不可更改，用于**网络内**的寻址。
     *   **IP地址**是三层地址，由用户或网络动态分配，用于**端到端**的全球寻址。
 
-![](img/eeb67a67a8b0dd37f3fbd68d0c5b6e1f_7.png)
 
 **核心概念**：**网络内通信**与**网络间通信**。
 
@@ -76,9 +71,7 @@
 
 **重要结论**：在端到端通信中，**三层IP地址（源IP、目的IP）始终保持不变**，而**二层MAC地址在每一跳（每个网络）都会改变**。
 
-![](img/eeb67a67a8b0dd37f3fbd68d0c5b6e1f_9.png)
 
-![](img/eeb67a67a8b0dd37f3fbd68d0c5b6e1f_10.png)
 
 ---
 
@@ -86,28 +79,20 @@
 
 以太网规定了数据帧的封装格式，以便设备能够识别和处理。值得注意的是，以太网有两种主要的封装标准：
 
-![](img/eeb67a67a8b0dd37f3fbd68d0c5b6e1f_12.png)
 
 *   **以太网 II（Ethernet II）**：由DEC、Intel、Xerox定义后公有化，格式简洁高效。
 *   **IEEE 802.3**：由IEEE标准组织定义，格式更为复杂。
 
 当前约定是：**数据流量（如网页、文件传输）使用以太网 II 封装；控制流量（如交换机间的STP、CDP协议报文）使用 IEEE 802.3 封装**。
 
-![](img/eeb67a67a8b0dd37f3fbd68d0c5b6e1f_14.png)
 
-![](img/eeb67a67a8b0dd37f3fbd68d0c5b6e1f_16.png)
 
-![](img/eeb67a67a8b0dd37f3fbd68d0c5b6e1f_17.png)
 
 以下是两种帧格式的对比：
 
-![](img/eeb67a67a8b0dd37f3fbd68d0c5b6e1f_18.png)
 
-![](img/eeb67a67a8b0dd37f3fbd68d0c5b6e1f_19.png)
 
-![](img/eeb67a67a8b0dd37f3fbd68d0c5b6e1f_21.png)
 
-![](img/eeb67a67a8b0dd37f3fbd68d0c5b6e1f_23.png)
 
 **以太网 II 帧格式**：
 ```
@@ -122,47 +107,29 @@
 *   **长度字段**：指示数据字段的长度。
 *   **LLC 和 SNAP**：用于支持多种网络层协议，但使帧头变得冗长。
 
-![](img/eeb67a67a8b0dd37f3fbd68d0c5b6e1f_25.png)
 
-![](img/eeb67a67a8b0dd37f3fbd68d0c5b6e1f_27.png)
 
 **如何区分**：查看源MAC地址后的两个字节。若值 **≥ 0x0600 (1536)**，则为**类型字段**，属于**以太网 II**帧。若值 **≤ 0x05DC (1500)**，则为**长度字段**，属于**IEEE 802.3**帧。
 
-![](img/eeb67a67a8b0dd37f3fbd68d0c5b6e1f_29.png)
 
-![](img/eeb67a67a8b0dd37f3fbd68d0c5b6e1f_31.png)
 
-![](img/eeb67a67a8b0dd37f3fbd68d0c5b6e1f_33.png)
 
-![](img/eeb67a67a8b0dd37f3fbd68d0c5b6e1f_35.png)
 
-![](img/eeb67a67a8b0dd37f3fbd68d0c5b6e1f_37.png)
 
 **MTU（最大传输单元）**：以太网规定，数据字段（即三层数据包）的最大长度为 **1500字节**。超过此值的数据包需要分片。
 
-![](img/eeb67a67a8b0dd37f3fbd68d0c5b6e1f_39.png)
 
-![](img/eeb67a67a8b0dd37f3fbd68d0c5b6e1f_41.png)
 
-![](img/eeb67a67a8b0dd37f3fbd68d0c5b6e1f_43.png)
 
-![](img/eeb67a67a8b0dd37f3fbd68d0c5b6e1f_44.png)
 
-![](img/eeb67a67a8b0dd37f3fbd68d0c5b6e1f_45.png)
 
-![](img/eeb67a67a8b0dd37f3fbd68d0c5b6e1f_47.png)
 
 ---
 
-![](img/eeb67a67a8b0dd37f3fbd68d0c5b6e1f_49.png)
 
-![](img/eeb67a67a8b0dd37f3fbd68d0c5b6e1f_51.png)
 
-![](img/eeb67a67a8b0dd37f3fbd68d0c5b6e1f_53.png)
 
-![](img/eeb67a67a8b0dd37f3fbd68d0c5b6e1f_55.png)
 
-![](img/eeb67a67a8b0dd37f3fbd68d0c5b6e1f_56.png)
 
 ## 总结
 

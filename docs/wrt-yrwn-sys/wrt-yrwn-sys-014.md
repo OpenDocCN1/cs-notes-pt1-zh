@@ -10,7 +10,6 @@ GUI框架是操作系统中用户交互的核心部分。虽然在实际操作�
 
 ![](img/bdb1077a8ca4413ce5db853e8f3b755b_1.png)
 
-![](img/bdb1077a8ca4413ce5db853e8f3b755b_3.png)
 
 ### 图形上下文
 
@@ -72,9 +71,7 @@ GUI框架的起点是一个名为`Widget`的基础类。它代表屏幕上可绘
 
 `Window`类需要重写`get_focus`方法，不再将请求传递给父部件，而是将自己设置为父窗口（或桌面）的`active_window`或`focused_widget`。
 
-![](img/bdb1077a8ca4413ce5db853e8f3b755b_5.png)
 
-![](img/bdb1077a8ca4413ce5db853e8f3b755b_7.png)
 
 `Desktop`类也派生自`CompositeWidget`，它是所有窗口的容器，是部件树的根。
 *   它维护一个`active_window`指针，指向当前活动的窗口。
@@ -82,7 +79,6 @@ GUI框架的起点是一个名为`Widget`的基础类。它代表屏幕上可绘
 *   键盘事件会发送给`active_window`。
 *   鼠标点击某个窗口会使其成为新的`active_window`。
 
-![](img/bdb1077a8ca4413ce5db853e8f3b755b_9.png)
 
 ## 代码结构示例
 

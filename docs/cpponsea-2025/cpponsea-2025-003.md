@@ -84,7 +84,6 @@ if (sync.load(std::memory_order_acquire)) { // 3. 获取信号
 }
 ```
 
-![](img/a0af202987865020f48185835fd1de15_5.png)
 
 这种方式比顺序一致性更弱，但允许在未同步的线程间进行更多的优化。
 

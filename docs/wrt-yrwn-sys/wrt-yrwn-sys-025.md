@@ -35,7 +35,6 @@ struct ICMPHeader {
 
 我们的`ICMPHandler`类将继承自`InternetProtocolHandler`，并处理协议号1（ICMP）。
 
-![](img/5b44c4cd9610b3cffa6b16d014fa720f_1.png)
 
 ![](img/5b44c4cd9610b3cffa6b16d014fa720f_3.png)
 

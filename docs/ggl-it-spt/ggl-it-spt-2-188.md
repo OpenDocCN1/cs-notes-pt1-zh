@@ -1,6 +1,5 @@
 # 188：介绍
 
-![](img/84d32a0c157c1bbf48c02c390b45b8ab_0.png)
 
 ![](img/84d32a0c157c1bbf48c02c390b45b8ab_1.png)
 

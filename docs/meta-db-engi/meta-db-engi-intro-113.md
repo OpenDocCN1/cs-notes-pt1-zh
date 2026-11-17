@@ -76,7 +76,6 @@ SELECT @total_low_price_products, @total_high_price_products;
 
 ## 总结
 
-![](img/3152a38ca05003c4443603b0f520b9df_3.png)
 
 ![](img/3152a38ca05003c4443603b0f520b9df_4.png)
 

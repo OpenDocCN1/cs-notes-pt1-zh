@@ -2,7 +2,6 @@
 
 在本节课中，我们将学习`socketpair`系统调用，并将其与上一节讨论的`pipe`系统调用进行比较。我们将探讨如何使用`socketpair`创建一对已连接的套接字，以实现进程间的双向通信。
 
-![](img/05adfad79f43628e03bffe8cf749f4e2_1.png)
 
 ## 概述
 
@@ -38,13 +37,11 @@ int socketpair(int domain, int type, int protocol, int sv[2]);
 3.  父进程和子进程分别关闭自己不需要的那个文件描述符（虽然每个描述符都可读可写，但通常每个进程只保留一个用于通信）。
 4.  现在，父进程和子进程可以通过各自保留的文件描述符进行读写操作，实现双向通信。
 
-![](img/05adfad79f43628e03bffe8cf749f4e2_3.png)
 
 ## 代码示例
 
 以下是一个使用`socketpair`的简单示例程序，改编自BSD IPC教程：
 
-![](img/05adfad79f43628e03bffe8cf749f4e2_5.png)
 
 ```c
 #include <sys/types.h>
@@ -106,7 +103,6 @@ int main() {
 3.  父进程关闭`sockets[1]`，向`sockets[0]`写入数据，然后从`sockets[0]`读取数据并打印。
 4.  子进程关闭`sockets[0]`，向`sockets[1]`写入数据，然后从`sockets[1]`读取数据并打印。
 
-![](img/05adfad79f43628e03bffe8cf749f4e2_7.png)
 
 **注意**：父进程和子进程几乎同时开始发送数据，执行顺序没有保证，这属于典型的并发编程场景。
 

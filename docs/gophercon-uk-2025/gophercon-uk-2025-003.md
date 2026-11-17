@@ -14,7 +14,6 @@
 
 我们以一个创建 AWS S3 存储桶的函数为例。该函数包含重试逻辑，以应对临时的网络问题。
 
-![](img/581a16cd1d181f31fc145adf878d3c9c_2.png)
 
 ```go
 func createS3Bucket(ctx context.Context, client *s3.Client, bucketName string) error {
@@ -58,7 +57,6 @@ func TestCreateS3Bucket_HappyPath(t *testing.T) {
 
 ## 章节 2：使用代理模拟网络故障
 
-![](img/581a16cd1d181f31fc145adf878d3c9c_4.png)
 
 为了测试失败路径，我们可以在代码和云服务之间引入一个网络代理，由代理来注入网络延迟或错误。
 
@@ -95,7 +93,6 @@ cfg, _ := config.LoadDefaultConfig(ctx,
 client := s3.NewFromConfig(cfg)
 ```
 
-![](img/581a16cd1d181f31fc145adf878d3c9c_6.png)
 
 通过这种方式，我们可以验证当网络出现延迟时，代码的重试逻辑是否按预期工作。
 
@@ -103,7 +100,6 @@ client := s3.NewFromConfig(cfg)
 
 当无法或不便直接测试真实服务时（例如由于权限或成本考虑），我们可以使用服务模拟器，如 LocalStack。它能在本地容器中模拟 AWS 服务。
 
-![](img/581a16cd1d181f31fc145adf878d3c9c_8.png)
 
 使用 LocalStack 的配置与测试真实服务类似，主要区别在于将上游端点指向本地运行的 LocalStack 容器。
 
@@ -112,11 +108,9 @@ client := s3.NewFromConfig(cfg)
 proxy, _ := proxyClient.CreateProxy("s3-proxy", "localhost:8443", "localstack.localstack.cloud:4566")
 ```
 
-![](img/581a16cd1d181f31fc145adf878d3c9c_10.png)
 
 同时，需要修改 AWS 客户端的配置，使其信任 LocalStack 使用的证书。
 
-![](img/581a16cd1d181f31fc145adf878d3c9c_12.png)
 
 ```go
 cfg, _ := config.LoadDefaultConfig(ctx,

@@ -189,9 +189,7 @@
 
 ![](img/a1e4637e473238be6c9563b17bfe804e_1.png)
 
-![](img/a1e4637e473238be6c9563b17bfe804e_2.png)
 
-![](img/a1e4637e473238be6c9563b17bfe804e_3.png)
 
 ## 总结
 

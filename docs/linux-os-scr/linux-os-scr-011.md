@@ -1,10 +1,8 @@
 # 011：System V Init 与网络配置 🖥️
 
-![](img/575f8c16fd63c7fa2e9aed94f4bd5043_0.png)
 
 在本节课中，我们将完成第8章剩余的System V Init相关软件包的编译，并进入第9章，学习如何配置System V Init系统以及基本的网络设置。我们将重点理解`/etc/inittab`文件的结构和运行级别（runlevel）的概念。
 
-![](img/575f8c16fd63c7fa2e9aed94f4bd5043_2.png)
 
 ---
 

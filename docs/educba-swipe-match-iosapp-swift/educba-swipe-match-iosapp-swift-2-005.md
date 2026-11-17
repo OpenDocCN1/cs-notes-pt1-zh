@@ -2,9 +2,7 @@
 
 在本节课中，我们将学习如何为卡片视图添加手势识别器的动作，并创建一个可滑动的示例卡片。我们将从添加手势动作开始，然后详细设计并实现一个包含图片、标签和按钮的卡片视图。
 
-![](img/6520f3165e4704773e992dfe95cf10d6_1.png)
 
-![](img/6520f3165e4704773e992dfe95cf10d6_3.png)
 
 ---
 
@@ -14,14 +12,11 @@
 
 我们有两个手势识别器需要处理：**UIPanGestureRecognizer**（滑动手势）和**UITapGestureRecognizer**（点击手势）。我们已经添加了滑动手势识别器，现在需要为两者创建对应的动作函数。
 
-![](img/6520f3165e4704773e992dfe95cf10d6_5.png)
 
 以下是需要添加的动作函数：
 
-![](img/6520f3165e4704773e992dfe95cf10d6_7.png)
 
 
-![](img/6520f3165e4704773e992dfe95cf10d6_9.png)
 
 ```swift
 @objc private func handlePanGesture(_ recognizer: UIPanGestureRecognizer) {
@@ -32,7 +27,6 @@
 }
 ```
 
-![](img/6520f3165e4704773e992dfe95cf10d6_11.png)
 
 这些函数被标记为 `@objc`，以便它们可以在 Objective-C 的运行时中被识别和调用，这对于手势识别器的 `#selector` 语法是必需的。
 
@@ -42,7 +36,6 @@
 
 构建时可能会遇到协议一致性错误，例如“SwipeableContainerView does not conform to SwiperDelegate”。这通常意味着需要调整函数签名以符合协议要求。修正后再次构建，直到没有错误。
 
-![](img/6520f3165e4704773e992dfe95cf10d6_13.png)
 
 ---
 
@@ -50,19 +43,15 @@
 
 手势动作设置完成后，我们现在来创建一个具体的、可滑动的卡片视图。这个卡片将拥有自己的界面布局和对应的代码文件。
 
-![](img/6520f3165e4704773e992dfe95cf10d6_15.png)
 
-![](img/6520f3165e4704773e992dfe95cf10d6_17.png)
 
 我们将创建一个名为 `SampleSwipeableCard` 的类，它继承自我们基础的可滑动卡片类。同时，我们还会为它创建一个 `.xib` 文件来设计界面。
 
-![](img/6520f3165e4704773e992dfe95cf10d6_19.png)
 
 以下是创建步骤：
 1.  新建一个 Swift 文件，定义 `SampleSwipeableCard` 类。
 2.  新建一个 User Interface 文件，选择“View”模板，将其命名为 `SampleSwipeableCard.xib`。
 
-![](img/6520f3165e4704773e992dfe95cf10d6_21.png)
 
 ---
 
@@ -88,7 +77,6 @@
 
 ---
 
-![](img/6520f3165e4704773e992dfe95cf10d6_23.png)
 
 ## 连接界面与代码
 
@@ -110,13 +98,11 @@
 
 ---
 
-![](img/6520f3165e4704773e992dfe95cf10d6_25.png)
 
 ## 准备卡片数据模型
 
 为了动态显示卡片内容，我们需要一个数据模型。这个模型将定义卡片所需的数据结构。
 
-![](img/6520f3165e4704773e992dfe95cf10d6_27.png)
 
 我们创建一个名为 `SampleSwipeableCardViewModel` 的新文件。该模型通常包含以下属性：
 *   `title`：姓名（String）。
@@ -158,11 +144,9 @@ func configure(with viewModel: SampleSwipeableCardViewModel) {
 
 这样，一个完整的、带有数据和交互功能的可滑动卡片就集成到了我们的应用中。
 
-![](img/6520f3165e4704773e992dfe95cf10d6_29.png)
 
 ---
 
-![](img/6520f3165e4704773e992dfe95cf10d6_31.png)
 
 ![](img/6520f3165e4704773e992dfe95cf10d6_33.png)
 

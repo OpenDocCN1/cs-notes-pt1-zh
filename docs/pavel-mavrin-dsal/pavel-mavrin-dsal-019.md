@@ -1,50 +1,29 @@
 # 019：线段树与延迟传播
 
-![](img/8e23048da9de8cf66f20bff534bd38a7_1.png)
 
-![](img/8e23048da9de8cf66f20bff534bd38a7_3.png)
 
-![](img/8e23048da9de8cf66f20bff534bd38a7_5.png)
 
-![](img/8e23048da9de8cf66f20bff534bd38a7_7.png)
 
-![](img/8e23048da9de8cf66f20bff534bd38a7_9.png)
 
-![](img/8e23048da9de8cf66f20bff534bd38a7_11.png)
 
-![](img/8e23048da9de8cf66f20bff534bd38a7_13.png)
 
-![](img/8e23048da9de8cf66f20bff534bd38a7_15.png)
 
-![](img/8e23048da9de8cf66f20bff534bd38a7_17.png)
 
-![](img/8e23048da9de8cf66f20bff534bd38a7_19.png)
 
-![](img/8e23048da9de8cf66f20bff534bd38a7_21.png)
 
-![](img/8e23048da9de8cf66f20bff534bd38a7_23.png)
 
 在本节课中，我们将继续学习线段树。如果你看过Codeforces上关于线段树的课程，那么本节课的第一部分内容会与第二课完全相同。我们将回顾线段树的基本概念，然后深入探讨一种更强大的技术——延迟传播，它允许我们高效地对整个区间进行修改操作。
 
-![](img/8e23048da9de8cf66f20bff534bd38a7_25.png)
 
-![](img/8e23048da9de8cf66f20bff534bd38a7_27.png)
 
-![](img/8e23048da9de8cf66f20bff534bd38a7_29.png)
 
-![](img/8e23048da9de8cf66f20bff534bd38a7_31.png)
 
 ## 线段树回顾
 
-![](img/8e23048da9de8cf66f20bff534bd38a7_33.png)
 
-![](img/8e23048da9de8cf66f20bff534bd38a7_35.png)
 
-![](img/8e23048da9de8cf66f20bff534bd38a7_37.png)
 
-![](img/8e23048da9de8cf66f20bff534bd38a7_39.png)
 
-![](img/8e23048da9de8cf66f20bff534bd38a7_41.png)
 
 上一节我们讨论了以下问题：我们有一个数组，需要处理两种类型的查询。第一种查询是修改单个元素的值，例如 `set(i, v)`。第二种查询是计算某个区间上的聚合值，例如区间和、区间最小值，或任何其他满足结合律的函数。
 
@@ -176,9 +155,7 @@ def propagate(node):
 
 如果我们希望支持一个抽象的修改操作 `modify_op` 和一个抽象的查询操作 `query_op`（例如区间赋值和区间和），那么它们需要满足以下性质才能使延迟传播线段树正常工作：
 
-![](img/8e23048da9de8cf66f20bff534bd38a7_43.png)
 
-![](img/8e23048da9de8cf66f20bff534bd38a7_45.png)
 
 1.  **结合律**: `modify_op` 必须是可结合的。即 `combine(combine(a, X), Y) = combine(a, combine(X, Y))`，这允许我们将多个操作合并。
 2.  **分配律**: `modify_op` 必须能分配到 `query_op` 上。这是最关键的性质。它意味着：先对区间内每个元素应用修改操作 `X`，再进行区间查询 `query_op`，得到的结果，应该等于先进行区间查询 `query_op`，再对查询结果应用同一个修改操作 `X`（以某种方式定义在聚合值上）。

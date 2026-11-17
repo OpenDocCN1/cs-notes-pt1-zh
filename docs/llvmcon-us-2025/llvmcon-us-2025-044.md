@@ -1,6 +1,5 @@
 # 044：将泛型代码优化到LLVM-IR
 
-![](img/15894cc34d361b8cbbf2dcc4ce2113f0_0.png)
 
 ![](img/15894cc34d361b8cbbf2dcc4ce2113f0_0.png)
 
@@ -75,6 +74,5 @@ C++的模板和Carbon的泛型都允许在编译时对代码进行参数化。�
 *   **相关文档**：详见第二个链接。
 如果你有更多问题或想深入了解，欢迎联系我。
 
-![](img/15894cc34d361b8cbbf2dcc4ce2113f0_2.png)
 
 ![](img/15894cc34d361b8cbbf2dcc4ce2113f0_2.png)

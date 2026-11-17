@@ -47,7 +47,6 @@ scanf("%lf", &num2);
 
 现在我们已经有了两个数字，可以将它们相加并打印出答案了。
 
-![](img/d3ec59b0b946564201b117bcdcc3bab5_1.png)
 
 以下是进行计算和输出的代码：
 
@@ -55,7 +54,6 @@ scanf("%lf", &num2);
 
 ![](img/d3ec59b0b946564201b117bcdcc3bab5_3.png)
 
-![](img/d3ec59b0b946564201b117bcdcc3bab5_4.png)
 
 ```c
 printf("答案是：%f\n", num1 + num2);
@@ -90,7 +88,6 @@ int main() {
 
 ![](img/d3ec59b0b946564201b117bcdcc3bab5_6.png)
 
-![](img/d3ec59b0b946564201b117bcdcc3bab5_7.png)
 
 运行上述程序，你可能会看到如下交互过程：
 
@@ -124,7 +121,6 @@ int main() {
 *   区分了在 `scanf` 和 `printf` 中处理双精度浮点数 (`double`) 的不同格式说明符 (`%lf` 与 `%f`)。
 *   将输入的值存储在变量中并进行基本的算术运算。
 
-![](img/d3ec59b0b946564201b117bcdcc3bab5_14.png)
 
 ![](img/d3ec59b0b946564201b117bcdcc3bab5_16.png)
 

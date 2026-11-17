@@ -2,9 +2,7 @@
 
 在本节课中，我们将学习如何配置MongoDB以允许远程服务器连接。默认情况下，MongoDB会阻止所有远程连接，但我们可以通过修改配置来启用它，从而实现服务器间的数据访问。
 
-![](img/392e16ad858ae6cc2ca7119d16815acf_1.png)
 
-![](img/392e16ad858ae6cc2ca7119d16815acf_2.png)
 
 上一节我们介绍了MongoDB的基本操作，本节中我们来看看如何安全地配置远程连接。
 
@@ -12,13 +10,11 @@
 
 首先，我们需要在MongoDB中创建一个具有访问权限的用户。以下是具体步骤：
 
-![](img/392e16ad858ae6cc2ca7119d16815acf_4.png)
 
 1.  连接到本地MongoDB服务。
 2.  切换到 `admin` 数据库，该数据库用于管理用户账户和权限。
 3.  使用 `db.createUser` 命令创建新用户。
 
-![](img/392e16ad858ae6cc2ca7119d16815acf_6.png)
 
 以下是创建用户的代码示例：
 ```javascript
@@ -41,13 +37,10 @@ db.createUser({
 2.  找到 `net` 部分，配置 `bindIp` 参数。将其设置为 `0.0.0.0` 将允许所有IP连接（仅用于测试，生产环境应指定具体IP）。
 3.  找到 `security` 部分，取消注释并添加 `authorization: enabled` 这一行，以启用连接授权。
 
-![](img/392e16ad858ae6cc2ca7119d16815acf_8.png)
 
-![](img/392e16ad858ae6cc2ca7119d16815acf_10.png)
 
 配置文件修改后的关键部分应类似如下：
 
-![](img/392e16ad858ae6cc2ca7119d16815acf_12.png)
 
 ```yaml
 net:
@@ -62,15 +55,12 @@ sudo systemctl restart mongod
 ```
 重启后，使用 `sudo systemctl status mongod` 检查服务状态，确认其正在运行。
 
-![](img/392e16ad858ae6cc2ca7119d16815acf_14.png)
 
 ## 进行远程连接测试
 
 配置完成后，我们可以从另一台机器测试远程连接。假设MongoDB服务器的IP地址是 `192.168.1.100`。
 
-![](img/392e16ad858ae6cc2ca7119d16815acf_16.png)
 
-![](img/392e16ad858ae6cc2ca7119d16815acf_18.png)
 
 以下是两种连接方法：
 

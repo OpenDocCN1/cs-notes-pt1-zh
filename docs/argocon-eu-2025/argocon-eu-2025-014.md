@@ -1,8 +1,6 @@
 # 014：如何确保工作流有效？使用验证性 Webhook 双重检查你的 Workflow Spec 🛡️
 
-![](img/8843cfd0cd3bcecf95d86d163a9dbb1e_1.png)
 
-![](img/8843cfd0cd3bcecf95d86d163a9dbb1e_2.png)
 
 在本教程中，我们将学习如何为 Argo Workflows 配置验证性 Webhook，以确保提交到 Kubernetes 集群的工作流定义在创建前就是有效的。我们将探讨默认验证机制的不足、验证性 Webhook 的工作原理、其带来的好处以及实施时需要考虑的注意事项。
 

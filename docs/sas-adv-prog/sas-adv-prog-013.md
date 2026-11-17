@@ -19,14 +19,12 @@ WHERE credit_score BETWEEN 700 AND 799;
 ```
 由于`BETWEEN-AND`是包含性的，结果中会包含700分和799分的客户。
 
-![](img/10c1097a03689e0fc3740ea79a996022_1.png)
 
 这个运算符的效果等同于使用两个表达式和`AND`运算符。以下是等效的写法：
 ```sas
 WHERE credit_score >= 700 AND credit_score <= 799;
 ```
 
-![](img/10c1097a03689e0fc3740ea79a996022_1.png)
 
 ## LIKE运算符与模式匹配 🔍
 
@@ -50,7 +48,6 @@ WHERE column LIKE ‘pattern’;
 *   `WHERE first_name LIKE ‘Z_L%’;`
     *   此WHERE子句会返回所有以大写字母`Z`开头，后面跟**任意一个字符**，然后是字母`L`，最后再跟任意数量字符的名字。
 
-![](img/10c1097a03689e0fc3740ea79a996022_3.png)
 
 ---
 

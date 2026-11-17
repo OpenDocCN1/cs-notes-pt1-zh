@@ -2,25 +2,17 @@
 
 ![](img/e3038f7e74299e516c5e7bce6b8df680_1.png)
 
-![](img/e3038f7e74299e516c5e7bce6b8df680_3.png)
 
-![](img/e3038f7e74299e516c5e7bce6b8df680_4.png)
 
-![](img/e3038f7e74299e516c5e7bce6b8df680_6.png)
 
 在本节课中，我们将学习思科网络设备的基础命令集。我们将从连接设备开始，逐步了解不同的操作模式、基本配置命令以及一些实用的工程技巧。通过本教程，初学者可以掌握配置和管理思科设备的基本技能。
 
-![](img/e3038f7e74299e516c5e7bce6b8df680_8.png)
 
 ## 设备连接与初始界面
 
-![](img/e3038f7e74299e516c5e7bce6b8df680_10.png)
 
-![](img/e3038f7e74299e516c5e7bce6b8df680_12.png)
 
-![](img/e3038f7e74299e516c5e7bce6b8df680_14.png)
 
-![](img/e3038f7e74299e516c5e7bce6b8df680_16.png)
 
 上一节我们介绍了模拟器的使用方法，本节中我们来看看如何连接设备并进行初始操作。
 
@@ -40,30 +32,22 @@ Would you like to enter the initial configuration dialog? [yes/no]:
 
 ### 用户模式
 
-![](img/e3038f7e74299e516c5e7bce6b8df680_18.png)
 
 退出配置向导后，我们首先进入的是**用户模式**。提示符为设备主机名后跟一个**大于号** `>`，例如 `Router>`。
 
 *   **功能**：主要用于查看有限的设备信息。
 *   **限制**：不能进行任何配置更改，能查看的信息也非常有限。
 
-![](img/e3038f7e74299e516c5e7bce6b8df680_20.png)
 
-![](img/e3038f7e74299e516c5e7bce6b8df680_22.png)
 
 ### 特权模式
 
-![](img/e3038f7e74299e516c5e7bce6b8df680_24.png)
 
-![](img/e3038f7e74299e516c5e7bce6b8df680_26.png)
 
-![](img/e3038f7e74299e516c5e7bce6b8df680_28.png)
 
 在用户模式下输入 `enable` 命令，可以进入**特权模式**。提示符变为**井号** `#`，例如 `Router#`。
 
-![](img/e3038f7e74299e516c5e7bce6b8df680_30.png)
 
-![](img/e3038f7e74299e516c5e7bce6b8df680_32.png)
 
 *   **功能**：可以查看设备的**所有**信息，并能执行一些全局性操作，如保存配置、删除文件等。
 *   **命令示例**：
@@ -71,15 +55,11 @@ Would you like to enter the initial configuration dialog? [yes/no]:
     *   `copy running-config startup-config`：保存配置。
     *   `erase flash:`：擦除闪存中的文件（如IOS系统文件）。
 
-![](img/e3038f7e74299e516c5e7bce6b8df680_34.png)
 
-![](img/e3038f7e74299e516c5e7bce6b8df680_36.png)
 
 ### 全局配置模式
 
-![](img/e3038f7e74299e516c5e7bce6b8df680_38.png)
 
-![](img/e3038f7e74299e516c5e7bce6b8df680_39.png)
 
 ![](img/e3038f7e74299e516c5e7bce6b8df680_41.png)
 
@@ -90,25 +70,17 @@ Would you like to enter the initial configuration dialog? [yes/no]:
 *   **功能**：用于配置设备的**全局性参数**，这些设置会影响整个设备。
 *   **配置示例**：修改主机名、启用路由协议、设置全局访问控制列表等。
 
-![](img/e3038f7e74299e516c5e7bce6b8df680_45.png)
 
-![](img/e3038f7e74299e516c5e7bce6b8df680_47.png)
 
 ### 接口配置模式
 
-![](img/e3038f7e74299e516c5e7bce6b8df680_49.png)
 
-![](img/e3038f7e74299e516c5e7bce6b8df680_51.png)
 
-![](img/e3038f7e74299e516c5e7bce6b8df680_53.png)
 
 在全局配置模式下，输入 `interface` 命令加上接口名称（如 `interface fastEthernet 0/0`），可以进入**接口配置模式**。提示符变为 `(config-if)#`。
 
-![](img/e3038f7e74299e516c5e7bce6b8df680_55.png)
 
-![](img/e3038f7e74299e516c5e7bce6b8df680_57.png)
 
-![](img/e3038f7e74299e516c5e7bce6b8df680_59.png)
 
 *   **功能**：用于配置特定接口的参数，如IP地址、开启/关闭接口等。
 *   **配置示例**：
@@ -118,27 +90,18 @@ Would you like to enter the initial configuration dialog? [yes/no]:
      no shutdown
     ```
 
-![](img/e3038f7e74299e516c5e7bce6b8df680_61.png)
 
-![](img/e3038f7e74299e516c5e7bce6b8df680_63.png)
 
-![](img/e3038f7e74299e516c5e7bce6b8df680_65.png)
 
 ### 模式切换与退出
 
-![](img/e3038f7e74299e516c5e7bce6b8df680_67.png)
 
-![](img/e3038f7e74299e516c5e7bce6b8df680_68.png)
 
-![](img/e3038f7e74299e516c5e7bce6b8df680_70.png)
 
-![](img/e3038f7e74299e516c5e7bce6b8df680_72.png)
 
 以下是如何在不同模式间切换和退出的关键命令：
 
-![](img/e3038f7e74299e516c5e7bce6b8df680_74.png)
 
-![](img/e3038f7e74299e516c5e7bce6b8df680_76.png)
 
 *   `enable`：从用户模式进入特权模式。
 *   `disable`：从特权模式退回用户模式。
@@ -147,11 +110,8 @@ Would you like to enter the initial configuration dialog? [yes/no]:
 *   `exit`：**逐级退出**当前模式，返回上一级模式。
 *   `end` 或 `Ctrl+Z`：**直接退出**所有配置模式，返回到特权模式。
 
-![](img/e3038f7e74299e516c5e7bce6b8df680_78.png)
 
-![](img/e3038f7e74299e516c5e7bce6b8df680_80.png)
 
-![](img/e3038f7e74299e516c5e7bce6b8df680_82.png)
 
 养成清晰识别当前提示符模式的习惯，对于高效配置至关重要。
 
@@ -163,15 +123,12 @@ Would you like to enter the initial configuration dialog? [yes/no]:
 
 ![](img/e3038f7e74299e516c5e7bce6b8df680_86.png)
 
-![](img/e3038f7e74299e516c5e7bce6b8df680_88.png)
 
 ### 修改主机名
 
-![](img/e3038f7e74299e516c5e7bce6b8df680_90.png)
 
 默认所有设备都叫 `Router` 或 `Switch`，为了方便管理，首先应修改主机名。
 
-![](img/e3038f7e74299e516c5e7bce6b8df680_92.png)
 
 在全局配置模式下使用 `hostname` 命令：
 ```cisco
@@ -210,11 +167,9 @@ hostname R1
         *   `Protocol` (协议状态)：`up` 表示链路正常（已连接线缆且对端设备正常），`down` 表示链路故障（未接线或对端问题）。
         *   如果 `Status` 是 `down`，那么 `Protocol` 一定是 `down`。
 
-![](img/e3038f7e74299e516c5e7bce6b8df680_94.png)
 
 ## 设备密码设置
 
-![](img/e3038f7e74299e516c5e7bce6b8df680_96.png)
 
 为了设备安全，需要设置不同用途的密码。
 
@@ -236,7 +191,6 @@ enable secret cisco123
 
 此密码用于通过Telnet或SSH远程登录到设备。
 
-![](img/e3038f7e74299e516c5e7bce6b8df680_98.png)
 
 1.  进入VTY线路配置模式（用于管理远程登录会话）：
     ```cisco
@@ -252,11 +206,9 @@ enable secret cisco123
     login
     ```
 
-![](img/e3038f7e74299e516c5e7bce6b8df680_100.png)
 
 ### 3. 本地用户名密码认证 (Local Username/Password)
 
-![](img/e3038f7e74299e516c5e7bce6b8df680_102.png)
 
 更安全的管理方式是使用用户名和密码组合进行认证。
 
@@ -272,9 +224,7 @@ enable secret cisco123
     ```
 这样，远程登录时就需要输入正确的用户名和密码。这种方式便于审计，因为日志可以记录是哪个用户执行了操作。
 
-![](img/e3038f7e74299e516c5e7bce6b8df680_104.png)
 
-![](img/e3038f7e74299e516c5e7bce6b8df680_105.png)
 
 **密码加密**：为了防止配置文件中密码明文显示，可以在全局配置模式下使用命令对所有密码进行加密：
 ```cisco
@@ -307,7 +257,6 @@ service password-encryption
 
 熟练使用命令行工具可以提高配置速度。
 
-![](img/e3038f7e74299e516c5e7bce6b8df680_107.png)
 
 1.  **问号 `?` 帮助**：在任何位置输入 `?`，可以查看当前可用的命令或参数列表。这是学习命令和排除输入错误的最佳工具。
 2.  **Tab键补全**：输入命令的前几个字母后按 `Tab` 键，可以自动补全命令。如果有多个可能选项，多次按 `Tab` 可以循环切换。

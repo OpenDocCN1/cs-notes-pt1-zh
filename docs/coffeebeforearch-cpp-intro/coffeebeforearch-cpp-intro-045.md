@@ -2,7 +2,6 @@
 
 在本节课中，我们将学习如何在C++程序中生成随机数。随机数在模拟随机过程或测试函数时非常有用。C++标准库的 `<random>` 头文件提供了多种生成随机数的方法。我们将从基础开始，学习如何生成随机整数，并了解不同的随机数引擎和分布。
 
-![](img/d976e093a535fb7ffcacf9d1d23e7ca2_1.png)
 
 ## 生成非确定性随机数
 
@@ -14,7 +13,6 @@
 2.  在 `main` 函数中创建一个 `std::random_device` 对象。
 3.  使用循环调用该对象的函数调用运算符 `()` 来生成随机数。
 
-![](img/d976e093a535fb7ffcacf9d1d23e7ca2_3.png)
 
 ```cpp
 #include <iostream>
@@ -34,7 +32,6 @@ int main() {
 }
 ```
 
-![](img/d976e093a535fb7ffcacf9d1d23e7ca2_5.png)
 
 每次运行此程序，你都会得到一组不同的无符号整数。
 
@@ -44,7 +41,6 @@ int main() {
 
 以下是使用 `std::mt19937` 引擎的示例：
 
-![](img/d976e093a535fb7ffcacf9d1d23e7ca2_7.png)
 
 ```cpp
 #include <iostream>
@@ -64,7 +60,6 @@ int main() {
 }
 ```
 
-![](img/d976e093a535fb7ffcacf9d1d23e7ca2_9.png)
 
 直接使用引擎时，每次程序运行可能会产生相同的随机数序列，因为它需要一个**种子**来初始化其内部状态。
 
@@ -72,11 +67,9 @@ int main() {
 
 为了控制随机数的可重复性或确保其随机性，我们需要管理引擎的种子。给构造函数传递一个固定值（如 `std::mt19937 mt(42);`）会产生确定性的、可重复的序列。为了获得每次运行都不同的随机序列，一个常见的模式是使用 `std::random_device` 来生成一个随机种子。
 
-![](img/d976e093a535fb7ffcacf9d1d23e7ca2_11.png)
 
 以下是结合使用 `std::random_device` 和 `std::mt19937` 的示例：
 
-![](img/d976e093a535fb7ffcacf9d1d23e7ca2_13.png)
 
 ```cpp
 #include <iostream>
@@ -106,7 +99,6 @@ int main() {
 
 以下是使用 `std::uniform_int_distribution` 生成指定范围内均匀分布随机数的示例，模拟掷骰子（生成1到6之间的整数）：
 
-![](img/d976e093a535fb7ffcacf9d1d23e7ca2_15.png)
 
 ```cpp
 #include <iostream>
@@ -132,7 +124,6 @@ int main() {
 
 在这个例子中，`dist(mt)` 会使用 `mt` 引擎生成一个在1到6之间均匀分布的随机整数。
 
-![](img/d976e093a535fb7ffcacf9d1d23e7ca2_17.png)
 
 ![](img/d976e093a535fb7ffcacf9d1d23e7ca2_18.png)
 

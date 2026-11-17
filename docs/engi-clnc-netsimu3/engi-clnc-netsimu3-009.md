@@ -2,15 +2,12 @@
 
 在本教程中，我们将学习如何使用网络模拟器NS3来比较四种移动自组织网络路由协议：AODV、DSDV、OLSR和DSR。我们将从理解源代码开始，逐步完成仿真运行、数据提取和结果可视化。
 
-![](img/d481ec03e01e2fe5b3f9a4893d20b763_1.png)
 
 ## 概述
 
 我们将使用NS3自带的示例程序 `manet-routing-compare.cc` 作为基础。本教程将指导你如何复制、编译并运行该程序，生成仿真数据，并使用Python和Gnuplot等工具分析结果，最终绘制出协议性能对比图。
 
-![](img/d481ec03e01e2fe5b3f9a4893d20b763_3.png)
 
-![](img/d481ec03e01e2fe5b3f9a4893d20b763_5.png)
 
 ## 准备工作
 
@@ -108,7 +105,6 @@ switch (protocol)
 
 ## 运行仿真与数据分析
 
-![](img/d481ec03e01e2fe5b3f9a4893d20b763_7.png)
 
 上一节我们详细分析了源代码。本节中，我们来看看如何编译、运行仿真并处理生成的数据。
 
@@ -126,31 +122,22 @@ switch (protocol)
 
 仿真运行需要一些时间（约数分钟），完成后会在当前目录生成输出文件。
 
-![](img/d481ec03e01e2fe5b3f9a4893d20b763_13.png)
 
-![](img/d481ec03e01e2fe5b3f9a4893d20b763_15.png)
 
 **步骤4：处理FlowMonitor XML文件**
 
 仿真会生成一个 `.flowmon` 文件（例如 `AODV.flowmon`）。我们可以使用Python脚本解析此文件并绘制图表。
 
-![](img/d481ec03e01e2fe5b3f9a4893d20b763_17.png)
 
-![](img/d481ec03e01e2fe5b3f9a4893d20b763_18.png)
 
-![](img/d481ec03e01e2fe5b3f9a4893d20b763_20.png)
 
 以下是处理FlowMonitor数据的Python脚本核心逻辑：
 
 
-![](img/d481ec03e01e2fe5b3f9a4893d20b763_22.png)
-
-![](img/d481ec03e01e2fe5b3f9a4893d20b763_24.png)
 
 
-![](img/d481ec03e01e2fe5b3f9a4893d20b763_26.png)
 
-![](img/d481ec03e01e2fe5b3f9a4893d20b763_28.png)
+
 
 ```python
 import xml.etree.ElementTree as ET
@@ -181,28 +168,22 @@ plt.ylabel(‘Bitrate (bps)’)
 plt.savefig(‘results.png’)
 ```
 
-![](img/d481ec03e01e2fe5b3f9a4893d20b763_30.png)
 
-![](img/d481ec03e01e2fe5b3f9a4893d20b763_32.png)
 
 运行脚本：
 ```bash
 python flow_analysis.py AODV.flowmon
 ```
 
-![](img/d481ec03e01e2fe5b3f9a4893d20b763_34.png)
 
-![](img/d481ec03e01e2fe5b3f9a4893d20b763_36.png)
 
 **步骤5：处理CSV文件并比较协议性能**
 
 仿真生成的CSV文件（如 `AODV.csv`）包含时间、接收速率和接收包数。我们可以使用Gnuplot绘制曲线图。
 
-![](img/d481ec03e01e2fe5b3f9a4893d20b763_38.png)
 
 首先，整理CSV文件，将逗号分隔符替换为空格。然后，创建Gnuplot脚本（`plot.gnuplot`）：
 
-![](img/d481ec03e01e2fe5b3f9a4893d20b763_40.png)
 
 ```gnuplot
 set terminal png
@@ -214,9 +195,7 @@ plot “AODV.csv” using 1:2 with lines title “AODV”, \
      “OLSR.csv” using 1:2 with lines title “OLSR”
 ```
 
-![](img/d481ec03e01e2fe5b3f9a4893d20b763_42.png)
 
-![](img/d481ec03e01e2fe5b3f9a4893d20b763_44.png)
 
 运行Gnuplot脚本：
 ```bash
@@ -225,21 +204,15 @@ gnuplot plot.gnuplot
 
 这将生成一个名为 `comparison.png` 的图片，直观显示AODV和OLSR协议在接收速率上的性能差异。
 
-![](img/d481ec03e01e2fe5b3f9a4893d20b763_46.png)
 
-![](img/d481ec03e01e2fe5b3f9a4893d20b763_48.png)
 
 **步骤6：使用TraceMatric分析详细跟踪文件**
 
-![](img/d481ec03e01e2fe5b3f9a4893d20b763_50.png)
 
-![](img/d481ec03e01e2fe5b3f9a4893d20b763_52.png)
 
-![](img/d481ec03e01e2fe5b3f9a4893d20b763_54.png)
 
 如果启用了ASCII Trace，会生成 `.tr` 文件。可以使用Java工具 **TraceMatric** 来图形化分析这个包含大量底层事件的文件。
 
-![](img/d481ec03e01e2fe5b3f9a4893d20b763_56.png)
 
 1.  确保已安装Java。
 2.  下载TraceMatric的JAR文件及其库。
@@ -251,11 +224,9 @@ gnuplot plot.gnuplot
 
 ![](img/d481ec03e01e2fe5b3f9a4893d20b763_58.png)
 
-![](img/d481ec03e01e2fe5b3f9a4893d20b763_60.png)
 
 ## 总结
 
-![](img/d481ec03e01e2fe5b3f9a4893d20b763_62.png)
 
 ![](img/d481ec03e01e2fe5b3f9a4893d20b763_63.png)
 

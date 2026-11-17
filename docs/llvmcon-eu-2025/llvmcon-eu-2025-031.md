@@ -1,6 +1,5 @@
 # 031：如何将你的神经网络导入上游MLIR方言
 
-![](img/4721fb76f4294da820a699f88670ffb1_0.png)
 
 ![](img/4721fb76f4294da820a699f88670ffb1_0.png)
 
@@ -160,7 +159,6 @@ compiled = jax.jit(forward).lower(jnp.ones((1, 3, 224, 224))).compile()
 
 本节课我们一起学习了如何将四种主流机器学习框架的模型导入到上游MLIR方言。
 
-![](img/4721fb76f4294da820a699f88670ffb1_2.png)
 
 **总结如下：**
 *   **选择正确的导入项目**至关重要：TFLite用TensorFlow项目；ONNX可选Torch-MLIR或ONNX-MLIR；PyTorch用Torch-MLIR；JAX用StableHLO。
@@ -185,6 +183,5 @@ A2: 在ONNX-MLIR和TFLite导入器中，权重是常量操作（constant ops）�
 **Q3: Torch Export 会展开所有NN模块，导致IR非常大。是否有计划支持循环结构？**
 A3: 你可以指定Torch Export使用哪些分解规则。默认的分解集可能过于激进，导致循环被展开。这可能是一个系统性问题，PyTorch团队正在努力改进，例如ExecuTorch也依赖Torch Export并试图解决此类问题。
 
-![](img/4721fb76f4294da820a699f88670ffb1_4.png)
 
 ![](img/4721fb76f4294da820a699f88670ffb1_4.png)

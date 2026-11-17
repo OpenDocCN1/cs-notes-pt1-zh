@@ -1,8 +1,6 @@
 # 019：使用Argo CD Agent与Open Cluster Management实现可扩展的GitOps
 
-![](img/1efb83fffc64d6d91e576f65cdfb4e2d_1.png)
 
-![](img/1efb83fffc64d6d91e576f65cdfb4e2d_3.png)
 
 在本教程中，我们将探讨如何结合使用Argo CD Agent与Open Cluster Management（OCM）来构建高度可扩展、安全且具有弹性的GitOps部署架构。我们将从基础概念开始，逐步深入到具体的集成模式和工作原理。
 
@@ -80,11 +78,9 @@ Open Cluster Management的核心架构基于中心辐射模型。您将集群注
 
 ## 演示概览
 
-![](img/1efb83fffc64d6d91e576f65cdfb4e2d_5.png)
 
 在演示中，我们看到了如何使用OCM快速搭建Argo CD Agent环境：
 
-![](img/1efb83fffc64d6d91e576f65cdfb4e2d_7.png)
 
 1.  **定义插件模板**：在Hub上创建一个AddOn模板，定义了要部署到Spoke的Argo CD组件和Agent。
 2.  **部署插件实例**：通过OCM的`ManagedClusterAddOn`，将模板实例化并部署到指定的Spoke集群。
@@ -93,15 +89,11 @@ Open Cluster Management的核心架构基于中心辐射模型。您将集群注
 
 ## 安全贡献：mTLS 集成
 
-![](img/1efb83fffc64d6d91e576f65cdfb4e2d_9.png)
 
 团队为Argo CD Agent的安全做出了重要贡献。默认的Agent使用用户名/密码认证，这仍然存在凭证管理的挑战。团队增强了其mTLS集成能力：
 
-![](img/1efb83fffc64d6d91e576f65cdfb4e2d_11.png)
 
-![](img/1efb83fffc64d6d91e576f65cdfb4e2d_12.png)
 
-![](img/1efb83fffc64d6d91e576f65cdfb4e2d_13.png)
 
 *   **工作原理**：Agent使用由OCM自动管理和轮换的客户端证书向Principle进行认证。
 *   **优势**：

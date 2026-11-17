@@ -14,29 +14,21 @@
 kubectl port-forward <pod-name> 8000:8000
 ```
 
-![](img/f50acf5f958290f89a4c785ed030077b_1.png)
 
 此命令将本地机器的8000端口转发到指定Pod的8000端口。之后，我们便可通过浏览器访问 `http://127.0.0.1:8000` 或本地IP地址来访问容器服务。此方法支持IPv4和IPv6协议。
 
-![](img/f50acf5f958290f89a4c785ed030077b_3.png)
 
-![](img/f50acf5f958290f89a4c785ed030077b_5.png)
 
 ## 查看容器日志 📄
 
-![](img/f50acf5f958290f89a4c785ed030077b_7.png)
 
-![](img/f50acf5f958290f89a4c785ed030077b_8.png)
 
 我们可以查看容器运行时产生的事件和日志，这对于调试和监控非常有用。
 
-![](img/f50acf5f958290f89a4c785ed030077b_10.png)
 
-![](img/f50acf5f958290f89a4c785ed030077b_12.png)
 
 以下是查看指定Pod日志的命令：
 
-![](img/f50acf5f958290f89a4c785ed030077b_14.png)
 
 ```bash
 kubectl logs <pod-name>
@@ -50,7 +42,6 @@ kubectl logs -f <pod-name>
 
 需要注意的是，在生产环境中，当存在多个Pod和用户时，通常需要集成专业的日志管理系统（如Elasticsearch）来集中收集、分析和告警。
 
-![](img/f50acf5f958290f89a4c785ed030077b_16.png)
 
 ## 在容器内执行命令 ⚙️
 
@@ -92,9 +83,7 @@ kubectl cp /root/test.txt my-pod:/tmp/
 kubectl cp <pod-name>:/容器内路径/文件名 /本地目标路径/
 ```
 
-![](img/f50acf5f958290f89a4c785ed030077b_18.png)
 
-![](img/f50acf5f958290f89a4c785ed030077b_19.png)
 
 例如，将Pod中 `/tmp/test.txt` 复制到本地当前目录：
 
@@ -104,7 +93,6 @@ kubectl cp my-pod:/tmp/test.txt ./test.txt
 
 通过 `cat` 等命令可以验证文件内容是否复制成功。
 
-![](img/f50acf5f958290f89a4c785ed030077b_21.png)
 
 ![](img/f50acf5f958290f89a4c785ed030077b_22.png)
 

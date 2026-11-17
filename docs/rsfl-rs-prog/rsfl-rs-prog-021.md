@@ -14,9 +14,7 @@ let mut number = 5;
 
 我们希望当 `number` 大于 `0` 时，循环继续执行。
 
-![](img/1e8b458dcfdacb247325344fc5f8d10b_1.png)
 
-![](img/1e8b458dcfdacb247325344fc5f8d10b_2.png)
 
 ```rust
 while number > 0 {
@@ -43,17 +41,12 @@ println!("循环结束");
 
 接下来，我们通过另一个例子来介绍 `continue` 关键字。`continue` 用于跳过当前迭代中剩余的代码，直接开始下一次循环迭代。
 
-![](img/1e8b458dcfdacb247325344fc5f8d10b_4.png)
 
-![](img/1e8b458dcfdacb247325344fc5f8d10b_5.png)
 
 我们创建一个新的可变变量 `n`，初始值设为 10。
 
-![](img/1e8b458dcfdacb247325344fc5f8d10b_6.png)
 
-![](img/1e8b458dcfdacb247325344fc5f8d10b_7.png)
 
-![](img/1e8b458dcfdacb247325344fc5f8d10b_8.png)
 
 ```rust
 let mut n = 10;
@@ -93,9 +86,7 @@ while n > 0 {
 }
 ```
 
-![](img/1e8b458dcfdacb247325344fc5f8d10b_10.png)
 
-![](img/1e8b458dcfdacb247325344fc5f8d10b_11.png)
 
 在这段代码中：
 *   `n % 2 == 0` 是一个条件表达式，使用取模运算符 `%` 来计算 `n` 除以 2 的余数。

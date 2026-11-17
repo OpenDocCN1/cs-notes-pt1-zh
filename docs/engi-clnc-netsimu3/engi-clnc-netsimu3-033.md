@@ -17,7 +17,6 @@
 sudo apt update
 ```
 
-![](img/3aaf2ad7a86c9791ed4695848a8f808e_4.png)
 
 更新完成后，我们将安装ns-3.34运行所需的一系列依赖包。以下是需要执行的命令，它会下载并安装大约152MB的软件包：
 ```bash
@@ -41,7 +40,6 @@ sudo apt install -y g++ python3 python3-dev pkg-config sqlite3 cmake python3-set
 
 访问ns-3的官方网站（https://www.nsnam.org/），找到下载页面，选择最新的ns-3.34版本进行下载。你也可以直接使用wget命令下载。下载完成后，你通常会得到一个名为 `ns-allinone-3.34.tar.bz2` 的压缩包。
 
-![](img/3aaf2ad7a86c9791ed4695848a8f808e_14.png)
 
 将下载的压缩包移动到你的主目录（`/home/你的用户名/`）下，然后解压：
 ```bash
@@ -54,7 +52,6 @@ mv ns-allinone-3.34 ns3
 
 ---
 
-![](img/3aaf2ad7a86c9791ed4695848a8f808e_16.png)
 
 ## 配置与编译ns-3.34
 现在我们已经有了源代码，接下来进入最关键的配置和编译阶段。这个过程会将源代码构建成可执行的程序。
@@ -110,14 +107,12 @@ cd ../../../
 
 如果安装成功，程序将开始运行。你会在终端看到模拟过程的输出信息，包括数据包的发送、接收和丢包统计。程序运行一段时间后，会输出诸如**包投递率（PDR）**和**有效吞吐量（Goodput）**等性能指标。这证明ns-3.34已经成功安装并可以正常工作。
 
-![](img/3aaf2ad7a86c9791ed4695848a8f808e_26.png)
 
 你也可以将输出重定向到一个文件以便查看：
 ```bash
 ./waf --run scratch/vanet-routing-compare > output.txt 2>&1
 ```
 
-![](img/3aaf2ad7a86c9791ed4695848a8f808e_28.png)
 
 ---
 

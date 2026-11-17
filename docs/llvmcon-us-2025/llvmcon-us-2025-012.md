@@ -1,6 +1,5 @@
 # 012：关于AArch64上BOLT的教程及其与PGO的竞争或互补关系
 
-![](img/ec46fba408a5595c2ce7f3f0e279e2ae_0.png)
 
 ![](img/ec46fba408a5595c2ce7f3f0e279e2ae_0.png)
 
@@ -151,7 +150,6 @@ Clang本身使用启发式方法，结合PGO则使用性能剖析数据。加上
 
 ### 性能剖析方法对比
 
-![](img/ec46fba408a5595c2ce7f3f0e279e2ae_2.png)
 
 *   **PMU**：提供单个指令指针。
 *   **SP**：提供一对分支地址，无法像BRB那样展开。

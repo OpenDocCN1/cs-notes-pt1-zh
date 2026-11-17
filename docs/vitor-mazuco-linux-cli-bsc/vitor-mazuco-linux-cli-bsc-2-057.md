@@ -76,7 +76,6 @@ DELIMITER ;
 
 以下是插入测试数据的语句：
 
-![](img/9d2f23f6f851f80f18074b2c9fa7703e_3.png)
 
 ```sql
 INSERT INTO T (percentage) VALUES (-2), (30), (120);

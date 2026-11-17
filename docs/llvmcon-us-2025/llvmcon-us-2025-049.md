@@ -1,6 +1,5 @@
 # 049：新型编译器优化的自主发现
 
-![](img/ed1f6b92900c6c7aded59e0b0fa7a112_0.png)
 
 ![](img/ed1f6b92900c6c7aded59e0b0fa7a112_0.png)
 

@@ -14,7 +14,6 @@
 
 现在，你需要下载GLFW的源代码包。
 
-![](img/d1a25afe948bb10678dee6e80c91cc19_1.png)
 
 最后，你需要下载GLAD。请确保选择C/C++版本3.3核心（Core），忽略其他选项，然后点击生成（Generate）按钮。
 
@@ -36,7 +35,6 @@
 
 这里将是我们稍后导入所有库文件的位置。
 
-![](img/d1a25afe948bb10678dee6e80c91cc19_3.png)
 
 ## 使用CMake配置GLFW
 
@@ -48,25 +46,20 @@
 
 点击“配置”（Configure），在确保你的设置与我相同后，点击“完成”（Finish）。
 
-![](img/d1a25afe948bb10678dee6e80c91cc19_5.png)
 
 再次确认你的配置与我相同，然后再次点击“配置”（Configure）。接着点击“生成”（Generate），一切完成后，退出CMake。
 
-![](img/d1a25afe948bb10678dee6e80c91cc19_5.png)
 
 ## 构建GLFW库
 
-![](img/d1a25afe948bb10678dee6e80c91cc19_7.png)
 
 现在我们需要构建GLFW。打开你解压的文件夹，进入 `build` 文件夹，然后用Visual Studio打开 `GLFW.sln` 文件。
 
-![](img/d1a25afe948bb10678dee6e80c91cc19_7.png)
 
 在解决方案资源管理器中右键点击解决方案，选择“生成解决方案”（Build Solution）。如果出现任何错误，很可能意味着你在构建过程中出现了问题，因此我们必须使用CMake重新生成GLFW，并再次执行此步骤。
 
 一旦构建成功完成，退出Visual Studio。
 
-![](img/d1a25afe948bb10678dee6e80c91cc19_9.png)
 
 ![](img/d1a25afe948bb10678dee6e80c91cc19_9.png)
 
@@ -82,7 +75,6 @@
 
 然后返回上一级目录，打开 `src` 文件夹，将 `glad.c` 文件解压到你项目的主文件夹中。
 
-![](img/d1a25afe948bb10678dee6e80c91cc19_11.png)
 
 现在我们将进行配置。
 

@@ -30,9 +30,7 @@ rs.reconfig({
 
 ## 配置永不成为主节点的成员
 
-![](img/7722df200f913df4cd8487f44ae9fce6_1.png)
 
-![](img/7722df200f913df4cd8487f44ae9fce6_3.png)
 
 在某些场景下，你可能希望某个节点仅作为数据副本，永远不参与主节点选举。这可以通过将其优先级设置为 `0` 来实现。
 
@@ -41,9 +39,7 @@ rs.reconfig({
 2.  使用 `rs.reconfig()` 命令，将目标成员的 `priority` 字段设置为 `0`。
 3.  提交配置更改。
 
-![](img/7722df200f913df4cd8487f44ae9fce6_5.png)
 
-![](img/7722df200f913df4cd8487f44ae9fce6_7.png)
 
 例如，将 `mongo1` (ID0) 和 `mongo2` (ID1) 的优先级都设为 `0`，只留 `mongo3` (ID2) 有资格成为主节点。这样，即使 `mongo3` 宕机，`mongo1` 和 `mongo2` 也不会自动提升为主节点，从而实现了对特定节点角色的严格控制。
 
@@ -70,9 +66,7 @@ rs.reconfig({
 
 ## 配置延迟复制成员
 
-![](img/7722df200f913df4cd8487f44ae9fce6_9.png)
 
-![](img/7722df200f913df4cd8487f44ae9fce6_11.png)
 
 延迟复制成员是数据保护的重要策略。它会在一定时间延迟后才从主节点同步数据操作，这为防止人为误操作（如误删数据库）提供了“缓冲期”。
 
@@ -81,15 +75,12 @@ rs.reconfig({
 2.  通常应配置为隐藏成员。
 3.  设置 `slaveDelay` 字段，单位为秒。
 
-![](img/7722df200f913df4cd8487f44ae9fce6_13.png)
 
 例如，要配置一个延迟2小时（7200秒）的成员，配置如下：
 
 ![](img/7722df200f913df4cd8487f44ae9fce6_15.png)
 
-![](img/7722df200f913df4cd8487f44ae9fce6_17.png)
 
-![](img/7722df200f913df4cd8487f44ae9fce6_19.png)
 
 ```javascript
 {

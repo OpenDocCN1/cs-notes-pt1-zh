@@ -22,7 +22,6 @@
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_20.png)
 
-![](img/d4175b7c7da94dffbf39910f5457f6a6_22.png)
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_24.png)
 
@@ -48,15 +47,12 @@
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_42.png)
 
-![](img/d4175b7c7da94dffbf39910f5457f6a6_44.png)
 
-![](img/d4175b7c7da94dffbf39910f5457f6a6_46.png)
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_48.png)
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_50.png)
 
-![](img/d4175b7c7da94dffbf39910f5457f6a6_52.png)
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_54.png)
 
@@ -66,17 +62,13 @@
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_60.png)
 
-![](img/d4175b7c7da94dffbf39910f5457f6a6_61.png)
 
-![](img/d4175b7c7da94dffbf39910f5457f6a6_63.png)
 
-![](img/d4175b7c7da94dffbf39910f5457f6a6_65.png)
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_67.png)
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_69.png)
 
-![](img/d4175b7c7da94dffbf39910f5457f6a6_71.png)
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_73.png)
 
@@ -112,21 +104,17 @@
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_99.png)
 
-![](img/d4175b7c7da94dffbf39910f5457f6a6_101.png)
 
-![](img/d4175b7c7da94dffbf39910f5457f6a6_103.png)
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_105.png)
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_107.png)
 
-![](img/d4175b7c7da94dffbf39910f5457f6a6_108.png)
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_110.png)
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_112.png)
 
-![](img/d4175b7c7da94dffbf39910f5457f6a6_114.png)
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_116.png)
 
@@ -134,9 +122,7 @@
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_120.png)
 
-![](img/d4175b7c7da94dffbf39910f5457f6a6_122.png)
 
-![](img/d4175b7c7da94dffbf39910f5457f6a6_124.png)
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_126.png)
 
@@ -158,7 +144,6 @@
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_140.png)
 
-![](img/d4175b7c7da94dffbf39910f5457f6a6_142.png)
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_144.png)
 
@@ -190,7 +175,6 @@
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_170.png)
 
-![](img/d4175b7c7da94dffbf39910f5457f6a6_172.png)
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_174.png)
 
@@ -200,7 +184,6 @@
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_180.png)
 
-![](img/d4175b7c7da94dffbf39910f5457f6a6_182.png)
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_184.png)
 
@@ -210,7 +193,6 @@
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_190.png)
 
-![](img/d4175b7c7da94dffbf39910f5457f6a6_192.png)
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_193.png)
 
@@ -257,9 +239,7 @@
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_231.png)
 
-![](img/d4175b7c7da94dffbf39910f5457f6a6_233.png)
 
-![](img/d4175b7c7da94dffbf39910f5457f6a6_235.png)
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_237.png)
 
@@ -271,7 +251,6 @@
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_245.png)
 
-![](img/d4175b7c7da94dffbf39910f5457f6a6_247.png)
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_249.png)
 
@@ -334,7 +313,6 @@ old_mouse_y = new_mouse_y;
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_288.png)
 
-![](img/d4175b7c7da94dffbf39910f5457f6a6_290.png)
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_292.png)
 
@@ -342,9 +320,7 @@ old_mouse_y = new_mouse_y;
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_296.png)
 
-![](img/d4175b7c7da94dffbf39910f5457f6a6_298.png)
 
-![](img/d4175b7c7da94dffbf39910f5457f6a6_300.png)
 
 ## 帧率独立性与动画修复 ⚙️
 
@@ -352,17 +328,12 @@ old_mouse_y = new_mouse_y;
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_304.png)
 
-![](img/d4175b7c7da94dffbf39910f5457f6a6_306.png)
 
-![](img/d4175b7c7da94dffbf39910f5457f6a6_308.png)
 
-![](img/d4175b7c7da94dffbf39910f5457f6a6_310.png)
 
-![](img/d4175b7c7da94dffbf39910f5457f6a6_312.png)
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_314.png)
 
-![](img/d4175b7c7da94dffbf39910f5457f6a6_316.png)
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_318.png)
 
@@ -378,9 +349,7 @@ old_mouse_y = new_mouse_y;
 
 接下来，我们需要确保玩家的视觉反馈（如拉伸动画）和音效（如移动音高）在不同帧率下表现一致。之前，这些效果依赖于每帧的时间增量（delta time），但在低帧率下会表现异常。
 
-![](img/d4175b7c7da94dffbf39910f5457f6a6_330.png)
 
-![](img/d4175b7c7da94dffbf39910f5457f6a6_332.png)
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_334.png)
 
@@ -388,17 +357,11 @@ old_mouse_y = new_mouse_y;
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_338.png)
 
-![](img/d4175b7c7da94dffbf39910f5457f6a6_340.png)
 
-![](img/d4175b7c7da94dffbf39910f5457f6a6_342.png)
 
-![](img/d4175b7c7da94dffbf39910f5457f6a6_344.png)
 
-![](img/d4175b7c7da94dffbf39910f5457f6a6_346.png)
 
-![](img/d4175b7c7da94dffbf39910f5457f6a6_348.png)
 
-![](img/d4175b7c7da94dffbf39910f5457f6a6_350.png)
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_352.png)
 
@@ -422,9 +385,7 @@ old_mouse_y = new_mouse_y;
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_366.png)
 
-![](img/d4175b7c7da94dffbf39910f5457f6a6_368.png)
 
-![](img/d4175b7c7da94dffbf39910f5457f6a6_370.png)
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_372.png)
 
@@ -458,7 +419,6 @@ old_mouse_y = new_mouse_y;
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_394.png)
 
-![](img/d4175b7c7da94dffbf39910f5457f6a6_396.png)
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_398.png)
 
@@ -470,13 +430,9 @@ old_mouse_y = new_mouse_y;
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_403.png)
 
-![](img/d4175b7c7da94dffbf39910f5457f6a6_405.png)
 
-![](img/d4175b7c7da94dffbf39910f5457f6a6_407.png)
 
-![](img/d4175b7c7da94dffbf39910f5457f6a6_409.png)
 
-![](img/d4175b7c7da94dffbf39910f5457f6a6_411.png)
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_412.png)
 
@@ -488,7 +444,6 @@ old_mouse_y = new_mouse_y;
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_418.png)
 
-![](img/d4175b7c7da94dffbf39910f5457f6a6_419.png)
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_420.png)
 
@@ -496,9 +451,7 @@ old_mouse_y = new_mouse_y;
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_424.png)
 
-![](img/d4175b7c7da94dffbf39910f5457f6a6_426.png)
 
-![](img/d4175b7c7da94dffbf39910f5457f6a6_427.png)
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_428.png)
 
@@ -508,13 +461,11 @@ old_mouse_y = new_mouse_y;
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_432.png)
 
-![](img/d4175b7c7da94dffbf39910f5457f6a6_434.png)
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_435.png)
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_437.png)
 
-![](img/d4175b7c7da94dffbf39910f5457f6a6_439.png)
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_441.png)
 
@@ -537,7 +488,6 @@ old_mouse_y = new_mouse_y;
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_452.png)
 
-![](img/d4175b7c7da94dffbf39910f5457f6a6_454.png)
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_455.png)
 
@@ -557,15 +507,12 @@ old_mouse_y = new_mouse_y;
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_471.png)
 
-![](img/d4175b7c7da94dffbf39910f5457f6a6_473.png)
 
-![](img/d4175b7c7da94dffbf39910f5457f6a6_475.png)
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_477.png)
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_479.png)
 
-![](img/d4175b7c7da94dffbf39910f5457f6a6_480.png)
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_482.png)
 
@@ -578,7 +525,6 @@ old_mouse_y = new_mouse_y;
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_487.png)
 
-![](img/d4175b7c7da94dffbf39910f5457f6a6_489.png)
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_490.png)
 
@@ -640,9 +586,7 @@ old_mouse_y = new_mouse_y;
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_542.png)
 
-![](img/d4175b7c7da94dffbf39910f5457f6a6_543.png)
 
-![](img/d4175b7c7da94dffbf39910f5457f6a6_545.png)
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_547.png)
 
@@ -786,9 +730,7 @@ visual_p += visual_dp * dt;
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_657.png)
 
-![](img/d4175b7c7da94dffbf39910f5457f6a6_659.png)
 
-![](img/d4175b7c7da94dffbf39910f5457f6a6_661.png)
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_663.png)
 
@@ -830,7 +772,6 @@ visual_p += visual_dp * dt;
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_695.png)
 
-![](img/d4175b7c7da94dffbf39910f5457f6a6_697.png)
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_698.png)
 
@@ -842,9 +783,7 @@ visual_p += visual_dp * dt;
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_704.png)
 
-![](img/d4175b7c7da94dffbf39910f5457f6a6_706.png)
 
-![](img/d4175b7c7da94dffbf39910f5457f6a6_707.png)
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_709.png)
 
@@ -854,7 +793,6 @@ visual_p += visual_dp * dt;
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_715.png)
 
-![](img/d4175b7c7da94dffbf39910f5457f6a6_717.png)
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_718.png)
 
@@ -870,7 +808,6 @@ visual_p += visual_dp * dt;
 
 以下是实现帧率锁定的逻辑：
 
-![](img/d4175b7c7da94dffbf39910f5457f6a6_730.png)
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_732.png)
 
@@ -896,9 +833,7 @@ visual_p += visual_dp * dt;
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_747.png)
 
-![](img/d4175b7c7da94dffbf39910f5457f6a6_749.png)
 
-![](img/d4175b7c7da94dffbf39910f5457f6a6_751.png)
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_753.png)
 
@@ -912,9 +847,7 @@ visual_p += visual_dp * dt;
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_763.png)
 
-![](img/d4175b7c7da94dffbf39910f5457f6a6_765.png)
 
-![](img/d4175b7c7da94dffbf39910f5457f6a6_767.png)
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_769.png)
 
@@ -939,9 +872,7 @@ visual_p += visual_dp * dt;
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_788.png)
 
-![](img/d4175b7c7da94dffbf39910f5457f6a6_790.png)
 
-![](img/d4175b7c7da94dffbf39910f5457f6a6_792.png)
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_794.png)
 
@@ -1004,7 +935,6 @@ dt = seconds_elapsed_for_frame; // 用于本帧所有基于时间的计算
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_831.png)
 
-![](img/d4175b7c7da94dffbf39910f5457f6a6_832.png)
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_834.png)
 
@@ -1054,7 +984,6 @@ dt = seconds_elapsed_for_frame; // 用于本帧所有基于时间的计算
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_876.png)
 
-![](img/d4175b7c7da94dffbf39910f5457f6a6_878.png)
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_880.png)
 
@@ -1108,7 +1037,6 @@ dt = seconds_elapsed_for_frame; // 用于本帧所有基于时间的计算
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_924.png)
 
-![](img/d4175b7c7da94dffbf39910f5457f6a6_926.png)
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_928.png)
 
@@ -1136,13 +1064,11 @@ dt = seconds_elapsed_for_frame; // 用于本帧所有基于时间的计算
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_950.png)
 
-![](img/d4175b7c7da94dffbf39910f5457f6a6_952.png)
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_954.png)
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_956.png)
 
-![](img/d4175b7c7da94dffbf39910f5457f6a6_958.png)
 
 能量块现在会呈现脉动动画，在生成时由小变大，以吸引玩家注意。
 
@@ -1154,7 +1080,6 @@ dt = seconds_elapsed_for_frame; // 用于本帧所有基于时间的计算
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_966.png)
 
-![](img/d4175b7c7da94dffbf39910f5457f6a6_967.png)
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_969.png)
 
@@ -1194,7 +1119,6 @@ power_block->half_size_y = base_half_size * scale;
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_986.png)
 
-![](img/d4175b7c7da94dffbf39910f5457f6a6_987.png)
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_989.png)
 
@@ -1214,7 +1138,6 @@ power_block->half_size_y = base_half_size * scale;
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_1003.png)
 
-![](img/d4175b7c7da94dffbf39910f5457f6a6_1004.png)
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_1005.png)
 
@@ -1230,7 +1153,6 @@ power_block->half_size_y = base_half_size * scale;
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_1017.png)
 
-![](img/d4175b7c7da94dffbf39910f5457f6a6_1019.png)
 
 根据社区建议，我们为下落的能量块添加了音效，并且音调会随着其下落而升高，营造出紧迫感。
 
@@ -1273,7 +1195,6 @@ float volume = 0.15f / (float)active_power_block_count;
 sound_set_target_volume(power_block->sound_id, volume);
 ```
 
-![](img/d4175b7c7da94dffbf39910f5457f6a6_1045.png)
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_1047.png)
 
@@ -1301,7 +1222,6 @@ sound_set_target_volume(power_block->sound_id, volume);
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_1068.png)
 
-![](img/d4175b7c7da94dffbf39910f5457f6a6_1070.png)
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_1072.png)
 
@@ -1342,9 +1262,7 @@ sound_set_target_volume(power_block->sound_id, volume);
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_1100.png)
 
-![](img/d4175b7c7da94dffbf39910f5457f6a6_1102.png)
 
-![](img/d4175b7c7da94dffbf39910f5457f6a6_1103.png)
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_1105.png)
 
@@ -1358,9 +1276,7 @@ sound_set_target_volume(power_block->sound_id, volume);
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_1113.png)
 
-![](img/d4175b7c7da94dffbf39910f5457f6a6_1115.png)
 
-![](img/d4175b7c7da94dffbf39910f5457f6a6_1117.png)
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_1119.png)
 
@@ -1400,7 +1316,6 @@ sound_set_target_volume(power_block->sound_id, volume);
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_1148.png)
 
-![](img/d4175b7c7da94dffbf39910f5457f6a6_1150.png)
 
 ![](img/d4175b7c7da94dffbf39910f5457f6a6_1152.png)
 

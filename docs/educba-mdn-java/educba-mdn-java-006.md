@@ -4,38 +4,26 @@
 
 ## try-with-resources 增强
 
-![](img/abbc069e6a32dad9222cddc0648fbeea_1.png)
 
-![](img/abbc069e6a32dad9222cddc0648fbeea_2.png)
 
-![](img/abbc069e6a32dad9222cddc0648fbeea_3.png)
 
 上一节我们介绍了Java 7中引入的`try-with-resources`语句。本节中我们来看看Java 9对其进行的重大增强。
 
-![](img/abbc069e6a32dad9222cddc0648fbeea_5.png)
 
 `try-with-resources`语句的主要优势在于它能自动关闭所有资源（如文件、数据库连接、网络连接等），无需显式调用`close()`方法。这可以防止内存泄漏，并减少不必要的代码行，使代码更具可读性。
 
 首先，我们回顾一下Java 7中的用法，然后看看Java 9如何解决了Java 7中存在的一些问题。
 
-![](img/abbc069e6a32dad9222cddc0648fbeea_7.png)
 
 以下是Java 7中使用`try-with-resources`的示例代码：
 
-![](img/abbc069e6a32dad9222cddc0648fbeea_9.png)
-
-![](img/abbc069e6a32dad9222cddc0648fbeea_10.png)
 
 
-![](img/abbc069e6a32dad9222cddc0648fbeea_11.png)
 
-![](img/abbc069e6a32dad9222cddc0648fbeea_12.png)
 
-![](img/abbc069e6a32dad9222cddc0648fbeea_13.png)
 
-![](img/abbc069e6a32dad9222cddc0648fbeea_15.png)
 
-![](img/abbc069e6a32dad9222cddc0648fbeea_17.png)
+
 
 ```java
 import java.io.FileNotFoundException;
@@ -54,18 +42,14 @@ public class TryWithResourcesJava7 {
 }
 ```
 
-![](img/abbc069e6a32dad9222cddc0648fbeea_19.png)
 
 Java 7中的`try-with-resources`语句存在一个问题：它不允许在语句或块的作用域之外声明资源。这导致在某些情况下需要编写冗余的代码。
 
 以下是Java 7中一个会引发编译错误的示例：
 
-![](img/abbc069e6a32dad9222cddc0648fbeea_21.png)
-
-![](img/abbc069e6a32dad9222cddc0648fbeea_23.png)
 
 
-![](img/abbc069e6a32dad9222cddc0648fbeea_25.png)
+
 
 ```java
 import java.io.FileNotFoundException;
@@ -86,17 +70,13 @@ public class ProblemExample {
 }
 ```
 
-![](img/abbc069e6a32dad9222cddc0648fbeea_27.png)
 
-![](img/abbc069e6a32dad9222cddc0648fbeea_29.png)
 
 为了解决上述错误，在Java 9之前，我们需要一种变通方法，即在`try-with-resources`中再次引用已存在的资源对象，这显得非常繁琐。
 
-![](img/abbc069e6a32dad9222cddc0648fbeea_31.png)
 
 Java 9增强的`try-with-resources`允许我们使用在外部声明的资源，只要该资源是`final`或实际上是`final`的（即未被重新赋值）。这使得代码更加简洁。
 
-![](img/abbc069e6a32dad9222cddc0648fbeea_33.png)
 
 以下是Java 9中的正确写法：
 
@@ -121,35 +101,25 @@ public class TryWithResourcesJava9 {
 }
 ```
 
-![](img/abbc069e6a32dad9222cddc0648fbeea_35.png)
 
-![](img/abbc069e6a32dad9222cddc0648fbeea_36.png)
 
 通过这个增强，我们避免了创建冗余对象，代码逻辑更加清晰。
 
 ## 菱形操作符与匿名内部类
 
-![](img/abbc069e6a32dad9222cddc0648fbeea_38.png)
 
-![](img/abbc069e6a32dad9222cddc0648fbeea_39.png)
 
-![](img/abbc069e6a32dad9222cddc0648fbeea_40.png)
 
 上一节我们介绍了资源管理的改进，本节中我们来看看Java 9对菱形操作符的扩展。
 
-![](img/abbc069e6a32dad9222cddc0648fbeea_42.png)
 
-![](img/abbc069e6a32dad9222cddc0648fbeea_44.png)
 
 菱形操作符（`<>`）在Java 7中引入，其目的是通过省略表达式右侧的泛型类型来避免冗余代码。然而，在Java 7中，菱形操作符不能与匿名内部类一起使用。
 
-![](img/abbc069e6a32dad9222cddc0648fbeea_46.png)
 
-![](img/abbc069e6a32dad9222cddc0648fbeea_48.png)
 
 首先，我们看一个Java 7中菱形操作符在普通类中正常工作的例子：
 
-![](img/abbc069e6a32dad9222cddc0648fbeea_50.png)
 
 ```java
 // 抽象类
@@ -174,7 +144,6 @@ public class DiamondOperatorJava7 {
 
 但在Java 7中，如果将菱形操作符用于匿名内部类，则会导致编译错误。
 
-![](img/abbc069e6a32dad9222cddc0648fbeea_52.png)
 
 以下是Java 7中会出错的示例：
 
@@ -200,7 +169,6 @@ public class DiamondOperatorError {
 
 Java 9改进了菱形操作符的使用，允许我们将其与匿名内部类一起使用。上面的代码在Java 9及更高版本中可以正常编译和运行。
 
-![](img/abbc069e6a32dad9222cddc0648fbeea_54.png)
 
 ## @SafeVarargs 注解增强
 
@@ -208,20 +176,15 @@ Java 9改进了菱形操作符的使用，允许我们将其与匿名内部类�
 
 `@SafeVarargs`注解用于抑制由包含可变参数（varargs）的方法引发的“unsafe operation”警告。在Java 9之前，此注解只能用于`final`、`static`方法或构造器，因为这些方法不能被重写（重写的方法仍可能对其可变参数执行不安全的操作）。
 
-![](img/abbc069e6a32dad9222cddc0648fbeea_56.png)
 
-![](img/abbc069e6a32dad9222cddc0648fbeea_57.png)
 
-![](img/abbc069e6a32dad9222cddc0648fbeea_58.png)
 
 Java 9扩展了`@SafeVarargs`注解的使用范围，现在它也可以用于`private`方法，因为私有方法同样不能被重写。
 
-![](img/abbc069e6a32dad9222cddc0648fbeea_60.png)
 
 以下是使用`@SafeVarargs`注解的示例：
 
 
-![](img/abbc069e6a32dad9222cddc0648fbeea_62.png)
 
 ```java
 import java.util.ArrayList;
@@ -255,29 +218,21 @@ public class SafeVarargsExample {
 
 ## Stream API 增强
 
-![](img/abbc069e6a32dad9222cddc0648fbeea_64.png)
 
-![](img/abbc069e6a32dad9222cddc0648fbeea_65.png)
 
-![](img/abbc069e6a32dad9222cddc0648fbeea_67.png)
 
 最后，我们探讨Java 9中Stream API的几项重要增强。Java 8引入了Stream API，而Java 9为其添加了四个新方法：`dropWhile`、`takeWhile`、`iterate`和`ofNullable`。由于`Stream`是一个接口，这些新增的方法都是`default`或`static`方法。
 
 ### dropWhile 方法
 
-![](img/abbc069e6a32dad9222cddc0648fbeea_69.png)
 
-![](img/abbc069e6a32dad9222cddc0648fbeea_71.png)
 
 `dropWhile`方法会丢弃流中所有元素，直到给定的谓词（条件）返回`false`为止。
 
-![](img/abbc069e6a32dad9222cddc0648fbeea_73.png)
 
-![](img/abbc069e6a32dad9222cddc0648fbeea_75.png)
 
 以下是`dropWhile`方法的示例：
 
-![](img/abbc069e6a32dad9222cddc0648fbeea_77.png)
 
 ```java
 import java.util.stream.Stream;
@@ -297,9 +252,7 @@ public class StreamDropWhileExample {
 
 `takeWhile`方法与`dropWhile`相反，它会获取流中的元素，直到给定的谓词返回`false`为止。
 
-![](img/abbc069e6a32dad9222cddc0648fbeea_79.png)
 
-![](img/abbc069e6a32dad9222cddc0648fbeea_80.png)
 
 以下是`takeWhile`方法的示例：
 
@@ -319,7 +272,6 @@ public class StreamTakeWhileExample {
 
 ### iterate 方法
 
-![](img/abbc069e6a32dad9222cddc0648fbeea_82.png)
 
 Java 9为`Stream.iterate`方法添加了一个新的重载版本，它接受三个参数：初始值、谓词（迭代继续的条件）和更新函数（用于生成下一个值）。
 
@@ -340,15 +292,11 @@ public class StreamIterateExample {
 
 ### ofNullable 方法
 
-![](img/abbc069e6a32dad9222cddc0648fbeea_84.png)
 
-![](img/abbc069e6a32dad9222cddc0648fbeea_86.png)
 
 `ofNullable`方法用于避免`NullPointerException`。如果传入的元素为`null`，则返回一个空的流；如果非空，则返回一个包含该单个元素的顺序流。
 
-![](img/abbc069e6a32dad9222cddc0648fbeea_88.png)
 
-![](img/abbc069e6a32dad9222cddc0648fbeea_90.png)
 
 以下是`ofNullable`方法的示例：
 
@@ -369,7 +317,6 @@ public class StreamOfNullableExample {
 }
 ```
 
-![](img/abbc069e6a32dad9222cddc0648fbeea_92.png)
 
 ## 总结
 

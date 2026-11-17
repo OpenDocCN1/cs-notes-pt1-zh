@@ -18,9 +18,7 @@
 *   **地址**：文本输入框。
 *   **邮箱与密码**：用于注册和登录的凭证字段。
 
-![](img/4c1b61eb46d288bc4dfc45a1987bac44_1.png)
 
-![](img/4c1b61eb46d288bc4dfc45a1987bac44_3.png)
 
 这个HTML文件已经完成，应该没有问题。现在保存文件。
 
@@ -30,19 +28,14 @@
 
 文件已保存，接下来我们运行它。但请注意，Web服务器可能尚未感知到`index.html`文件的变更。
 
-![](img/4c1b61eb46d288bc4dfc45a1987bac44_5.png)
 
 最初刷新页面时，可能看不到变化。这是因为我们需要触发服务器重新加载配置。由于我们在Apache配置中设置了`start`和`enable`参数，服务器会定期检查更新。一旦`index.html`文件发生变更，服务器将获取最新版本。
 
-![](img/4c1b61eb46d288bc4dfc45a1987bac44_7.png)
 
-![](img/4c1b61eb46d288bc4dfc45a1987bac44_8.png)
 
-![](img/4c1b61eb46d288bc4dfc45a1987bac44_10.png)
 
 再次刷新页面后，注册表单成功显示。
 
-![](img/4c1b61eb46d288bc4dfc45a1987bac44_12.png)
 
 ---
 
@@ -75,7 +68,6 @@ systemctl start httpd
 4.  提供电话号码和地址。
 5.  设置邮箱和密码以接收学院提供的学习资料。
 
-![](img/4c1b61eb46d288bc4dfc45a1987bac44_14.png)
 
 点击提交按钮后，流程将转向支付页面。完成课程费用支付后，学生即可使用凭证登录，访问学院提供的所有学习内容。
 
@@ -83,9 +75,7 @@ systemctl start httpd
 
 ## Chef自动化架构的优势
 
-![](img/4c1b61eb46d288bc4dfc45a1987bac44_16.png)
 
-![](img/4c1b61eb46d288bc4dfc45a1987bac44_17.png)
 
 通过这个案例，我们借助Chef自动化完成了整个设置。我们所做的只是：
 1.  创建Web服务器。
@@ -94,9 +84,7 @@ systemctl start httpd
 
 Chef的强大之处在于管理多节点部署。与Ansible或Puppet相比，Chef拥有一个中心化服务器，这对于管理大量机器非常高效。
 
-![](img/4c1b61eb46d288bc4dfc45a1987bac44_19.png)
 
-![](img/4c1b61eb46d288bc4dfc45a1987bac44_20.png)
 
 假设组织中有上百甚至上千台节点需要部署此应用。你无需登录每台机器手动操作。Chef的工作流程如下：
 1.  在**工作站**上创建所有配方和文件。
@@ -109,7 +97,6 @@ Chef的强大之处在于管理多节点部署。与Ansible或Puppet相比，Che
 
 ---
 
-![](img/4c1b61eb46d288bc4dfc45a1987bac44_22.png)
 
 ## 本节课总结
 

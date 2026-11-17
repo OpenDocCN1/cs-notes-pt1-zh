@@ -52,9 +52,7 @@ Azure认知服务是一系列由Azure提供的服务集合。借助这些服务�
 
 本课程将逐一深入介绍这些服务及其不同的应用场景。
 
-![](img/bd3e74ca4c0ba120c27a173e566ac5ba_1.png)
 
-![](img/bd3e74ca4c0ba120c27a173e566ac5ba_2.png)
 
 ## 创建Azure免费账户
 

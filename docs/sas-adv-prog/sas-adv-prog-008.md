@@ -12,9 +12,7 @@
 *   **OUTOBS选项**：此选项用于限制查询最终输出的行数。所有数据行都会被处理（除非同时使用了INOBS），但只有指定数量的结果行会被输出。
     *   **代码示例**：`PROC SQL OUTOBS=100;` 此语句将确保查询结果只输出前100行。
 
-![](img/8eed30f7b249c8efa5dfbcb83dd4ed47_1.png)
 
-![](img/8eed30f7b249c8efa5dfbcb83dd4ed47_1.png)
 
 ## 使用NUMBER选项控制输出显示
 
@@ -23,7 +21,6 @@
 *   **NUMBER选项**：在PROC SQL语句中使用`NUMBER`选项，可以控制是否将行号作为第一列显示在查询结果中。
     *   **代码示例**：`PROC SQL NUMBER;` 执行此语句后，输出的结果表格最左侧将增加一列显示行号。
 
-![](img/8eed30f7b249c8efa5dfbcb83dd4ed47_3.png)
 
 ![](img/8eed30f7b249c8efa5dfbcb83dd4ed47_3.png)
 

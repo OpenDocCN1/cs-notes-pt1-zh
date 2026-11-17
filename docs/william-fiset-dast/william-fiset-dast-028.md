@@ -4,15 +4,12 @@
 
 ## 概述
 
-![](img/f9fd627387fa47f51d0a72a1d67b11ba_1.png)
 
 我们将要学习一个二叉搜索树的具体代码实现。该实现使用Java编写，核心思想是利用节点的可比较性来维护树的有序结构。
 
-![](img/f9fd627387fa47f51d0a72a1d67b11ba_2.png)
 
 ## 类定义与泛型
 
-![](img/f9fd627387fa47f51d0a72a1d67b11ba_4.png)
 
 首先，我们定义了一个代表二叉搜索树的类。这个类使用了泛型，以确保它可以存储任何可比较类型的数据。
 
@@ -23,18 +20,14 @@ public class BinarySearchTree<T extends Comparable<T>> {
 ```
 泛型约束 `<T extends Comparable<T>>` 意味着类型 `T` 必须实现 `Comparable` 接口。这是必要的，因为我们需要比较节点中的数据，以决定新节点应该插入到左子树还是右子树。
 
-![](img/f9fd627387fa47f51d0a72a1d67b11ba_6.png)
 
-![](img/f9fd627387fa47f51d0a72a1d67b11ba_8.png)
 
 ## 成员变量
 
 接下来，我们来看看这个类包含哪些成员变量。实际上，它只有两个。
 
-![](img/f9fd627387fa47f51d0a72a1d67b11ba_10.png)
 
 
-![](img/f9fd627387fa47f51d0a72a1d67b11ba_12.png)
 
 ```java
 // 节点计数器
@@ -46,13 +39,10 @@ private Node root = null;
 
 ## 内部节点类
 
-![](img/f9fd627387fa47f51d0a72a1d67b11ba_14.png)
 
 在二叉搜索树类内部，我们定义了一个私有的 `Node` 类，用于表示树中的每一个节点。
 
-![](img/f9fd627387fa47f51d0a72a1d67b11ba_15.png)
 
-![](img/f9fd627387fa47f51d0a72a1d67b11ba_17.png)
 
 ```java
 private class Node {
@@ -71,13 +61,11 @@ private class Node {
 *   **`left`**： 一个指向左子节点的引用。
 *   **`right`**： 一个指向右子节点的引用。
 
-![](img/f9fd627387fa47f51d0a72a1d67b11ba_19.png)
 
 构造函数接收左子节点、右子节点以及节点数据作为参数，并完成初始化工作。这里使用的类型 `T` 与外部二叉搜索树类的泛型类型一致，保证了数据的可比较性。
 
 ## 总结
 
-![](img/f9fd627387fa47f51d0a72a1d67b11ba_21.png)
 
 ![](img/f9fd627387fa47f51d0a72a1d67b11ba_22.png)
 

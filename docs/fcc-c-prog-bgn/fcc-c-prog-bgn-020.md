@@ -97,7 +97,6 @@ int main() {
 
 在使用`switch`语句时，有几个关键点需要注意：
 
-![](img/14a7e4b8a6155c75ef63bada08ad7beb_1.png)
 
 *   **`break`语句的重要性**：每个`case`代码块末尾的`break`语句至关重要。如果省略`break`，程序会继续执行下一个`case`的代码块，直到遇到`break`或`switch`结束。这种现象称为“穿透”（fall-through），除非有意为之，否则通常需要避免。
 *   **适用场景**：`switch`语句最适合用于将一个变量与一系列**离散的常量值**进行比较。对于范围判断（如 `x > 10`）或复杂的布尔表达式，使用`if-else`语句更为合适。
@@ -105,9 +104,7 @@ int main() {
 
 ## 总结
 
-![](img/14a7e4b8a6155c75ef63bada08ad7beb_3.png)
 
-![](img/14a7e4b8a6155c75ef63bada08ad7beb_4.png)
 
 ![](img/14a7e4b8a6155c75ef63bada08ad7beb_6.png)
 

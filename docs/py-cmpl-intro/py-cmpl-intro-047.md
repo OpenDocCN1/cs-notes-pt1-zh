@@ -6,21 +6,14 @@
 
 在Python中，对象是相关属性和方法的集合。属性类似于变量，用于描述对象拥有什么。方法则是属于对象的函数，定义了对象能做什么。
 
-![](img/fa33e234cbd7fa8135a7c579ce7c7e54_1.png)
 
-![](img/fa33e234cbd7fa8135a7c579ce7c7e54_2.png)
 
-![](img/fa33e234cbd7fa8135a7c579ce7c7e54_3.png)
 
-![](img/fa33e234cbd7fa8135a7c579ce7c7e54_4.png)
 
-![](img/fa33e234cbd7fa8135a7c579ce7c7e54_5.png)
 
 环顾四周，你会发现许多现实世界的物体，例如手机、杯子和书。每个物体都可以用不同的属性来描述。例如，手机的属性可能包括版本号、是否开机和价格。杯子的属性可能包括内部液体和温度。书的属性可能包括书名和页数。
 
-![](img/fa33e234cbd7fa8135a7c579ce7c7e54_6.png)
 
-![](img/fa33e234cbd7fa8135a7c579ce7c7e54_7.png)
 
 ## 什么是类？📐
 
@@ -30,11 +23,9 @@
 
 ## 创建Car类 🚗
 
-![](img/fa33e234cbd7fa8135a7c579ce7c7e54_9.png)
 
 首先，我们定义一个名为`Car`的类。为了构造汽车对象，我们需要一个特殊的方法——构造函数。
 
-![](img/fa33e234cbd7fa8135a7c579ce7c7e54_11.png)
 
 ```python
 class Car:
@@ -49,9 +40,7 @@ class Car:
 
 ## 创建汽车对象
 
-![](img/fa33e234cbd7fa8135a7c579ce7c7e54_13.png)
 
-![](img/fa33e234cbd7fa8135a7c579ce7c7e54_14.png)
 
 现在，我们可以使用`Car`类来创建具体的汽车对象。
 
@@ -102,13 +91,10 @@ class Car:
 
 我们为`Car`类添加了三个方法：`drive`（驾驶）、`stop`（停止）和`describe`（描述）。在每个方法中，我们使用`self`来访问当前对象的属性，从而在输出中显示特定汽车的信息。
 
-![](img/fa33e234cbd7fa8135a7c579ce7c7e54_16.png)
 
-![](img/fa33e234cbd7fa8135a7c579ce7c7e54_18.png)
 
 ## 调用对象方法
 
-![](img/fa33e234cbd7fa8135a7c579ce7c7e54_20.png)
 
 现在，我们可以调用这些方法来让汽车对象执行动作。
 
@@ -143,9 +129,7 @@ car2.describe() # 输出: 2025 blue Corvette
 *   **方法**是属于对象的函数，定义了对象的行为。
 *   **类**是创建对象的蓝图，它定义了对象的结构。
 
-![](img/fa33e234cbd7fa8135a7c579ce7c7e54_22.png)
 
-![](img/fa33e234cbd7fa8135a7c579ce7c7e54_23.png)
 
 ![](img/fa33e234cbd7fa8135a7c579ce7c7e54_24.png)
 

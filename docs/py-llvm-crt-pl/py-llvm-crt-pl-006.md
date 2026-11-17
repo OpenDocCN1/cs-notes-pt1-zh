@@ -254,9 +254,7 @@ def _visit_FunctionStatement(self, node):
     self.builder = old_builder
 ```
 
-![](img/f67ac1c8d1f1569258597e1929e3794b_1.png)
 
-![](img/f67ac1c8d1f1569258597e1929e3794b_3.png)
 
 此外，我们需要修复 `Let` 语句中的一个 bug，确保存储的是指针地址而不是值：
 

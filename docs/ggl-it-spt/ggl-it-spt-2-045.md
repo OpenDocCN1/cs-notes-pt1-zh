@@ -17,11 +17,9 @@
 
 我的一位朋友当时正在参加一个IT培训项目，他建议我：“你应该搜索一下谷歌的IT支持专业课程。”
 
-![](img/0307a3ad76f4fc9457aa7f294606e999_1.png)
 
 `搜索关键词：Google IT Support Professional Certificate`
 
-![](img/0307a3ad76f4fc9457aa7f294606e999_3.png)
 
 看到这个课程后，我认为这是我可以做到的事情。
 

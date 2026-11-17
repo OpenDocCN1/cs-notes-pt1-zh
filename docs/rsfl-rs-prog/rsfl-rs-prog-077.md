@@ -18,26 +18,18 @@ macro_rules! result_type {
 }
 ```
 
-![](img/9ccfa8b60feff587b5bb515d85680373_1.png)
 
 我们使用 `macro_rules!` 定义宏，宏名为 `result_type`。模式 `$name:ident = Result<$ok:ty, $err:ty>` 用于匹配一个标识符（作为类型别名名）和两个类型（作为 `Result` 的成功与错误类型）。当匹配成功时，宏会生成对应的类型别名代码。
 
-![](img/9ccfa8b60feff587b5bb515d85680373_2.png)
 
-![](img/9ccfa8b60feff587b5bb515d85680373_3.png)
 
-![](img/9ccfa8b60feff587b5bb515d85680373_4.png)
 
 使用这个宏的方法如下：
 
-![](img/9ccfa8b60feff587b5bb515d85680373_5.png)
-
-![](img/9ccfa8b60feff587b5bb515d85680373_6.png)
-
-![](img/9ccfa8b60feff587b5bb515d85680373_7.png)
 
 
-![](img/9ccfa8b60feff587b5bb515d85680373_8.png)
+
+
 
 ```rust
 result_type!(MyResult = Result<i32, String>);
@@ -66,11 +58,8 @@ fn handle_result() {
 
 以下是宏的定义：
 
-![](img/9ccfa8b60feff587b5bb515d85680373_10.png)
 
-![](img/9ccfa8b60feff587b5bb515d85680373_11.png)
 
-![](img/9ccfa8b60feff587b5bb515d85680373_12.png)
 
 ```rust
 macro_rules! constant_from_literal {
@@ -80,21 +69,15 @@ macro_rules! constant_from_literal {
 }
 ```
 
-![](img/9ccfa8b60feff587b5bb515d85680373_13.png)
 
-![](img/9ccfa8b60feff587b5bb515d85680373_14.png)
 
-![](img/9ccfa8b60feff587b5bb515d85680373_15.png)
 
 我们使用 `macro_rules!` 定义宏，宏名为 `constant_from_literal`。这里的关键是使用了 `$value:literal` 说明符，它确保我们只接受实际的字面量，而不是变量。这对于创建必须在编译时已知的常量非常有用。在宏体内，我们使用 `stringify!` 将字面量转换为字符串，并创建一个同名的常量。
 
-![](img/9ccfa8b60feff587b5bb515d85680373_16.png)
 
-![](img/9ccfa8b60feff587b5bb515d85680373_17.png)
 
 使用这个宏的方法如下：
 
-![](img/9ccfa8b60feff587b5bb515d85680373_18.png)
 
 ```rust
 constant_from_literal!(API_VERSION = "v1.0");
@@ -114,9 +97,7 @@ fn main() {
 
 以下是宏的定义：
 
-![](img/9ccfa8b60feff587b5bb515d85680373_20.png)
 
-![](img/9ccfa8b60feff587b5bb515d85680373_21.png)
 
 ```rust
 macro_rules! use_and_call {
@@ -126,23 +107,16 @@ macro_rules! use_and_call {
 }
 ```
 
-![](img/9ccfa8b60feff587b5bb515d85680373_22.png)
 
-![](img/9ccfa8b60feff587b5bb515d85680373_23.png)
 
-![](img/9ccfa8b60feff587b5bb515d85680373_24.png)
 
 这里我们创建一个名为 `use_and_call` 的宏，它接受一个路径。在实际场景中，可能会使用这个路径，但在这个例子中，我们只是打印它。
 
-![](img/9ccfa8b60feff587b5bb515d85680373_25.png)
 
-![](img/9ccfa8b60feff587b5bb515d85680373_26.png)
 
-![](img/9ccfa8b60feff587b5bb515d85680373_27.png)
 
 使用这个宏的方法如下：
 
-![](img/9ccfa8b60feff587b5bb515d85680373_28.png)
 
 ```rust
 use_and_call!(std::collections::HashMap::new);
@@ -153,13 +127,10 @@ use_and_call!(std::io::stdout);
 
 `path` 说明符匹配限定路径。这在创建与不同模块或 crate 一起工作的宏时很有用，尽管在实践中你通常会直接使用 `use` 语句。
 
-![](img/9ccfa8b60feff587b5bb515d85680373_30.png)
 
-![](img/9ccfa8b60feff587b5bb515d85680373_31.png)
 
 ## 匹配代码块
 
-![](img/9ccfa8b60feff587b5bb515d85680373_32.png)
 
 代码块对于创建控制流宏非常强大。让我们创建一个更有用的计时宏，它还会打印正在计时的内容。
 
@@ -198,25 +169,17 @@ fn main() {
 
 在 `main` 函数中，我们可以创建一些使用 `benchmark` 宏的功能。宏的名称是 `"计算总和"`，里面的代码将 `i` 加到 `total` 很多次。在底部，我们也可以打印结果。运行此代码，输出将显示它花费了约 1.2 毫秒，结果是这个数字。
 
-![](img/9ccfa8b60feff587b5bb515d85680373_34.png)
 
-![](img/9ccfa8b60feff587b5bb515d85680373_35.png)
 
 `$block:block` 匹配一个代码块。这个宏用计时代码和一个标签包装了代码块，使得对代码不同部分进行基准测试变得容易。这是一个你可能最终会实际使用的实用案例。
 
-![](img/9ccfa8b60feff587b5bb515d85680373_36.png)
 
-![](img/9ccfa8b60feff587b5bb515d85680373_37.png)
 
-![](img/9ccfa8b60feff587b5bb515d85680373_38.png)
 
 ## 匹配语句
 
-![](img/9ccfa8b60feff587b5bb515d85680373_39.png)
 
-![](img/9ccfa8b60feff587b5bb515d85680373_40.png)
 
-![](img/9ccfa8b60feff587b5bb515d85680373_41.png)
 
 语句对于生成需要多次执行的代码很有用。让我们创建一个重试语句的宏。
 
@@ -257,25 +220,18 @@ fn main() {
 
 `$statement:stmt` 说明符匹配一个语句。这个例子展示了如何创建一个重试机制，尽管在实践中你可能需要更复杂的错误处理。
 
-![](img/9ccfa8b60feff587b5bb515d85680373_43.png)
 
-![](img/9ccfa8b60feff587b5bb515d85680373_44.png)
 
-![](img/9ccfa8b60feff587b5bb515d85680373_45.png)
 
 ## 组合匹配
 
-![](img/9ccfa8b60feff587b5bb515d85680373_46.png)
 
-![](img/9ccfa8b60feff587b5bb515d85680373_47.png)
 
 你可以组合多个匹配来创建强大的宏。让我们创建一个生成带有构造函数的结构体的宏。
 
 以下是宏的定义：
 
-![](img/9ccfa8b60feff587b5bb515d85680373_49.png)
 
-![](img/9ccfa8b60feff587b5bb515d85680373_50.png)
 
 ```rust
 macro_rules! struct_with_new {
@@ -298,12 +254,9 @@ macro_rules! struct_with_new {
 
 使用这个宏的方法如下：
 
-![](img/9ccfa8b60feff587b5bb515d85680373_52.png)
 
 
-![](img/9ccfa8b60feff587b5bb515d85680373_53.png)
 
-![](img/9ccfa8b60feff587b5bb515d85680373_54.png)
 
 ```rust
 struct_with_new!(Point {
@@ -334,17 +287,12 @@ macro_rules! kv {
 
 这里我们将创建一个名为 `kv` 的宏，它接受一个标识符作为键，一个表达式作为值。它的作用是将它们转换成一个键值对。
 
-![](img/9ccfa8b60feff587b5bb515d85680373_56.png)
 
-![](img/9ccfa8b60feff587b5bb515d85680373_57.png)
 
 使用这个宏的方法如下：
 
-![](img/9ccfa8b60feff587b5bb515d85680373_58.png)
 
-![](img/9ccfa8b60feff587b5bb515d85680373_59.png)
 
-![](img/9ccfa8b60feff587b5bb515d85680373_60.png)
 
 ```rust
 fn main() {
@@ -357,17 +305,12 @@ fn main() {
 }
 ```
 
-![](img/9ccfa8b60feff587b5bb515d85680373_61.png)
 
-![](img/9ccfa8b60feff587b5bb515d85680373_62.png)
 
-![](img/9ccfa8b60feff587b5bb515d85680373_63.png)
 
 我们创建一个名为 Alice 的人，让年龄等于 30。要使用我们的宏，我们只需要调用 `kv!`，提供一个标识符和值。然后为了查看里面有什么，我们可以打印 `pair1` 和 `pair2`。打印后，我们应该会得到这些键值。
 
-![](img/9ccfa8b60feff587b5bb515d85680373_64.png)
 
-![](img/9ccfa8b60feff587b5bb515d85680373_65.png)
 
 这里我们匹配 `=>` 标记，为键值对创建类似 DSL 的语法。宏自动将标识符转换为字符串，这对于配置或日志记录很有用。
 
@@ -389,7 +332,6 @@ macro_rules! create_array {
 
 使用这个宏的方法如下：
 
-![](img/9ccfa8b60feff587b5bb515d85680373_67.png)
 
 ```rust
 fn main() {
@@ -400,17 +342,12 @@ fn main() {
 }
 ```
 
-![](img/9ccfa8b60feff587b5bb515d85680373_68.png)
 
-![](img/9ccfa8b60feff587b5bb515d85680373_69.png)
 
-![](img/9ccfa8b60feff587b5bb515d85680373_70.png)
 
 我知道这看起来语法很多，但这里重要的是，我们通过 `$(,)?` 告诉 Rust 这个宏应该可选地匹配一个逗号。这使得宏更加灵活和用户友好，无论是否有尾随逗号它都能工作。这是 Rust 宏中一个非常常见的模式。
 
-![](img/9ccfa8b60feff587b5bb515d85680373_71.png)
 
-![](img/9ccfa8b60feff587b5bb515d85680373_72.png)
 
 ## 总结
 

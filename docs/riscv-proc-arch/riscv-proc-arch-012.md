@@ -1,6 +1,5 @@
 # 012：异常、中断与PLIC
 
-![](img/adebb13fe5dbd6fbc9c977166f9160e8_0.png)
 
 ![](img/adebb13fe5dbd6fbc9c977166f9160e8_0.png)
 
@@ -172,6 +171,5 @@ PLIC是一个设备，像每个设备一样，它是内存映射的。这意味�
 
 好的，如果您一直跟随到这里，非常感谢您的观看。让我们在下个视频中再见。
 
-![](img/adebb13fe5dbd6fbc9c977166f9160e8_2.png)
 
 ![](img/adebb13fe5dbd6fbc9c977166f9160e8_2.png)

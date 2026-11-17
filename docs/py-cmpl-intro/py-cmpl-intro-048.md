@@ -4,9 +4,7 @@ Python超全入门教程：P48：Python类变量详解 🧩
 
 ---
 
-![](img/3755ff6b38dda80c5dd364d2e78c0bf6_1.png)
 
-![](img/3755ff6b38dda80c5dd364d2e78c0bf6_2.png)
 
 ### 类变量与实例变量
 
@@ -14,7 +12,6 @@ Python超全入门教程：P48：Python类变量详解 🧩
 
 类变量在类的所有实例之间共享。这意味着从一个类创建的所有对象都访问同一个类变量。相反，实例变量是每个对象独有的，定义在构造函数 `__init__` 内部。
 
-![](img/3755ff6b38dda80c5dd364d2e78c0bf6_4.png)
 
 以下是核心概念的定义：
 *   **类变量**：定义在类内部但在任何方法（包括构造函数）之外。所有实例共享。
@@ -24,15 +21,11 @@ Python超全入门教程：P48：Python类变量详解 🧩
 
 ### 创建学生类与实例变量
 
-![](img/3755ff6b38dda80c5dd364d2e78c0bf6_6.png)
 
-![](img/3755ff6b38dda80c5dd364d2e78c0bf6_7.png)
 
-![](img/3755ff6b38dda80c5dd364d2e78c0bf6_8.png)
 
 首先，我们创建一个 `Student` 类，并为其定义构造函数来初始化实例变量 `name` 和 `age`。
 
-![](img/3755ff6b38dda80c5dd364d2e78c0bf6_10.png)
 
 ```python
 class Student:
@@ -42,7 +35,6 @@ class Student:
         self.age = age    # 实例变量
 ```
 
-![](img/3755ff6b38dda80c5dd364d2e78c0bf6_12.png)
 
 构造函数 `__init__` 在创建对象时自动调用。参数 `self` 代表当前正在创建的对象。我们创建两个学生对象：
 
@@ -53,30 +45,24 @@ student2 = Student("Patrick", 35)
 
 现在，我们可以打印每个学生的实例变量：
 
-![](img/3755ff6b38dda80c5dd364d2e78c0bf6_14.png)
 
 ```python
 print(student1.name, student1.age)  # 输出: Sponongebob 30
 print(student2.name, student2.age)  # 输出: Patrick 35
 ```
 
-![](img/3755ff6b38dda80c5dd364d2e78c0bf6_16.png)
 
 ---
 
-![](img/3755ff6b38dda80c5dd364d2e78c0bf6_18.png)
 
 ### 定义与访问类变量
 
-![](img/3755ff6b38dda80c5dd364d2e78c0bf6_20.png)
 
 现在，我们来添加一个类变量。类变量定义在类内部，但在所有方法之外。
 
 我们在 `Student` 类中添加一个表示毕业年份的类变量 `class_year`：
 
-![](img/3755ff6b38dda80c5dd364d2e78c0bf6_22.png)
 
-![](img/3755ff6b38dda80c5dd364d2e78c0bf6_23.png)
 
 ```python
 class Student:
@@ -90,7 +76,6 @@ class Student:
 类变量可以被任何实例访问，也可以通过类名直接访问。以下是访问方式：
 
 
-![](img/3755ff6b38dda80c5dd364d2e78c0bf6_25.png)
 
 ```python
 # 通过实例访问（可行，但不推荐）
@@ -100,21 +85,15 @@ print(student2.class_year)  # 输出: 2024
 print(Student.class_year)   # 输出: 2024
 ```
 
-![](img/3755ff6b38dda80c5dd364d2e78c0bf6_26.png)
 
-![](img/3755ff6b38dda80c5dd364d2e78c0bf6_27.png)
 
-![](img/3755ff6b38dda80c5dd364d2e78c0bf6_28.png)
 
-![](img/3755ff6b38dda80c5dd364d2e78c0bf6_29.png)
 
 **最佳实践是使用类名（如 `Student.class_year`）来访问类变量**。这样做代码意图更清晰，能明确区分类变量和实例变量。
 
 ---
 
-![](img/3755ff6b38dda80c5dd364d2e78c0bf6_31.png)
 
-![](img/3755ff6b38dda80c5dd364d2e78c0bf6_32.png)
 
 ### 使用类变量跟踪对象数量
 
@@ -122,11 +101,8 @@ print(Student.class_year)   # 输出: 2024
 
 以下是修改后的类定义：
 
-![](img/3755ff6b38dda80c5dd364d2e78c0bf6_34.png)
 
-![](img/3755ff6b38dda80c5dd364d2e78c0bf6_35.png)
 
-![](img/3755ff6b38dda80c5dd364d2e78c0bf6_36.png)
 
 ```python
 class Student:
@@ -141,14 +117,11 @@ class Student:
 
 注意，在构造函数中，我们使用 `Student.num_students` 而不是 `self.num_students` 来确保修改的是共享的类变量，而不是创建新的实例变量。
 
-![](img/3755ff6b38dda80c5dd364d2e78c0bf6_38.png)
 
 现在，每创建一个学生，计数器就会增加。我们创建几个学生并打印总数：
 
 
-![](img/3755ff6b38dda80c5dd364d2e78c0bf6_40.png)
 
-![](img/3755ff6b38dda80c5dd364d2e78c0bf6_41.png)
 
 ```python
 student1 = Student("Sponongebob", 30)
@@ -158,19 +131,15 @@ student4 = Student("Sandy", 27)
 print(f"学生总数为: {Student.num_students}")  # 输出: 学生总数为: 4
 ```
 
-![](img/3755ff6b38dda80c5dd364d2e78c0bf6_42.png)
 
 ---
 
-![](img/3755ff6b38dda80c5dd364d2e78c0bf6_44.png)
 
 ### 综合示例与输出
 
-![](img/3755ff6b38dda80c5dd364d2e78c0bf6_46.png)
 
 让我们将所有内容结合起来，使用一个格式化的字符串打印毕业年份和学生名单。
 
-![](img/3755ff6b38dda80c5dd364d2e78c0bf6_48.png)
 
 ```python
 # 使用f-string格式化输出
@@ -184,34 +153,26 @@ print(f"学生名单: {student1.name}, {student2.name}, {student3.name}, {studen
 学生名单: Sponongebob, Patrick, Squiidward, Sandy
 ```
 
-![](img/3755ff6b38dda80c5dd364d2e78c0bf6_50.png)
 
 你可以轻松修改类变量 `class_year`，所有相关的输出都会自动更新。
 
-![](img/3755ff6b38dda80c5dd364d2e78c0bf6_51.png)
 
-![](img/3755ff6b38dda80c5dd364d2e78c0bf6_53.png)
 
 ---
 
-![](img/3755ff6b38dda80c5dd364d2e78c0bf6_55.png)
 
-![](img/3755ff6b38dda80c5dd364d2e78c0bf6_57.png)
 
 ### 总结
 
 本节课中我们一起学习了Python中的类变量。
 
-![](img/3755ff6b38dda80c5dd364d2e78c0bf6_59.png)
 
 *   **类变量**定义在类内部、方法外部，使用格式为 `变量名 = 值`。
 *   类变量在类的**所有实例之间共享**，这与每个对象独有的实例变量不同。
 *   访问类变量的**推荐方式是通过类名**（例如 `ClassName.variable_name`），这使代码更清晰、更易读。
 *   类变量非常适合用于存储**所有对象共有的数据**（如标准、设置）或**跟踪类的状态**（如创建的对象数量）。
 
-![](img/3755ff6b38dda80c5dd364d2e78c0bf6_60.png)
 
-![](img/3755ff6b38dda80c5dd364d2e78c0bf6_61.png)
 
 ![](img/3755ff6b38dda80c5dd364d2e78c0bf6_62.png)
 

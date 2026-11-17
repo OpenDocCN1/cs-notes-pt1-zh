@@ -1,6 +1,5 @@
 # 4周：合规策略与实施
 
-![](img/b7b4f4859679faa86aa8d976dda78e79_0.png)
 
 ![](img/b7b4f4859679faa86aa8d976dda78e79_0.png)
 
@@ -10,6 +9,5 @@
 
 
 
-![](img/b7b4f4859679faa86aa8d976dda78e79_2.png)
 
 ![](img/b7b4f4859679faa86aa8d976dda78e79_2.png)

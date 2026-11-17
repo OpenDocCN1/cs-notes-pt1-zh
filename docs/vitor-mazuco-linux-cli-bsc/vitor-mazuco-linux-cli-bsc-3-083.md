@@ -128,7 +128,6 @@ IAX（Inter-Asterisk eXchange）协议，基于RFC 5456标准，主要用于在�
     ```
     应能看到对等点`filial`的状态为`OK`或`Registered`。在服务器B上同样检查`matrix`的状态。
 
-![](img/f1ca0b649f6733d0829028b58e0e8da0_7.png)
 
 *   **进行通话测试**
     1.  在注册到服务器A的分机（如1001）上，拨打服务器B的分机号（如3001）。

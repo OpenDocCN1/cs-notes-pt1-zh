@@ -21,11 +21,9 @@ kubectl run my-pod --image=ghcr.io/your-username/demo-image:latest
 
 ---
 
-![](img/7583888fb4d7b2305d00abb16af0fe4b_1.png)
 
 ## 查看已创建的Pod
 
-![](img/7583888fb4d7b2305d00abb16af0fe4b_3.png)
 
 Pod创建成功后，我们需要验证其状态。为此，可以使用`kubectl get pods`命令。
 
@@ -55,13 +53,10 @@ kubectl delete pod my-pod
 
 ## 通过YAML清单文件创建Pod
 
-![](img/7583888fb4d7b2305d00abb16af0fe4b_5.png)
 
 除了使用命令行，更规范和可复用的方法是编写一个YAML清单文件。上一节我们使用了命令，本节中我们来看看如何通过文件定义Pod。
 
-![](img/7583888fb4d7b2305d00abb16af0fe4b_7.png)
 
-![](img/7583888fb4d7b2305d00abb16af0fe4b_9.png)
 
 以下是一个Pod清单文件（例如 `pod-manifest.yaml`）的最小化示例：
 ```yaml
@@ -80,29 +75,20 @@ spec:
 ```
 这个文件定义了Pod的基本信息，包括API版本、类型、元数据（名称）和容器规格（容器名、镜像和端口）。
 
-![](img/7583888fb4d7b2305d00abb16af0fe4b_10.png)
 
 ---
 
-![](img/7583888fb4d7b2305d00abb16af0fe4b_12.png)
 
-![](img/7583888fb4d7b2305d00abb16af0fe4b_13.png)
 
-![](img/7583888fb4d7b2305d00abb16af0fe4b_15.png)
 
 ## 应用YAML文件以创建Pod
 
-![](img/7583888fb4d7b2305d00abb16af0fe4b_17.png)
 
-![](img/7583888fb4d7b2305d00abb16af0fe4b_19.png)
 
-![](img/7583888fb4d7b2305d00abb16af0fe4b_21.png)
 
 文件编写完成后，我们需要使用`kubectl apply`命令来根据文件创建资源。
 
-![](img/7583888fb4d7b2305d00abb16af0fe4b_23.png)
 
-![](img/7583888fb4d7b2305d00abb16af0fe4b_24.png)
 
 以下是应用YAML文件的命令：
 ```bash
@@ -110,27 +96,19 @@ kubectl apply -f pod-manifest.yaml
 ```
 执行后，终端会显示“pod/my-pod-from-file created”。此时，使用`kubectl get pods`命令可以看到新创建的Pod。
 
-![](img/7583888fb4d7b2305d00abb16af0fe4b_26.png)
 
-![](img/7583888fb4d7b2305d00abb16af0fe4b_27.png)
 
 ---
 
-![](img/7583888fb4d7b2305d00abb16af0fe4b_29.png)
 
-![](img/7583888fb4d7b2305d00abb16af0fe4b_31.png)
 
 ## 获取Pod的详细信息
 
-![](img/7583888fb4d7b2305d00abb16af0fe4b_33.png)
 
 为了获取Pod更全面的信息，我们可以使用`kubectl describe`命令或指定输出格式为JSON。
 
-![](img/7583888fb4d7b2305d00abb16af0fe4b_35.png)
 
-![](img/7583888fb4d7b2305d00abb16af0fe4b_37.png)
 
-![](img/7583888fb4d7b2305d00abb16af0fe4b_39.png)
 
 以下是两种获取详细信息的方法：
 1.  **使用 `describe` 命令**：
@@ -144,21 +122,16 @@ kubectl apply -f pod-manifest.yaml
     ```
     这将返回一个结构化的JSON对象，包含Pod配置和状态的**所有键值对**，信息非常详尽。
 
-![](img/7583888fb4d7b2305d00abb16af0fe4b_41.png)
 
 ---
 
-![](img/7583888fb4d7b2305d00abb16af0fe4b_43.png)
 
-![](img/7583888fb4d7b2305d00abb16af0fe4b_45.png)
 
 ## 删除通过文件创建的Pod
 
-![](img/7583888fb4d7b2305d00abb16af0fe4b_47.png)
 
 与创建相对应，我们也可以基于YAML文件来删除Pod，确保管理操作的一致性。
 
-![](img/7583888fb4d7b2305d00abb16af0fe4b_49.png)
 
 以下是使用文件删除Pod的命令：
 ```bash

@@ -1,6 +1,5 @@
 # 039：重构Mesh绘制与相机
 
-![](img/7ac28094df232dad262990eb7a67a8e4_0.png)
 
 ![](img/7ac28094df232dad262990eb7a67a8e4_0.png)
 
@@ -10,7 +9,6 @@
 
 ![](img/7ac28094df232dad262990eb7a67a8e4_3.png)
 
-![](img/7ac28094df232dad262990eb7a67a8e4_5.png)
 
 ## 概述
 
@@ -41,7 +39,6 @@
 
 实际上，我们更希望有一个单独的函数来设置投影矩阵，而不是在构造函数中隐藏算法。因此，让我们创建一个 `setProjectionMatrix` 函数。
 
-![](img/7ac28094df232dad262990eb7a67a8e4_7.png)
 
 ![](img/7ac28094df232dad262990eb7a67a8e4_7.png)
 

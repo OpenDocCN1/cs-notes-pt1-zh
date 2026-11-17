@@ -1,6 +1,5 @@
 # 039：MLIR 中张量分块简介
 
-![](img/721f7f649cf73eed12ffb8f269d88261_0.png)
 
 ![](img/721f7f649cf73eed12ffb8f269d88261_0.png)
 
@@ -161,6 +160,5 @@ MLIR 的 `TilingOptions` 允许你设置 `reductionTilingStrategy` 来选择不�
 
 总而言之，MLIR 提供了一套强大而灵活的抽象和接口，使得构建高性能、可扩展的张量编译器不再是遥不可及的任务。希望本教程为你开启了探索 MLIR 编译技术的大门。
 
-![](img/721f7f649cf73eed12ffb8f269d88261_4.png)
 
 ![](img/721f7f649cf73eed12ffb8f269d88261_4.png)

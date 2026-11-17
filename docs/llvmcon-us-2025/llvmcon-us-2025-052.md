@@ -1,6 +1,5 @@
 # 052：理解linalg.pack和linalg.unpack
 
-![](img/50b1abfc01e42d82404040fa0a9be3b8_0.png)
 
 ![](img/50b1abfc01e42d82404040fa0a9be3b8_0.png)
 
@@ -96,10 +95,8 @@
 
 本节课中，我们一起学习了`linalg.pack`和`linalg.unpack`操作如何通过改变数据布局来优化内存访问模式，从而提升计算性能。我们了解了它们的基本用法、对动态形状的支持、处理单位维度的挑战，以及在实际应用中分摊数据移动成本以获得性能收益的关键。
 
-![](img/50b1abfc01e42d82404040fa0a9be3b8_2.png)
 
 ![](img/50b1abfc01e42d82404040fa0a9be3b8_2.png)
 
-![](img/50b1abfc01e42d82404040fa0a9be3b8_3.png)
 
 ![](img/50b1abfc01e42d82404040fa0a9be3b8_3.png)

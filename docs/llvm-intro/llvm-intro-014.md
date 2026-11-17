@@ -59,7 +59,6 @@ SubroutineType类包含一个类型数组，构成了函数的签名。我们可
 
 请注意，我们正在处理的是调试类型（Debug Type），而不是上节课提到的IR类型。
 
-![](img/667d3b0864b805983766fd4ba232b49f_1.png)
 
 *   **调试基本类型（Debug Basic Type）**：代表语言中的原始类型。我们定义一个函数，根据DWARF标签（Dwarf Tag）来识别每种类型，并返回包含类型名称的字符串用于打印。
 *   **调试派生类型（Debug Derived Type）**：代表诸如指针或引用之类的限定类型。我们处理三种最常见的派生类型：指针（Pointers）、常量修饰符（Const Modifiers）和引用（References）。然后，我们递归调用相同的`analyzeDebugType`函数，但这次传递派生类型所基于的类型作为参数。
@@ -78,7 +77,6 @@ Function `main` at line 18 returns `int`.
 ```
 我们可以看到程序中有一个用户定义类型`node`，但输出没有提供关于此类型的更多信息。
 
-![](img/667d3b0864b805983766fd4ba232b49f_3.png)
 
 ## 扩展功能：详述用户定义类型
 
@@ -86,7 +84,6 @@ Function `main` at line 18 returns `int`.
 
 我们像之前一样，通过DWARF标签来识别调试类型。当我们找到一个复合类型时，可以详述其每个组成元素（即构成它的类型）。在这种情况下，每个类型都是一个代表复合类型中字段的派生类型。我们可以获取字段的名称，并使用我们已经定义的函数来分析其类型。我们同样处理`typedef`关键字重定义的类型。
 
-![](img/667d3b0864b805983766fd4ba232b49f_5.png)
 
 在我们的主方法中，我们使用DebugInfoFinder来访问模块中找到的每个类型。如果找到一个用户定义类型，我们现在就可以详述它。
 
@@ -97,7 +94,6 @@ User defined type `node` at line 1.
   Field `next` has type `node*`.
 ```
 
-![](img/667d3b0864b805983766fd4ba232b49f_7.png)
 
 ## 总结
 

@@ -41,7 +41,6 @@ void someFunction(VertexBufferObject& vbo, Shader& shader) {
 
 现在，我们就可以轻松地使用矩阵了。
 
-![](img/ab0722912e17b0d7ba2eaae042c7f11f_1.png)
 
 ![](img/ab0722912e17b0d7ba2eaae042c7f11f_2.png)
 

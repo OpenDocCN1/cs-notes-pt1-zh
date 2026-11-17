@@ -1,10 +1,7 @@
 # 029：if-else-if 阶梯语句
 
-![](img/6687d90eafa13a834af25ce5402c683f_0.png)
 
-![](img/6687d90eafa13a834af25ce5402c683f_1.png)
 
-![](img/6687d90eafa13a834af25ce5402c683f_2.png)
 
 在本节课中，我们将学习 C 语言中一种重要的多条件判断结构——`if-else-if` 阶梯语句。我们将通过一个计算个人所得税的实际例子，来理解它的工作原理和用法。
 
@@ -47,7 +44,6 @@ if (condition1) {
 
 ## 总结
 
-![](img/6687d90eafa13a834af25ce5402c683f_4.png)
 
 ![](img/6687d90eafa13a834af25ce5402c683f_5.png)
 

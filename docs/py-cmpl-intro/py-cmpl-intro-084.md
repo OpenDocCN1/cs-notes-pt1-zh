@@ -2,7 +2,6 @@
 
 在本节课中，我们将学习如何在PyQt5中使用单选按钮（Radio Buttons）。我们将涵盖如何创建单选按钮、如何将它们分组，以及如何响应用户的选择。
 
-![](img/98b9b4c6e3ee217e95cff40c1a70f66d_1.png)
 
 ---
 
@@ -16,11 +15,9 @@ from PyQt5.QtWidgets import QRadioButton, QButtonGroup
 
 `QRadioButton` 类用于创建单选按钮，而 `QButtonGroup` 类用于将多个单选按钮组合在一起，确保同一时间只能选择组内的一个选项。
 
-![](img/98b9b4c6e3ee217e95cff40c1a70f66d_3.png)
 
 ---
 
-![](img/98b9b4c6e3ee217e95cff40c1a70f66d_5.png)
 
 ## 创建单选按钮
 
@@ -34,11 +31,9 @@ self.radio3 = QRadioButton("Gift Card", self)
 
 以上代码创建了三个单选按钮，分别对应Visa、Mastercard和Gift Card三种支付选项。
 
-![](img/98b9b4c6e3ee217e95cff40c1a70f66d_7.png)
 
 ---
 
-![](img/98b9b4c6e3ee217e95cff40c1a70f66d_9.png)
 
 ## 设置单选按钮的位置
 
@@ -54,7 +49,6 @@ self.radio3.setGeometry(0, 100, 300, 50)
 
 ---
 
-![](img/98b9b4c6e3ee217e95cff40c1a70f66d_11.png)
 
 ## 应用样式表
 
@@ -70,7 +64,6 @@ self.setStyleSheet("""
 """)
 ```
 
-![](img/98b9b4c6e3ee217e95cff40c1a70f66d_13.png)
 
 这段代码将窗口内所有 `QRadioButton` 的字体大小设置为40像素，字体为Arial，并添加10像素的内边距。
 
@@ -82,7 +75,6 @@ self.setStyleSheet("""
 
 例如，除了支付方式，我们可能还需要选择支付场景（店内支付或在线支付）。为此，我们创建另外两个单选按钮。
 
-![](img/98b9b4c6e3ee217e95cff40c1a70f66d_15.png)
 
 ```python
 self.radio4 = QRadioButton("In Store", self)
@@ -97,7 +89,6 @@ self.radio5.setGeometry(0, 200, 300, 50)
 
 ## 创建按钮组
 
-![](img/98b9b4c6e3ee217e95cff40c1a70f66d_17.png)
 
 为了实现独立的分组，我们需要使用 `QButtonGroup` 类。
 
@@ -113,7 +104,6 @@ self.button_group2.addButton(self.radio4)
 self.button_group2.addButton(self.radio5)
 ```
 
-![](img/98b9b4c6e3ee217e95cff40c1a70f66d_19.png)
 
 这样，`radio1`、`radio2` 和 `radio3` 属于 `button_group1`，而 `radio4` 和 `radio5` 属于 `button_group2`。用户可以在每个组内独立选择一个选项。
 
@@ -123,7 +113,6 @@ self.button_group2.addButton(self.radio5)
 
 为了让单选按钮在用户选择时执行某些操作，我们需要将它们的 `toggled` 信号连接到一个自定义的槽函数。
 
-![](img/98b9b4c6e3ee217e95cff40c1a70f66d_21.png)
 
 首先，定义一个槽函数。
 
@@ -142,11 +131,9 @@ self.radio4.toggled.connect(self.radio_button_changed)
 self.radio5.toggled.connect(self.radio_button_changed)
 ```
 
-![](img/98b9b4c6e3ee217e95cff40c1a70f66d_23.png)
 
 ---
 
-![](img/98b9b4c6e3ee217e95cff40c1a70f66d_25.png)
 
 ## 确定被选中的按钮
 
@@ -165,7 +152,6 @@ def radio_button_changed(self):
 
 ## 测试功能
 
-![](img/98b9b4c6e3ee217e95cff40c1a70f66d_27.png)
 
 运行程序，点击不同的单选按钮，控制台将输出相应的选择信息。例如，选择“Visa”和“In Store”会分别打印：
 ```
@@ -175,7 +161,6 @@ In Store is selected
 
 ---
 
-![](img/98b9b4c6e3ee217e95cff40c1a70f66d_29.png)
 
 ## 总结
 

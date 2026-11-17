@@ -57,7 +57,6 @@
 6.  在“图层”面板中，会生成一个“蒙版组”，您可以对其进行重命名以便管理。
 7.  此方法适用于任何类型的形状，不仅仅是圆形。
 
-![](img/3dde6daf0b4eb2cd15747b8181fadcf0_1.png)
 
 ## 总结
 
@@ -65,7 +64,6 @@
 
 ![](img/3dde6daf0b4eb2cd15747b8181fadcf0_1.png)
 
-![](img/3dde6daf0b4eb2cd15747b8181fadcf0_3.png)
 
 ![](img/3dde6daf0b4eb2cd15747b8181fadcf0_3.png)
 

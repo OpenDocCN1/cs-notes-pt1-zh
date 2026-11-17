@@ -6,11 +6,9 @@
 
 变量是一个用于存储值的容器。变量的行为就像它包含的那个值一样。每个变量都应该有一个唯一的名称。
 
-![](img/6400bc977223a96426a53bd40631378c_1.png)
 
 ## 字符串（String）📝
 
-![](img/6400bc977223a96426a53bd40631378c_3.png)
 
 字符串是由一系列文本字符组成的数据类型。它可以用双引号或单引号表示。
 
@@ -38,11 +36,9 @@ print(f"You like {food}")  # 输出：You like pizza
 print(f"Your email is {email}")  # 输出：Your email is bro123@fake.com
 ```
 
-![](img/6400bc977223a96426a53bd40631378c_5.png)
 
 ## 整数（Integer）🔢
 
-![](img/6400bc977223a96426a53bd40631378c_6.png)
 
 整数是不带小数部分的数字。它们可以用于算术运算。
 

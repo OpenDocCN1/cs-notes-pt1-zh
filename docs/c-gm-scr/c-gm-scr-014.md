@@ -28,19 +28,14 @@
 
 ![](img/35cc7b407d7f4707e0d68b6c750d9e6f_26.png)
 
-![](img/35cc7b407d7f4707e0d68b6c750d9e6f_28.png)
 
-![](img/35cc7b407d7f4707e0d68b6c750d9e6f_30.png)
 
-![](img/35cc7b407d7f4707e0d68b6c750d9e6f_32.png)
 
-![](img/35cc7b407d7f4707e0d68b6c750d9e6f_34.png)
 
 ![](img/35cc7b407d7f4707e0d68b6c750d9e6f_36.png)
 
 ![](img/35cc7b407d7f4707e0d68b6c750d9e6f_37.png)
 
-![](img/35cc7b407d7f4707e0d68b6c750d9e6f_39.png)
 
 ![](img/35cc7b407d7f4707e0d68b6c750d9e6f_41.png)
 
@@ -106,7 +101,6 @@
 
 ![](img/35cc7b407d7f4707e0d68b6c750d9e6f_95.png)
 
-![](img/35cc7b407d7f4707e0d68b6c750d9e6f_97.png)
 
 ![](img/35cc7b407d7f4707e0d68b6c750d9e6f_99.png)
 
@@ -200,7 +194,6 @@ if (!level->locked && is_mouse_over_level) {
 
 ![](img/35cc7b407d7f4707e0d68b6c750d9e6f_173.png)
 
-![](img/35cc7b407d7f4707e0d68b6c750d9e6f_174.png)
 
 ![](img/35cc7b407d7f4707e0d68b6c750d9e6f_176.png)
 
@@ -222,11 +215,8 @@ if (!level->locked && is_mouse_over_level) {
 
 上一节我们构建了基础的音频混合器。本节中，我们将对其进行多项改进，使其更稳定、音质更好。
 
-![](img/35cc7b407d7f4707e0d68b6c750d9e6f_194.png)
 
-![](img/35cc7b407d7f4707e0d68b6c750d9e6f_196.png)
 
-![](img/35cc7b407d7f4707e0d68b6c750d9e6f_198.png)
 
 ![](img/35cc7b407d7f4707e0d68b6c750d9e6f_200.png)
 
@@ -346,7 +336,6 @@ if (left_sample * 0.5f < min_value || left_sample * 0.5f > max_value ||
 
 ![](img/35cc7b407d7f4707e0d68b6c750d9e6f_294.png)
 
-![](img/35cc7b407d7f4707e0d68b6c750d9e6f_295.png)
 
 ![](img/35cc7b407d7f4707e0d68b6c750d9e6f_297.png)
 
@@ -712,9 +701,7 @@ sound->position += sound->speed_multiplier;
 
 ![](img/35cc7b407d7f4707e0d68b6c750d9e6f_598.png)
 
-![](img/35cc7b407d7f4707e0d68b6c750d9e6f_600.png)
 
-![](img/35cc7b407d7f4707e0d68b6c750d9e6f_602.png)
 
 ![](img/35cc7b407d7f4707e0d68b6c750d9e6f_603.png)
 
@@ -734,7 +721,6 @@ sound->position += sound->speed_multiplier;
 
 **修复后的核心代码：**
 
-![](img/35cc7b407d7f4707e0d68b6c750d9e6f_615.png)
 
 ![](img/35cc7b407d7f4707e0d68b6c750d9e6f_617.png)
 
@@ -962,7 +948,6 @@ void play_sound_with_variation(Loaded_Sound* sound, f32 volume, f32 pitch_variat
 
 ![](img/35cc7b407d7f4707e0d68b6c750d9e6f_787.png)
 
-![](img/35cc7b407d7f4707e0d68b6c750d9e6f_789.png)
 
 ![](img/35cc7b407d7f4707e0d68b6c750d9e6f_791.png)
 
@@ -1048,7 +1033,6 @@ void play_sound_with_variation(Loaded_Sound* sound, f32 volume, f32 pitch_variat
 
 ![](img/35cc7b407d7f4707e0d68b6c750d9e6f_864.png)
 
-![](img/35cc7b407d7f4707e0d68b6c750d9e6f_866.png)
 
 
 ![](img/35cc7b407d7f4707e0d68b6c750d9e6f_868.png)

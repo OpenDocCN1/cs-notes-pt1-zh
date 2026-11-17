@@ -4,7 +4,6 @@
 
 ## 克隆表
 
-![](img/262708ef638ed3b51d9f3601047bc1fe_1.png)
 
 上一节我们介绍了表的基本操作，本节中我们来看看如何克隆一张表。克隆表意味着创建一个与原表结构相同的新表，可以选择是否复制数据。
 
@@ -16,35 +15,27 @@ CREATE TABLE 新表名 LIKE 原表名;
 
 这条命令会创建一个与原表结构（包括列定义、索引等）完全相同的新表，但不会复制任何数据。
 
-![](img/262708ef638ed3b51d9f3601047bc1fe_3.png)
 
 例如，假设我们有一个名为 `medium` 的表，我们可以这样克隆它的结构：
 
-![](img/262708ef638ed3b51d9f3601047bc1fe_5.png)
 
 ```sql
 CREATE TABLE medium2 LIKE medium;
 ```
 
-![](img/262708ef638ed3b51d9f3601047bc1fe_7.png)
 
 执行后，`medium2` 表的结构与 `medium` 相同，但内容是空的。要验证这一点，可以执行：
 
-![](img/262708ef638ed3b51d9f3601047bc1fe_8.png)
 
-![](img/262708ef638ed3b51d9f3601047bc1fe_9.png)
 
 ```sql
 SELECT * FROM medium2;
 ```
 
-![](img/262708ef638ed3b51d9f3601047bc1fe_11.png)
 
-![](img/262708ef638ed3b51d9f3601047bc1fe_13.png)
 
 如果希望同时克隆表结构和数据，需要使用 `INSERT INTO ... SELECT` 语句。以下是具体步骤：
 
-![](img/262708ef638ed3b51d9f3601047bc1fe_15.png)
 
 1.  首先，使用 `CREATE TABLE ... LIKE` 创建结构相同的新表。
 2.  然后，使用 `INSERT INTO` 语句复制数据。
@@ -73,11 +64,9 @@ INSERT INTO medium_clone (column1, column2) SELECT column1, column2 FROM medium;
 
 接下来，我们学习临时表。临时表是一种特殊类型的表，它只在当前数据库会话中存在。会话结束后，临时表会自动被删除。这在处理中间数据或进行不会影响永久数据的操作时非常有用。
 
-![](img/262708ef638ed3b51d9f3601047bc1fe_17.png)
 
 创建临时表的语法如下：
 
-![](img/262708ef638ed3b51d9f3601047bc1fe_19.png)
 
 ```sql
 CREATE TEMPORARY TABLE 临时表名 (列定义);
@@ -85,18 +74,15 @@ CREATE TEMPORARY TABLE 临时表名 (列定义);
 CREATE TEMPORARY TABLE 临时表名 LIKE 原表名;
 ```
 
-![](img/262708ef638ed3b51d9f3601047bc1fe_21.png)
 
 临时表的主要优势在于：
 *   **数据隔离**：对临时表的操作不会影响同名的永久表。
 *   **自动清理**：连接关闭后，临时表自动删除，无需手动管理。
 *   **安全备份**：在对重要表进行危险操作（如大量删除或更新）前，可以将其克隆到临时表中作为备份。
 
-![](img/262708ef638ed3b51d9f3601047bc1fe_23.png)
 
 让我们通过一个例子来理解。首先，我们基于 `medium` 表创建一个同名的临时表并复制数据：
 
-![](img/262708ef638ed3b51d9f3601047bc1fe_25.png)
 
 ```sql
 -- 创建临时表并复制数据
@@ -106,7 +92,6 @@ INSERT INTO medium SELECT * FROM 原medium表; -- 假设原表有别名或不同
 
 > **注意**：在实际操作中，如果已存在同名的永久表，在临时表有效期内，查询会优先指向临时表。
 
-![](img/262708ef638ed3b51d9f3601047bc1fe_27.png)
 
 现在，假设我们不小心对原始 `medium` 表执行了删除操作：
 

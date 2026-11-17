@@ -25,9 +25,7 @@ private func panGestureRecognizer(_ gestureRecognizer: UIPanGestureRecognizer) {
 }
 ```
 
-![](img/eed179a37488e39ceab2f5acdf60c30f_1.png)
 
-![](img/eed179a37488e39ceab2f5acdf60c30f_2.png)
 
 在`.began`状态下，我们需要获取用户触摸的初始点，并计算相关的锚点和位置信息，为后续的动画做准备。
 
@@ -61,21 +59,15 @@ private func panGestureRecognizer(_ gestureRecognizer: UIPanGestureRecognizer) {
 
 ---
 
-![](img/eed179a37488e39ceab2f5acdf60c30f_4.png)
 
 ## 集成POP动画库
 
-![](img/eed179a37488e39ceab2f5acdf60c30f_6.png)
 
-![](img/eed179a37488e39ceab2f5acdf60c30f_8.png)
 
 为了实现更自然、有弹性的滑动动画，我们将使用Facebook开源的POP动画库。许多知名应用如Instagram、Messenger都使用了这个库。
 
-![](img/eed179a37488e39ceab2f5acdf60c30f_10.png)
 
-![](img/eed179a37488e39ceab2f5acdf60c30f_12.png)
 
-![](img/eed179a37488e39ceab2f5acdf60c30f_14.png)
 
 首先，我们需要通过CocoaPods将POP库集成到项目中。
 
@@ -87,21 +79,16 @@ private func panGestureRecognizer(_ gestureRecognizer: UIPanGestureRecognizer) {
 4.  运行`pod install`命令安装依赖库。
 5.  安装完成后，关闭`.xcodeproj`文件，使用新生成的`.xcworkspace`文件打开项目。
 
-![](img/eed179a37488e39ceab2f5acdf60c30f_16.png)
 
-![](img/eed179a37488e39ceab2f5acdf60c30f_17.png)
 
 集成成功后，我们可以在代码中导入`POP`模块并使用它。
 
-![](img/eed179a37488e39ceab2f5acdf60c30f_19.png)
 
 ---
 
-![](img/eed179a37488e39ceab2f5acdf60c30f_21.png)
 
 ## 实现动画控制函数
 
-![](img/eed179a37488e39ceab2f5acdf60c30f_23.png)
 
 现在，我们来实现之前提到的三个动画控制函数：`beginAnimation`、`endedPanAnimation`和`resetAnimation`。
 
@@ -117,13 +104,10 @@ private func beginAnimation() {
 
 `SwipeDirection`枚举定义了所有可能的滑动方向（如左、右、上、下）。`CGPoint`扩展提供了一些几何计算方法。
 
-![](img/eed179a37488e39ceab2f5acdf60c30f_25.png)
 
-![](img/eed179a37488e39ceab2f5acdf60c30f_27.png)
 
 `endedPanAnimation`函数的核心是计算拖动方向。我们通过归一化的拖动距离，在所有可能的方向中找到距离最近的一个。
 
-![](img/eed179a37488e39ceab2f5acdf60c30f_29.png)
 
 ```swift
 private func endedPanAnimation() {
@@ -140,9 +124,7 @@ private func endedPanAnimation() {
 
 ---
 
-![](img/eed179a37488e39ceab2f5acdf60c30f_31.png)
 
-![](img/eed179a37488e39ceab2f5acdf60c30f_33.png)
 
 ![](img/eed179a37488e39ceab2f5acdf60c30f_35.png)
 

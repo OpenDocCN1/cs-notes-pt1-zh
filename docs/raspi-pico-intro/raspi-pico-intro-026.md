@@ -79,7 +79,6 @@ while True:
 
 ## UART通道与引脚复用
 
-![](img/da9ee51e20ca2d857747ea5f906bacf2_1.png)
 
 树莓派Pico有两个UART硬件通道，称为UART0和UART1。每个通道一次只能连接一个设备，但可以通过多组引脚来访问同一个UART通道。
 
@@ -90,7 +89,6 @@ while True:
 uart = UART(0, baudrate=9600, tx=Pin(12), rx=Pin(13))
 ```
 
-![](img/da9ee51e20ca2d857747ea5f906bacf2_3.png)
 
 你可以查阅引脚图来了解哪些引脚对应哪个UART通道。
 

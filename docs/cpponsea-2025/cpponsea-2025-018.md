@@ -66,7 +66,6 @@ bool b3 = std::meta::is_complete_type(refl1); // true！refl1引用的状态已�
 *   **查询类**：如 `is_complete_type`, `is_function`, `identifier_of`（获取标识符名称），`members_of`（获取类成员）等。
 *   **操作类**：如 `substitute`（在反射领域进行模板实例化），`extract`（尝试从反射对象提取出具体C++值/类型）。
 
-![](img/72fa588386bb12c18d12179186d47d23_6.png)
 
 ```cpp
 constexpr int a = 42;
@@ -118,7 +117,6 @@ Rust 通过过程宏和 `syn` 库提供了强大的元编程能力，允许在�
 
 ## 总结与展望 🚀
 
-![](img/72fa588386bb12c18d12179186d47d23_8.png)
 
 本节课中我们一起学习了 C++26 静态反射的核心内容。
 

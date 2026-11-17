@@ -73,7 +73,6 @@ def display_man(wrong_guesses):
 
 现在，我们来实现显示提示和答案的函数。`display_hint` 函数将列表形式的提示（如 `['_', '_', '_']`）用空格连接并打印。`display_answer` 函数类似，但直接打印正确答案。
 
-![](img/c5437b33378a76004c9629ab0a4a5800_1.png)
 
 ```python
 def display_hint(hint):
@@ -177,11 +176,9 @@ words = {
 }
 ```
 
-![](img/c5437b33378a76004c9629ab0a4a5800_3.png)
 
 然后，在主程序文件开头修改导入语句：
 
-![](img/c5437b33378a76004c9629ab0a4a5800_5.png)
 
 ```python
 from words_list import words
@@ -200,9 +197,7 @@ from words_list import words
 *   实现 **输入验证** 和 **游戏结束条件判断**。
 *   通过 **模块导入** 将单词列表分离到外部文件，提高代码可维护性。
 
-![](img/c5437b33378a76004c9629ab0a4a5800_7.png)
 
-![](img/c5437b33378a76004c9629ab0a4a5800_9.png)
 
 ![](img/c5437b33378a76004c9629ab0a4a5800_11.png)
 

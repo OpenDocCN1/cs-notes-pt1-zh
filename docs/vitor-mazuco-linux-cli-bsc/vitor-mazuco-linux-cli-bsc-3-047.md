@@ -132,7 +132,6 @@ rocky
 
 进入你存放清单文件的目录，执行以下命令：
 
-![](img/dbfc39e5710892a77b218eda87758eae_17.png)
 
 ![](img/dbfc39e5710892a77b218eda87758eae_19.png)
 

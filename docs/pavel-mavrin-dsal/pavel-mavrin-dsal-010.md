@@ -1,8 +1,6 @@
 # 010：动态规划基础
 
-![](img/f7a997f09e3cde565233f70171edb5e2_1.png)
 
-![](img/f7a997f09e3cde565233f70171edb5e2_3.png)
 
 ![](img/f7a997f09e3cde565233f70171edb5e2_5.png)
 

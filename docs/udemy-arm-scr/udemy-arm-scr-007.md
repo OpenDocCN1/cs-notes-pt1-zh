@@ -108,9 +108,7 @@ button_pressed:
 
 ## 总结
 
-![](img/f0ac1e5281a01d6fb8cdaa50bc732fbf_1.png)
 
-![](img/f0ac1e5281a01d6fb8cdaa50bc732fbf_2.png)
 
 本节课中我们一起学习了如何完成一个完整的GPIO输入控制程序。
 我们掌握了：
@@ -118,7 +116,6 @@ button_pressed:
 2.  如何编写**读取按钮输入**（`get_input`）的子程序，其核心是读取`IDR`寄存器并使用`AND`指令进行位掩码操作。
 3.  如何通过**主循环**和**条件分支**指令（`CMP`, `BEQ`）将输入检测与输出控制逻辑整合起来，形成一个响应按钮按下事件的完整程序。
 
-![](img/f0ac1e5281a01d6fb8cdaa50bc732fbf_3.png)
 
 ![](img/f0ac1e5281a01d6fb8cdaa50bc732fbf_4.png)
 

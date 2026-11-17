@@ -10,7 +10,6 @@
 
 我们将创建一个简单的游戏框架，包括窗口管理、输入处理和软件渲染。通过这个过程，你将理解游戏引擎的基本组成部分，并为后续的游戏开发打下坚实的基础。
 
-![](img/65cad47fe79d6d7fa64b4e5575d06d39_5.png)
 
 ![](img/65cad47fe79d6d7fa64b4e5575d06d39_7.png)
 
@@ -237,7 +236,6 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 
 ## 软件渲染
 
-![](img/65cad47fe79d6d7fa64b4e5575d06d39_133.png)
 
 ![](img/65cad47fe79d6d7fa64b4e5575d06d39_135.png)
 
@@ -333,7 +331,6 @@ render_buffer GlobalRenderBuffer;
 
 ![](img/65cad47fe79d6d7fa64b4e5575d06d39_206.png)
 
-![](img/65cad47fe79d6d7fa64b4e5575d06d39_208.png)
 
 ### 初始化渲染缓冲区
 
@@ -345,7 +342,6 @@ render_buffer GlobalRenderBuffer;
 
 ![](img/65cad47fe79d6d7fa64b4e5575d06d39_214.png)
 
-![](img/65cad47fe79d6d7fa64b4e5575d06d39_216.png)
 
 ![](img/65cad47fe79d6d7fa64b4e5575d06d39_218.png)
 
@@ -404,7 +400,6 @@ void ResizeRenderBuffer(render_buffer* Buffer, int Width, int Height)
 
 ![](img/65cad47fe79d6d7fa64b4e5575d06d39_242.png)
 
-![](img/65cad47fe79d6d7fa64b4e5575d06d39_243.png)
 
 ![](img/65cad47fe79d6d7fa64b4e5575d06d39_245.png)
 
@@ -501,9 +496,7 @@ void DisplayBuffer(HDC DeviceContext, render_buffer* Buffer)
 
 我们创建一个结构来存储输入状态。
 
-![](img/65cad47fe79d6d7fa64b4e5575d06d39_309.png)
 
-![](img/65cad47fe79d6d7fa64b4e5575d06d39_311.png)
 
 
 ![](img/65cad47fe79d6d7fa64b4e5575d06d39_313.png)
@@ -641,11 +634,8 @@ void ResetInput(input* Input)
 
 ![](img/65cad47fe79d6d7fa64b4e5575d06d39_393.png)
 
-![](img/65cad47fe79d6d7fa64b4e5575d06d39_395.png)
 
-![](img/65cad47fe79d6d7fa64b4e5575d06d39_397.png)
 
-![](img/65cad47fe79d6d7fa64b4e5575d06d39_398.png)
 
 ## 游戏循环集成
 
@@ -657,11 +647,8 @@ void ResetInput(input* Input)
 
 ![](img/65cad47fe79d6d7fa64b4e5575d06d39_405.png)
 
-![](img/65cad47fe79d6d7fa64b4e5575d06d39_407.png)
 
-![](img/65cad47fe79d6d7fa64b4e5575d06d39_409.png)
 
-![](img/65cad47fe79d6d7fa64b4e5575d06d39_411.png)
 
 ![](img/65cad47fe79d6d7fa64b4e5575d06d39_413.png)
 
@@ -750,9 +737,7 @@ while (GlobalRunning)
 
 ![](img/65cad47fe79d6d7fa64b4e5575d06d39_444.png)
 
-![](img/65cad47fe79d6d7fa64b4e5575d06d39_446.png)
 
-![](img/65cad47fe79d6d7fa64b4e5575d06d39_448.png)
 
 ![](img/65cad47fe79d6d7fa64b4e5575d06d39_450.png)
 
@@ -787,9 +772,7 @@ void DrawRect(vector2 Position, vector2 HalfSize, u32 Color)
 
 ![](img/65cad47fe79d6d7fa64b4e5575d06d39_454.png)
 
-![](img/65cad47fe79d6d7fa64b4e5575d06d39_456.png)
 
-![](img/65cad47fe79d6d7fa64b4e5575d06d39_458.png)
 
 ![](img/65cad47fe79d6d7fa64b4e5575d06d39_459.png)
 
@@ -797,17 +780,12 @@ void DrawRect(vector2 Position, vector2 HalfSize, u32 Color)
 
 ![](img/65cad47fe79d6d7fa64b4e5575d06d39_463.png)
 
-![](img/65cad47fe79d6d7fa64b4e5575d06d39_464.png)
 
-![](img/65cad47fe79d6d7fa64b4e5575d06d39_466.png)
 
-![](img/65cad47fe79d6d7fa64b4e5575d06d39_468.png)
 
-![](img/65cad47fe79d6d7fa64b4e5575d06d39_470.png)
 
 ## 时间管理
 
-![](img/65cad47fe79d6d7fa64b4e5575d06d39_472.png)
 
 ![](img/65cad47fe79d6d7fa64b4e5575d06d39_474.png)
 
@@ -819,13 +797,9 @@ void DrawRect(vector2 Position, vector2 HalfSize, u32 Color)
 
 ![](img/65cad47fe79d6d7fa64b4e5575d06d39_480.png)
 
-![](img/65cad47fe79d6d7fa64b4e5575d06d39_482.png)
 
-![](img/65cad47fe79d6d7fa64b4e5575d06d39_484.png)
 
-![](img/65cad47fe79d6d7fa64b4e5575d06d39_486.png)
 
-![](img/65cad47fe79d6d7fa64b4e5575d06d39_488.png)
 
 ![](img/65cad47fe79d6d7fa64b4e5575d06d39_490.png)
 
@@ -948,9 +922,7 @@ void UpdatePlayer(vector2* PlayerPosition, input* Input, f32 DeltaTime)
 
 ![](img/65cad47fe79d6d7fa64b4e5575d06d39_555.png)
 
-![](img/65cad47fe79d6d7fa64b4e5575d06d39_557.png)
 
-![](img/65cad47fe79d6d7fa64b4e5575d06d39_558.png)
 
 ![](img/65cad47fe79d6d7fa64b4e5575d06d39_560.png)
 
@@ -965,19 +937,13 @@ void UpdatePlayer(vector2* PlayerPosition, input* Input, f32 DeltaTime)
 
 ![](img/65cad47fe79d6d7fa64b4e5575d06d39_564.png)
 
-![](img/65cad47fe79d6d7fa64b4e5575d06d39_566.png)
 
-![](img/65cad47fe79d6d7fa64b4e5575d06d39_568.png)
 
 通过这个基础框架，我们已经为下一节课实现游戏玩法做好了准备。在下一节课中，我们将开始创建打砖块游戏的基本玩法。
 
-![](img/65cad47fe79d6d7fa64b4e5575d06d39_570.png)
 
-![](img/65cad47fe79d6d7fa64b4e5575d06d39_572.png)
 
-![](img/65cad47fe79d6d7fa64b4e5575d06d39_574.png)
 
-![](img/65cad47fe79d6d7fa64b4e5575d06d39_576.png)
 
 ![](img/65cad47fe79d6d7fa64b4e5575d06d39_578.png)
 

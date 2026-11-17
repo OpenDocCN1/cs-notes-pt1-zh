@@ -1,6 +1,5 @@
 # 008：数据包套接字 - 实现以太网库
 
-![](img/c2659e9ea806b288914cf08aedf7a4e0_0.png)
 
 ![](img/c2659e9ea806b288914cf08aedf7a4e0_0.png)
 

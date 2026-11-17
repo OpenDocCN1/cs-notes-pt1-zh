@@ -60,13 +60,10 @@
 
 ![](img/7011eb2fe997e9d598bb4046015d583f_50.png)
 
-![](img/7011eb2fe997e9d598bb4046015d583f_51.png)
 
-![](img/7011eb2fe997e9d598bb4046015d583f_53.png)
 
 ## 概述 📋
 
-![](img/7011eb2fe997e9d598bb4046015d583f_55.png)
 
 ![](img/7011eb2fe997e9d598bb4046015d583f_57.png)
 
@@ -84,7 +81,6 @@
 
 ![](img/7011eb2fe997e9d598bb4046015d583f_71.png)
 
-![](img/7011eb2fe997e9d598bb4046015d583f_73.png)
 
 在之前的课程中，我们已经创建了一个包含多种游戏模式和道具（如无敌、三连发、评论等）的弹球游戏。目前，这些道具仅以彩色方块显示。本节课的目标是：
 1.  为这些道具加载并显示自定义的位图图标。
@@ -92,7 +88,6 @@
 
 ![](img/7011eb2fe997e9d598bb4046015d583f_75.png)
 
-![](img/7011eb2fe997e9d598bb4046015d583f_77.png)
 
 ![](img/7011eb2fe997e9d598bb4046015d583f_79.png)
 
@@ -124,19 +119,12 @@
 
 上一节我们为游戏添加了旋转矩形和粒子系统等视觉效果。本节中，我们来看看如何为游戏引擎添加位图渲染功能。
 
-![](img/7011eb2fe997e9d598bb4046015d583f_101.png)
 
-![](img/7011eb2fe997e9d598bb4046015d583f_103.png)
 
-![](img/7011eb2fe997e9d598bb4046015d583f_105.png)
 
-![](img/7011eb2fe997e9d598bb4046015d583f_107.png)
 
-![](img/7011eb2fe997e9d598bb4046015d583f_109.png)
 
-![](img/7011eb2fe997e9d598bb4046015d583f_111.png)
 
-![](img/7011eb2fe997e9d598bb4046015d583f_113.png)
 
 ![](img/7011eb2fe997e9d598bb4046015d583f_115.png)
 
@@ -154,24 +142,18 @@
 
 ![](img/7011eb2fe997e9d598bb4046015d583f_127.png)
 
-![](img/7011eb2fe997e9d598bb4046015d583f_129.png)
 
-![](img/7011eb2fe997e9d598bb4046015d583f_131.png)
 
 首先，我们需要创建位图文件并将其加载到游戏中。
 
-![](img/7011eb2fe997e9d598bb4046015d583f_133.png)
 
-![](img/7011eb2fe997e9d598bb4046015d583f_135.png)
 
 **步骤：**
 1.  使用图像编辑工具（如Photoshop）创建简单的像素画图标（例如8x8或16x16像素），并保存为PNG格式。
 2.  在代码中创建文件读取功能，将PNG文件加载到内存中。
 3.  使用第三方库（如`stb_image`）将压缩的PNG数据解码为未压缩的像素数据。
 
-![](img/7011eb2fe997e9d598bb4046015d583f_137.png)
 
-![](img/7011eb2fe997e9d598bb4046015d583f_139.png)
 
 ![](img/7011eb2fe997e9d598bb4046015d583f_141.png)
 
@@ -179,15 +161,10 @@
 
 **核心代码：**
 
-![](img/7011eb2fe997e9d598bb4046015d583f_145.png)
 
-![](img/7011eb2fe997e9d598bb4046015d583f_147.png)
 
-![](img/7011eb2fe997e9d598bb4046015d583f_149.png)
 
-![](img/7011eb2fe997e9d598bb4046015d583f_151.png)
 
-![](img/7011eb2fe997e9d598bb4046015d583f_153.png)
 
 ![](img/7011eb2fe997e9d598bb4046015d583f_155.png)
 
@@ -205,11 +182,8 @@
 
 ![](img/7011eb2fe997e9d598bb4046015d583f_169.png)
 
-![](img/7011eb2fe997e9d598bb4046015d583f_171.png)
 
-![](img/7011eb2fe997e9d598bb4046015d583f_173.png)
 
-![](img/7011eb2fe997e9d598bb4046015d583f_175.png)
 
 
 ![](img/7011eb2fe997e9d598bb4046015d583f_177.png)
@@ -286,7 +260,6 @@ internal bitmap LoadPNG(char* filepath) {
 
 加载位图后，我们需要在屏幕上绘制它。这涉及到将位图的UV坐标（0到1的范围）映射到屏幕像素坐标。
 
-![](img/7011eb2fe997e9d598bb4046015d583f_213.png)
 
 ![](img/7011eb2fe997e9d598bb4046015d583f_215.png)
 
@@ -356,7 +329,6 @@ internal void DrawBitmap(bitmap* bitmap, v2 p, v2 half_size) {
 **颜色格式转换：**
 由于Windows通常使用BGRA字节顺序，而加载的像素数据可能是RGBA，因此可能需要在加载后或渲染前交换红色和蓝色通道。
 
-![](img/7011eb2fe997e9d598bb4046015d583f_239.png)
 
 ![](img/7011eb2fe997e9d598bb4046015d583f_241.png)
 
@@ -424,9 +396,7 @@ internal void DrawBitmap(bitmap* bitmap, v2 p, v2 half_size) {
 
 ![](img/7011eb2fe997e9d598bb4046015d583f_297.png)
 
-![](img/7011eb2fe997e9d598bb4046015d583f_299.png)
 
-![](img/7011eb2fe997e9d598bb4046015d583f_301.png)
 
 ![](img/7011eb2fe997e9d598bb4046015d583f_303.png)
 
@@ -440,9 +410,7 @@ internal void DrawBitmap(bitmap* bitmap, v2 p, v2 half_size) {
 
 ![](img/7011eb2fe997e9d598bb4046015d583f_313.png)
 
-![](img/7011eb2fe997e9d598bb4046015d583f_315.png)
 
-![](img/7011eb2fe997e9d598bb4046015d583f_317.png)
 
 ![](img/7011eb2fe997e9d598bb4046015d583f_319.png)
 
@@ -521,7 +489,6 @@ internal void DrawBitmap(bitmap* bitmap, v2 p, v2 half_size) {
 
 ![](img/7011eb2fe997e9d598bb4046015d583f_385.png)
 
-![](img/7011eb2fe997e9d598bb4046015d583f_387.png)
 
 ![](img/7011eb2fe997e9d598bb4046015d583f_389.png)
 
@@ -567,25 +534,19 @@ internal void DrawRectangleSubpixel(v2 p, v2 half_size, v4 color) {
 
 ![](img/7011eb2fe997e9d598bb4046015d583f_393.png)
 
-![](img/7011eb2fe997e9d598bb4046015d583f_395.png)
 
-![](img/7011eb2fe997e9d598bb4046015d583f_397.png)
 
-![](img/7011eb2fe997e9d598bb4046015d583f_399.png)
 
 ![](img/7011eb2fe997e9d598bb4046015d583f_401.png)
 
 ![](img/7011eb2fe997e9d598bb4046015d583f_403.png)
 
-![](img/7011eb2fe997e9d598bb4046015d583f_405.png)
 
-![](img/7011eb2fe997e9d598bb4046015d583f_407.png)
 
 ![](img/7011eb2fe997e9d598bb4046015d583f_409.png)
 
 ![](img/7011eb2fe997e9d598bb4046015d583f_411.png)
 
-![](img/7011eb2fe997e9d598bb4046015d583f_413.png)
 
 ![](img/7011eb2fe997e9d598bb4046015d583f_415.png)
 
@@ -609,9 +570,7 @@ internal void DrawRectangleSubpixel(v2 p, v2 half_size, v4 color) {
 
 ![](img/7011eb2fe997e9d598bb4046015d583f_432.png)
 
-![](img/7011eb2fe997e9d598bb4046015d583f_434.png)
 
-![](img/7011eb2fe997e9d598bb4046015d583f_436.png)
 
 ![](img/7011eb2fe997e9d598bb4046015d583f_438.png)
 
@@ -619,11 +578,8 @@ internal void DrawRectangleSubpixel(v2 p, v2 half_size, v4 color) {
 
 ![](img/7011eb2fe997e9d598bb4046015d583f_442.png)
 
-![](img/7011eb2fe997e9d598bb4046015d583f_444.png)
 
-![](img/7011eb2fe997e9d598bb4046015d583f_446.png)
 
-![](img/7011eb2fe997e9d598bb4046015d583f_448.png)
 
 ![](img/7011eb2fe997e9d598bb4046015d583f_450.png)
 
@@ -679,13 +635,9 @@ internal void DrawRectangleSubpixel(v2 p, v2 half_size, v4 color) {
 
 ![](img/7011eb2fe997e9d598bb4046015d583f_497.png)
 
-![](img/7011eb2fe997e9d598bb4046015d583f_499.png)
 
-![](img/7011eb2fe997e9d598bb4046015d583f_501.png)
 
-![](img/7011eb2fe997e9d598bb4046015d583f_503.png)
 
-![](img/7011eb2fe997e9d598bb4046015d583f_505.png)
 
 ![](img/7011eb2fe997e9d598bb4046015d583f_507.png)
 
@@ -768,9 +720,7 @@ internal void DrawRectangleSubpixel(v2 p, v2 half_size, v4 color) {
 
 ![](img/7011eb2fe997e9d598bb4046015d583f_573.png)
 
-![](img/7011eb2fe997e9d598bb4046015d583f_575.png)
 
-![](img/7011eb2fe997e9d598bb4046015d583f_577.png)
 
 ![](img/7011eb2fe997e9d598bb4046015d583f_579.png)
 

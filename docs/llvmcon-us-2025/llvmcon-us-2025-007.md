@@ -1,6 +1,5 @@
 # 007：核心设计与实现
 
-![](img/bb2424e1b8c9a46720dd9af42c6bc9f7_0.png)
 
 ![](img/bb2424e1b8c9a46720dd9af42c6bc9f7_0.png)
 

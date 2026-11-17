@@ -1,6 +1,5 @@
 # 086：云存储 📁
 
-![](img/3fae9ff9f7900dbaa166e65c7d80758a_0.png)
 
 ![](img/3fae9ff9f7900dbaa166e65c7d80758a_1.png)
 

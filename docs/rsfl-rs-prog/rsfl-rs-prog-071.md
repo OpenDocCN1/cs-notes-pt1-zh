@@ -48,9 +48,7 @@ fn main() {
 
 运行此代码会产生错误。错误信息表明，为了使 `result` 对 `println!` 语句有效，`string2` 需要有效直到外部作用域结束。换句话说，`string2` 存活得不够久。
 
-![](img/03cf807eeab8ceb19899732e79ac3fd9_1.png)
 
-![](img/03cf807eeab8ceb19899732e79ac3fd9_2.png)
 
 作为人类，我们可以查看这段代码并看到 `string1` 比 `string2` 长，因此 `result` 将包含对 `string1` 的引用。由于 `string1` 尚未离开作用域，对 `string1` 的引用对 `println!` 语句仍然有效。然而，编译器无法看到在这种情况下引用是有效的。我们已经告诉 Rust，`longest` 函数返回的引用的生命周期与传入引用的生命周期中较短者相同。因此，借用检查器将此代码视为可能包含无效引用。
 
@@ -93,9 +91,7 @@ fn invalid_return<'a>() -> &'a str {
 
 以下是修复后的代码：
 
-![](img/03cf807eeab8ceb19899732e79ac3fd9_4.png)
 
-![](img/03cf807eeab8ceb19899732e79ac3fd9_5.png)
 
 ```rust
 fn valid_return() -> String {

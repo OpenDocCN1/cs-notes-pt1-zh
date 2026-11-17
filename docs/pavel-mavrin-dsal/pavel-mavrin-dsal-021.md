@@ -1,84 +1,49 @@
 # 021：二维线段树问题
 
-![](img/cabea0d72aeb07c490dd8831d3f3cfce_1.png)
 
-![](img/cabea0d72aeb07c490dd8831d3f3cfce_3.png)
 
-![](img/cabea0d72aeb07c490dd8831d3f3cfce_5.png)
 
-![](img/cabea0d72aeb07c490dd8831d3f3cfce_7.png)
 
-![](img/cabea0d72aeb07c490dd8831d3f3cfce_9.png)
 
 在本节课中，我们将要学习如何处理二维问题。我们将介绍两种主要技术：第一种是利用一维数据结构（如线段树）通过扫描线法解决二维查询；第二种是直接构建二维数据结构（如二维线段树）来处理二维操作。内容将尽可能简单直白，让初学者能够看懂。
 
-![](img/cabea0d72aeb07c490dd8831d3f3cfce_11.png)
 
-![](img/cabea0d72aeb07c490dd8831d3f3cfce_12.png)
 
-![](img/cabea0d72aeb07c490dd8831d3f3cfce_14.png)
 
-![](img/cabea0d72aeb07c490dd8831d3f3cfce_15.png)
 
-![](img/cabea0d72aeb07c490dd8831d3f3cfce_16.png)
 
-![](img/cabea0d72aeb07c490dd8831d3f3cfce_18.png)
 
 ---
 
-![](img/cabea0d72aeb07c490dd8831d3f3cfce_20.png)
 
-![](img/cabea0d72aeb07c490dd8831d3f3cfce_22.png)
 
-![](img/cabea0d72aeb07c490dd8831d3f3cfce_24.png)
 
-![](img/cabea0d72aeb07c490dd8831d3f3cfce_26.png)
 
-![](img/cabea0d72aeb07c490dd8831d3f3cfce_28.png)
 
-![](img/cabea0d72aeb07c490dd8831d3f3cfce_30.png)
 
-![](img/cabea0d72aeb07c490dd8831d3f3cfce_32.png)
 
 ## 一维与二维问题
 
-![](img/cabea0d72aeb07c490dd8831d3f3cfce_34.png)
 
-![](img/cabea0d72aeb07c490dd8831d3f3cfce_35.png)
 
-![](img/cabea0d72aeb07c490dd8831d3f3cfce_37.png)
 
-![](img/cabea0d72aeb07c490dd8831d3f3cfce_39.png)
 
-![](img/cabea0d72aeb07c490dd8831d3f3cfce_41.png)
 
 上一节我们讨论了一维线段树。在一维情况下，我们有一个一维数组，并在一维区间上进行查询和计算。
 
-![](img/cabea0d72aeb07c490dd8831d3f3cfce_43.png)
 
-![](img/cabea0d72aeb07c490dd8831d3f3cfce_45.png)
 
-![](img/cabea0d72aeb07c490dd8831d3f3cfce_46.png)
 
-![](img/cabea0d72aeb07c490dd8831d3f3cfce_47.png)
 
-![](img/cabea0d72aeb07c490dd8831d3f3cfce_1.png)
 
-![](img/cabea0d72aeb07c490dd8831d3f3cfce_49.png)
 
-![](img/cabea0d72aeb07c490dd8831d3f3cfce_51.png)
 
-![](img/cabea0d72aeb07c490dd8831d3f3cfce_53.png)
 
-![](img/cabea0d72aeb07c490dd8831d3f3cfce_55.png)
 
-![](img/cabea0d72aeb07c490dd8831d3f3cfce_57.png)
 
 然而，现实问题并不总是一维的。有时我们需要处理二维甚至更高维度的操作。例如，我们可能需要回答基于二维平面的查询。
 
-![](img/cabea0d72aeb07c490dd8831d3f3cfce_59.png)
 
-![](img/cabea0d72aeb07c490dd8831d3f3cfce_9.png)
 
 本节中，我们将学习两种技术：
 1.  如何使用一维数据结构来回答二维查询（扫描线法）。
@@ -93,15 +58,12 @@
 让我们从一个简单的二维问题开始：矩形覆盖计数。
 假设平面上有一些矩形。
 
-![](img/cabea0d72aeb07c490dd8831d3f3cfce_14.png)
 
 同时，平面上有一些点。
 
-![](img/cabea0d72aeb07c490dd8831d3f3cfce_26.png)
 
 对于每个点，我们需要计算覆盖该点的矩形数量。
 
-![](img/cabea0d72aeb07c490dd8831d3f3cfce_30.png)
 
 例如，上图中某些点被0个、1个或2个矩形覆盖。
 
@@ -110,11 +72,9 @@
 扫描线技术的核心思想是将二维问题降维为一维问题。
 我们创建一条垂直的扫描线。
 
-![](img/cabea0d72aeb07c490dd8831d3f3cfce_43.png)
 
 让这条线从最左侧开始，逐步向右移动。
 
-![](img/cabea0d72aeb07c490dd8831d3f3cfce_45.png)
 
 在移动过程中，我们只维护当前扫描线上的状态，而不是整个平面的状态。这样，我们就把平面分割成了一系列垂直线，并为每条线回答查询。
 
@@ -122,11 +82,9 @@
 
 当扫描线移动到某个位置时，例如经过一个查询点。
 
-![](img/cabea0d72aeb07c490dd8831d3f3cfce_53.png)
 
 此时，扫描线内部的问题就变成了一维的：我们有一些线段（矩形在扫描线上的投影），需要查询给定点被多少条线段覆盖。
 
-![](img/cabea0d72aeb07c490dd8831d3f3cfce_59.png)
 
 这是一个经典的一维问题，可以使用线段树解决。
 
@@ -169,7 +127,6 @@
 
 给定多个矩形，计算它们覆盖区域的总面积（重叠部分只算一次）。
 
-![](img/cabea0d72aeb07c490dd8831d3f3cfce_11.png)
 
 ### 从一维问题思考
 
@@ -233,7 +190,6 @@
 2.  外层线段树的**每个节点**，不再存储一个单一值，而是存储对应行区间的一棵**内层线段树**。
 3.  内层线段树则以**列**为元素，负责管理列区间上的信息。
 
-![](img/cabea0d72aeb07c490dd8831d3f3cfce_61.png)
 
 例如，一个4x4的矩阵：
 *   外层树根节点代表所有行 `[0,4)`，其内层树管理所有列。

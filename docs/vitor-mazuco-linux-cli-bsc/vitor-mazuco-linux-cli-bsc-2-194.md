@@ -26,7 +26,6 @@ kubectl get componentstatuses
 
 除了组件状态，了解集群中的节点详情也非常重要。
 
-![](img/b89af10bd1ace8eaa98a582604087d44_1.png)
 
 以下是列出所有节点的命令：
 ```bash
@@ -34,13 +33,10 @@ kubectl get nodes
 ```
 如你所见，该命令会显示主节点和工作节点的信息，包括它们的Kubernetes版本。这是我们之前课程中已经使用过的命令。
 
-![](img/b89af10bd1ace8eaa98a582604087d44_3.png)
 
 ## 获取节点详细信息
 
-![](img/b89af10bd1ace8eaa98a582604087d44_5.png)
 
-![](img/b89af10bd1ace8eaa98a582604087d44_7.png)
 
 为了观察更具体的细节，我们可以获取单个节点的详尽描述。
 

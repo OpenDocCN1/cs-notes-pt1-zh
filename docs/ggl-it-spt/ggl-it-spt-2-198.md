@@ -1,6 +1,5 @@
 # 198：映像软件 📀
 
-![](img/add5cca3e6a171e5f14cc015db8b6269_0.png)
 
 ![](img/add5cca3e6a171e5f14cc015db8b6269_1.png)
 

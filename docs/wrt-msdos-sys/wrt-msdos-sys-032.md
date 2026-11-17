@@ -25,27 +25,20 @@
 
 VGA 及以上的显卡标准提供了 BIOS 中断来查询显示组合。这是最直接的方法。
 
-![](img/b40b5f9afaa8c465d97b7773ada977a4_3.png)
 
-![](img/b40b5f9afaa8c465d97b7773ada977a4_5.png)
 
-![](img/b40b5f9afaa8c465d97b7773ada977a4_6.png)
 
 我们使用 `INT 0x10`（视频服务中断）的子功能 `0x1A`（获取显示组合代码）。
 
-![](img/b40b5f9afaa8c465d97b7773ada977a4_8.png)
 
-![](img/b40b5f9afaa8c465d97b7773ada977a4_9.png)
 
 **代码示例：**
 
-![](img/b40b5f9afaa8c465d97b7773ada977a4_11.png)
 
 ![](img/b40b5f9afaa8c465d97b7773ada977a4_12.png)
 
 ![](img/b40b5f9afaa8c465d97b7773ada977a4_14.png)
 
-![](img/b40b5f9afaa8c465d97b7773ada977a4_16.png)
 
 ```c
 union REGS regs;
@@ -61,7 +54,6 @@ if (regs.h.al == 0x1A) { // 功能调用成功
 ```
 调用成功后，`BL` 和 `BH` 寄存器中的代码分别对应主显示卡和次显示卡。我们可以将这些代码转换为可读的字符串（如 “VGA with analog color display”）。
 
-![](img/b40b5f9afaa8c465d97b7773ada977a4_18.png)
 
 ![](img/b40b5f9afaa8c465d97b7773ada977a4_20.png)
 
@@ -168,7 +160,6 @@ int test6845(unsigned port) {
 
 为了区分两者，我们需要检查 Hercules 卡独有的特性：其状态寄存器（端口 `0x3BA`）的第 7 位会在水平回扫期间切换，而 MDA 卡的这一位是固定的。
 
-![](img/b40b5f9afaa8c465d97b7773ada977a4_48.png)
 
 ![](img/b40b5f9afaa8c465d97b7773ada977a4_50.png)
 
@@ -204,7 +195,6 @@ if (test6845(0x3B4)) {
 
 本节课中我们一起学习了在 MS-DOS 环境下自动检测图形显卡的完整方法。
 
-![](img/b40b5f9afaa8c465d97b7773ada977a4_61.png)
 
 ![](img/b40b5f9afaa8c465d97b7773ada977a4_63.png)
 
@@ -218,7 +208,6 @@ if (test6845(0x3B4)) {
 1.  **模拟器选择：** 此类底层硬件检测代码需要高精度的模拟器（如 86Box）或真实硬件才能可靠运行。DOSBox 等侧重于兼容性和速度的模拟器可能无法准确模拟 6845 芯片行为。
 2.  **用户覆盖：** 自动检测并非 100% 可靠，特别是面对非标准或兼容性不佳的硬件时。因此，在商业软件中，提供一个允许用户手动选择显卡类型的配置选项始终是明智之举。
 
-![](img/b40b5f9afaa8c465d97b7773ada977a4_68.png)
 
 ![](img/b40b5f9afaa8c465d97b7773ada977a4_70.png)
 

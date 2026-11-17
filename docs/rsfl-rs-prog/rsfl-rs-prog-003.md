@@ -13,9 +13,7 @@
 cargo new guessing_game
 ```
 
-![](img/be70da5ada98a18c66f19fb7c9eb57d6_1.png)
 
-![](img/be70da5ada98a18c66f19fb7c9eb57d6_2.png)
 
 项目创建完成后，使用 `cd` 命令进入项目目录：
 ```bash
@@ -26,11 +24,9 @@ cd guessing_game
 
 ---
 
-![](img/be70da5ada98a18c66f19fb7c9eb57d6_4.png)
 
 ## 添加欢迎信息与生成随机数 🎲
 
-![](img/be70da5ada98a18c66f19fb7c9eb57d6_5.png)
 
 上一节我们创建了项目，本节中我们来看看如何为游戏添加欢迎信息并生成一个随机数。
 
@@ -46,11 +42,9 @@ println!("猜数字！");
 use rand::Rng;
 ```
 
-![](img/be70da5ada98a18c66f19fb7c9eb57d6_7.png)
 
 但是，`rand` 是一个外部 crate，默认不在 Rust 的标准库中。因此，我们需要先将其添加到项目的依赖中。
 
-![](img/be70da5ada98a18c66f19fb7c9eb57d6_9.png)
 
 以下是添加依赖的步骤：
 
@@ -69,7 +63,6 @@ let secret_number: u32 = rand::thread_rng().gen_range(1..=100);
 *   `rand::thread_rng()` 获取一个随机数生成器。
 *   `gen_range(1..=100)` 生成一个 1 到 100（包含）之间的随机数。
 
-![](img/be70da5ada98a18c66f19fb7c9eb57d6_11.png)
 
 为了调试方便，我们可以先打印出这个秘密数字：
 ```rust
@@ -77,7 +70,6 @@ println!("秘密数字是：{}", secret_number);
 ```
 注意：Rust 中语句的结尾需要加上分号 `;`。
 
-![](img/be70da5ada98a18c66f19fb7c9eb57d6_12.png)
 
 现在，运行 `cargo run`，你应该能看到类似 “秘密数字是：81” 的输出。
 
@@ -94,15 +86,10 @@ loop {
 }
 ```
 
-![](img/be70da5ada98a18c66f19fb7c9eb57d6_14.png)
 
-![](img/be70da5ada98a18c66f19fb7c9eb57d6_15.png)
 
-![](img/be70da5ada98a18c66f19fb7c9eb57d6_16.png)
 
-![](img/be70da5ada98a18c66f19fb7c9eb57d6_17.png)
 
-![](img/be70da5ada98a18c66f19fb7c9eb57d6_18.png)
 
 在循环内部，我们需要获取用户的输入。为此，我们先创建一个可变的（mutable）字符串变量来存储输入：
 ```rust
@@ -111,14 +98,12 @@ let mut guess = String::new();
 *   在 Rust 中，变量默认是不可变的（immutable）。使用 `mut` 关键字可以声明一个可变变量。
 *   `String::new()` 创建一个新的空字符串。
 
-![](img/be70da5ada98a18c66f19fb7c9eb57d6_19.png)
 
 接下来，我们需要从标准输入（stdin）读取一行内容。这需要使用标准库 `std::io` 中的功能。在文件顶部添加导入：
 ```rust
 use std::io;
 ```
 
-![](img/be70da5ada98a18c66f19fb7c9eb57d6_21.png)
 
 然后，在循环内使用以下代码读取输入：
 ```rust
@@ -130,7 +115,6 @@ io::stdin()
 *   `.read_line(&mut guess)` 将用户输入的内容读取到 `guess` 变量中。`&mut` 表示这是一个可变引用，允许函数修改 `guess` 的值。
 *   `.expect("...")` 用于处理可能出现的错误。如果读取失败，程序会崩溃并显示给定的错误信息。
 
-![](img/be70da5ada98a18c66f19fb7c9eb57d6_22.png)
 
 用户输入的内容是字符串，但我们需要一个整数来与秘密数字进行比较。因此，我们需要进行类型转换：
 ```rust
@@ -149,13 +133,10 @@ println!("你猜的是：{}", guess);
 
 ---
 
-![](img/be70da5ada98a18c66f19fb7c9eb57d6_24.png)
 
-![](img/be70da5ada98a18c66f19fb7c9eb57d6_25.png)
 
 ## 比较猜测与秘密数字 🏆
 
-![](img/be70da5ada98a18c66f19fb7c9eb57d6_26.png)
 
 上一节我们实现了用户输入，本节中我们来实现游戏的核心逻辑：比较用户的猜测与秘密数字，并给出提示。
 
@@ -188,7 +169,6 @@ match guess.cmp(&secret_number) {
 
 ---
 
-![](img/be70da5ada98a18c66f19fb7c9eb57d6_28.png)
 
 ## 总结与挑战 📚
 

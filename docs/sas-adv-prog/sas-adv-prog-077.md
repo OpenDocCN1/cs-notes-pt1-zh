@@ -36,9 +36,7 @@ PROC SQL;
 QUIT;
 ```
 
-![](img/d7ed95fed234bfd223e1cff0e04299d2_1.png)
 
-![](img/d7ed95fed234bfd223e1cff0e04299d2_3.png)
 
 注意，我们使用`AS`关键字为计算出的百分比列命名（`PCT_Pop`），并使用`PERCENT7.2`格式将其显示为百分比。
 

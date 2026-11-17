@@ -1,30 +1,18 @@
 # 043：Aho-Corasick 算法 🎯
 
-![](img/41fb4f6b1cef2af9be617e35e749b848_1.png)
 
-![](img/41fb4f6b1cef2af9be617e35e749b848_3.png)
 
-![](img/41fb4f6b1cef2af9be617e35e749b848_4.png)
 
-![](img/41fb4f6b1cef2af9be617e35e749b848_6.png)
 
-![](img/41fb4f6b1cef2af9be617e35e749b848_8.png)
 
-![](img/41fb4f6b1cef2af9be617e35e749b848_9.png)
 
-![](img/41fb4f6b1cef2af9be617e35e749b848_11.png)
 
-![](img/41fb4f6b1cef2af9be617e35e749b848_13.png)
 
-![](img/41fb4f6b1cef2af9be617e35e749b848_15.png)
 
 在本节课中，我们将学习 Aho-Corasick 算法。这是一个用于在文本中同时查找多个模式串的高效算法。我们将从问题定义开始，逐步构建算法的核心概念，并学习如何用它解决不同类型的字符串匹配问题。
 
-![](img/41fb4f6b1cef2af9be617e35e749b848_17.png)
 
-![](img/41fb4f6b1cef2af9be617e35e749b848_19.png)
 
-![](img/41fb4f6b1cef2af9be617e35e749b848_21.png)
 
 ## 问题定义
 

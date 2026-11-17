@@ -23,7 +23,6 @@
 
 示例代码可以在我们的课程页面找到。我们从导入必要的模块开始。
 
-![](img/f1f6b27233c697fd02bf2b9db9643003_1.png)
 
 ```python
 from machine import ADC, Pin
@@ -135,7 +134,6 @@ ADC做的事情正如其名：它将Pico引脚上的模拟电压转换成数字P
 
 ### 总结
 
-![](img/f1f6b27233c697fd02bf2b9db9643003_9.png)
 
 ![](img/f1f6b27233c697fd02bf2b9db9643003_10.png)
 

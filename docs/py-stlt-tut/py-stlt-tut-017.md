@@ -1,13 +1,11 @@
 # 017：Streamlit 网页爬虫 - 准备 HTML Soup
 
-![](img/256fbc2f7b3cc0046ed07cff1b554401_1.png)
 
 ## 概述
 在本节课中，我们将开始使用 Streamlit 编写一个网页爬虫应用。我们将学习如何发送网络请求、解析 HTML 内容，并提取网页中的特定元素。
 
 ---
 
-![](img/256fbc2f7b3cc0046ed07cff1b554401_3.png)
 
 ## 创建项目文件
 首先，我们需要创建一个新的 Python 文件。
@@ -40,7 +38,6 @@ from bs4 import BeautifulSoup
 我们将创建一个包含标题、输入框和提交按钮的简单表单。
 
 
-![](img/256fbc2f7b3cc0046ed07cff1b554401_5.png)
 
 ```python
 # 创建应用标题
@@ -67,7 +64,6 @@ with st.form(key='search_form'):
 4.  检查请求状态，确保成功获取网页。
 5.  使用 `BeautifulSoup` 解析返回的 HTML 内容。
 
-![](img/256fbc2f7b3cc0046ed07cff1b554401_7.png)
 
 ```python
 if search_submitted:
@@ -99,13 +95,11 @@ if search_submitted:
     print(len(rows))
 ```
 
-![](img/256fbc2f7b3cc0046ed07cff1b554401_9.png)
 
 **注意**：在实际操作中，你需要使用浏览器开发者工具检查目标网页，找到包含图片列表的容器的正确类名，并替换代码中的 `'特定的类名'`。
 
 ---
 
-![](img/256fbc2f7b3cc0046ed07cff1b554401_11.png)
 
 ## 总结
 本节课中我们一起学习了如何使用 Streamlit 构建一个网页爬虫应用的基础框架。我们完成了以下步骤：

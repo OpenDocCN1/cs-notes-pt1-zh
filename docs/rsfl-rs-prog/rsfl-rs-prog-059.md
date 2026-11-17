@@ -18,7 +18,6 @@ Rust 有几个特性来管理代码的组织结构，包括哪些细节是公开
 
 一个 **Crate** 是 Rust 编译器一次处理的最小代码单位。
 
-![](img/cb9110235435fa032a8f9cea2be02986_1.png)
 
 即使我们决定使用 `rustc` 而不是 `cargo` 来编译，并传入一个单独的代码文件，编译器也会将该文件视为一个 Crate。
 
@@ -28,11 +27,8 @@ Rust 有几个特性来管理代码的组织结构，包括哪些细节是公开
 rustc src/main.rs
 ```
 
-![](img/cb9110235435fa032a8f9cea2be02986_1.png)
 
-![](img/cb9110235435fa032a8f9cea2be02986_4.png)
 
-![](img/cb9110235435fa032a8f9cea2be02986_2.png)
 
 这将创建一个可执行文件。如上图所示，在文本上方，我们生成了 `main` 文件。要运行它，只需输入 `./main`。
 
@@ -40,11 +36,8 @@ rustc src/main.rs
 ./main
 ```
 
-![](img/cb9110235435fa032a8f9cea2be02986_4.png)
 
-![](img/cb9110235435fa032a8f9cea2be02986_6.png)
 
-![](img/cb9110235435fa032a8f9cea2be02986_6.png)
 
 这样，我们就成功运行了代码。此外，Crate 可以包含模块，这些模块可能定义在其他文件中，并与 Crate 一起编译，我们稍后会看到这一点。
 
@@ -73,10 +66,6 @@ fn roll() {
 
 要运行这段代码，我们只需调用 `roll()` 函数。下次运行时，我们应该会得到不同的点数。第一次运行时，我连续掷出了三个 3，起初我以为是 bug，但只是运气很好。如你所见，第二次运行时，我得到了不同的数字。
 
-![](img/cb9110235435fa032a8f9cea2be02986_8.png)
-![](img/cb9110235435fa032a8f9cea2be02986_9.png)
-![](img/cb9110235435fa032a8f9cea2be02986_10.png)
-![](img/cb9110235435fa032a8f9cea2be02986_11.png)
 
 `rand` crate 提供了生成随机数的功能。需要注意的是，大多数时候当 Rustaceans 提到“crate”时，他们指的是**库 Crate**，这个术语与通用编程概念中的“库”可以互换使用。
 
@@ -84,15 +73,11 @@ fn roll() {
 
 ## 什么是包？📦
 
-![](img/cb9110235435fa032a8f9cea2be02986_8.png)
 
 接下来，让我们谈谈包。一个**包**是一个或多个提供一组功能的 Crate 的集合。
 
-![](img/cb9110235435fa032a8f9cea2be02986_9.png)
 
-![](img/cb9110235435fa032a8f9cea2be02986_10.png)
 
-![](img/cb9110235435fa032a8f9cea2be02986_11.png)
 
 每个包都包含一个 `Cargo.toml` 文件，它告诉 Rust 如何构建这些 Crate。
 
@@ -104,21 +89,15 @@ fn roll() {
 cargo new new_project
 ```
 
-![](img/cb9110235435fa032a8f9cea2be02986_13.png)
 
 然后，我们输入 `ls new_project` 来列出该项目中存在的所有文件和目录。
 
-![](img/cb9110235435fa032a8f9cea2be02986_14.png)
 
-![](img/cb9110235435fa032a8f9cea2be02986_13.png)
 
-![](img/cb9110235435fa032a8f9cea2be02986_14.png)
 
-![](img/cb9110235435fa032a8f9cea2be02986_15.png)
 
 此时，我们只有一个 `Cargo.toml` 文件和一个 `src` 目录。由于这个项目有 `Cargo.toml` 文件，它正式成为一个包。我们甚至可以导航到这个 `new_project` 目录以便直观地查看。
 
-![](img/cb9110235435fa032a8f9cea2be02986_15.png)
 
 如你所见，我们有 `Cargo.toml`、`.gitignore`（在此上下文中不重要）和 `src` 目录。在 `src` 目录中，你会看到一个 `main.rs` 文件。这个文件是二进制 Crate 的起点，它以包的名字命名。
 
@@ -130,17 +109,11 @@ cargo new new_project
 mkdir src/bin
 ```
 
-![](img/cb9110235435fa032a8f9cea2be02986_17.png)
 
 在里面，我们可以添加一些其他的二进制文件，例如 `example.rs`。这里的每个文件都会成为其自己的二进制 Crate。
 
-![](img/cb9110235435fa032a8f9cea2be02986_17.png)
 
-![](img/cb9110235435fa032a8f9cea2be02986_18.png)
 
-![](img/cb9110235435fa032a8f9cea2be02986_18.png)
-![](img/cb9110235435fa032a8f9cea2be02986_20.png)
-![](img/cb9110235435fa032a8f9cea2be02986_21.png)
 
 ## 总结
 
@@ -150,7 +123,6 @@ mkdir src/bin
 *   **包** 通过 `Cargo.toml` 文件管理一个或多个 Crate，一个包最多包含一个库 Crate，但可以有多个二进制 Crate。
 *   项目的入口文件：`src/main.rs` 是二进制 Crate 的根，`src/lib.rs` 是库 Crate 的根，额外的二进制 Crate 可以放在 `src/bin/` 目录下。
 
-![](img/cb9110235435fa032a8f9cea2be02986_20.png)
 
 ![](img/cb9110235435fa032a8f9cea2be02986_21.png)
 

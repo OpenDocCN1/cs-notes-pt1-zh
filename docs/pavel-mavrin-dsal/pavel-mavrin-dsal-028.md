@@ -1,24 +1,15 @@
 # 028：Link-Cut Tree
 
-![](img/59fc2da6e1bcbbd8441ab3de5d8a43f0_1.png)
 
-![](img/59fc2da6e1bcbbd8441ab3de5d8a43f0_3.png)
 
-![](img/59fc2da6e1bcbbd8441ab3de5d8a43f0_5.png)
 
-![](img/59fc2da6e1bcbbd8441ab3de5d8a43f0_7.png)
 
-![](img/59fc2da6e1bcbbd8441ab3de5d8a43f0_9.png)
 
-![](img/59fc2da6e1bcbbd8441ab3de5d8a43f0_11.png)
 
 在本节课中，我们将学习一种强大的数据结构——Link-Cut Tree。它允许我们在一个动态变化的森林（一组树）上高效地执行三种核心操作：连接两棵树、切断一条边，以及在树中任意节点到根的路径上计算某个函数。我们将看到，这个结构虽然听起来复杂，但其核心思想非常巧妙，并且代码实现可以相当简洁。
 
-![](img/59fc2da6e1bcbbd8441ab3de5d8a43f0_13.png)
 
-![](img/59fc2da6e1bcbbd8441ab3de5d8a43f0_15.png)
 
-![](img/59fc2da6e1bcbbd8441ab3de5d8a43f0_17.png)
 
 上一节我们讨论了静态树上的路径查询。本节中，我们将升级这个结构，使其能够处理树结构的动态变化。
 

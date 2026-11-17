@@ -1,6 +1,5 @@
 # 005：E代表Amazon EC2 🖥️
 
-![](img/2d1a12a031e4e6eef61761784e3fc33e_0.png)
 
 在本节课中，我们将要学习AWS云服务中的核心计算服务——Amazon Elastic Compute Cloud（EC2）。我们将了解EC2是什么、它的核心特性、如何工作以及它如何帮助您灵活、经济高效地运行应用程序。
 
@@ -16,7 +15,6 @@ EC2遵循**按需付费**的定价模式，这意味着您只需为实际使用�
 
 ## EC2的核心特性与优势
 
-![](img/2d1a12a031e4e6eef61761784e3fc33e_2.png)
 
 上一节我们介绍了EC2的基本概念，本节中我们来看看它的一些核心特性和优势。
 
@@ -24,19 +22,15 @@ EC2遵循**按需付费**的定价模式，这意味着您只需为实际使用�
 
 ![](img/2d1a12a031e4e6eef61761784e3fc33e_4.png)
 
-![](img/2d1a12a031e4e6eef61761784e3fc33e_5.png)
 
 ### 弹性伸缩
 
-![](img/2d1a12a031e4e6eef61761784e3fc33e_6.png)
 
 ![](img/2d1a12a031e4e6eef61761784e3fc33e_7.png)
 
-![](img/2d1a12a031e4e6eef61761784e3fc33e_8.png)
 
 假设您在EC2上运行一个工作负载，当该工作负载的需求突然激增时，您可以使用**Amazon EC2 Auto Scaling**功能进行横向扩展，以满足需求高峰。当需求下降时，您可以再缩减规模。在缩减时，您可以停止或终止不再需要的EC2实例，同时停止为这些实例付费。
 
-![](img/2d1a12a031e4e6eef61761784e3fc33e_9.png)
 
 ![](img/2d1a12a031e4e6eef61761784e3fc33e_10.png)
 
@@ -61,9 +55,7 @@ EC2具有极高的灵活性，因为您本质上获得了一台安装了您所�
 
 EC2实例被放置在一个称为**Amazon Virtual Private Cloud**的虚拟网络中。您可以使用多种工具来控制哪些类型的流量可以到达您的EC2实例。
 
-![](img/2d1a12a031e4e6eef61761784e3fc33e_12.png)
 
-![](img/2d1a12a031e4e6eef61761784e3fc33e_13.png)
 
 ![](img/2d1a12a031e4e6eef61761784e3fc33e_14.png)
 
@@ -78,15 +70,12 @@ EC2实例被放置在一个称为**Amazon Virtual Private Cloud**的虚拟网络
 
 ### 存储
 
-![](img/2d1a12a031e4e6eef61761784e3fc33e_17.png)
 
-![](img/2d1a12a031e4e6eef61761784e3fc33e_18.png)
 
 ![](img/2d1a12a031e4e6eef61761784e3fc33e_19.png)
 
 您可以使用**Amazon Elastic Block Store**为EC2实例附加持久化的存储卷。可以将其想象成连接到笔记本电脑的外置硬盘。
 
-![](img/2d1a12a031e4e6eef61761784e3fc33e_20.png)
 
 ![](img/2d1a12a031e4e6eef61761784e3fc33e_21.png)
 
@@ -111,13 +100,10 @@ EC2实例被放置在一个称为**Amazon Virtual Private Cloud**的虚拟网络
 
 ![](img/2d1a12a031e4e6eef61761784e3fc33e_23.png)
 
-![](img/2d1a12a031e4e6eef61761784e3fc33e_24.png)
 
-![](img/2d1a12a031e4e6eef61761784e3fc33e_25.png)
 
 ---
 
-![](img/2d1a12a031e4e6eef61761784e3fc33e_26.png)
 
 ## 总结
 

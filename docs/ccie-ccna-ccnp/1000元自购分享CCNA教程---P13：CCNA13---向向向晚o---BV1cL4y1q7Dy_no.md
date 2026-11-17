@@ -5,11 +5,9 @@
 
 ---
 
-![](img/3e06258bac66aab0ac4e50cba95b6335_1.png)
 
 ## 路由协议的选择与演进
 
-![](img/3e06258bac66aab0ac4e50cba95b6335_3.png)
 
 上一节我们介绍了静态路由和RIP协议。RIP作为一种基础的路由选择协议，只适合在中到小型网络中部署，在大型网络中则存在诸多限制。
 
@@ -108,11 +106,8 @@ DUAL算法通过两种计算实现快速收敛：
     *   **精确宣告**：`network [接口IP地址] [通配符掩码]`，如`network 10.1.1.1 0.0.0.0`。通配符掩码中的`0`表示精确匹配，`1`表示忽略。这种方式更精确，推荐使用。
 4.  **（可选）配置路由器ID**：使用`eigrp router-id [ID]`命令，通常配置为环回口地址。
 
-![](img/3e06258bac66aab0ac4e50cba95b6335_5.png)
 
-![](img/3e06258bac66aab0ac4e50cba95b6335_7.png)
 
-![](img/3e06258bac66aab0ac4e50cba95b6335_9.png)
 
 配置示例：
 ```bash
@@ -123,7 +118,6 @@ Router(config-router)# network 10.1.1.1 0.0.0.0
 Router(config-router)# network 192.168.1.0 0.0.0.255
 ```
 
-![](img/3e06258bac66aab0ac4e50cba95b6335_11.png)
 
 常用验证命令：
 *   `show ip eigrp neighbors`：查看EIGRP邻居表。

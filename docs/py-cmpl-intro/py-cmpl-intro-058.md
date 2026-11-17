@@ -10,7 +10,6 @@
 
 接下来，我们将通过演示来区分实例方法和静态方法。
 
-![](img/b3e008459fc89eb08f03265f9df1c324_1.png)
 
 ---
 
@@ -27,11 +26,9 @@ class Employee:
 
 要创建一个员工对象，我们需要姓名和职位。我们将`self.name`赋值为`name`，`self.position`赋值为`position`。
 
-![](img/b3e008459fc89eb08f03265f9df1c324_3.png)
 
 ---
 
-![](img/b3e008459fc89eb08f03265f9df1c324_4.png)
 
 ## 定义实例方法
 
@@ -59,9 +56,7 @@ class Employee:
         return position in valid_positions
 ```
 
-![](img/b3e008459fc89eb08f03265f9df1c324_6.png)
 
-![](img/b3e008459fc89eb08f03265f9df1c324_7.png)
 
 静态方法的第一个参数不是`self`，因为我们不处理从该类创建的任何对象。为了检查职位是否有效，我们将传入一个职位参数。我们创建了一个有效职位的列表，然后使用成员运算符检查传入的职位是否在我们的有效职位列表中。
 
@@ -71,7 +66,6 @@ class Employee:
 
 ## 如何使用静态方法
 
-![](img/b3e008459fc89eb08f03265f9df1c324_9.png)
 
 要使用静态方法，我们需要使用类名，而不是从该类创建的任何对象。
 
@@ -80,7 +74,6 @@ print(Employee.is_valid_position("cook"))  # 输出：True
 print(Employee.is_valid_position("rocket scientist"))  # 输出：False
 ```
 
-![](img/b3e008459fc89eb08f03265f9df1c324_11.png)
 
 我们输入类名，后跟静态方法`is_valid_position`。这个方法接受一个参数。我们检查“cook”是否是一个有效职位，输出为`True`。再检查“rocket scientist”，输出为`False`，因为在蟹堡王，“火箭科学家”不是一个有效职位。
 
@@ -100,7 +93,6 @@ employee3 = Employee("Spongebob", "cook")
 
 要调用实例方法，我们必须访问类的一个实例才能使用它。
 
-![](img/b3e008459fc89eb08f03265f9df1c324_13.png)
 
 ```python
 print(employee1.get_info())
@@ -108,28 +100,23 @@ print(employee2.get_info())
 print(employee3.get_info())
 ```
 
-![](img/b3e008459fc89eb08f03265f9df1c324_15.png)
 
 输出结果将是：
 - Eugene 是经理。
 - Squidward 是收银员。
 - Spongebob 是厨师。
 
-![](img/b3e008459fc89eb08f03265f9df1c324_17.png)
 
 对于实例方法，你需要访问一个对象，然后调用该实例方法。
 
-![](img/b3e008459fc89eb08f03265f9df1c324_19.png)
 
 ---
 
 ## 静态方法与实例方法的对比
 
-![](img/b3e008459fc89eb08f03265f9df1c324_21.png)
 
 对于静态方法，你只需要访问那个类，甚至不需要从该类创建任何对象。它是一个通用的工具方法。
 
-![](img/b3e008459fc89eb08f03265f9df1c324_23.png)
 
 以下是关键区别总结：
 *   **调用方式**：实例方法通过`对象.方法名()`调用；静态方法通过`类名.方法名()`调用。
@@ -140,7 +127,6 @@ print(employee3.get_info())
 
 ## 总结
 
-![](img/b3e008459fc89eb08f03265f9df1c324_25.png)
 
 ![](img/b3e008459fc89eb08f03265f9df1c324_26.png)
 

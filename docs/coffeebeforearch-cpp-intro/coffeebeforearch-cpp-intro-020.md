@@ -9,7 +9,6 @@
 与`std::unique_ptr`类似，`std::shared_ptr`也定义在 `<memory>` 头文件中。以下是创建一个`std::shared_ptr`的基本方法。
 
 
-![](img/5ab198e28e2e0c6dc97b9a54353f94c6_1.png)
 
 ```cpp
 #include <iostream>
@@ -39,15 +38,12 @@ int main() {
     std::cout << "Reference count: " << pointer1.use_count() << std::endl;
 ```
 
-![](img/5ab198e28e2e0c6dc97b9a54353f94c6_3.png)
 
 当有两个`shared_ptr`共享资源时，`use_count()`会返回2。如果只有一个，则返回1。
 
-![](img/5ab198e28e2e0c6dc97b9a54353f94c6_5.png)
 
 ## 使用 std::make_shared
 
-![](img/5ab198e28e2e0c6dc97b9a54353f94c6_6.png)
 
 类似于`std::make_unique`，C++也提供了`std::make_shared`来更安全、更高效地创建`shared_ptr`。对于数组，此功能需要C++20或更高标准支持。
 
@@ -60,7 +56,6 @@ int main() {
     std::cout << "Reference count: " << pointer1.use_count() << std::endl;
 ```
 
-![](img/5ab198e28e2e0c6dc97b9a54353f94c6_8.png)
 
 使用`make_shared`可以避免直接使用`new`表达式，使代码更安全、更现代。编译时需指定C++20标准（例如 `-std=c++20`）。
 
@@ -68,11 +63,9 @@ int main() {
 
 `std::shared_ptr`支持与`std::unique_ptr`类似的操作，例如通过下标访问数组元素、使用`reset()`释放资源、使用`get()`获取原始指针等。
 
-![](img/5ab198e28e2e0c6dc97b9a54353f94c6_10.png)
 
 以下是`std::shared_ptr`的一些常用操作。
 
-![](img/5ab198e28e2e0c6dc97b9a54353f94c6_12.png)
 
 *   **索引访问**：`pointer1[0] = 42;`
 *   **重置指针**：`pointer1.reset();` // 释放所有权，如果它是最后一个所有者，则删除内存

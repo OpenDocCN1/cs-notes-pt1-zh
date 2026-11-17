@@ -39,11 +39,9 @@ function ControlledForm() {
 
 ### Hooks规则与数据获取
 
-![](img/bf4be23a3d5bcb9b9fe83cf114f47b89_1.png)
 
 在下一课中，你继续学习了Hooks的规则以及如何使用Hooks获取数据。你发现了Hooks的基本规则，以及如何在你的解决方案中有效地使用它们。
 
-![](img/bf4be23a3d5bcb9b9fe83cf114f47b89_2.png)
 
 你还深入了解了如何使用Hooks获取数据，并在一个实践练习中测试了你的数据获取技能。
 
@@ -53,7 +51,6 @@ function ControlledForm() {
 
 接着，你构建了自己的自定义Hook：**usePrevious**。
 
-![](img/bf4be23a3d5bcb9b9fe83cf114f47b89_4.png)
 
 以下是自定义Hook `usePrevious` 的一个简单实现示例：
 ```jsx
@@ -68,7 +65,6 @@ function usePrevious(value) {
 
 ## 模块三：JSX深入与测试
 
-![](img/bf4be23a3d5bcb9b9fe83cf114f47b89_6.png)
 
 在第三个模块中，你更详细地探索了JSX以及如何测试你的解决方案。
 

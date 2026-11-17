@@ -1,6 +1,5 @@
 # 008：Steering AMA 教程
 
-![](img/4bdb2e1e47f34029bc54d00991a16e63_0.png)
 
 ## 概述
 在本节课程中，我们将学习 Kubernetes 指导委员会（Steering Committee）的成员介绍、核心职责、面临的挑战以及对项目未来的展望。我们将通过整理 2024 年北美 Kubernetes 贡献者峰会的 AMA（Ask Me Anything）环节内容，了解指导委员会如何运作，以及他们如何与社区协作来治理这个庞大的开源项目。

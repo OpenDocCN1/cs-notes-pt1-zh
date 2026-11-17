@@ -32,12 +32,10 @@ class Vehicle(ABC):
         pass
 ```
 
-![](img/2dd9684788aa4fc397c2da7fee49aab8_1.png)
 
 ## 尝试实例化抽象类
 为了验证抽象类不能被实例化，我们尝试创建一个`Vehicle`对象。运行代码后，我们会收到一个`TypeError`，提示无法实例化包含抽象方法的抽象类。这正是我们期望的结果。
 
-![](img/2dd9684788aa4fc397c2da7fee49aab8_2.png)
 
 以下是尝试实例化的代码：
 ```python

@@ -44,7 +44,6 @@
 
 ![](img/ab18094230a798259ac1baa49f82bf9c_37.png)
 
-![](img/ab18094230a798259ac1baa49f82bf9c_39.png)
 
 ![](img/ab18094230a798259ac1baa49f82bf9c_41.png)
 
@@ -98,7 +97,6 @@
 
 ![](img/ab18094230a798259ac1baa49f82bf9c_86.png)
 
-![](img/ab18094230a798259ac1baa49f82bf9c_88.png)
 
 ![](img/ab18094230a798259ac1baa49f82bf9c_89.png)
 
@@ -124,11 +122,9 @@
 
 ![](img/ab18094230a798259ac1baa49f82bf9c_107.png)
 
-![](img/ab18094230a798259ac1baa49f82bf9c_109.png)
 
 ## 游戏内容与待办事项
 
-![](img/ab18094230a798259ac1baa49f82bf9c_111.png)
 
 目前游戏包含多个模式：
 *   **基础打砖块**：经典的打砖块克隆。
@@ -163,23 +159,17 @@
 
 ![](img/ab18094230a798259ac1baa49f82bf9c_129.png)
 
-![](img/ab18094230a798259ac1baa49f82bf9c_131.png)
 
-![](img/ab18094230a798259ac1baa49f82bf9c_133.png)
 
 ![](img/ab18094230a798259ac1baa49f82bf9c_134.png)
 
-![](img/ab18094230a798259ac1baa49f82bf9c_136.png)
 
 ## 调整俄罗斯方块模式难度
 
 ![](img/ab18094230a798259ac1baa49f82bf9c_137.png)
 
-![](img/ab18094230a798259ac1baa49f82bf9c_138.png)
 
-![](img/ab18094230a798259ac1baa49f82bf9c_139.png)
 
-![](img/ab18094230a798259ac1baa49f82bf9c_141.png)
 
 ![](img/ab18094230a798259ac1baa49f82bf9c_143.png)
 
@@ -321,7 +311,6 @@ for (每个敌人) {
 
 ![](img/ab18094230a798259ac1baa49f82bf9c_255.png)
 
-![](img/ab18094230a798259ac1baa49f82bf9c_257.png)
 
 ![](img/ab18094230a798259ac1baa49f82bf9c_259.png)
 
@@ -473,7 +462,6 @@ for (每个敌人) {
 
 ![](img/ab18094230a798259ac1baa49f82bf9c_348.png)
 
-![](img/ab18094230a798259ac1baa49f82bf9c_350.png)
 
 ![](img/ab18094230a798259ac1baa49f82bf9c_352.png)
 
@@ -525,7 +513,6 @@ for (每个敌人) {
 
 ![](img/ab18094230a798259ac1baa49f82bf9c_395.png)
 
-![](img/ab18094230a798259ac1baa49f82bf9c_396.png)
 
 ![](img/ab18094230a798259ac1baa49f82bf9c_398.png)
 
@@ -663,9 +650,7 @@ if (block->type == BLOCK_TYPE_STRONG) {
 
 ![](img/ab18094230a798259ac1baa49f82bf9c_509.png)
 
-![](img/ab18094230a798259ac1baa49f82bf9c_511.png)
 
-![](img/ab18094230a798259ac1baa49f82bf9c_513.png)
 
 ![](img/ab18094230a798259ac1baa49f82bf9c_515.png)
 
@@ -704,7 +689,6 @@ for (int y = yMin; y < yMax; ++y) {
 
 ![](img/ab18094230a798259ac1baa49f82bf9c_529.png)
 
-![](img/ab18094230a798259ac1baa49f82bf9c_531.png)
 
 ### 修复断言（Assert）在发布版本中生效的问题
 
@@ -718,9 +702,7 @@ for (int y = yMin; y < yMax; ++y) {
 
 ![](img/ab18094230a798259ac1baa49f82bf9c_540.png)
 
-![](img/ab18094230a798259ac1baa49f82bf9c_542.png)
 
-![](img/ab18094230a798259ac1baa49f82bf9c_544.png)
 
 我们使用的第三方音频库（OGG解码器）直接包含了标准C库的 `assert.h`，这导致即使在发布版本中，断言失败也会导致游戏崩溃。为了解决这个问题，我们在包含该库的头文件之前，重新定义了 `assert` 宏，使其在非开发版本中为空操作。
 
@@ -751,9 +733,7 @@ for (int y = yMin; y < yMax; ++y) {
 
 ![](img/ab18094230a798259ac1baa49f82bf9c_561.png)
 
-![](img/ab18094230a798259ac1baa49f82bf9c_563.png)
 
-![](img/ab18094230a798259ac1baa49f82bf9c_565.png)
 
 ![](img/ab18094230a798259ac1baa49f82bf9c_567.png)
 
@@ -813,9 +793,7 @@ for (int y = yMin; y < yMax; ++y) {
 
 我们选择了饱和度较高但对比度合适的配色方案，确保玩家、球体和方块在屏幕上清晰可辨。调整后的颜色方案使游戏看起来更专业、更舒适。
 
-![](img/ab18094230a798259ac1baa49f82bf9c_619.png)
 
-![](img/ab18094230a798259ac1baa49f82bf9c_621.png)
 
 ![](img/ab18094230a798259ac1baa49f82bf9c_623.png)
 
@@ -891,9 +869,7 @@ for (int y = yMin; y < yMax; ++y) {
 
 ![](img/ab18094230a798259ac1baa49f82bf9c_685.png)
 
-![](img/ab18094230a798259ac1baa49f82bf9c_687.png)
 
-![](img/ab18094230a798259ac1baa49f82bf9c_689.png)
 
 ## 总结与下期预告
 
@@ -901,7 +877,6 @@ for (int y = yMin; y < yMax; ++y) {
 
 ![](img/ab18094230a798259ac1baa49f82bf9c_693.png)
 
-![](img/ab18094230a798259ac1baa49f82bf9c_695.png)
 
 ![](img/ab18094230a798259ac1baa49f82bf9c_697.png)
 
@@ -909,7 +884,6 @@ for (int y = yMin; y < yMax; ++y) {
 
 ![](img/ab18094230a798259ac1baa49f82bf9c_701.png)
 
-![](img/ab18094230a798259ac1baa49f82bf9c_703.png)
 
 ![](img/ab18094230a798259ac1baa49f82bf9c_705.png)
 
@@ -957,9 +931,7 @@ for (int y = yMin; y < yMax; ++y) {
 
 ![](img/ab18094230a798259ac1baa49f82bf9c_741.png)
 
-![](img/ab18094230a798259ac1baa49f82bf9c_743.png)
 
-![](img/ab18094230a798259ac1baa49f82bf9c_745.png)
 
 ![](img/ab18094230a798259ac1baa49f82bf9c_747.png)
 
@@ -1015,7 +987,6 @@ for (int y = yMin; y < yMax; ++y) {
 
 ![](img/ab18094230a798259ac1baa49f82bf9c_790.png)
 
-![](img/ab18094230a798259ac1baa49f82bf9c_792.png)
 
 ![](img/ab18094230a798259ac1baa49f82bf9c_794.png)
 

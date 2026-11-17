@@ -1,6 +1,5 @@
 # 125：我的第一份技术工作
 
-![](img/607726ddfa64729cd1c00e40edbe1c7e_0.png)
 
 ![](img/607726ddfa64729cd1c00e40edbe1c7e_0.png)
 

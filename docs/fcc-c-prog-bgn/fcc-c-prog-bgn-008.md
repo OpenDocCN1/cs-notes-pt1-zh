@@ -22,9 +22,7 @@ printf("要打印的文本");
 
 在`printf`的文本中，我们可以使用特殊字符来实现特定效果。
 
-![](img/8c6cd8722d7b09c0c1ecd5f3a5d819b4_1.png)
 
-![](img/8c6cd8722d7b09c0c1ecd5f3a5d819b4_2.png)
 
 以下是几个常用的特殊字符示例：
 *   `\n`：换行符。例如，`printf("Hello\nWorld");`会分两行打印“Hello”和“World”。
@@ -59,15 +57,11 @@ printf("格式字符串", 数据1, 数据2, ...);
 *   `%s`：打印**字符串**（一串文本）。
     *   示例：`printf("Hello, %s!", "World");` 输出：`Hello, World!`
 
-![](img/8c6cd8722d7b09c0c1ecd5f3a5d819b4_4.png)
 
-![](img/8c6cd8722d7b09c0c1ecd5f3a5d819b4_5.png)
 
 ---
 
-![](img/8c6cd8722d7b09c0c1ecd5f3a5d819b4_7.png)
 
-![](img/8c6cd8722d7b09c0c1ecd5f3a5d819b4_8.png)
 
 ### 打印变量 🎯
 
@@ -98,7 +92,6 @@ My character is i
 
 本节课中我们一起学习了`printf`函数。我们了解了它的基本用法，如何通过特殊字符控制输出格式，以及如何利用`%d`、`%f`、`%c`、`%s`等格式说明符来打印整数、浮点数、字符和字符串。最重要的是，我们学会了如何打印变量的值，这是在程序运行时获取反馈和进行调试的必备技能。
 
-![](img/8c6cd8722d7b09c0c1ecd5f3a5d819b4_13.png)
 
 ![](img/8c6cd8722d7b09c0c1ecd5f3a5d819b4_15.png)
 

@@ -1,6 +1,5 @@
 # 022：实现火焰特效 🔥
 
-![](img/685b2ad4237640cf33f08c8c0dcafadc_0.png)
 
 ![](img/685b2ad4237640cf33f08c8c0dcafadc_2.png)
 

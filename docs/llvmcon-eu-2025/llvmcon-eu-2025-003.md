@@ -1,6 +1,5 @@
 # 003：什么是LLDB DAP？
 
-![](img/8a7faebc27abd27dfee239a58a522e1b_0.png)
 
 ![](img/8a7faebc27abd27dfee239a58a522e1b_0.png)
 
@@ -99,7 +98,6 @@ DAP代表**调试适配器协议**。它是一个由微软开发的开源标准�
 
 最后，让我们看看实际效果。下图展示了在Visual Studio Code中使用LLDB调试LLVM项目的情景。
 
-![](img/8a7faebc27abd27dfee239a58a522e1b_2.png)
 
 所有你看到的UI元素（如变量查看、调用栈、断点）都是标准的。这一切的背后都是由`lldb-dap`驱动的。你还可以在底部的调试控制台中直接输入LLDB命令，获得对调试器的完全访问权限。
 

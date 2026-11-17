@@ -14,11 +14,9 @@ Python使用不同的数据类型来有效地处理和使用信息。有时，�
 
 ### 隐式类型转换
 
-![](img/ee20ff10dd8a5ba29dba661d767bd8d2_1.png)
 
 隐式数据类型转换由Python编译器自动执行，以防止数据丢失。例如，如果它检测到插入的值是小数，它会将`int`转换为`float`。
 
-![](img/ee20ff10dd8a5ba29dba661d767bd8d2_3.png)
 
 需要注意的是，Python只能在数据类型兼容的情况下转换值。`int`和`float`是兼容的，但`string`和`int`不兼容。
 

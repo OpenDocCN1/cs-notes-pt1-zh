@@ -22,15 +22,12 @@ glCompileShader(geometryShader);
 
 现在我们已经支持自定义几何着色器，让我们创建一个什么都不做的几何着色器。与任何其他着色器一样，我们首先声明版本。
 
-![](img/cafdd5342debf308edfc74ab6759487e_1.png)
 
 ```glsl
 #version 330 core
 ```
 
-![](img/cafdd5342debf308edfc74ab6759487e_2.png)
 
-![](img/cafdd5342debf308edfc74ab6759487e_3.png)
 
 然后，我们需要两个布局声明，写法如下。第一个布局表示我们接收的图元类型，可以是以下之一：
 *   `points`
@@ -39,7 +36,6 @@ glCompileShader(geometryShader);
 *   `triangles`
 *   `triangles_adjacency`
 
-![](img/cafdd5342debf308edfc74ab6759487e_4.png)
 
 第二个布局表示我们输出的图元类型，可以是以下之一：
 *   `points`
@@ -53,11 +49,9 @@ layout (triangles) in;
 layout (triangle_strip, max_vertices = 3) out;
 ```
 
-![](img/cafdd5342debf308edfc74ab6759487e_6.png)
 
 接着，我们定义输出到片段着色器的变量。请记住，数据应该从顶点着色器传递到几何着色器，然后再传递到片段着色器。
 
-![](img/cafdd5342debf308edfc74ab6759487e_7.png)
 
 ```glsl
 out vec3 Normal;
@@ -93,13 +87,10 @@ out VS_OUT {
 
 另外，我们只包含了模型视图矩阵，而没有包含投影矩阵。这是因为我们希望在修改几何形状之后才应用投影矩阵。
 
-![](img/cafdd5342debf308edfc74ab6759487e_9.png)
 
 现在，要为这些输出值分配数据，我们只需写下我们给它们起的名字，加上一个点，再加上我们想要分配数据的变量名，这非常类似于C或C++的结构体。
 
-![](img/cafdd5342debf308edfc74ab6759487e_10.png)
 
-![](img/cafdd5342debf308edfc74ab6759487e_11.png)
 
 ```glsl
 vs_out.Normal = mat3(transpose(inverse(modelView))) * aNormal;
@@ -142,13 +133,11 @@ EmitVertex();
 
 一旦我们完成了三角形所需的所有三个顶点，我们就需要使用 `EndPrimitive()` 来声明我们的图元已经完成。
 
-![](img/cafdd5342debf308edfc74ab6759487e_13.png)
 
 ```glsl
 EndPrimitive();
 ```
 
-![](img/cafdd5342debf308edfc74ab6759487e_14.png)
 
 ## 总结
 

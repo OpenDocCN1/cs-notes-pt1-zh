@@ -10,7 +10,6 @@
 
 ![](img/a8dd2b7c2e064a5802e967ba681ac481_8.png)
 
-![](img/a8dd2b7c2e064a5802e967ba681ac481_10.png)
 
 ![](img/a8dd2b7c2e064a5802e967ba681ac481_12.png)
 
@@ -56,9 +55,7 @@
 
 ![](img/a8dd2b7c2e064a5802e967ba681ac481_50.png)
 
-![](img/a8dd2b7c2e064a5802e967ba681ac481_52.png)
 
-![](img/a8dd2b7c2e064a5802e967ba681ac481_54.png)
 
 上一节我们为游戏添加了多种道具和特殊方块。本节我们将在此基础上，构建更复杂的关卡逻辑。
 
@@ -74,9 +71,7 @@
 
 ![](img/a8dd2b7c2e064a5802e967ba681ac481_64.png)
 
-![](img/a8dd2b7c2e064a5802e967ba681ac481_66.png)
 
-![](img/a8dd2b7c2e064a5802e967ba681ac481_68.png)
 
 ![](img/a8dd2b7c2e064a5802e967ba681ac481_70.png)
 
@@ -104,7 +99,6 @@
 
 ![](img/a8dd2b7c2e064a5802e967ba681ac481_91.png)
 
-![](img/a8dd2b7c2e064a5802e967ba681ac481_92.png)
 
 ![](img/a8dd2b7c2e064a5802e967ba681ac481_94.png)
 
@@ -163,7 +157,6 @@
 
 ![](img/a8dd2b7c2e064a5802e967ba681ac481_141.png)
 
-![](img/a8dd2b7c2e064a5802e967ba681ac481_142.png)
 
 ![](img/a8dd2b7c2e064a5802e967ba681ac481_144.png)
 
@@ -223,15 +216,12 @@ level_state g_level_state;
 
 ![](img/a8dd2b7c2e064a5802e967ba681ac481_182.png)
 
-![](img/a8dd2b7c2e064a5802e967ba681ac481_184.png)
 
 ### 2. 初始化与模拟
 
 ![](img/a8dd2b7c2e064a5802e967ba681ac481_186.png)
 
-![](img/a8dd2b7c2e064a5802e967ba681ac481_188.png)
 
-![](img/a8dd2b7c2e064a5802e967ba681ac481_190.png)
 
 ![](img/a8dd2b7c2e064a5802e967ba681ac481_192.png)
 
@@ -311,7 +301,6 @@ void simulate_pong_level(level_state* state, f32 dt) {
 
 ![](img/a8dd2b7c2e064a5802e967ba681ac481_224.png)
 
-![](img/a8dd2b7c2e064a5802e967ba681ac481_226.png)
 
 ![](img/a8dd2b7c2e064a5802e967ba681ac481_228.png)
 
@@ -358,17 +347,11 @@ void simulate_block_for_level(block* b, level_state* state) {
 
 ![](img/a8dd2b7c2e064a5802e967ba681ac481_251.png)
 
-![](img/a8dd2b7c2e064a5802e967ba681ac481_253.png)
 
-![](img/a8dd2b7c2e064a5802e967ba681ac481_255.png)
 
-![](img/a8dd2b7c2e064a5802e967ba681ac481_257.png)
 
-![](img/a8dd2b7c2e064a5802e967ba681ac481_259.png)
 
-![](img/a8dd2b7c2e064a5802e967ba681ac481_260.png)
 
-![](img/a8dd2b7c2e064a5802e967ba681ac481_262.png)
 
 ![](img/a8dd2b7c2e064a5802e967ba681ac481_264.png)
 
@@ -380,11 +363,8 @@ void simulate_block_for_level(block* b, level_state* state) {
 
 ![](img/a8dd2b7c2e064a5802e967ba681ac481_270.png)
 
-![](img/a8dd2b7c2e064a5802e967ba681ac481_272.png)
 
-![](img/a8dd2b7c2e064a5802e967ba681ac481_274.png)
 
-![](img/a8dd2b7c2e064a5802e967ba681ac481_276.png)
 
 ![](img/a8dd2b7c2e064a5802e967ba681ac481_278.png)
 
@@ -422,9 +402,7 @@ void simulate_block_for_level(block* b, level_state* state) {
 
 ![](img/a8dd2b7c2e064a5802e967ba681ac481_309.png)
 
-![](img/a8dd2b7c2e064a5802e967ba681ac481_311.png)
 
-![](img/a8dd2b7c2e064a5802e967ba681ac481_313.png)
 
 ![](img/a8dd2b7c2e064a5802e967ba681ac481_315.png)
 
@@ -500,7 +478,6 @@ typedef struct {
 
 ![](img/a8dd2b7c2e064a5802e967ba681ac481_370.png)
 
-![](img/a8dd2b7c2e064a5802e967ba681ac481_372.png)
 
 ![](img/a8dd2b7c2e064a5802e967ba681ac481_373.png)
 
@@ -543,7 +520,6 @@ void simulate_invaders_level(level_state* state, f32 dt) {
 
 ![](img/a8dd2b7c2e064a5802e967ba681ac481_377.png)
 
-![](img/a8dd2b7c2e064a5802e967ba681ac481_379.png)
 
 ![](img/a8dd2b7c2e064a5802e967ba681ac481_381.png)
 
@@ -611,7 +587,6 @@ void simulate_block_for_level(block* b, level_state* state) {
 
 在`simulate_invaders_level`中，当侵略者群整体下移时，将`do_collision_test`标志设置为`true`，以便在下一帧检测碰撞。
 
-![](img/a8dd2b7c2e064a5802e967ba681ac481_420.png)
 
 ![](img/a8dd2b7c2e064a5802e967ba681ac481_422.png)
 
@@ -619,11 +594,8 @@ void simulate_block_for_level(block* b, level_state* state) {
 
 ## 实现玩家生命值系统 ❤️
 
-![](img/a8dd2b7c2e064a5802e967ba681ac481_426.png)
 
-![](img/a8dd2b7c2e064a5802e967ba681ac481_428.png)
 
-![](img/a8dd2b7c2e064a5802e967ba681ac481_430.png)
 
 为了让游戏更有挑战性，我们为玩家添加生命值系统。
 
@@ -692,7 +664,6 @@ player g_player;
 
 在游戏开始时初始化生命值。当球掉落到底部或侵略者接触到玩家时，减少生命值。
 
-![](img/a8dd2b7c2e064a5802e967ba681ac481_475.png)
 
 ![](img/a8dd2b7c2e064a5802e967ba681ac481_476.png)
 
@@ -703,11 +674,9 @@ player g_player;
 
 ![](img/a8dd2b7c2e064a5802e967ba681ac481_482.png)
 
-![](img/a8dd2b7c2e064a5802e967ba681ac481_484.png)
 
 ![](img/a8dd2b7c2e064a5802e967ba681ac481_486.png)
 
-![](img/a8dd2b7c2e064a5802e967ba681ac481_488.png)
 
 ![](img/a8dd2b7c2e064a5802e967ba681ac481_490.png)
 
@@ -741,15 +710,12 @@ void lose_life() {
 
 ![](img/a8dd2b7c2e064a5802e967ba681ac481_501.png)
 
-![](img/a8dd2b7c2e064a5802e967ba681ac481_503.png)
 
 ![](img/a8dd2b7c2e064a5802e967ba681ac481_505.png)
 
 ### 3. 在屏幕上显示生命值
 
-![](img/a8dd2b7c2e064a5802e967ba681ac481_507.png)
 
-![](img/a8dd2b7c2e064a5802e967ba681ac481_509.png)
 
 ![](img/a8dd2b7c2e064a5802e967ba681ac481_511.png)
 
@@ -775,7 +741,6 @@ void draw_lives() {
 
 ![](img/a8dd2b7c2e064a5802e967ba681ac481_519.png)
 
-![](img/a8dd2b7c2e064a5802e967ba681ac481_521.png)
 
 ![](img/a8dd2b7c2e064a5802e967ba681ac481_523.png)
 
@@ -906,7 +871,6 @@ u32 random_u32() {
 
 ![](img/a8dd2b7c2e064a5802e967ba681ac481_627.png)
 
-![](img/a8dd2b7c2e064a5802e967ba681ac481_629.png)
 
 ![](img/a8dd2b7c2e064a5802e967ba681ac481_631.png)
 
@@ -933,7 +897,6 @@ u32 random_u32() {
 
 ![](img/a8dd2b7c2e064a5802e967ba681ac481_650.png)
 
-![](img/a8dd2b7c2e064a5802e967ba681ac481_652.png)
 
 ![](img/a8dd2b7c2e064a5802e967ba681ac481_654.png)
 
@@ -961,9 +924,7 @@ b32 random_chance(f32 probability) {
 
 ![](img/a8dd2b7c2e064a5802e967ba681ac481_662.png)
 
-![](img/a8dd2b7c2e064a5802e967ba681ac481_663.png)
 
-![](img/a8dd2b7c2e064a5802e967ba681ac481_665.png)
 
 ![](img/a8dd2b7c2e064a5802e967ba681ac481_666.png)
 
@@ -1078,7 +1039,6 @@ void create_invader_block(v2 relative_pos) {
 
 ![](img/a8dd2b7c2e064a5802e967ba681ac481_748.png)
 
-![](img/a8dd2b7c2e064a5802e967ba681ac481_750.png)
 
 ![](img/a8dd2b7c2e064a5802e967ba681ac481_752.png)
 

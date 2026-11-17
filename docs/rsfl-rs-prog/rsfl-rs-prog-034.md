@@ -4,15 +4,11 @@
 
 ## 结构体的定义
 
-![](img/4ef9839b3eaae8ef1b383dba8492c429_1.png)
 
-![](img/4ef9839b3eaae8ef1b383dba8492c429_2.png)
 
-![](img/4ef9839b3eaae8ef1b383dba8492c429_3.png)
 
 结构体与元组类似，都用于保存相关值。但结构体更具结构性，因为你可以为每个数据片段命名，这使得代码更易读和使用。
 
-![](img/4ef9839b3eaae8ef1b383dba8492c429_5.png)
 
 要定义一个结构体，需要使用 `struct` 关键字。结构体的名称应与其包含的数据相关。例如，我们可以定义一个名为 `Fruit` 的结构体。在大括号内，我们定义数据片段的名称和类型，这些也称为字段。
 
@@ -27,13 +23,11 @@ struct Fruit {
 }
 ```
 
-![](img/4ef9839b3eaae8ef1b383dba8492c429_7.png)
 
 在这个例子中，`Fruit` 结构体有四个字段：`name`（字符串类型）、`color`（字符串类型）、`grams`（32位整数类型）和 `price`（32位浮点数类型）。理论上，`grams` 也可以是浮点类型，但这里我们假设只关心整数克数。
 
 ## 创建结构体实例
 
-![](img/4ef9839b3eaae8ef1b383dba8492c429_9.png)
 
 上一节我们介绍了如何定义结构体，本节中我们来看看如何创建和使用它的实例。要使用结构体，首先必须通过为每个字段指定值来创建它的一个实例。
 
@@ -50,13 +44,10 @@ let apple = Fruit {
 
 这个 `apple` 实例重 100 克，价格为 5.5 美元。在实际程序中，字段名可能更具体，如 `price_per_kilo`。需要注意的是，指定字段值的顺序不必与结构体定义中的顺序一致，只要提供所有必需信息即可。
 
-![](img/4ef9839b3eaae8ef1b383dba8492c429_11.png)
 
 ## 访问和修改字段
 
-![](img/4ef9839b3eaae8ef1b383dba8492c429_13.png)
 
-![](img/4ef9839b3eaae8ef1b383dba8492c429_14.png)
 
 创建实例后，可以使用点号来访问其字段值。例如，要获取名称，可以这样写：
 
@@ -68,7 +59,6 @@ println!("{} weighs {} grams", name, grams);
 
 运行上述代码将输出：`Apple weighs 100 grams`。
 
-![](img/4ef9839b3eaae8ef1b383dba8492c429_16.png)
 
 如果要修改字段的值，需要将实例声明为可变的。一旦实例可变，其所有字段都将可变，不能单独指定某个字段可变。
 
@@ -90,17 +80,13 @@ println!("After: {} grams", apple.grams);
 
 ## 使用函数简化创建
 
-![](img/4ef9839b3eaae8ef1b383dba8492c429_18.png)
 
-![](img/4ef9839b3eaae8ef1b383dba8492c429_19.png)
 
 如果觉得每次创建结构体实例都写很多代码，可以创建返回结构体的函数来简化过程。
 
 以下是创建 `create_fruit` 函数的示例：
 
-![](img/4ef9839b3eaae8ef1b383dba8492c429_21.png)
 
-![](img/4ef9839b3eaae8ef1b383dba8492c429_22.png)
 
 ```rust
 fn create_fruit(name: &str, grams: i32) -> Fruit {
@@ -114,9 +100,7 @@ fn create_fruit(name: &str, grams: i32) -> Fruit {
 
 这个函数接收名称（字符串切片）和克数（整数），返回一个 `Fruit` 实例。注意，我们省略了 `color` 字段，并直接使用参数计算价格。使用函数后，创建水果实例变得非常简单：
 
-![](img/4ef9839b3eaae8ef1b383dba8492c429_24.png)
 
-![](img/4ef9839b3eaae8ef1b383dba8492c429_25.png)
 
 ```rust
 let orange = create_fruit("Orange", 156);
@@ -127,19 +111,14 @@ println!("{} grams of {} costs ${:.2}", orange.grams, orange.name, orange.price)
 
 ## 字段初始化简写语法
 
-![](img/4ef9839b3eaae8ef1b383dba8492c429_27.png)
 
-![](img/4ef9839b3eaae8ef1b383dba8492c429_28.png)
 
 Rust 提供了一个名为“字段初始化简写语法”的特性，可以帮助减少结构体代码中的冗余。
 
-![](img/4ef9839b3eaae8ef1b383dba8492c429_29.png)
 
-![](img/4ef9839b3eaae8ef1b383dba8492c429_31.png)
 
 当函数参数名与结构体字段名完全相同时，可以省略重复的赋值。以下是使用简写语法的示例：
 
-![](img/4ef9839b3eaae8ef1b383dba8492c429_32.png)
 
 ```rust
 fn create_fruit_simple(name: String, grams: i32) -> Fruit {

@@ -1,6 +1,5 @@
 # 023：Verilog实现 (FemtoRV)
 
-![](img/8c19084bf75a52ee58c6cc0a705a4893_0.png)
 
 ![](img/8c19084bf75a52ee58c6cc0a705a4893_0.png)
 
@@ -8,7 +7,6 @@
 
 在本教程中，我们将详细解析一个用Verilog实现的RISC-V处理器核心的代码。这个核心名为FemtoRV32，由Bruno Levy和Matthias Cock编写，它实现了完整的RV32I指令集以及一个名为`cycles`的控制状态寄存器。我们将逐行分析代码，理解其工作原理、状态机设计以及各个模块的功能。
 
-![](img/8c19084bf75a52ee58c6cc0a705a4893_2.png)
 
 ## 系统连接与接口
 

@@ -29,9 +29,7 @@ FROM table_name alias_name;
 
 以下是一个使用别名的查询示例。假设我们有两个表：`small_customer`（客户表）和`small_transaction`（交易表）。
 
-![](img/a89e3bad2b11cf141b7604dce2b9db84_1.png)
 
-![](img/a89e3bad2b11cf141b7604dce2b9db84_1.png)
 
 在这个例子中，小型客户表的别名是`C`，小型交易表的别名是`T`。在查询中，我们可以使用`C.column_name`和`T.column_name`的方式来明确指定每一列属于哪个表。
 
@@ -49,7 +47,6 @@ ON C.customer_id = T.customer_id;
 
 通常，在分配表别名时，您希望使用一个能代表该表的简称。例如，用`Cust`代表`Customer`表，用`Prod`代表`Product`表。选择简短且有意义的别名可以提高查询语句的可读性。
 
-![](img/a89e3bad2b11cf141b7604dce2b9db84_3.png)
 
 再次强调，使用`AS`关键字是可选的。以下两种写法是等效的：
 

@@ -18,7 +18,6 @@
 
 我们需要将`sales_email`（邮件销售）表和`sales_phone`（电话销售）表合并，并去除重复项。这可以通过`UNION`集合运算符实现。
 
-![](img/e11cb10cf86e65b5feedc904a66ce5a2_1.png)
 
 ```sql
 PROC SQL;
@@ -37,7 +36,6 @@ QUIT;
 
 接下来，我们从完整的销售名单表（`sales_list`）中，排除上一步通过`UNION`得到的结果集。这需要使用`EXCEPT`集合运算符。
 
-![](img/e11cb10cf86e65b5feedc904a66ce5a2_3.png)
 
 以下是完整的组合查询代码：
 

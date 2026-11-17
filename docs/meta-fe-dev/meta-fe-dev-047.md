@@ -10,7 +10,6 @@
 
 回顾一下，JSX 是 JavaScript 的一种特殊语法扩展，React 用它来描述用户界面（UI）。而组件是一个返回 JSX 的函数。
 
-![](img/d1d104a8cab791a80caf6e17823c5ef4_1.png)
 
 ---
 
@@ -87,13 +86,11 @@ function DessertList() {
 }
 ```
 
-![](img/d1d104a8cab791a80caf6e17823c5ef4_3.png)
 
 ![](img/d1d104a8cab791a80caf6e17823c5ef4_3.png)
 
 就这样，甜点以一种简洁明了的方式显示出来了。这个改进版功能肯定能帮助“小柠檬”餐厅增加订单，做得很好。
 
-![](img/d1d104a8cab791a80caf6e17823c5ef4_5.png)
 
 ![](img/d1d104a8cab791a80caf6e17823c5ef4_5.png)
 

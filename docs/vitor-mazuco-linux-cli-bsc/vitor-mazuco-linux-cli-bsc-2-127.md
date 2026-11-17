@@ -16,17 +16,14 @@
     ```
     请注意，这个操作会花费很长时间，具体取决于你的计算机性能。
 
-![](img/0c37e8608750590fca504b4f839f1cbf_1.png)
 
 操作完成后，我们可以使用 `db.test_collection.find().count()` 来验证是否已成功插入一千万条文档。
 
 ## 查看当前操作
 
-![](img/0c37e8608750590fca504b4f839f1cbf_3.png)
 
 现在，让我们创建一个新的、可以观察到的长时间运行操作：在大型集合上创建后台索引。
 
-![](img/0c37e8608750590fca504b4f839f1cbf_5.png)
 
 执行以下命令来创建索引：
 ```javascript
@@ -43,23 +40,17 @@ db.test_collection.createIndex({ "value": 1 }, { background: true })
 *   **`msg`**： 操作进度或状态信息。
 *   **`active`**： 表示操作是否正在活跃执行。
 
-![](img/0c37e8608750590fca504b4f839f1cbf_7.png)
 
 通过 `db.currentOp()`，你可以找到我们刚刚启动的索引创建操作，并记下它的 `opid`。
 
-![](img/0c37e8608750590fca504b4f839f1cbf_9.png)
 
 ## 终止指定操作
 
-![](img/0c37e8608750590fca504b4f839f1cbf_11.png)
 
-![](img/0c37e8608750590fca504b4f839f1cbf_13.png)
 
 当你发现某个操作消耗过多资源、意外卡住或需要停止时，可以使用 `db.killOp()` 命令来终止它。
 
-![](img/0c37e8608750590fca504b4f839f1cbf_14.png)
 
-![](img/0c37e8608750590fca504b4f839f1cbf_16.png)
 
 该命令需要目标操作的 `opid` 作为参数。语法如下：
 ```javascript

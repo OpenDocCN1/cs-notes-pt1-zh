@@ -1283,9 +1283,7 @@ State::FinWait1 => {
 
 ![](img/e709d71a082b45418e3b70befbd3ce3f_791.png)
 
-![](img/e709d71a082b45418e3b70befbd3ce3f_793.png)
 
-![](img/e709d71a082b45418e3b70befbd3ce3f_795.png)
 
 ```rust
 State::FinWait2 => {
@@ -1311,7 +1309,6 @@ State::FinWait2 => {
 }
 ```
 
-![](img/e709d71a082b45418e3b70befbd3ce3f_797.png)
 
 ![](img/e709d71a082b45418e3b70befbd3ce3f_799.png)
 

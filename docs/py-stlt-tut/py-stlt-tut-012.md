@@ -25,7 +25,6 @@ form1.text_input(label="First Name")
 form1.form_submit_button(label="提交")
 ```
 
-![](img/46c5d5bb852dee68b5ee3f0052bdf524_1.png)
 
 **注意**：每个表单都必须包含一个提交按钮，否则 Streamlit 会报错。
 

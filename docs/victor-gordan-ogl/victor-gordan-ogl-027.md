@@ -20,9 +20,7 @@
 
 理论上，你可以为立方体的六个面分别使用六个聚光灯来计算阴影，但这需要六次渲染过程。
 
-![](img/cb4edc19a9c67a8161c3bee4ec1ac3dd_1.png)
 
-![](img/cb4edc19a9c67a8161c3bee4ec1ac3dd_1.png)
 
 为了避免这种低效的做法，我们可以使用立方体贴图配合几何着色器，在单次渲染过程中绘制出所有六个面的深度信息。
 
@@ -158,8 +156,6 @@ uniform samplerCube shadowMap;
 
 如果你现在运行程序，应该能看到由点光源生成的柔和阴影。
 
-![](img/cb4edc19a9c67a8161c3bee4ec1ac3dd_3.png)
-![](img/cb4edc19a9c67a8161c3bee4ec1ac3dd_4.png)
 
 ## 总结
 
@@ -167,7 +163,6 @@ uniform samplerCube shadowMap;
 1.  **聚光灯阴影映射**：通过将正交投影替换为透视投影，并沿用定向光源的阴影映射框架来实现。
 2.  **点光源阴影映射**：利用**立方体贴图**和**几何着色器**，在单次渲染过程中生成覆盖所有方向的深度图，并通过在片段着色器中采样立方体贴图并应用PCF来生成软阴影。
 
-![](img/cb4edc19a9c67a8161c3bee4ec1ac3dd_3.png)
 
 ![](img/cb4edc19a9c67a8161c3bee4ec1ac3dd_4.png)
 

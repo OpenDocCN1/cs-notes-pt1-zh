@@ -2,7 +2,6 @@
 
 ## 概述
 
-![](img/e8d860522a0e325b78e8026f091748e6_1.png)
 
 在本节课中，我们将学习如何为Sound Blaster声卡编写单周期音频播放程序。我们将涵盖中断请求（IRQ）设置、直接内存访问（DMA）缓冲区分配、DMA控制器编程以及如何向Sound Blaster DSP发送命令以播放原始音频数据。
 
@@ -10,18 +9,14 @@
 
 上一节我们介绍了如何检测Sound Blaster声卡。本节中，我们将实际编写代码，让声卡播放声音。
 
-![](img/e8d860522a0e325b78e8026f091748e6_3.png)
 
-![](img/e8d860522a0e325b78e8026f091748e6_5.png)
 
 为了实现播放功能，我们需要三个主要函数：
 1.  一个初始化函数，用于设置IRQ和DMA缓冲区。
 2.  一个播放函数，用于播放单个音频文件。
 3.  一个清理函数，用于撤销IRQ和DMA的设置。
 
-![](img/e8d860522a0e325b78e8026f091748e6_7.png)
 
-![](img/e8d860522a0e325b78e8026f091748e6_9.png)
 
 首先，我们需要一个全局变量来跟踪播放状态。
 
@@ -146,11 +141,9 @@ void SB_deinit() {
 }
 ```
 
-![](img/e8d860522a0e325b78e8026f091748e6_11.png)
 
 `deinit_IRQ` 函数需要恢复旧的IRQ向量，并重新屏蔽PIC上的中断位。
 
-![](img/e8d860522a0e325b78e8026f091748e6_13.png)
 
 ```c
 void deinit_IRQ() {
@@ -196,11 +189,8 @@ void interrupt SB_IRQ_handler() {
 }
 ```
 
-![](img/e8d860522a0e325b78e8026f091748e6_15.png)
 
-![](img/e8d860522a0e325b78e8026f091748e6_17.png)
 
-![](img/e8d860522a0e325b78e8026f091748e6_19.png)
 
 启用和禁用扬声器的命令很简单。
 
@@ -249,19 +239,14 @@ void SB_set_sample_rate(unsigned int rate) {
 }
 ```
 
-![](img/e8d860522a0e325b78e8026f091748e6_21.png)
 
 最后，是最关键的 `SB_single_cycle_play` 函数，它负责编程DMA控制器并命令DSP开始播放。
 
-![](img/e8d860522a0e325b78e8026f091748e6_23.png)
 
-![](img/e8d860522a0e325b78e8026f091748e6_25.png)
 
 首先，我们需要定义DMA控制器的一些端口地址。
 
-![](img/e8d860522a0e325b78e8026f091748e6_27.png)
 
-![](img/e8d860522a0e325b78e8026f091748e6_29.png)
 
 ```c
 // DMA控制器端口定义（以通道1为例）
@@ -310,9 +295,7 @@ void SB_single_cycle_play(unsigned int length) {
 
 主函数 `main` 将调用这些函数。
 
-![](img/e8d860522a0e325b78e8026f091748e6_31.png)
 
-![](img/e8d860522a0e325b78e8026f091748e6_33.png)
 
 ```c
 int main() {

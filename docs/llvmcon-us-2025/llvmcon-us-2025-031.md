@@ -1,6 +1,5 @@
 # 031：MARCO - 基于MLIR的Modelica编译器
 
-![](img/e6dcea045faf82864e87d0c695cc1fe7_0.png)
 
 ![](img/e6dcea045faf82864e87d0c695cc1fe7_0.png)
 
@@ -110,6 +109,5 @@ MARCO的结构对于基于LLVM的编译器来说是典型的。它有一个前�
 
 **总结**：MARCO是一个基于MLIR的、针对Modelica语言的编译器项目，旨在通过创新的数组感知算法高效处理大规模微分代数方程系统。它引入了多个专用方言，并在编译性能和并行计算方面展示了潜力。项目欢迎贡献。
 
-![](img/e6dcea045faf82864e87d0c695cc1fe7_2.png)
 
 ![](img/e6dcea045faf82864e87d0c695cc1fe7_2.png)

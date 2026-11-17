@@ -46,19 +46,13 @@
 
 ![](img/7d44c52568183ee28453dce79ee0ef2b_39.png)
 
-![](img/7d44c52568183ee28453dce79ee0ef2b_41.png)
 
-![](img/7d44c52568183ee28453dce79ee0ef2b_43.png)
 
 ![](img/7d44c52568183ee28453dce79ee0ef2b_45.png)
 
-![](img/7d44c52568183ee28453dce79ee0ef2b_47.png)
 
-![](img/7d44c52568183ee28453dce79ee0ef2b_49.png)
 
-![](img/7d44c52568183ee28453dce79ee0ef2b_51.png)
 
-![](img/7d44c52568183ee28453dce79ee0ef2b_53.png)
 
 上一节我们完成了游戏的核心玩法。本节我们将重点改进两个核心系统：碰撞检测和视觉反馈。首先，我们会重构碰撞检测逻辑，解决之前存在的边缘问题。然后，我们将引入一个相机系统，并利用它来实现屏幕震动效果，让游戏中的碰撞、击打等事件更具冲击力。
 
@@ -86,7 +80,6 @@
 
 ![](img/7d44c52568183ee28453dce79ee0ef2b_74.png)
 
-![](img/7d44c52568183ee28453dce79ee0ef2b_76.png)
 
 ![](img/7d44c52568183ee28453dce79ee0ef2b_78.png)
 
@@ -163,7 +156,6 @@
 
 ![](img/7d44c52568183ee28453dce79ee0ef2b_139.png)
 
-![](img/7d44c52568183ee28453dce79ee0ef2b_141.png)
 
 ![](img/7d44c52568183ee28453dce79ee0ef2b_143.png)
 
@@ -179,7 +171,6 @@
 
 ![](img/7d44c52568183ee28453dce79ee0ef2b_153.png)
 
-![](img/7d44c52568183ee28453dce79ee0ef2b_155.png)
 
 ![](img/7d44c52568183ee28453dce79ee0ef2b_157.png)
 
@@ -251,19 +242,13 @@
 
 ![](img/7d44c52568183ee28453dce79ee0ef2b_215.png)
 
-![](img/7d44c52568183ee28453dce79ee0ef2b_217.png)
 
 通过这种基于扫描和迭代的方法，我们的碰撞系统变得更加健壮，能够更准确地处理高速移动和复杂碰撞场景。
 
-![](img/7d44c52568183ee28453dce79ee0ef2b_219.png)
 
-![](img/7d44c52568183ee28453dce79ee0ef2b_221.png)
 
-![](img/7d44c52568183ee28453dce79ee0ef2b_223.png)
 
-![](img/7d44c52568183ee28453dce79ee0ef2b_225.png)
 
-![](img/7d44c52568183ee28453dce79ee0ef2b_227.png)
 
 ![](img/7d44c52568183ee28453dce79ee0ef2b_229.png)
 
@@ -293,15 +278,12 @@
 
 ![](img/7d44c52568183ee28453dce79ee0ef2b_250.png)
 
-![](img/7d44c52568183ee28453dce79ee0ef2b_252.png)
 
-![](img/7d44c52568183ee28453dce79ee0ef2b_254.png)
 
 ![](img/7d44c52568183ee28453dce79ee0ef2b_256.png)
 
 ![](img/7d44c52568183ee28453dce79ee0ef2b_257.png)
 
-![](img/7d44c52568183ee28453dce79ee0ef2b_259.png)
 
 ![](img/7d44c52568183ee28453dce79ee0ef2b_261.png)
 
@@ -323,9 +305,7 @@
 
 ![](img/7d44c52568183ee28453dce79ee0ef2b_269.png)
 
-![](img/7d44c52568183ee28453dce79ee0ef2b_271.png)
 
-![](img/7d44c52568183ee28453dce79ee0ef2b_273.png)
 
 ![](img/7d44c52568183ee28453dce79ee0ef2b_275.png)
 
@@ -356,7 +336,6 @@
 
 ![](img/7d44c52568183ee28453dce79ee0ef2b_293.png)
 
-![](img/7d44c52568183ee28453dce79ee0ef2b_295.png)
 
 ![](img/7d44c52568183ee28453dce79ee0ef2b_297.png)
 
@@ -392,9 +371,7 @@
 
 ![](img/7d44c52568183ee28453dce79ee0ef2b_315.png)
 
-![](img/7d44c52568183ee28453dce79ee0ef2b_317.png)
 
-![](img/7d44c52568183ee28453dce79ee0ef2b_319.png)
 
 ![](img/7d44c52568183ee28453dce79ee0ef2b_321.png)
 
@@ -475,15 +452,11 @@
 
 ![](img/7d44c52568183ee28453dce79ee0ef2b_385.png)
 
-![](img/7d44c52568183ee28453dce79ee0ef2b_387.png)
 
-![](img/7d44c52568183ee28453dce79ee0ef2b_389.png)
 
 ![](img/7d44c52568183ee28453dce79ee0ef2b_391.png)
 
-![](img/7d44c52568183ee28453dce79ee0ef2b_393.png)
 
-![](img/7d44c52568183ee28453dce79ee0ef2b_395.png)
 
 ![](img/7d44c52568183ee28453dce79ee0ef2b_397.png)
 
@@ -517,7 +490,6 @@ void AddScreenShake(v2 Impulse) {
 
 ![](img/7d44c52568183ee28453dce79ee0ef2b_418.png)
 
-![](img/7d44c52568183ee28453dce79ee0ef2b_419.png)
 
 ![](img/7d44c52568183ee28453dce79ee0ef2b_421.png)
 
@@ -577,7 +549,6 @@ void AddScreenShake(v2 Impulse) {
 
 ![](img/7d44c52568183ee28453dce79ee0ef2b_471.png)
 
-![](img/7d44c52568183ee28453dce79ee0ef2b_473.png)
 
 ![](img/7d44c52568183ee28453dce79ee0ef2b_475.png)
 
@@ -633,7 +604,6 @@ void AddScreenShake(v2 Impulse) {
 
 ![](img/7d44c52568183ee28453dce79ee0ef2b_522.png)
 
-![](img/7d44c52568183ee28453dce79ee0ef2b_523.png)
 
 ![](img/7d44c52568183ee28453dce79ee0ef2b_524.png)
 

@@ -24,16 +24,12 @@ st.markdown('<h1 style="text-align: center;">用户注册</h1>', unsafe_allow_ht
 
 以下是创建三个并列输入框的步骤：
 
-![](img/9139ac30a5db0aaed7c5c96672a83a16_1.png)
 
-![](img/9139ac30a5db0aaed7c5c96672a83a16_2.png)
 
 1.  首先，使用 `st.columns` 创建三个等宽的列容器。
 2.  然后，在每个列容器中分别创建一个文本输入框。
 
-![](img/9139ac30a5db0aaed7c5c96672a83a16_3.png)
 
-![](img/9139ac30a5db0aaed7c5c96672a83a16_4.png)
 
 具体代码如下：
 
@@ -62,7 +58,6 @@ with col3:
 
 以下是实现输入验证的步骤：
 
-![](img/9139ac30a5db0aaed7c5c96672a83a16_6.png)
 
 1.  首先，获取“提交”按钮的状态。当用户点击按钮时，其状态会变为 `True`。
 2.  然后，检查“名”和“姓”输入框是否为空。
@@ -71,16 +66,11 @@ with col3:
 具体代码如下：
 
 
-![](img/9139ac30a5db0aaed7c5c96672a83a16_8.png)
-
-![](img/9139ac30a5db0aaed7c5c96672a83a16_9.png)
-
-![](img/9139ac30a5db0aaed7c5c96672a83a16_10.png)
-
-![](img/9139ac30a5db0aaed7c5c96672a83a16_11.png)
 
 
-![](img/9139ac30a5db0aaed7c5c96672a83a16_12.png)
+
+
+
 
 ```python
 # 获取“名”和“姓”的输入值
@@ -104,11 +94,9 @@ if submitted:
 
 默认情况下，提交表单后，已输入的内容会保留在输入框中。有时，我们希望提交后能自动清空表单，以便进行下一次输入。
 
-![](img/9139ac30a5db0aaed7c5c96672a83a16_14.png)
 
 Streamlit 的 `st.form` 组件提供了一个 `clear_on_submit` 参数来实现此功能。
 
-![](img/9139ac30a5db0aaed7c5c96672a83a16_15.png)
 
 以下是启用自动清空功能的代码：
 
@@ -121,9 +109,7 @@ with st.form(key='my_form', clear_on_submit=True):
     # ... 其余验证逻辑
 ```
 
-![](img/9139ac30a5db0aaed7c5c96672a83a16_17.png)
 
-![](img/9139ac30a5db0aaed7c5c96672a83a16_18.png)
 
 将 `clear_on_submit` 参数设置为 `True` 后，每当用户点击提交按钮，表单内的所有输入控件都会被重置为空状态。
 

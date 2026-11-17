@@ -8,35 +8,24 @@
 ## IPv4与IPv6的演进思考
 上一节我们介绍了IPv4与IPv6的基础知识。本节中，我们来探讨从IPv4迁移到IPv6可能带来的影响，特别是对运营商业务模式的潜在改变。
 
-![](img/ebc00da1dde994d1c0390fac95b9f363_1.png)
 
-![](img/ebc00da1dde994d1c0390fac95b9f363_2.png)
 
-![](img/ebc00da1dde994d1c0390fac95b9f363_4.png)
 
-![](img/ebc00da1dde994d1c0390fac95b9f363_5.png)
 
 IPv4地址只有32位，地址空间不足，因此企业内网普遍使用私有地址，并通过运营商的专线或VPN服务实现互联。这构成了运营商的重要收入来源。
 
 IPv6拥有充足的地址空间，理论上可以实现端到端的公有地址直接通信，这可能削弱运营商专线/VPN业务的价值。然而，运营商可以通过提高IPv6公有地址的售卖费用，或引导客户继续使用IPv6中的私有地址（唯一本地地址，`FC00::/7`）并配合NAT，来维持其商业模式。
 
-![](img/ebc00da1dde994d1c0390fac95b9f363_7.png)
 
-![](img/ebc00da1dde994d1c0390fac95b9f363_8.png)
 
-![](img/ebc00da1dde994d1c0390fac95b9f363_9.png)
 
 此外，IPv6原生集成了IPsec安全框架，能为所有通信提供加密保护，这增加了网络监听难度。从“棱镜门”等事件可以看出，数据安全与监听能力是各国政府在技术迁移时可能考虑的因素。但技术总是在博弈中发展，我们应积极学习并为IPv6的部署做好准备。
 
-![](img/ebc00da1dde994d1c0390fac95b9f363_11.png)
 
-![](img/ebc00da1dde994d1c0390fac95b9f363_12.png)
 
-![](img/ebc00da1dde994d1c0390fac95b9f363_14.png)
 
 ---
 
-![](img/ebc00da1dde994d1c0390fac95b9f363_16.png)
 
 ## 网络设备的IP地址配置
 网络设备（如路由器、交换机）和终端主机（如PC）必须配置IP地址才能进行网络通信。配置方式主要分为两种：手工配置和自动配置。
@@ -63,20 +52,14 @@ IPv6拥有充足的地址空间，理论上可以实现端到端的公有地址�
 *   **ROM**：只读存储器，存放开机自检程序和一个简化的操作系统（ROMMON模式），用于故障恢复。
 *   **接口**：用于连接网络。
 
-![](img/ebc00da1dde994d1c0390fac95b9f363_18.png)
 
-![](img/ebc00da1dde994d1c0390fac95b9f363_20.png)
 
-![](img/ebc00da1dde994d1c0390fac95b9f363_22.png)
 
-![](img/ebc00da1dde994d1c0390fac95b9f363_24.png)
 
 **Cisco IOS操作系统模式**：
 用户通过控制台线或远程方式登录路由器后，会进入不同的操作模式，每种模式的权限不同。
 
-![](img/ebc00da1dde994d1c0390fac95b9f363_26.png)
 
-![](img/ebc00da1dde994d1c0390fac95b9f363_28.png)
 
 *   **用户模式(`>`)**: 权限最低，主要用于查看基本信息。
     ```bash
@@ -98,36 +81,22 @@ IPv6拥有充足的地址空间，理论上可以实现端到端的公有地址�
     Router(config-if)#
     ```
 
-![](img/ebc00da1dde994d1c0390fac95b9f363_30.png)
 
-![](img/ebc00da1dde994d1c0390fac95b9f363_32.png)
 
-![](img/ebc00da1dde994d1c0390fac95b9f363_34.png)
 
-![](img/ebc00da1dde994d1c0390fac95b9f363_35.png)
 
-![](img/ebc00da1dde994d1c0390fac95b9f363_37.png)
 
-![](img/ebc00da1dde994d1c0390fac95b9f363_39.png)
 
 **配置路由器接口IP地址步骤**：
 假设要为路由器R1的Ethernet0/0接口配置IP地址`12.1.1.1/24`。
 
-![](img/ebc00da1dde994d1c0390fac95b9f363_41.png)
 
-![](img/ebc00da1dde994d1c0390fac95b9f363_43.png)
 
-![](img/ebc00da1dde994d1c0390fac95b9f363_45.png)
 
-![](img/ebc00da1dde994d1c0390fac95b9f363_46.png)
 
-![](img/ebc00da1dde994d1c0390fac95b9f363_48.png)
 
-![](img/ebc00da1dde994d1c0390fac95b9f363_50.png)
 
-![](img/ebc00da1dde994d1c0390fac95b9f363_51.png)
 
-![](img/ebc00da1dde994d1c0390fac95b9f363_53.png)
 
 1.  从用户模式进入特权模式。
     ```bash
@@ -164,12 +133,10 @@ IPv6拥有充足的地址空间，理论上可以实现端到端的公有地址�
 3.  **Request**: 客户端选择一个Offer，广播发送请求报文，正式向该服务器申请IP地址。
 4.  **Ack**: 被选中的服务器广播发送确认报文，正式将IP地址租给客户端。
 
-![](img/ebc00da1dde994d1c0390fac95b9f363_55.png)
 
 **配置Cisco路由器作为DHCP服务器**：
 以下示例将路由器R1配置为DHCP服务器，为`12.1.1.0/24`网段的主机分配地址。
 
-![](img/ebc00da1dde994d1c0390fac95b9f363_57.png)
 
 1.  在R1上启用DHCP服务。
     ```bash
@@ -195,9 +162,7 @@ IPv6拥有充足的地址空间，理论上可以实现端到端的公有地址�
     R1(config)# ip dhcp excluded-address 12.1.1.1 12.1.1.10
     ```
 
-![](img/ebc00da1dde994d1c0390fac95b9f363_59.png)
 
-![](img/ebc00da1dde994d1c0390fac95b9f363_60.png)
 
 **配置路由器接口作为DHCP客户端**：
 将另一台路由器R2的接口配置为自动获取地址。

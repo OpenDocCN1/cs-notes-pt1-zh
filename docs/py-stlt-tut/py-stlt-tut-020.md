@@ -14,7 +14,6 @@
 2.  为按钮定义一个标签，例如“下载”。
 3.  将按钮的状态保存到一个变量中，以便后续判断用户是否点击了它。
 
-![](img/c035bebaec0deaf48e2cf0d219d4c28e_1.png)
 
 初始的按钮创建代码如下：
 ```python
@@ -28,9 +27,7 @@ if btn:
 
 当我们运行上述代码时，会遇到一个错误：“duplicate widget ID”。这是因为Streamlit要求页面上的每一个小组件（Widget）都必须有一个唯一的键（key）。
 
-![](img/c035bebaec0deaf48e2cf0d219d4c28e_3.png)
 
-![](img/c035bebaec0deaf48e2cf0d219d4c28e_4.png)
 
 为了解决这个问题，我们需要为每个按钮分配一个独一无二的 `key` 参数。
 
@@ -47,7 +44,6 @@ if btn:
     btn = st.button(“下载”, key=key)
     ```
 
-![](img/c035bebaec0deaf48e2cf0d219d4c28e_6.png)
 
 ![](img/c035bebaec0deaf48e2cf0d219d4c28e_7.png)
 
@@ -55,7 +51,6 @@ if btn:
 
 我们的目标是点击按钮后，在新标签页中打开图片在Unsplash上的下载页面。为此，我们需要从网页结构中提取出每张图片对应的详情页链接。
 
-![](img/c035bebaec0deaf48e2cf0d219d4c28e_9.png)
 
 1.  通过检查网页元素，我们发现图片被包裹在一个 `<figure>` 标签内，而该标签内包含一个 `<a>`（锚）标签。
 2.  这个 `<a>` 标签的 `href`（超链接）属性值，例如 `/photos/abc123`，就是图片详情页的相对路径。
@@ -68,9 +63,7 @@ anchor_tag = figure.find(“a”, class_=“特定的class名”)
 image_url = anchor_tag[“href”]
 ```
 
-![](img/c035bebaec0deaf48e2cf0d219d4c28e_11.png)
 
-![](img/c035bebaec0deaf48e2cf0d219d4c28e_13.png)
 
 ## 整合功能并打开下载页面
 
@@ -89,11 +82,8 @@ image_url = anchor_tag[“href”]
 
 此外，我们还需要修复一个应用逻辑上的小问题：将图片搜索和显示的逻辑判断条件，从“搜索表单按钮被点击”改为“用户输入的关键词不为空”，这样可以确保应用在各种交互下都能正确响应。
 
-![](img/c035bebaec0deaf48e2cf0d219d4c28e_15.png)
 
-![](img/c035bebaec0deaf48e2cf0d219d4c28e_16.png)
 
-![](img/c035bebaec0deaf48e2cf0d219d4c28e_17.png)
 
 ## 总结
 

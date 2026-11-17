@@ -65,17 +65,13 @@
 *   **DNS（域名解析）**：`53`
 *   **RDP（远程桌面）**：`3389`
 
-![](img/04abdbfc73b17e7df14d30b462aab13b_3.png)
 
 > **代码示例**：在浏览器中访问 `http://192.168.1.1:80`，等同于访问 `http://192.168.1.1`，因为80是HTTP的默认端口。
 
-![](img/04abdbfc73b17e7df14d30b462aab13b_5.png)
 
 ---
 
-![](img/04abdbfc73b17e7df14d30b462aab13b_7.png)
 
-![](img/04abdbfc73b17e7df14d30b462aab13b_9.png)
 
 ## 模拟器环境搭建入门
 
@@ -97,15 +93,11 @@
 
 通过`Alt+数字`（如`Alt+1`， `Alt+2`）可以在不同设备的终端窗口间快速切换。
 
-![](img/04abdbfc73b17e7df14d30b462aab13b_15.png)
 
-![](img/04abdbfc73b17e7df14d30b462aab13b_17.png)
 
-![](img/04abdbfc73b17e7df14d30b462aab13b_19.png)
 
 ---
 
-![](img/04abdbfc73b17e7df14d30b462aab13b_21.png)
 
 ## 总结
 

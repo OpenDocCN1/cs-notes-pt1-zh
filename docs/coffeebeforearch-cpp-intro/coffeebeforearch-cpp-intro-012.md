@@ -8,7 +8,6 @@
 
 迭代器的一个主要用途是与STL算法配合使用。我们可以用迭代器定义一个值的范围，例如从容器的开始到结束，然后将这个范围传递给STL算法，算法会对该范围内的值执行特定操作。
 
-![](img/deeb0745682c32d2964ba62b342490ef_1.png)
 
 迭代器还定义了一系列要求。并非所有类型的迭代器都能用于每一个STL算法。例如，我们可以对 `std::array` 使用 `std::sort` 排序算法，但不能对 `std::unordered_map` 这样的无序容器使用 `std::sort`。因此，迭代器为我们在不同场景下使用容器和算法奠定了基础。
 
@@ -51,7 +50,6 @@ std::cout << std::endl;
 
 ## 反向迭代器 🔄
 
-![](img/deeb0745682c32d2964ba62b342490ef_3.png)
 
 有时我们需要反向遍历容器。如果手动使用整数下标实现，需要调整起始值、条件和递减逻辑，比较繁琐。而使用反向迭代器则非常简单。
 
@@ -66,7 +64,6 @@ std::cout << std::endl;
 *   `rend()` 返回一个指向容器**第一个元素之前**的反向迭代器。
 *   递增操作 `itr += 1` 在反向迭代器中意味着向容器的**前端**移动。
 
-![](img/deeb0745682c32d2964ba62b342490ef_5.png)
 
 运行修改后的代码，将输出 `5 4 3 2 1`。这展示了使用迭代器如何让代码更简洁、更具表达力。
 
@@ -74,9 +71,7 @@ std::cout << std::endl;
 
 我们不一定总是需要遍历整个容器。迭代器支持偏移操作，允许我们处理容器的子集。
 
-![](img/deeb0745682c32d2964ba62b342490ef_7.png)
 
-![](img/deeb0745682c32d2964ba62b342490ef_8.png)
 
 以下是使用偏移的示例：
 ```cpp
@@ -105,13 +100,10 @@ for (auto itr = my_array.rbegin() + 2; itr < my_array.rend(); itr += 1) {
 4.  通过解引用运算符 `*` 可以访问迭代器指向的值。
 5.  迭代器支持偏移操作（如 `begin() + 1`），用于处理容器的子范围。
 
-![](img/deeb0745682c32d2964ba62b342490ef_10.png)
 
-![](img/deeb0745682c32d2964ba62b342490ef_11.png)
 
 虽然对于遍历整个容器，基于范围的 `for` 循环（`for (auto val : container)`）通常更简洁，但理解并掌握迭代器对于进行更复杂的操作、使用STL算法以及理解C++标准库的设计至关重要。
 
-![](img/deeb0745682c32d2964ba62b342490ef_13.png)
 
 ---
 
@@ -119,7 +111,6 @@ for (auto itr = my_array.rbegin() + 2; itr < my_array.rend(); itr += 1) {
 *   `std::array` 参考：https://en.cppreference.com/w/cpp/container/array
 *   迭代器库参考：https://en.cppreference.com/w/cpp/iterator
 
-![](img/deeb0745682c32d2964ba62b342490ef_15.png)
 
 ![](img/deeb0745682c32d2964ba62b342490ef_16.png)
 

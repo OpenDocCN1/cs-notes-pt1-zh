@@ -8,7 +8,6 @@
 ## 更新数据模型与迁移
 上一节我们完成了菜单列表的展示，本节中我们来看看如何为每个菜单项添加详情页面。首先，我们需要为菜单项模型添加一个`description`字段。
 
-![](img/31db02f67b04488da4298707949d52e3_1.png)
 
 第一步是打开`models.py`文件，在`Menu`模型中更新`description`属性。
 
@@ -19,19 +18,16 @@ description = models.TextField(max_length=1000, default='')
 
 接下来，在终端中运行命令以执行迁移，将模型的更改应用到数据库。
 
-![](img/31db02f67b04488da4298707949d52e3_3.png)
 
 ```bash
 python manage.py makemigrations
 python manage.py migrate
 ```
 
-![](img/31db02f67b04488da4298707949d52e3_1.png)
 
 ## 在Django管理后台更新数据
 迁移完成后，使用之前创建的超级用户凭证登录Django管理后台，并根据压缩文件中提供的描述信息更新菜单项。
 
-![](img/31db02f67b04488da4298707949d52e3_3.png)
 
 在Django管理面板中，点击来自`restaurant`应用的`Menu`模型，以显示菜单项列表。
 
@@ -106,7 +102,6 @@ def display_menu_item(request, pk=None):
 <img src="/static/img/{{ menu_item.name }}.jpg" alt="{{ menu_item.name }}">
 ```
 
-![](img/31db02f67b04488da4298707949d52e3_5.png)
 
 在进行这些添加时，请确保所有更改都包含在段落标签`<p>`内。
 
@@ -121,15 +116,12 @@ def display_menu_item(request, pk=None):
 python manage.py runserver
 ```
 
-![](img/31db02f67b04488da4298707949d52e3_7.png)
 
 将本地主机URL粘贴到浏览器中，并在末尾添加`/menu`文件路径。按回车键，之前显示的相同页面应该会加载，但这次菜单项名称显示为超链接。
 
-![](img/31db02f67b04488da4298707949d52e3_8.png)
 
 点击“Greek Salad”链接，希腊沙拉的菜单项页面就会出现。
 
-![](img/31db02f67b04488da4298707949d52e3_7.png)
 ![](img/31db02f67b04488da4298707949d52e3_8.png)
 
 请注意，此页面仅包含数据库中为希腊沙拉存储的信息，并显示其名称、描述、价格和图片。

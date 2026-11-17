@@ -53,19 +53,14 @@
 
 > **关键概念**：**英特网 (Internet)** 是全球最大的**互联网**，而非单一的“网络”。它由无数个通过路由器互联的小网络组成。
 
-![](img/28085ae3cc9e1b84df77b6f8ff11fb82_1.png)
 
 ---
 
-![](img/28085ae3cc9e1b84df77b6f8ff11fb82_3.png)
 
-![](img/28085ae3cc9e1b84df77b6f8ff11fb82_4.png)
 
 ![](img/28085ae3cc9e1b84df77b6f8ff11fb82_5.png)
 
-![](img/28085ae3cc9e1b84df77b6f8ff11fb82_7.png)
 
-![](img/28085ae3cc9e1b84df77b6f8ff11fb82_8.png)
 
 ## 网络拓扑图 📐
 设计网络时，我们需要一种方式来描述设备间的连接关系，这就是网络拓扑图。

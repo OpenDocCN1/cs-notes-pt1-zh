@@ -8,16 +8,13 @@
 
 将值传递给函数的机制与将值赋给变量非常相似。这意味着，将变量传递给函数会移动或复制它，就像赋值操作一样。
 
-![](img/85805ced8029b9b9b84fcbc3983e1a25_1.png)
 
-![](img/85805ced8029b9b9b84fcbc3983e1a25_2.png)
 
 ## 函数参数的所有权转移
 
 以下是一个示例函数 `greet`，它接收一个 `String` 类型的参数。
 
 
-![](img/85805ced8029b9b9b84fcbc3983e1a25_4.png)
 
 ```rust
 fn greet(name: String) {
@@ -29,13 +26,10 @@ fn main() {
 }
 ```
 
-![](img/85805ced8029b9b9b84fcbc3983e1a25_5.png)
 
-![](img/85805ced8029b9b9b84fcbc3983e1a25_6.png)
 
 运行此代码会输出 “Hello Bob”。然而，一个关键点是：**函数 `greet` 取得了 `text` 的所有权**。这意味着在调用 `greet(text)` 之后，变量 `text` 不再有效。
 
-![](img/85805ced8029b9b9b84fcbc3983e1a25_8.png)
 
 如果尝试在函数调用后再次使用 `text`，例如 `println!("{}", text);`，Rust 编译器会报错，提示 `text` 的值已被移动。这是因为 `String` 类型没有实现 `Copy` trait。
 
@@ -62,9 +56,7 @@ fn main() {
 
 ## 返回值的所有权转移
 
-![](img/85805ced8029b9b9b84fcbc3983e1a25_10.png)
 
-![](img/85805ced8029b9b9b84fcbc3983e1a25_11.png)
 
 函数不仅可以通过参数取得所有权，也可以通过返回值转移所有权。
 
@@ -84,11 +76,8 @@ fn main() {
 
 需要注意的是，`println!` 宏也会取得其参数的所有权。对于未实现 `Copy` 的类型，在使用 `println!` 后便无法再次使用该变量。
 
-![](img/85805ced8029b9b9b84fcbc3983e1a25_13.png)
 
-![](img/85805ced8029b9b9b84fcbc3983e1a25_14.png)
 
-![](img/85805ced8029b9b9b84fcbc3983e1a25_15.png)
 
 ## 取得并返回所有权
 
@@ -109,11 +98,9 @@ fn main() {
 }
 ```
 
-![](img/85805ced8029b9b9b84fcbc3983e1a25_17.png)
 
 在这个例子中，`s1` 的所有权被移动到 `process_text` 函数中。函数处理完后，通过返回值将所有权转移给了新变量 `s3`。原始的 `s1` 在移动后失效。
 
-![](img/85805ced8029b9b9b84fcbc3983e1a25_18.png)
 
 ## 使用元组返回多个值
 
@@ -122,9 +109,7 @@ fn main() {
 以下是计算字符串长度并返回原始字符串和长度的函数示例。
 
 
-![](img/85805ced8029b9b9b84fcbc3983e1a25_20.png)
 
-![](img/85805ced8029b9b9b84fcbc3983e1a25_21.png)
 
 ```rust
 fn total_characters(text: String) -> (String, usize) {
@@ -138,11 +123,8 @@ fn main() {
 }
 ```
 
-![](img/85805ced8029b9b9b84fcbc3983e1a25_22.png)
 
-![](img/85805ced8029b9b9b84fcbc3983e1a25_23.png)
 
-![](img/85805ced8029b9b9b84fcbc3983e1a25_24.png)
 
 通过这种方式，我们成功地将所有权“往返”传递，使得在函数调用后仍能使用原始数据。但这对于简单的操作来说仍然显得繁琐。
 

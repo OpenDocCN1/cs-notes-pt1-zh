@@ -6,11 +6,9 @@
 
 ## 类型推断与显式声明
 
-![](img/9c75cc32522f00f35b0f5ed46233b1dc_1.png)
 
 Rust 编译器通常能根据上下文推断变量类型。例如，一个被赋值为 `"100"` 的变量，其类型会被推断为字符串。
 
-![](img/9c75cc32522f00f35b0f5ed46233b1dc_2.png)
 
 ```rust
 let user_input = "100"; // 类型被推断为 &str 或 String
@@ -27,9 +25,7 @@ println!("转换后的值是: {}", converted);
 
 完成转换后，该变量就可以参与数学运算了。
 
-![](img/9c75cc32522f00f35b0f5ed46233b1dc_4.png)
 
-![](img/9c75cc32522f00f35b0f5ed46233b1dc_5.png)
 
 ```rust
 let result = converted + 100; // 现在可以进行加法运算
@@ -38,11 +34,9 @@ println!("转换后的值加 100 等于: {}", result);
 
 ## 数据类型分类 📊
 
-![](img/9c75cc32522f00f35b0f5ed46233b1dc_7.png)
 
 上一节我们介绍了类型推断与显式声明，本节中我们来看看 Rust 数据类型的两个主要子集：标量类型和复合类型。
 
-![](img/9c75cc32522f00f35b0f5ed46233b1dc_9.png)
 
 ### 标量类型
 

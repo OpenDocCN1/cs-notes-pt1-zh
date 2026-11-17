@@ -4,21 +4,15 @@
 
 ## 使用 match 处理 Option 类型
 
-![](img/77e3838e1da5bad8d8c2c61b4b625482_1.png)
 
-![](img/77e3838e1da5bad8d8c2c61b4b625482_2.png)
 
-![](img/77e3838e1da5bad8d8c2c61b4b625482_3.png)
 
-![](img/77e3838e1da5bad8d8c2c61b4b625482_4.png)
 
 不久前，我们开始学习 Rust 中的 `Option` 类型。现在，让我们快速回顾一下，并学习如何使用新的 `match` 表达式来处理 Rust 中的可选值。
 
 首先，我们将创建一个函数。这个函数接收一个 `Option<&str>` 类型的参数，并使用 `match` 表达式相应地处理该值。该函数将检查用户数据库中是否存在某个用户。
 
-![](img/77e3838e1da5bad8d8c2c61b4b625482_6.png)
 
-![](img/77e3838e1da5bad8d8c2c61b4b625482_8.png)
 
 以下是函数定义：
 ```rust
@@ -37,13 +31,11 @@ fn user_exists(user: Option<&str>) -> bool {
 ```
 函数 `user_exists` 接收一个 `Option<&str>` 类型的 `user` 参数，并返回一个布尔值。如果用户存在，则返回 `true`，否则返回 `false`。我们使用 `match` 表达式来实现这个逻辑。
 
-![](img/77e3838e1da5bad8d8c2c61b4b625482_10.png)
 
 以下是 `match` 表达式的两个分支：
 *   **`None` 分支**：当 `user` 为 `None` 时，打印提示信息并返回 `false`，因为显然没有提供用于搜索的用户名。
 *   **`Some(username)` 分支**：当 `user` 为 `Some` 时，我们模拟找到了该用户，打印搜索信息并返回 `true`。
 
-![](img/77e3838e1da5bad8d8c2c61b4b625482_12.png)
 
 现在，我们可以在 `main` 函数中使用这个函数：
 ```rust
@@ -55,25 +47,18 @@ fn main() {
 ```
 如果我们运行程序，输出将显示函数搜索了用户 “Bob” 并返回了 `true`。如果将 `user` 设置为 `None`，程序会提示插入用户名并返回 `false`。
 
-![](img/77e3838e1da5bad8d8c2c61b4b625482_14.png)
 
 ## match 的穷尽性
 
-![](img/77e3838e1da5bad8d8c2c61b4b625482_16.png)
 
-![](img/77e3838e1da5bad8d8c2c61b4b625482_17.png)
 
 上一节我们介绍了如何使用 `match` 处理 `Option`。本节中我们来看看 `match` 的一个重要特性：**穷尽性**。这意味着当我们尝试匹配某个值时，必须覆盖所有可能的模式，否则代码将无法编译。
 
-![](img/77e3838e1da5bad8d8c2c61b4b625482_18.png)
 
-![](img/77e3838e1da5bad8d8c2c61b4b625482_20.png)
 
 为了说明这一点，我们创建一个新示例。假设我们有一些成绩等级 A、B、C，我们想将它们转换为分数。
 
-![](img/77e3838e1da5bad8d8c2c61b4b625482_22.png)
 
-![](img/77e3838e1da5bad8d8c2c61b4b625482_24.png)
 
 我们创建一个函数 `grade_to_score`：
 ```rust
@@ -100,9 +85,7 @@ fn grade_to_score(grade: char) -> u8 {
 
 ## 使用默认分支（Catch-All Arm）
 
-![](img/77e3838e1da5bad8d8c2c61b4b625482_26.png)
 
-![](img/77e3838e1da5bad8d8c2c61b4b625482_27.png)
 
 最后，还有一个重要的特性可以帮助我们充分利用 Rust 中的 `match`：**默认值处理**，也称为“全捕获”分支。
 
@@ -118,9 +101,7 @@ fn board_event(roll: u8) {
 ```
 考虑到我们将 `roll` 定义为 `u8` 类型，为每一个可能的 `u8` 值（0-255）都写一个分支是不现实的。我们只关心点数 1 到 6，但为了处理其他所有情况，我们可以定义一个默认分支。这就是 `other` 分支，它会捕获所有未被前面分支匹配的值。
 
-![](img/77e3838e1da5bad8d8c2c61b4b625482_29.png)
 
-![](img/77e3838e1da5bad8d8c2c61b4b625482_31.png)
 
 **重要提示**：默认分支必须放在最后，因为 `match` 的分支是按顺序求值的。
 
@@ -139,9 +120,7 @@ fn roll_dice() -> u8 {
 ```
 首先，通过 `cargo add rand` 命令将 `rand` crate 添加到项目中。`roll_dice` 函数生成一个 1 到 6（包含）的随机数，打印结果并返回。
 
-![](img/77e3838e1da5bad8d8c2c61b4b625482_33.png)
 
-![](img/77e3838e1da5bad8d8c2c61b4b625482_35.png)
 
 现在，在 `main` 函数中使用它：
 ```rust
@@ -157,9 +136,7 @@ fn main() {
 
 ## 忽略默认分支的值
 
-![](img/77e3838e1da5bad8d8c2c61b4b625482_37.png)
 
-![](img/77e3838e1da5bad8d8c2c61b4b625482_38.png)
 
 现在，假设你并不关心捕获到的具体值。我们并不必须为默认分支指定一个变量名。
 

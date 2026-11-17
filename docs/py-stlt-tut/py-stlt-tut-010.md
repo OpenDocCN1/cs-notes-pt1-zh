@@ -12,9 +12,7 @@
 
 以下是创建一个基本滑块的代码：
 
-![](img/882983da47143bc950dafecf1cfb4570_1.png)
 
-![](img/882983da47143bc950dafecf1cfb4570_2.png)
 
 ```python
 import streamlit as st

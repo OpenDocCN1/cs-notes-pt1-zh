@@ -53,11 +53,9 @@ python manage.py migrate
 
 确保项目级和应用级的`urls.py`文件已正确配置，以便能够访问到我们即将创建的视图。
 
-![](img/75df9cbcbde4f3ca602dfefb63acb9c9_3.png)
 
 ## 在管理后台添加菜单内容
 
-![](img/75df9cbcbde4f3ca602dfefb63acb9c9_5.png)
 
 现在，我们需要通过Django管理后台为菜单模型添加具体数据。
 
@@ -145,7 +143,6 @@ urlpatterns = [
 
 至此，菜单页面的所有代码已完成。让我们运行开发服务器进行测试。
 
-![](img/75df9cbcbde4f3ca602dfefb63acb9c9_7.png)
 
 1.  在终端中启动开发服务器（如果尚未启动）。
 2.  复制终端中生成的本地URL（通常是 `http://127.0.0.1:8000`）。

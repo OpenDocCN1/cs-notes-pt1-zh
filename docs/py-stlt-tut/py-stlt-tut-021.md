@@ -6,13 +6,10 @@
 
 `st.set_page_config` 是 Streamlit 提供的一个核心函数，它允许我们自定义应用页面的基本配置。通过它，我们可以轻松改变页面的标题、图标、布局等属性，使应用更具个性化。
 
-![](img/495f84ffe97ce0da1faa99ccb1f531e5_1.png)
 
 ## 配置页面标题与图标
 
-![](img/495f84ffe97ce0da1faa99ccb1f531e5_2.png)
 
-![](img/495f84ffe97ce0da1faa99ccb1f531e5_3.png)
 
 首先，我们需要了解 `st.set_page_config` 函数必须放在所有其他 Streamlit 函数或属性的最顶部。
 
@@ -28,7 +25,6 @@ st.set_page_config(
 *   **`page_title`**：此参数用于设置浏览器标签页上显示的标题。
 *   **`page_icon`**：此参数用于设置浏览器标签页上显示的图标。你可以使用表情符号（如 `🎯`）或图标名称。
 
-![](img/495f84ffe97ce0da1faa99ccb1f531e5_5.png)
 
 例如，将标题设置为“网页抓取工具”，图标设置为笑脸表情：
 
@@ -45,9 +41,7 @@ st.set_page_config(
 
 除了标题和图标，我们还可以通过 `layout` 参数来调整页面的整体布局。
 
-![](img/495f84ffe97ce0da1faa99ccb1f531e5_7.png)
 
-![](img/495f84ffe97ce0da1faa99ccb1f531e5_8.png)
 
 Streamlit 默认的布局是居中的（`"centered"`）。我们可以将其改为宽屏模式（`"wide"`），让内容区域更宽。
 
@@ -55,7 +49,6 @@ Streamlit 默认的布局是居中的（`"centered"`）。我们可以将其改�
 
 ![](img/495f84ffe97ce0da1faa99ccb1f531e5_10.png)
 
-![](img/495f84ffe97ce0da1faa99ccb1f531e5_11.png)
 
 以下是设置宽屏布局的代码：
 
@@ -73,7 +66,6 @@ st.set_page_config(
 
 将 `layout` 设置为 `"wide"` 后，应用的内容区域将占据更多的水平空间。
 
-![](img/495f84ffe97ce0da1faa99ccb1f531e5_17.png)
 
 ## 其他配置选项
 
@@ -95,9 +87,7 @@ st.set_page_config(
 )
 ```
 
-![](img/495f84ffe97ce0da1faa99ccb1f531e5_19.png)
 
-![](img/495f84ffe97ce0da1faa99ccb1f531e5_20.png)
 
 ## 总结
 

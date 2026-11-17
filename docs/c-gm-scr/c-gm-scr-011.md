@@ -98,11 +98,9 @@
 
 ![](img/7a07006fd44b8dede9f835fb4c96181a_83.png)
 
-![](img/7a07006fd44b8dede9f835fb4c96181a_85.png)
 
 ### 加载DirectSound库
 
-![](img/7a07006fd44b8dede9f835fb4c96181a_87.png)
 
 ![](img/7a07006fd44b8dede9f835fb4c96181a_89.png)
 
@@ -183,9 +181,7 @@ if (!DirectSoundCreate) {
 
 ![](img/7a07006fd44b8dede9f835fb4c96181a_145.png)
 
-![](img/7a07006fd44b8dede9f835fb4c96181a_147.png)
 
-![](img/7a07006fd44b8dede9f835fb4c96181a_149.png)
 
 ![](img/7a07006fd44b8dede9f835fb4c96181a_151.png)
 
@@ -244,9 +240,7 @@ if (SUCCEEDED(DirectSoundCreate(0, &DirectSound, 0))) {
 
 ![](img/7a07006fd44b8dede9f835fb4c96181a_190.png)
 
-![](img/7a07006fd44b8dede9f835fb4c96181a_192.png)
 
-![](img/7a07006fd44b8dede9f835fb4c96181a_193.png)
 
 ![](img/7a07006fd44b8dede9f835fb4c96181a_195.png)
 
@@ -260,7 +254,6 @@ if (SUCCEEDED(DirectSoundCreate(0, &DirectSound, 0))) {
 
 创建DirectSound对象后，需要设置协作级别，以便应用程序能够访问音频设备。
 
-![](img/7a07006fd44b8dede9f835fb4c96181a_205.png)
 
 ![](img/7a07006fd44b8dede9f835fb4c96181a_207.png)
 
@@ -272,7 +265,6 @@ DirectSound->lpVtbl->SetCooperativeLevel(DirectSound, Window, DSSCL_PRIORITY);
 
 ---
 
-![](img/7a07006fd44b8dede9f835fb4c96181a_211.png)
 
 ![](img/7a07006fd44b8dede9f835fb4c96181a_213.png)
 
@@ -286,9 +278,7 @@ DirectSound->lpVtbl->SetCooperativeLevel(DirectSound, Window, DSSCL_PRIORITY);
 
 ![](img/7a07006fd44b8dede9f835fb4c96181a_219.png)
 
-![](img/7a07006fd44b8dede9f835fb4c96181a_221.png)
 
-![](img/7a07006fd44b8dede9f835fb4c96181a_223.png)
 
 ![](img/7a07006fd44b8dede9f835fb4c96181a_225.png)
 
@@ -372,10 +362,8 @@ if (SUCCEEDED(DirectSound->lpVtbl->CreateSoundBuffer(DirectSound, &BufferDescrip
 
 ![](img/7a07006fd44b8dede9f835fb4c96181a_285.png)
 
-![](img/7a07006fd44b8dede9f835fb4c96181a_287.png)
 
 
-![](img/7a07006fd44b8dede9f835fb4c96181a_289.png)
 
 ![](img/7a07006fd44b8dede9f835fb4c96181a_291.png)
 
@@ -402,9 +390,7 @@ if (SUCCEEDED(DirectSound->lpVtbl->CreateSoundBuffer(DirectSound, &BufferDescrip
 }
 ```
 
-![](img/7a07006fd44b8dede9f835fb4c96181a_299.png)
 
-![](img/7a07006fd44b8dede9f835fb4c96181a_301.png)
 
 ![](img/7a07006fd44b8dede9f835fb4c96181a_303.png)
 
@@ -424,9 +410,7 @@ if (SUCCEEDED(DirectSound->lpVtbl->CreateSoundBuffer(DirectSound, &BufferDescrip
 
 ![](img/7a07006fd44b8dede9f835fb4c96181a_317.png)
 
-![](img/7a07006fd44b8dede9f835fb4c96181a_319.png)
 
-![](img/7a07006fd44b8dede9f835fb4c96181a_321.png)
 
 ![](img/7a07006fd44b8dede9f835fb4c96181a_323.png)
 
@@ -450,9 +434,7 @@ if (SUCCEEDED(DirectSound->lpVtbl->CreateSoundBuffer(DirectSound, &BufferDescrip
 
 ![](img/7a07006fd44b8dede9f835fb4c96181a_341.png)
 
-![](img/7a07006fd44b8dede9f835fb4c96181a_343.png)
 
-![](img/7a07006fd44b8dede9f835fb4c96181a_345.png)
 
 ![](img/7a07006fd44b8dede9f835fb4c96181a_347.png)
 
@@ -466,9 +448,7 @@ if (SUCCEEDED(DirectSound->lpVtbl->CreateSoundBuffer(DirectSound, &BufferDescrip
 
 ![](img/7a07006fd44b8dede9f835fb4c96181a_355.png)
 
-![](img/7a07006fd44b8dede9f835fb4c96181a_357.png)
 
-![](img/7a07006fd44b8dede9f835fb4c96181a_359.png)
 
 ![](img/7a07006fd44b8dede9f835fb4c96181a_360.png)
 
@@ -549,15 +529,10 @@ void FillSoundBuffer(DWORD ByteToLock, DWORD BytesToWrite) {
 
 ![](img/7a07006fd44b8dede9f835fb4c96181a_414.png)
 
-![](img/7a07006fd44b8dede9f835fb4c96181a_416.png)
 
-![](img/7a07006fd44b8dede9f835fb4c96181a_418.png)
 
-![](img/7a07006fd44b8dede9f835fb4c96181a_420.png)
 
-![](img/7a07006fd44b8dede9f835fb4c96181a_422.png)
 
-![](img/7a07006fd44b8dede9f835fb4c96181a_424.png)
 
 ![](img/7a07006fd44b8dede9f835fb4c96181a_426.png)
 
@@ -609,11 +584,9 @@ SecondaryBuffer->lpVtbl->Play(SecondaryBuffer, 0, 0, DSBPLAY_LOOPING);
 
 ![](img/7a07006fd44b8dede9f835fb4c96181a_463.png)
 
-![](img/7a07006fd44b8dede9f835fb4c96181a_465.png)
 
 ## 实现混音器
 
-![](img/7a07006fd44b8dede9f835fb4c96181a_467.png)
 
 ![](img/7a07006fd44b8dede9f835fb4c96181a_469.png)
 
@@ -693,17 +666,11 @@ typedef struct {
 
 ![](img/7a07006fd44b8dede9f835fb4c96181a_515.png)
 
-![](img/7a07006fd44b8dede9f835fb4c96181a_517.png)
 
-![](img/7a07006fd44b8dede9f835fb4c96181a_519.png)
 
-![](img/7a07006fd44b8dede9f835fb4c96181a_521.png)
 
-![](img/7a07006fd44b8dede9f835fb4c96181a_523.png)
 
-![](img/7a07006fd44b8dede9f835fb4c96181a_525.png)
 
-![](img/7a07006fd44b8dede9f835fb4c96181a_527.png)
 
 ![](img/7a07006fd44b8dede9f835fb4c96181a_529.png)
 
@@ -712,9 +679,7 @@ typedef struct {
 
 ![](img/7a07006fd44b8dede9f835fb4c96181a_533.png)
 
-![](img/7a07006fd44b8dede9f835fb4c96181a_535.png)
 
-![](img/7a07006fd44b8dede9f835fb4c96181a_537.png)
 
 ![](img/7a07006fd44b8dede9f835fb4c96181a_539.png)
 
@@ -917,7 +882,6 @@ void MixSounds(S16* Samples, DWORD SampleCount) {
 
 ![](img/7a07006fd44b8dede9f835fb4c96181a_658.png)
 
-![](img/7a07006fd44b8dede9f835fb4c96181a_660.png)
 
 ![](img/7a07006fd44b8dede9f835fb4c96181a_662.png)
 
@@ -994,7 +958,6 @@ F32 RightVolume = Sound->Volume * (1.0f + Sound->Pan);
 
 ![](img/7a07006fd44b8dede9f835fb4c96181a_721.png)
 
-![](img/7a07006fd44b8dede9f835fb4c96181a_722.png)
 
 ![](img/7a07006fd44b8dede9f835fb4c96181a_724.png)
 
@@ -1020,7 +983,6 @@ F32 RightVolume = Sound->Volume * (1.0f + Sound->Pan);
 
 ![](img/7a07006fd44b8dede9f835fb4c96181a_743.png)
 
-![](img/7a07006fd44b8dede9f835fb4c96181a_744.png)
 
 ![](img/7a07006fd44b8dede9f835fb4c96181a_745.png)
 
@@ -1070,7 +1032,6 @@ F32 RightVolume = Sound->Volume * (1.0f + Sound->Pan);
 
 ![](img/7a07006fd44b8dede9f835fb4c96181a_778.png)
 
-![](img/7a07006fd44b8dede9f835fb4c96181a_780.png)
 
 ![](img/7a07006fd44b8dede9f835fb4c96181a_782.png)
 
@@ -1088,9 +1049,7 @@ Sound->Position += Sound->SpeedMultiplier;
 
 ![](img/7a07006fd44b8dede9f835fb4c96181a_792.png)
 
-![](img/7a07006fd44b8dede9f835fb4c96181a_793.png)
 
-![](img/7a07006fd44b8dede9f835fb4c96181a_795.png)
 
 ![](img/7a07006fd44b8dede9f835fb4c96181a_797.png)
 

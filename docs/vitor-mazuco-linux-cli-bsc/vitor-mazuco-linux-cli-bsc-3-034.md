@@ -34,7 +34,6 @@ git log -10
 
 ![](img/55f78e0f0eee77e62f59c5a2e9c15586_3.png)
 
-![](img/55f78e0f0eee77e62f59c5a2e9c15586_5.png)
 
 ![](img/55f78e0f0eee77e62f59c5a2e9c15586_1.png)
 
@@ -52,9 +51,7 @@ git reset --hard 20178
 
 此操作会将 `HEAD` 指针和当前分支一起移动到该次提交，之后的所有更改将被丢弃。重置后，可以再次使用 `git status` 来确认我们已处于新的历史位置。
 
-![](img/55f78e0f0eee77e62f59c5a2e9c15586_9.png)
 
-![](img/55f78e0f0eee77e62f59c5a2e9c15586_9.png)
 
 ## 合并分支
 
@@ -82,13 +79,10 @@ git checkout -b remote-bug-fix-2 origin/stable-3.2
 git branch -u origin/stable-3.2
 ```
 
-![](img/55f78e0f0eee77e62f59c5a2e9c15586_11.png)
 
 设置跟踪后，这个本地分支就会与指定的远程分支关联起来。再次使用 `git status`，可以看到它现在处于跟踪状态。
 
-![](img/55f78e0f0eee77e62f59c5a2e9c15586_13.png)
 
-![](img/55f78e0f0eee77e62f59c5a2e9c15586_11.png)
 
 ## 拉取远程更新
 
@@ -98,11 +92,9 @@ git branch -u origin/stable-3.2
 git pull
 ```
 
-![](img/55f78e0f0eee77e62f59c5a2e9c15586_15.png)
 
 同时，我们依然可以随时使用 `git log` 来查看远程分支 `origin/stable-3.2` 的最新提交历史，确保我们与团队进度同步。
 
-![](img/55f78e0f0eee77e62f59c5a2e9c15586_15.png)
 
 ![](img/55f78e0f0eee77e62f59c5a2e9c15586_17.png)
 

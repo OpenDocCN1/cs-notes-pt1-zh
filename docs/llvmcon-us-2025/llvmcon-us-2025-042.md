@@ -1,6 +1,5 @@
 # 042：面向LLVM的AI驱动的超级优化
 
-![](img/2b40ecc39886d20f82f25a8abbc8f9a9_0.png)
 
 ![](img/2b40ecc39886d20f82f25a8abbc8f9a9_0.png)
 
@@ -210,7 +209,6 @@
 
 **答：** 嗯，算是吧。有一个Azure API允许你通过与OpenAI相同的API访问其他LLM。你尝试过不同的LLM吗？
 
-![](img/2b40ecc39886d20f82f25a8abbc8f9a9_2.png)
 
 **问：** 是的，是的，结果有什么不同？
 

@@ -1,6 +1,5 @@
 # 030：化流程为产品
 
-![](img/c4b2b1c8b2f85bc0924544e436dfb2ad_1.png)
 
 ![](img/c4b2b1c8b2f85bc0924544e436dfb2ad_1.png)
 

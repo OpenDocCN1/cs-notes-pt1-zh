@@ -25,7 +25,6 @@ self.checkbox = QCheckBox("你喜欢食物吗？", self)
 
 ## 设置样式与几何属性
 
-![](img/92ec5e1ce716ba841fb289b040a16eca_1.png)
 
 创建复选框后，我们可能希望调整其外观和位置。以下是设置样式和几何属性的方法：
 
@@ -34,11 +33,9 @@ self.checkbox.setStyleSheet("font-size: 30px; font-family: Arial;")
 self.checkbox.setGeometry(10, 10, 500, 100)
 ```
 
-![](img/92ec5e1ce716ba841fb289b040a16eca_3.png)
 
 `setStyleSheet`方法允许我们使用类似CSS的语法来设置控件样式，例如字体大小和字体族。`setGeometry`方法用于设置控件的位置和大小，参数依次为x坐标、y坐标、宽度和高度。
 
-![](img/92ec5e1ce716ba841fb289b040a16eca_5.png)
 
 ![](img/92ec5e1ce716ba841fb289b040a16eca_7.png)
 

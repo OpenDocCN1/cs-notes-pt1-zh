@@ -6,7 +6,6 @@
 
 为了演示如何在 React 应用中处理嵌入式资源，我创建了一个名为 “embedded assets” 的基础应用。在应用的 `src` 文件夹中，我添加了一个 `assets` 文件夹，其中又包含一个 `images` 文件夹，里面存放了一张名为 “Central Park” 的 JPEG 图片。
 
-![](img/ad7b69a57c5f8e389f5dea5a7dd1c4c5_1.png)
 
 ![](img/ad7b69a57c5f8e389f5dea5a7dd1c4c5_1.png)
 
@@ -28,13 +27,11 @@ import rooftops from ‘./assets/images/CentralPark.jpg‘;
 <img height={200} src={rooftops} alt=“Central Park rooftops view” />
 ```
 
-![](img/ad7b69a57c5f8e389f5dea5a7dd1c4c5_3.png)
 
 保存文件后，可以看到图片已成功在浏览器中显示。这就是使用 `import` 语句导入图片的第一种方法。
 
 ## 方法二：使用 `require` 函数
 
-![](img/ad7b69a57c5f8e389f5dea5a7dd1c4c5_3.png)
 
 上一节我们介绍了使用 `import` 语句，本节中我们来看看第二种方法：使用 `require` 函数。
 
@@ -62,7 +59,6 @@ const randomImageUrl = ‘https://images.unsplash.com/photo-...‘;
 <img height={200} src={randomImageUrl} alt=“Random image from the web” />
 ```
 
-![](img/ad7b69a57c5f8e389f5dea5a7dd1c4c5_5.png)
 
 ## 总结
 

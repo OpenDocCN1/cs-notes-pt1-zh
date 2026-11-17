@@ -24,7 +24,6 @@ Java 9引入了一个名为“模块”的新特性来解决上述问题。**模
 
 ## 如何创建和使用模块
 
-![](img/ca263c1ccd13d71e928c17c04d930195_1.png)
 
 模块定义在名为`module-info.java`的文件中。要声明一个包为导出包，需要在`exports`关键字后指定包名。
 
@@ -38,21 +37,15 @@ module java.base {
 }
 ```
 
-![](img/ca263c1ccd13d71e928c17c04d930195_3.png)
 
-![](img/ca263c1ccd13d71e928c17c04d930195_4.png)
 
-![](img/ca263c1ccd13d71e928c17c04d930195_5.png)
 
-![](img/ca263c1ccd13d71e928c17c04d930195_6.png)
 
 接下来，我们通过一个具体示例来演示如何创建和使用模块。
 
-![](img/ca263c1ccd13d71e928c17c04d930195_8.png)
 
 ### 示例：创建和使用模块
 
-![](img/ca263c1ccd13d71e928c17c04d930195_10.png)
 
 我们将创建两个模块：`hello.world`和`test`。在`hello.world`模块中创建一个类，然后在`test`模块中使用它。
 
@@ -62,7 +55,6 @@ module java.base {
 3.  在该包中，创建一个名为`HelloWorld`的类，其中包含一个静态方法。
 4.  在`hello.world`模块的`module-info.java`文件中，导出`com.hello.world.app`包。
 
-![](img/ca263c1ccd13d71e928c17c04d930195_12.png)
 
 `HelloWorld.java` 内容：
 ```java
@@ -82,7 +74,6 @@ module hello.world {
 }
 ```
 
-![](img/ca263c1ccd13d71e928c17c04d930195_14.png)
 
 **第二步：创建 `test` 模块并使用 `hello.world` 模块**
 1.  创建一个名为`test`的模块。
@@ -90,7 +81,6 @@ module hello.world {
 3.  在`test`模块内创建一个包（例如`com.test`）和一个主类。
 4.  在主类中，导入`com.hello.world.app.HelloWorld`并调用其静态方法。
 
-![](img/ca263c1ccd13d71e928c17c04d930195_16.png)
 
 `module-info.java` (位于 `test` 模块) 内容：
 ```java
@@ -99,7 +89,6 @@ module test {
 }
 ```
 
-![](img/ca263c1ccd13d71e928c17c04d930195_18.png)
 
 `TestMain.java` 内容：
 ```java
@@ -118,7 +107,6 @@ public class TestMain {
 
 ---
 
-![](img/ca263c1ccd13d71e928c17c04d930195_20.png)
 
 # 现代Java特性：07：Java 12 新特性示例 🚀
 
@@ -126,9 +114,7 @@ public class TestMain {
 
 ## Collectors.teeing 方法
 
-![](img/ca263c1ccd13d71e928c17c04d930195_22.png)
 
-![](img/ca263c1ccd13d71e928c17c04d930195_23.png)
 
 Java 12为`Collectors`类添加了一个新的静态方法`teeing`。该方法接受两个收集器和一个合并函数，用于合并这两个收集器的结果。
 
@@ -137,7 +123,6 @@ Java 12为`Collectors`类添加了一个新的静态方法`teeing`。该方法�
 **示例1：计算平均值**
 
 
-![](img/ca263c1ccd13d71e928c17c04d930195_25.png)
 
 ```java
 import java.util.Arrays;
@@ -165,30 +150,23 @@ public class TeeingExample {
 }
 ```
 
-![](img/ca263c1ccd13d71e928c17c04d930195_27.png)
 
 运行上述代码，两种方式计算出的平均值结果是相同的。`teeing`方法提供了一种更函数式、更简洁的方式在一次流操作中组合多个收集结果。
 
-![](img/ca263c1ccd13d71e928c17c04d930195_29.png)
 
 ## 结合过滤与下游收集器
 
 `teeing`方法可以很好地与过滤等操作结合，进行更复杂的数据处理。
 
-![](img/ca263c1ccd13d71e928c17c04d930195_31.png)
 
-![](img/ca263c1ccd13d71e928c17c04d930195_32.png)
 
-![](img/ca263c1ccd13d71e928c17c04d930195_33.png)
 
-![](img/ca263c1ccd13d71e928c17c04d930195_34.png)
 
 以下是筛选出亚洲地区且生活成本低于等于1000的城市示例。
 
 **示例2：筛选并统计城市**
 
 
-![](img/ca263c1ccd13d71e928c17c04d930195_36.png)
 
 ```java
 import java.util.stream.Stream;
@@ -234,11 +212,8 @@ public class TeeingFilterExample {
 }
 ```
 
-![](img/ca263c1ccd13d71e928c17c04d930195_38.png)
 
-![](img/ca263c1ccd13d71e928c17c04d930195_40.png)
 
-![](img/ca263c1ccd13d71e928c17c04d930195_41.png)
 
 在这个例子中，我们使用`teeing`同时执行了两个操作：一个是获取符合条件的城市名称列表，另一个是计算这些城市的数量。最后通过合并函数将两者结果组合输出。
 
@@ -248,9 +223,7 @@ public class TeeingFilterExample {
 1.  **Java 9 模块系统**：了解了模块出现的背景、概念（导出包与隐藏包），并通过一个完整的示例掌握了如何创建模块、导出包以及在另一个模块中声明依赖并使用它。模块化是管理大型Java应用复杂性的关键特性。
 2.  **Java 12 `Collectors.teeing` 方法**：学习了这个新方法的作用——它允许在一次流操作中组合两个独立的收集器，并通过一个合并函数处理它们的结果。我们通过计算平均值和复杂过滤统计两个例子，演示了其用法，这有助于编写更简洁、表达力更强的流处理代码。
 
-![](img/ca263c1ccd13d71e928c17c04d930195_43.png)
 
-![](img/ca263c1ccd13d71e928c17c04d930195_44.png)
 
 ![](img/ca263c1ccd13d71e928c17c04d930195_45.png)
 

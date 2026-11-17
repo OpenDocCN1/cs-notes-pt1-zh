@@ -1,6 +1,5 @@
 # 082：PyQt5按钮控件入门指南 🎯
 
-![](img/b2915c83b39b7a7a9f25533af61ae851_1.png)
 
 在本节课中，我们将学习如何在PyQt5中创建和使用按钮控件。我们将从导入必要的模块开始，逐步创建一个带有交互功能的按钮，并学习如何通过信号与槽机制将按钮点击事件与特定功能连接起来。
 
@@ -35,11 +34,9 @@ class MainWindow(QMainWindow):
 
 ---
 
-![](img/b2915c83b39b7a7a9f25533af61ae851_3.png)
 
 ## 创建按钮控件
 
-![](img/b2915c83b39b7a7a9f25533af61ae851_5.png)
 
 以下是创建按钮控件的步骤。
 
@@ -55,11 +52,9 @@ button = QPushButton('点击我')
 self.setGeometry(150, 200, 200, 100)
 ```
 
-![](img/b2915c83b39b7a7a9f25533af61ae851_7.png)
 
 按钮的字体可能较小，我们可以通过设置样式表来调整。
 
-![](img/b2915c83b39b7a7a9f25533af61ae851_9.png)
 
 ```python
 button.setStyleSheet('font-size: 30px;')
@@ -71,11 +66,9 @@ button.setStyleSheet('font-size: 30px;')
 
 ## 定义按钮点击功能
 
-![](img/b2915c83b39b7a7a9f25533af61ae851_11.png)
 
 我们需要在 `MainWindow` 类中定义一个方法，作为按钮点击时执行的功能。
 
-![](img/b2915c83b39b7a7a9f25533af61ae851_13.png)
 
 ```python
 def on_click(self):
@@ -94,13 +87,11 @@ def on_click(self):
 button.clicked.connect(self.on_click)
 ```
 
-![](img/b2915c83b39b7a7a9f25533af61ae851_15.png)
 
 现在，每次点击按钮，都会执行 `on_click` 方法，并在控制台打印消息。
 
 然而，由于 `button` 是局部变量，`on_click` 方法无法识别它。为了解决这个问题，我们需要将按钮定义为实例变量。
 
-![](img/b2915c83b39b7a7a9f25533af61ae851_17.png)
 
 ```python
 self.button = QPushButton('点击我')
@@ -108,9 +99,7 @@ self.button = QPushButton('点击我')
 
 相应地，更新所有对 `button` 的引用为 `self.button`。
 
-![](img/b2915c83b39b7a7a9f25533af61ae851_19.png)
 
-![](img/b2915c83b39b7a7a9f25533af61ae851_20.png)
 
 ---
 
@@ -124,11 +113,9 @@ def on_click(self):
     self.button.setText('已点击')
 ```
 
-![](img/b2915c83b39b7a7a9f25533af61ae851_22.png)
 
 我们还可以在点击后禁用按钮，使其无法再次点击。
 
-![](img/b2915c83b39b7a7a9f25533af61ae851_24.png)
 
 ```python
 self.button.setDisabled(True)
@@ -142,9 +129,7 @@ self.button.setDisabled(True)
 
 首先，在构造函数中创建标签并设置其初始文本和样式。
 
-![](img/b2915c83b39b7a7a9f25533af61ae851_26.png)
 
-![](img/b2915c83b39b7a7a9f25533af61ae851_28.png)
 
 ```python
 self.label = QLabel('你好')
@@ -154,9 +139,7 @@ self.label.setStyleSheet('font-size: 50px;')
 
 然后，在 `on_click` 方法中更新标签的文本。
 
-![](img/b2915c83b39b7a7a9f25533af61ae851_30.png)
 
-![](img/b2915c83b39b7a7a9f25533af61ae851_32.png)
 
 ```python
 def on_click(self):
@@ -168,13 +151,11 @@ def on_click(self):
 
 现在，点击按钮不仅会改变按钮自身的状态，还会更新标签的显示内容。
 
-![](img/b2915c83b39b7a7a9f25533af61ae851_34.png)
 
 ---
 
 ## 总结
 
-![](img/b2915c83b39b7a7a9f25533af61ae851_36.png)
 
 本节课中我们一起学习了PyQt5中按钮控件的基本使用。我们了解了如何创建按钮、设置其样式和位置，以及如何通过信号与槽机制为其添加交互功能。关键点包括：
 

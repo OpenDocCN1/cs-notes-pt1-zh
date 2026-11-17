@@ -23,9 +23,7 @@
 
 修改后的 `uart.s` 文件关键部分如下：
 
-![](img/1f32b935d0cd38192028add8c2e2af61_1.png)
 
-![](img/1f32b935d0cd38192028add8c2e2af61_2.png)
 
 ```assembly
     EXPORT uart_init
@@ -105,7 +103,6 @@ int fputc(int c, FILE *f) {
 
 绑定完成后，我们就可以在C代码中自由地使用 `printf` 和 `scanf` 了。下面是一个简单的测试函数：
 
-![](img/1f32b935d0cd38192028add8c2e2af61_4.png)
 
 ```c
 void test_io(void) {
@@ -130,7 +127,6 @@ int main(void) {
 ```
 编译并运行程序，通过串口终端，你可以看到提示信息，输入数字和字符串后，程序会正确地回显你输入的内容，并打印出“Hello, Assembly World!”。这证明了我们的UART汇编子程序已成功与C标准输入输出库集成。
 
-![](img/1f32b935d0cd38192028add8c2e2af61_6.png)
 
 ## 总结
 

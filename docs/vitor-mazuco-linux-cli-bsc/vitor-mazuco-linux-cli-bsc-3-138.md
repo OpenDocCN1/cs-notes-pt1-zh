@@ -76,9 +76,7 @@ chmod -R 775 /u01 /u02
 
 ## 配置用户环境
 
-![](img/5149db82b080a097f558af196613a04b_9.png)
 
-![](img/5149db82b080a097f558af196613a04b_11.png)
 
 切换到 `oracle` 用户，我们需要配置其环境变量。这通过编辑 `~/.bash_profile` 文件来实现。
 
@@ -178,9 +176,7 @@ DECLINE_SECURITY_UPDATES=true
 
 执行完成后，返回安装窗口继续。
 
-![](img/5149db82b080a097f558af196613a04b_25.png)
 
-![](img/5149db82b080a097f558af196613a04b_27.png)
 
 ## 创建数据库实例
 
@@ -231,7 +227,6 @@ cdb1:/u01/app/oracle/product/19c/dbhome_1:Y
 sqlplus / as sysdba
 ```
 
-![](img/5149db82b080a097f558af196613a04b_29.png)
 
 ![](img/5149db82b080a097f558af196613a04b_30.png)
 

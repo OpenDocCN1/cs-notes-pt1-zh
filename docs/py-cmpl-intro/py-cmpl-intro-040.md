@@ -4,11 +4,9 @@
 
 ## 概述
 
-![](img/faac79d8e5fe558edb6d49e118890576_1.png)
 
 模块本质上就是一个包含Python代码的文件，你可以将其包含到你的程序中。使用模块有助于将大型程序拆分为可重用的独立文件。Python提供了丰富的内置模块，同时也允许你创建自己的模块。
 
-![](img/faac79d8e5fe558edb6d49e118890576_2.png)
 
 ## 查看可用模块
 
@@ -20,19 +18,14 @@
 *   `time`：提供时间相关的函数。
 *   `pickle`：用于序列化和反序列化Python对象（注意：它和“泡菜”无关）。
 
-![](img/faac79d8e5fe558edb6d49e118890576_4.png)
 
-![](img/faac79d8e5fe558edb6d49e118890576_5.png)
 
 ## 探索模块内容
 
-![](img/faac79d8e5fe558edb6d49e118890576_6.png)
 
 要查看一个模块内部包含的所有变量和函数，你可以将该模块的名称作为参数传递给`help()`函数。
 
-![](img/faac79d8e5fe558edb6d49e118890576_8.png)
 
-![](img/faac79d8e5fe558edb6d49e118890576_9.png)
 
 例如，对于`math`模块，使用`help(math)`可以列出其包含的变量（如`pi`、`e`）和函数（如`sqrt`、`sin`）。
 
@@ -40,7 +33,6 @@
 
 要使用一个模块，你需要先导入它。Python提供了几种导入方式。
 
-![](img/faac79d8e5fe558edb6d49e118890576_11.png)
 
 ### 基本导入
 
@@ -62,11 +54,9 @@ print(m.pi)  # 使用别名`m`来访问
 
 ### 导入特定内容
 
-![](img/faac79d8e5fe558edb6d49e118890576_13.png)
 
 使用`from ... import ...`语法可以从模块中导入特定的变量或函数。导入后，可以直接使用其名称，无需前缀。
 
-![](img/faac79d8e5fe558edb6d49e118890576_15.png)
 
 ```python
 from math import pi
@@ -88,9 +78,7 @@ print(e ** e)  # 现在计算的是5的5次方，而非e的5次方，结果完�
 
 为了避免这种问题，建议使用`import module_name`的方式，并在使用时显式地加上模块名前缀，使代码意图更清晰。
 
-![](img/faac79d8e5fe558edb6d49e118890576_17.png)
 
-![](img/faac79d8e5fe558edb6d49e118890576_19.png)
 
 ```python
 import math
@@ -142,11 +130,8 @@ print(example.area(3))  # 输出: 28.27431
 
 ## 总结
 
-![](img/faac79d8e5fe558edb6d49e118890576_21.png)
 
-![](img/faac79d8e5fe558edb6d49e118890576_22.png)
 
-![](img/faac79d8e5fe558edb6d49e118890576_23.png)
 
 本节课中我们一起学习了Python模块。
 *   模块是一个包含Python代码的文件，用于代码组织和重用。
@@ -155,7 +140,6 @@ print(example.area(3))  # 输出: 28.27431
 *   使用`help("modules")`可以查看所有可用模块，使用`help(module_name)`可以查看特定模块的详细信息。
 *   创建自定义模块只需新建一个`.py`文件并编写代码，然后在其他文件中导入即可使用。
 
-![](img/faac79d8e5fe558edb6d49e118890576_24.png)
 
 ![](img/faac79d8e5fe558edb6d49e118890576_25.png)
 

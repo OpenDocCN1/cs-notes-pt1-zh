@@ -16,27 +16,21 @@
 
 在图形渲染管线的**光栅化（Rasterization）**阶段，系统需要决定哪些像素应该被着色。传统方法是检查每个像素中心的**采样点（Sample Point）**是否位于图元（如三角形）内部。如果采样点在三角形外，该像素就不会被着色，即使从视觉上看它应该被部分着色。
 
-![](img/2459996b0c3f3ee3d770fee4d93cf755_1.png)
 
-![](img/2459996b0c3f3ee3d770fee4d93cf755_2.png)
 
 MSAA通过在每个像素内设置**多个采样点**来解决这个问题。系统会检查所有采样点与图元的重叠情况，并根据重叠比例来计算该像素的最终颜色。
 
-![](img/2459996b0c3f3ee3d770fee4d93cf755_3.png)
 
 ![](img/2459996b0c3f3ee3d770fee4d93cf755_4.png)
 
 例如，如果一个像素有4个采样点，其中2个位于三角形内部，那么该像素的颜色将是背景色和三角形颜色的混合。这有效地平滑了边缘。
 
-![](img/2459996b0c3f3ee3d770fee4d93cf755_5.png)
 
-![](img/2459996b0c3f3ee3d770fee4d93cf755_6.png)
 
 **核心公式/概念**：
 *   **传统采样**：`if (center_sample_inside_primitive) { color_pixel(); }`
 *   **MSAA采样**：`final_color = (num_samples_inside / total_samples) * primitive_color + (num_samples_outside / total_samples) * background_color`
 
-![](img/2459996b0c3f3ee3d770fee4d93cf755_7.png)
 
 ## 实现步骤：在OpenGL中启用MSAA
 
@@ -66,7 +60,6 @@ glEnable(GL_MULTISAMPLE);
 
 如果你的项目使用了离屏渲染的自定义帧缓冲，步骤会稍复杂一些。我们需要创建一个支持多重采样的帧缓冲。
 
-![](img/2459996b0c3f3ee3d770fee4d93cf755_9.png)
 
 以下是创建多重采样帧缓冲的步骤：
 1.  创建纹理附件时，使用 `GL_TEXTURE_2D_MULTISAMPLE` 类型代替普通的 `GL_TEXTURE_2D`。
@@ -105,9 +98,7 @@ glRenderbufferStorageMultisample(GL_RENDERBUFFER, 4, GL_DEPTH24_STENCIL8, width,
 
 以下是渲染循环中的核心步骤：
 
-![](img/2459996b0c3f3ee3d770fee4d93cf755_11.png)
 
-![](img/2459996b0c3f3ee3d770fee4d93cf755_12.png)
 
 ```cpp
 // 1. 绑定多重采样FBO，渲染场景
@@ -140,7 +131,6 @@ glBindFramebuffer(GL_FRAMEBUFFER, 0);
 *   对于**不使用自定义帧缓冲**的简单场景，只需设置GLFW提示并启用 `GL_MULTISAMPLE` 即可。
 *   对于**使用自定义帧缓冲**的复杂场景，需要创建特殊的多重采样纹理和渲染缓冲，并通常需要结合一个中间帧缓冲来实现后期处理流程。
 
-![](img/2459996b0c3f3ee3d770fee4d93cf755_14.png)
 
 ![](img/2459996b0c3f3ee3d770fee4d93cf755_15.png)
 

@@ -16,7 +16,6 @@
 
 在我们的案例中，由于我们只有一个USB驱动器，它本身不需要交换空间，我们将仅把剩余空间划分为交换分区，以便向你演示这个过程是如何工作的。在实际操作中，你会为你的主要存储设备（如硬盘和SSD）创建交换分区。
 
-![](img/f7b0f31d8ff03df40863c5bf5c56bdc9_1.png)
 
 好的，让我们首先创建交换空间。回到 `parted` 工具，并选择我们的USB驱动器所在的位置 `/dev/sdb`。
 
@@ -42,7 +41,6 @@
 1.  `sudo mkswap /dev/sdb2`
 2.  `sudo swapon /dev/sdb2`
 
-![](img/f7b0f31d8ff03df40863c5bf5c56bdc9_3.png)
 
 ![](img/f7b0f31d8ff03df40863c5bf5c56bdc9_3.png)
 

@@ -108,7 +108,6 @@ double cube(double num) {
 
 ![](img/c01e1a9a6907e6c163d05278a2347f9d_10.png)
 
-![](img/c01e1a9a6907e6c163d05278a2347f9d_11.png)
 
 ![](img/c01e1a9a6907e6c163d05278a2347f9d_12.png)
 

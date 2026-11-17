@@ -10,7 +10,6 @@
 
 以下是创建该名单的逻辑步骤。
 
-![](img/19cdd35dcb0c281caa4c5d0d81178803_1.png)
 
 首先，我们需要定义两个结果集。第一个结果集包含销售目标列表中的所有客户ID。
 
@@ -24,7 +23,6 @@ SELECT customer_id FROM sales_list_table;
 SELECT customer_id FROM sales_email_table;
 ```
 
-![](img/19cdd35dcb0c281caa4c5d0d81178803_3.png)
 
 ## EXCEPT 运算符的工作原理
 
@@ -39,9 +37,7 @@ SELECT customer_id FROM sales_email_table;
 
 通过上述操作，我们成功获得了一份尚未回应邮件的客户名单。
 
-![](img/19cdd35dcb0c281caa4c5d0d81178803_5.png)
 
-![](img/19cdd35dcb0c281caa4c5d0d81178803_7.png)
 
 利用这份精准的名单，我们的销售团队可以有针对性地进行电话跟进，从而提升工作效率，避免打扰已对邮件感兴趣的客户。
 

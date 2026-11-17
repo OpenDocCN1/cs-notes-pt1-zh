@@ -10,7 +10,6 @@
 
 实现阴影贴图的核心思想是：从光源的视角渲染场景，生成一张深度图（即阴影贴图）。这张图记录了从光源视角看，每个像素点距离光源最近的深度值。
 
-![](img/a3582aadfb751b7dee24bca87f9e2249_1.png)
 
 随后，在正常的渲染流程中，对于每个片段，我们将其转换到光源的裁剪空间，得到其深度值。我们将这个深度值与阴影贴图中对应位置的深度值进行比较。
 
@@ -31,7 +30,6 @@ float shadow = currentFragmentDepth > depthFromShadowMap ? 1.0 : 0.0;
 
 首先，我们需要创建一个帧缓冲对象（Framebuffer Object, FBO）来专门用于渲染阴影贴图。
 
-![](img/a3582aadfb751b7dee24bca87f9e2249_3.png)
 
 1.  **创建帧缓冲和深度纹理**：
     *   创建一个帧缓冲对象（`glGenFramebuffers`）。
@@ -91,9 +89,7 @@ float shadow = currentFragmentDepth > depthFromShadowMap ? 1.0 : 0.0;
 
 ### 第二阶段：使用阴影贴图进行渲染
 
-![](img/a3582aadfb751b7dee24bca87f9e2249_5.png)
 
-![](img/a3582aadfb751b7dee24bca87f9e2249_6.png)
 
 现在我们已经有了阴影贴图，接下来在正常渲染场景时使用它。
 

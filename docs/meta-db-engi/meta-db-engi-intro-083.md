@@ -14,19 +14,15 @@ Lucy Shrub园艺中心需要收集关于其客户及其所下订单的信息，�
 
 ---
 
-![](img/2bd7facc080947055fa12e6dee710f8b_1.png)
 
 ## 理解联接的概念
 
-![](img/2bd7facc080947055fa12e6dee710f8b_3.png)
 
 在开始帮助Lucy Shrub之前，我们首先需要理解联接的概念。
 
-![](img/2bd7facc080947055fa12e6dee710f8b_4.png)
 
 SQL的联接子句用于基于两个目标表之间的**公共列**来查询数据。
 
-![](img/2bd7facc080947055fa12e6dee710f8b_6.png)
 
 例如，`customers`（客户）表和`orders`（订单）表都包含一个`customer_id`（客户ID）列。同样，`product_id`（产品ID）列是`orders`（订单）表和`products`（产品）表之间的公共列。
 
@@ -36,9 +32,7 @@ SQL的联接子句用于基于两个目标表之间的**公共列**来查询数�
 
 ## 联接的主要类型
 
-![](img/2bd7facc080947055fa12e6dee710f8b_8.png)
 
-![](img/2bd7facc080947055fa12e6dee710f8b_9.png)
 
 以下是用于组合表的四种主要联接类型：
 
@@ -47,31 +41,25 @@ SQL的联接子句用于基于两个目标表之间的**公共列**来查询数�
 *   **右联接（RIGHT JOIN）**：提取或选择右表中的所有记录，以及左表中的所有匹配记录。
 *   **自联接（SELF JOIN）**：表与自身连接，以检索存在于同一表中的信息。
 
-![](img/2bd7facc080947055fa12e6dee710f8b_11.png)
 
-![](img/2bd7facc080947055fa12e6dee710f8b_12.png)
 
 上一节我们介绍了联接的基本概念和主要类型，本节中我们来看看每种联接的具体细节。
 
 ---
 
-![](img/2bd7facc080947055fa12e6dee710f8b_14.png)
 
 ## 内联接详解
 
 内联接返回在左表和右表中都具有匹配值（或列）的数据记录。
 
-![](img/2bd7facc080947055fa12e6dee710f8b_16.png)
 
 两个表之间的关系可以用维恩图来概念化表示，所有其他联接类型也是如此。在语法上，左表和右表分别被标识为`table1`和`table2`。
 
 Lucy Shrub需要识别所有在该公司下过订单的客户的全名。要完成此查询，他们需要`clients`（客户）表和`orders`（订单）表。然后，他们可以使用两个表中都存在的`client_id`（客户ID）列来创建内联接。
 
-![](img/2bd7facc080947055fa12e6dee710f8b_18.png)
 
 输出结果显示了所有下过订单的客户的记录，`client_id`代表了所有具有匹配ID的记录。
 
-![](img/2bd7facc080947055fa12e6dee710f8b_20.png)
 
 以下是内联接的基本语法结构：
 
@@ -87,7 +75,6 @@ ON table1.matching_column = table2.matching_column;
 *   `INNER JOIN`子句后跟右表的名称。
 *   `ON`关键字用于标识两个表共享的联接条件。
 
-![](img/2bd7facc080947055fa12e6dee710f8b_22.png)
 
 ---
 
@@ -95,13 +82,11 @@ ON table1.matching_column = table2.matching_column;
 
 接下来，让我们继续学习左联接。左联接以与内联接类似的方式返回所有匹配的记录。此外，它还返回左表公共列的所有可用记录，即使右表中没有匹配项。
 
-![](img/2bd7facc080947055fa12e6dee710f8b_24.png)
 
 Lucy Shrub可以使用左联接，基于`client_id`值从`clients`和`orders`表中提取数据。联接会定位两个表之间的四个匹配记录，并将它们放在维恩图的公共区域。
 
 以下是左联接的基本语法结构：
 
-![](img/2bd7facc080947055fa12e6dee710f8b_26.png)
 
 ```sql
 SELECT t1.column1 AS alias1, t2.column2 AS alias2...
@@ -120,11 +105,9 @@ ON t1.matching_column = t2.matching_column;
 
 ## 右联接详解
 
-![](img/2bd7facc080947055fa12e6dee710f8b_28.png)
 
 现在，让我们回顾一个右联接的例子。右联接返回右表和左表中的所有记录，但以右表为主要目标表。
 
-![](img/2bd7facc080947055fa12e6dee710f8b_30.png)
 
 例如，Lucy Shrub可以使用右联接，基于`product_id`值从`orders`和`products`表中提取数据记录。这将列出`products`表中的所有产品，并与左表中匹配的相关订单详情连接起来。
 
@@ -137,11 +120,9 @@ RIGHT JOIN table2 AS t2
 ON t1.matching_column = t2.matching_column;
 ```
 
-![](img/2bd7facc080947055fa12e6dee710f8b_32.png)
 
 ---
 
-![](img/2bd7facc080947055fa12e6dee710f8b_34.png)
 
 ## 自联接详解
 
@@ -151,7 +132,6 @@ ON t1.matching_column = t2.matching_column;
 
 自联接的语法写成一个`SELECT`语句，其中为`table2`中的公共列创建别名。
 
-![](img/2bd7facc080947055fa12e6dee710f8b_36.png)
 
 ```sql
 SELECT a.column1, b.column2...

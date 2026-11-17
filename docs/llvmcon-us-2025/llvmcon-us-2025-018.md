@@ -1,6 +1,5 @@
 # 018：用于C++的未定义行为附录
 
-![](img/5cca3b14a0edef84ea07a21412d67f4b_0.png)
 
 ![](img/5cca3b14a0edef84ea07a21412d67f4b_0.png)
 

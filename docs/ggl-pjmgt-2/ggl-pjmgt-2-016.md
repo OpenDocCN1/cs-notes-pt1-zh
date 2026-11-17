@@ -1,6 +1,5 @@
 # 016：16_02_01_总结回顾_2
 
-![](img/a109a602cca5b0ed7b11dbb57ce25ad1_0.png)
 
 ![](img/a109a602cca5b0ed7b11dbb57ce25ad1_0.png)
 

@@ -1,34 +1,26 @@
 # 021：为 SysTick 寄存器分配符号名称 🧩
 
-![](img/c5687853e2111b7e9d69dc90e28bd2d2_1.png)
 
-![](img/c5687853e2111b7e9d69dc90e28bd2d2_3.png)
 
-![](img/c5687853e2111b7e9d69dc90e28bd2d2_5.png)
 
 在本节课中，我们将学习如何为 ARM Cortex-M 核心外设 SysTick 定时器编写驱动程序。我们将从创建新项目开始，并了解如何为相关的 SysTick 寄存器定义符号名称，以便后续进行配置和控制。
 
-![](img/c5687853e2111b7e9d69dc90e28bd2d2_7.png)
 
 ## 创建新项目
 
 首先，我们需要创建一个新的项目。在 IDE 中，选择创建新项目，并选择适用于 STM32F411VET 开发板的项目模板。
 
-![](img/c5687853e2111b7e9d69dc90e28bd2d2_1.png)
 
 项目创建完成后，将目标设备设置为 STM32F4 系列，并将主代码组重命名为 APP。接着，在 APP 组中创建一个新的源文件，命名为 `main.s`。
 
-![](img/c5687853e2111b7e9d69dc90e28bd2d2_7.png)
 
 ## 了解 SysTick 定时器
 
 SysTick 定时器是 ARM Cortex-M 架构的一个核心外设。这意味着无论芯片制造商是谁，任何基于 ARM Cortex-M 内核的微控制器都包含此定时器。因此，我们为 SysTick 编写的驱动程序可以适用于 Cortex-M3、M4 或 M7 等多种内核。
 
-![](img/c5687853e2111b7e9d69dc90e28bd2d2_9.png)
 
 要配置 SysTick 定时器，我们需要查阅 ARM Cortex-M4 通用用户指南，而不是特定于某款芯片的数据手册。在指南的第 218 页，可以找到关于核心外设的概述，其中包含了 SysTick 定时器的信息。
 
-![](img/c5687853e2111b7e9d69dc90e28bd2d2_9.png)
 
 配置 SysTick 主要涉及三个寄存器：
 *   **SysTick 控制和状态寄存器**

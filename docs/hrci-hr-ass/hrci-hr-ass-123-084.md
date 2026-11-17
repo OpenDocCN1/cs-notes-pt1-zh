@@ -20,27 +20,20 @@
 
 教学设计涵盖一系列活动，例如选择合适的教学策略、设计促进参与和互动的活动、创建多媒体内容以及开发评估工具。
 
-![](img/ab15fcbdeba0a0e355c5554813519c1f_2.png)
 
 为了指导学习的创建，教学设计会使用一些框架，例如我们将在本课程后面讨论的 **ADDIE模型** 和 **知识、技能与能力（KSA）模型**。
 
-![](img/ab15fcbdeba0a0e355c5554813519c1f_3.png)
 
-![](img/ab15fcbdeba0a0e355c5554813519c1f_4.png)
 
 ---
 
-![](img/ab15fcbdeba0a0e355c5554813519c1f_5.png)
 
-![](img/ab15fcbdeba0a0e355c5554813519c1f_6.png)
 
 上一节我们介绍了教学设计的基本概念和目标，本节中我们来看看一些核心的教学设计框架。
 
 以下是两个关键的教学设计框架：
 
-![](img/ab15fcbdeba0a0e355c5554813519c1f_8.png)
 
-![](img/ab15fcbdeba0a0e355c5554813519c1f_9.png)
 
 *   **ADDIE模型**：这是一个系统化的教学设计流程，包含五个阶段：**分析（Analysis）**、**设计（Design）**、**开发（Development）**、**实施（Implementation）** 和 **评估（Evaluation）**。
 *   **KSA模型**：这个模型关注于识别和培养学习者所需的 **知识（Knowledge）**、**技能（Skills）** 和 **能力（Abilities）**，以确保培训内容与岗位要求紧密相连。

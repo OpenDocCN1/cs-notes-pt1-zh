@@ -12,35 +12,23 @@
 
 上一节我们完成了服务页面的创建，本节中我们来看看如何构建联系页面。
 
-![](img/0dd5eacc140f31e51343507e3846ad8a_7.png)
 
-![](img/0dd5eacc140f31e51343507e3846ad8a_8.png)
 
-![](img/0dd5eacc140f31e51343507e3846ad8a_9.png)
 
-![](img/0dd5eacc140f31e51343507e3846ad8a_11.png)
 
-![](img/0dd5eacc140f31e51343507e3846ad8a_13.png)
 
-![](img/0dd5eacc140f31e51343507e3846ad8a_15.png)
 
 首先，我们需要创建一个新的GSP文件。在项目中右键点击，选择新建一个GSP文件，并将其命名为 `contact.gsp`。
 
-![](img/0dd5eacc140f31e51343507e3846ad8a_17.png)
 
-![](img/0dd5eacc140f31e51343507e3846ad8a_19.png)
 
-![](img/0dd5eacc140f31e51343507e3846ad8a_20.png)
 
-![](img/0dd5eacc140f31e51343507e3846ad8a_22.png)
 
 接下来，我们将复制之前服务页面的头部结构到联系页面，并移除其中的主要内容区域。
 
 为了保持页面样式一致，我们需要在头部添加CSS样式表的链接。代码如下：
 
-![](img/0dd5eacc140f31e51343507e3846ad8a_24.png)
 
-![](img/0dd5eacc140f31e51343507e3846ad8a_25.png)
 
 ```html
 <link rel="stylesheet" type="text/css" href="mystyle.css">
@@ -48,25 +36,19 @@
 
 现在，我们开始构建联系页面的主体内容。页面将被分为左右两个部分。
 
-![](img/0dd5eacc140f31e51343507e3846ad8a_27.png)
 
 以下是页面布局的规划：
 *   左侧区域将放置一张图片。
 *   右侧区域将放置一个联系表单。
 
-![](img/0dd5eacc140f31e51343507e3846ad8a_28.png)
 
 为了实现左右分栏布局，我们将使用两个 `<div>` 元素，并为其应用CSS样式。
 
-![](img/0dd5eacc140f31e51343507e3846ad8a_30.png)
 
-![](img/0dd5eacc140f31e51343507e3846ad8a_31.png)
 
 首先，创建第一个 `<div>`，其ID为 `content1`。在这个 `<div>` 中，我们将添加一张图片。
 
-![](img/0dd5eacc140f31e51343507e3846ad8a_33.png)
 
-![](img/0dd5eacc140f31e51343507e3846ad8a_35.png)
 
 ```html
 <div id="content1">
@@ -74,29 +56,19 @@
 </div>
 ```
 
-![](img/0dd5eacc140f31e51343507e3846ad8a_37.png)
 
-![](img/0dd5eacc140f31e51343507e3846ad8a_39.png)
 
-![](img/0dd5eacc140f31e51343507e3846ad8a_41.png)
 
-![](img/0dd5eacc140f31e51343507e3846ad8a_43.png)
 
-![](img/0dd5eacc140f31e51343507e3846ad8a_45.png)
 
 为了控制图片的显示，我们可以设置其高度和宽度，并将其居中对齐。
 
-![](img/0dd5eacc140f31e51343507e3846ad8a_47.png)
 
-![](img/0dd5eacc140f31e51343507e3846ad8a_49.png)
 
 接着，创建第二个 `<div>`，其ID为 `content2`。这个区域将用来放置表单。
 
-![](img/0dd5eacc140f31e51343507e3846ad8a_51.png)
 
-![](img/0dd5eacc140f31e51343507e3846ad8a_53.png)
 
-![](img/0dd5eacc140f31e51343507e3846ad8a_55.png)
 
 为了使这两个 `<div>` 各占屏幕宽度的一半，我们使用内联CSS样式进行定位。
 
@@ -119,11 +91,9 @@
 </style>
 ```
 
-![](img/0dd5eacc140f31e51343507e3846ad8a_57.png)
 
 现在，我们在 `content2` 这个 `<div>` 中创建表单。为了使表单元素对齐整齐，我们将表单放在一个HTML表格 `<table>` 中。
 
-![](img/0dd5eacc140f31e51343507e3846ad8a_59.png)
 
 表单将包含以下字段：
 *   全名（文本输入框）
@@ -131,11 +101,9 @@
 *   留言（文本域）
 *   提交按钮
 
-![](img/0dd5eacc140f31e51343507e3846ad8a_61.png)
 
 以下是表单的基本HTML结构：
 
-![](img/0dd5eacc140f31e51343507e3846ad8a_63.png)
 
 ```html
 <form method="post" action="">
@@ -161,15 +129,11 @@
 
 我们可以通过CSS进一步调整表单的边距、字体大小和输入框尺寸，使其看起来更美观。
 
-![](img/0dd5eacc140f31e51343507e3846ad8a_65.png)
 
-![](img/0dd5eacc140f31e51343507e3846ad8a_66.png)
 
 ---
 
-![](img/0dd5eacc140f31e51343507e3846ad8a_68.png)
 
-![](img/0dd5eacc140f31e51343507e3846ad8a_69.png)
 
 现在，联系页面的前端部分已经完成。接下来，我们需要将网站的所有页面链接起来，实现导航功能。
 

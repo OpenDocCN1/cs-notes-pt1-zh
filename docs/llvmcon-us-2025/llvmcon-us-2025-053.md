@@ -1,6 +1,5 @@
 # 053：自动生成重写与降级模式 🧠
 
-![](img/5ec9c37f2acbdb025b6efad71acb663b_0.png)
 
 ![](img/5ec9c37f2acbdb025b6efad71acb663b_0.png)
 
@@ -109,7 +108,6 @@
 
 ---
 
-![](img/5ec9c37f2acbdb025b6efad71acb663b_2.png)
 
 ![](img/5ec9c37f2acbdb025b6efad71acb663b_2.png)
 

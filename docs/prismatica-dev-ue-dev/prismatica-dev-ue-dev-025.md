@@ -45,9 +45,7 @@
 
 ## 总结
 
-![](img/cdea230c09bfc295e6ed4f18b3a89f64_1.png)
 
-![](img/cdea230c09bfc295e6ed4f18b3a89f64_2.png)
 
 ![](img/cdea230c09bfc295e6ed4f18b3a89f64_4.png)
 

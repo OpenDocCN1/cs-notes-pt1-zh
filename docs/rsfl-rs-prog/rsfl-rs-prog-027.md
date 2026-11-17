@@ -10,9 +10,7 @@
 
 以下代码演示了变量值的更新：
 
-![](img/cc1bde7d30b9537fcfe95dd1ac45847a_1.png)
 
-![](img/cc1bde7d30b9537fcfe95dd1ac45847a_2.png)
 
 ```rust
 let mut variable = String::from("Bob");
@@ -47,19 +45,14 @@ let name_copy = name.clone(); // 显式克隆数据
 println!("Original: {}, Copy: {}", name, name_copy); // 两者皆可使用
 ```
 
-![](img/cc1bde7d30b9537fcfe95dd1ac45847a_4.png)
 
 `clone()` 方法会创建数据的完整副本，允许两个变量独立使用各自的数据。但需要注意，克隆操作（尤其是对于大型数据）可能带来性能开销。
 
-![](img/cc1bde7d30b9537fcfe95dd1ac45847a_5.png)
 
-![](img/cc1bde7d30b9537fcfe95dd1ac45847a_6.png)
 
-![](img/cc1bde7d30b9537fcfe95dd1ac45847a_7.png)
 
 ---
 
-![](img/cc1bde7d30b9537fcfe95dd1ac45847a_8.png)
 
 ## Copy 特型与栈上数据
 
@@ -89,25 +82,18 @@ println!("n1: {}, n2: {}", n1, n2); // 两者皆可正常使用
 *   **字符类型**：`char`。
 *   **元组**：仅当其包含的所有元素类型也都实现 `Copy` 时。例如，`(i32, f64)` 实现 `Copy`，但 `(i32, String)` 不实现。
 
-![](img/cc1bde7d30b9537fcfe95dd1ac45847a_10.png)
 
-![](img/cc1bde7d30b9537fcfe95dd1ac45847a_11.png)
 
 任何需要堆分配或持有某种资源的类型（如 `String`、`Vec<T>`）都不会实现 `Copy` 特型。
 
-![](img/cc1bde7d30b9537fcfe95dd1ac45847a_12.png)
 
-![](img/cc1bde7d30b9537fcfe95dd1ac45847a_13.png)
 
 ---
 
-![](img/cc1bde7d30b9537fcfe95dd1ac45847a_15.png)
 
 ## 对比示例
 
-![](img/cc1bde7d30b9537fcfe95dd1ac45847a_16.png)
 
-![](img/cc1bde7d30b9537fcfe95dd1ac45847a_17.png)
 
 让我们通过一个对比来巩固理解：
 
@@ -128,13 +114,9 @@ println!("Copy: {}", text_copy); // 正确
 
 ---
 
-![](img/cc1bde7d30b9537fcfe95dd1ac45847a_19.png)
 
-![](img/cc1bde7d30b9537fcfe95dd1ac45847a_20.png)
 
-![](img/cc1bde7d30b9537fcfe95dd1ac45847a_21.png)
 
-![](img/cc1bde7d30b9537fcfe95dd1ac45847a_22.png)
 
 ## 总结
 

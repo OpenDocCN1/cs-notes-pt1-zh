@@ -31,7 +31,6 @@ Ly Shrub园艺中心需要查看其客户最近订单的信息。这些信息分
 
 以下是实现此查询的SQL语句：
 
-![](img/7a17cb67d7006c9601e90615a9b3d72c_3.png)
 
 ```sql
 SELECT clients.full_name
@@ -45,7 +44,6 @@ INNER JOIN orders ON clients.client_id = orders.client_id;
 *   `INNER JOIN orders`: 表示要将`orders`表与`clients`表进行内连接。
 *   `ON clients.client_id = orders.client_id`: 这是连接条件。它指定只有当`clients`表中的`client_id`与`orders`表中的`client_id`值相等时，两条记录才会被连接并返回。
 
-![](img/7a17cb67d7006c9601e90615a9b3d72c_5.png)
 
 **重要提示：** 当SQL语句涉及多个表时，必须使用`表名.列名`的格式来明确指定列所属的表。这在列名（例如`client_id`）同时出现在多个被查询表中时尤为重要。
 
@@ -59,7 +57,6 @@ INNER JOIN orders ON clients.client_id = orders.client_id;
 
 以下是查询客户ID、姓名、联系方式以及订单产品、数量和总成本的示例语句：
 
-![](img/7a17cb67d7006c9601e90615a9b3d72c_7.png)
 
 ```sql
 SELECT

@@ -1,16 +1,11 @@
 # 037：编写 GPIO 输入驱动 🚦
 
-![](img/9a1f969d49c88dfec2f82fe36d0b7da2_0.png)
 
-![](img/9a1f969d49c88dfec2f82fe36d0b7da2_2.png)
 
-![](img/9a1f969d49c88dfec2f82fe36d0b7da2_4.png)
 
-![](img/9a1f969d49c88dfec2f82fe36d0b7da2_6.png)
 
 在本节课中，我们将学习如何为 ARM 微控制器编写 GPIO 输入驱动程序。我们将扩展已有的 GPIO 初始化函数，使其能够处理输入引脚（如按钮），并编写一个读取按钮状态的子程序，根据不同的按钮按下情况来控制 LED 灯。
 
-![](img/9a1f969d49c88dfec2f82fe36d0b7da2_8.png)
 
 ## 概述
 
@@ -18,11 +13,9 @@
 
 ## 扩展 GPIO 初始化函数
 
-![](img/9a1f969d49c88dfec2f82fe36d0b7da2_10.png)
 
 我们的 GPIO 初始化子程序目前只初始化了时钟和 PF1（红色 LED）作为输出。现在，我们需要解锁 PF0 端口，并将绿色 LED 和两个开关（按钮）配置好。
 
-![](img/9a1f969d49c88dfec2f82fe36d0b7da2_12.png)
 
 ### 解锁 PF0 端口
 
@@ -38,9 +31,7 @@ LDR R0, =LOCK_KEY       @ 加载解锁密钥到 R0
 STR R0, [R1]            @ 将密钥写入锁定寄存器，解锁 PF0
 ```
 
-![](img/9a1f969d49c88dfec2f82fe36d0b7da2_14.png)
 
-![](img/9a1f969d49c88dfec2f82fe36d0b7da2_15.png)
 
 ### 提交更改
 
@@ -53,11 +44,9 @@ STR R0, [R1]            @ 将 0xFF 写入提交寄存器
 
 ### 配置引脚方向
 
-![](img/9a1f969d49c88dfec2f82fe36d0b7da2_17.png)
 
 方向寄存器（`GPIOF_DIR_R`）用于设置引脚是输入（0）还是输出（1）。红色 LED（PF1）已设置为输出。现在，我们需要将绿色 LED 对应的引脚也设置为输出。开关引脚默认即为输入（0），因此无需额外设置。
 
-![](img/9a1f969d49c88dfec2f82fe36d0b7da2_19.png)
 
 我们使用**按位或（OR）**操作来设置绿色 LED 的位，而不影响其他已配置的位：
 ```assembly
@@ -69,11 +58,9 @@ STR R0, [R1]            @ 将新值写回方向寄存器
 
 ### 数字功能使能
 
-![](img/9a1f969d49c88dfec2f82fe36d0b7da2_21.png)
 
 数字使能寄存器（`GPIOF_DEN_R`）用于启用引脚的数字功能。我们需要使能红色 LED、绿色 LED 以及两个开关引脚。
 
-![](img/9a1f969d49c88dfec2f82fe36d0b7da2_23.png)
 
 我们可以通过**按位或（OR）**操作一次性设置所有需要的位：
 ```assembly
@@ -86,7 +73,6 @@ STR R0, [R1]                    @ 将值写入数字使能寄存器
 
 对于输入引脚（开关），我们通常需要启用内部上拉电阻，以确保引脚在未按下时保持稳定的高电平。这通过上拉寄存器（`GPIOF_PUR_R`）实现。
 
-![](img/9a1f969d49c88dfec2f82fe36d0b7da2_25.png)
 
 以下是启用两个开关上拉电阻的代码：
 ```assembly
@@ -97,17 +83,13 @@ ORR R0, R0, #SWITCH2    @ 启用开关2的上拉电阻
 STR R0, [R1]            @ 将新值写回上拉寄存器
 ```
 
-![](img/9a1f969d49c88dfec2f82fe36d0b7da2_27.png)
 
 至此，GPIO 初始化函数 `gpio_init` 就完成了对所有必要引脚（两个输出 LED 和两个输入开关）的配置。
 
-![](img/9a1f969d49c88dfec2f82fe36d0b7da2_29.png)
 
 ## 编写 GPIO 读取子程序
 
-![](img/9a1f969d49c88dfec2f82fe36d0b7da2_31.png)
 
-![](img/9a1f969d49c88dfec2f82fe36d0b7da2_33.png)
 
 现在我们需要一个子程序来读取开关的状态。我们将创建一个名为 `gpio_read` 的子程序。
 
@@ -131,15 +113,12 @@ AND R0, R0, #(SWITCH1 | SWITCH2) @ 屏蔽出两个开关的状态位
 
 ## 在主程序中处理输入
 
-![](img/9a1f969d49c88dfec2f82fe36d0b7da2_35.png)
 
 在主程序循环中，我们首先调用 `gpio_init` 进行初始化，然后进入一个循环，不断读取开关状态并作出响应。
 
 ### 读取并比较状态
 
-![](img/9a1f969d49c88dfec2f82fe36d0b7da2_37.png)
 
-![](img/9a1f969d49c88dfec2f82fe36d0b7da2_39.png)
 
 在循环中，我们调用 `gpio_read` 子程序，然后将返回值与预定义的“按下”状态进行比较。
 ```assembly
@@ -152,11 +131,9 @@ loop:
     B loop              @ 否则，继续循环
 ```
 
-![](img/9a1f969d49c88dfec2f82fe36d0b7da2_41.png)
 
 ### 处理开关1按下
 
-![](img/9a1f969d49c88dfec2f82fe36d0b7da2_43.png)
 
 当检测到开关1被按下时，我们跳转到 `switch1_pressed` 标签处。在这里，我们将红色 LED 的值加载到 `R0`，然后调用一个通用的 `led_on` 子程序来点亮它。
 ```assembly
@@ -168,9 +145,7 @@ switch1_pressed:
 
 ### 处理开关2按下
 
-![](img/9a1f969d49c88dfec2f82fe36d0b7da2_45.png)
 
-![](img/9a1f969d49c88dfec2f82fe36d0b7da2_46.png)
 
 类似地，处理开关2按下，点亮绿色 LED。
 ```assembly
@@ -180,7 +155,6 @@ switch2_pressed:
     B loop              @ 返回主循环
 ```
 
-![](img/9a1f969d49c88dfec2f82fe36d0b7da2_48.png)
 
 ### 实现 LED 点亮子程序
 

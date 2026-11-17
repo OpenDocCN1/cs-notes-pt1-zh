@@ -1,84 +1,47 @@
 # 004：排序下界、基数排序与排序网络
 
-![](img/cf1a8e5e33f988b8c1f05a1545def185_1.png)
 
-![](img/cf1a8e5e33f988b8c1f05a1545def185_2.png)
 
-![](img/cf1a8e5e33f988b8c1f05a1545def185_3.png)
 
-![](img/cf1a8e5e33f988b8c1f05a1545def185_5.png)
 
-![](img/cf1a8e5e33f988b8c1f05a1545def185_7.png)
 
-![](img/cf1a8e5e33f988b8c1f05a1545def185_8.png)
 
-![](img/cf1a8e5e33f988b8c1f05a1545def185_10.png)
 
-![](img/cf1a8e5e33f988b8c1f05a1545def185_11.png)
 
-![](img/cf1a8e5e33f988b8c1f05a1545def185_12.png)
 
-![](img/cf1a8e5e33f988b8c1f05a1545def185_14.png)
 
-![](img/cf1a8e5e33f988b8c1f05a1545def185_15.png)
 
-![](img/cf1a8e5e33f988b8c1f05a1545def185_17.png)
 
-![](img/cf1a8e5e33f988b8c1f05a1545def185_19.png)
 
-![](img/cf1a8e5e33f988b8c1f05a1545def185_21.png)
 
-![](img/cf1a8e5e33f988b8c1f05a1545def185_22.png)
 
-![](img/cf1a8e5e33f988b8c1f05a1545def185_24.png)
 
-![](img/cf1a8e5e33f988b8c1f05a1545def185_26.png)
 
-![](img/cf1a8e5e33f988b8c1f05a1545def185_28.png)
 
-![](img/cf1a8e5e33f988b8c1f05a1545def185_29.png)
 
-![](img/cf1a8e5e33f988b8c1f05a1545def185_31.png)
 
-![](img/cf1a8e5e33f988b8c1f05a1545def185_32.png)
 
-![](img/cf1a8e5e33f988b8c1f05a1545def185_34.png)
 
-![](img/cf1a8e5e33f988b8c1f05a1545def185_36.png)
 
-![](img/cf1a8e5e33f988b8c1f05a1545def185_38.png)
 
 在本节课中，我们将要学习排序算法的理论下界，以及如何通过基数排序在线性时间内对特定类型的数据进行排序。最后，我们还将探讨一种特殊的并行计算模型——排序网络。
 
-![](img/cf1a8e5e33f988b8c1f05a1545def185_40.png)
 
-![](img/cf1a8e5e33f988b8c1f05a1545def185_42.png)
 
-![](img/cf1a8e5e33f988b8c1f05a1545def185_44.png)
 
-![](img/cf1a8e5e33f988b8c1f05a1545def185_46.png)
 
-![](img/cf1a8e5e33f988b8c1f05a1545def185_48.png)
 
 ## 排序算法的下界
 
-![](img/cf1a8e5e33f988b8c1f05a1545def185_50.png)
 
-![](img/cf1a8e5e33f988b8c1f05a1545def185_52.png)
 
-![](img/cf1a8e5e33f988b8c1f05a1545def185_54.png)
 
-![](img/cf1a8e5e33f988b8c1f05a1545def185_56.png)
 
-![](img/cf1a8e5e33f988b8c1f05a1545def185_58.png)
 
-![](img/cf1a8e5e33f988b8c1f05a1545def185_60.png)
 
 上一节我们介绍了归并排序、堆排序和快速排序。虽然这些算法使用了不同的思想和技术，但它们的时间复杂度都是 **O(n log n)**。
 
-![](img/cf1a8e5e33f988b8c1f05a1545def185_62.png)
 
-![](img/cf1a8e5e33f988b8c1f05a1545def185_64.png)
 
 一个自然的问题是：是否存在比 **O(n log n)** 更快的排序算法？一个有趣的事实是，对于基于比较的排序算法，这是不可能的。让我们来探讨其原因。
 
@@ -88,32 +51,21 @@
 
 ### 决策树模型证明
 
-![](img/cf1a8e5e33f988b8c1f05a1545def185_66.png)
 
-![](img/cf1a8e5e33f988b8c1f05a1545def185_67.png)
 
-![](img/cf1a8e5e33f988b8c1f05a1545def185_69.png)
 
-![](img/cf1a8e5e33f988b8c1f05a1545def185_71.png)
 
-![](img/cf1a8e5e33f988b8c1f05a1545def185_73.png)
 
-![](img/cf1a8e5e33f988b8c1f05a1545def185_74.png)
 
-![](img/cf1a8e5e33f988b8c1f05a1545def185_75.png)
 
-![](img/cf1a8e5e33f988b8c1f05a1545def185_77.png)
 
 我们可以通过决策树模型来理解这个下界。假设我们有三个元素 X, Y, Z。排序算法通过一系列比较来决定最终的排列顺序。这个过程可以表示为一棵二叉树：
 *   每个内部节点代表一次比较（例如，比较 X 和 Y）。
 *   每个分支代表比较的结果（例如，X < Y 或 X > Y）。
 *   每个叶子节点代表一种可能的排序结果（即元素的一种排列）。
 
-![](img/cf1a8e5e33f988b8c1f05a1545def185_79.png)
 
-![](img/cf1a8e5e33f988b8c1f05a1545def185_81.png)
 
-![](img/cf1a8e5e33f988b8c1f05a1545def185_83.png)
 
 对于 n 个元素，共有 **n!** 种可能的排列，因此决策树至少有 **n!** 个叶子节点。一棵高度为 h 的二叉树最多有 **2^h** 个叶子节点。因此，要容纳 n! 个叶子，树的高度 h 必须满足：
 **2^h ≥ n!**
@@ -149,63 +101,39 @@
 
 计数排序要求整数范围 `m` 不能太大。如果我们要排序的整数范围很大（例如 `0` 到 `m² - 1`），该怎么办？基数排序通过将整数视为多个“位”的组合来解决这个问题。
 
-![](img/cf1a8e5e33f988b8c1f05a1545def185_85.png)
 
-![](img/cf1a8e5e33f988b8c1f05a1545def185_87.png)
 
-![](img/cf1a8e5e33f988b8c1f05a1545def185_89.png)
 
-![](img/cf1a8e5e33f988b8c1f05a1545def185_91.png)
 
-![](img/cf1a8e5e33f988b8c1f05a1545def185_93.png)
 
-![](img/cf1a8e5e33f988b8c1f05a1545def185_95.png)
 
 核心思想是：将一个整数 `x` 表示为 `x = y * M + z`，其中 `y` 和 `z` 都在 `0` 到 `M-1` 范围内。这相当于在 `M` 进制下，将 `x` 拆分成高位 `y` 和低位 `z` 两个数字。
 
-![](img/cf1a8e5e33f988b8c1f05a1545def185_97.png)
 
-![](img/cf1a8e5e33f988b8c1f05a1545def185_98.png)
 
-![](img/cf1a8e5e33f988b8c1f05a1545def185_100.png)
 
-![](img/cf1a8e5e33f988b8c1f05a1545def185_101.png)
 
-![](img/cf1a8e5e33f988b8c1f05a1545def185_103.png)
 
-![](img/cf1a8e5e33f988b8c1f05a1545def185_105.png)
 
-![](img/cf1a8e5e33f988b8c1f05a1545def185_106.png)
 
-![](img/cf1a8e5e33f988b8c1f05a1545def185_108.png)
 
-![](img/cf1a8e5e33f988b8c1f05a1545def185_109.png)
 
-![](img/cf1a8e5e33f988b8c1f05a1545def185_111.png)
 
-![](img/cf1a8e5e33f988b8c1f05a1545def185_113.png)
 
-![](img/cf1a8e5e33f988b8c1f05a1545def185_115.png)
 
 排序时，我们不再直接比较整个数字，而是先根据**低位** `z` 进行排序，再根据**高位** `y` 进行排序。关键是，第二次排序（按高位）必须使用**稳定排序算法**（如稳定的计数排序）。这样，在整体排序后，对于高位相同的元素，它们会按照低位的顺序排列，从而得到完全有序的序列。
 
-![](img/cf1a8e5e33f988b8c1f05a1545def185_117.png)
 
-![](img/cf1a8e5e33f988b8c1f05a1545def185_119.png)
 
-![](img/cf1a8e5e33f988b8c1f05a1545def185_121.png)
 
 对于范围更大的整数，我们可以将其拆分成 `k` 个数字（例如，按十进制或二进制位拆分）。然后，我们从最低位到最高位，依次进行稳定的计数排序。这个过程称为**基数排序**。
 
-![](img/cf1a8e5e33f988b8c1f05a1545def185_123.png)
 
 基数排序的时间复杂度是 **O(k * (n + M))**，其中 `k` 是数字的位数，`M` 是每一位的取值范围（例如十进制就是10）。当 `k` 为常数且 `M` 与 `n` 相当时，复杂度是线性的 **O(n)**。
 
 ## 排序网络：一种并行计算模型
 
-![](img/cf1a8e5e33f988b8c1f05a1545def185_125.png)
 
-![](img/cf1a8e5e33f988b8c1f05a1545def185_127.png)
 
 最后，我们介绍一种不同的计算模型——排序网络。在这个模型中，我们只能进行一种操作：**比较-交换**。即，给定两个索引 `i` 和 `j`，如果 `a[i] > a[j]`，则交换它们。
 
@@ -215,19 +143,14 @@
 
 ### 双调排序网络
 
-![](img/cf1a8e5e33f988b8c1f05a1545def185_129.png)
 
 一种著名的排序网络是**双调排序网络**。它的核心是能够高效地排序一种特殊的序列——**双调序列**。
 
-![](img/cf1a8e5e33f988b8c1f05a1545def185_131.png)
 
-![](img/cf1a8e5e33f988b8c1f05a1545def185_133.png)
 
 一个序列是双调的，如果它先单调递增（或不变）再单调递减（或不变），或者能通过循环移位变成这种形式。例如序列 `[3, 5, 7, 8, 6, 4, 2, 1]`。
 
-![](img/cf1a8e5e33f988b8c1f05a1545def185_135.png)
 
-![](img/cf1a8e5e33f988b8c1f05a1545def185_137.png)
 
 ![](img/cf1a8e5e33f988b8c1f05a1545def185_139.png)
 

@@ -8,7 +8,6 @@ UNIX操作系统自诞生之初就是多任务、多用户的系统。这自然�
 
 系统会管理部分资源。例如，调度器使用算法将不同进程分配到可用的CPU上，确保没有进程因资源过度使用而“饿死”。磁盘空间是有限的，但系统可以通过实施用户配额来确保没有单个用户能占用所有可用空间。文件系统本身会为超级用户或系统使用保留一定数量的inode，这样即使系统磁盘完全写满，管理员仍能进行清理操作。
 
-![](img/3c31b120737007215cb4fbd5f37d3877_1.png)
 
 这些方法有些是操作系统特定的，有些则利用通用的系统调用来实现目标。此外，标准化的方法和事实标准也发挥着作用。
 
@@ -34,7 +33,6 @@ UNIX操作系统自诞生之初就是多任务、多用户的系统。这自然�
 
 由于POSIX ACLs的实现在不同UNIX版本中并不完全统一，让我们看看几个不同系统上的实际例子。
 
-![](img/3c31b120737007215cb4fbd5f37d3877_3.png)
 
 ## 在Linux上使用ACLs
 
@@ -52,7 +50,6 @@ setfacl -m g:professor:r simple_cat.c
 
 好的，这是一个EXT3文件系统，应该支持POSIX ACLs，让我们再试一次。很好，没有错误。让我们再看看这个文件。
 
-![](img/3c31b120737007215cb4fbd5f37d3877_5.png)
 
 ```bash
 ls -l simple_cat.c
@@ -66,7 +63,6 @@ ls -l simple_cat.c
 getfacl simple_cat.c
 ```
 
-![](img/3c31b120737007215cb4fbd5f37d3877_7.png)
 
 在这里，我们看到我们为“6XV”组设置了组权限。等等，我们已经有了“6XV”组的组权限，但我们希望“professor”组保留读取权限。让我们给那个组读取权限。
 
@@ -78,14 +74,12 @@ setfacl -m g:professor:r simple_cat.c
 
 好的，现在假设我们想把这个文件的访问权限授予班上的某些学生，比如Edward和Mingo。他们都只是“student”组的成员，而我不想让所有学生都能访问我的文件，所以我不想使用这个组。但是有了POSIX ACLs，我也可以指定单个用户，让我们试试。
 
-![](img/3c31b120737007215cb4fbd5f37d3877_9.png)
 
 ```bash
 setfacl -m u:edward:r,u:mingo:r simple_cat.c
 getfacl simple_cat.c
 ```
 
-![](img/3c31b120737007215cb4fbd5f37d3877_11.png)
 
 这似乎成功了。以表格格式查看，可能更容易阅读权限，它清楚地表明我们现在能够提供细粒度的访问控制。
 
@@ -95,11 +89,9 @@ getfacl simple_cat.c
 getfacl simple_cat.c | setfacl --set-file=- simple_cat_copy.c
 ```
 
-![](img/3c31b120737007215cb4fbd5f37d3877_13.png)
 
 很好。但更好的是，像 `mv` 或 `cp` 这样的工具能够直接复制ACL。
 
-![](img/3c31b120737007215cb4fbd5f37d3877_15.png)
 
 ```bash
 cp -p simple_cat.c simple_cat_copy2.c
@@ -144,7 +136,6 @@ ls -le simple_cat.c
 
 现在，我们的规则集看起来是这样的。`chmod` 的手册页包含大量关于如何操作ACL以及哪些授权是可能的信息。注意，我们区分了对文件元数据的操作、对目录的操作、对常规文件的操作等等。手册页还包含许多示例，你可以自己尝试。
 
-![](img/3c31b120737007215cb4fbd5f37d3877_17.png)
 
 如果你想删除一个特定的ACL规则，你需要使用 `#` 号指定其编号。例如，这里我们删除第一条规则（规则0），那么逻辑上下一条规则就变成了第一条规则（新的规则0）。
 
@@ -153,20 +144,16 @@ chmod -a# 0 simple_cat.c
 ls -le simple_cat.c
 ```
 
-![](img/3c31b120737007215cb4fbd5f37d3877_19.png)
 
 注意，在 `-a` 和 `#` 号之间不能有空格。记住，在shell中，`#` 标记注释的开始，你也可以在命令行上使用注释。也就是说，`-a# 0` 和 `-a # 0` 是有区别的。无论如何，要在macOS上删除所有ACL，你可以使用 `chmod -N`，和之前一样，文件将不再显示任何扩展属性。
 
-![](img/3c31b120737007215cb4fbd5f37d3877_20.png)
 
 ```bash
 chmod -N simple_cat.c
 ls -l simple_cat.c
 ```
 
-![](img/3c31b120737007215cb4fbd5f37d3877_22.png)
 
-![](img/3c31b120737007215cb4fbd5f37d3877_23.png)
 
 ## 在NetBSD上使用ACLs
 
@@ -178,7 +165,6 @@ ls -l simple_cat.c
 setfacl -m g:staff:r simple_cat.c
 ```
 
-![](img/3c31b120737007215cb4fbd5f37d3877_25.png)
 
 不行。这里的根文件系统不支持ACL。正如前面解释的，文件系统需要支持POSIX ACLs。让我们像以前一样，在第二个磁盘上使用一个单独的文件系统。
 
@@ -186,7 +172,6 @@ setfacl -m g:staff:r simple_cat.c
 
 和之前一样，`ls -l` 通过加号显示了扩展属性的存在，`getfacl` 显示了结果。
 
-![](img/3c31b120737007215cb4fbd5f37d3877_27.png)
 
 现在，作为“staff”组成员的用户“fred”可以显示这个文件了。当然，“fred”仍然不能写入它。好的，现在让我们尝试给“molly”写入权限。
 
@@ -198,7 +183,6 @@ setfacl -m u:molly:w simple_cat.c
 
 现在，假设你想给“staff”组中除“jenny”外的所有人访问权限。为此，我们像这样使用 `setfacl`。
 
-![](img/3c31b120737007215cb4fbd5f37d3877_29.png)
 
 ```bash
 setfacl -m u:jenny:--- simple_cat.c

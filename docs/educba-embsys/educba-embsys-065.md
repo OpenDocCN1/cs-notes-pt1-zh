@@ -1,6 +1,5 @@
 # 065：for循环练习第二部分
 
-![](img/811f4721b16cb701f8676b3ffb0dbb3a_0.png)
 
 ![](img/811f4721b16cb701f8676b3ffb0dbb3a_1.png)
 

@@ -16,21 +16,17 @@
 
 
 
-![](img/b0ba6cb058d50b134b94e18120decca7_1.png)
 
 之后，用户可以根据需要访问、检索和更新这些数据。
 
 
 
-![](img/b0ba6cb058d50b134b94e18120decca7_3.png)
 
 ---
 
-![](img/b0ba6cb058d50b134b94e18120decca7_1.png)
 
 ## 如何创建数据库？ ➕
 
-![](img/b0ba6cb058d50b134b94e18120decca7_3.png)
 
 那么，如何使用SQL语法创建数据库呢？要创建一个数据库，只需输入 `CREATE DATABASE` 关键字，然后跟上你的数据库名称。
 
@@ -44,7 +40,6 @@ CREATE DATABASE database_name;
 
 ## 如何删除数据库？ ➖
 
-![](img/b0ba6cb058d50b134b94e18120decca7_5.png)
 
 关于移除或删除数据库呢？要删除一个数据库，只需输入关键字 `DROP DATABASE`，然后跟上你想要删除的数据库名称。
 
@@ -56,7 +51,6 @@ DROP DATABASE database_name;
 
 
 
-![](img/b0ba6cb058d50b134b94e18120decca7_5.png)
 
 ---
 
@@ -70,9 +64,7 @@ DROP DATABASE database_name;
 
 
 
-![](img/b0ba6cb058d50b134b94e18120decca7_7.png)
 
-![](img/b0ba6cb058d50b134b94e18120decca7_7.png)
 
 于是，新的数据库 `bookstore_DB2` 出现在左侧边栏中。这样，我就创建了第二个数据库。
 
@@ -80,23 +72,18 @@ DROP DATABASE database_name;
 
 
 
-![](img/b0ba6cb058d50b134b94e18120decca7_9.png)
 
-![](img/b0ba6cb058d50b134b94e18120decca7_9.png)
 
 首先，我选择SQL选项卡，然后在出现的代码框中输入我的查询。我输入关键字 `DROP DATABASE`，然后跟上我想要删除的数据库名称，在这个例子中是 `bookstore_DB`。
 
 
 
-![](img/b0ba6cb058d50b134b94e18120decca7_11.png)
 
 现在我运行查询，SQL就会删除该数据库。
 
 
 
-![](img/b0ba6cb058d50b134b94e18120decca7_11.png)
 
-![](img/b0ba6cb058d50b134b94e18120decca7_13.png)
 
 ---
 

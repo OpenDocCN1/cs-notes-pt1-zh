@@ -10,7 +10,6 @@ Linux内核本身非常稳定，但通过一些调整，我们可以进一步提
 
 ---
 
-![](img/f8cb37094d03beb37dc5920f0860e4b8_1.png)
 
 ### 核心原则与安全须知 ⚠️
 
@@ -26,29 +25,21 @@ Linux内核本身非常稳定，但通过一些调整，我们可以进一步提
 
 ---
 
-![](img/f8cb37094d03beb37dc5920f0860e4b8_3.png)
 
 ### 探索内核信息中心：`/proc` 目录 🔍
 
-![](img/f8cb37094d03beb37dc5920f0860e4b8_5.png)
 
-![](img/f8cb37094d03beb37dc5920f0860e4b8_7.png)
 
 现在，让我们进入实践环节。所有内核相关的信息和可调参数都位于 `/proc` 目录中。
 
 执行命令 `cd /proc` 进入该目录。`/proc` 是一个虚拟文件系统，它提供了访问内核内部数据和状态的接口。
 
-![](img/f8cb37094d03beb37dc5920f0860e4b8_9.png)
 
-![](img/f8cb37094d03beb37dc5920f0860e4b8_11.png)
 
 如果在此目录执行 `ls` 命令，你会看到许多条目。其中，蓝色的数字目录代表当前系统正在运行的**进程ID（PID）**。每个进程都有一个唯一的PID，你可以进入相应的PID目录（例如 `cd /947`）查看该进程的详细信息，如状态、内存使用情况和CPU限制等。
 
-![](img/f8cb37094d03beb37dc5920f0860e4b8_13.png)
 
-![](img/f8cb37094d03beb37dc5920f0860e4b8_15.png)
 
-![](img/f8cb37094d03beb37dc5920f0860e4b8_16.png)
 
 除了进程信息，`/proc` 目录还包含许多重要的系统文件：
 
@@ -78,35 +69,24 @@ Linux内核本身非常稳定，但通过一些调整，我们可以进一步提
 *   **`user/`**：用户相关设置。
 *   **`vm/`**：虚拟内存管理接口。
 
-![](img/f8cb37094d03beb37dc5920f0860e4b8_18.png)
 
 每个子目录下都有具体的文件，对应着不同的系统参数。
 
-![](img/f8cb37094d03beb37dc5920f0860e4b8_20.png)
 
-![](img/f8cb37094d03beb37dc5920f0860e4b8_22.png)
 
 ---
 
-![](img/f8cb37094d03beb37dc5920f0860e4b8_23.png)
 
-![](img/f8cb37094d03beb37dc5920f0860e4b8_25.png)
 
 ### 修改内核参数的方法 🛠️
 
-![](img/f8cb37094d03beb37dc5920f0860e4b8_27.png)
 
-![](img/f8cb37094d03beb37dc5920f0860e4b8_28.png)
 
-![](img/f8cb37094d03beb37dc5920f0860e4b8_30.png)
 
-![](img/f8cb37094d03beb37dc5920f0860e4b8_32.png)
 
 有两种主要命令可以修改 `/proc/sys/` 下的参数：
 
-![](img/f8cb37094d03beb37dc5920f0860e4b8_34.png)
 
-![](img/f8cb37094d03beb37dc5920f0860e4b8_36.png)
 
 1.  **使用 `echo` 命令**：直接将值写入参数文件。
     ```bash
@@ -116,17 +96,12 @@ Linux内核本身非常稳定，但通过一些调整，我们可以进一步提
     *   查看所有变量：`sysctl -a`
     *   修改参数：`sysctl -w <parameter>=<value>`
 
-![](img/f8cb37094d03beb37dc5920f0860e4b8_38.png)
 
-![](img/f8cb37094d03beb37dc5920f0860e4b8_40.png)
 
-![](img/f8cb37094d03beb37dc5920f0860e4b8_41.png)
 
 例如，我们可以简单地修改主机名：
 
-![](img/f8cb37094d03beb37dc5920f0860e4b8_43.png)
 
-![](img/f8cb37094d03beb37dc5920f0860e4b8_44.png)
 
 ```bash
 # 查看当前主机名
@@ -141,26 +116,20 @@ echo "new-hostname" > /proc/sys/kernel/hostname
 
 ### 实战：永久修改内核参数 💡
 
-![](img/f8cb37094d03beb37dc5920f0860e4b8_46.png)
 
-![](img/f8cb37094d03beb37dc5920f0860e4b8_47.png)
 
 为了让配置在重启后依然生效，我们需要创建永久的配置文件。
 
-![](img/f8cb37094d03beb37dc5920f0860e4b8_49.png)
 
-![](img/f8cb37094d03beb37dc5920f0860e4b8_51.png)
 
 让我们以一个常见的网络安全配置为例：**禁用ICMP Ping响应**（使他人无法ping通你的服务器）。
 
-![](img/f8cb37094d03beb37dc5920f0860e4b8_53.png)
 
 1.  **检查当前状态**：首先，ping一下本机，确认是通的。
     ```bash
     ping localhost
     ```
 
-![](img/f8cb37094d03beb37dc5920f0860e4b8_55.png)
 
 2.  **找到并临时修改参数**：控制Ping响应的参数是 `/proc/sys/net/ipv4/icmp_echo_ignore_all`。值为 `0` 表示允许Ping，`1` 表示忽略。
     ```bash

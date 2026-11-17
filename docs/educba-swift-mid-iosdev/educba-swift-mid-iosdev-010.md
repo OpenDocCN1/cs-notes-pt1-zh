@@ -28,21 +28,17 @@
 
 在集合视图单元格内部，我们添加一个图像视图，用于后续显示图片。
 
-![](img/0be1434e62ae351b10c5f761c4c5db62_9.png)
 
 ## 建立连接与创建类文件
 
-![](img/0be1434e62ae351b10c5f761c4c5db62_11.png)
 
 界面搭建完成后，我们需要建立代码与界面元素的连接。
 
 首先，在视图控制器中，为表格视图创建一个出口连接，命名为`tableView`。同时，将表格视图的`delegate`和`dataSource`属性设置为这个视图控制器。
 
-![](img/0be1434e62ae351b10c5f761c4c5db62_13.png)
 
 由于集合视图是内嵌在表格视图单元格中的，我们需要为这个自定义的单元格创建一个单独的类。新建一个Cocoa Touch Class文件，将其命名为`CustomTableViewCell`，并使其继承自`UITableViewCell`。
 
-![](img/0be1434e62ae351b10c5f761c4c5db62_15.png)
 
 ![](img/0be1434e62ae351b10c5f761c4c5db62_17.png)
 
@@ -74,7 +70,6 @@ override func awakeFromNib() {
 
 ![](img/0be1434e62ae351b10c5f761c4c5db62_21.png)
 
-![](img/0be1434e62ae351b10c5f761c4c5db62_23.png)
 
 然后，实现集合视图数据源的两个核心方法：
 1.  `numberOfItemsInSection`：返回数组`imageArr`的元素数量。
@@ -82,23 +77,18 @@ override func awakeFromNib() {
 
 为了能在`cellForItemAt`方法中访问集合视图单元格内的图像视图，我们需要为它创建一个类。新建一个`UICollectionViewCell`的子类，例如`CollectionViewCell`，并在其中为图像视图创建出口连接`imgView`。
 
-![](img/0be1434e62ae351b10c5f761c4c5db62_25.png)
 
-![](img/0be1434e62ae351b10c5f761c4c5db62_27.png)
 
 回到故事板，将集合视图原型单元格的类设置为`CollectionViewCell`。
 
-![](img/0be1434e62ae351b10c5f761c4c5db62_29.png)
 
 现在，我们可以在`CustomTableViewCell`的`cellForItemAt`方法中，安全地配置每个集合视图单元格了。
 
-![](img/0be1434e62ae351b10c5f761c4c5db62_31.png)
 
 ## 实现表格视图协议
 
 上一节我们完成了单元格内部集合视图的配置，现在回到主视图控制器，实现表格视图的协议。
 
-![](img/0be1434e62ae351b10c5f761c4c5db62_33.png)
 
 首先，确保视图控制器类声明中遵循了`UITableViewDelegate`和`UITableViewDataSource`协议。
 
@@ -120,11 +110,9 @@ override func viewDidLoad() {
 
 ## 运行与总结
 
-![](img/0be1434e62ae351b10c5f761c4c5db62_35.png)
 
 至此，所有代码部分已完成。现在可以运行应用程序，查看最终效果。你应该能看到一个表格，每一行内部都包含一个水平滚动的集合视图，展示不同的国家旗帜图片。
 
-![](img/0be1434e62ae351b10c5f761c4c5db62_37.png)
 
 本节课中，我们一起学习了如何将集合视图嵌入到表格视图的单元格中。关键步骤包括：
 1.  在故事板中搭建嵌套的视图层次结构。

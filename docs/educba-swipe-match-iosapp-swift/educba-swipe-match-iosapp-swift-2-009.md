@@ -16,11 +16,9 @@
 
 在实现数据源之前，我们需要创建一些静态的用户数据模型。
 
-![](img/b1610b3ecc9f74a929fd796b7fcb49b1_1.png)
 
 ---
 
-![](img/b1610b3ecc9f74a929fd796b7fcb49b1_2.png)
 
 ## 创建静态用户数据模型
 
@@ -46,7 +44,6 @@ let viewModels = [sarish, george, priya, kagel, guitar, sundip]
 
 在创建模型之前，请确保已将所需的图片资源（如 `sarish_image`, `george_image` 等）添加到项目的 `Assets.xcassets` 目录中。
 
-![](img/b1610b3ecc9f74a929fd796b7fcb49b1_4.png)
 
 ---
 
@@ -61,10 +58,8 @@ let viewModels = [sarish, george, priya, kagel, guitar, sundip]
 核心实现代码如下：
 
 
-![](img/b1610b3ecc9f74a929fd796b7fcb49b1_6.png)
 
 
-![](img/b1610b3ecc9f74a929fd796b7fcb49b1_8.png)
 
 ```swift
 func numberOfCards() -> Int {
@@ -83,15 +78,12 @@ func emptyView() -> UIView? {
 
 ---
 
-![](img/b1610b3ecc9f74a929fd796b7fcb49b1_10.png)
 
-![](img/b1610b3ecc9f74a929fd796b7fcb49b1_12.png)
 
 ## 检查界面连接与调试
 
 实现数据源后，运行应用可能仍然无法正常显示。以下是常见的检查与调试步骤：
 
-![](img/b1610b3ecc9f74a929fd796b7fcb49b1_14.png)
 
 1.  **检查Storyboard连接**：确保 `SampleSwipeableCard` 在Storyboard中的自定义类已正确设置，并且所有 `@IBOutlet`（如背景容器、图片视图、标题标签等）都已正确连接到文件所有者。
 2.  **修复循环引用导致的崩溃**：如果应用崩溃并提示内存问题，可能是由于在 `reloadData` 方法中出现了无限循环。检查更新剩余卡片数量的逻辑，确保使用了正确的递减运算符 `-=`。
@@ -99,7 +91,6 @@ func emptyView() -> UIView? {
     正确示例：`remainingCards -= 1`
 3.  **检查静态头部视图**：确保应用顶部的静态信息栏（如显示“Tinder”Logo和图标的部分）对应的视图类已正确设置，并且其内部的子视图连接无误。
 
-![](img/b1610b3ecc9f74a929fd796b7fcb49b1_16.png)
 
 完成这些检查和修复后，再次运行应用。此时应该能够看到所有用户卡片以堆叠形式显示，并且可以通过左右滑动来表示“喜欢”或“不喜欢”。
 
@@ -107,30 +98,24 @@ func emptyView() -> UIView? {
 
 ## 功能回顾与扩展
 
-![](img/b1610b3ecc9f74a929fd796b7fcb49b1_18.png)
 
 本节课中我们一起学习了如何为滑动匹配应用注入数据并完善界面。
 
 我们已经成功实现了Tinder应用的核心交互逻辑：**通过左右滑动手势来评价卡片**。目前应用使用的是本地静态数据，在实际开发中，这些用户数据通常会从服务器接口获取。
 
-![](img/b1610b3ecc9f74a929fd796b7fcb49b1_20.png)
 
 你可以在此基础上进一步扩展应用功能，例如：
 *   在滑动后添加“已添加至收藏”或“已跳过”等提示信息。
 *   实现“刷新”或“撤销”按钮来重新加载或回退操作。
 *   集成即时聊天、个人资料详情页等更多功能模块。
 
-![](img/b1610b3ecc9f74a929fd796b7fcb49b1_22.png)
 
-![](img/b1610b3ecc9f74a929fd796b7fcb49b1_23.png)
 
-![](img/b1610b3ecc9f74a929fd796b7fcb49b1_24.png)
 
 通过本课程，你已经掌握了使用Swift创建滑动匹配式应用界面的基本方法，可以在此基础上构建功能更丰富的社交应用。
 
 ---
 
-![](img/b1610b3ecc9f74a929fd796b7fcb49b1_26.png)
 
 ![](img/b1610b3ecc9f74a929fd796b7fcb49b1_28.png)
 

@@ -36,9 +36,7 @@ curl -X POST -d "key=value" https://postman-echo.com/post
 
 在本课程的其余部分，您将使用Insomnia来测试和与您构建的API进行交互。下面我们来看看如何使用它。
 
-![](img/abc12e625b496785e1a49b97ae196ddc_3.png)
 
-![](img/abc12e625b496785e1a49b97ae196ddc_4.png)
 
 ### 开始使用Insomnia
 

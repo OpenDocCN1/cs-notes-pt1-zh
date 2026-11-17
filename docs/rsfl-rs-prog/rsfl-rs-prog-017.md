@@ -6,11 +6,9 @@
 
 上一节我们介绍了 Rust 中的 `if` 和 `else`，以及如何根据条件执行代码。在继续之前，需要澄清一点：`len()` 方法的作用与我在 Python 中的认知不同。
 
-![](img/ca55efffacb9a67d610f1f7d8279617c_1.png)
 
 在 Python 中，`len()` 可用于计算字符串的字符数或列表的元素数。但在 Rust 中，`len()` 返回的是字符串的**字节长度**，而非字符数。你可以通过悬停查看文档来验证这一点。
 
-![](img/ca55efffacb9a67d610f1f7d8279617c_2.png)
 
 为了使函数准确计算字符数，我们需要先获取字符，然后再进行计数。
 
@@ -30,9 +28,7 @@ let character_count = "ø".chars().count(); // 返回 1
 
 之前我们学习了使用 `if` 和 `else` 根据特定条件执行代码。但如果我们想处理多个条件呢？在本节中，我们将通过创建一个简单的响应函数来学习如何使用 `else if`。
 
-![](img/ca55efffacb9a67d610f1f7d8279617c_4.png)
 
-![](img/ca55efffacb9a67d610f1f7d8279617c_5.png)
 
 我们将创建一个名为 `get_response` 的函数，它接收一个字符串切片作为用户输入，并返回一个字符串切片作为响应。
 
@@ -42,7 +38,6 @@ fn get_response(input: &str) -> &str {
 }
 ```
 
-![](img/ca55efffacb9a67d610f1f7d8279617c_7.png)
 
 首先，我们创建一个名为 `lowered` 的 `String` 类型变量。它将接收输入，并将其转换为小写。这使字符串比较变得更容易，因为带大写 `H` 的 `"Hello"` 不等于带小写 `h` 的 `"hello"`。我们希望它们被识别为相同的内容。
 
@@ -62,7 +57,6 @@ if lowered.contains("hello") {
 
 到目前为止，这只是我们上节课学过的内容。但只有一个响应显得不够好。接下来，我们将添加多个响应，为此我们将使用 `else if` 关键字（或关键字组合）。
 
-![](img/ca55efffacb9a67d610f1f7d8279617c_9.png)
 
 `else if` 本质上是第二个 `if` 检查。如果第一个 `if` 失败，程序会继续检查这个 `else if`。这意味着我们现在可以检查 `lowered` 是否包含 `"how are you"`。
 
@@ -97,11 +91,9 @@ fn main() {
 
 运行此程序，你会看到我们为每个输入都得到了恰当的响应。
 
-![](img/ca55efffacb9a67d610f1f7d8279617c_11.png)
 
 你可以插入任意多个 `else if` 表达式，但有一点需要注意：**这些条件的放置顺序很重要**。因为一旦其中一个条件评估为 `true`，其余的条件就会被忽略。
 
-![](img/ca55efffacb9a67d610f1f7d8279617c_13.png)
 
 ## 条件顺序的重要性
 
@@ -119,9 +111,7 @@ fn analyze_number(n: i32) {
 }
 ```
 
-![](img/ca55efffacb9a67d610f1f7d8279617c_15.png)
 
-![](img/ca55efffacb9a67d610f1f7d8279617c_16.png)
 
 在 `main` 函数中调用它并传入数字 `5`：
 
@@ -133,9 +123,7 @@ fn main() {
 
 运行程序，输出是：`5 is greater than zero`。
 
-![](img/ca55efffacb9a67d610f1f7d8279617c_18.png)
 
-![](img/ca55efffacb9a67d610f1f7d8279617c_19.png)
 
 现在，如果我们传入 `100`，根据逻辑，我们应该触发 `n > 10` 这个条件块，输出 `100 is greater than ten`。但运行后你会发现，输出是 `100 is greater than zero`。
 
@@ -143,9 +131,7 @@ fn main() {
 
 如果你希望代码按预期工作，必须在检查 `n > 0` 之前先检查 `n > 10`，因为 `n > 0` 有可能在 `n > 10` 之前就通过检查。当然，相应地修改输出字符串也会有用。
 
-![](img/ca55efffacb9a67d610f1f7d8279617c_21.png)
 
-![](img/ca55efffacb9a67d610f1f7d8279617c_22.png)
 
 调整顺序后的函数如下：
 
@@ -165,11 +151,9 @@ fn analyze_number(n: i32) {
 - 输入 `100` 会输出 `100 is greater than ten`。
 - 输入 `5` 会输出 `5 is greater than zero`。
 
-![](img/ca55efffacb9a67d610f1f7d8279617c_24.png)
 
 这是因为程序按顺序检查条件。由于 `5` 不大于 `10`，程序能够继续检查下一个条件 `n > 0`，该条件返回 `true`，因此执行了对应的代码行。
 
-![](img/ca55efffacb9a67d610f1f7d8279617c_26.png)
 
 ## 总结
 

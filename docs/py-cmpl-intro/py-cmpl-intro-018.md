@@ -2,7 +2,6 @@
 
 在本节课中，我们将要学习Python中的`for`循环。`for`循环用于执行固定次数的代码块，它可以遍历一个范围、一个字符串、一个序列或任何可迭代的对象。与`while`循环相比，`for`循环更适合在需要执行固定次数操作的情况下使用。
 
-![](img/ab39477a767a812bbea7006d33ce89d5_1.png)
 
 ## 基础语法与遍历数字范围
 
@@ -22,7 +21,6 @@ for x in range(1, 11):
 
 了解了正向计数后，我们来看看如何反向计数以及控制计数的步长。
 
-![](img/ab39477a767a812bbea7006d33ce89d5_3.png)
 
 要反向计数，可以将`range()`函数嵌套在`reversed()`函数中：
 ```python
@@ -54,13 +52,10 @@ for x in credit_card:
 
 ## 循环控制：continue与break
 
-![](img/ab39477a767a812bbea7006d33ce89d5_5.png)
 
 在循环中，有两个重要的关键字可以控制流程：`continue`和`break`。它们同样适用于`while`循环。
 
-![](img/ab39477a767a812bbea7006d33ce89d5_7.png)
 
-![](img/ab39477a767a812bbea7006d33ce89d5_9.png)
 
 `continue`语句用于跳过当前循环的剩余语句，直接进入下一次迭代。例如，我们希望跳过不吉利的数字13：
 ```python
@@ -71,7 +66,6 @@ for x in range(1, 21):
 ```
 当`x`等于13时，`continue`语句被执行，`print(x)`被跳过，循环直接进入下一次迭代（`x=14`），因此输出中不会出现13。
 
-![](img/ab39477a767a812bbea7006d33ce89d5_11.png)
 
 `break`语句用于立即终止整个循环。例如，我们希望在遇到13时停止计数：
 ```python
@@ -84,7 +78,6 @@ for x in range(1, 21):
 
 ## 总结
 
-![](img/ab39477a767a812bbea7006d33ce89d5_13.png)
 
 ![](img/ab39477a767a812bbea7006d33ce89d5_14.png)
 

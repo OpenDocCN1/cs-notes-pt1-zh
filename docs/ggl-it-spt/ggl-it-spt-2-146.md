@@ -29,7 +29,6 @@
 
 除了解压文件，你也可以创建归档文件。我可以新建一个文件夹，命名为 `new_colors`。然后，我将把 `new_blue.txt` 文件和旧的 `colors` 文件夹放入其中。接着，我将使用7-Zip将其归档：右键点击 `new_colors` 文件夹，选择 **7-Zip -> 添加到归档...**，点击确定。
 
-![](img/195249b276a8e797e7dae88247c86c28_1.png)
 
 这很实用。如果你想通过电子邮件发送一堆文件，无需逐个发送，可以将它们全部合并到一个归档文件中，只发送这一个文件。
 
@@ -47,7 +46,6 @@ Compress-Archive -Path .\Desktop\cool_files\* -DestinationPath .\Desktop\cool_ar
 
 现在检查你的桌面，你应该能看到 `cool_archive.zip`。这个命令会将桌面 `cool_files` 目录中的所有内容压缩到这个zip文件中。
 
-![](img/195249b276a8e797e7dae88247c86c28_3.png)
 
 ## 总结 📝
 

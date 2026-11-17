@@ -104,7 +104,6 @@ for record in dataset:
 
 ## 总结
 
-![](img/6be4157064663602dd3b9f922d3831e6_3.png)
 
 ![](img/6be4157064663602dd3b9f922d3831e6_4.png)
 

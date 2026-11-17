@@ -84,9 +84,7 @@ curl -s https://raw.githubusercontent.com/major/MySQLTuner-perl/master/mysqltune
 
 ## 调优的基本原则与总结 📝
 
-![](img/9d4b3746ada137c149e8312ffcb44eb4_7.png)
 
-![](img/9d4b3746ada137c149e8312ffcb44eb4_9.png)
 
 MySQL调优的基本方式是理解这些参数并根据你的服务器资源进行调整。一个重要的原则是，最多可以将约70%的RAM分配给MySQL。超过这个比例，可能会开始影响Linux系统上的其他进程，即使这台服务器是专用于数据库的。
 

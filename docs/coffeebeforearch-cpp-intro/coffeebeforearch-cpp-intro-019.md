@@ -19,7 +19,6 @@ C++提供了几种方法来解决这个问题。一种方法是使用STL容器�
 
 ## 创建和使用 std::unique_ptr
 
-![](img/7bd29b007311f401cdda1c6ba35d830e_1.png)
 
 以下是创建和使用 `std::unique_ptr` 的基本步骤。
 
@@ -45,7 +44,6 @@ std::unique_ptr<int[]> pointer(new int[10]);
 
 现在，`pointer` 就可以像普通指针一样使用，例如通过索引访问数组元素。
 
-![](img/7bd29b007311f401cdda1c6ba35d830e_3.png)
 
 ```cpp
 for (int i = 0; i < 10; i++) {
@@ -57,7 +55,6 @@ std::cout << pointer[7] << std::endl; // 输出 49
 
 当 `pointer` 离开其作用域（例如 `main` 函数结束）时，它会自动释放其管理的数组内存。
 
-![](img/7bd29b007311f401cdda1c6ba35d830e_5.png)
 
 ### 方法二：使用 std::make_unique（推荐）
 
@@ -69,13 +66,10 @@ auto pointer = std::make_unique<int[]>(10);
 
 这行代码使用 `auto` 进行自动类型推导，`std::make_unique<int[]>(10)` 会创建一个管理10个整数数组的 `unique_ptr`。代码的其余部分与之前完全相同。
 
-![](img/7bd29b007311f401cdda1c6ba35d830e_7.png)
 
 使用 `std::make_unique` 是更推荐的做法，因为它更安全，能防止某些异常情况下的内存泄漏。
 
-![](img/7bd29b007311f401cdda1c6ba35d830e_9.png)
 
-![](img/7bd29b007311f401cdda1c6ba35d830e_10.png)
 
 ## std::unique_ptr 的其他功能
 

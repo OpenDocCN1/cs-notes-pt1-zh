@@ -10,24 +10,18 @@ Ansible的配置文件决定了其工作方式。默认情况下，安装后会�
 
 当你安装Ansible后，系统会自动生成一个默认的配置文件。这个文件的扩展名是`.cfg`，这是标准格式，你可以更改文件名，但不能更改扩展名。
 
-![](img/7204dbe68ad14fc5ac995ec09badbea2_1.png)
 
-![](img/7204dbe68ad14fc5ac995ec09badbea2_2.png)
 
-![](img/7204dbe68ad14fc5ac995ec09badbea2_4.png)
 
 以下是查看默认配置文件内容的命令：
 ```bash
 cat /etc/ansible/ansible.cfg
 ```
 
-![](img/7204dbe68ad14fc5ac995ec09badbea2_6.png)
 
-![](img/7204dbe68ad14fc5ac995ec09badbea2_7.png)
 
 执行此命令后，你会看到一个自动生成的文件。文件中包含了许多配置参数，并且每个参数旁边都有简要的说明，解释其用途。阅读这些说明对于理解Ansible的工作原理非常重要。
 
-![](img/7204dbe68ad14fc5ac995ec09badbea2_9.png)
 
 **核心概念**：默认配置文件是系统自动生成的，位于`/etc/ansible/ansible.cfg`。它包含所有基础配置和说明。
 
@@ -35,11 +29,9 @@ cat /etc/ansible/ansible.cfg
 
 在实际场景中，如果同一台服务器上有多个用户，或者需要控制多台具有不同用途的机器，最好为每个用户或项目创建独立的配置文件。这样可以避免未来的配置冲突。
 
-![](img/7204dbe68ad14fc5ac995ec09badbea2_11.png)
 
 首先，你需要确定当前的工作目录。使用`pwd`命令可以查看你所在的目录。
 
-![](img/7204dbe68ad14fc5ac995ec09badbea2_13.png)
 
 接下来，我们将在用户的家目录下创建一个专门用于Ansible配置的目录，并在其中创建新的配置文件。
 

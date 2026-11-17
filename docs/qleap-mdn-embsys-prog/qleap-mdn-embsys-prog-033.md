@@ -6,11 +6,9 @@
 
 ## 概述
 
-![](img/904f985effe11bd10bc61ac6da1cf1b0_2.png)
 
 上一节我们学习了多态性的概念，即子类可以为从基类继承的同一操作提供不同的方法实现。我们了解到，在C++中，这是通过**虚函数**和**虚函数表**机制实现的，它允许在运行时根据对象的实际类型（而非指针的类型）来解析调用，这被称为**后期绑定**。
 
-![](img/904f985effe11bd10bc61ac6da1cf1b0_4.png)
 
 本节中，我们将一步步在C语言中模拟这一机制，包括如何声明虚函数表、设置虚函数指针（VPTR）以及实现后期绑定的调用。我们还将讨论何时应该以及何时不应该使用多态性。
 
@@ -90,10 +88,8 @@ static inline uint32_t Shape_area_vcall(Shape const * const me) {
 虚函数表应作为常量存储在ROM中，并在基类的构造函数中初始化。
 
 
-![](img/904f985effe11bd10bc61ac6da1cf1b0_6.png)
 
 
-![](img/904f985effe11bd10bc61ac6da1cf1b0_8.png)
 
 ```c
 /* shape.c */
@@ -130,7 +126,6 @@ static uint32_t Shape_area(Shape const * const me) {
 每个子类都需要提供自己的虚函数表，并在其构造函数中重写从基类继承来的VPTR。
 
 
-![](img/904f985effe11bd10bc61ac6da1cf1b0_10.png)
 
 ```c
 /* rectangle.c */
@@ -172,7 +167,6 @@ uint32_t Rectangle_area(Rectangle const * const me) {
 现在，我们可以像在C++中一样，使用基类指针来调用子类特有的方法了。
 
 
-![](img/904f985effe11bd10bc61ac6da1cf1b0_12.png)
 
 ```c
 /* main.c */
@@ -202,11 +196,9 @@ int main() {
 }
 ```
 
-![](img/904f985effe11bd10bc61ac6da1cf1b0_14.png)
 
 ## 多态性的替代实现与选择
 
-![](img/904f985effe11bd10bc61ac6da1cf1b0_16.png)
 
 我们上面实现的VPTR/VTable模式是仿照C++的经典方式。在文献和网络中，还存在其他技术。
 
@@ -238,9 +230,7 @@ void draw_shape(Shape const *s) {
 
 滥用运行时多态性来处理本应在编译时解决的问题，会导致代码充满条件逻辑，变得难以管理和测试。
 
-![](img/904f985effe11bd10bc61ac6da1cf1b0_18.png)
 
-![](img/904f985effe11bd10bc61ac6da1cf1b0_19.png)
 
 ## 总结
 
@@ -252,7 +242,6 @@ void draw_shape(Shape const *s) {
 5.  分析了另一种将VTable嵌入对象的实现方案及其权衡。
 6.  最后，我们讨论了多态性的适用场景，指出其应用于需要**运行时行为选择**的情况，并警告了在产品线管理等编译时即可确定类型的场景中误用的风险。
 
-![](img/904f985effe11bd10bc61ac6da1cf1b0_21.png)
 
 ![](img/904f985effe11bd10bc61ac6da1cf1b0_23.png)
 

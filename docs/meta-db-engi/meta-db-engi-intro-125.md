@@ -72,7 +72,6 @@ EXECUTE GetOrderStatement USING @order_id;
 
 ---
 
-![](img/f37bb6972f6dfcd97edb92ca2e9a6f85_3.png)
 
 ## 总结
 

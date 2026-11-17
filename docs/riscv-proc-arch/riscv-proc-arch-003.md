@@ -1,6 +1,5 @@
 # 003：分支、跳转、调用与返回指令
 
-![](img/3cf52fcabd329f6a943da2c34dd51870_0.png)
 
 ![](img/3cf52fcabd329f6a943da2c34dd51870_0.png)
 
@@ -148,6 +147,5 @@ jalr zero, %pcrel_lo(far_target)(t0) # 跳转到 t0 + offset的低12位
 
 在下一节课中，我们将探讨更多的伪指令，并详细介绍汇编器指令（Assembler Directives）。
 
-![](img/3cf52fcabd329f6a943da2c34dd51870_2.png)
 
 ![](img/3cf52fcabd329f6a943da2c34dd51870_2.png)

@@ -111,10 +111,8 @@
 
 ---
 
-![](img/3c08fd7ff7777782e274fe9f0e44ad56_4.png)
 
 ![](img/3c08fd7ff7777782e274fe9f0e44ad56_4.png)
 
-![](img/3c08fd7ff7777782e274fe9f0e44ad56_5.png)
 
 ![](img/3c08fd7ff7777782e274fe9f0e44ad56_5.png)

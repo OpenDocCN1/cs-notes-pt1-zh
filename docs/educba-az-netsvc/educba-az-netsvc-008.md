@@ -1,6 +1,5 @@
 # 008：排查与监控ExpressRoute连接 🔍
 
-![](img/a9befd1b93e471b0bab5297e9e0b5176_0.png)
 
 在本节课中，我们将学习如何排查Azure ExpressRoute的连接问题，以及如何使用Azure Monitor来监控ExpressRoute线路的性能和健康状况。
 
@@ -45,7 +44,6 @@ Set-AzExpressRouteCircuit -ExpressRouteCircuit $ckt
 
 此外，验证ARP表对于排查第2层连接问题至关重要。ARP是地址解析协议，用于将IP地址映射到MAC地址。
 
-![](img/a9befd1b93e471b0bab5297e9e0b5176_2.png)
 
 以下是需要检查的ARP表项：
 *   **本地ARP表项**：应包含本地路由器接口IP地址到其MAC地址的映射。
@@ -54,9 +52,7 @@ Set-AzExpressRouteCircuit -ExpressRouteCircuit $ckt
 
 对于网络性能排查，Azure提供了多种工具。
 
-![](img/a9befd1b93e471b0bab5297e9e0b5176_4.png)
 
-![](img/a9befd1b93e471b0bab5297e9e0b5176_5.png)
 
 以下是可用的网络排查工具和方法：
 *   **Azure网络观察程序**：提供连接性检查、数据包捕获等高级诊断工具。
@@ -66,13 +62,11 @@ Set-AzExpressRouteCircuit -ExpressRouteCircuit $ckt
 
 这些工具和方法也被封装在名为`Az.Network`的PowerShell模块中，您可以安装并使用它。
 
-![](img/a9befd1b93e471b0bab5297e9e0b5176_7.png)
 
 ---
 
 ## 监控ExpressRoute
 
-![](img/a9befd1b93e471b0bab5297e9e0b5176_9.png)
 
 上一节我们介绍了连接问题的排查，本节中我们来看看如何持续监控ExpressRoute的运行状态。
 
@@ -82,9 +76,7 @@ Set-AzExpressRouteCircuit -ExpressRouteCircuit $ckt
 
 为了查看历史数据，建议将时间粒度设置为5分钟或更长。
 
-![](img/a9befd1b93e471b0bab5297e9e0b5176_11.png)
 
-![](img/a9befd1b93e471b0bab5297e9e0b5176_12.png)
 
 ExpressRoute提供了多种关键指标供您监控。
 

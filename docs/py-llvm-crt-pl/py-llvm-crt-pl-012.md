@@ -1,22 +1,16 @@
 # 012：While 循环 🔄
 
-![](img/08fdd146d5749c528b60643192da451e_1.png)
 
-![](img/08fdd146d5749c528b60643192da451e_3.png)
 
 在本节课中，我们将要学习如何为我们的编程语言实现 `while` 循环。循环是编程语言的核心控制结构之一，它允许我们重复执行一段代码，直到某个条件不再满足。我们将从定义新的语法开始，逐步完成词法分析、语法分析，并最终在 LLVM IR 层面生成对应的循环控制流。
 
 ## 概述
 
-![](img/08fdd146d5749c528b60643192da451e_5.png)
 
-![](img/08fdd146d5749c528b60643192da451e_7.png)
 
 我们将编译一个简单的 `while` 循环程序。该程序初始化一个变量 `a` 为 0，只要 `a` 小于 10，就打印 `a` 的值并将其加 1。循环结束后，程序返回 `a` 的最终值。
 
-![](img/08fdd146d5749c528b60643192da451e_9.png)
 
-![](img/08fdd146d5749c528b60643192da451e_10.png)
 
 ```c
 int main() {
@@ -29,65 +23,43 @@ int main() {
 }
 ```
 
-![](img/08fdd146d5749c528b60643192da451e_12.png)
 
-![](img/08fdd146d5749c528b60643192da451e_14.png)
 
-![](img/08fdd146d5749c528b60643192da451e_16.png)
 
 上一节我们介绍了条件语句，本节中我们来看看如何实现循环结构。
 
-![](img/08fdd146d5749c528b60643192da451e_18.png)
 
-![](img/08fdd146d5749c528b60643192da451e_20.png)
 
 ## 步骤一：更新词法分析器（token.py）
 
-![](img/08fdd146d5749c528b60643192da451e_22.png)
 
-![](img/08fdd146d5749c528b60643192da451e_24.png)
 
 首先，我们需要让词法分析器能够识别 `while` 关键字。
 
-![](img/08fdd146d5749c528b60643192da451e_26.png)
 
-![](img/08fdd146d5749c528b60643192da451e_28.png)
 
 在 `token.py` 文件中，我们需要进行以下修改：
 
-![](img/08fdd146d5749c528b60643192da451e_30.png)
 
-![](img/08fdd146d5749c528b60643192da451e_32.png)
 
-![](img/08fdd146d5749c528b60643192da451e_33.png)
 
 1.  在 `keywords` 列表中添加 `while`。
 2.  在 `keywords` 字典中将 `‘while’` 映射到 `TokenType.WHILE`。
 3.  为了增加趣味性，我们还可以在 `alt_keywords` 字典中添加一个缩写 `‘we’` 也映射到 `TokenType.WHILE`。
 
-![](img/08fdd146d5749c528b60643192da451e_35.png)
 
-![](img/08fdd146d5749c528b60643192da451e_37.png)
 
 以下是需要添加的代码：
 
-![](img/08fdd146d5749c528b60643192da451e_39.png)
-
-![](img/08fdd146d5749c528b60643192da451e_41.png)
-
-![](img/08fdd146d5749c528b60643192da451e_43.png)
-
-![](img/08fdd146d5749c528b60643192da451e_44.png)
 
 
-![](img/08fdd146d5749c528b60643192da451e_46.png)
-
-![](img/08fdd146d5749c528b60643192da451e_48.png)
 
 
-![](img/08fdd146d5749c528b60643192da451e_50.png)
 
-![](img/08fdd146d5749c528b60643192da451e_52.png)
+
+
+
+
 
 ```python
 # 在 keywords 列表中添加
@@ -98,46 +70,31 @@ keywords = {..., ‘while’: TokenType.WHILE}
 alt_keywords = {..., ‘we’: TokenType.WHILE}
 ```
 
-![](img/08fdd146d5749c528b60643192da451e_54.png)
 
-![](img/08fdd146d5749c528b60643192da451e_56.png)
 
-![](img/08fdd146d5749c528b60643192da451e_58.png)
 
-![](img/08fdd146d5749c528b60643192da451e_59.png)
 
 ## 步骤二：更新抽象语法树（ast.py）
 
-![](img/08fdd146d5749c528b60643192da451e_61.png)
 
-![](img/08fdd146d5749c528b60643192da451e_63.png)
 
 接下来，我们需要在抽象语法树中定义 `while` 语句的节点结构。
 
-![](img/08fdd146d5749c528b60643192da451e_65.png)
 
-![](img/08fdd146d5749c528b60643192da451e_67.png)
 
-![](img/08fdd146d5749c528b60643192da451e_69.png)
 
 在 `ast.py` 文件中，我们需要进行以下修改：
 
-![](img/08fdd146d5749c528b60643192da451e_71.png)
 
-![](img/08fdd146d5749c528b60643192da451e_72.png)
 
-![](img/08fdd146d5749c528b60643192da451e_73.png)
 
 1.  在 `NodeType` 枚举中添加 `WHILE_STATEMENT`。
 2.  创建一个 `WhileStatement` 类，它包含两个属性：`condition`（条件表达式）和 `body`（循环体，是一个语句块）。
 
-![](img/08fdd146d5749c528b60643192da451e_75.png)
 
-![](img/08fdd146d5749c528b60643192da451e_77.png)
 
 以下是 `WhileStatement` 类的定义：
 
-![](img/08fdd146d5749c528b60643192da451e_79.png)
 
 ```python
 class WhileStatement(Node):
@@ -156,35 +113,23 @@ class WhileStatement(Node):
         }
 ```
 
-![](img/08fdd146d5749c528b60643192da451e_81.png)
 
-![](img/08fdd146d5749c528b60643192da451e_83.png)
 
-![](img/08fdd146d5749c528b60643192da451e_85.png)
 
 ## 步骤三：更新语法分析器（parser.py）
 
-![](img/08fdd146d5749c528b60643192da451e_87.png)
 
-![](img/08fdd146d5749c528b60643192da451e_89.png)
 
-![](img/08fdd146d5749c528b60643192da451e_91.png)
 
-![](img/08fdd146d5749c528b60643192da451e_93.png)
 
 现在，我们需要让语法分析器能够解析 `while` 语句。
 
-![](img/08fdd146d5749c528b60643192da451e_95.png)
 
-![](img/08fdd146d5749c528b60643192da451e_96.png)
 
 在 `parser.py` 文件中，我们需要进行以下修改：
 
-![](img/08fdd146d5749c528b60643192da451e_98.png)
 
-![](img/08fdd146d5749c528b60643192da451e_100.png)
 
-![](img/08fdd146d5749c528b60643192da451e_102.png)
 
 1.  从 `ast` 模块导入 `WhileStatement`。
 2.  在 `_parse_statement` 方法中，为 `TokenType.WHILE` 添加一个处理分支，调用 `_parse_while_statement` 方法。
@@ -195,13 +140,10 @@ class WhileStatement(Node):
     *   解析循环体（一个语句块）。
     *   返回一个 `WhileStatement` 节点。
 
-![](img/08fdd146d5749c528b60643192da451e_104.png)
 
 以下是 `_parse_while_statement` 方法的实现：
 
-![](img/08fdd146d5749c528b60643192da451e_106.png)
 
-![](img/08fdd146d5749c528b60643192da451e_108.png)
 
 ```python
 def _parse_while_statement(self) -> Optional[WhileStatement]:
@@ -224,27 +166,19 @@ def _parse_while_statement(self) -> Optional[WhileStatement]:
     return WhileStatement(condition, body)
 ```
 
-![](img/08fdd146d5749c528b60643192da451e_110.png)
 
-![](img/08fdd146d5749c528b60643192da451e_112.png)
 
 ## 步骤四：更新编译器（compiler.py）
 
-![](img/08fdd146d5749c528b60643192da451e_114.png)
 
 最后，也是最关键的一步，我们需要在编译器中将 `WhileStatement` 节点编译成 LLVM IR 指令。
 
-![](img/08fdd146d5749c528b60643192da451e_116.png)
 
-![](img/08fdd146d5749c528b60643192da451e_117.png)
 
-![](img/08fdd146d5749c528b60643192da451e_119.png)
 
 在 `compiler.py` 文件中，我们需要进行以下修改：
 
-![](img/08fdd146d5749c528b60643192da451e_121.png)
 
-![](img/08fdd146d5749c528b60643192da451e_122.png)
 
 1.  从 `ast` 模块导入 `WhileStatement`。
 2.  在 `_compile` 方法的语句处理部分，为 `NodeType.WHILE_STATEMENT` 添加一个处理分支，调用 `_visit_while_statement` 方法。
@@ -253,21 +187,14 @@ def _parse_while_statement(self) -> Optional[WhileStatement]:
     *   **循环出口块（while_loop_otherwise）**：如果条件为假，则跳转至此，结束循环。
     *   在循环体执行完毕后，再次检查条件，以决定是跳回入口继续循环，还是跳出循环。
 
-![](img/08fdd146d5749c528b60643192da451e_124.png)
 
-![](img/08fdd146d5749c528b60643192da451e_125.png)
 
-![](img/08fdd146d5749c528b60643192da451e_127.png)
 
-![](img/08fdd146d5749c528b60643192da451e_129.png)
 
 以下是 `_visit_while_statement` 方法的实现：
 
-![](img/08fdd146d5749c528b60643192da451e_131.png)
 
-![](img/08fdd146d5749c528b60643192da451e_132.png)
 
-![](img/08fdd146d5749c528b60643192da451e_134.png)
 
 ```python
 def _visit_while_statement(self, node: WhileStatement):
@@ -297,42 +224,31 @@ def _visit_while_statement(self, node: WhileStatement):
     self.builder.position_at_start(otherwise_block)
 ```
 
-![](img/08fdd146d5749c528b60643192da451e_136.png)
 
 ## 测试与运行
 
-![](img/08fdd146d5749c528b60643192da451e_138.png)
 
-![](img/08fdd146d5749c528b60643192da451e_140.png)
 
 完成以上所有步骤后，我们可以运行编译器来测试我们的 `while` 循环。
 
-![](img/08fdd146d5749c528b60643192da451e_142.png)
 
-![](img/08fdd146d5749c528b60643192da451e_144.png)
 
 在终端中执行以下命令：
 ```bash
 python main.py
 ```
 
-![](img/08fdd146d5749c528b60643192da451e_146.png)
 
 如果一切正确，程序将输出从 0 到 9 的数字，并最终返回 10。这是因为当 `a` 等于 10 时，条件 `a < 10` 不再成立，循环终止。
 
-![](img/08fdd146d5749c528b60643192da451e_148.png)
 
-![](img/08fdd146d5749c528b60643192da451e_150.png)
 
 ## 总结
 
-![](img/08fdd146d5749c528b60643192da451e_152.png)
 
 本节课中我们一起学习了如何为我们的编程语言实现 `while` 循环。我们回顾一下关键步骤：
 
-![](img/08fdd146d5749c528b60643192da451e_154.png)
 
-![](img/08fdd146d5749c528b60643192da451e_155.png)
 
 1.  **词法分析**：添加了 `while` 关键字的识别。
 2.  **语法定义**：在 AST 中创建了 `WhileStatement` 节点。

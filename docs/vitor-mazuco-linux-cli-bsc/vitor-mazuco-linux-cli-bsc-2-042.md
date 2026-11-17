@@ -8,9 +8,7 @@ Linux因其健壮性、免费和高度可定制性，是作为服务器的绝佳
 
 以下是MySQL的官方下载页面，其中包含了适用于各种操作系统（如Microsoft Windows、Fedora、macOS、FreeBSD等）的安装版本。MySQL是完全开源的，拥有免费的许可证。
 
-![](img/96776045dc1da76df2eab37192af524a_1.png)
 
-![](img/96776045dc1da76df2eab37192af524a_1.png)
 
 我们将选择MySQL 8.0版本进行安装。对于Ubuntu系统，我们将使用`.deb`包和`dpkg`工具进行安装。
 
@@ -18,7 +16,6 @@ Linux因其健壮性、免费和高度可定制性，是作为服务器的绝佳
 
 在下载页面，你需要根据你的Ubuntu版本（如14、16、18、20等）选择对应的安装包。
 
-![](img/96776045dc1da76df2eab37192af524a_3.png)
 
 ![](img/96776045dc1da76df2eab37192af524a_7.png)
 
@@ -103,6 +100,5 @@ mysql -h 服务器IP地址 -u root -p
 
 本节课中我们一起学习了在Linux系统上安装MySQL数据库。我们分别演示了在Ubuntu和CentOS这两个主流发行版上的完整安装流程，包括更新系统、安装软件包、启动服务、验证状态以及初次登录和修改密码。安装过程简单明了，为后续深入学习MySQL数据库管理打下了基础。
 
-![](img/96776045dc1da76df2eab37192af524a_9.png)
 
 ![](img/96776045dc1da76df2eab37192af524a_9.png)

@@ -10,9 +10,7 @@
 
 ## 使用简单CASE表达式
 
-![](img/7579ecfa89a05414d042b9c68c9477fc_1.png)
 
-![](img/7579ecfa89a05414d042b9c68c9477fc_2.png)
 
 首先，我们来看一个使用简单 `CASE` 表达式的查询。我们的目标是根据客户的信用评分，为其分配一个评级类别。
 
@@ -34,8 +32,6 @@ FROM customer_data;
 
 运行这个查询后，我们得到了包含姓名、州、信用评分和新列 `credit_category` 的结果集。可以看到，评分被成功地分类为“Excellent”、“Good”等。
 
-![](img/7579ecfa89a05414d042b9c68c9477fc_1.png)
-![](img/7579ecfa89a05414d042b9c68c9477fc_2.png)
 
 ---
 
@@ -43,11 +39,9 @@ FROM customer_data;
 
 然而，观察数据时我们发现，当 `credit_score` 列为空（缺失值）时，对应的 `credit_category` 列也是空的。这通常不是我们想要的结果。
 
-![](img/7579ecfa89a05414d042b9c68c9477fc_4.png)
 
 我们希望明确指定：如果信用评分缺失，则类别应显示为“Unknown”。为了实现这一点，我们需要修改 `CASE` 表达式，添加一个 `ELSE` 子句来处理所有未在 `WHEN` 中明确列出的情况，包括缺失值。
 
-![](img/7579ecfa89a05414d042b9c68c9477fc_5.png)
 
 修改后的逻辑如下：
 ```sql
@@ -61,8 +55,6 @@ END
 
 再次运行查询，现在当信用评分为空时，类别会清晰地显示为“Unknown”。
 
-![](img/7579ecfa89a05414d042b9c68c9477fc_4.png)
-![](img/7579ecfa89a05414d042b9c68c9477fc_5.png)
 
 ---
 
@@ -98,7 +90,6 @@ END AS married_category
 
 运行查询后，我们可以看到新的 `married_category` 列，其中的值已从简单的代码转换为了清晰的描述。
 
-![](img/7579ecfa89a05414d042b9c68c9477fc_7.png)
 
 ---
 

@@ -2,13 +2,10 @@
 
 在本节课中，我们将学习如何在两台Linux机器之间建立一个简单的MySQL主从复制。我们将配置一台主服务器和一台从服务器，实现数据的实时同步。
 
-![](img/ff7e83a3665a25e4335260fa3e476ab9_1.png)
 
 ## 概述
 
-![](img/ff7e83a3665a25e4335260fa3e476ab9_3.png)
 
-![](img/ff7e83a3665a25e4335260fa3e476ab9_4.png)
 
 MySQL主从复制是一种常见的高可用性配置。它允许你将主服务器上的所有数据库、表、内容以及删除操作，自动复制到从服务器上。这为数据提供了安全备份，并能在主服务器出现故障时提供服务。
 
@@ -36,31 +33,25 @@ bind-address = 0.0.0.0
 *   **`auto_increment_increment`** 和 **`auto_increment_offset`**：用于在多主复制中避免主键冲突，在主从配置中按示例设置即可。
 *   **`bind-address = 0.0.0.0`**：允许远程连接。为增强安全性，可以将其改为从服务器的具体IP地址。
 
-![](img/ff7e83a3665a25e4335260fa3e476ab9_6.png)
 
 配置完成后，重启MySQL服务使设置生效：
 ```bash
 sudo systemctl restart mysql
 ```
 
-![](img/ff7e83a3665a25e4335260fa3e476ab9_8.png)
 
-![](img/ff7e83a3665a25e4335260fa3e476ab9_10.png)
 
 ## 创建复制用户
 
 现在，我们需要在主服务器上创建一个专门用于复制的用户。
 
-![](img/ff7e83a3665a25e4335260fa3e476ab9_12.png)
 
 登录到主服务器的MySQL命令行：
 ```bash
 mysql -u root -p
 ```
 
-![](img/ff7e83a3665a25e4335260fa3e476ab9_14.png)
 
-![](img/ff7e83a3665a25e4335260fa3e476ab9_16.png)
 
 执行以下SQL命令创建用户并授权：
 ```sql
@@ -73,11 +64,9 @@ FLUSH PRIVILEGES;
 
 ## 配置从服务器
 
-![](img/ff7e83a3665a25e4335260fa3e476ab9_18.png)
 
 接下来，我们配置从服务器。其步骤与主服务器类似，但有一些关键区别。
 
-![](img/ff7e83a3665a25e4335260fa3e476ab9_20.png)
 
 编辑从服务器的 `my.cnf` 文件，添加以下配置：
 
@@ -92,7 +81,6 @@ auto_increment_offset = 2
 bind-address = 0.0.0.0
 ```
 
-![](img/ff7e83a3665a25e4335260fa3e476ab9_22.png)
 
 主要变化是：
 *   **`server-id = 2`**：为从服务器设置一个与主服务器不同的唯一ID。
@@ -103,20 +91,17 @@ bind-address = 0.0.0.0
 sudo systemctl restart mysql
 ```
 
-![](img/ff7e83a3665a25e4335260fa3e476ab9_24.png)
 
 ## 获取主服务器状态并建立连接
 
 在从服务器连接到主服务器之前，我们需要从主服务器获取一些关键信息。
 
-![](img/ff7e83a3665a25e4335260fa3e476ab9_26.png)
 
 在主服务器上，登录MySQL并执行：
 ```sql
 SHOW MASTER STATUS;
 ```
 
-![](img/ff7e83a3665a25e4335260fa3e476ab9_28.png)
 
 命令会返回类似以下的结果，请记录 `File` 和 `Position` 的值：
 ```
@@ -147,34 +132,26 @@ START SLAVE;
 
 配置完成后，我们需要检查复制是否正常运行。
 
-![](img/ff7e83a3665a25e4335260fa3e476ab9_30.png)
 
-![](img/ff7e83a3665a25e4335260fa3e476ab9_32.png)
 
 在从服务器上执行以下命令查看复制状态：
 ```sql
 SHOW SLAVE STATUS\G
 ```
 
-![](img/ff7e83a3665a25e4335260fa3e476ab9_34.png)
 
 在输出结果中，重点关注以下两个字段：
 *   **`Slave_IO_Running`**：应为 `Yes`，表示IO线程正常运行。
 *   **`Slave_SQL_Running`**：应为 `Yes`，表示SQL线程正常运行。
 
-![](img/ff7e83a3665a25e4335260fa3e476ab9_35.png)
 
-![](img/ff7e83a3665a25e4335260fa3e476ab9_37.png)
 
 如果这两个值都是 `Yes`，说明复制链路已成功建立。
 
-![](img/ff7e83a3665a25e4335260fa3e476ab9_39.png)
 
-![](img/ff7e83a3665a25e4335260fa3e476ab9_40.png)
 
 ## 测试复制功能
 
-![](img/ff7e83a3665a25e4335260fa3e476ab9_42.png)
 
 最后，让我们通过一个简单的测试来验证复制是否真正生效。
 

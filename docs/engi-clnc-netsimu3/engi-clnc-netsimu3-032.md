@@ -155,7 +155,6 @@ cd ns-allinone-3.29/ns-3.29
 
 ![](img/97203087f7821a5ba14cbbd9ccc26c2f_9.png)
 
-![](img/97203087f7821a5ba14cbbd9ccc26c2f_11.png)
 
 **1. 使用NetAnim查看网络动画：**
 在终端中启动NetAnim，并加载生成的XML文件。

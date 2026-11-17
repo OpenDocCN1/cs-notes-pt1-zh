@@ -1,100 +1,57 @@
 # 009：斐波那契堆 🧮
 
-![](img/2aa18d99a60be6eeef74e405b835ba5f_1.png)
 
-![](img/2aa18d99a60be6eeef74e405b835ba5f_2.png)
 
-![](img/2aa18d99a60be6eeef74e405b835ba5f_4.png)
 
-![](img/2aa18d99a60be6eeef74e405b835ba5f_5.png)
 
-![](img/2aa18d99a60be6eeef74e405b835ba5f_7.png)
 
-![](img/2aa18d99a60be6eeef74e405b835ba5f_9.png)
 
-![](img/2aa18d99a60be6eeef74e405b835ba5f_11.png)
 
-![](img/2aa18d99a60be6eeef74e405b835ba5f_12.png)
 
-![](img/2aa18d99a60be6eeef74e405b835ba5f_14.png)
 
-![](img/2aa18d99a60be6eeef74e405b835ba5f_16.png)
 
-![](img/2aa18d99a60be6eeef74e405b835ba5f_17.png)
 
-![](img/2aa18d99a60be6eeef74e405b835ba5f_19.png)
 
-![](img/2aa18d99a60be6eeef74e405b835ba5f_20.png)
 
-![](img/2aa18d99a60be6eeef74e405b835ba5f_22.png)
 
-![](img/2aa18d99a60be6eeef74e405b835ba5f_24.png)
 
-![](img/2aa18d99a60be6eeef74e405b835ba5f_26.png)
 
 在本节课中，我们将要学习一种名为“斐波那契堆”的高级数据结构。它是一种支持多种高效操作的堆结构，特别是“合并”和“降低键值”操作。我们将从基础的堆操作开始，逐步理解斐波那契堆的设计原理和其摊销时间复杂度。
 
-![](img/2aa18d99a60be6eeef74e405b835ba5f_27.png)
 
-![](img/2aa18d99a60be6eeef74e405b835ba5f_29.png)
 
-![](img/2aa18d99a60be6eeef74e405b835ba5f_31.png)
 
-![](img/2aa18d99a60be6eeef74e405b835ba5f_33.png)
 
-![](img/2aa18d99a60be6eeef74e405b835ba5f_35.png)
 
-![](img/2aa18d99a60be6eeef74e405b835ba5f_37.png)
 
-![](img/2aa18d99a60be6eeef74e405b835ba5f_39.png)
 
-![](img/2aa18d99a60be6eeef74e405b835ba5f_41.png)
 
 ---
 
-![](img/2aa18d99a60be6eeef74e405b835ba5f_43.png)
 
-![](img/2aa18d99a60be6eeef74e405b835ba5f_44.png)
 
-![](img/2aa18d99a60be6eeef74e405b835ba5f_46.png)
 
-![](img/2aa18d99a60be6eeef74e405b835ba5f_48.png)
 
-![](img/2aa18d99a60be6eeef74e405b835ba5f_50.png)
 
-![](img/2aa18d99a60be6eeef74e405b835ba5f_52.png)
 
 ## 什么是斐波那契堆？ 🤔
 
-![](img/2aa18d99a60be6eeef74e405b835ba5f_54.png)
 
-![](img/2aa18d99a60be6eeef74e405b835ba5f_56.png)
 
-![](img/2aa18d99a60be6eeef74e405b835ba5f_58.png)
 
-![](img/2aa18d99a60be6eeef74e405b835ba5f_59.png)
 
-![](img/2aa18d99a60be6eeef74e405b835ba5f_61.png)
 
 斐波那契堆是一种堆数据结构。它支持像添加元素和移除最小元素这样的基本操作，就像我们在第二讲中讨论过的普通二叉堆一样。
 
-![](img/2aa18d99a60be6eeef74e405b835ba5f_63.png)
 
-![](img/2aa18d99a60be6eeef74e405b835ba5f_64.png)
 
-![](img/2aa18d99a60be6eeef74e405b835ba5f_65.png)
 
-![](img/2aa18d99a60be6eeef74e405b835ba5f_67.png)
 
-![](img/2aa18d99a60be6eeef74e405b835ba5f_69.png)
 
-![](img/2aa18d99a60be6eeef74e405b835ba5f_71.png)
 
-![](img/2aa18d99a60be6eeef74e405b835ba5f_73.png)
 
 这些操作是所有堆结构的通用操作。斐波那契堆还支持另外两个重要的操作。
 
-![](img/2aa18d99a60be6eeef74e405b835ba5f_75.png)
 
 第一个重要操作是**合并两个堆**。就像在并查集中一样，你有两个独立的堆，然后将所有元素的集合合并起来，得到一个包含两个堆所有元素的大堆。
 
@@ -165,25 +122,16 @@ k阶二项树恰好包含 2^k 个节点。如果我们想将 n 个元素放入�
 
 ---
 
-![](img/2aa18d99a60be6eeef74e405b835ba5f_77.png)
 
-![](img/2aa18d99a60be6eeef74e405b835ba5f_79.png)
 
-![](img/2aa18d99a60be6eeef74e405b835ba5f_81.png)
 
-![](img/2aa18d99a60be6eeef74e405b835ba5f_83.png)
 
-![](img/2aa18d99a60be6eeef74e405b835ba5f_85.png)
 
-![](img/2aa18d99a60be6eeef74e405b835ba5f_87.png)
 
 ## 斐波那契堆的设计目标 🎯
 
-![](img/2aa18d99a60be6eeef74e405b835ba5f_89.png)
 
-![](img/2aa18d99a60be6eeef74e405b835ba5f_91.png)
 
-![](img/2aa18d99a60be6eeef74e405b835ba5f_93.png)
 
 上一节我们完整介绍了二项堆，本节中我们来看看斐波那契堆如何对其进行优化，以实现更高效的操作。
 

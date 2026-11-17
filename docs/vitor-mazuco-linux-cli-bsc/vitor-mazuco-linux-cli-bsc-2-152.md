@@ -15,7 +15,6 @@
 
 上一节我们准备好了测试数据，本节中我们来看看如何配置和使用MongoDB的性能分析器。
 
-![](img/f568f291ac3dae3f7121da3df9e7106c_1.png)
 
 MongoDB的性能分析器有三个级别：
 *   **Level 0**：默认级别，不记录任何操作。
@@ -42,9 +41,7 @@ db.setProfilingLevel(1, { slowms: 40 })
 
 执行后，任何执行时间超过40毫秒的查询都将被记录到名为`system.profile`的固定集合中。你可以根据实际需求调整这个阈值。
 
-![](img/f568f291ac3dae3f7121da3df9e7106c_3.png)
 
-![](img/f568f291ac3dae3f7121da3df9e7106c_5.png)
 
 ## 管理分析器集合
 
@@ -52,13 +49,11 @@ db.setProfilingLevel(1, { slowms: 40 })
 
 再次运行`db.getProfilingStatus()`命令，可以确认配置已生效。此外，我们还可以查看`system.profile`集合的状态信息：
 
-![](img/f568f291ac3dae3f7121da3df9e7106c_7.png)
 
 ```javascript
 db.system.profile.stats()
 ```
 
-![](img/f568f291ac3dae3f7121da3df9e7106c_9.png)
 
 在返回的信息中，`capped`字段表示这是一个**固定集合**，它有预定义的最大尺寸。当集合达到最大尺寸时，旧的记录会被自动覆盖。这是为了防止分析日志无限增长。
 
@@ -72,9 +67,7 @@ db.system.profile.stats()
     ```
 4.  再次检查状态，确认更改已生效。
 
-![](img/f568f291ac3dae3f7121da3df9e7106c_11.png)
 
-![](img/f568f291ac3dae3f7121da3df9e7106c_13.png)
 
 ## 总结
 

@@ -4,7 +4,6 @@
 
 上一节我们介绍了函数对象的基础知识，了解了如何通过重载结构体或类的函数调用运算符来创建可调用对象。然而，我们也注意到，为了创建一个函数对象，需要编写相当多的样板代码，例如定义结构体、添加数据成员、构造函数以及重载运算符。
 
-![](img/7400bc6a63bfddd3a88e7d6df9eded3a_1.png)
 
 ## 从函数对象到Lambda表达式
 
@@ -51,10 +50,8 @@ Lambda表达式的一个常见用途是作为参数传递给标准库算法，�
 
 以下是一个完整的示例，演示了如何使用Lambda表达式在向量中查找第一个能被10整除的数：
 
-![](img/7400bc6a63bfddd3a88e7d6df9eded3a_3.png)
 
 
-![](img/7400bc6a63bfddd3a88e7d6df9eded3a_5.png)
 
 ```cpp
 #include <iostream>
@@ -82,7 +79,6 @@ int main() {
 
 ## 总结
 
-![](img/7400bc6a63bfddd3a88e7d6df9eded3a_7.png)
 
 ![](img/7400bc6a63bfddd3a88e7d6df9eded3a_8.png)
 

@@ -8,9 +8,7 @@ Python入门教程：P41：变量作用域与解析规则
 
 为了理解这个概念，我们先来看一个例子。假设我们有两个函数：
 
-![](img/f490cf89c89af61bb9479524b2b2fb46_1.png)
 
-![](img/f490cf89c89af61bb9479524b2b2fb46_2.png)
 
 ```python
 def function1():
@@ -42,9 +40,7 @@ def function2():
 
 这里，我们有两个不同版本的 `x`：一个在 `function1` 中是局部变量，值为 `1`；另一个在 `function2` 中是局部变量，值为 `2`。它们互不干扰。
 
-![](img/f490cf89c89af61bb9479524b2b2fb46_4.png)
 
-![](img/f490cf89c89af61bb9479524b2b2fb46_5.png)
 
 ## 作用域解析顺序：LEGB规则
 
@@ -114,12 +110,10 @@ print(e)     # 输出：3
 
 本节课中我们一起学习了Python中两个重要的基础概念。
 
-![](img/f490cf89c89af61bb9479524b2b2fb46_7.png)
 
 *   **变量作用域**：决定了变量在代码中的可见性和可访问性。主要分为局部作用域和全局作用域。
 *   **作用域解析规则（LEGB）**：这是Python查找变量时所遵循的固定顺序：**Local（局部） -> Enclosed（闭包） -> Global（全局） -> Built-in（内置）**。
 
-![](img/f490cf89c89af61bb9479524b2b2fb46_8.png)
 
 ![](img/f490cf89c89af61bb9479524b2b2fb46_9.png)
 

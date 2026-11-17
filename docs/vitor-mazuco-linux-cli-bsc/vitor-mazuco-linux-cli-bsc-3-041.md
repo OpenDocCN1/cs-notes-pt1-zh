@@ -6,39 +6,28 @@
 
 Apache模块是增强服务器功能的附加组件。它们通常在安装Apache后单独安装，用于支持特定的编程语言或技术，如PHP或Python。Ubuntu系统提供了专门的命令来管理这些模块。
 
-![](img/857502d2209511b80df565cab886e639_1.png)
 
-![](img/857502d2209511b80df565cab886e639_2.png)
 
 ## 查看可用模块
 
-![](img/857502d2209511b80df565cab886e639_4.png)
 
-![](img/857502d2209511b80df565cab886e639_6.png)
 
 在安装之前，我们可以先查看系统中有哪些Apache模块可用。Ubuntu的官方软件仓库通常包含了常用的模块。
 
-![](img/857502d2209511b80df565cab886e639_7.png)
 
-![](img/857502d2209511b80df565cab886e639_9.png)
 
 以下是查看已安装和可用模块的命令：
 
-![](img/857502d2209511b80df565cab886e639_11.png)
 
-![](img/857502d2209511b80df565cab886e639_13.png)
 
 *   `a2enmod`：用于启用一个模块。
 *   `a2dismod`：用于禁用一个模块。
 *   `apt search apache2` 或 `apt search libapache2-mod`：用于搜索可安装的Apache模块。
 
-![](img/857502d2209511b80df565cab886e639_15.png)
 
-![](img/857502d2209511b80df565cab886e639_17.png)
 
 例如，你可以搜索与PHP或Python相关的模块。
 
-![](img/857502d2209511b80df565cab886e639_19.png)
 
 ## 安装模块
 
@@ -50,11 +39,9 @@ Apache模块是增强服务器功能的附加组件。它们通常在安装Apach
 
 ## 管理模块状态
 
-![](img/857502d2209511b80df565cab886e639_21.png)
 
 安装模块后，我们需要启用它，并重新启动Apache服务使配置生效。
 
-![](img/857502d2209511b80df565cab886e639_23.png)
 
 以下是管理模块的步骤：
 
@@ -67,24 +54,18 @@ Apache模块是增强服务器功能的附加组件。它们通常在安装Apach
 
 除了PHP，Python也是常用的Web开发语言。你可以类似地搜索和安装Python模块：
 
-![](img/857502d2209511b80df565cab886e639_25.png)
 
 *   搜索命令：`apt search libapache2-mod-python`
 *   安装命令：`sudo apt install libapache2-mod-python`
 
-![](img/857502d2209511b80df565cab886e639_27.png)
 
-![](img/857502d2209511b80df565cab886e639_28.png)
 
 安装Python模块后，你就可以配置Apache来运行Django或Flask等Python Web框架了。
 
-![](img/857502d2209511b80df565cab886e639_30.png)
 
-![](img/857502d2209511b80df565cab886e639_32.png)
 
 ## 总结
 
-![](img/857502d2209511b80df565cab886e639_34.png)
 
 ![](img/857502d2209511b80df565cab886e639_36.png)
 

@@ -4,7 +4,6 @@
 
 在本节课中，我们将要学习面向对象编程的第二个核心概念：**继承**。我们将探讨如何在C语言中模拟继承，以及C++语言如何原生支持继承，并理解其背后的内存布局和设计思想。
 
-![](img/294a6dc5b7306caf6b62097193a0eb07_2.png)
 
 ## 概述
 
@@ -14,11 +13,9 @@
 
 以下是实现`Rectangle`类以继承`Shape`类的步骤。
 
-![](img/294a6dc5b7306caf6b62097193a0eb07_4.png)
 
 ### 1. 创建头文件接口
 
-![](img/294a6dc5b7306caf6b62097193a0eb07_6.png)
 
 首先，在`rectangle.h`头文件中定义`Rectangle`类。我们通过将`Shape`结构体作为第一个成员来模拟继承。
 
@@ -84,7 +81,6 @@ void Rectangle_draw(Rectangle const * const me)
 
 现在，我们可以在主程序中使用`Rectangle`类。由于C语言没有自动向上转型，我们需要显式地将`Rectangle`指针转换为`Shape`指针来调用继承的操作。
 
-![](img/294a6dc5b7306caf6b62097193a0eb07_8.png)
 
 ```c
 #include "rectangle.h"
@@ -122,7 +118,6 @@ C++原生支持继承，语法更简洁，并且能自动处理向上转型。
 
 在`rectangle.h`中，我们使用C++语法定义类。
 
-![](img/294a6dc5b7306caf6b62097193a0eb07_12.png)
 
 ```cpp
 #ifndef RECTANGLE_H

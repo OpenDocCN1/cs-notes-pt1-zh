@@ -64,9 +64,7 @@ def initUI(self):
 为了演示布局的效果，我们需要一些控件。让我们创建五个带有不同背景颜色的标签：
 
 
-![](img/931479e9504648531dcc81a67fa2b566_1.png)
 
-![](img/931479e9504648531dcc81a67fa2b566_2.png)
 
 ```python
 # 创建五个标签
@@ -85,13 +83,11 @@ label5 = QLabel(“标签 5”)
 label5.setStyleSheet(“background-color: purple;”)
 ```
 
-![](img/931479e9504648531dcc81a67fa2b566_4.png)
 
 如果不使用布局管理器，这些标签会相互重叠，只能看到最上面的一个。
 
 ---
 
-![](img/931479e9504648531dcc81a67fa2b566_6.png)
 
 ## 使用垂直布局管理器 📏
 
@@ -122,17 +118,14 @@ central_widget.setLayout(v_layout)
 
 ---
 
-![](img/931479e9504648531dcc81a67fa2b566_8.png)
 
 ## 使用水平布局管理器 ↔️
 
-![](img/931479e9504648531dcc81a67fa2b566_10.png)
 
 理解了垂直布局后，水平布局就很容易掌握了。它的逻辑相同，只是排列方向变为从左到右。
 
 只需将 `QVBoxLayout` 替换为 `QHBoxLayout`：
 
-![](img/931479e9504648531dcc81a67fa2b566_12.png)
 
 ```python
 # 创建水平布局
@@ -145,7 +138,6 @@ h_layout.addWidget(label5)
 central_widget.setLayout(h_layout)
 ```
 
-![](img/931479e9504648531dcc81a67fa2b566_14.png)
 
 现在，五个标签将水平排列。
 
@@ -157,9 +149,7 @@ central_widget.setLayout(h_layout)
 
 使用 `QGridLayout` 时，在添加控件时需要额外指定该控件所在的行和列索引（索引从0开始）。
 
-![](img/931479e9504648531dcc81a67fa2b566_16.png)
 
-![](img/931479e9504648531dcc81a67fa2b566_17.png)
 
 以下是使用网格布局的示例：
 
@@ -175,21 +165,17 @@ grid_layout.addWidget(label5, 1, 2) # 第1行，第2列
 central_widget.setLayout(grid_layout)
 ```
 
-![](img/931479e9504648531dcc81a67fa2b566_19.png)
 
 通过调整行和列的索引，你可以自由地控制每个控件在窗口中的位置。
 
-![](img/931479e9504648531dcc81a67fa2b566_21.png)
 
 ---
 
-![](img/931479e9504648531dcc81a67fa2b566_22.png)
 
 ## 总结
 
 本节课中我们一起学习了PyQt5中三种核心的布局管理器：
 
-![](img/931479e9504648531dcc81a67fa2b566_24.png)
 
 1.  **垂直布局 (`QVBoxLayout`)**：用于将控件从上到下排列。
 2.  **水平布局 (`QHBoxLayout`)**：用于将控件从左到右排列。

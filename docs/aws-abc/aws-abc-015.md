@@ -6,17 +6,13 @@
 
 上一节我们介绍了多账户管理的必要性，本节中我们来看看AWS Organizations如何构建这种管理结构。
 
-![](img/a755744fff96cea49cb7c01dcdeda99d_1.png)
 
-![](img/a755744fff96cea49cb7c01dcdeda99d_2.png)
 
 AWS Organizations允许你创建一个由AWS账户组成的层次结构。这个结构以一个**管理账户**（也称为组织根账户）为起点。在该根账户之下，你可以创建**组织单元**（Organizational Units, OUs），这些OU可以包含成员AWS账户或其他嵌套的OU。
 
 ![](img/a755744fff96cea49cb7c01dcdeda99d_3.png)
 
-![](img/a755744fff96cea49cb7c01dcdeda99d_4.png)
 
-![](img/a755744fff96cea49cb7c01dcdeda99d_5.png)
 
 ![](img/a755744fff96cea49cb7c01dcdeda99d_6.png)
 
@@ -30,7 +26,6 @@ AWS Organizations允许你创建一个由AWS账户组成的层次结构。这个
     └── 成员账户 3
 ```
 
-![](img/a755744fff96cea49cb7c01dcdeda99d_7.png)
 
 ![](img/a755744fff96cea49cb7c01dcdeda99d_8.png)
 
@@ -44,13 +39,11 @@ AWS Organizations允许你创建一个由AWS账户组成的层次结构。这个
 
 ![](img/a755744fff96cea49cb7c01dcdeda99d_10.png)
 
-![](img/a755744fff96cea49cb7c01dcdeda99d_11.png)
 
 ![](img/a755744fff96cea49cb7c01dcdeda99d_12.png)
 
 ![](img/a755744fff96cea49cb7c01dcdeda99d_13.png)
 
-![](img/a755744fff96cea49cb7c01dcdeda99d_14.png)
 
 以下是SCP的一个JSON策略示例，它允许除S3外的所有操作：
 ```json
@@ -71,7 +64,6 @@ AWS Organizations允许你创建一个由AWS账户组成的层次结构。这个
 }
 ```
 
-![](img/a755744fff96cea49cb7c01dcdeda99d_15.png)
 
 ![](img/a755744fff96cea49cb7c01dcdeda99d_16.png)
 
@@ -89,9 +81,7 @@ AWS Organizations允许你创建一个由AWS账户组成的层次结构。这个
 
 AWS Organizations还简化了另一项常见的治理任务：标签标准化。
 
-![](img/a755744fff96cea49cb7c01dcdeda99d_20.png)
 
-![](img/a755744fff96cea49cb7c01dcdeda99d_21.png)
 
 ![](img/a755744fff96cea49cb7c01dcdeda99d_22.png)
 
@@ -107,7 +97,6 @@ AWS Organizations还简化了另一项常见的治理任务：标签标准化。
 
 ![](img/a755744fff96cea49cb7c01dcdeda99d_26.png)
 
-![](img/a755744fff96cea49cb7c01dcdeda99d_27.png)
 
 ![](img/a755744fff96cea49cb7c01dcdeda99d_28.png)
 

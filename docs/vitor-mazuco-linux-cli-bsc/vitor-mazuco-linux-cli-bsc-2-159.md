@@ -34,35 +34,27 @@ docker container ls -a
 
 此命令会列出所有容器及其详细信息，其中就包含容器ID。你可以将此ID导出为变量，或直接在后续命令中使用。例如，停止一个特定ID的容器：
 
-![](img/667e85d31f30d47aa1d985490ec7922c_1.png)
 
-![](img/667e85d31f30d47aa1d985490ec7922c_3.png)
 
 ```bash
 docker stop <容器ID>
 ```
 
-![](img/667e85d31f30d47aa1d985490ec7922c_5.png)
 
 同样地，你也可以通过容器名称来移除容器，这非常简单直接。
 
-![](img/667e85d31f30d47aa1d985490ec7922c_7.png)
 
 ## 查看容器详细信息
 
-![](img/667e85d31f30d47aa1d985490ec7922c_9.png)
 
 Docker提供了 `docker inspect` 命令，用于获取容器的详细配置和状态信息。这是一个非常有用的诊断工具。
 
-![](img/667e85d31f30d47aa1d985490ec7922c_11.png)
 
-![](img/667e85d31f30d47aa1d985490ec7922c_12.png)
 
 ```bash
 docker inspect <容器名称或ID>
 ```
 
-![](img/667e85d31f30d47aa1d985490ec7922c_14.png)
 
 该命令会输出大量JSON格式的信息，包括：
 *   **容器ID**和**完整ID**
@@ -74,13 +66,10 @@ docker inspect <容器名称或ID>
 *   运行的**平台**（如Linux）
 *   **主机配置**、**网络设置**、**DNS信息**和**卷挂载**等详细信息
 
-![](img/667e85d31f30d47aa1d985490ec7922c_15.png)
 
-![](img/667e85d31f30d47aa1d985490ec7922c_17.png)
 
 ## 过滤容器信息
 
-![](img/667e85d31f30d47aa1d985490ec7922c_19.png)
 
 当管理多个容器时，过滤信息能帮助我们快速定位。`docker ps` 命令支持使用 `--filter` 选项进行过滤。
 

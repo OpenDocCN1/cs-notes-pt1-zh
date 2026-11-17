@@ -37,11 +37,9 @@ glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
 glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
 ```
 
-![](img/7bb75111d20dd5fddff8ea4eed093c74_1.png)
 
 然后，我们使用`glFramebufferTexture2D`将纹理附加到帧缓冲上。我们将颜色存储在纹理中，这样我们就可以在着色器中访问它，这对于后期处理是必需的。
 
-![](img/7bb75111d20dd5fddff8ea4eed093c74_2.png)
 
 ![](img/7bb75111d20dd5fddff8ea4eed093c74_3.png)
 
@@ -89,11 +87,9 @@ if(glCheckFramebufferStatus(GL_FRAMEBUFFER) != GL_FRAMEBUFFER_COMPLETE)
 *   `GL_FRAMEBUFFER_INCOMPLETE_MULTISAMPLE`：所有图像的采样数不同。
 *   `GL_FRAMEBUFFER_INCOMPLETE_LAYER_TARGETS`：某些图像不是分层纹理，或者附加到了多个层。
 
-![](img/7bb75111d20dd5fddff8ea4eed093c74_5.png)
 
 ## 屏幕矩形与着色器
 
-![](img/7bb75111d20dd5fddff8ea4eed093c74_6.png)
 
 现在我们已经有了帧缓冲对象，接下来需要创建一个覆盖整个屏幕的矩形。这个矩形不需要任何变换（如模型、视图、投影矩阵），因为它直接对应屏幕空间。
 
@@ -140,11 +136,9 @@ glBindTexture(GL_TEXTURE_2D, texture); // 绑定我们之前创建的帧缓冲�
 
 ## 渲染流程
 
-![](img/7bb75111d20dd5fddff8ea4eed093c74_8.png)
 
 现在让我们来处理绘制部分。以下是使用自定义帧缓冲进行渲染的步骤。
 
-![](img/7bb75111d20dd5fddff8ea4eed093c74_9.png)
 
 首先，在绘制任何物体（包括背景）之前，确保绑定我们自定义的帧缓冲。同时，确保清空缓冲并启用深度测试。
 

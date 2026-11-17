@@ -37,7 +37,6 @@ Amazon Virtual Private Cloud，简称VPC，是您在AWS云中专属的逻辑隔�
 
 以下是创建子网时需要确定的配置：
 
-![](img/3108af5c734f2b2d9da249525f4e8eb7_6.png)
 
 ![](img/3108af5c734f2b2d9da249525f4e8eb7_7.png)
 
@@ -45,17 +44,12 @@ Amazon Virtual Private Cloud，简称VPC，是您在AWS云中专属的逻辑隔�
 *   **可用区**：选择子网位于哪个可用区内。为了实现冗余并遵循AWS最佳实践，您应确保在计划使用的每个可用区中都创建子网，并且架构至少跨**两个可用区**部署。
 *   **CIDR范围**：为子网分配一个CIDR块，它必须是其所属VPC的CIDR块的子集。例如，如果VPC是 `10.0.0.0/16`，子网可以是 `10.0.1.0/24`。
 
-![](img/3108af5c734f2b2d9da249525f4e8eb7_8.png)
 
 ![](img/3108af5c734f2b2d9da249525f4e8eb7_9.png)
 
-![](img/3108af5c734f2b2d9da249525f4e8eb7_10.png)
 
-![](img/3108af5c734f2b2d9da249525f4e8eb7_6.png)
 ![](img/3108af5c734f2b2d9da249525f4e8eb7_7.png)
-![](img/3108af5c734f2b2d9da249525f4e8eb7_8.png)
 ![](img/3108af5c734f2b2d9da249525f4e8eb7_9.png)
-![](img/3108af5c734f2b2d9da249525f4e8eb7_10.png)
 
 ## 公共子网与私有子网
 
@@ -70,12 +64,8 @@ Amazon Virtual Private Cloud，简称VPC，是您在AWS云中专属的逻辑隔�
 
 ![](img/3108af5c734f2b2d9da249525f4e8eb7_12.png)
 ![](img/3108af5c734f2b2d9da249525f4e8eb7_13.png)
-![](img/3108af5c734f2b2d9da249525f4e8eb7_14.png)
-![](img/3108af5c734f2b2d9da249525f4e8eb7_15.png)
 ![](img/3108af5c734f2b2d9da249525f4e8eb7_16.png)
 ![](img/3108af5c734f2b2d9da249525f4e8eb7_17.png)
-![](img/3108af5c734f2b2d9da249525f4e8eb7_18.png)
-![](img/3108af5c734f2b2d9da249525f4e8eb7_19.png)
 
 ![](img/3108af5c734f2b2d9da249525f4e8eb7_12.png)
 
@@ -83,9 +73,7 @@ Amazon Virtual Private Cloud，简称VPC，是您在AWS云中专属的逻辑隔�
 
 ## VPC的网络连接
 
-![](img/3108af5c734f2b2d9da249525f4e8eb7_14.png)
 
-![](img/3108af5c734f2b2d9da249525f4e8eb7_15.png)
 
 默认情况下，一个VPC自身不具备与互联网、本地数据中心或其他VPC的连接能力。
 
@@ -93,7 +81,6 @@ Amazon Virtual Private Cloud，简称VPC，是您在AWS云中专属的逻辑隔�
 
 ![](img/3108af5c734f2b2d9da249525f4e8eb7_17.png)
 
-![](img/3108af5c734f2b2d9da249525f4e8eb7_18.png)
 
 *   **互联网连接**：您需要创建并附加一个**互联网网关**到您的VPC。然后，在公共子网的路由表中，添加指向该互联网网关的路由。
 *   **VPC间连接**：要连接不同的VPC，可以使用 **VPC对等连接**，或者使用 **AWS Transit Gateway**（中转网关）。
@@ -103,19 +90,14 @@ Amazon Virtual Private Cloud，简称VPC，是您在AWS云中专属的逻辑隔�
 
 VPC还有其他类型的网关和连接选项，建议查阅AWS官方文档以了解更多。
 
-![](img/3108af5c734f2b2d9da249525f4e8eb7_21.png)
-![](img/3108af5c734f2b2d9da249525f4e8eb7_22.png)
-![](img/3108af5c734f2b2d9da249525f4e8eb7_23.png)
 
 ---
 
 ## 总结
 
-![](img/3108af5c734f2b2d9da249525f4e8eb7_21.png)
 
 本节课中我们一起学习了 **Amazon VPC**。我们了解到VPC是一个逻辑隔离的虚拟网络，是部署AWS资源的基石。创建VPC需要配置名称、区域和CIDR范围。为了部署资源并实现高可用，需要在VPC内跨多个可用区创建子网，并区分公共子网和私有子网。最后，通过互联网网关、VPC对等连接或中转网关等组件，可以实现VPC与互联网、其他VPC及本地网络的连接。
 
-![](img/3108af5c734f2b2d9da249525f4e8eb7_22.png)
 
 ![](img/3108af5c734f2b2d9da249525f4e8eb7_23.png)
 

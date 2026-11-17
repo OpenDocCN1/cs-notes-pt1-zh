@@ -40,9 +40,7 @@ print("Hello world")
 
 ## 保存Python文件
 
-![](img/fa38dfd6a068155c877294bdb55b78f4_3.png)
 
-![](img/fa38dfd6a068155c877294bdb55b78f4_4.png)
 
 接下来，将这个文件保存为Python文件。点击菜单栏的“File”，然后选择“Save As”。在保存对话框中，输入文件名`helloworld.py`。
 

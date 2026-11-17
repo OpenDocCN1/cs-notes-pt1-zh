@@ -29,7 +29,6 @@ const doubled = numbers.map((number) => number * 2);
 
 关于Keys的一般规则是：使用一个在其兄弟元素中**稳定且唯一**的标识符。这就是为什么最常用的Key是数据中的唯一ID。
 
-![](img/c1687f4eb31194577b294c80fde19aa0_1.png)
 
 你也了解到，在万不得已时可以使用索引作为Key，但如果列表项的顺序可能改变，这可能会对性能产生负面影响。
 
@@ -37,7 +36,6 @@ const doubled = numbers.map((number) => number * 2);
 
 接下来，你学习了关于表单的课程，以及React处理表单与传统HTML方式的区别。
 
-![](img/c1687f4eb31194577b294c80fde19aa0_3.png)
 
 你首先认识了**受控组件**。这是一组提供声明式API的组件，允许你在任何时候使用React状态完全控制表单元素的状态。
 

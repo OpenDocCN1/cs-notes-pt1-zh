@@ -19,9 +19,7 @@ Rust 将错误分为两大类：**可恢复错误**和**不可恢复错误**。
 
 在实践中，有两种方式会导致 panic。
 
-![](img/89b2703ed5e8ffe403e90c3bc7af3b53_1.png)
 
-![](img/89b2703ed5e8ffe403e90c3bc7af3b53_2.png)
 
 ### 方式一：执行导致 panic 的操作
 
@@ -36,7 +34,6 @@ println!("{}", x[3]); // 尝试访问索引为 3 的元素
 
 ### 方式二：显式调用 `panic!` 宏
 
-![](img/89b2703ed5e8ffe403e90c3bc7af3b53_4.png)
 
 第二种方式是直接调用 `panic!` 宏。
 
@@ -74,15 +71,12 @@ println!("{}", v[99]); // 尝试访问索引为 99 的元素
 
 我们可以通过以下命令在调试模式下运行程序来获取回溯：
 
-![](img/89b2703ed5e8ffe403e90c3bc7af3b53_6.png)
 
 ```bash
 cargo run
 ```
 
-![](img/89b2703ed5e8ffe403e90c3bc7af3b53_7.png)
 
-![](img/89b2703ed5e8ffe403e90c3bc7af3b53_8.png)
 
 在调试模式下运行代码会包含调试符号，从而获得详细的回溯信息。而在发布模式下运行：
 
@@ -92,9 +86,7 @@ cargo run --release
 
 则会得到一个更简短的回溯，省略了所有调试符号。
 
-![](img/89b2703ed5e8ffe403e90c3bc7af3b53_10.png)
 
-![](img/89b2703ed5e8ffe403e90c3bc7af3b53_11.png)
 
 ## 总结
 

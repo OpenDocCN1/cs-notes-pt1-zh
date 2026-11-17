@@ -6,51 +6,37 @@
 
 上一节我们介绍了触发器的基本概念，本节中我们来看看触发器的两种主要分类：行级触发器和语句级触发器。
 
-![](img/38caa60bfe0b052787b1b731e5f8be26_1.png)
 
-![](img/38caa60bfe0b052787b1b731e5f8be26_1.png)
 
 以下是这两种触发器的核心区别：
 
 *   **行级触发器**：对表中**每一行**被插入、更新或删除的数据都会调用一次。例如，如果向表中插入100行数据，行级触发器会被调用100次。
 *   **语句级触发器**：对每个**操作语句**只调用一次，无论该语句影响了多少行数据。例如，一个INSERT语句可能插入100行数据，但触发器只激活一次。
 
-![](img/38caa60bfe0b052787b1b731e5f8be26_3.png)
 
-![](img/38caa60bfe0b052787b1b731e5f8be26_4.png)
 
-![](img/38caa60bfe0b052787b1b731e5f8be26_5.png)
 
 了解这两种类型很重要。然而，**MySQL只支持行级触发器**，因此本节课我们将重点讨论行级触发器。
 
-![](img/38caa60bfe0b052787b1b731e5f8be26_6.png)
 
 ## 触发时机：BEFORE 与 AFTER 触发器
 
 我们已经知道触发器通常用于执行插入、更新和删除这三种操作。那么，如何确定触发器是在操作之前还是之后执行呢？这取决于触发器的触发时机，可以分为BEFORE触发器和AFTER触发器。
 
-![](img/38caa60bfe0b052787b1b731e5f8be26_8.png)
-![](img/38caa60bfe0b052787b1b731e5f8be26_9.png)
 
-![](img/38caa60bfe0b052787b1b731e5f8be26_8.png)
 
-![](img/38caa60bfe0b052787b1b731e5f8be26_9.png)
 
 以下是这两个关键字的含义：
 
-![](img/38caa60bfe0b052787b1b731e5f8be26_11.png)
 
 *   **`BEFORE`**：表示触发器必须在**对表行执行任何操作之前**被调用。
 *   **`AFTER`**：表示触发器在**对每一行执行操作之后**被调用。
 
-![](img/38caa60bfe0b052787b1b731e5f8be26_12.png)
 
 ## MySQL触发器的组合类型与语法
 
 通过将 `BEFORE`/`AFTER` 修饰符与 `INSERT`、`UPDATE`、`DELETE` 关键字组合，可以创建不同类型的触发器。
 
-![](img/38caa60bfe0b052787b1b731e5f8be26_11.png)
-![](img/38caa60bfe0b052787b1b731e5f8be26_12.png)
 
 以下是可创建的触发器类型示例：
 
@@ -61,19 +47,13 @@
 *   `BEFORE DELETE`：在表中数据被删除**前**调用。
 *   `AFTER DELETE`：在数据被删除**后**调用。
 
-![](img/38caa60bfe0b052787b1b731e5f8be26_14.png)
 
-![](img/38caa60bfe0b052787b1b731e5f8be26_15.png)
 
 每种触发器的语法大体相同。以下是创建触发器的基本结构：
 
-![](img/38caa60bfe0b052787b1b731e5f8be26_16.png)
 
-![](img/38caa60bfe0b052787b1b731e5f8be26_17.png)
 
-![](img/38caa60bfe0b052787b1b731e5f8be26_18.png)
 
-![](img/38caa60bfe0b052787b1b731e5f8be26_19.png)
 
 ```sql
 CREATE TRIGGER trigger_name
@@ -85,14 +65,9 @@ BEGIN
 END;
 ```
 
-![](img/38caa60bfe0b052787b1b731e5f8be26_20.png)
 
 让我们通过Lucky Shrub公司的案例来具体理解。他们需要为订单表（`orders`）添加一条新约束：`OrderQuantity`（订单数量）字段不能插入负值。
 
-![](img/38caa60bfe0b052787b1b731e5f8be26_22.png)
-![](img/38caa60bfe0b052787b1b731e5f8be26_23.png)
-![](img/38caa60bfe0b052787b1b731e5f8be26_24.png)
-![](img/38caa60bfe0b052787b1b731e5f8be26_25.png)
 
 他们可以使用一个 `BEFORE INSERT` 触发器来实现：
 
@@ -110,15 +85,11 @@ END;
 
 现在，每次向表中插入新行时，`BEFORE INSERT` 触发器都会在插入新值之前执行所需的检查与修正操作。
 
-![](img/38caa60bfe0b052787b1b731e5f8be26_22.png)
 
-![](img/38caa60bfe0b052787b1b731e5f8be26_23.png)
 
 ## 更多触发器应用示例
 
-![](img/38caa60bfe0b052787b1b731e5f8be26_24.png)
 
-![](img/38caa60bfe0b052787b1b731e5f8be26_25.png)
 
 接下来，我们看看Lucky Shrub公司可以使用的其他几种触发器类型。
 
@@ -126,13 +97,10 @@ END;
 
 此外，公司还需要创建一个日志，记录从订单表中删除订单记录的日期和时间。他们可以使用 `AFTER DELETE` 触发器来完成此任务。在记录被删除后，该触发器会在日志表中插入一条包含日期和时间的记录。
 
-![](img/38caa60bfe0b052787b1b731e5f8be26_27.png)
 
-![](img/38caa60bfe0b052787b1b731e5f8be26_27.png)
 ![](img/38caa60bfe0b052787b1b731e5f8be26_28.png)
 ![](img/38caa60bfe0b731e5f8be26_29.png)
 
-![](img/38caa60bfe0b052787b1b731e5f8be26_28.png)
 
 ![](img/38caa60bfe0b052787b1b731e5f8be26_29.png)
 

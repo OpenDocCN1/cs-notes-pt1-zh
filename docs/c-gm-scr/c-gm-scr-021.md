@@ -56,7 +56,6 @@
 
 ![](img/25984fe835474479d1617bc0acadfcd6_47.png)
 
-![](img/25984fe835474479d1617bc0acadfcd6_49.png)
 
 ![](img/25984fe835474479d1617bc0acadfcd6_51.png)
 
@@ -108,11 +107,8 @@ OGG是一种压缩音频格式，可以大幅减小文件体积。例如，一�
 
 ### 核心步骤
 
-![](img/25984fe835474479d1617bc0acadfcd6_89.png)
 
-![](img/25984fe835474479d1617bc0acadfcd6_91.png)
 
-![](img/25984fe835474479d1617bc0acadfcd6_92.png)
 
 ![](img/25984fe835474479d1617bc0acadfcd6_94.png)
 
@@ -211,15 +207,12 @@ OGG是一种压缩音频格式，可以大幅减小文件体积。例如，一�
 
 ![](img/25984fe835474479d1617bc0acadfcd6_162.png)
 
-![](img/25984fe835474479d1617bc0acadfcd6_164.png)
 
-![](img/25984fe835474479d1617bc0acadfcd6_166.png)
 
 ![](img/25984fe835474479d1617bc0acadfcd6_168.png)
 
 ![](img/25984fe835474479d1617bc0acadfcd6_170.png)
 
-![](img/25984fe835474479d1617bc0acadfcd6_172.png)
 
 ![](img/25984fe835474479d1617bc0acadfcd6_174.png)
 
@@ -275,9 +268,7 @@ OGG是一种压缩音频格式，可以大幅减小文件体积。例如，一�
 
 ![](img/25984fe835474479d1617bc0acadfcd6_218.png)
 
-![](img/25984fe835474479d1617bc0acadfcd6_220.png)
 
-![](img/25984fe835474479d1617bc0acadfcd6_222.png)
 
 ![](img/25984fe835474479d1617bc0acadfcd6_224.png)
 
@@ -299,7 +290,6 @@ OGG是一种压缩音频格式，可以大幅减小文件体积。例如，一�
 
 我们设计的资源包文件结构如下：
 
-![](img/25984fe835474479d1617bc0acadfcd6_238.png)
 
 ![](img/25984fe835474479d1617bc0acadfcd6_240.png)
 
@@ -331,7 +321,6 @@ OGG是一种压缩音频格式，可以大幅减小文件体积。例如，一�
 
 ![](img/25984fe835474479d1617bc0acadfcd6_258.png)
 
-![](img/25984fe835474479d1617bc0acadfcd6_260.png)
 
 ![](img/25984fe835474479d1617bc0acadfcd6_262.png)
 
@@ -365,21 +354,15 @@ OGG是一种压缩音频格式，可以大幅减小文件体积。例如，一�
 
 ![](img/25984fe835474479d1617bc0acadfcd6_278.png)
 
-![](img/25984fe835474479d1617bc0acadfcd6_280.png)
 
-![](img/25984fe835474479d1617bc0acadfcd6_282.png)
 
-![](img/25984fe835474479d1617bc0acadfcd6_284.png)
 
 ![](img/25984fe835474479d1617bc0acadfcd6_286.png)
 
 ![](img/25984fe835474479d1617bc0acadfcd6_288.png)
 
-![](img/25984fe835474479d1617bc0acadfcd6_290.png)
 
-![](img/25984fe835474479d1617bc0acadfcd6_292.png)
 
-![](img/25984fe835474479d1617bc0acadfcd6_294.png)
 
 2.  **编写打包器程序**：创建一个独立的程序（不包含在最终游戏中），其功能是：
     *   读取原始资源文件（PNG, OGG, WAV）。
@@ -476,7 +459,6 @@ OGG是一种压缩音频格式，可以大幅减小文件体积。例如，一�
 
 ![](img/25984fe835474479d1617bc0acadfcd6_366.png)
 
-![](img/25984fe835474479d1617bc0acadfcd6_368.png)
 
 ![](img/25984fe835474479d1617bc0acadfcd6_370.png)
 
@@ -496,11 +478,8 @@ OGG是一种压缩音频格式，可以大幅减小文件体积。例如，一�
 
 ![](img/25984fe835474479d1617bc0acadfcd6_380.png)
 
-![](img/25984fe835474479d1617bc0acadfcd6_382.png)
 
-![](img/25984fe835474479d1617bc0acadfcd6_384.png)
 
-![](img/25984fe835474479d1617bc0acadfcd6_386.png)
 
 ![](img/25984fe835474479d1617bc0acadfcd6_388.png)
 

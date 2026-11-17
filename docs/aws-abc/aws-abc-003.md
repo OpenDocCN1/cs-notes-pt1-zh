@@ -12,9 +12,7 @@
 
 ## 什么是AWS CloudFormation？
 
-![](img/8398ff96b3afcb118780e996d024e2e5_2.png)
 
-![](img/8398ff96b3afcb118780e996d024e2e5_3.png)
 
 AWS CloudFormation是一个基础设施即代码工具，它可以帮助您以可重复且可靠的方式自动化资源供应。使用CloudFormation，您无需在控制台中点击操作，而是创建基于JSON或YAML格式的文档。
 
@@ -58,7 +56,6 @@ Resources:
 
 本节课中我们一起学习了AWS CloudFormation的基础知识。我们了解到它是一个强大的基础设施即代码服务，通过模板自动化资源供应，支持堆栈管理、嵌套引用和多环境部署，从而提升了效率、可靠性和一致性。
 
-![](img/8398ff96b3afcb118780e996d024e2e5_11.png)
 
 ![](img/8398ff96b3afcb118780e996d024e2e5_12.png)
 

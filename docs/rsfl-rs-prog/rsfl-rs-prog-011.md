@@ -40,9 +40,7 @@ let numbers: [u8; 3] = [1, 2, 3];
 
 ## 数组的初始化语法
 
-![](img/c750ee1bae97e1d9ca7c0f1b78815930_1.png)
 
-![](img/c750ee1bae97e1d9ca7c0f1b78815930_2.png)
 
 除了逐个列出元素，Rust 还提供了一种便捷的语法来创建所有元素值都相同的数组。
 
@@ -58,15 +56,11 @@ let repeat = [“Bob”; 5];
 
 现在我们已经知道如何创建数组，接下来看看如何访问其中的数据。
 
-![](img/c750ee1bae97e1d9ca7c0f1b78815930_4.png)
 
-![](img/c750ee1bae97e1d9ca7c0f1b78815930_5.png)
 
 数组元素通过**索引**来访问，索引从 0 开始。例如，对于存储星期的数组：
 
-![](img/c750ee1bae97e1d9ca7c0f1b78815930_6.png)
 
-![](img/c750ee1bae97e1d9ca7c0f1b78815930_7.png)
 
 ```rust
 let days = [“Monday”, “Tuesday”, “Wednesday”, “Thursday”, “Friday”, “Saturday”, “Sunday”];
@@ -90,9 +84,7 @@ let invalid_selection = days[10]; // 错误！数组只有 7 个元素，索引�
 
 这种情况在实际编程中可能更常见，例如，当程序允许用户选择一个选项，而用户可能选择了超出范围的选项时。在后续课程中，我们将学习如何恰当地处理这类错误。
 
-![](img/c750ee1bae97e1d9ca7c0f1b78815930_9.png)
 
-![](img/c750ee1bae97e1d9ca7c0f1b78815930_10.png)
 
 ![](img/c750ee1bae97e1d9ca7c0f1b78815930_11.png)
 

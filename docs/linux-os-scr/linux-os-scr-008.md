@@ -124,7 +124,6 @@ ln -sf /usr/share/zoneinfo/Europe/Berlin /etc/localtime
 
 ![](img/143940e667a93e098fdacfeaaaddec72_47.png)
 
-![](img/143940e667a93e098fdacfeaaaddec72_48.png)
 
 ![](img/143940e667a93e098fdacfeaaaddec72_50.png)
 

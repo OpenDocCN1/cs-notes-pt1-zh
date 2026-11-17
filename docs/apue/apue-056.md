@@ -3,7 +3,6 @@
 ## 概述
 在本节课中，我们将学习如何在INET6域中使用流式套接字进行网络通信。我们将对比之前学习的UDP数据报，重点理解基于TCP协议的、可靠的、双向字节流通信模型，并使用`tcpdump`工具观察网络数据包。
 
-![](img/d80286c0e9f61b892bd108b59fb8cec1_1.png)
 
 上一节我们介绍了在IPV4域中使用数据报套接字进行通信。本节中我们来看看如何使用IPV6域中的流式套接字。
 
@@ -16,9 +15,7 @@ socket(PF_INET6, SOCK_STREAM, 0);
 ```
 此调用指定了协议族为`PF_INET6`，套接字类型为`SOCK_STREAM`，即流式套接字。
 
-![](img/d80286c0e9f61b892bd108b59fb8cec1_3.png)
 
-![](img/d80286c0e9f61b892bd108b59fb8cec1_5.png)
 
 接下来，程序查询给定主机名的IPV6地址，并填充`sockaddr_in6`结构体。端口号需要使用`htons`函数从主机字节序转换为网络字节序。
 
@@ -31,7 +28,6 @@ connect(sockfd, (struct sockaddr *)&server_addr, sizeof(server_addr));
 ## 接收端程序分析
 接收端程序在初始阶段与UDP版本相似。它创建套接字，填充`sockaddr_in6`结构体（让内核选择IP地址和端口），并绑定套接字。
 
-![](img/d80286c0e9f61b892bd108b59fb8cec1_7.png)
 
 程序通过`getsockname`获取内核选择的端口号，并将其从网络字节序转换为主机字节序后打印。
 
@@ -59,7 +55,6 @@ int connfd = accept(sockfd, (struct sockaddr *)&client_addr, &addr_len);
 *   **成功连接与通信**：首次发送消息时，可以看到TCP三次握手（SYN, SYN-ACK, ACK），然后是携带数据的PSH包，最后是连接拆除的四次挥手（FIN, ACK, FIN, ACK）。
 *   **连接失败**：当接收端未运行时，客户端发送SYN包尝试建立连接，但服务器会回复RST包，表示连接被拒绝。
 
-![](img/d80286c0e9f61b892bd108b59fb8cec1_9.png)
 
 ## 在单一连接中发送多条消息
 TCP连接的建立和拆除有一定开销。为了更高效地通信，我们可以尝试在同一个连接中发送多条消息。

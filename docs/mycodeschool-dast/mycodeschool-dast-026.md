@@ -16,61 +16,39 @@
 
 
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_1.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_1.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_2.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_2.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_3.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_4.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_3.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_5.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_6.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_4.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_5.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_6.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_8.png)
 
 因为二叉树中的每个节点最多可以有两个子节点，所以我们称其中一个为**左子节点**，另一个为**右子节点**。
 
 
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_9.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_10.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_8.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_9.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_12.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_10.png)
 
 对于根节点，这个特定的节点是左子节点，而这个节点是右子节点。
 
 
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_14.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_12.png)
 
 一个节点可以同时拥有左子节点和右子节点，下图中的这四个节点就是如此。或者，一个节点可以只有左子节点或只有右子节点。
 
 
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_14.png)
 
 这个节点有左子节点但没有右子节点。我再添加一个节点。
 
@@ -84,33 +62,19 @@
 
 
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_16.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_17.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_16.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_18.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_19.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_17.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_20.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_21.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_18.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_19.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_20.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_21.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_23.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_24.png)
 
 ### 二叉树的分类
 
@@ -120,11 +84,8 @@
 
 
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_23.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_26.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_24.png)
 
 如果一个二叉树的每个节点要么有两个子节点，要么没有子节点，则称之为**严格二叉树**或**真二叉树**。
 
@@ -132,53 +93,40 @@
 
 
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_26.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_28.png)
 
 如果一棵二叉树的所有层（除了最后一层）都被完全填满，并且所有节点都尽可能靠左排列，则称之为**完全二叉树**。
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_29.png)
 
 除了最后一层，所有层都必须被填满。如果最后一层没有被完全填满，那么节点必须尽可能靠左。目前这棵树不是完全二叉树。
 
 
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_28.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_29.png)
 
 ### 深度、层级与高度
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_31.png)
 
 节点的深度定义为从根节点到该节点的路径长度。根节点的深度为0。
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_33.png)
 
 在下图中，根节点位于深度0或层级0（L0）。这两个节点位于层级1（L1）。这四个节点位于层级2（L2）。最后，这两个节点位于层级3（L3）。
 
 
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_31.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_35.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_33.png)
 
 树中任意节点的最大深度是3。树的最大深度也等于树的**高度**。
 
 
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_35.png)
 
 ### 每层最大节点数
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_37.png)
 
 如果我们对树的所有层级进行编号，如 L0, L1, L2 等，那么在层级 `i` 上，我们最多可以拥有的节点数为 **2^i**。
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_38.png)
 
 在层级0，我们最多有1个节点（2^0 = 1）。
 在层级1，我们最多有2个节点。
@@ -187,37 +135,26 @@
 
 
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_37.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_38.png)
 
 这一点应该很清楚，因为每个节点可以有两个子节点。所以，如果我们在某一层有 `x` 个节点，那么这 `x` 个节点中的每一个都可以有两个子节点。因此，在下一层，我们最多可以有 `2x` 个子节点。
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_40.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_41.png)
 
 在这棵二叉树中，我们在第2层有4个节点，这是第2层的最大值。
 
 
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_42.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_40.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_41.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_44.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_42.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_46.png)
 
 现在，这些节点中的每一个都可能有两个子节点。我在这里只画了箭头。所以在第3层，我们最多可以有 2 * 4 = 8 个节点。
 
 
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_44.png)
 
 ### 完全二叉树与完美二叉树
 
@@ -225,25 +162,18 @@
 
 
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_46.png)
 
 我们可以对最后一层（最底层）例外，它不必是满的，但节点必须尽可能靠左。
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_48.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_49.png)
 
 下图所示的这棵树不是完全二叉树，因为我们在左边有两个空缺的节点位置。我对这个结构稍作修改，现在这就是一棵完全二叉树了。我们可以在第3层有更多节点，但左边不应该有空缺位置。我再添加一个节点，这仍然是一棵完全二叉树。
 
 
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_50.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_48.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_49.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_50.png)
 
 如果所有层都被完全填满，这样的二叉树也可以称为**完美二叉树**。在完美二叉树中，所有层都将被完全填满。
 
@@ -251,45 +181,33 @@
 
 
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_52.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_52.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_53.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_54.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_53.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_54.png)
 
 对于这棵二叉树，高度或最大深度是3。
 
 ### 节点数与高度的关系
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_56.png)
 
 一棵高度为 `h` 的树的最大节点数计算如下：第0层有 2^0 个节点，第1层有 2^1 个节点，依此类推，直到第 `h` 层有 2^h 个节点。
 
 
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_57.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_56.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_57.png)
 
 节点总数是一个等比数列求和：**2^(h+1) - 1**。这里的 `h+1` 是层数。
 
 我们也可以说：**2^(层数) - 1**。
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_59.png)
 
 在这棵树中，层数是4（L0 到 L3），所以最大节点数是 2^4 - 1 = 15。因此，一棵完美二叉树对于其高度来说拥有最大可能的节点数，因为所有层都被完全填满。
 
 
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_59.png)
 
 现在，我们可以问：一棵拥有 `n` 个节点的完美二叉树的高度是多少？
 
@@ -299,55 +217,39 @@
 
 
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_61.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_62.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_61.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_63.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_62.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_63.png)
 
 在下图所示的完美二叉树中，节点数 `n` 是15。`n+1` 是16，所以 `h = log₂(16) - 1 = 4 - 1 = 3`。
 
 
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_65.png)
 
 一般来说，对于一棵完全二叉树，我们也可以将高度计算为 **⌊log₂(n)⌋**，即 `log₂(n)` 的向下取整。
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_65.png)
 
 完美二叉树也是一种完全二叉树。这里 `n=15`，`log₂(15) ≈ 3.906`，向下取整是3。我们稍后会尝试理解为什么完全二叉树的高度是 `log₂(n)`。
 
 
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_67.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_68.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_69.png)
 
 ### 高度对操作成本的影响
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_67.png)
 
 这些数学关系在我们分析二叉树各种操作的成本时将非常有帮助。
 
 
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_68.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_69.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_71.png)
 
 树上许多操作的时间成本取决于树的高度。
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_71.png)
 
 例如，在二叉搜索树（一种特殊的二叉树）中，搜索、插入或删除一个元素的时间成本与树的高度成正比。因此，在这种情况下，我们希望树的高度尽可能小。
 
@@ -355,52 +257,34 @@
 
 
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_73.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_74.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_75.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_73.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_76.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_74.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_75.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_77.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_76.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_77.png)
 
 拥有 `n` 个节点的树的最小高度是 **⌊log₂(n)⌋**，此时树是一棵完全二叉树。
 
 
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_79.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_79.png)
 
 如果我们有像下图这样的排列，那么树在拥有 `n` 个节点时将具有最大高度。
 
 
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_81.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_82.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_83.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_81.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_82.png)
 
 最小可能高度是 **⌊log₂(n)⌋**。
 最大可能高度是 **n-1**，此时我们得到一棵像链表一样的稀疏树。
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_83.png)
 
 现在思考一下，如果我说一个操作所花费的时间与树的高度成正比，或者说一个操作的时间复杂度是 **O(h)**，其中 `h` 是二叉树的高度。
 
@@ -408,21 +292,13 @@
 
 
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_85.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_86.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_85.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_86.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_87.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_87.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_88.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_88.png)
 
 而在最坏情况下，对于这种稀疏树，我的时间复杂度将是 **O(n)**。
 
@@ -438,109 +314,67 @@
 
 
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_90.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_91.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_92.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_93.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_94.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_90.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_95.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_91.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_92.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_96.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_93.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_94.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_97.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_95.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_96.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_98.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_97.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_98.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_99.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_99.png)
 
 因此，空树的高度是 **-1**。
 
 
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_101.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_101.png)
 
 所以，只有一个节点的树高度是0，空树高度是-1。通常人们将高度计算为从根节点到叶节点的最长路径上的节点数。在下图中，我画出了从根节点到叶节点的最长路径之一。这条路径上有3条边，所以高度是3。如果我们计算路径上的节点数，高度将是4。这看起来非常直观，我在很多地方都见过这种高度定义。如果计算节点数，只有一个节点的树的高度将等于1，那么我们可以说空树的高度是0。但这不是正确的定义，我们不会使用这个假设。我们将说空树的高度是-1，只有一个节点的树高度是0。
 
 
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_103.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_104.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_105.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_106.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_107.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_108.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_103.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_109.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_104.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_105.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_110.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_106.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_107.png)
 
 一个节点的左子树和右子树的高度差可以计算为 **|h_left - h_right|**（绝对差值）。在这个计算中，子树的高度也可以是-1。
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_108.png)
 
 在下图中，对于这个叶节点，其左子树和右子树都是空的。所以 `h_left`（左子树高度）和 `h_right`（右子树高度）都是-1，但总体差值为0。
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_109.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_110.png)
 
 对于完美树中的所有节点，差值都是0。我在这棵树中去掉了一些节点，现在我在每个节点旁边写下了差值。这仍然是一棵平衡二叉树，因为任何节点的最大差值是1。让我们去掉这棵树中的一些节点，现在它不平衡了，因为其中一个节点的差值是2。
 
 
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_112.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_113.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_114.png)
 
 对于这个特定节点，左子树高度是1，右子树高度是-1（因为右子树为空）。所以绝对差值是2。
 
 
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_116.png)
 
 我们尝试保持树的平衡，以确保它密集且高度最小化。如果高度最小化，那些依赖于高度的各种操作的成本也就最小化了。
 
@@ -548,21 +382,14 @@
 
 
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_118.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_112.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_113.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_119.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_114.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_120.png)
 
 ### 二叉树的存储方式
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_116.png)
 
 我们在上一课中看到的一种最常用的方式是：动态创建节点，并使用指针或引用将它们彼此链接起来。
 
@@ -570,43 +397,28 @@
 
 
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_122.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_118.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_123.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_119.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_120.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_124.png)
 
 数据类型是整数，所以我们有一个字段来存储数据，并且有两个指针变量：一个存储左子节点的地址，另一个存储右子节点的地址。
 
 
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_126.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_122.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_127.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_123.png)
 
 当然，这是最常见的方式：节点在内存中随机位置动态创建，通过指针链接在一起。
 
 
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_124.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_129.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_130.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_126.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_127.png)
 
 但在某些特殊情况下，我们也使用数组。数组通常用于完全二叉树。
 
@@ -614,35 +426,25 @@
 
 
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_129.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_132.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_130.png)
 
 现在，我可以创建一个包含7个整数的数组，这些数字可以用作这些节点的索引。在第0个位置，我填入2；在第1个位置，我填入4；在第2个位置，我填入1；依此类推。
 
 
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_134.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_135.png)
 
 我们已经将所有数据填入数组，但如何存储链接信息呢？我们如何知道根的左子节点值为4，右子节点值为1？
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_132.png)
 
 在完全二叉树的情况下，如果我们像这样对节点编号，那么对于索引为 `i` 的节点：
 
 
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_137.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_138.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_134.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_135.png)
 
 其左子节点的索引将是 **2i + 1**，右子节点的索引将是 **2i + 2**。请记住，这仅适用于完全二叉树。
 
@@ -652,27 +454,17 @@
 
 
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_140.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_141.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_137.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_142.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_138.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_144.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_145.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_140.png)
 
 当我们讨论一种称为**堆**的特殊二叉树（用于实现优先队列）时，我们将详细讨论其实现。
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_141.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_142.png)
 
 本节课就到这里。在下一课中，我们将讨论**二叉搜索树**，它也是一种特殊的二叉树，为我们提供了一种高效的存储结构，可以快速搜索和更新数据。
 
@@ -680,11 +472,8 @@
 
 
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_144.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_147.png)
 
-![](img/d8e59d9e754f114b089d265fc34aaea8_145.png)
 
 ### 总结
 

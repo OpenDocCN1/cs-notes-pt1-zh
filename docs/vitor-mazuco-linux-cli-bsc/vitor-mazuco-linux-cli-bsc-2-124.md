@@ -62,7 +62,6 @@ db.oldName.renameCollection("newName")
 
 重命名操作完成后，集合内的所有文档将保持不变，不会丢失任何数据。
 
-![](img/42db82fb5667d93d6e25c3b6d8f20be0_3.png)
 
 现在，让我们验证一下重命名是否成功。你可以使用 `show collections` 命令来查看新的集合名称是否已出现在列表中。
 

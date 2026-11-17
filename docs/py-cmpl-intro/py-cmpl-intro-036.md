@@ -4,9 +4,7 @@ Python超全入门教程：P36：可迭代对象详解 🐍
 
 ---
 
-![](img/6e8c40c8113edca802f95e776a7965eb_1.png)
 
-![](img/6e8c40c8113edca802f95e776a7965eb_2.png)
 
 ### **什么是可迭代对象？**
 
@@ -16,19 +14,15 @@ Python超全入门教程：P36：可迭代对象详解 🐍
 
 ### **列表的迭代**
 
-![](img/6e8c40c8113edca802f95e776a7965eb_4.png)
 
-![](img/6e8c40c8113edca802f95e776a7965eb_6.png)
 
 列表是典型的可迭代对象。我们可以使用`for`循环来遍历列表中的每个元素。
 
 在`for`循环的上下文中，我们会逐个获得列表中的元素。对于正在处理的每个元素，我们可以给它一个临时的、描述性的名称。
 
-![](img/6e8c40c8113edca802f95e776a7965eb_8.png)
 
 以下是创建和遍历一个数字列表的示例：
 
-![](img/6e8c40c8113edca802f95e776a7965eb_9.png)
 
 ```python
 numbers = [1, 2, 3, 4, 5]
@@ -44,11 +38,9 @@ for item in numbers:
     print(item)
 ```
 
-![](img/6e8c40c8113edca802f95e776a7965eb_11.png)
 
 ---
 
-![](img/6e8c40c8113edca802f95e776a7965eb_13.png)
 
 ### **反向迭代**
 
@@ -62,11 +54,9 @@ for number in reversed(numbers):
 
 ---
 
-![](img/6e8c40c8113edca802f95e776a7965eb_15.png)
 
 ### **控制打印输出**
 
-![](img/6e8c40c8113edca802f95e776a7965eb_17.png)
 
 如果你不希望每个元素都打印在新的一行，可以修改`print`函数的`end`参数。
 
@@ -74,9 +64,7 @@ for number in reversed(numbers):
 
 例如，用空格分隔每个元素：
 
-![](img/6e8c40c8113edca802f95e776a7965eb_19.png)
 
-![](img/6e8c40c8113edca802f95e776a7965eb_21.png)
 
 ```python
 for number in numbers:
@@ -85,22 +73,18 @@ for number in numbers:
 
 或者，用“ - ”来分隔：
 
-![](img/6e8c40c8113edca802f95e776a7965eb_23.png)
 
 ```python
 for number in numbers:
     print(number, end=' - ')
 ```
 
-![](img/6e8c40c8113edca802f95e776a7965eb_25.png)
 
 ---
 
-![](img/6e8c40c8113edca802f95e776a7965eb_27.png)
 
 ### **元组的迭代**
 
-![](img/6e8c40c8113edca802f95e776a7965eb_29.png)
 
 元组也是可迭代对象。我们可以像遍历列表一样遍历元组。
 
@@ -110,23 +94,18 @@ for number in numbers_tuple:
     print(number)
 ```
 
-![](img/6e8c40c8113edca802f95e776a7965eb_31.png)
 
-![](img/6e8c40c8113edca802f95e776a7965eb_33.png)
 
 ---
 
-![](img/6e8c40c8113edca802f95e776a7965eb_35.png)
 
 ### **集合的迭代**
 
 集合同样是可迭代的。但需要注意的是，集合是无序的，并且**不能**使用`reversed()`函数进行反向迭代，尝试这样做会引发`TypeError`。
 
-![](img/6e8c40c8113edca802f95e776a7965eb_37.png)
 
 以下是遍历集合的示例：
 
-![](img/6e8c40c8113edca802f95e776a7965eb_39.png)
 
 ```python
 fruits = {"apple", "orange", "banana", "coconut"}
@@ -146,19 +125,15 @@ for character in name:
     print(character, end=' ')
 ```
 
-![](img/6e8c40c8113edca802f95e776a7965eb_41.png)
 
 ---
 
-![](img/6e8c40c8113edca802f95e776a7965eb_43.png)
 
 ### **字典的迭代**
 
-![](img/6e8c40c8113edca802f95e776a7965eb_45.png)
 
 字典的迭代稍微复杂一些。默认情况下，直接迭代字典会返回所有的**键**，而不是值。
 
-![](img/6e8c40c8113edca802f95e776a7965eb_47.png)
 
 ```python
 my_dict = {'a': 1, 'b': 2, 'c': 3}
@@ -183,7 +158,6 @@ for key, value in my_dict.items():
 ```
 输出结果为：`a = 1`, `b = 2`, `c = 3`。
 
-![](img/6e8c40c8113edca802f95e776a7965eb_49.png)
 
 ---
 

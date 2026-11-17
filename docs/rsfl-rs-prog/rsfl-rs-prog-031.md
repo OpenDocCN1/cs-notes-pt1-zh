@@ -19,17 +19,12 @@ fn function() -> &str {
 }
 ```
 
-![](img/e4fba758cc2543ac50f40dd6085d4a03_1.png)
 
-![](img/e4fba758cc2543ac50f40dd6085d4a03_2.png)
 
 在 `main` 函数中，我们将尝试获取这个函数的返回结果：
 
-![](img/e4fba758cc2543ac50f40dd6085d4a03_3.png)
 
-![](img/e4fba758cc2543ac50f40dd6085d4a03_4.png)
 
-![](img/e4fba758cc2543ac50f40dd6085d4a03_5.png)
 
 ```rust
 fn main() {
@@ -37,7 +32,6 @@ fn main() {
 }
 ```
 
-![](img/e4fba758cc2543ac50f40dd6085d4a03_6.png)
 
 我们在这里试图创建一个悬垂引用。或者说，我们**试图**这样做，因为 Rust 不允许我们创建悬垂引用。
 

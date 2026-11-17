@@ -22,15 +22,12 @@ docker run -it --name sample alpine:3.10 sh
 *   `alpine:3.10` 指定了要使用的基础镜像及其版本。
 *   `sh` 是容器启动后要运行的命令，这里我们进入了shell。
 
-![](img/9fb4ce90e185144b3955aaa6eb6c6fb1_1.png)
 
 执行此命令后，系统会下载（如果本地没有）指定的Alpine 3.10镜像，并启动一个名为“sample”的交互式容器。
 
-![](img/9fb4ce90e185144b3955aaa6eb6c6fb1_3.png)
 
 ## 在容器内进行操作
 
-![](img/9fb4ce90e185144b3955aaa6eb6c6fb1_5.png)
 
 现在我们已经进入了容器的shell环境。我们可以执行一些命令来修改容器。
 
@@ -42,39 +39,31 @@ apk update
 
 命令会正常执行，更新软件包列表。
 
-![](img/9fb4ce90e185144b3955aaa6eb6c6fb1_7.png)
 
 我们也可以测试网络连通性，例如使用ping命令：
 
-![](img/9fb4ce90e185144b3955aaa6eb6c6fb1_8.png)
 
 ```bash
 ping -c 4 8.8.8.8
 ```
 
-![](img/9fb4ce90e185144b3955aaa6eb6c6fb1_10.png)
 
 操作完成后，输入 `exit` 命令即可退出容器。
 
-![](img/9fb4ce90e185144b3955aaa6eb6c6fb1_12.png)
 
 ## 检查容器状态与更改
 
 退出容器后，如果我们想查看所有容器（包括已停止的），可以使用以下命令：
 
-![](img/9fb4ce90e185144b3955aaa6eb6c6fb1_14.png)
 
 ```bash
 docker ps -a
 ```
 
-![](img/9fb4ce90e185144b3955aaa6eb6c6fb1_16.png)
 
-![](img/9fb4ce90e185144b3955aaa6eb6c6fb1_17.png)
 
 参数 `-a` 表示列出所有容器。
 
-![](img/9fb4ce90e185144b3955aaa6eb6c6fb1_18.png)
 
 为了查看我们的容器“sample”相对于原始基础镜像发生了哪些更改，我们可以使用 `docker diff` 命令：
 
@@ -82,7 +71,6 @@ docker ps -a
 docker diff sample
 ```
 
-![](img/9fb4ce90e185144b3955aaa6eb6c6fb1_20.png)
 
 命令输出会显示文件系统的变更，并用字母标识变更类型：
 *   **A**：代表新增的文件。
@@ -93,31 +81,25 @@ docker diff sample
 
 ## 提交更改以创建新镜像
 
-![](img/9fb4ce90e185144b3955aaa6eb6c6fb1_22.png)
 
 我们可以将这些在容器内所做的更改持久化，并以此创建一个全新的镜像。这通过 `docker commit` 命令实现。
 
-![](img/9fb4ce90e185144b3955aaa6eb6c6fb1_24.png)
 
 ```bash
 docker commit sample my-custom-alpine
 ```
 
-![](img/9fb4ce90e185144b3955aaa6eb6c6fb1_26.png)
 
 *   `docker commit` 是提交更改的命令。
 *   `sample` 是我们要提交的容器名称。
 *   `my-custom-alpine` 是为新镜像指定的名称。
 
-![](img/9fb4ce90e185144b3955aaa6eb6c6fb1_28.png)
 
 执行成功后，可以使用 `docker image ls` 命令查看镜像列表，你会发现新创建的 `my-custom-alpine` 镜像。
 
 ## 查看镜像历史
 
-![](img/9fb4ce90e185144b3955aaa6eb6c6fb1_30.png)
 
-![](img/9fb4ce90e185144b3955aaa6eb6c6fb1_31.png)
 
 如果你想了解新镜像的构建历史，可以使用 `docker history` 命令：
 
@@ -127,7 +109,6 @@ docker history my-custom-alpine
 
 此命令会显示该镜像的每一层是如何创建的，包括其ID、创建命令和大小等信息。
 
-![](img/9fb4ce90e185144b3955aaa6eb6c6fb1_33.png)
 
 ## 总结
 

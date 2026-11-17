@@ -29,7 +29,6 @@ systemctl status firewalld
 
 上一节我们启用了防火墙，本节中我们来看看系统默认配置了哪些规则。
 
-![](img/7b31ecef45377d7676fbce83ab86653d_1.png)
 
 执行以下命令列出所有默认的防火墙规则：
 
@@ -65,7 +64,6 @@ firewall-cmd --list-all
 
 你将在端口列表中看到 `27017/tcp`。
 
-![](img/7b31ecef45377d7676fbce83ab86653d_3.png)
 
 ---
 
@@ -123,17 +121,14 @@ yum install setroubleshoot setools -y
 
 ## 为MongoDB添加SELinux规则
 
-![](img/7b31ecef45377d7676fbce83ab86653d_5.png)
 
 工具安装完成后，我们就可以为MongoDB添加特定的SELinux策略规则了。
 
-![](img/7b31ecef45377d7676fbce83ab86653d_6.png)
 
 核心命令是 `semanage`，我们需要用它来允许MongoDB绑定到其默认端口。
 
 为MongoDB的默认TCP端口27017添加规则：
 
-![](img/7b31ecef45377d7676fbce83ab86653d_8.png)
 
 ```bash
 semanage port -a -t mongod_port_t -p tcp 27017
@@ -141,13 +136,11 @@ semanage port -a -t mongod_port_t -p tcp 27017
 
 如果你的MongoDB实例使用其他端口（例如27018），只需重复上述命令并修改端口号即可：
 
-![](img/7b31ecef45377d7676fbce83ab86653d_10.png)
 
 ```bash
 semanage port -a -t mongod_port_t -p tcp 27018
 ```
 
-![](img/7b31ecef45377d7676fbce83ab86653d_11.png)
 
 这条命令的作用是：在SELinux策略中，将指定的TCP端口类型标记为 `mongod_port_t`，从而允许MongoDB服务使用这些端口。
 

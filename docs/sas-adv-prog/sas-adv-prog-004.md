@@ -8,7 +8,6 @@ PROC SQL是SAS对结构化查询语言（SQL）的基础实现。它允许你在
 
 ## PROC SQL：SAS与SQL的结合
 
-![](img/bbeb27bf15ee1b693b3418d6fb136157_1.png)
 
 上一节我们介绍了PROC SQL的基本定位，本节中我们来看看它在数据处理流程中的具体角色。
 
@@ -28,7 +27,6 @@ PROC SQL是SAS对结构化查询语言（SQL）的基础实现。它允许你在
 
 与大多数其他SAS过程步一样，PROC SQL可以读取SAS表、SAS视图或数据库管理系统视图，以及数据库管理系统表。
 
-![](img/bbeb27bf15ee1b693b3418d6fb136157_3.png)
 
 作为输出，默认情况下，一个PROC SQL查询会生成一份报告。然而，一个PROC SQL查询也可以创建以下内容：
 

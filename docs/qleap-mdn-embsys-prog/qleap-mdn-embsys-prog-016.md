@@ -2,13 +2,10 @@
 
 在本节课中，我们将完成启动代码的学习。你将学习如何正确初始化向量表，包括设置正确的栈指针以及微控制器中所有可用的中断。你还将看到如何编写和测试异常处理程序，以确保它们能按预期工作。
 
-![](img/e4f515acb92e86143a4edc429fcee6e2_1.png)
 
-![](img/e4f515acb92e86143a4edc429fcee6e2_2.png)
 
 ## 项目准备
 
-![](img/e4f515acb92e86143a4edc429fcee6e2_4.png)
 
 首先，复制第14课的项目并将其重命名为第15课。如果你刚刚加入本课程，可以从 statemachine.com/quickstart 下载之前的项目。
 
@@ -20,17 +17,13 @@
 
 然而，新的向量表尚未正确初始化。因此，今天的首要任务就是提供正确的初始化。
 
-![](img/e4f515acb92e86143a4edc429fcee6e2_6.png)
 
-![](img/e4f515acb92e86143a4edc429fcee6e2_7.png)
 
-![](img/e4f515acb92e86143a4edc429fcee6e2_8.png)
 
 ## 初始化栈指针
 
 根据 TM4C 数据手册，向量表的第一个值应该是栈指针的初始值（位于地址 0），第二个值是复位处理程序的地址（位于地址 4）。
 
-![](img/e4f515acb92e86143a4edc429fcee6e2_10.png)
 
 为了与 IAR 链接器脚本编辑器（可以在其中设置 C 栈大小）保持兼容，我们需要找到一种方法来初始化栈指针。回顾第13课（仍使用 IAR 库的默认启动代码），可以看到向量表的第一个条目是 `CSTACK$$Limit`。这表明链接器知道 `CSTACK$$Limit` 这个符号。
 
@@ -147,7 +140,6 @@ void assert_failed(const char *file, int line) {
 
 ## 测试异常处理程序
 
-![](img/e4f515acb92e86143a4edc429fcee6e2_12.png)
 
 为了测试别名机制，可以提供自己的非故障处理程序实现（例如 `SysTick_Handler`），以期望它代替别名被使用。代码构建成功后，在反汇编中可以看到自定义的 `SysTick_Handler` 而不是 `DebugMon_Handler` 别名。运行代码，LED 仍然闪烁。
 
@@ -167,7 +159,6 @@ void assert_failed(const char *file, int line) {
 
 ## 添加中断处理程序
 
-![](img/e4f515acb92e86143a4edc429fcee6e2_14.png)
 
 自定义向量表现在包含了所有标准异常，但仍需要添加处理器支持的所有中断处理程序（即数据手册中标记为 IRQ 中断请求的条目）。
 

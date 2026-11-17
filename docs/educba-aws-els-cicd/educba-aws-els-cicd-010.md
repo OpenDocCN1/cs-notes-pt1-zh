@@ -2,27 +2,20 @@
 
 在本节课中，我们将学习如何为现有的部署流水线添加更多阶段，包括一个生产环境阶段和审批阶段。通过配置审批，可以确保代码在部署到生产环境前获得必要的批准。
 
-![](img/cab276a20ec38f9eb06e51be5999ef51_1.png)
 
 ---
 
-![](img/cab276a20ec38f9eb06e51be5999ef51_3.png)
 
-![](img/cab276a20ec38f9eb06e51be5999ef51_5.png)
 
 上一节我们设置了基本的开发环境部署流水线。本节中，我们将扩展这个流水线，使其包含一个生产环境和一个手动审批环节。
 
-![](img/cab276a20ec38f9eb06e51be5999ef51_7.png)
 
 ## 创建生产环境
 
-![](img/cab276a20ec38f9eb06e51be5999ef51_9.png)
 
 首先，我们需要为生产部署创建一个新的Elastic Beanstalk环境。
 
-![](img/cab276a20ec38f9eb06e51be5999ef51_11.png)
 
-![](img/cab276a20ec38f9eb06e51be5999ef51_13.png)
 
 1.  导航到Elastic Beanstalk控制台的“环境”部分。
 2.  选择现有的开发环境（例如 `web-dev-env`）。
@@ -30,7 +23,6 @@
 4.  将新环境命名为 `web-prod-env`。
 5.  确认URL可用后，开始创建克隆环境。
 
-![](img/cab276a20ec38f9eb06e51be5999ef51_15.png)
 
 创建过程需要一些时间。在等待环境启动的同时，我们可以开始配置流水线的多阶段部署。
 
@@ -38,9 +30,7 @@
 
 环境准备就绪后，我们需要编辑现有的CodePipeline流水线，为其添加新的阶段。
 
-![](img/cab276a20ec38f9eb06e51be5999ef51_17.png)
 
-![](img/cab276a20ec38f9eb06e51be5999ef51_19.png)
 
 以下是需要添加的步骤：
 
@@ -49,7 +39,6 @@
 
 ### 1. 添加审批阶段
 
-![](img/cab276a20ec38f9eb06e51be5999ef51_21.png)
 
 在流水线编辑器中，执行以下操作：
 
@@ -63,15 +52,11 @@
         *   **SNS主题**：选择一个已存在的SNS主题（例如 `web-dev-pipeline`），用于发送审批通知。
         *   **说明**：可填写“请批准或拒绝此次部署”。
 
-![](img/cab276a20ec38f9eb06e51be5999ef51_23.png)
 
-![](img/cab276a20ec38f9eb06e51be5999ef51_24.png)
 
-![](img/cab276a20ec38f9eb06e51be5999ef51_26.png)
 
 ### 2. 添加生产部署阶段
 
-![](img/cab276a20ec38f9eb06e51be5999ef51_28.png)
 
 审批阶段配置完成后，添加生产部署阶段。
 
@@ -86,13 +71,11 @@
     *   **应用程序名称**：选择您的Elastic Beanstalk应用程序（例如 `web-prod`）
     *   **环境名称**：选择刚创建的生产环境（例如 `web-prod-env`）
 
-![](img/cab276a20ec38f9eb06e51be5999ef51_30.png)
 
 配置完成后，保存对流水线的所有更改。
 
 ## 总结
 
-![](img/cab276a20ec38f9eb06e51be5999ef51_32.png)
 
 ![](img/cab276a20ec38f9eb06e51be5999ef51_34.png)
 

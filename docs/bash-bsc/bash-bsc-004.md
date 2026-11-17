@@ -10,7 +10,6 @@
 
 当你了解某个命令能完成所需任务，但不确定具体用法时，可以查阅手册。
 
-![](img/ba15ef80009d50efe0611acc05104998_1.png)
 
 ### 使用 `man` 命令
 
@@ -20,19 +19,13 @@
 man man
 ```
 
-![](img/ba15ef80009d50efe0611acc05104998_3.png)
 
-![](img/ba15ef80009d50efe0611acc05104998_4.png)
 
 几乎所有与终端运行相关的已安装程序都有手册页。例如：
 
-![](img/ba15ef80009d50efe0611acc05104998_5.png)
 
-![](img/ba15ef80009d50efe0611acc05104998_6.png)
 
-![](img/ba15ef80009d50efe0611acc05104998_7.png)
 
-![](img/ba15ef80009d50efe0611acc05104998_8.png)
 
 ```bash
 man mv
@@ -40,9 +33,7 @@ man htop
 man firefox
 ```
 
-![](img/ba15ef80009d50efe0611acc05104998_10.png)
 
-![](img/ba15ef80009d50efe0611acc05104998_11.png)
 
 但请注意，并非所有命令都有手册页，例如 `cd` 命令就没有。
 
@@ -92,7 +83,6 @@ echo $PATH
 find . -name "example.txt"
 ```
 
-![](img/ba15ef80009d50efe0611acc05104998_13.png)
 
 命令中的点 `.` 表示在当前目录中查找。
 
@@ -112,7 +102,6 @@ find /etc -name "fstab"
 
 当你需要在一个很长的文本文件中确认是否存在某条信息，或提取特定内容时，`grep` 命令非常有用。
 
-![](img/ba15ef80009d50efe0611acc05104998_15.png)
 
 ### 基本 `grep` 用法
 
@@ -145,11 +134,9 @@ Nano is awesome.
 grep nano junk.txt > grep_results.txt
 ```
 
-![](img/ba15ef80009d50efe0611acc05104998_17.png)
 
 这条命令不会在屏幕显示结果，而是将所有包含“nano”的行写入 `grep_results.txt` 文件。之后你可以用 `nano` 或 `cat` 查看这个新文件。
 
-![](img/ba15ef80009d50efe0611acc05104998_19.png)
 
 `grep` 命令拥有众多高级选项，建议通过 `man grep` 进一步学习。
 

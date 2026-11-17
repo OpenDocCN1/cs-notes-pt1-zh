@@ -12,11 +12,8 @@
 
 ![](img/ae46f13bdcc45e7fc3db3a21c3d090d5_1.png)
 
-![](img/ae46f13bdcc45e7fc3db3a21c3d090d5_3.png)
 
-![](img/ae46f13bdcc45e7fc3db3a21c3d090d5_5.png)
 
-![](img/ae46f13bdcc45e7fc3db3a21c3d090d5_6.png)
 
 ### 默认路由的作用
 访问互联网上的服务器（如百度、腾讯）时，目的地地址繁多且未知。我们不可能为每个公网地址配置一条精确的静态路由。此时，需要使用**默认路由**。
@@ -99,9 +96,7 @@ ip route-static 0.0.0.0 0.0.0.0 20.1.1.1 preference 64
 
 ![](img/ae46f13bdcc45e7fc3db3a21c3d090d5_56.png)
 
-![](img/ae46f13bdcc45e7fc3db3a21c3d090d5_57.png)
 
-![](img/ae46f13bdcc45e7fc3db3a21c3d090d5_59.png)
 
 ## 从静态路由到动态路由
 

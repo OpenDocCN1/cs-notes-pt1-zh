@@ -1,6 +1,5 @@
 # 017：使用glError调试OpenGL状态机错误
 
-![](img/802ef92cfc6552b0037c62e6bb756dd6_0.png)
 
 ![](img/802ef92cfc6552b0037c62e6bb756dd6_0.png)
 
@@ -8,7 +7,6 @@
 
 ## 发现问题
 
-![](img/802ef92cfc6552b0037c62e6bb756dd6_2.png)
 
 ![](img/802ef92cfc6552b0037c62e6bb756dd6_4.png)
 
@@ -69,7 +67,6 @@ static bool GLCheckErrorStatus(const char* function, int line) {
 
 应用宏并重新编译运行程序后，控制台输出了错误信息：“OpenGL Error: 1280 at glDrawElements:421”。错误代码1280本身没有直接意义，我们需要查找其对应的枚举常量。
 
-![](img/802ef92cfc6552b0037c62e6bb756dd6_8.png)
 
 ![](img/802ef92cfc6552b0037c62e6bb756dd6_9.png)
 
@@ -81,7 +78,6 @@ static bool GLCheckErrorStatus(const char* function, int line) {
 
 ![](img/802ef92cfc6552b0037c62e6bb756dd6_11.png)
 
-![](img/802ef92cfc6552b0037c62e6bb756dd6_13.png)
 
 ## 总结
 
@@ -91,6 +87,5 @@ static bool GLCheckErrorStatus(const char* function, int line) {
 
 这种方法是针对OpenGL 3.3等较旧版本的一种实用调试手段。现代OpenGL（4.3+）提供了更先进的调试回调机制，我们将在后续课程中探讨。
 
-![](img/802ef92cfc6552b0037c62e6bb756dd6_15.png)
 
 ![](img/802ef92cfc6552b0037c62e6bb756dd6_15.png)

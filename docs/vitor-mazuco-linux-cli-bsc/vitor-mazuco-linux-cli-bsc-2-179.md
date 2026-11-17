@@ -67,7 +67,6 @@ abc123def456   bridge    bridge    local
 
 默认情况下，所有从容器到外部网络的出站流量都是允许的，但所有入站流量都被阻止，这类似于防火墙的工作方式。
 
-![](img/c1201c11d9f94e505d8caa3d9d32d6e2_18.png)
 
 另一张图提供了更多细节。
 
@@ -103,9 +102,7 @@ abc123def456   bridge    bridge    local
 
 为了测试容器间的路由通信，让我们打开另一个终端，创建第二个容器。
 
-![](img/c1201c11d9f94e505d8caa3d9d32d6e2_23.png)
 
-![](img/c1201c11d9f94e505d8caa3d9d32d6e2_25.png)
 
 执行命令`docker run -it --name c2 --network test-net alpine sh`创建容器`c2`。通过`docker container inspect c2`查看其IP地址，例如`10.0.1.3`。
 

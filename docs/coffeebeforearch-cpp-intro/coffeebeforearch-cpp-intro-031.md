@@ -4,7 +4,6 @@
 
 ## 概述
 
-![](img/bf26e492eea2ddd8a208bd2de9e22c9e_1.png)
 
 到目前为止，我们一直在C++中定义独立的`struct`和`class`。然而，很多时候我们的结构体或类之间可能存在重叠，无论是在实现的方法上还是在包含的数据上。处理这种代码重复的一种方式就是通过继承和派生类。
 
@@ -89,13 +88,11 @@ z is equal to 3
 
 ## 继承的灵活性
 
-![](img/bf26e492eea2ddd8a208bd2de9e22c9e_3.png)
 
 继承的强大之处在于，我们可以基于同一个基类创建多个不同的派生类，每个派生类可以进行不同的特化和扩展。
 
 例如，我们可以创建另一个派生类`Derived2`，它可能使用不同的数据类型或初始化方式：
 
-![](img/bf26e492eea2ddd8a208bd2de9e22c9e_5.png)
 
 ```cpp
 struct Derived2 : public Base {
@@ -120,7 +117,6 @@ struct Derived2 : public Base {
 5.  派生类对象可以 **同时使用基类和自身的方法**。
 6.  继承的访问控制（`public`、`private`、`protected`）决定了基类成员在派生类中的可见性，这是一个重要的设计考量点。
 
-![](img/bf26e492eea2ddd8a208bd2de9e22c9e_7.png)
 
 ![](img/bf26e492eea2ddd8a208bd2de9e22c9e_8.png)
 

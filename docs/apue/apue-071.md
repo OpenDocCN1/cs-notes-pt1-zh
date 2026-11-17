@@ -4,7 +4,6 @@ UNIX高级编程：13.6：能力、控制组与容器 🚀
 
 ---
 
-![](img/d0beaaa3c0e28bc3a633e72ccba2964b_1.png)
 
 ### 概述：从能力到容器
 
@@ -88,7 +87,6 @@ echo “100M” | sudo tee /sys/fs/cgroup/memory/my_group/memory.max
 
 ### 容器：技术的集大成者
 
-![](img/d0beaaa3c0e28bc3a633e72ccba2964b_3.png)
 
 最后，容器，顾名思义，是一种“容纳”进程的方式。它们在同一操作系统内核上提供了一个隔离的执行环境，这是与完全硬件虚拟化的重要区别，因此是一种更轻量级的方法。
 
@@ -98,7 +96,6 @@ echo “100M” | sudo tee /sys/fs/cgroup/memory/my_group/memory.max
 *   使用命名空间来限制文件系统、进程、网络等的可见性。
 *   使用能力模型来限制进程可以执行的操作。
 
-![](img/d0beaaa3c0e28bc3a633e72ccba2964b_5.png)
 
 尽管我们在此上下文中讨论了许多应用此类限制的方法，但cgroups和命名空间经常被一起讨论，因为它们能很好地互补。事实上，cgroups和命名空间的结合构成了许多操作系统级虚拟化和容器技术（如CoreOS、LXC或Docker）的基础。
 

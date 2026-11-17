@@ -16,9 +16,7 @@
 
 在本节课中，我们将继续从零开始用C语言制作游戏。上一节我们开始为游戏本身实现一些机制和想法。本节中，我们将进一步构建这些机制，并开始构建一个更有趣的游戏。
 
-![](img/2d11af16ffb245ab1947921d1bfbeeda_13.png)
 
-![](img/2d11af16ffb245ab1947921d1bfbeeda_15.png)
 
 ![](img/2d11af16ffb245ab1947921d1bfbeeda_17.png)
 
@@ -40,13 +38,10 @@
 
 ![](img/2d11af16ffb245ab1947921d1bfbeeda_29.png)
 
-![](img/2d11af16ffb245ab1947921d1bfbeeda_31.png)
 
 上一节我们从一个打砖块（Breakout）克隆开始，并逐步实现了一些我们自己的新想法。我们尝试了不同形状的砖墙，并开始制作能量道具（Power-ups），虽然还没有完成。
 
-![](img/2d11af16ffb245ab1947921d1bfbeeda_33.png)
 
-![](img/2d11af16ffb245ab1947921d1bfbeeda_35.png)
 
 ![](img/2d11af16ffb245ab1947921d1bfbeeda_37.png)
 
@@ -74,16 +69,12 @@
 
 ![](img/2d11af16ffb245ab1947921d1bfbeeda_51.png)
 
-![](img/2d11af16ffb245ab1947921d1bfbeeda_53.png)
 
-![](img/2d11af16ffb245ab1947921d1bfbeeda_55.png)
 
-![](img/2d11af16ffb245ab1947921d1bfbeeda_57.png)
 
 ### 2. 生命系统
 这个机制基于上节课的一个想法：当砖块被摧毁时，随机复活其邻居。我们将实现一个生命系统。每个砖块有最大生命值（例如5点）。当它的生命值从5降到4时，会为相邻砖块增加1点生命。这意味着你需要小心选择先摧毁哪些砖块，否则可能会让问题变得更糟。
 
-![](img/2d11af16ffb245ab1947921d1bfbeeda_59.png)
 
 ![](img/2d11af16ffb245ab1947921d1bfbeeda_61.png)
 
@@ -104,13 +95,10 @@
 *   **砖块布局**：我们已经尝试过普通墙、交错排列、间隔排列等。我们还可以设计更疯狂的形状，比如圆形或倾斜的竞技场形状。
 *   **砖块移动**：这是游戏的原始核心想法。我们将为不同关卡添加不同的砖块移动模式，这将是游戏真正的亮点。
 
-![](img/2d11af16ffb245ab1947921d1bfbeeda_73.png)
 
-![](img/2d11af16ffb245ab1947921d1bfbeeda_75.png)
 
 基于这些机制，我们可以构建有趣的关卡。原来的“游戏模式”系统将转变为“关卡”系统。
 
-![](img/2d11af16ffb245ab1947921d1bfbeeda_77.png)
 
 ## 代码重构：从游戏模式到关卡
 
@@ -138,13 +126,9 @@
 4.  修改关卡切换逻辑，例如 `advance_level` 函数。
 5.  移除旧的游戏模式相关代码，确保能量道具等系统现在与关卡关联。
 
-![](img/2d11af16ffb245ab1947921d1bfbeeda_93.png)
 
-![](img/2d11af16ffb245ab1947921d1bfbeeda_95.png)
 
-![](img/2d11af16ffb245ab1947921d1bfbeeda_97.png)
 
-![](img/2d11af16ffb245ab1947921d1bfbeeda_99.png)
 
 ![](img/2d11af16ffb245ab1947921d1bfbeeda_101.png)
 
@@ -156,7 +140,6 @@
 
 ![](img/2d11af16ffb245ab1947921d1bfbeeda_107.png)
 
-![](img/2d11af16ffb245ab1947921d1bfbeeda_109.png)
 
 ![](img/2d11af16ffb245ab1947921d1bfbeeda_111.png)
 
@@ -193,7 +176,6 @@ void simulate_level(s32 level) {
 
 上一节我们开始了能量道具系统，现在我们来完成它。我们首先测试让第一排的每个砖块都掉落一个“无敌”能量道具。
 
-![](img/2d11af16ffb245ab1947921d1bfbeeda_117.png)
 
 ![](img/2d11af16ffb245ab1947921d1bfbeeda_119.png)
 
@@ -336,19 +318,13 @@ bool is_invincible_now = (invincibility_time > 0);
 
 ![](img/2d11af16ffb245ab1947921d1bfbeeda_210.png)
 
-![](img/2d11af16ffb245ab1947921d1bfbeeda_212.png)
 
-![](img/2d11af16ffb245ab1947921d1bfbeeda_214.png)
 
-![](img/2d11af16ffb245ab1947921d1bfbeeda_216.png)
 
-![](img/2d11af16ffb245ab1947921d1bfbeeda_218.png)
 
 球结构体和标志位定义：
 
-![](img/2d11af16ffb245ab1947921d1bfbeeda_220.png)
 
-![](img/2d11af16ffb245ab1947921d1bfbeeda_222.png)
 
 ```c
 #define BALL_FLAG_ACTIVE       (1 << 0)
@@ -419,7 +395,6 @@ if (triple_shot_count > 0) {
 
 ![](img/2d11af16ffb245ab1947921d1bfbeeda_248.png)
 
-![](img/2d11af16ffb245ab1947921d1bfbeeda_250.png)
 
 ![](img/2d11af16ffb245ab1947921d1bfbeeda_252.png)
 
@@ -464,7 +439,6 @@ for (each active ball) {
 
 ![](img/2d11af16ffb245ab1947921d1bfbeeda_264.png)
 
-![](img/2d11af16ffb245ab1947921d1bfbeeda_266.png)
 
 ![](img/2d11af16ffb245ab1947921d1bfbeeda_268.png)
 
@@ -504,14 +478,11 @@ for (each active ball) {
 
 ![](img/2d11af16ffb245ab1947921d1bfbeeda_300.png)
 
-![](img/2d11af16ffb245ab1947921d1bfbeeda_302.png)
 
-![](img/2d11af16ffb245ab1947921d1bfbeeda_304.png)
 
 ### 彗星效果实现
 我们添加一个 `comet_time` 计时器。当时间大于0时，如果球向上运动（dp.y < 0），则在与砖块碰撞时不改变方向。
 
-![](img/2d11af16ffb245ab1947921d1bfbeeda_306.png)
 
 ![](img/2d11af16ffb245ab1947921d1bfbeeda_308.png)
 
@@ -567,7 +538,6 @@ void ball_block_collision(Ball* ball, Block* block) {
 
 ![](img/2d11af16ffb245ab1947921d1bfbeeda_342.png)
 
-![](img/2d11af16ffb245ab1947921d1bfbeeda_344.png)
 
 ![](img/2d11af16ffb245ab1947921d1bfbeeda_346.png)
 
@@ -606,9 +576,7 @@ void ball_block_collision(Ball* ball, Block* block) {
 
 ![](img/2d11af16ffb245ab1947921d1bfbeeda_371.png)
 
-![](img/2d11af16ffb245ab1947921d1bfbeeda_373.png)
 
-![](img/2d11af16ffb245ab1947921d1bfbeeda_375.png)
 
 ![](img/2d11af16ffb245ab1947921d1bfbeeda_377.png)
 
@@ -627,7 +595,6 @@ case Power_InvertedControls:
 
 ![](img/2d11af16ffb245ab1947921d1bfbeeda_384.png)
 
-![](img/2d11af16ffb245ab1947921d1bfbeeda_386.png)
 
 ![](img/2d11af16ffb245ab1947921d1bfbeeda_388.png)
 
@@ -684,9 +651,7 @@ player->desired_p.x += mouse_delta_x * some_sensitivity;
 
 ![](img/2d11af16ffb245ab1947921d1bfbeeda_426.png)
 
-![](img/2d11af16ffb245ab1947921d1bfbeeda_428.png)
 
-![](img/2d11af16ffb245ab1947921d1bfbeeda_430.png)
 
 ### 砖块与球的颜色标记
 我们在砖块和球的结构体标志位中添加 `RIVAL_A` 和 `RIVAL_B` 标志。
@@ -830,24 +795,19 @@ if (!can_destroy) {
 
 ![](img/2d11af16ffb245ab1947921d1bfbeeda_520.png)
 
-![](img/2d11af16ffb245ab1947921d1bfbeeda_522.png)
 
 ![](img/2d11af16ffb245ab1947921d1bfbeeda_524.png)
 
 ### 双球速度调整
 当两个球同时存在时，为了避免它们同时从不同位置击中玩家导致无法防御，我们尝试实现一个速度调整机制。当某个球即将击中玩家，而另一个球也即将在相近时间击中时，调整后一个球的速度，使它们错开时间击中玩家。
 
-![](img/2d11af16ffb245ab1947921d1bfbeeda_526.png)
 
-![](img/2d11af16ffb245ab1947921d1bfbeeda_528.png)
 
 ![](img/2d11af16ffb245ab1947921d1bfbeeda_530.png)
 
 ![](img/2d11af16ffb245ab1947921d1bfbeeda_532.png)
 
-![](img/2d11af16ffb245ab1947921d1bfbeeda_534.png)
 
-![](img/2d11af16ffb245ab1947921d1bfbeeda_536.png)
 
 ![](img/2d11af16ffb245ab1947921d1bfbeeda_538.png)
 
@@ -932,7 +892,6 @@ f32 calculate_speed_adjustment(Ball* ball_to_adjust, Ball* other_ball) {
 
 ![](img/2d11af16ffb245ab1947921d1bfbeeda_595.png)
 
-![](img/2d11af16ffb245ab1947921d1bfbeeda_597.png)
 
 ![](img/2d11af16ffb245ab1947921d1bfbeeda_599.png)
 
@@ -982,7 +941,6 @@ f32 calculate_speed_adjustment(Ball* ball_to_adjust, Ball* other_ball) {
 
 ![](img/2d11af16ffb245ab1947921d1bfbeeda_638.png)
 
-![](img/2d11af16ffb245ab1947921d1bfbeeda_640.png)
 
 ![](img/2d11af16ffb245ab1947921d1bfbeeda_642.png)
 
@@ -1021,7 +979,6 @@ f32 calculate_speed_adjustment(Ball* ball_to_adjust, Ball* other_ball) {
 
 ![](img/2d11af16ffb245ab1947921d1bfbeeda_672.png)
 
-![](img/2d11af16ffb245ab1947921d1bfbeeda_674.png)
 
 ![](img/2d11af16ffb245ab1947921d1bfbeeda_676.png)
 
@@ -1053,15 +1010,12 @@ f32 calculate_speed_adjustment(Ball* ball_to_adjust, Ball* other_ball) {
 
 ![](img/2d11af16ffb245ab1947921d1bfbeeda_692.png)
 
-![](img/2d11af16ffb245ab1947921d1bfbeeda_694.png)
 
-![](img/2d11af16ffb245ab1947921d1bfbeeda_696.png)
 
 ![](img/2d11af16ffb245ab1947921d1bfbeeda_698.png)
 
 ![](img/2d11af16ffb245ab1947921d1bfbeeda_700.png)
 
-![](img/2d11af16ffb245ab1947921d1bfbeeda_702.png)
 
 ![](img/2d11af16ffb245ab1947921d1bfbeeda_704.png)
 
@@ -1116,7 +1070,6 @@ f32 calculate_speed_adjustment(Ball* ball_to_adjust, Ball* other_ball) {
 
 ![](img/2d11af16ffb245ab1947921d1bfbeeda_744.png)
 
-![](img/2d11af16ffb245ab1947921d1bfbeeda_746.png)
 
 ![](img/2d11af16ffb245ab1947921d1bfbeeda_748.png)
 

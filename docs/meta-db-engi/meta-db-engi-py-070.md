@@ -17,27 +17,19 @@
 *   **MySQLclient**
 *   **MySQL Connector/Python**
 
-![](img/8a96b62a7a0e2d19f7b9ce71f350760b_1.png)
 
-![](img/8a96b62a7a0e2d19f7b9ce71f350760b_2.png)
 
 在本课程中，我们将重点介绍最常用的API：**`MySQL Connector/Python`**。
 
-![](img/8a96b62a7a0e2d19f7b9ce71f350760b_3.png)
 
-![](img/8a96b62a7a0e2d19f7b9ce71f350760b_4.png)
 
-![](img/8a96b62a7a0e2d19f7b9ce71f350760b_5.png)
 
-![](img/8a96b62a7a0e2d19f7b9ce71f350760b_6.png)
 
 ---
 
-![](img/8a96b62a7a0e2d19f7b9ce71f350760b_7.png)
 
 ## 连接流程详解
 
-![](img/8a96b62a7a0e2d19f7b9ce71f350760b_9.png)
 
 理解MySQL数据库与Python之间连接的一个有效方式是可视化。想象一个示意图：一边是Python应用程序，另一边是MySQL数据库，而连接这两者的中间元素就是`MySQL Connector/Python` API。
 
@@ -51,41 +43,28 @@
 
 ---
 
-![](img/8a96b62a7a0e2d19f7b9ce71f350760b_11.png)
 
 ## 实战示例：Little Lemon餐厅
 
-![](img/8a96b62a7a0e2d19f7b9ce71f350760b_12.png)
 
-![](img/8a96b62a7a0e2d19f7b9ce71f350760b_13.png)
 
-![](img/8a96b62a7a0e2d19f7b9ce71f350760b_14.png)
 
-![](img/8a96b62a7a0e2d19f7b9ce71f350760b_15.png)
 
 让我们以Little Lemon餐厅的数据库为例。Little Lemon需要通过他们的Python应用程序查询客人晚餐的到达时间。
 
-![](img/8a96b62a7a0e2d19f7b9ce71f350760b_16.png)
 
-![](img/8a96b62a7a0e2d19f7b9ce71f350760b_17.png)
 
-![](img/8a96b62a7a0e2d19f7b9ce71f350760b_18.png)
 
 客人的预订日期和时间数据存储在后端数据库中。因此，Python应用程序使用游标对象的`execute`模块来执行客户的查询需求。
 
 以下是执行查询的核心代码步骤：
 
 
-![](img/8a96b62a7a0e2d19f7b9ce71f350760b_20.png)
-
-![](img/8a96b62a7a0e2d19f7b9ce71f350760b_21.png)
-
-![](img/8a96b62a7a0e2d19f7b9ce71f350760b_22.png)
-
-![](img/8a96b62a7a0e2d19f7b9ce71f350760b_23.png)
 
 
-![](img/8a96b62a7a0e2d19f7b9ce71f350760b_25.png)
+
+
+
 
 ```python
 # Python 1. 建立数据库连接
@@ -99,13 +78,10 @@ cursor.execute("SELECT booking_time FROM bookings WHERE guest_name = 'John Doe'"
 records = cursor.fetchall()
 ```
 
-![](img/8a96b62a7a0e2d19f7b9ce71f350760b_27.png)
 
 查询结果会通过游标对象以**元组**的形式返回，显示每位客人的预订时间槽。
 
-![](img/8a96b62a7a0e2d19f7b9ce71f350760b_28.png)
 
-![](img/8a96b62a7a0e2d19f7b9ce71f350760b_29.png)
 
 请求完成后，可以关闭游标对象和数据库连接。
 
@@ -113,7 +89,6 @@ records = cursor.fetchall()
 
 ## 总结
 
-![](img/8a96b62a7a0e2d19f7b9ce71f350760b_31.png)
 
 ![](img/8a96b62a7a0e2d19f7b9ce71f350760b_32.png)
 

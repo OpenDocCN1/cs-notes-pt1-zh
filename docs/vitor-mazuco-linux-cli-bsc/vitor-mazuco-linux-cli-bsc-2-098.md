@@ -1,40 +1,32 @@
 # 098：数据库操作 🗄️
 
-![](img/6e2a8d095104a1f7870e36eecb1fe4b4_1.png)
 
 在本节课中，我们将学习如何在MongoDB中进行数据库操作，包括查询、更改、数据移除和文档命令。我们还将为管理员用户授予更广泛的权限，使其能够管理任何类型的数据库。
 
-![](img/6e2a8d095104a1f7870e36eecb1fe4b4_3.png)
 
 上一节我们介绍了MongoDB的基本概念，本节中我们来看看如何配置用户权限并进行数据库操作。
 
-![](img/6e2a8d095104a1f7870e36eecb1fe4b4_5.png)
 
 ## 配置管理员用户权限
 
-![](img/6e2a8d095104a1f7870e36eecb1fe4b4_7.png)
 
 首先，我们需要为现有的管理员用户授予更多权限，使其能够操作任何类型的数据库，并拥有集群、备份和恢复的权限。
 
-![](img/6e2a8d095104a1f7870e36eecb1fe4b4_9.png)
 
 以下是配置步骤：
 
-![](img/6e2a8d095104a1f7870e36eecb1fe4b4_11.png)
 
 1.  使用管理员账户登录MongoDB。
     ```bash
     mongo -u admin -p 123456
     ```
 
-![](img/6e2a8d095104a1f7870e36eecb1fe4b4_12.png)
 
 2.  切换到 `admin` 数据库。
     ```javascript
     use admin
     ```
 
-![](img/6e2a8d095104a1f7870e36eecb1fe4b4_14.png)
 
 3.  查看当前管理员用户的权限。
     ```javascript
@@ -70,19 +62,15 @@
 use MyNewDB
 ```
 
-![](img/6e2a8d095104a1f7870e36eecb1fe4b4_16.png)
 
 执行此命令后，虽然当前上下文切换到了 `MyNewDB`，但使用 `show dbs` 命令查看时，它并不会立即出现。
 
-![](img/6e2a8d095104a1f7870e36eecb1fe4b4_18.png)
 
 ### 持久化数据库
 
-![](img/6e2a8d095104a1f7870e36eecb1fe4b4_20.png)
 
 要使新数据库真正被创建并保存，需要向其中的某个集合插入至少一个文档。
 
-![](img/6e2a8d095104a1f7870e36eecb1fe4b4_22.png)
 
 ```javascript
 db.myCollection.insertOne({ name: "test" })

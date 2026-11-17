@@ -1,6 +1,5 @@
 # 158：磁盘管理模块介绍 💾
 
-![](img/7ec8b2a3fac499c4e39b4599db23e60e_0.png)
 
 ![](img/7ec8b2a3fac499c4e39b4599db23e60e_1.png)
 

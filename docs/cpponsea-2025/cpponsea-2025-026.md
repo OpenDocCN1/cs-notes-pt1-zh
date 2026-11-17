@@ -53,7 +53,6 @@ C++26 采纳了“强化 C++ 标准库”提案，为标准库中大量常用的
 
 ![](img/3dab52dd73a27c550303f6496f5bc7f9_1.png)
 
-![](img/3dab52dd73a27c550303f6496f5bc7f9_3.png)
 
 ## 章节 2：改变游戏规则的编译时反射 🔮
 
@@ -153,13 +152,11 @@ auto sender = std::execution::schedule(pool) // 在线程池调度
 std::this_thread::sync_wait(sender);
 ```
 
-![](img/3dab52dd73a27c550303f6496f5bc7f9_11.png)
 
 这里，`schedule` 和 `then` 通过管道符 `|` 连接，清晰地表达了异步任务流。任务在 `pool` 上启动后立即返回，调用者可以继续执行，直到需要结果时再通过 `sync_wait` 进行“汇合”。
 
 ### 3.2 框架的独特优势
 
-![](img/3dab52dd73a27c550303f6496f5bc7f9_13.png)
 
 `std::execution` 最引人注目的特点是，它**能同时很好地服务于两种不同的并发范式**：
 

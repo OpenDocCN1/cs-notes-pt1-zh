@@ -2,7 +2,6 @@
 
 在本节课中，我们将学习如何为特定的Cortex微控制器安装设备支持包。这是使用Keil MDK进行开发前的必要步骤。
 
-![](img/5f0205da0f2246c8a2d2652b9579bcab_1.png)
 
 ## 概述
 
@@ -14,7 +13,6 @@
 
 1.  打开Keil MDK软件，点击工具栏上的 **Pack Installer** 图标（一个立方体盒子），启动包管理器。
 
-    ![](img/5f0205da0f2246c8a2d2652b9579bcab_1.png)
 
 2.  在Pack Installer窗口中，展开左侧的“Device”列表。如果你已经为你的开发板安装过支持包，可以跳过此课程。本教程适用于首次在Keil MDK中使用特定开发板的用户。
 
@@ -25,15 +23,12 @@
 
 4.  点击“Install”后，安装过程将在窗口底部显示进度。请等待安装完成，提示“Completed requested actions”。
 
-    ![](img/5f0205da0f2246c8a2d2652b9579bcab_3.png)
 
-    ![](img/5f0205da0f2246c8a2d2652b9579bcab_4.png)
 
 5.  安装完成后，对应条目会显示“Up to Date”。如需卸载，可点击“Remove”。
 
 ## 总结
 
-![](img/5f0205da0f2246c8a2d2652b9579bcab_3.png)
 
 ![](img/5f0205da0f2246c8a2d2652b9579bcab_4.png)
 

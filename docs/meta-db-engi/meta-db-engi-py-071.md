@@ -42,9 +42,7 @@ python --version
 
 ---
 
-![](img/dba673520e1b2c47ef1823093b04f72f_5.png)
 
-![](img/dba673520e1b2c47ef1823093b04f72f_6.png)
 
 ## 配置工作环境
 
@@ -58,11 +56,9 @@ python --version
 
 ---
 
-![](img/dba673520e1b2c47ef1823093b04f72f_8.png)
 
 ## 安装MySQL连接器
 
-![](img/dba673520e1b2c47ef1823093b04f72f_10.png)
 
 为了在Python和MySQL数据库之间建立连接，我们需要使用一个专门的Python库，名为 `mysql-connector-python`。这个库是一个API，提供了许多用于操作MySQL的实用功能。
 

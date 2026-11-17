@@ -31,9 +31,7 @@ export
 
 ---
 
-![](img/77bf4a2771f00c3ff21afc05c2d85c1c_1.png)
 
-![](img/77bf4a2771f00c3ff21afc05c2d85c1c_2.png)
 
 ## 设置单个环境变量
 
@@ -89,7 +87,6 @@ docker run -it --env-file ./development.config alpine
 
 ---
 
-![](img/77bf4a2771f00c3ff21afc05c2d85c1c_4.png)
 
 ## 在Dockerfile中定义环境变量
 
@@ -110,22 +107,18 @@ ENV LOG_DIR=/var/log/app \
 
 然后，构建并运行这个新镜像：
 
-![](img/77bf4a2771f00c3ff21afc05c2d85c1c_10.png)
 
 ```bash
 docker build -t my-alpine .
 docker run -it my-alpine
 ```
 
-![](img/77bf4a2771f00c3ff21afc05c2d85c1c_12.png)
 
 这样，基于此镜像运行的所有容器都会自动包含这些预设的环境变量。
 
-![](img/77bf4a2771f00c3ff21afc05c2d85c1c_14.png)
 
 ---
 
-![](img/77bf4a2771f00c3ff21afc05c2d85c1c_16.png)
 
 ## 覆盖与指定镜像版本
 
@@ -137,19 +130,15 @@ docker run -it my-alpine
 docker run -it -e LOG_DIR=/custom/log my-alpine
 ```
 
-![](img/77bf4a2771f00c3ff21afc05c2d85c1c_18.png)
 
 此外，你可以通过指定标签来运行某个特定版本的镜像，这在测试时非常有用：
 
-![](img/77bf4a2771f00c3ff21afc05c2d85c1c_20.png)
 
 ```bash
 docker run -it alpine:3.12
 ```
 
-![](img/77bf4a2771f00c3ff21afc05c2d85c1c_22.png)
 
-![](img/77bf4a2771f00c3ff21afc05c2d85c1c_24.png)
 
 请确保你指定的镜像版本在仓库中是可用的。
 

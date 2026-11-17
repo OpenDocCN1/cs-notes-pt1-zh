@@ -2,7 +2,6 @@
 
 在本节课中，我们将学习如何使用SQL中的`GROUP BY`子句对数据进行分组，并配合聚合函数来汇总信息。我们将探讨如何计算每个组内的行数、平均值等统计量，以及如何使用`HAVING`子句对分组后的结果进行筛选。
 
-![](img/3a30c60106a6eeb8421d24bc8a91dfd1_1.png)
 
 ## 概述
 
@@ -10,7 +9,6 @@
 
 为了在SQL中回答这些问题，我们需要使用`GROUP BY`子句。
 
-![](img/3a30c60106a6eeb8421d24bc8a91dfd1_3.png)
 
 ## 使用GROUP BY子句
 
@@ -29,13 +27,11 @@ ORDER BY TotalCustomers DESC;
 
 **核心概念**：必须将聚合函数与`GROUP BY`子句结合使用。如果不这样做，SAS会将`GROUP BY`子句转换为`ORDER BY`子句。
 
-![](img/3a30c60106a6eeb8421d24bc8a91dfd1_5.png)
 
 ## WHERE子句与分组
 
 SAS在行可用于处理之前评估`WHERE`子句，并确定哪些单独的行可用于分组。因此，你不能使用`WHERE`子句通过引用计算出的汇总列（如`TotalCustomers`）来筛选分组行。
 
-![](img/3a30c60106a6eeb8421d24bc8a91dfd1_7.png)
 
 ## 使用HAVING子句筛选分组
 

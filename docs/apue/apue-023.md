@@ -1,6 +1,5 @@
 # 023：时间(3)是一个幻觉
 
-![](img/57bbc5ff1d39d65114c8bef5e2ddeb52_1.png)
 
 在本节课中，我们将深入探讨UNIX系统中的时间处理。我们将学习如何获取系统时间，理解不同时间数据结构的含义，并掌握如何在机器可读的时间戳和人类可读的日期字符串之间进行转换。同时，我们也会揭示时间处理中一些令人困惑的细节和陷阱。
 
@@ -19,11 +18,9 @@ printf("Seconds since epoch: %ld\n", (long)t);
 
 `time`是一个库函数，那么它从哪里获取时间呢？查看源码可以发现，它内部调用了`gettimeofday`系统调用。
 
-![](img/57bbc5ff1d39d65114c8bef5e2ddeb52_3.png)
 
 `gettimeofday`返回一个`struct timeval`结构，其中包含自纪元以来的秒数和微秒数。
 
-![](img/57bbc5ff1d39d65114c8bef5e2ddeb52_5.png)
 
 ```c
 struct timeval {
@@ -68,7 +65,6 @@ printf("Seconds: %ld, Nanoseconds: %ld\n", (long)ts.tv_sec, ts.tv_nsec);
 
 尽管有这些复杂性，我们仍然可以使用`asctime`函数将`struct tm`格式化为一个标准的日期字符串。
 
-![](img/57bbc5ff1d39d65114c8bef5e2ddeb52_7.png)
 
 ```c
 time_t now = time(NULL);
@@ -80,11 +76,9 @@ printf("UTC time: %s", asctime(tm_utc));
 
 我们刚才看到的是UTC时间。为了显示本地时间，需要考虑时区偏移和夏令时。`localtime`函数可以完成这个任务。
 
-![](img/57bbc5ff1d39d65114c8bef5e2ddeb52_9.png)
 
 `localtime`和`gmtime`一样，将`time_t`分解为`struct tm`，但它会根据本地时区规则进行调整。
 
-![](img/57bbc5ff1d39d65114c8bef5e2ddeb52_11.png)
 
 ```c
 struct tm *tm_local = localtime(&now);
@@ -99,7 +93,6 @@ export TZ=America/New_York
 
 时区和夏令时规则是软件工程师的噩梦。它们由政治边界、历史原因甚至南极科考站所属国决定，并且规则会频繁更改。这些信息存储在系统的时区数据库中，由IANA维护，需要定期更新。
 
-![](img/57bbc5ff1d39d65114c8bef5e2ddeb52_13.png)
 
 ## 自定义时间格式与反向转换
 
@@ -113,7 +106,6 @@ strftime(buf, sizeof(buf), "%Y-%m-%d %H:%M:%S %Z", tm_local);
 printf("Formatted: %s\n", buf);
 ```
 
-![](img/57bbc5ff1d39d65114c8bef5e2ddeb52_15.png)
 
 我们也可以反向操作：从一个`struct tm`结构生成`time_t`。这通过`mktime`函数实现。
 

@@ -74,11 +74,9 @@ wifiPhy.EnableAsciiAll (ascii.CreateFileStream ("manet-trace.tr"));
 
 ![](img/86bbba1aa6cec0d875d005f4fe211c4a_35.png)
 
-![](img/86bbba1aa6cec0d875d005f4fe211c4a_37.png)
 
 为了分析生成的 `.tr` 跟踪文件，我们需要使用一个名为Trace Matrix的专用软件。该软件是一个Java应用程序。
 
-![](img/86bbba1aa6cec0d875d005f4fe211c4a_39.png)
 
 ![](img/86bbba1aa6cec0d875d005f4fe211c4a_41.png)
 
@@ -97,19 +95,16 @@ Trace Matrix可以解析NS3生成的Ascii Trace文件，并计算出多种性能
 3.  在软件界面中，打开由NS3生成的 `.tr` 文件。
 4.  软件将自动分析文件，并显示摘要信息，如总数据包数、发送/接收/丢弃的数据包数量、总仿真时间等。
 
-![](img/86bbba1aa6cec0d875d005f4fe211c4a_43.png)
 
 ## 关键性能指标
 
 通过Trace Matrix，我们可以获取并导出以下几类核心性能指标：
 
-![](img/86bbba1aa6cec0d875d005f4fe211c4a_45.png)
 
 ### 1. 吞吐量与有效吞吐量
 *   **吞吐量**：指通过某个节点的总数据速率（包括中转数据）。计算公式可简化为：`总字节数 / 仿真时间`。
 *   **有效吞吐量**：指成功送达最终目的地的应用层数据速率。它衡量的是网络对用户“有用”的吞吐量。
 
-![](img/86bbba1aa6cec0d875d005f4fe211c4a_47.png)
 
 在Trace Matrix的“Throughput & Goodput”选项卡中，可以查看每个节点的这两项数据，并导出为数据文件用于绘图。
 
@@ -128,13 +123,10 @@ Lambda因子表示每个节点在仿真期间的平均每秒数据包数量。�
 
 ## 数据可视化
 
-![](img/86bbba1aa6cec0d875d005f4fe211c4a_53.png)
 
-![](img/86bbba1aa6cec0d875d005f4fe211c4a_55.png)
 
 导出的数据文件（如吞吐量、Lambda值）可以使用Gnuplot等工具进行可视化。
 
-![](img/86bbba1aa6cec0d875d005f4fe211c4a_57.png)
 
 以下是一个使用Gnuplot绘制吞吐量和有效吞吐量对比图的示例脚本：
 

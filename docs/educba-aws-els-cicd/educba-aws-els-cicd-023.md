@@ -22,9 +22,7 @@
 
 但在本项目中，我们将使用AWS原生工具来部署CI/CD流水线。我们将使用AWS CodePipeline、AWS CodeDeploy，并将Elastic Beanstalk作为平台即服务来部署我们的代码。Elastic Beanstalk将在后端为我们自动部署所需的基础设施。
 
-![](img/27c8f9df49f50a865b03f52fc45ac3c6_1.png)
 
-![](img/27c8f9df49f50a865b03f52fc45ac3c6_2.png)
 
 ## 项目难度与目标
 
@@ -32,7 +30,6 @@
 
 本课程的目标是理解如何利用Elastic Beanstalk为应用程序实现持续集成和持续交付。
 
-![](img/27c8f9df49f50a865b03f52fc45ac3c6_4.png)
 
 ## 什么是AWS Elastic Beanstalk？
 
@@ -42,9 +39,7 @@ Elastic Beanstalk是一个高度托管的服务，用于部署你的代码。在
 
 ## 你将学到什么
 
-![](img/27c8f9df49f50a865b03f52fc45ac3c6_6.png)
 
-![](img/27c8f9df49f50a865b03f52fc45ac3c6_7.png)
 
 在本项目中，你将学习到以下内容：
 *   使用Elastic Beanstalk部署应用程序的CI/CD流程。
@@ -55,7 +50,6 @@ Elastic Beanstalk是一个高度托管的服务，用于部署你的代码。在
 
 本项目将涵盖所有这些内容，并提供丰富的实践操作。在学习本项目时，建议你创建一个免费的AWS账户，并熟悉我在此提到的AWS服务，如Elastic Beanstalk、CodeCommit、CodeBuild和CodePipeline。这些服务将极大地帮助你完成整个项目。
 
-![](img/27c8f9df49f50a865b03f52fc45ac3c6_9.png)
 
 ## 目标学员
 
@@ -64,7 +58,6 @@ Elastic Beanstalk是一个高度托管的服务，用于部署你的代码。在
 *   任何云工程师、解决方案架构师或开发人员。
 *   任何希望实施CI/CD并希望采用DevOps模式的经理。
 
-![](img/27c8f9df49f50a865b03f52fc45ac3c6_11.png)
 
 他们都可以将此项目作为样本，并从中尽可能多地学习。
 
@@ -92,7 +85,6 @@ Elastic Beanstalk是一个高度托管的服务，用于部署你的代码。在
 
 ## 案例研究
 
-![](img/27c8f9df49f50a865b03f52fc45ac3c6_13.png)
 
 本课程将以一个领先的组织为例，该组织正试图使用CI/CD加速其应用程序部署流程。课程将涵盖以下所有场景：
 *   预生产环境设置

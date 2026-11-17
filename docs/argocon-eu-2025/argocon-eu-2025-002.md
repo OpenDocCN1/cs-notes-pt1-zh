@@ -1,15 +1,11 @@
 # 002：使用 Argo Rollouts 和 Kubernetes Gateway API 实现多向流量渐进式交付
 
-![](img/e453ee4ab046a6d41dfa31908f66f191_1.png)
 
-![](img/e453ee4ab046a6d41dfa31908f66f191_2.png)
 
-![](img/e453ee4ab046a6d41dfa31908f66f191_3.png)
 
 ## 概述
 在本节课中，我们将学习如何结合使用 **Argo Rollouts**、**Kubernetes Gateway API** 和 **Istio Ambient Mesh** 来实现一个面向生成式 AI 应用的、安全且可观测的渐进式交付流程。我们将通过一个实际演示，展示如何控制入口、出口和东西向流量，并安全地推出新版本应用。
 
-![](img/e453ee4ab046a6d41dfa31908f66f191_5.png)
 
 ---
 
@@ -38,11 +34,8 @@
 *   **Prometheus & Kiali**：用于监控和可视化服务网格流量。
 *   **Ollama**：用于在本地运行大型语言模型（LLM）。
 
-![](img/e453ee4ab046a6d41dfa31908f66f191_10.png)
 
-![](img/e453ee4ab046a6d41dfa31908f66f191_11.png)
 
-![](img/e453ee4ab046a6d41dfa31908f66f191_12.png)
 
 ---
 
@@ -81,7 +74,6 @@ kubectl label namespace default istio.io/use-waypoint=true
 
 为了控制出口流量（例如访问集群外的 Ollama），我创建了一个 **ServiceEntry** 资源。它指示流量在访问特定主机时，应该经过 `egress` 命名空间的 waypoint 代理。
 
-![](img/e453ee4ab046a6d41dfa31908f66f191_14.png)
 
 同时，我使用 **Kubernetes Gateway API** 定义了三种网关类（GatewayClass）来控制不同方向的流量：
 *   **ingress** 类：控制从集群外部进入的流量。
@@ -106,11 +98,9 @@ Gateway API 的 `status` 字段对于调试非常有用。
 
 ---
 
-![](img/e453ee4ab046a6d41dfa31908f66f191_16.png)
 
 ## 演示第二部分：集成 RAG 与 Argo Rollouts 发布
 
-![](img/e453ee4ab046a6d41dfa31908f66f191_18.png)
 
 我对当前应用的回答质量不满意，因为它对特定领域知识（如 Argo Rollouts 和 Ambient Mesh）不了解。为了解决这个问题，我决定集成一个 **RAG（检索增强生成）** 微服务，它能够基于我提供的文档来回答问题。
 
@@ -127,7 +117,6 @@ Gateway API 的 `status` 字段对于调试非常有用。
 
 虽然 RAG v1 能处理 PDF，但我希望 v2 版本还能支持 TXT 文件。我已经构建并推送了新的镜像。
 
-![](img/e453ee4ab046a6d41dfa31908f66f191_20.png)
 
 现在，我们使用 **Argo Rollouts** 来执行一次金丝雀发布，将应用从 v1 升级到 v2。
 
@@ -136,7 +125,6 @@ Gateway API 的 `status` 字段对于调试非常有用。
 kubectl argo rollouts set image rag rag=your-image:v2
 ```
 
-![](img/e453ee4ab046a6d41dfa31908f66f191_22.png)
 
 Rollout 过程开始：
 1.  **暂停 - 手动验证**：首先，v2 的 Pod 启动，但流量不会自动过去。我通过设置特定的 HTTP 头（`X-Canary: rollout-canary`）将我的测试流量导向 v2，并验证 TXT 文件上传功能是否正常。
@@ -145,7 +133,6 @@ Rollout 过程开始：
 
 在整个过程中，**Kubernetes Gateway API** 的 **HTTPRoute** 资源与 Argo Rollouts 协同工作，动态地将流量权重在 `stable` 和 `canary` 服务之间进行分配。
 
-![](img/e453ee4ab046a6d41dfa31908f66f191_24.png)
 
 ---
 
@@ -163,7 +150,6 @@ Rollout 过程开始：
 
 我的挑战是：在了解了如何使用 Gateway API、Ambient Mesh、Argo Rollouts 和 Kubernetes 构建如此酷炫的应用之后，请你也动手构建一些有趣的东西吧！也许我们能在下一届 ArgoCon 大会上见到你的分享。
 
-![](img/e453ee4ab046a6d41dfa31908f66f191_28.png)
 
 ![](img/e453ee4ab046a6d41dfa31908f66f191_29.png)
 

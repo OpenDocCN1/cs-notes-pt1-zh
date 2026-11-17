@@ -351,7 +351,6 @@ esac
 
 ![](img/0aa4836ec0290e8bfae03ac6578d7ed7_71.png)
 
-![](img/0aa4836ec0290e8bfae03ac6578d7ed7_73.png)
 
 4.  **停止模拟并清理**：
     ```bash

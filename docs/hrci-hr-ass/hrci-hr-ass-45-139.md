@@ -1,6 +1,5 @@
 # 139：56_每周回顾：健康与安全重组
 
-![](img/f7427f0a0dae3d99ed580ae7258daa76_0.png)
 
 ![](img/f7427f0a0dae3d99ed580ae7258daa76_0.png)
 

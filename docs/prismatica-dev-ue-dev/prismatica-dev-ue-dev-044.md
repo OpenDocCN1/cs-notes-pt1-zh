@@ -16,7 +16,6 @@
 
 
 
-![](img/2d1d71490d5bfe474b9d5ad239c770e8_1.png)
 
 ![](img/2d1d71490d5bfe474b9d5ad239c770e8_5.png)
 
@@ -41,7 +40,6 @@
 `衰减系数 = Saturate(1 - (距离 - 起始距离) / 渐变长度)`
 `最终WPO = 原始WPO * 衰减系数`
 
-![](img/2d1d71490d5bfe474b9d5ad239c770e8_11.png)
 
 ![](img/2d1d71490d5bfe474b9d5ad239c770e8_12.png)
 
@@ -124,6 +122,5 @@
 
 
 
-![](img/2d1d71490d5bfe474b9d5ad239c770e8_18.png)
 
 ![](img/2d1d71490d5bfe474b9d5ad239c770e8_18.png)

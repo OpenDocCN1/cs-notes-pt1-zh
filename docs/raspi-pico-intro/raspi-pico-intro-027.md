@@ -120,10 +120,8 @@ SPI有点小众。如果我们只想连接两个设备，可能会因为其简�
 2.  使用SPI需要四根线：一根**时钟线**、两根**数据传输线**和一根**片选线**。
 3.  SPI比UART和I²C快得多，常用于**高性能应用**。
 
-![](img/a57a100e3cbf602f9f0dfa535639fb5f_3.png)
 
 ![](img/a57a100e3cbf602f9f0dfa535639fb5f_3.png)
 
-![](img/a57a100e3cbf602f9f0dfa535639fb5f_4.png)
 
 ![](img/a57a100e3cbf602f9f0dfa535639fb5f_4.png)

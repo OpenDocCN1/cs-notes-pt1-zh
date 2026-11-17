@@ -50,9 +50,7 @@ private var dragPercentage: CGFloat {
 }
 ```
 
-![](img/ae5338c88c9f005422b82dd268ba9b61_1.png)
 
-![](img/ae5338c88c9f005422b82dd268ba9b61_2.png)
 
 **代码逻辑说明**：
 1.  `normalizedDragPoint`: 获取相对于卡片自身尺寸归一化后的拖拽位移。
@@ -71,7 +69,6 @@ private var dragPercentage: CGFloat {
 
 我们在 `handlePanEnded` 函数中调用以下逻辑：
 
-![](img/ae5338c88c9f005422b82dd268ba9b61_4.png)
 
 ```swift
 private func endedPanAnimation() {
@@ -97,7 +94,6 @@ private func endedPanAnimation() {
 }
 ```
 
-![](img/ae5338c88c9f005422b82dd268ba9b61_6.png)
 
 **核心判断条件**：`percentage >= SwipeableView.swipePercentMargin && direction != .none`
 这个条件检查拖拽百分比是否达到预设的阈值（例如30%），并且拖拽方向是否有效。如果两者都满足，则触发滑动动画并通知代理；否则，调用复位函数。
@@ -119,11 +115,9 @@ private func animationPoint(for direction: SwipeDirection) -> CGPoint {
 
 ## 实现卡片复位功能
 
-![](img/ae5338c88c9f005422b82dd268ba9b61_8.png)
 
 如果用户的拖拽未达到滑动阈值，我们需要让卡片平滑地回到初始位置。
 
-![](img/ae5338c88c9f005422b82dd268ba9b61_9.png)
 
 以下是复位卡片位置和旋转状态的函数：
 

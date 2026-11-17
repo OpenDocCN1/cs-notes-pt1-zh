@@ -1,14 +1,11 @@
 # 043：编码点亮LED 🔧
 
-![](img/990efb09d57b912a7eabfd181899b41e_0.png)
 
 在本节课中，我们将开始进行点亮LED的实践练习。这个练习并非直接编写代码，而是需要我们先理解硬件连接。首先，我们需要了解外部硬件（即LED）是如何连接到微控制器的。
 
-![](img/990efb09d57b912a7eabfd181899b41e_2.png)
 
 ## 理解硬件连接 🔌
 
-![](img/990efb09d57b912a7eabfd181899b41e_4.png)
 
 为了理解硬件连接，我们必须参考开发板的原理图。原理图展示了板上所有电子元件的连接方式。
 
@@ -22,19 +19,13 @@
 
 ## 在原理图中定位LED 💡
 
-![](img/990efb09d57b912a7eabfd181899b41e_6.png)
 
-![](img/990efb09d57b912a7eabfd181899b41e_7.png)
 
-![](img/990efb09d57b912a7eabfd181899b41e_8.png)
 
-![](img/990efb09d57b912a7eabfd181899b41e_9.png)
 
 打开原理图文件后，我们需要找到LED的部分。通常可以通过搜索“LED”来快速定位。
 
-![](img/990efb09d57b912a7eabfd181899b41e_11.png)
 
-![](img/990efb09d57b912a7eabfd181899b41e_13.png)
 
 在STM32F407G-DISC1的原理图中，我们可以找到四个LED，它们的标识和颜色如下：
 *   **LD3**：绿色LED
@@ -42,17 +33,13 @@
 *   **LD5**：红色LED
 *   **LD6**：蓝色LED
 
-![](img/990efb09d57b912a7eabfd181899b41e_15.png)
 
-![](img/990efb09d57b912a7eabfd181899b41e_17.png)
 
 每个LED旁边会标注其型号（Part Number），例如绿色LED的型号为“LED GREEN”。
 
-![](img/990efb09d57b912a7eabfd181899b41e_19.png)
 
 ## 在用户手册和实物板上确认LED 📖
 
-![](img/990efb09d57b912a7eabfd181899b41e_21.png)
 
 为了在实物开发板上找到这些LED，我们需要参考用户手册。同样，可以通过搜索“板卡型号 + user manual”来下载用户手册。
 

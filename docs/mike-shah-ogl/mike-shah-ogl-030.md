@@ -31,7 +31,6 @@ glBindBuffer(GL_ARRAY_BUFFER, gVbo);
 
 ## 变换流程详解
 
-![](img/c100ce0f33a25dce1ddc77f16d9805b5_4.png)
 
 现在，我们来详细看看物体是如何从本地坐标变换到世界坐标的。
 

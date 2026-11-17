@@ -46,11 +46,9 @@ public void clear() {
 }
 ```
 
-![](img/34d83805193b79519e4a98fb05f9faa2_1.png)
 
 ---
 
-![](img/34d83805193b79519e4a98fb05f9faa2_2.png)
 
 在学习了如何清空链表后，我们来看几个简单的工具方法。这些方法用于获取链表当前的状态。
 
@@ -92,11 +90,9 @@ public void addLast(T elem) {
 
 ---
 
-![](img/34d83805193b79519e4a98fb05f9faa2_4.png)
 
 学会了在末尾添加，我们再来看看如何在链表开头添加一个节点。其逻辑与`addLast`对称。
 
-![](img/34d83805193b79519e4a98fb05f9faa2_5.png)
 
 ```java
 public void addFirst(T elem) {
@@ -138,7 +134,6 @@ public void addAt(int index, T data) throws Exception {
 
 ---
 
-![](img/34d83805193b79519e4a98fb05f9faa2_7.png)
 
 添加元素是构建链表的基础，与之对应，移除元素也是核心操作。我们首先实现查看（但不移除）头节点和尾节点数据的方法。
 
@@ -156,7 +151,6 @@ public T peekLast() {
 
 现在，我们实现移除头节点的方法`removeFirst`。它需要处理链表为空、只有一个节点和多个节点的情况。
 
-![](img/34d83805193b79519e4a98fb05f9faa2_9.png)
 
 ```java
 public T removeFirst() {
@@ -214,7 +208,6 @@ public boolean remove(Object obj) {
 }
 ```
 
-![](img/34d83805193b79519e4a98fb05f9faa2_11.png)
 
 内部的`remove`方法负责处理节点断开连接的具体逻辑。
 
@@ -259,7 +252,6 @@ public int indexOf(Object obj) {
 
 最后，为了检查链表中是否包含某个元素，我们可以简单地利用`indexOf`方法。
 
-![](img/34d83805193b79519e4a98fb05f9faa2_13.png)
 
 ```java
 public boolean contains(Object obj) {

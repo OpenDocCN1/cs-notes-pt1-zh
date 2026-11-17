@@ -122,7 +122,6 @@ if (outOfGuesses == 1) {
 
 ---
 
-![](img/ffaf0df07e38055e6f42b5b3f1fb7ac6_5.png)
 
 ![](img/ffaf0df07e38055e6f42b5b3f1fb7ac6_6.png)
 
@@ -130,7 +129,6 @@ if (outOfGuesses == 1) {
 
 ## 完整代码与总结
 
-![](img/ffaf0df07e38055e6f42b5b3f1fb7ac6_8.png)
 
 以下是整合了猜测次数限制功能的完整游戏代码：
 
@@ -164,7 +162,6 @@ int main() {
 }
 ```
 
-![](img/ffaf0df07e38055e6f42b5b3f1fb7ac6_10.png)
 
 ![](img/ffaf0df07e38055e6f42b5b3f1fb7ac6_11.png)
 

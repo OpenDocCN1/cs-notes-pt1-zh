@@ -22,7 +22,6 @@ mykernel.iso: mykernel.bin
 
 ![](img/c36e8c7c75eaec6465c53d8b9aaa7537_3.png)
 
-![](img/c36e8c7c75eaec6465c53d8b9aaa7537_5.png)
 
 接下来，我们需要为ISO镜像创建正确的目录结构。这与我们之前使用GRUB引导时的结构类似。
 
@@ -53,7 +52,6 @@ menuentry "My Operating System" {
 
 配置完成后，我们使用 `grub-mkrescue` 命令将这个目录打包成ISO镜像文件。之后，可以删除临时的 `iso` 目录。
 
-![](img/c36e8c7c75eaec6465c53d8b9aaa7537_13.png)
 
 ```makefile
 mykernel.iso: mykernel.bin
@@ -106,13 +104,11 @@ run: mykernel.iso
 
 现在，你只需要在终端中输入 `make run`，Make工具就会处理所有步骤，并自动在虚拟机中运行你的操作系统。
 
-![](img/c36e8c7c75eaec6465c53d8b9aaa7537_25.png)
 
 ## 引入精确数据类型
 
 ![](img/c36e8c7c75eaec6465c53d8b9aaa7537_27.png)
 
-![](img/c36e8c7c75eaec6465c53d8b9aaa7537_29.png)
 
 在结束本节之前，我们需要讨论一个与硬件通信相关的重要预备知识：**数据类型的精确性**。
 

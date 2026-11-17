@@ -39,7 +39,6 @@
     reactor.run()
     ```
 
-![](img/4236c1c6d1a9ae9a858e24b43a2f8f14_1.png)
 
 **核心改进**：与使用`dataReceived`方法处理原始数据流不同，`LineReceiver`的`lineReceived`方法确保每次接收到以换行符结尾的完整一行数据时才触发处理，这简化了基于行的协议（如日志记录）的开发。
 
@@ -53,12 +52,9 @@
 
 例如，假设我们要从某个招聘页面提取公司名称和网站：
 
-![](img/4236c1c6d1a9ae9a858e24b43a2f8f14_3.png)
 
 
-![](img/4236c1c6d1a9ae9a858e24b43a2f8f14_5.png)
 
-![](img/4236c1c6d1a9ae9a858e24b43a2f8f14_6.png)
 
 ```python
 import urllib.request

@@ -2,7 +2,6 @@
 
 在本节课程中，我们将学习如何使用PROC SQL在SAS中执行自反连接（或称自连接）。自反连接是一种特殊的连接操作，它允许我们将同一张表视为两个独立的实体进行连接，常用于解决如查找员工与其经理对应关系这类问题。
 
-![](img/540c8568bc6814cbc6b6429bcd2ae366_1.png)
 
 ## 初始查询与问题定义
 
@@ -13,7 +12,6 @@ SELECT EmployeeID, EmployeeName, StartDate, ManagerID
 FROM SQ.emp;
 ```
 
-![](img/540c8568bc6814cbc6b6429bcd2ae366_3.png)
 
 查询结果显示了每位员工的ID、姓名、入职日期及其对应的经理ID。我们的目标是找出每位员工的经理姓名。
 
@@ -37,7 +35,6 @@ INNER JOIN SQ.emp AS m
 ORDER BY ManagerName;
 ```
 
-![](img/540c8568bc6814cbc6b6429bcd2ae366_5.png)
 
 **代码解析：**
 *   `SQ.emp AS e`：将员工表第一次引用，别名为 `e`，代表“员工”视角。
@@ -55,7 +52,6 @@ ON e.ManagerID = e.EmployeeID -- 错误！这试图在同一行数据内匹配�
 ```
 此错误会导致SAS日志提示“执行笛卡尔积”，因为连接条件逻辑无效，无法正确关联两个表实例。
 
-![](img/540c8568bc6814cbc6b6429bcd2ae366_7.png)
 
 **正确做法：**
 必须确保连接条件关联的是两个不同的表实例。应将条件更正为：
@@ -63,7 +59,6 @@ ON e.ManagerID = e.EmployeeID -- 错误！这试图在同一行数据内匹配�
 ON e.ManagerID = m.EmployeeID -- 正确！将员工的经理ID与经理表的员工ID关联。
 ```
 
-![](img/540c8568bc6814cbc6b6429bcd2ae366_9.png)
 
 运行修正后的查询，我们即可得到包含`ManagerName`列的完整结果集，清晰展示了每位员工及其对应经理的信息。
 

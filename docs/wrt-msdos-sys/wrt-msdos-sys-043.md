@@ -19,7 +19,6 @@
 
 ---
 
-![](img/671902fd1b0d9aac742cd0b899d31d5c_3.png)
 
 ![](img/671902fd1b0d9aac742cd0b899d31d5c_5.png)
 
@@ -94,30 +93,22 @@ if (music_data) {
 
 ## 第三步：实现精确的 50Hz 定时播放
 
-![](img/671902fd1b0d9aac742cd0b899d31d5c_11.png)
 
-![](img/671902fd1b0d9aac742cd0b899d31d5c_12.png)
 
-![](img/671902fd1b0d9aac742cd0b899d31d5c_14.png)
 
 最简单的播放方式是循环调用 `play_music`，但这样无法控制速度。为了实现精确的 50Hz 播放，我们需要使用 PC 的可编程中断定时器。
 
-![](img/671902fd1b0d9aac742cd0b899d31d5c_16.png)
 
 ### 1. 理解 PC 定时器系统
 IBM PC 使用一个 8253/8254 PIT 芯片。其中：
 *   **计数器 0** 用于系统定时器，默认以大约 18.206 Hz 的频率触发 **INT 8h** 硬件中断。
 *   **INT 8h** 的中断服务程序会调用一个软件中断 **INT 1Ch**，这是一个供用户程序使用的“定时器滴答”钩子。
 
-![](img/671902fd1b0d9aac742cd0b899d31d5c_18.png)
 
-![](img/671902fd1b0d9aac742cd0b899d31d5c_20.png)
 
 我们的策略是：接管 **INT 1Ch** 中断向量，在自己的中断处理函数中调用 `play_music`，并重新编程 PIT 的计数器 0，使其以 50Hz 触发中断。
 
-![](img/671902fd1b0d9aac742cd0b899d31d5c_22.png)
 
-![](img/671902fd1b0d9aac742cd0b899d31d5c_24.png)
 
 ### 2. 编写中断处理函数
 中断处理函数需要使用 `interrupt` 关键字声明，并保存和恢复旧的向量。
@@ -145,7 +136,6 @@ void interrupt new_timer_handler(...) {
 ### 3. 设置和恢复中断向量
 使用 DOS 提供的 `getvect` 和 `setvect` 函数来管理中断向量。
 
-![](img/671902fd1b0d9aac742cd0b899d31d5c_26.png)
 
 ```c
 void set_interrupt(void) {
@@ -163,19 +153,14 @@ void reset_interrupt(void) {
 }
 ```
 
-![](img/671902fd1b0d9aac742cd0b899d31d5c_28.png)
 
-![](img/671902fd1b0d9aac742cd0b899d31d5c_30.png)
 
 ### 4. 编程 PIT 芯片
 PIT 的计数器 0 由端口 `0x40`（数据）和 `0x43`（控制字）控制。我们需要将其设置为模式 3（方波发生器），并写入新的计数值。
 
-![](img/671902fd1b0d9aac742cd0b899d31d5c_32.png)
 
 
-![](img/671902fd1b0d9aac742cd0b899d31d5c_34.png)
 
-![](img/671902fd1b0d9aac742cd0b899d31d5c_36.png)
 
 ```c
 #define TIMER_PORT0 0x40
@@ -209,7 +194,6 @@ void reset_timer(void) {
 4.  主程序可以进入一个循环，等待用户按下退出键（如 ESC）。
 5.  用户退出时，调用 `end_player` 停止音乐，调用 `reset_interrupt` 恢复系统定时器，并释放内存。
 
-![](img/671902fd1b0d9aac742cd0b899d31d5c_38.png)
 
 一个有趣的扩展是，在设置好中断后，可以调用 `system("COMMAND.COM");` 来启动一个 DOS 命令行外壳。这样，你可以在音乐背景下执行其他命令，直到退出命令行，程序才会继续执行清理步骤并结束。
 
@@ -219,11 +203,9 @@ void reset_timer(void) {
 
 ![](img/671902fd1b0d9aac742cd0b899d31d5c_42.png)
 
-![](img/671902fd1b0d9aac742cd0b899d31d5c_44.png)
 
 ## 总结
 
-![](img/671902fd1b0d9aac742cd0b899d31d5c_46.png)
 
 ![](img/671902fd1b0d9aac742cd0b899d31d5c_48.png)
 

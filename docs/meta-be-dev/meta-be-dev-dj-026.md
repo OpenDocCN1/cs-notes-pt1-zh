@@ -104,7 +104,6 @@ python manage.py sqlmigrate myapp 0003
 
 执行后，终端会输出对应的SQL语句。例如，对于第三个迁移（重命名`name`为`item_name`），你会看到类似`ALTER TABLE ... RENAME COLUMN ...`的SQL语句。
 
-![](img/8ead6cbc352e6c1e72c4a1df778c8a29_10.png)
 
 对于Django开发者而言，迁移是一个极其强大的工具，它使得对数据模型进行版本控制成为可能，让数据库结构的演进变得安全、可追踪。
 

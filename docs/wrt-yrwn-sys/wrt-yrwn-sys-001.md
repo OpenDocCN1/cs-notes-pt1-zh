@@ -62,9 +62,7 @@
 `Makefile` 用于自动化编译和链接过程。其核心规则如下：
 
 
-![](img/59eaeaecbe2491e5aee4b05d60ae8c6f_7.png)
 
-![](img/59eaeaecbe2491e5aee4b05d60ae8c6f_9.png)
 
 ```makefile
 # 定义编译器和参数
@@ -186,7 +184,6 @@ extern "C" void kernel_main() {
 *   `extern "C"` 用于防止C++编译器对函数名进行修饰（name mangling），确保汇编代码可以正确调用 `kernel_main`。
 *   内核主函数打印一条消息后，进入无限循环。
 
-![](img/59eaeaecbe2491e5aee4b05d60ae8c6f_27.png)
 
 ## 链接器脚本 (linker.ld)
 

@@ -1,8 +1,6 @@
 # 001：五分钟开启Python编程之旅 🚀
 
-![](img/e7dae32ea5176866f89be8b47486d790_1.png)
 
-![](img/e7dae32ea5176866f89be8b47486d790_3.png)
 
 在本节课中，我们将学习如何快速搭建Python开发环境，并编写你的第一个Python程序。整个过程非常简单，即使你从未接触过编程也能轻松跟上。
 
@@ -20,7 +18,6 @@
 
 ## 下载集成开发环境（IDE）
 
-![](img/e7dae32ea5176866f89be8b47486d790_7.png)
 
 ![](img/e7dae32ea5176866f89be8b47486d790_8.png)
 
@@ -30,13 +27,11 @@
 
 ![](img/e7dae32ea5176866f89be8b47486d790_10.png)
 
-![](img/e7dae32ea5176866f89be8b47486d790_12.png)
 
 如果你已经在使用VS Code，可以继续使用它，只需确保安装了Python扩展插件即可。对于编程新手，我个人认为PyCharm更友好。
 
 如果你想使用PyCharm，请按以下步骤操作：
 
-![](img/e7dae32ea5176866f89be8b47486d790_14.png)
 
 1.  访问 [jetbrains.com/pycharm](https://www.jetbrains.com/pycharm)。
 2.  点击绿色的“Download”按钮。
@@ -50,7 +45,6 @@
 
 ![](img/e7dae32ea5176866f89be8b47486d790_17.png)
 
-![](img/e7dae32ea5176866f89be8b47486d790_19.png)
 
 ## 创建你的第一个Python项目
 

@@ -58,7 +58,6 @@
 
 ![](img/07977ddc945f3f8a8b8fe23d99f59429_9.png)
 
-![](img/07977ddc945f3f8a8b8fe23d99f59429_11.png)
 
 1.  在Asterisk CLI中执行命令 `sip reload` 以重新加载SIP配置。
 2.  使用软电话客户端（如MicroSIP、Zoiper）尝试注册分机2001，服务器地址填写Asterisk系统的IP，用户名和密码填写配置中设置的值。

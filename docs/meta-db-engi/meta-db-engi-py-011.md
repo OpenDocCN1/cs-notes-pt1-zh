@@ -45,7 +45,6 @@ line string example.'
 
 ---
 
-![](img/684d9cfaa115db00b10f6eeafa458067_1.png)
 
 ## 字符串的重新赋值
 
@@ -108,7 +107,6 @@ b = 'there.'
 
 接下来，让我们使用 `len()` 函数检查这个字符串中有多少个字符。我启动一个 `print` 函数，在其中输入 `len(name)`。当我运行它时，它返回 `4` 作为长度。
 
-![](img/684d9cfaa115db00b10f6eeafa458067_3.png)
 
 ![](img/684d9cfaa115db00b10f6eeafa458067_3.png)
 

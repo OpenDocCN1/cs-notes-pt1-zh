@@ -1,6 +1,5 @@
 # 024：解决编译器难题
 
-![](img/cd288e1c15e31a3702e0eb125ef806ba_0.png)
 
 ![](img/cd288e1c15e31a3702e0eb125ef806ba_0.png)
 
@@ -95,7 +94,6 @@ MLIR 还支持**操作调试**，允许在更高粒度（如特定过程或模�
 
 希望本教程能帮助你更高效地解决 MLIR 编译器中遇到的难题。
 
-![](img/cd288e1c15e31a3702e0eb125ef806ba_2.png)
 
 ![](img/cd288e1c15e31a3702e0eb125ef806ba_2.png)
 
@@ -120,6 +118,5 @@ MLIR 还支持**操作调试**，允许在更高粒度（如特定过程或模�
 
 ![](img/cd288e1c15e31a3702e0eb125ef806ba_10.png)
 
-![](img/cd288e1c15e31a3702e0eb125ef806ba_12.png)
 
 ![](img/cd288e1c15e31a3702e0eb125ef806ba_12.png)

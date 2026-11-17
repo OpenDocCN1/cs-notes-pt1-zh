@@ -8,7 +8,6 @@ Tinder是一款基于地理位置社交搜索的移动应用和移动网页应�
 
 ## 开始实践
 
-![](img/f87c88cf253b9beacbe50190dd0bd7e7_1.png)
 
 首先，打开Xcode 10.3，创建一个新项目。
 
@@ -49,21 +48,14 @@ Tinder是一款基于地理位置社交搜索的移动应用和移动网页应�
 
 设置完成后，运行应用。虽然目前可能只显示黑屏（因为尚未设置入口点），但你可以在设备的Spotlight搜索中看到已设置的应用图标。
 
-![](img/f87c88cf253b9beacbe50190dd0bd7e7_3.png)
 
-![](img/f87c88cf253b9beacbe50190dd0bd7e7_5.png)
 
-![](img/f87c88cf253b9beacbe50190dd0bd7e7_7.png)
 
-![](img/f87c88cf253b9beacbe50190dd0bd7e7_8.png)
 
 ## 总结
 
-![](img/f87c88cf253b9beacbe50190dd0bd7e7_10.png)
 
-![](img/f87c88cf253b9beacbe50190dd0bd7e7_12.png)
 
-![](img/f87c88cf253b9beacbe50190dd0bd7e7_14.png)
 
 ![](img/f87c88cf253b9beacbe50190dd0bd7e7_15.png)
 

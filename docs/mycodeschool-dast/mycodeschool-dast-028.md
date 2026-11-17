@@ -162,9 +162,7 @@ int main() {
 }
 ```
 
-![](img/3959c1fdb0a2817c4173e5df42df313a_1.png)
 
-![](img/3959c1fdb0a2817c4173e5df42df313a_2.png)
 
 ## 总结
 

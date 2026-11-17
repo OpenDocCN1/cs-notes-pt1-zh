@@ -6,7 +6,6 @@
 
 上一节我们完成了项目编码，本节中我们来看看如何将代码托管到AWS CodeCommit服务中。AWS CodeCommit是一个完全托管的源代码控制服务，用于托管安全的Git仓库。
 
-![](img/c93520bbd15fe3d03cf74fceb9212445_1.png)
 
 首先，我们需要在AWS控制台中创建一个CodeCommit仓库。
 
@@ -53,7 +52,6 @@
 
 首先，在本地创建一个项目文件夹并初始化Git。
 
-![](img/c93520bbd15fe3d03cf74fceb9212445_3.png)
 
 ```bash
 # 创建项目文件夹

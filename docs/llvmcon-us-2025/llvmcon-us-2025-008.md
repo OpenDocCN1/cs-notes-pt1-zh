@@ -1,6 +1,5 @@
 # 008：P08-P07_针对LLVM的RISC-V后端的翻译验证
 
-![](img/dcae394a426a5333b31e834fe2b3f560_0.png)
 
 ![](img/dcae394a426a5333b31e834fe2b3f560_0.png)
 
@@ -124,6 +123,5 @@ define i8 @example(i8 %x) {
 
 ---
 
-![](img/dcae394a426a5333b31e834fe2b3f560_4.png)
 
 ![](img/dcae394a426a5333b31e834fe2b3f560_4.png)

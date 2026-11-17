@@ -146,9 +146,7 @@ struct base {
 };
 ```
 
-![](img/a40ac31076eb6819775a0e4c3da6035b_1.png)
 
-![](img/a40ac31076eb6819775a0e4c3da6035b_3.png)
 
 **使用可推导的this**
 ```cpp
@@ -160,7 +158,6 @@ struct my_type {
 ```
 这使代码更简洁，并减少了样板代码。
 
-![](img/a40ac31076eb6819775a0e4c3da6035b_5.png)
 
 ---
 
@@ -170,7 +167,6 @@ struct my_type {
 
 ### 编译时打印
 
-![](img/a40ac31076eb6819775a0e4c3da6035b_7.png)
 
 运行时调试可以使用打印和调试器，但编译时逻辑（尤其是consteval函数和模板元编程）没有调试器。最简单的调试方法是“打印”类型或值。
 
@@ -181,7 +177,6 @@ using DebugType = T; // 在错误信息中查看T
 ```
 这些方法不灵活，且可能中断编译。
 
-![](img/a40ac31076eb6819775a0e4c3da6035b_9.png)
 
 **未来希望：编译时诊断信息**
 提案P2741等旨在允许库作者在编译时生成警告、错误或笔记信息，并可通过编译器标志控制。
@@ -207,7 +202,6 @@ auto to_kilometers(const Q& q) -> quantity<kilometer, typename Q::rep>
 **静态断言的局限**
 静态断言（`static_assert`）会导致硬错误，阻止SFINAE和概念测试，不适用于约束检查。它们更适合验证类不变量。
 
-![](img/a40ac31076eb6819775a0e4c3da6035b_11.png)
 
 **概念与异常结合（未来）**
 提案P2564允许在常量求值中抛出异常，结合“可修复的概念表达式”提案，可以实现优雅的错误信息传递。
@@ -218,9 +212,7 @@ auto add(Q1 a, Q2 b) -> decltype(a + b)
 ```
 当约束失败时，可以抛出一个带有描述性信息的异常，该异常信息会出现在编译错误中，指导用户解决问题。
 
-![](img/a40ac31076eb6819775a0e4c3da6035b_13.png)
 
-![](img/a40ac31076eb6819775a0e4c3da6035b_15.png)
 
 **示例：理想的错误信息**
 ```
@@ -230,7 +222,6 @@ note: because ‘unit_of_time’ is not convertible to ‘unit_of_length’
 note: with message: cannot add quantities of different dimensions: length and time
 ```
 
-![](img/a40ac31076eb6819775a0e4c3da6035b_17.png)
 
 ---
 
@@ -238,9 +229,7 @@ note: with message: cannot add quantities of different dimensions: length and ti
 
 上一节我们探讨了编译时调试，本节中我们简要讨论如何通过语言特性增强库的安全性。
 
-![](img/a40ac31076eb6819775a0e4c3da6035b_19.png)
 
-![](img/a40ac31076eb6819775a0e4c3da6035b_21.png)
 
 ### 防止窄化转换
 
@@ -286,11 +275,9 @@ std::scan_from(iss, “{} {}”, i, d); // 更安全、更灵活
 
 上一节我们讨论了安全性，本节最后我们看看如何改进模板工具和库的分发方式。
 
-![](img/a40ac31076eb6819775a0e4c3da6035b_23.png)
 
 ### 变量模板的改进
 
-![](img/a40ac31076eb6819775a0e4c3da6035b_25.png)
 
 变量模板比类模板更简洁、编译更快。然而，变量模板必须有一个主模板定义，即使没有合理的默认值。
 
@@ -336,7 +323,6 @@ using normalized = type_set_sort_t<type_list<B, A, A>, std::type_identity_ordere
 
 分发C++库通常需要编写复杂的CMake/Conan配置文件。不同构建系统间的配置重复且容易出错。
 
-![](img/a40ac31076eb6819775a0e4c3da6035b_27.png)
 
 **提案P????：通用包描述格式（CP）**
 该提案引入一种与构建系统无关的包描述文件（如 `package.cp.json`），由构建工具（如CMake）自动生成。它包含了库的所有元数据（目标、依赖、编译标志等）。
@@ -348,7 +334,6 @@ install(TARGETS mylib
 ```
 然后，包管理器或构建系统可以直接消费这个 `.cp.json` 文件，无需解析复杂的构建脚本。这简化了库的消费和分发。
 
-![](img/a40ac31076eb6819775a0e4c3da6035b_29.png)
 
 ---
 

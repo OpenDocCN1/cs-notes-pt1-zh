@@ -71,7 +71,6 @@ Grafana本身不存储监控数据，它需要从数据源（如Prometheus）拉
 
 ![](img/946d48dfa477215cb87ccff0293e1ef0_7.png)
 
-![](img/946d48dfa477215cb87ccff0293e1ef0_6.png)
 
 至此，Grafana已经成功连接到Prometheus，可以开始使用Prometheus收集的指标数据来创建仪表盘了。
 

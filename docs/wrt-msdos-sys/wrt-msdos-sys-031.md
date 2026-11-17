@@ -109,9 +109,7 @@ END SUB
 
 最后，在主循环中调用 `co` 子程序，传入计算好的参数，即可开始绘制雪花。
 
-![](img/1d2a4a71bb567c4183e62448bcb6a0d6_3.png)
 
-![](img/1d2a4a71bb567c4183e62448bcb6a0d6_5.png)
 
 ![](img/1d2a4a71bb567c4183e62448bcb6a0d6_7.png)
 
@@ -119,7 +117,6 @@ END SUB
 
 ![](img/1d2a4a71bb567c4183e62448bcb6a0d6_8.png)
 
-![](img/1d2a4a71bb567c4183e62448bcb6a0d6_10.png)
 
 ```basic
 CALL co(5, 4, scale, colour) ' 绘制一个雪花，线段基础长度5像素，递归深度4

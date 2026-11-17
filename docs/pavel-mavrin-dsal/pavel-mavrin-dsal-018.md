@@ -1,74 +1,42 @@
 # 018：线段树
 
-![](img/6302264eb1ef7156fc8cf6261efc9f60_1.png)
 
-![](img/6302264eb1ef7156fc8cf6261efc9f60_3.png)
 
-![](img/6302264eb1ef7156fc8cf6261efc9f60_5.png)
 
-![](img/6302264eb1ef7156fc8cf6261efc9f60_6.png)
 
-![](img/6302264eb1ef7156fc8cf6261efc9f60_8.png)
 
-![](img/6302264eb1ef7156fc8cf6261efc9f60_10.png)
 
-![](img/6302264eb1ef7156fc8cf6261efc9f60_12.png)
 
-![](img/6302264eb1ef7156fc8cf6261efc9f60_14.png)
 
-![](img/6302264eb1ef7156fc8cf6261efc9f60_16.png)
 
-![](img/6302264eb1ef7156fc8cf6261efc9f60_18.png)
 
-![](img/6302264eb1ef7156fc8cf6261efc9f60_20.png)
 
-![](img/6302264eb1ef7156fc8cf6261efc9f60_22.png)
 
 在本节课中，我们将学习一种名为“线段树”的强大数据结构。线段树主要用于处理数组上的区间查询和单点更新操作，并且能够在对数时间内完成这些操作。我们将从线段树的基本概念开始，逐步学习其构建、更新和查询方法，并探讨其可以支持的各种操作。
 
-![](img/6302264eb1ef7156fc8cf6261efc9f60_24.png)
 
-![](img/6302264eb1ef7156fc8cf6261efc9f60_26.png)
 
-![](img/6302264eb1ef7156fc8cf6261efc9f60_28.png)
 
-![](img/6302264eb1ef7156fc8cf6261efc9f60_29.png)
 
-![](img/6302264eb1ef7156fc8cf6261efc9f60_31.png)
 
-![](img/6302264eb1ef7156fc8cf6261efc9f60_33.png)
 
-![](img/6302264eb1ef7156fc8cf6261efc9f60_35.png)
 
-![](img/6302264eb1ef7156fc8cf6261efc9f60_37.png)
 
-![](img/6302264eb1ef7156fc8cf6261efc9f60_39.png)
 
-![](img/6302264eb1ef7156fc8cf6261efc9f60_40.png)
 
-![](img/6302264eb1ef7156fc8cf6261efc9f60_42.png)
 
-![](img/6302264eb1ef7156fc8cf6261efc9f60_44.png)
 
 ## 线段树是什么？
 
-![](img/6302264eb1ef7156fc8cf6261efc9f60_46.png)
 
-![](img/6302264eb1ef7156fc8cf6261efc9f60_48.png)
 
-![](img/6302264eb1ef7156fc8cf6261efc9f60_49.png)
 
-![](img/6302264eb1ef7156fc8cf6261efc9f60_51.png)
 
-![](img/6302264eb1ef7156fc8cf6261efc9f60_53.png)
 
 线段树是一种二叉树数据结构，用于高效处理数组的区间查询和单点更新问题。它之所以得名，是因为树中的每个节点都对应原始数组中的一个连续区间（或“线段”）。
 
-![](img/6302264eb1ef7156fc8cf6261efc9f60_55.png)
 
-![](img/6302264eb1ef7156fc8cf6261efc9f60_57.png)
 
-![](img/6302264eb1ef7156fc8cf6261efc9f60_59.png)
 
 线段树可以解决以下核心问题：你有一个包含 `n` 个元素的数组 `a`，需要支持两种操作：
 1.  **`set(i, v)`**：将位置 `i` 的元素值修改为 `v`。

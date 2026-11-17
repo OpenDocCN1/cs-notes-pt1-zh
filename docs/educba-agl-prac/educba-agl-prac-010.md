@@ -1,6 +1,5 @@
 # 010：产品负责人、Scrum主管与团队 👥
 
-![](img/0ef176fbeccded728e0fd3da0d5b98d6_0.png)
 
 在本节课中，我们将要学习Scrum框架中的三个核心角色：产品负责人、Scrum主管和开发团队。理解这些角色的职责和特点，是成功实施Scrum的基础。
 
@@ -33,7 +32,6 @@
 
 了解了产品负责人的职责后，接下来我们认识Scrum团队中的另一个关键角色——Scrum主管。
 
-![](img/0ef176fbeccded728e0fd3da0d5b98d6_2.png)
 
 Scrum主管负责确保Scrum被理解并得到贯彻。Scrum主管通过确保Scrum团队遵循Scrum理论、实践和规则来做到这一点。Scrum主管是Scrum团队的仆人式领导者。
 
@@ -71,7 +69,6 @@ Scrum主管为产品负责人提供服务，方式包括：
 
 ## 开发团队 👨‍💻👩‍💻
 
-![](img/0ef176fbeccded728e0fd3da0d5b98d6_4.png)
 
 最后，我们来了解Scrum框架中负责交付价值的核心执行者——开发团队。
 

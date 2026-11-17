@@ -42,11 +42,9 @@ CSS网格布局模块是CSS规范的一部分，其目的就是构建网页布�
 
 ---
 
-![](img/a7ddfe4b4eeb51bfd53b64a43db32e0c_1.png)
 
 上一节我们回顾了CSS布局技术的发展历程，本节我们将开始动手实践。
 
-![](img/a7ddfe4b4eeb51bfd53b64a43db32e0c_2.png)
 
 ![](img/a7ddfe4b4eeb51bfd53b64a43db32e0c_3.png)
 

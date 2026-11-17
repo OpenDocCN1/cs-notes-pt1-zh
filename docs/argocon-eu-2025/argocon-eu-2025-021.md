@@ -1,8 +1,6 @@
 # 021：利用 Argo CD 管理 OCI 源内容
 
-![](img/30878e14fa38af885ce292a142e1ae8d_1.png)
 
-![](img/30878e14fa38af885ce292a142e1ae8d_3.png)
 
 ## 概述
 
@@ -67,25 +65,17 @@ OCI 支持功能是许多人共同努力的成果。其愿景最初由 Red Hat �
 
 上一节我们强调了成功背后的支持体系，本节中我们回到技术层面，看看如何在 ArgoCD 中实际配置和使用 OCI 源。
 
-![](img/30878e14fa38af885ce292a142e1ae8d_5.png)
 
-![](img/30878e14fa38af885ce292a142e1ae8d_7.png)
 
-![](img/30878e14fa38af885ce292a142e1ae8d_9.png)
 
-![](img/30878e14fa38af885ce292a142e1ae8d_11.png)
 
 在即将发布的 ArgoCD 3.1 中，将引入一个新的 OCI 客户端类型。这意味着除了现有的 `git` 和 `helm`，现在多了一个 `oci` 源类型。
 
-![](img/30878e14fa38af885ce292a142e1ae8d_13.png)
 
 以下是配置的核心要点：
 
-![](img/30878e14fa38af885ce292a142e1ae8d_15.png)
 
-![](img/30878e14fa38af885ce292a142e1ae8d_17.png)
 
-![](img/30878e14fa38af885ce292a142e1ae8d_19.png)
 
 *   **协议前缀**：在配置仓库 URL 时，使用 `oci://` 作为协议前缀，ArgoCD 就会自动进入 OCI 模式。
 *   **制品要求**：开箱即用地支持构建为特定 OCI 镜像类型（如 `application/vnd.oci.image.manifest.v1+json`）的单层制品。也可以通过环境变量添加对自定义媒体类型的支持。
@@ -93,15 +83,11 @@ OCI 支持功能是许多人共同努力的成果。其愿景最初由 Red Hat �
 *   **路径与版本**：`targetRevision` 对应 OCI 仓库中的标签。`path` 取决于制品构建方式，通常是制品层中的目录路径。对于 Helm OCI 图表，路径固定为当前目录（`.`）。
 *   **凭证**：OCI 仓库凭证的配置方式与其他源类型类似，支持 HTTPS 和 HTTP（不推荐）。
 
-![](img/30878e14fa38af885ce292a142e1ae8d_21.png)
 
 创建 OCI 制品的过程与使用 `docker push` 类似。你可以使用 `oras` 等工具，将包含清单文件的目录推送到兼容 OCI 的注册表（如 Docker Hub、GHCR、ACR 等），并可以添加作者、描述等 OCI 元数据。
 
-![](img/30878e14fa38af885ce292a142e1ae8d_23.png)
 
-![](img/30878e14fa38af885ce292a142e1ae8d_24.png)
 
-![](img/30878e14fa38af885ce292a142e1ae8d_26.png)
 
 ## 总结
 

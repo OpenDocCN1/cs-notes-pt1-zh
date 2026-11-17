@@ -14,13 +14,11 @@ Jet Connect是Just Eat内部的一个团队，最初名为“Flight”。它于2
 
 在早期，一家餐厅可能需要为不同的配送平台（如Delivery、Uber、Just Eat）准备多台iPad。Jet Connect的出现使得餐厅只需一台iPad即可处理所有平台的订单，无需在店内安装额外设备，也无需处理多种不同的数据负载。
 
-![](img/1e8ffd5d16cfc04ad7b4e212625a99bd_2.png)
 
 在本课程中，我们将频繁提及“POS系统”（销售点系统）。这是一个旨在帮助处理订单和其他商业交易的系统，本质上是我们与合作伙伴交互、告知订单信息的工具。
 
 Just Eat非常喜爱Go语言，许多团队都在使用它。从规模上看，Just Eat拥有约73.1万家合作伙伴，业务遍及17个国家。仅Jet Connect团队就有约50名成员，管理着超过100个Go微服务。
 
-![](img/1e8ffd5d16cfc04ad7b4e212625a99bd_4.png)
 
 ![](img/1e8ffd5d16cfc04ad7b4e212625a99bd_5.png)
 
@@ -44,7 +42,6 @@ Just Eat非常喜爱Go语言，许多团队都在使用它。从规模上看，J
 
 但我们需要制定一个计划和一些先决条件，以跟上这些持续的变化。我们想要构建一个工具来帮助我们处理所有这些事情。
 
-![](img/1e8ffd5d16cfc04ad7b4e212625a99bd_9.png)
 
 ---
 
@@ -62,13 +59,11 @@ Just Eat非常喜爱Go语言，许多团队都在使用它。从规模上看，J
 *   我们希望开发人员能够在开发环境中以最少的设置轻松运行这些服务。
 *   我们希望以一致的方式抽象化相同的操作，例如创建日志记录器。我们不想要150种创建日志记录器的方法，只想要一种。
 
-![](img/1e8ffd5d16cfc04ad7b4e212625a99bd_11.png)
 
 于是我们构建了`Gokit`。`Gokit`是我们的微服务开发工具包，它有助于服务的配置、事件供应等许多方面。需要指出的是，Github上已经有一个名为“go kit”的项目，我们只是从名字中汲取了一些灵感，但我们的`Gokit`并非那个项目。
 
 ---
 
-![](img/1e8ffd5d16cfc04ad7b4e212625a99bd_13.png)
 
 ## 实战：构建一个披萨服务
 
@@ -96,7 +91,6 @@ gokit u pizza-service
 
 我们还可以选择HTTP服务器、数据库或对象存储，但稍后再讨论这些。选择后，它会即时引导和创建服务文件。
 
-![](img/1e8ffd5d16cfc04ad7b4e212625a99bd_15.png)
 
 ### 项目结构
 
@@ -119,7 +113,6 @@ pizza-service/
 
 它还创建了一个特殊的文件`service.json`。`service.json`本质上是基础设施即代码（IaC），它告诉Terraform这个服务如何在云中运行。
 
-![](img/1e8ffd5d16cfc04ad7b4e212625a99bd_21.png)
 
 ### 编写事件处理器
 
@@ -158,9 +151,7 @@ func (h *PizzaHandler) Handle(ctx context.Context, event interface{}) error {
 
 就这样，我们运行`gokit update`。这将在仓库中执行一些“魔法”，并修改仓库内的一些文件。
 
-![](img/1e8ffd5d16cfc04ad7b4e212625a99bd_25.png)
 
-![](img/1e8ffd5d16cfc04ad7b4e212625a99bd_27.png)
 
 现在你可以看到，在我之前提到的`service.json`文件中，通过运行`gokit update`，它在顶部添加了`consumes_topics`键。这是向Terraform发出的信号，用于根据传递的配置来配置Pod。
 
@@ -172,11 +163,9 @@ func (h *PizzaHandler) Handle(ctx context.Context, event interface{}) error {
 
 ### 部署与CI/CD
 
-![](img/1e8ffd5d16cfc04ad7b4e212625a99bd_31.png)
 
 我们希望部署它。我将向你展示Gokit提供的一些额外好处。
 
-![](img/1e8ffd5d16cfc04ad7b4e212625a99bd_33.png)
 
 我们为新服务创建一个PR，我们的文档和Github模板已经就位，这要归功于Gokit提供的脚手架。如果我们需要更改这个模板，只需在一个地方修改，然后运行`gokit update`，其他所有内容都会自动更新。
 
@@ -204,11 +193,9 @@ Github Action模板也使部署变得非常容易。同样，如果我们需要�
 
 假设产品部门的人来找你，说我们需要关于Bob披萨店的分析数据和更多细节。我们需要在告诉Bob之前保存订单的引用，并且需要在数据库中存储平均购物篮总额以进行分析。
 
-![](img/1e8ffd5d16cfc04ad7b4e212625a99bd_41.png)
 
 因此，我们需要创建一个DynamoDB表来存储那些购物篮总额，并创建一个S3存储桶来在发送给Bob之前存储订单。
 
-![](img/1e8ffd5d16cfc04ad7b4e212625a99bd_43.png)
 
 回到我们详细的架构图，我们需要添加一个DynamoDB表来存储订单分析数据，以便按订单ID查询。然后我们需要添加一个S3存储桶来在发送给Bob之前存储订单负载。
 
@@ -232,7 +219,6 @@ Github Action模板也使部署变得非常容易。同样，如果我们需要�
 
 我们可以通过运行`gokit run`来测试我们的更改，这将启动DynamoDB Admin和MinIO。这样我们就可以传递事件并检查我们的能力是否正常工作。这让我们在创建PR之前充满信心。
 
-![](img/1e8ffd5d16cfc04ad7b4e212625a99bd_47.png)
 
 让我们继续创建PR并部署它，看看我们的指标发生了什么变化。你可以看到我们的Grafana面板是如何自动更新的。你可以看到我们的DynamoDB分析数据，包括读取、延迟和其他指标。你还可以在这里看到我们的S3数据显示，包括每个存储桶的操作、延迟和错误。
 

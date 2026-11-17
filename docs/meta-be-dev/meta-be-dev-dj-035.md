@@ -117,7 +117,6 @@ def __str__(self):
 
 ## 在数据库中查看结果
 
-![](img/aa9b87d250691ddeb13db6c61a9ba194_11.png)
 
 最后，可以在VS Code中使用SQLite Explorer预览表。点击应用下的“reservations”表，然后选择“显示表”。会看到这些条目已在表中更新。这意味着在Django管理后台所做的更改会反映在数据库表中。
 

@@ -16,11 +16,8 @@
 
 ![](img/d64d01b71ce34c065794ea9c9a82a965_14.png)
 
-![](img/d64d01b71ce34c065794ea9c9a82a965_16.png)
 
-![](img/d64d01b71ce34c065794ea9c9a82a965_18.png)
 
-![](img/d64d01b71ce34c065794ea9c9a82a965_20.png)
 
 ![](img/d64d01b71ce34c065794ea9c9a82a965_22.png)
 
@@ -30,15 +27,12 @@
 
 ![](img/d64d01b71ce34c065794ea9c9a82a965_26.png)
 
-![](img/d64d01b71ce34c065794ea9c9a82a965_28.png)
 
 ![](img/d64d01b71ce34c065794ea9c9a82a965_30.png)
 
 ![](img/d64d01b71ce34c065794ea9c9a82a965_31.png)
 
-![](img/d64d01b71ce34c065794ea9c9a82a965_33.png)
 
-![](img/d64d01b71ce34c065794ea9c9a82a965_35.png)
 
 ![](img/d64d01b71ce34c065794ea9c9a82a965_37.png)
 
@@ -46,9 +40,7 @@
 
 ![](img/d64d01b71ce34c065794ea9c9a82a965_41.png)
 
-![](img/d64d01b71ce34c065794ea9c9a82a965_43.png)
 
-![](img/d64d01b71ce34c065794ea9c9a82a965_44.png)
 
 ![](img/d64d01b71ce34c065794ea9c9a82a965_46.png)
 
@@ -70,13 +62,10 @@
 
 ![](img/d64d01b71ce34c065794ea9c9a82a965_62.png)
 
-![](img/d64d01b71ce34c065794ea9c9a82a965_64.png)
 
-![](img/d64d01b71ce34c065794ea9c9a82a965_66.png)
 
 ![](img/d64d01b71ce34c065794ea9c9a82a965_68.png)
 
-![](img/d64d01b71ce34c065794ea9c9a82a965_70.png)
 
 ## 概述
 
@@ -92,13 +81,10 @@
 
 上一节我们成功实现了基础的碰撞检测系统。本节中，我们将在此基础上，对游戏的核心玩法进行一系列调整和扩展。我们将修改球与挡板的交互方式，设计多种砖块排列模式，并引入游戏状态管理，为后续添加更复杂的游戏机制打下基础。
 
-![](img/d64d01b71ce34c065794ea9c9a82a965_82.png)
 
 ![](img/d64d01b71ce34c065794ea9c9a82a965_84.png)
 
-![](img/d64d01b71ce34c065794ea9c9a82a965_86.png)
 
-![](img/d64d01b71ce34c065794ea9c9a82a965_88.png)
 
 ![](img/d64d01b71ce34c065794ea9c9a82a965_89.png)
 
@@ -106,21 +92,16 @@
 
 ![](img/d64d01b71ce34c065794ea9c9a82a965_93.png)
 
-![](img/d64d01b71ce34c065794ea9c9a82a965_95.png)
 
 ![](img/d64d01b71ce34c065794ea9c9a82a965_97.png)
 
-![](img/d64d01b71ce34c065794ea9c9a82a965_99.png)
 
-![](img/d64d01b71ce34c065794ea9c9a82a965_101.png)
 
 ## 调整球与挡板的交互
 
-![](img/d64d01b71ce34c065794ea9c9a82a965_103.png)
 
 ![](img/d64d01b71ce34c065794ea9c9a82a965_105.png)
 
-![](img/d64d01b71ce34c065794ea9c9a82a965_107.png)
 
 ![](img/d64d01b71ce34c065794ea9c9a82a965_108.png)
 
@@ -136,17 +117,13 @@
 
 ![](img/d64d01b71ce34c065794ea9c9a82a965_118.png)
 
-![](img/d64d01b71ce34c065794ea9c9a82a965_120.png)
 
 ![](img/d64d01b71ce34c065794ea9c9a82a965_122.png)
 
-![](img/d64d01b71ce34c065794ea9c9a82a965_124.png)
 
 我们将用以下代码替换原有的基于挡板速度的计算方式：
 
-![](img/d64d01b71ce34c065794ea9c9a82a965_126.png)
 
-![](img/d64d01b71ce34c065794ea9c9a82a965_128.png)
 
 ![](img/d64d01b71ce34c065794ea9c9a82a965_130.png)
 
@@ -166,19 +143,12 @@ ball_dp.x = (ball_p.x - player_p.x) * 10.0f;
 
 ![](img/d64d01b71ce34c065794ea9c9a82a965_142.png)
 
-![](img/d64d01b71ce34c065794ea9c9a82a965_144.png)
 
-![](img/d64d01b71ce34c065794ea9c9a82a965_146.png)
 
-![](img/d64d01b71ce34c065794ea9c9a82a965_148.png)
 
-![](img/d64d01b71ce34c065794ea9c9a82a965_150.png)
 
-![](img/d64d01b71ce34c065794ea9c9a82a965_152.png)
 
-![](img/d64d01b71ce34c065794ea9c9a82a965_154.png)
 
-![](img/d64d01b71ce34c065794ea9c9a82a965_156.png)
 
 ![](img/d64d01b71ce34c065794ea9c9a82a965_158.png)
 
@@ -194,9 +164,7 @@ ball_dp.x = (ball_p.x - player_p.x) * 10.0f;
 
 ![](img/d64d01b71ce34c065794ea9c9a82a965_168.png)
 
-![](img/d64d01b71ce34c065794ea9c9a82a965_170.png)
 
-![](img/d64d01b71ce34c065794ea9c9a82a965_172.png)
 
 ![](img/d64d01b71ce34c065794ea9c9a82a965_173.png)
 
@@ -216,9 +184,7 @@ ball_dp.x = (ball_p.x - player_p.x) * 10.0f;
 
 ![](img/d64d01b71ce34c065794ea9c9a82a965_186.png)
 
-![](img/d64d01b71ce34c065794ea9c9a82a965_188.png)
 
-![](img/d64d01b71ce34c065794ea9c9a82a965_190.png)
 
 ![](img/d64d01b71ce34c065794ea9c9a82a965_192.png)
 
@@ -230,13 +196,9 @@ ball_dp.x = (ball_p.x - player_p.x) * 10.0f;
 
 接下来，我们调整砖块的生成方式，使其排列更美观，并增加颜色渐变效果。
 
-![](img/d64d01b71ce34c065794ea9c9a82a965_200.png)
 
-![](img/d64d01b71ce34c065794ea9c9a82a965_202.png)
 
-![](img/d64d01b71ce34c065794ea9c9a82a965_204.png)
 
-![](img/d64d01b71ce34c065794ea9c9a82a965_206.png)
 
 ![](img/d64d01b71ce34c065794ea9c9a82a965_208.png)
 
@@ -262,9 +224,7 @@ ball_dp.x = (ball_p.x - player_p.x) * 10.0f;
 
 ![](img/d64d01b71ce34c065794ea9c9a82a965_227.png)
 
-![](img/d64d01b71ce34c065794ea9c9a82a965_229.png)
 
-![](img/d64d01b71ce34c065794ea9c9a82a965_231.png)
 
 ![](img/d64d01b71ce34c065794ea9c9a82a965_233.png)
 
@@ -276,7 +236,6 @@ ball_dp.x = (ball_p.x - player_p.x) * 10.0f;
 
 ![](img/d64d01b71ce34c065794ea9c9a82a965_240.png)
 
-![](img/d64d01b71ce34c065794ea9c9a82a965_242.png)
 
 ```c
 for(int y = 0; y < NUM_BLOCK_Y; ++y) {
@@ -338,7 +297,6 @@ for(int y = 0; y < NUM_BLOCK_Y; ++y) {
 
 ![](img/d64d01b71ce34c065794ea9c9a82a965_286.png)
 
-![](img/d64d01b71ce34c065794ea9c9a82a965_288.png)
 
 ![](img/d64d01b71ce34c065794ea9c9a82a965_290.png)
 
@@ -366,9 +324,7 @@ for(int y = 0; y < NUM_BLOCK_Y; ++y) {
 
 ![](img/d64d01b71ce34c065794ea9c9a82a965_310.png)
 
-![](img/d64d01b71ce34c065794ea9c9a82a965_312.png)
 
-![](img/d64d01b71ce34c065794ea9c9a82a965_314.png)
 
 ```c
 if(!first_ball_move) {
@@ -379,13 +335,9 @@ if(!first_ball_move) {
 first_ball_move = false;
 ```
 
-![](img/d64d01b71ce34c065794ea9c9a82a965_316.png)
 
-![](img/d64d01b71ce34c065794ea9c9a82a965_318.png)
 
-![](img/d64d01b71ce34c065794ea9c9a82a965_320.png)
 
-![](img/d64d01b71ce34c065794ea9c9a82a965_322.png)
 
 ![](img/d64d01b71ce34c065794ea9c9a82a965_324.png)
 
@@ -399,9 +351,7 @@ first_ball_move = false;
 
 ## 设计多样化的游戏模式
 
-![](img/d64d01b71ce34c065794ea9c9a82a965_334.png)
 
-![](img/d64d01b71ce34c065794ea9c9a82a965_336.png)
 
 ![](img/d64d01b71ce34c065794ea9c9a82a965_338.png)
 
@@ -415,37 +365,26 @@ first_ball_move = false;
 
 ![](img/d64d01b71ce34c065794ea9c9a82a965_348.png)
 
-![](img/d64d01b71ce34c065794ea9c9a82a965_350.png)
 
-![](img/d64d01b71ce34c065794ea9c9a82a965_352.png)
 
 ![](img/d64d01b71ce34c065794ea9c9a82a965_354.png)
 
 ![](img/d64d01b71ce34c065794ea9c9a82a965_356.png)
 
-![](img/d64d01b71ce34c065794ea9c9a82a965_358.png)
 
-![](img/d64d01b71ce34c065794ea9c9a82a965_360.png)
 
-![](img/d64d01b71ce34c065794ea9c9a82a965_362.png)
 
 ![](img/d64d01b71ce34c065794ea9c9a82a965_364.png)
 
-![](img/d64d01b71ce34c065794ea9c9a82a965_366.png)
 
-![](img/d64d01b71ce34c065794ea9c9a82a965_368.png)
 
 为了让游戏更有趣，我们开始构建一个支持多种关卡（游戏模式）的系统。我们使用一个枚举来定义不同的模式，并通过 `switch` 语句在初始化时创建不同的砖块布局。
 
-![](img/d64d01b71ce34c065794ea9c9a82a965_370.png)
 
 ![](img/d64d01b71ce34c065794ea9c9a82a965_371.png)
 
-![](img/d64d01b71ce34c065794ea9c9a82a965_373.png)
 
-![](img/d64d01b71ce34c065794ea9c9a82a965_375.png)
 
-![](img/d64d01b71ce34c065794ea9c9a82a965_377.png)
 
 ![](img/d64d01b71ce34c065794ea9c9a82a965_379.png)
 
@@ -453,25 +392,17 @@ first_ball_move = false;
 
 ![](img/d64d01b71ce34c065794ea9c9a82a965_383.png)
 
-![](img/d64d01b71ce34c065794ea9c9a82a965_385.png)
 
-![](img/d64d01b71ce34c065794ea9c9a82a965_387.png)
 
-![](img/d64d01b71ce34c065794ea9c9a82a965_389.png)
 
 以下是定义和切换游戏模式的核心结构：
 
-![](img/d64d01b71ce34c065794ea9c9a82a965_391.png)
 
-![](img/d64d01b71ce34c065794ea9c9a82a965_393.png)
 
 ![](img/d64d01b71ce34c065794ea9c9a82a965_395.png)
 
-![](img/d64d01b71ce34c065794ea9c9a82a965_397.png)
 
-![](img/d64d01b71ce34c065794ea9c9a82a965_399.png)
 
-![](img/d64d01b71ce34c065794ea9c9a82a965_401.png)
 
 ![](img/d64d01b71ce34c065794ea9c9a82a965_402.png)
 
@@ -484,7 +415,6 @@ first_ball_move = false;
 
 ![](img/d64d01b71ce34c065794ea9c9a82a965_409.png)
 
-![](img/d64d01b71ce34c065794ea9c9a82a965_411.png)
 
 ![](img/d64d01b71ce34c065794ea9c9a82a965_413.png)
 
@@ -509,11 +439,9 @@ GameMode current_game_mode = GameMode_Normal;
 
 ![](img/d64d01b71ce34c065794ea9c9a82a965_423.png)
 
-![](img/d64d01b71ce34c065794ea9c9a82a965_425.png)
 
 在游戏初始化函数中，我们根据 `current_game_mode` 来调用不同的砖块生成逻辑。
 
-![](img/d64d01b71ce34c065794ea9c9a82a965_427.png)
 
 ![](img/d64d01b71ce34c065794ea9c9a82a965_429.png)
 
@@ -521,7 +449,6 @@ GameMode current_game_mode = GameMode_Normal;
 
 ![](img/d64d01b71ce34c065794ea9c9a82a965_433.png)
 
-![](img/d64d01b71ce34c065794ea9c9a82a965_435.png)
 
 ![](img/d64d01b71ce34c065794ea9c9a82a965_437.png)
 
@@ -563,13 +490,9 @@ GameMode current_game_mode = GameMode_Normal;
 
 ![](img/d64d01b71ce34c065794ea9c9a82a965_470.png)
 
-![](img/d64d01b71ce34c065794ea9c9a82a965_472.png)
 
-![](img/d64d01b71ce34c065794ea9c9a82a965_474.png)
 
-![](img/d64d01b71ce34c065794ea9c9a82a965_476.png)
 
-![](img/d64d01b71ce34c065794ea9c9a82a965_478.png)
 
 **失败条件**：当球落到屏幕底部以下时，触发游戏结束。
 ```c
@@ -583,23 +506,16 @@ if(ball_p.y - ball_half_size < -arena.half_size.y) {
 
 ![](img/d64d01b71ce34c065794ea9c9a82a965_481.png)
 
-![](img/d64d01b71ce34c065794ea9c9a82a965_483.png)
 
-![](img/d64d01b71ce34c065794ea9c9a82a965_485.png)
 
 ![](img/d64d01b71ce34c065794ea9c9a82a965_487.png)
 
 ![](img/d64d01b71ce34c065794ea9c9a82a965_489.png)
 
-![](img/d64d01b71ce34c065794ea9c9a82a965_491.png)
 
-![](img/d64d01b71ce34c065794ea9c9a82a965_493.png)
 
-![](img/d64d01b71ce34c065794ea9c9a82a965_495.png)
 
-![](img/d64d01b71ce34c065794ea9c9a82a965_497.png)
 
-![](img/d64d01b71ce34c065794ea9c9a82a965_499.png)
 
 ![](img/d64d01b71ce34c065794ea9c9a82a965_500.png)
 
@@ -613,7 +529,6 @@ if(ball_p.y - ball_half_size < -arena.half_size.y) {
 
 ![](img/d64d01b71ce34c065794ea9c9a82a965_509.png)
 
-![](img/d64d01b71ce34c065794ea9c9a82a965_511.png)
 
 **胜利条件**：我们记录被摧毁的砖块数量，当所有砖块都被摧毁时，玩家获胜并进入下一关卡。
 ```c
@@ -637,13 +552,10 @@ if(blocks_destroyed >= total_blocks) {
 
 ![](img/d64d01b71ce34c065794ea9c9a82a965_525.png)
 
-![](img/d64d01b71ce34c065794ea9c9a82a965_527.png)
 
-![](img/d64d01b71ce34c065794ea9c9a82a965_529.png)
 
 ## 引入道具系统（雏形）
 
-![](img/d64d01b71ce34c065794ea9c9a82a965_531.png)
 
 ![](img/d64d01b71ce34c065794ea9c9a82a965_532.png)
 
@@ -653,7 +565,6 @@ if(blocks_destroyed >= total_blocks) {
 
 ![](img/d64d01b71ce34c065794ea9c9a82a965_538.png)
 
-![](img/d64d01b71ce34c065794ea9c9a82a965_540.png)
 
 ![](img/d64d01b71ce34c065794ea9c9a82a965_542.png)
 
@@ -661,9 +572,7 @@ if(blocks_destroyed >= total_blocks) {
 
 ![](img/d64d01b71ce34c065794ea9c9a82a965_546.png)
 
-![](img/d64d01b71ce34c065794ea9c9a82a965_548.png)
 
-![](img/d64d01b71ce34c065794ea9c9a82a965_550.png)
 
 我们开始规划一个道具系统。当特定砖块被摧毁时，会生成一个掉落物（如“无敌”或“额外球”道具），玩家需要移动挡板去接住它来获得增益效果。
 
@@ -671,7 +580,6 @@ if(blocks_destroyed >= total_blocks) {
 
 ![](img/d64d01b71ce34c065794ea9c9a82a965_554.png)
 
-![](img/d64d01b71ce34c065794ea9c9a82a965_556.png)
 
 ![](img/d64d01b71ce34c065794ea9c9a82a965_558.png)
 
@@ -712,7 +620,6 @@ int next_power_up_index = 0;
 
 ## 总结
 
-![](img/d64d01b71ce34c065794ea9c9a82a965_579.png)
 
 ![](img/d64d01b71ce34c065794ea9c9a82a965_581.png)
 
@@ -724,13 +631,11 @@ int next_power_up_index = 0;
 
 ![](img/d64d01b71ce34c065794ea9c9a82a965_587.png)
 
-![](img/d64d01b71ce34c065794ea9c9a82a965_589.png)
 
 ![](img/d64d01b71ce34c065794ea9c9a82a965_591.png)
 
 ![](img/d64d01b71ce34c065794ea9c9a82a965_592.png)
 
-![](img/d64d01b71ce34c065794ea9c9a82a965_593.png)
 
 ![](img/d64d01b71ce34c065794ea9c9a82a965_595.png)
 

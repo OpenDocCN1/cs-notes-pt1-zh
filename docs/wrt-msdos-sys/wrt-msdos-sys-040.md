@@ -16,35 +16,25 @@
 
 首先，我们需要理解OPL2合成器的几个核心概念。所有声音都基于一个正弦波，该波形以只读方式存储了四分之一波，并通过镜像复制来生成完整的波形。
 
-![](img/6fcfce86e56c5fbc5593c5681c169ec6_7.png)
 
-![](img/6fcfce86e56c5fbc5593c5681c169ec6_9.png)
 
 声音的包络由**ADSR（Attack, Decay, Sustain, Release）** 生成器控制。`Key On`和`Key Off`信号触发包络的不同阶段。特别地，**Sustain（持续）位** 决定了在按下琴键期间是否使用持续电平。如果该位关闭，则在衰减阶段后会立即进入释放阶段，类似于钢琴上不踩下延音踏板的效果。
 
-![](img/6fcfce86e56c5fbc5593c5681c169ec6_11.png)
 
 此外，调制器（Modulator）可以调制载波器（Carrier），产生频率调制（FM）效果。**颤音（Vibrato）** 和**震音（Tremolo/Amplitude Modulation）** 功能可以进一步丰富音色。
 
-![](img/6fcfce86e56c5fbc5593c5681c169ec6_13.png)
 
-![](img/6fcfce86e56c5fbc5593c5681c169ec6_15.png)
 
-![](img/6fcfce86e56c5fbc5593c5681c169ec6_17.png)
 
 为了编程，我们需要定义一些数据结构和查找表。
 
-![](img/6fcfce86e56c5fbc5593c5681c169ec6_19.png)
 
 ### 定义声道与振荡器映射
 
-![](img/6fcfce86e56c5fbc5593c5681c169ec6_21.png)
 
 在旋律模式下，6个旋律声道各自使用两个特定的振荡器（操作器）。以下是它们的映射关系，我们将用一个二维数组来存储：
 
-![](img/6fcfce86e56c5fbc5593c5681c169ec6_23.png)
 
-![](img/6fcfce86e56c5fbc5593c5681c169ec6_25.png)
 
 ```c
 static int adlib_voice_oscillators[6][2] = {
@@ -71,13 +61,10 @@ unsigned int adlib_notes[12] = {
 
 通过改变区块数值，我们可以用这组数据生成所有八度的音符。
 
-![](img/6fcfce86e56c5fbc5593c5681c169ec6_27.png)
 
 ## 定义乐器结构
 
-![](img/6fcfce86e56c5fbc5593c5681c169ec6_29.png)
 
-![](img/6fcfce86e56c5fbc5593c5681c169ec6_31.png)
 
 ![](img/6fcfce86e56c5fbc5593c5681c169ec6_33.png)
 
@@ -111,7 +98,6 @@ typedef struct {
 
 ## 实现设置乐器函数
 
-![](img/6fcfce86e56c5fbc5593c5681c169ec6_35.png)
 
 ![](img/6fcfce86e56c5fbc5593c5681c169ec6_36.png)
 
@@ -119,7 +105,6 @@ typedef struct {
 
 以下是设置攻击率（Attack Rate）和衰减率（Decay Rate）的示例代码：
 
-![](img/6fcfce86e56c5fbc5593c5681c169ec6_38.png)
 
 ![](img/6fcfce86e56c5fbc5593c5681c169ec6_40.png)
 
@@ -146,11 +131,9 @@ void adlib_set_instrument(Adlib_Instrument *instrument, int voice) {
 }
 ```
 
-![](img/6fcfce86e56c5fbc5593c5681c169ec6_42.png)
 
 我们需要为每个振荡器重复此过程，设置所有相关参数，如持续电平、释放率、震音、颤音、键位缩放、总电平和波形选择。
 
-![](img/6fcfce86e56c5fbc5593c5681c169ec6_44.png)
 
 最后，设置声道的连接方式和反馈参数（寄存器 0xC0 - 0xC8）：
 

@@ -14,17 +14,13 @@
 
 ## 创建对象与传递数据
 
-![](img/0c92fdd64bffa2338eb8de7b3f1e8ff2_1.png)
 
 首先，我创建了一个数组。当按下按钮时，按钮触发的操作会将所有文本字段的数据存储到这个数组中。接着，我创建了当前视图控制器类的对象。通过这个对象，我调用了接收数据的数组。
 
-![](img/0c92fdd64bffa2338eb8de7b3f1e8ff2_3.png)
 
 当按钮被调用时，传递的数据数组会自动赋值给接收数组。数据进入接收数组后，借助导航控制器，视图将从View1推送到View2。
 
-![](img/0c92fdd64bffa2338eb8de7b3f1e8ff2_5.png)
 
-![](img/0c92fdd64bffa2338eb8de7b3f1e8ff2_7.png)
 
 以下是核心的数据传递逻辑示例：
 
@@ -38,13 +34,11 @@
 }
 ```
 
-![](img/0c92fdd64bffa2338eb8de7b3f1e8ff2_9.png)
 
 如果没有数据，则不会传递任何内容，仅执行导航部分。
 
 ---
 
-![](img/0c92fdd64bffa2338eb8de7b3f1e8ff2_11.png)
 
 ## 管理键盘
 
@@ -76,17 +70,14 @@ class ViewController: UIViewController, UITextFieldDelegate {
 }
 ```
 
-![](img/0c92fdd64bffa2338eb8de7b3f1e8ff2_13.png)
 
 通过设置文本字段的委托，当用户按下键盘上的“返回”键时，键盘会消失。你可以在该方法中设置断点进行测试。
 
-![](img/0c92fdd64bffa2338eb8de7b3f1e8ff2_15.png)
 
 ---
 
 ## 使用不同类型键盘
 
-![](img/0c92fdd64bffa2338eb8de7b3f1e8ff2_17.png)
 
 文本字段可以配置为显示不同类型的键盘，以适应不同的输入内容，如电子邮件地址或电话号码。
 
@@ -98,11 +89,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
 
 例如，电子邮件地址的键盘会包含“@”和“.”符号，而电话键盘则显示数字。
 
-![](img/0c92fdd64bffa2338eb8de7b3f1e8ff2_19.png)
 
 然而，像“Phone Pad”这类键盘没有“返回”键。因此，我们需要另一种方式来隐藏键盘。
 
-![](img/0c92fdd64bffa2338eb8de7b3f1e8ff2_21.png)
 
 ---
 
@@ -116,12 +105,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
 2.  将目标设置为当前视图控制器，并指定一个选择器方法（例如 `didTapView`）。
 3.  将该手势识别器添加到主视图上。
 
-![](img/0c92fdd64bffa2338eb8de7b3f1e8ff2_23.png)
 
 以下是实现代码：
 
 
-![](img/0c92fdd64bffa2338eb8de7b3f1e8ff2_25.png)
 
 ```swift
 override func viewDidLoad() {

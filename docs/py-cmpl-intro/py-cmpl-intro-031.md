@@ -4,13 +4,11 @@
 
 ## 概述
 
-![](img/39b2be91ac6f5a41e24dd865e738b55e_1.png)
 
 替换密码是一种基础的加密技术。其核心思想是建立一个字符映射表，将明文中的每个字符替换为另一个字符，从而生成密文。解密时，使用相同的映射表进行反向替换即可恢复原文。
 
 ## 准备字符集
 
-![](img/39b2be91ac6f5a41e24dd865e738b55e_3.png)
 
 首先，我们需要导入必要的模块并定义用于加密的字符集。
 
@@ -26,7 +24,6 @@ chars = string.punctuation + string.digits + string.ascii_letters + " "
 
 接下来，我们将这个字符串转换为列表，以便后续操作。
 
-![](img/39b2be91ac6f5a41e24dd865e738b55e_5.png)
 
 ```python
 chars = list(chars)
@@ -43,13 +40,10 @@ random.shuffle(key)
 
 这样，我们就得到了两个列表：`chars` 是原始顺序，`key` 是随机顺序。它们将构成我们的加密映射关系。
 
-![](img/39b2be91ac6f5a41e24dd865e738b55e_7.png)
 
-![](img/39b2be91ac6f5a41e24dd865e738b55e_9.png)
 
 ## 加密过程
 
-![](img/39b2be91ac6f5a41e24dd865e738b55e_11.png)
 
 现在，我们来实现加密功能。程序会请求用户输入明文，然后根据映射关系将其转换为密文。
 
@@ -67,7 +61,6 @@ print(f"加密消息：{cipher_text}")
 
 以下是加密过程的步骤说明：
 
-![](img/39b2be91ac6f5a41e24dd865e738b55e_13.png)
 
 1.  **遍历明文**：使用 `for` 循环逐个处理明文中的字符。
 2.  **查找索引**：对于每个字符，在 `chars` 列表中查找其对应的索引位置。
@@ -78,9 +71,7 @@ print(f"加密消息：{cipher_text}")
 解密是加密的逆过程。我们需要使用相同的 `key` 和 `chars` 列表来还原信息。
 
 
-![](img/39b2be91ac6f5a41e24dd865e738b55e_15.png)
 
-![](img/39b2be91ac6f5a41e24dd865e738b55e_17.png)
 
 ```python
 cipher_text = input("请输入要解密的消息：")
@@ -93,23 +84,19 @@ print(f"加密消息：{cipher_text}")
 print(f"解密消息：{plain_text}")
 ```
 
-![](img/39b2be91ac6f5a41e24dd865e738b55e_19.png)
 
 以下是解密过程的步骤说明：
 
-![](img/39b2be91ac6f5a41e24dd865e738b55e_21.png)
 
 1.  **遍历密文**：使用 `for` 循环逐个处理密文中的字符。
 2.  **查找索引**：对于每个字符，在 `key` 列表中查找其对应的索引位置。
 3.  **还原字符**：根据找到的索引，从 `chars` 列表中获取原始字符，并将其添加到明文字符串中。
 
-![](img/39b2be91ac6f5a41e24dd865e738b55e_23.png)
 
 ## 总结
 
 本节课中我们一起学习了如何用Python实现一个简单的替换密码程序。我们掌握了以下核心概念：
 
-![](img/39b2be91ac6f5a41e24dd865e738b55e_25.png)
 
 *   **字符映射**：通过 `chars` 和 `key` 两个列表建立加密与解密的对应关系。
 *   **加密算法**：`cipher_text += key[chars.index(letter)]`

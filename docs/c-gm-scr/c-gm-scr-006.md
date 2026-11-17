@@ -10,7 +10,6 @@
 
 在本节课中，我们将对之前开发的游戏进行调试和改进。我们将修复累积的bug，完成未实现的功能，并添加一个简单的计分系统，让游戏体验更加完整。
 
-![](img/fb0e7f46d547648aaa046497e55447ae_9.png)
 
 ![](img/fb0e7f46d547648aaa046497e55447ae_11.png)
 
@@ -22,7 +21,6 @@
 
 ![](img/fb0e7f46d547648aaa046497e55447ae_17.png)
 
-![](img/fb0e7f46d547648aaa046497e55447ae_19.png)
 
 ![](img/fb0e7f46d547648aaa046497e55447ae_21.png)
 
@@ -110,7 +108,6 @@
 
 ![](img/fb0e7f46d547648aaa046497e55447ae_91.png)
 
-![](img/fb0e7f46d547648aaa046497e55447ae_93.png)
 
 ![](img/fb0e7f46d547648aaa046497e55447ae_95.png)
 
@@ -144,7 +141,6 @@
 
 ![](img/fb0e7f46d547648aaa046497e55447ae_121.png)
 
-![](img/fb0e7f46d547648aaa046497e55447ae_123.png)
 
 ```c
 void DrawNumber(int number, V2 position, float size, V4 color) {
@@ -217,9 +213,7 @@ DrawNumber(game_state->score, V2{-arena_half_size_x + 15, arena_half_size_y - 15
 
 ![](img/fb0e7f46d547648aaa046497e55447ae_171.png)
 
-![](img/fb0e7f46d547648aaa046497e55447ae_173.png)
 
-![](img/fb0e7f46d547648aaa046497e55447ae_175.png)
 
 ### 分数计算逻辑
 
@@ -288,11 +282,8 @@ game_state->score += 10 * game_state->lives; // 基础分乘以生命值
 
 ![](img/fb0e7f46d547648aaa046497e55447ae_231.png)
 
-![](img/fb0e7f46d547648aaa046497e55447ae_233.png)
 
-![](img/fb0e7f46d547648aaa046497e55447ae_235.png)
 
-![](img/fb0e7f46d547648aaa046497e55447ae_237.png)
 
 ![](img/fb0e7f46d547648aaa046497e55447ae_239.png)
 
@@ -341,7 +332,6 @@ game_state->score += 10 * game_state->lives; // 基础分乘以生命值
 
 ![](img/fb0e7f46d547648aaa046497e55447ae_280.png)
 
-![](img/fb0e7f46d547648aaa046497e55447ae_281.png)
 
 ![](img/fb0e7f46d547648aaa046497e55447ae_283.png)
 
@@ -354,9 +344,7 @@ game_state->score += 10 * game_state->lives; // 基础分乘以生命值
 
 ![](img/fb0e7f46d547648aaa046497e55447ae_291.png)
 
-![](img/fb0e7f46d547648aaa046497e55447ae_293.png)
 
-![](img/fb0e7f46d547648aaa046497e55447ae_295.png)
 
 ![](img/fb0e7f46d547648aaa046497e55447ae_297.png)
 
@@ -388,7 +376,6 @@ last_block_destroyed_time = game_state->current_time;
 
 ![](img/fb0e7f46d547648aaa046497e55447ae_313.png)
 
-![](img/fb0e7f46d547648aaa046497e55447ae_315.png)
 
 ---
 
@@ -402,7 +389,6 @@ last_block_destroyed_time = game_state->current_time;
 
 ![](img/fb0e7f46d547648aaa046497e55447ae_324.png)
 
-![](img/fb0e7f46d547648aaa046497e55447ae_326.png)
 
 ![](img/fb0e7f46d547648aaa046497e55447ae_328.png)
 
@@ -426,7 +412,6 @@ last_block_destroyed_time = game_state->current_time;
 
 解决方案是将鼠标锁定在游戏窗口中心，然后只读取鼠标的移动增量（Delta）。这样无论鼠标如何移动，我们都能获得精确的相对位移，解决了屏幕边界的问题。
 
-![](img/fb0e7f46d547648aaa046497e55447ae_342.png)
 
 ![](img/fb0e7f46d547648aaa046497e55447ae_344.png)
 
@@ -448,9 +433,7 @@ last_block_destroyed_time = game_state->current_time;
 
 以下是实现的核心步骤：
 
-![](img/fb0e7f46d547648aaa046497e55447ae_361.png)
 
-![](img/fb0e7f46d547648aaa046497e55447ae_363.png)
 
 ![](img/fb0e7f46d547648aaa046497e55447ae_365.png)
 
@@ -503,11 +486,9 @@ mouse_delta.y = (f32)(current_mouse_pos.y - center_screen.y);
 
 ![](img/fb0e7f46d547648aaa046497e55447ae_391.png)
 
-![](img/fb0e7f46d547648aaa046497e55447ae_393.png)
 
 修复鼠标控制后，之前未完成的能量道具现在可以正常工作了。
 
-![](img/fb0e7f46d547648aaa046497e55447ae_395.png)
 
 ![](img/fb0e7f46d547648aaa046497e55447ae_397.png)
 
@@ -536,7 +517,6 @@ mouse_delta.y = (f32)(current_mouse_pos.y - center_screen.y);
 
 ![](img/fb0e7f46d547648aaa046497e55447ae_407.png)
 
-![](img/fb0e7f46d547648aaa046497e55447ae_409.png)
 
 ![](img/fb0e7f46d547648aaa046497e55447ae_411.png)
 
@@ -584,7 +564,6 @@ mouse_delta.y = (f32)(current_mouse_pos.y - center_screen.y);
 
 ![](img/fb0e7f46d547648aaa046497e55447ae_451.png)
 
-![](img/fb0e7f46d547648aaa046497e55447ae_453.png)
 
 ![](img/fb0e7f46d547648aaa046497e55447ae_455.png)
 
@@ -659,9 +638,7 @@ if(collision_on_x) {
 
 ![](img/fb0e7f46d547648aaa046497e55447ae_501.png)
 
-![](img/fb0e7f46d547648aaa046497e55447ae_503.png)
 
-![](img/fb0e7f46d547648aaa046497e55447ae_505.png)
 
 ![](img/fb0e7f46d547648aaa046497e55447ae_507.png)
 
@@ -669,11 +646,8 @@ if(collision_on_x) {
 
 ![](img/fb0e7f46d547648aaa046497e55447ae_509.png)
 
-![](img/fb0e7f46d547648aaa046497e55447ae_511.png)
 
-![](img/fb0e7f46d547648aaa046497e55447ae_513.png)
 
-![](img/fb0e7f46d547648aaa046497e55447ae_515.png)
 
 我们之前设计了一个双球关卡，两个球被标记为不同的“队伍”，玩家需要接住对应颜色的球。但实现后发现节奏难以控制，体验不佳。
 
@@ -685,7 +659,6 @@ if(collision_on_x) {
 
 ![](img/fb0e7f46d547648aaa046497e55447ae_523.png)
 
-![](img/fb0e7f46d547648aaa046497e55447ae_525.png)
 
 ![](img/fb0e7f46d547648aaa046497e55447ae_526.png)
 
@@ -733,7 +706,6 @@ if(collision_on_x) {
 
 ![](img/fb0e7f46d547648aaa046497e55447ae_563.png)
 
-![](img/fb0e7f46d547648aaa046497e55447ae_565.png)
 
 ![](img/fb0e7f46d547648aaa046497e55447ae_567.png)
 
@@ -749,9 +721,7 @@ if(collision_on_x) {
 
 ![](img/fb0e7f46d547648aaa046497e55447ae_576.png)
 
-![](img/fb0e7f46d547648aaa046497e55447ae_578.png)
 
-![](img/fb0e7f46d547648aaa046497e55447ae_580.png)
 
 ![](img/fb0e7f46d547648aaa046497e55447ae_582.png)
 
@@ -782,15 +752,12 @@ if(collision_on_x) {
 ![](img/fb0e7f46d547648aaa046497e55447ae_606.png)
 
 
-![](img/fb0e7f46d547648aaa046497e55447ae_608.png)
 
 ![](img/fb0e7f46d547648aaa046497e55447ae_610.png)
 
 ![](img/fb0e7f46d547648aaa046497e55447ae_611.png)
 
-![](img/fb0e7f46d547648aaa046497e55447ae_613.png)
 
-![](img/fb0e7f46d547648aaa046497e55447ae_615.png)
 
 ![](img/fb0e7f46d547648aaa046497e55447ae_617.png)
 
@@ -844,7 +811,6 @@ if(y == 0 && (x == 0 || x == num_blocks_x - 1)) {
 
 ![](img/fb0e7f46d547648aaa046497e55447ae_647.png)
 
-![](img/fb0e7f46d547648aaa046497e55447ae_649.png)
 
 ![](img/fb0e7f46d547648aaa046497e55447ae_651.png)
 
@@ -906,7 +872,6 @@ if(y == 0 && (x == 0 || x == num_blocks_x - 1)) {
 
 ![](img/fb0e7f46d547648aaa046497e55447ae_704.png)
 
-![](img/fb0e7f46d547648aaa046497e55447ae_706.png)
 
 ![](img/fb0e7f46d547648aaa046497e55447ae_708.png)
 
@@ -960,7 +925,6 @@ for(int i = 0; i < MAX_MESSAGES; ++i) {
 
 ![](img/fb0e7f46d547648aaa046497e55447ae_730.png)
 
-![](img/fb0e7f46d547648aaa046497e55447ae_732.png)
 
 ## 当前游戏状态总结 🏁
 
@@ -980,7 +944,6 @@ for(int i = 0; i < MAX_MESSAGES; ++i) {
 
 ![](img/fb0e7f46d547648aaa046497e55447ae_745.png)
 
-![](img/fb0e7f46d547648aaa046497e55447ae_747.png)
 
 ![](img/fb0e7f46d547648aaa046497e55447ae_749.png)
 
@@ -1011,9 +974,7 @@ for(int i = 0; i < MAX_MESSAGES; ++i) {
 
 ![](img/fb0e7f46d547648aaa046497e55447ae_769.png)
 
-![](img/fb0e7f46d547648aaa046497e55447ae_771.png)
 
-![](img/fb0e7f46d547648aaa046497e55447ae_773.png)
 
 ![](img/fb0e7f46d547648aaa046497e55447ae_775.png)
 
@@ -1028,7 +989,6 @@ for(int i = 0; i < MAX_MESSAGES; ++i) {
 
 ![](img/fb0e7f46d547648aaa046497e55447ae_781.png)
 
-![](img/fb0e7f46d547648aaa046497e55447ae_783.png)
 
 ![](img/fb0e7f46d547648aaa046497e55447ae_785.png)
 

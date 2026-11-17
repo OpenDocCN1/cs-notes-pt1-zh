@@ -108,7 +108,6 @@
 
 ![](img/ffd282b2d431f9765c707d3effca38b7_95.png)
 
-![](img/ffd282b2d431f9765c707d3effca38b7_97.png)
 
 ## 回顾当前游戏进度
 
@@ -216,7 +215,6 @@
 
 ![](img/ffd282b2d431f9765c707d3effca38b7_181.png)
 
-![](img/ffd282b2d431f9765c707d3effca38b7_183.png)
 
 ![](img/ffd282b2d431f9765c707d3effca38b7_185.png)
 
@@ -391,7 +389,6 @@ dt_multiplier += (1.0f - dt_multiplier) * 0.1f * delta_time;
 
 ![](img/ffd282b2d431f9765c707d3effca38b7_313.png)
 
-![](img/ffd282b2d431f9765c707d3effca38b7_315.png)
 
 ![](img/ffd282b2d431f9765c707d3effca38b7_317.png)
 
@@ -439,7 +436,6 @@ dt_multiplier += (1.0f - dt_multiplier) * 0.1f * delta_time;
 
 ![](img/ffd282b2d431f9765c707d3effca38b7_353.png)
 
-![](img/ffd282b2d431f9765c707d3effca38b7_355.png)
 
 ![](img/ffd282b2d431f9765c707d3effca38b7_357.png)
 
@@ -551,9 +547,7 @@ int num_lanes = (int)(20.0f / block_size); // 根据大小动态计算车道数�
 
 ![](img/ffd282b2d431f9765c707d3effca38b7_432.png)
 
-![](img/ffd282b2d431f9765c707d3effca38b7_433.png)
 
-![](img/ffd282b2d431f9765c707d3effca38b7_434.png)
 
 ![](img/ffd282b2d431f9765c707d3effca38b7_436.png)
 
@@ -613,7 +607,6 @@ int num_lanes = (int)(20.0f / block_size); // 根据大小动态计算车道数�
 
 ![](img/ffd282b2d431f9765c707d3effca38b7_482.png)
 
-![](img/ffd282b2d431f9765c707d3effca38b7_484.png)
 
 ![](img/ffd282b2d431f9765c707d3effca38b7_485.png)
 
@@ -631,9 +624,7 @@ int num_lanes = (int)(20.0f / block_size); // 根据大小动态计算车道数�
 
 ![](img/ffd282b2d431f9765c707d3effca38b7_497.png)
 
-![](img/ffd282b2d431f9765c707d3effca38b7_499.png)
 
-![](img/ffd282b2d431f9765c707d3effca38b7_501.png)
 
 ![](img/ffd282b2d431f9765c707d3effca38b7_503.png)
 
@@ -683,7 +674,6 @@ int num_lanes = (int)(20.0f / block_size); // 根据大小动态计算车道数�
 
 ![](img/ffd282b2d431f9765c707d3effca38b7_544.png)
 
-![](img/ffd282b2d431f9765c707d3effca38b7_546.png)
 
 ![](img/ffd282b2d431f9765c707d3effca38b7_548.png)
 
@@ -768,7 +758,6 @@ typedef enum {
 
 ![](img/ffd282b2d431f9765c707d3effca38b7_612.png)
 
-![](img/ffd282b2d431f9765c707d3effca38b7_614.png)
 
 ![](img/ffd282b2d431f9765c707d3effca38b7_615.png)
 
@@ -784,15 +773,12 @@ typedef enum {
 
 ![](img/ffd282b2d431f9765c707d3effca38b7_625.png)
 
-![](img/ffd282b2d431f9765c707d3effca38b7_627.png)
 
 ![](img/ffd282b2d431f9765c707d3effca38b7_628.png)
 
 ![](img/ffd282b2d431f9765c707d3effca38b7_630.png)
 
-![](img/ffd282b2d431f9765c707d3effca38b7_632.png)
 
-![](img/ffd282b2d431f9765c707d3effca38b7_634.png)
 
 ![](img/ffd282b2d431f9765c707d3effca38b7_636.png)
 
@@ -890,7 +876,6 @@ typedef enum {
 
 ![](img/ffd282b2d431f9765c707d3effca38b7_715.png)
 
-![](img/ffd282b2d431f9765c707d3effca38b7_717.png)
 
 ![](img/ffd282b2d431f9765c707d3effca38b7_719.png)
 
@@ -952,7 +937,6 @@ bool is_in_transition;
 
 ![](img/ffd282b2d431f9765c707d3effca38b7_761.png)
 
-![](img/ffd282b2d431f9765c707d3effca38b7_763.png)
 
 ![](img/ffd282b2d431f9765c707d3effca38b7_765.png)
 
@@ -1060,7 +1044,6 @@ for (int i = 0; i < total_blocks; i++) {
 
 ![](img/ffd282b2d431f9765c707d3effca38b7_841.png)
 
-![](img/ffd282b2d431f9765c707d3effca38b7_843.png)
 
 ![](img/ffd282b2d431f9765c707d3effca38b7_845.png)
 
@@ -1196,11 +1179,9 @@ for (int s = 0; s < num_stripes; ++s) {
 
 ---
 
-![](img/ffd282b2d431f9765c707d3effca38b7_949.png)
 
 ## 总结
 
-![](img/ffd282b2d431f9765c707d3effca38b7_951.png)
 
 ![](img/ffd282b2d431f9765c707d3effca38b7_953.png)
 
@@ -1225,7 +1206,6 @@ for (int s = 0; s < num_stripes; ++s) {
 
 ![](img/ffd282b2d431f9765c707d3effca38b7_967.png)
 
-![](img/ffd282b2d431f9765c707d3effca38b7_969.png)
 
 ![](img/ffd282b2d431f9765c707d3effca38b7_971.png)
 

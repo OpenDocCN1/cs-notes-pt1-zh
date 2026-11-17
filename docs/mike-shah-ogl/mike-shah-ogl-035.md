@@ -1,6 +1,5 @@
 # 035：GL_FLOAT枚举与GLfloat类型错误修复
 
-![](img/fdba24867233739a342d838978e0d9c5_0.png)
 
 ![](img/fdba24867233739a342d838978e0d9c5_0.png)
 

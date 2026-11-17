@@ -19,18 +19,12 @@ enum Result<T, E> {
 
 接下来，我们尝试调用一个使用 `Result` 类型的函数。在 `main` 函数中，我们将创建一个路径并尝试打开一个文件。
 
-![](img/25da715ca4eeda440068651cf2fe5e3b_1.png)
-
-![](img/25da715ca4eeda440068651cf2fe5e3b_2.png)
-
-![](img/25da715ca4eeda440068651cf2fe5e3b_3.png)
-
-![](img/25da715ca4eeda440068651cf2fe5e3b_4.png)
 
 
-![](img/25da715ca4eeda440068651cf2fe5e3b_6.png)
 
-![](img/25da715ca4eeda440068651cf2fe5e3b_8.png)
+
+
+
 
 ```rust
 use std::fs::File;
@@ -62,36 +56,25 @@ match txt {
 
 如果文件成功打开，我们将读取其内容并打印。如果失败，程序将 `panic` 并显示错误信息。注意，`read_to_string` 操作本身也返回一个 `Result`，但在这个例子中，我们使用下划线 `_` 忽略了它，因为我们只关心更新 `contents` 变量。
 
-![](img/25da715ca4eeda440068651cf2fe5e3b_10.png)
 
-![](img/25da715ca4eeda440068651cf2fe5e3b_11.png)
 
-![](img/25da715ca4eeda440068651cf2fe5e3b_12.png)
 
-![](img/25da715ca4eeda440068651cf2fe5e3b_13.png)
 
 运行此脚本，如果 `secret.txt` 文件存在，我们将看到文件内容被打印出来。如果文件不存在（例如路径改为 `bob.png`），程序将 `panic` 并显示详细的错误信息，如“no such file or directory”。
 
 ## 处理多种特定错误
 
-![](img/25da715ca4eeda440068651cf2fe5e3b_15.png)
 
-![](img/25da715ca4eeda440068651cf2fe5e3b_16.png)
 
-![](img/25da715ca4eeda440068651cf2fe5e3b_17.png)
 
 如前所述，尝试打开文件时可能遇到多种错误。我们如何分别处理每种错误呢？
 
 在下一个例子中，我们将尝试打开一个不存在的文件 `sample.txt`，并演示如何根据具体的错误类型进行不同的处理。
 
-![](img/25da715ca4eeda440068651cf2fe5e3b_19.png)
-
-![](img/25da715ca4eeda440068651cf2fe5e3b_20.png)
-
-![](img/25da715ca4eeda440068651cf2fe5e3b_21.png)
 
 
-![](img/25da715ca4eeda440068651cf2fe5e3b_22.png)
+
+
 
 ```rust
 use std::fs::File;
@@ -119,9 +102,7 @@ fn main() {
 }
 ```
 
-![](img/25da715ca4eeda440068651cf2fe5e3b_24.png)
 
-![](img/25da715ca4eeda440068651cf2fe5e3b_26.png)
 
 我们首先尝试打开文件。如果成功，则打印成功信息并返回文件。如果失败，我们使用 `error.kind()` 来匹配具体的错误类型。
 

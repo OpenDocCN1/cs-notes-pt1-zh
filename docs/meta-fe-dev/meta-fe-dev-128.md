@@ -6,11 +6,9 @@
 
 ## 回顾React基础知识
 
-![](img/6b5bf7fe08cb9eb019ce9651ee56fbaf_1.png)
 
 上一节我们介绍了项目的基础，本节中我们来看看React的基础知识。React基础知识课程涵盖了多个核心概念。
 
-![](img/6b5bf7fe08cb9eb019ce9651ee56fbaf_2.png)
 
 以下是该课程涵盖的主要内容列表：
 *   React组件介绍及其存在形式
@@ -30,11 +28,8 @@ React有其自身处理组件的方式，并且这种方式随着时间不断发
 
 ---
 
-![](img/6b5bf7fe08cb9eb019ce9651ee56fbaf_4.png)
 
-![](img/6b5bf7fe08cb9eb019ce9651ee56fbaf_5.png)
 
-![](img/6b5bf7fe08cb9eb019ce9651ee56fbaf_6.png)
 
 ## React组件的演变：从类到函数
 
@@ -50,23 +45,16 @@ React有其自身处理组件的方式，并且这种方式随着时间不断发
 
 ---
 
-![](img/6b5bf7fe08cb9eb019ce9651ee56fbaf_8.png)
 
-![](img/6b5bf7fe08cb9eb019ce9651ee56fbaf_9.png)
 
 ## 编写函数组件的语法
 
-![](img/6b5bf7fe08cb9eb019ce9651ee56fbaf_10.png)
 
-![](img/6b5bf7fe08cb9eb019ce9651ee56fbaf_11.png)
 
-![](img/6b5bf7fe08cb9eb019ce9651ee56fbaf_12.png)
 
 在编写这些函数组件时，需要注意，你可以选择将React组件编写为ES5函数声明，或者编写为被赋值为箭头函数的ES6常量变量。后一种方法更现代，但前一种方法同样有效。
 
-![](img/6b5bf7fe08cb9eb019ce9651ee56fbaf_13.png)
 
-![](img/6b5bf7fe08cb9eb019ce9651ee56fbaf_14.png)
 
 以下是两种语法示例：
 ```javascript
@@ -91,7 +79,6 @@ const Welcome = (props) => {
 
 ---
 
-![](img/6b5bf7fe08cb9eb019ce9651ee56fbaf_16.png)
 
 ![](img/6b5bf7fe08cb9eb019ce9651ee56fbaf_17.png)
 

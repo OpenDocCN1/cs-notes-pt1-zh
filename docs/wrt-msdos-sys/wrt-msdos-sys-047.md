@@ -19,31 +19,21 @@
 7.  **实现双缓冲**：利用文本模式的多页面特性消除闪烁。
 8.  **应用运行时补丁**：修复Turbo C 2.0中一个长达35年的BUG，以正确加载自定义字符。
 
-![](img/01bb7f76fdf39419dd533cc7fe70087b_1.png)
 
 ## 设置调色板
 
-![](img/01bb7f76fdf39419dd533cc7fe70087b_3.png)
 
-![](img/01bb7f76fdf39419dd533cc7fe70087b_5.png)
 
 首先，我们需要设置一个16色的调色板。VGA显卡的16色文本模式使用独立的调色板寄存器，其映射关系并非连续。
 
-![](img/01bb7f76fdf39419dd533cc7fe70087b_7.png)
 
-![](img/01bb7f76fdf39419dd533cc7fe70087b_9.png)
 
-![](img/01bb7f76fdf39419dd533cc7fe70087b_11.png)
 
 我们定义了一个`palette`数组，它是对火焰调色板进行16色采样的结果。然后，我们需要一个映射数组`palette_reg`，将逻辑颜色索引对应到实际的VGA调色板寄存器号。
 
-![](img/01bb7f76fdf39419dd533cc7fe70087b_13.png)
 
-![](img/01bb7f76fdf39419dd533cc7fe70087b_15.png)
 
-![](img/01bb7f76fdf39419dd533cc7fe70087b_16.png)
 
-![](img/01bb7f76fdf39419dd533cc7fe70087b_17.png)
 
 ```c
 unsigned char palette[48] = { ... }; // 16色火焰调色板数据
@@ -70,27 +60,19 @@ void set_palette() {
 }
 ```
 
-![](img/01bb7f76fdf39419dd533cc7fe70087b_23.png)
 
-![](img/01bb7f76fdf39419dd533cc7fe70087b_24.png)
 
-![](img/01bb7f76fdf39419dd533cc7fe70087b_26.png)
 
 ## 禁用光标
 
-![](img/01bb7f76fdf39419dd533cc7fe70087b_28.png)
 
 为了获得干净的显示效果，我们需要隐藏文本光标。这可以通过BIOS中断`0x10`的功能`0x01`（设置光标类型）来实现。通过将光标的结束扫描线设置为小于起始扫描线，即可使其消失。
 
-![](img/01bb7f76fdf39419dd533cc7fe70087b_30.png)
 
 以下是禁用光标的函数实现：
 
-![](img/01bb7f76fdf39419dd533cc7fe70087b_32.png)
 
-![](img/01bb7f76fdf39419dd533cc7fe70087b_34.png)
 
-![](img/01bb7f76fdf39419dd533cc7fe70087b_36.png)
 
 ```c
 void disable_cursor() {
@@ -146,23 +128,17 @@ void set_char_width_8() {
 
 这个过程涉及多个VGA寄存器，具体位定义可以参考VGA编程手册。执行后，屏幕水平分辨率将从720像素变为640像素。
 
-![](img/01bb7f76fdf39419dd533cc7fe70087b_44.png)
 
 ## 定义自定义字符
 
-![](img/01bb7f76fdf39419dd533cc7fe70087b_46.png)
 
 这是本教程的核心。VGA允许我们重新定义字符发生器中的字符形状。我们计划用128-132这五个字符代码来表示五个不同大小的实心方块。
 
-![](img/01bb7f76fdf39419dd533cc7fe70087b_48.png)
 
-![](img/01bb7f76fdf39419dd533cc7fe70087b_50.png)
 
 首先，我们需要定义字符的点阵数据。每个字符由16行、每行8位（1字节）组成，位为1表示点亮像素。
 
-![](img/01bb7f76fdf39419dd533cc7fe70087b_52.png)
 
-![](img/01bb7f76fdf39419dd533cc7fe70087b_53.png)
 
 ```c
 unsigned char char_table[] = {
@@ -349,7 +325,6 @@ void main() {
 }
 ```
 
-![](img/01bb7f76fdf39419dd533cc7fe70087b_67.png)
 
 ![](img/01bb7f76fdf39419dd533cc7fe70087b_69.png)
 

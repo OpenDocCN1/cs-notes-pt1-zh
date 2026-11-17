@@ -1,6 +1,5 @@
 # 051：小改动，大影响 - 为 LLVM 项目编写 GitHub 工作流 🚀
 
-![](img/2fd3c981426869cb0b0ad0d732fb9322_0.png)
 
 ![](img/2fd3c981426869cb0b0ad0d732fb9322_0.png)
 
@@ -139,6 +138,5 @@ YAML 语法以敏感著称，加上 GitHub 自定义的 YAML 架构，情况可�
 
 ![](img/2fd3c981426869cb0b0ad0d732fb9322_4.png)
 
-![](img/2fd3c981426869cb0b0ad0d732fb9322_5.png)
 
 ![](img/2fd3c981426869cb0b0ad0d732fb9322_5.png)

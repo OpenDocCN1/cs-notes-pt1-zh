@@ -1,18 +1,14 @@
 # 006：自定义可滑动单元格结构 🏗️
 
-![](img/cb102a7b41ec7fde69c4111812d68f97_1.png)
 
-![](img/cb102a7b41ec7fde69c4111812d68f97_3.png)
 
 在本节课中，我们将学习如何创建一个自定义的可滑动卡片视图。我们将定义一个数据模型来管理卡片的内容，并配置卡片的视觉样式，包括圆角和阴影效果。
 
 ## 概述
 
-![](img/cb102a7b41ec7fde69c4111812d68f97_5.png)
 
 我们将创建一个名为 `SampleSwipeableCellViewModel` 的数据模型，它定义了卡片上显示的内容。然后，我们将在 `SampleSwipeableCard` 视图中使用这个模型，并配置其外观，包括背景色、图片、文本以及添加阴影效果。
 
-![](img/cb102a7b41ec7fde69c4111812d68f97_7.png)
 
 ## 创建数据模型
 
@@ -29,13 +25,11 @@ struct SampleSwipeableCellViewModel {
 }
 ```
 
-![](img/cb102a7b41ec7fde69c4111812d68f97_9.png)
 
 这个模型包含了四个属性：`title`（标题）、`subtitle`（副标题）、`color`（背景颜色）和 `image`（图片）。
 
 ## 在卡片视图中配置模型
 
-![](img/cb102a7b41ec7fde69c4111812d68f97_11.png)
 
 上一节我们创建了数据模型，本节中我们来看看如何在 `SampleSwipeableCard` 视图中使用它。
 
@@ -44,7 +38,6 @@ struct SampleSwipeableCellViewModel {
 在 `SampleSwipeableCard` 类中，添加以下代码：
 
 
-![](img/cb102a7b41ec7fde69c4111812d68f97_13.png)
 
 ```swift
 var viewModel: SampleSwipeableCellViewModel? {
@@ -61,11 +54,9 @@ private func configure(for viewModel: SampleSwipeableCellViewModel?) {
 }
 ```
 
-![](img/cb102a7b41ec7fde69c4111812d68f97_15.png)
 
 `configure` 方法的作用是将数据模型中的值赋给对应的界面元素。我们使用 `guard let` 语句来安全地解包可选的 `viewModel`。
 
-![](img/cb102a7b41ec7fde69c4111812d68f97_17.png)
 
 ## 设置视图样式
 
@@ -86,7 +77,6 @@ private func setupViewStyle() {
 
 ## 添加阴影效果
 
-![](img/cb102a7b41ec7fde69c4111812d68f97_19.png)
 
 为了让卡片有立体感，我们接下来为其添加阴影效果。这将在 `layoutSubviews` 方法中完成。
 
@@ -98,7 +88,6 @@ private func setupViewStyle() {
 4.  将阴影层插入为卡片的最底层子视图。
 5.  应用阴影属性，如颜色、透明度、偏移量和路径。
 
-![](img/cb102a7b41ec7fde69c4111812d68f97_21.png)
 
 ```swift
 override func layoutSubviews() {

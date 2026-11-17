@@ -1,6 +1,5 @@
 # 014：杂项控制与状态寄存器
 
-![](img/a8f0ee5d8312acc75bac0b4bfde36510_0.png)
 
 ![](img/a8f0ee5d8312acc75bac0b4bfde36510_0.png)
 

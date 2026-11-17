@@ -1,6 +1,5 @@
 # 040：错失的虚拟化机会调查
 
-![](img/1df01e87a777c52eca81bedff636048f_0.png)
 
 ![](img/1df01e87a777c52eca81bedff636048f_0.png)
 

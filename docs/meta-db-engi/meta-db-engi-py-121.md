@@ -14,9 +14,7 @@
 *   高效地操作和筛选数据。
 *   支持数据库安全性。
 
-![](img/a348fe9704be9378d56a6e906abf27f0_1.png)
 
-![](img/a348fe9704be9378d56a6e906abf27f0_2.png)
 
 虚拟表可以通过 `CREATE VIEW` 语句创建：
 ```sql
@@ -26,19 +24,14 @@ FROM table_name
 WHERE condition;
 ```
 
-![](img/a348fe9704be9378d56a6e906abf27f0_3.png)
 
-![](img/a348fe9704be9378d56a6e906abf27f0_4.png)
 
-![](img/a348fe9704be9378d56a6e906abf27f0_5.png)
 
 ### 连接（JOIN）子句
 
-![](img/a348fe9704be9378d56a6e906abf27f0_6.png)
 
 我们还使用了连接子句，基于一个共同的列来链接一个或多个表之间的数据记录。在本模块中，我们使用了以下几种连接类型：
 
-![](img/a348fe9704be9378d56a6e906abf27f0_8.png)
 
 *   **内连接（INNER JOIN）**：返回两个表中匹配的记录。
     ```sql
@@ -73,23 +66,16 @@ DELIMITER ;
 
 ### 预处理语句
 
-![](img/a348fe9704be9378d56a6e906abf27f0_10.png)
 
-![](img/a348fe9704be9378d56a6e906abf27f0_11.png)
 
 我们还协助小柠檬餐厅使用了预处理语句。每次小柠檬创建SQL语句时，MySQL都需要在执行前对其进行编译和解析。我们向他们展示了一种更高效的方法是创建预处理语句。
 
-![](img/a348fe9704be9378d56a6e906abf27f0_12.png)
 
-![](img/a348fe9704be9378d56a6e906abf27f0_13.png)
 
-![](img/a348fe9704be9378d56a6e906abf27f0_14.png)
 
-![](img/a348fe9704be9378d56a6e906abf27f0_15.png)
 
 预处理语句可以重复使用，无需每次编译。这是一种更高效、更优化的执行语句方式，不会占用宝贵的MySQL资源。MySQL在预处理语句执行前仅编译和解析一次。
 
-![](img/a348fe9704be9378d56a6e906abf27f0_16.png)
 
 预处理语句的使用示例：
 ```sql
@@ -99,13 +85,10 @@ EXECUTE stmt_name USING @value;
 DEALLOCATE PREPARE stmt_name;
 ```
 
-![](img/a348fe9704be9378d56a6e906abf27f0_18.png)
 
-![](img/a348fe9704be9378d56a6e906abf27f0_19.png)
 
 ---
 
-![](img/a348fe9704be9378d56a6e906abf27f0_21.png)
 
 ## 任务二回顾：构建餐桌预订系统
 
@@ -119,11 +102,8 @@ DEALLOCATE PREPARE stmt_name;
 
 以下是基本语法示例：
 
-![](img/a348fe9704be9378d56a6e906abf27f0_23.png)
 
-![](img/a348fe9704be9378d56a6e906abf27f0_24.png)
 
-![](img/a348fe9704be9378d56a6e906abf27f0_25.png)
 
 ```sql
 -- 插入数据
@@ -135,11 +115,8 @@ UPDATE table_name SET column1 = new_value WHERE condition;
 DELETE FROM table_name WHERE condition;
 ```
 
-![](img/a348fe9704be9378d56a6e906abf27f0_26.png)
 
-![](img/a348fe9704be9378d56a6e906abf27f0_27.png)
 
-![](img/a348fe9704be9378d56a6e906abf27f0_28.png)
 
 ### 数据验证与查询
 
@@ -149,7 +126,6 @@ DELETE FROM table_name WHERE condition;
 SELECT column1, column2 FROM table_name WHERE condition;
 ```
 
-![](img/a348fe9704be9378d56a6e906abf27f0_30.png)
 
 ### 触发器（Triggers）的使用
 
@@ -169,7 +145,6 @@ END;
 
 ---
 
-![](img/a348fe9704be9378d56a6e906abf27f0_32.png)
 
 ![](img/a348fe9704be9378d56a6e906abf27f0_33.png)
 

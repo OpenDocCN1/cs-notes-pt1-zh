@@ -33,9 +33,7 @@ clang -Xclang -ast-dump -fsyntax-only your_file.cpp
 
 第二步，也是最重要的一步，是查阅**AST匹配器参考文档**。文档中列出了许多匹配器，可以帮助你匹配节点并细化树上的属性。匹配器主要分为三类：节点匹配器、细化匹配器和遍历匹配器。
 
-![](img/be47a43eafb1b1b750221a0b541d1bdb_1.png)
 
-![](img/be47a43eafb1b1b750221a0b541d1bdb_2.png)
 
 *   **节点匹配器**：匹配特定类型的AST节点。它们是匹配表达式的核心，指明了期望的节点类型。每个匹配表达式都以一个节点匹配器开始。它们是唯一支持`bind`调用的匹配器，`bind`调用将节点绑定到给定的字符串，以便稍后检索。
     *   示例：`functionDecl()`, `varDecl()`, `forStmt()`
@@ -154,7 +152,6 @@ cmake -G Ninja -DLLVM_DIR=/path/to/your/llvm/build/lib/cmake/llvm ..
 ninja
 ```
 
-![](img/be47a43eafb1b1b750221a0b541d1bdb_4.png)
 
 运行脚本后，我们的二进制文件应位于`build/bin`目录内。现在，你只需传入你的文件并运行它。
 
@@ -162,7 +159,6 @@ ninja
 ./build/bin/matcher_finder your_source_file.cpp
 ```
 
-![](img/be47a43eafb1b1b750221a0b541d1bdb_6.png)
 
 ## 总结
 

@@ -8,7 +8,6 @@ AWS架构完善的框架帮助您根据云最佳实践来评估您的AWS工作�
 
 ![](img/95cbb8df69daff9c3fb796720d1df406_1.png)
 
-![](img/95cbb8df69daff9c3fb796720d1df406_2.png)
 
 ![](img/95cbb8df69daff9c3fb796720d1df406_3.png)
 
@@ -45,9 +44,7 @@ AWS架构完善的框架帮助您根据云最佳实践来评估您的AWS工作�
 
 最后但同样重要的是**可持续性**，它帮助您更仔细地审视工作负载对环境的影响，包括能源消耗和整体效率。
 
-![](img/95cbb8df69daff9c3fb796720d1df406_9.png)
 
-![](img/95cbb8df69daff9c3fb796720d1df406_10.png)
 
 ![](img/95cbb8df69daff9c3fb796720d1df406_11.png)
 

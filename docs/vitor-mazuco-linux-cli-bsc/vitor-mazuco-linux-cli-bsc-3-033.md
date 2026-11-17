@@ -18,25 +18,21 @@
 
 ## 创建新分支
 
-![](img/71b46fcfab5080792b7131cf75c11a81_1.png)
 
 上一节我们准备好了本地环境，本节中我们来看看如何创建一个用于开发的新分支。
 
 假设我们需要修复一个bug，可以创建一个名为 `new-bugfix` 的分支。创建分支的命令是：
 
-![](img/71b46fcfab5080792b7131cf75c11a81_3.png)
 
 ```bash
 git branch new-bugfix
 ```
 
-![](img/71b46fcfab5080792b7131cf75c11a81_5.png)
 
 执行此命令后，Git会基于当前所在的提交（即`HEAD`指向的位置）创建一个新的分支指针。此时，新分支 `new-bugfix` 和原始分支（如 `master`）指向同一个提交。
 
 你可以使用 `git log` 命令来验证新分支是否已创建，并查看其指向的提交ID。
 
-![](img/71b46fcfab5080792b7131cf75c11a81_7.png)
 
 ## 为分支添加描述
 
@@ -54,7 +50,6 @@ git branch new-bugfix
 git config branch.new-bugfix.description
 ```
 
-![](img/71b46fcfab5080792b7131cf75c11a81_9.png)
 
 或者，你也可以直接查看Git的配置文件来获取信息。
 
@@ -90,11 +85,9 @@ git checkout -b new-feature
 
 了解当前仓库中有哪些分支非常重要。
 
-![](img/71b46fcfab5080792b7131cf75c11a81_15.png)
 
 使用以下命令可以列出所有本地分支：
 
-![](img/71b46fcfab5080792b7131cf75c11a81_17.png)
 
 ```bash
 git branch
@@ -107,7 +100,6 @@ git branch
 
 如果你想查看更详细的信息，包括每个分支对应的最新提交及其摘要，可以增加 `-v`（verbose）选项：
 
-![](img/71b46fcfab5080792b7131cf75c11a81_19.png)
 
 ![](img/71b46fcfab5080792b7131cf75c11a81_20.png)
 
@@ -115,7 +107,6 @@ git branch
 git branch -v
 ```
 
-![](img/71b46fcfab5080792b7131cf75c11a81_22.png)
 
 如果还想查看上游跟踪分支的信息，可以使用 `-vv` 选项：
 

@@ -18,11 +18,9 @@ import streamlit as s
 2.  输入命令 `streamlit run`，后跟你的 Python 文件名。
 3.  例如，如果文件名为 `main.py`，则命令为：`streamlit run main.py`。
 
-![](img/92c11e451f30f00c9481acd5c97cf474_1.png)
 
 执行此命令后，终端会显示一个本地 URL（通常是 `http://localhost:8501`）和一个网络 URL。在浏览器中打开本地 URL，即可看到你的 Streamlit 应用。
 
-![](img/92c11e451f30f00c9481acd5c97cf474_2.png)
 
 为了便于开发，你可以将代码编辑器（如 VS Code）和浏览器窗口并排排列。在 Windows 系统中，你可以按住 `Windows` 键并使用方向键来调整窗口位置。
 
@@ -32,17 +30,12 @@ import streamlit as s
 
 ### 添加标题
 
-![](img/92c11e451f30f00c9481acd5c97cf474_4.png)
 
-![](img/92c11e451f30f00c9481acd5c97cf474_5.png)
 
 使用 `s.title()` 函数可以创建一个主标题。它接受一个字符串参数作为标题内容。
 
-![](img/92c11e451f30f00c9481acd5c97cf474_6.png)
 
-![](img/92c11e451f30f00c9481acd5c97cf474_7.png)
 
-![](img/92c11e451f30f00c9481acd5c97cf474_8.png)
 
 ```python
 s.title("Hi, I am a Streamlit Web App")

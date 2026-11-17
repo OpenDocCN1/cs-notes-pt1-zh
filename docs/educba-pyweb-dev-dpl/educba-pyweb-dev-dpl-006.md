@@ -184,7 +184,6 @@ print("Hello, World!")
 
 **方法一：直接通过键查找**
 
-![](img/661fd3ee755e0ef19e4dcbef7219b7fb_1.png)
 
 ```python
 #!/usr/bin/env python
@@ -194,7 +193,6 @@ form = cgi.FieldStorage()
 user_name = form.getvalue('name', 'Unknown') # ‘Unknown’是默认值
 ```
 
-![](img/661fd3ee755e0ef19e4dcbef7219b7fb_2.png)
 
 **方法二：使用`getvalue`方法**
 `getvalue`方法与字典的`get`方法类似，但它直接返回字段的`value`属性。第二个参数可以指定默认值。

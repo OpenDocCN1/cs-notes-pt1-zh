@@ -85,7 +85,6 @@ class DigitalClock(QWidget):
 5.  **管理布局**：使用 `QVBoxLayout` 垂直布局管理器将标签添加到窗口中。
 6.  **设置计时器**：创建一个 `QTimer`，将其 `timeout` 信号连接到 `update_time` 方法，并设置为每1000毫秒（1秒）触发一次。
 
-![](img/f2ffb28182d702300151e0dd8f53a11f_3.png)
 
 ---
 
@@ -106,7 +105,6 @@ class DigitalClock(QWidget):
 
 ## 启动应用程序
 
-![](img/f2ffb28182d702300151e0dd8f53a11f_5.png)
 
 ![](img/f2ffb28182d702300151e0dd8f53a11f_6.png)
 

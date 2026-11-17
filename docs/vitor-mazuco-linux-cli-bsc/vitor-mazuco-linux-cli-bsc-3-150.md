@@ -4,7 +4,6 @@
 
 ## 创建示例用户
 
-![](img/51a94501d579c01b07bcaae56ceddb1b_1.png)
 
 在开始修改用户之前，我们需要一个用于演示的用户。上一节我们介绍了创建用户的基本命令，本节中我们来看看如何创建一个新用户。
 
@@ -33,7 +32,6 @@ ALTER USER user4 IDENTIFIED BY newpass;
 
 ## 锁定与解锁用户账户
 
-![](img/51a94501d579c01b07bcaae56ceddb1b_3.png)
 
 有时，我们需要临时或永久阻止用户访问数据库。这可以通过锁定其账户来实现。
 
@@ -55,7 +53,6 @@ ALTER USER <username> ACCOUNT UNLOCK;
 
 ## 设置用户密码过期
 
-![](img/51a94501d579c01b07bcaae56ceddb1b_5.png)
 
 为了安全起见，可以强制用户在下次登录时更改密码。这通过设置密码过期来实现。
 
@@ -70,7 +67,6 @@ ALTER USER <username> PASSWORD EXPIRE;
 
 在Oracle中，每个用户都关联一个配置文件（Profile），用于管理资源限制和密码策略。默认情况下，用户使用名为 `DEFAULT` 的配置文件。
 
-![](img/51a94501d579c01b07bcaae56ceddb1b_7.png)
 
 首先，我们可以查看用户的当前配置文件：
 ```sql
@@ -79,7 +75,6 @@ SELECT username, profile FROM dba_users WHERE username = 'USER4';
 
 要更改用户的配置文件，需要先创建一个新的配置文件。
 
-![](img/51a94501d579c01b07bcaae56ceddb1b_9.png)
 
 以下是创建一个名为 `test_profile` 的新配置文件的命令：
 ```sql
@@ -95,13 +90,10 @@ ALTER USER user4 PROFILE test_profile;
 
 ## 为用户授予和撤销角色
 
-![](img/51a94501d579c01b07bcaae56ceddb1b_11.png)
 
-![](img/51a94501d579c01b07bcaae56ceddb1b_13.png)
 
 角色（Role）是权限的集合，可以简化权限管理。我们可以创建角色，并将角色授予用户。
 
-![](img/51a94501d579c01b07bcaae56ceddb1b_15.png)
 
 首先，创建一个新角色并授予一些权限：
 ```sql
@@ -109,32 +101,26 @@ CREATE ROLE developer;
 GRANT CREATE TABLE, CREATE VIEW TO developer;
 ```
 
-![](img/51a94501d579c01b07bcaae56ceddb1b_17.png)
 
-![](img/51a94501d579c01b07bcaae56ceddb1b_18.png)
 
 然后，将这个角色授予用户 `user4`：
 ```sql
 GRANT developer TO user4;
 ```
 
-![](img/51a94501d579c01b07bcaae56ceddb1b_20.png)
 
 要查看用户被授予了哪些角色，可以执行：
 ```sql
 SELECT * FROM dba_role_privs WHERE grantee = 'USER4';
 ```
 
-![](img/51a94501d579c01b07bcaae56ceddb1b_22.png)
 
-![](img/51a94501d579c01b07bcaae56ceddb1b_24.png)
 
 如果需要撤销角色，使用 `REVOKE` 命令：
 ```sql
 REVOKE developer FROM user4;
 ```
 
-![](img/51a94501d579c01b07bcaae56ceddb1b_26.png)
 
 此外，Oracle有一个预定义的强大角色 `DBA`。将其授予用户会赋予其广泛的数据库管理权限。
 ```sql

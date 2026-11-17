@@ -6,7 +6,6 @@
 ## 环境准备与工具介绍
 上一节我们介绍了汇编语言的基础概念，本节中我们来看看如何搭建一个简单的汇编开发环境。
 
-![](img/3a96a4565df7cae1fad9596b53a017fc_1.png)
 
 ![](img/3a96a4565df7cae1fad9596b53a017fc_3.png)
 
@@ -14,11 +13,9 @@
 
 首先，你需要一个汇编器。有多种选择，例如 Microsoft Macro Assembler、Netwide Assembler (NASM) 或 A86。在本系列中，我们使用与 Turbo C 2.01 配套的 Turbo Assembler 2.0。
 
-![](img/3a96a4565df7cae1fad9596b53a017fc_7.png)
 
 你可以通过一些软件存档网站找到 Turbo Assembler 2.0。此外，SourceForge 上也有一个名为 “Gui Turbo Assembler” 的 Windows 版本，它包含了 TASM 和 TLINK。
 
-![](img/3a96a4565df7cae1fad9596b53a017fc_9.png)
 
 安装过程很简单。运行安装程序，选择安装路径（例如 `C:\TASM`）。安装完成后，切换到 TASM 目录，你会看到许多示例文件，这对学习很有帮助。
 

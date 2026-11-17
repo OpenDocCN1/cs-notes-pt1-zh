@@ -1,8 +1,6 @@
 # 013：使用 Argo Workflows 扩展时间序列分析 📈
 
-![](img/2d9f76612a0eb39fd87e2a41da4889a8_1.png)
 
-![](img/2d9f76612a0eb39fd87e2a41da4889a8_2.png)
 
 ## 概述
 
@@ -125,7 +123,6 @@ DAG 中的箭头可用于建模因果影响，帮助识别时间序列的底层�
 
 以下是演示如何使用时间序列数据和动态 DAG 的 GitHub 仓库二维码，可供参考。
 
-![GitHub Repo QR Code](img/2d9f76612a0eb39fd87e2a41da4889a8_4.png)
 
 ### 总结
 
@@ -135,16 +132,13 @@ DAG 中的箭头可用于建模因果影响，帮助识别时间序列的底层�
 3.  **Argo Workflows 是最佳解决方案**，因为它专为并行处理而构建，能提高效率和计算速度。
 4.  它通过**数据分区**增强了可扩展性，并可用于为时间序列数据创建模型或可视化（如 **DAG**）。
 
-![](img/2d9f76612a0eb39fd87e2a41da4889a8_4.png)
 
 但这只是 Argo Workflows 的一个用例。想象一下，我们还可以利用 Argo Workflows 强大的数据分区、任务并行化和 DAG 功能来做些什么。
 
 感谢您的时间。
 
-![](img/2d9f76612a0eb39fd87e2a41da4889a8_6.png)
 
 ![](img/2d9f76612a0eb39fd87e2a41da4889a8_7.png)
 
-![](img/2d9f76612a0eb39fd87e2a41da4889a8_8.png)
 
 ![Booth & Masterclass QR Code](img/2d9f76612a0eb39fd87e2a41da4889a8_8.png)

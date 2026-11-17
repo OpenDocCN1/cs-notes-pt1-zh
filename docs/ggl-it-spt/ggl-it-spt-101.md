@@ -1,6 +1,5 @@
 # 101：在Bash中更改目录
 
-![](img/5392de6b3fb9e349b08b07ebb5b7b3c7_0.png)
 
 ![](img/5392de6b3fb9e349b08b07ebb5b7b3c7_0.png)
 
@@ -57,7 +56,6 @@ cd ~/desktop
 
 例如，输入`cd D`后按Tab键，如果存在`Documents`和`Downloads`两个文件夹，Bash会同时显示这两个选项供你选择。
 
-![](img/5392de6b3fb9e349b08b07ebb5b7b3c7_2.png)
 
 ![](img/5392de6b3fb9e349b08b07ebb5b7b3c7_2.png)
 

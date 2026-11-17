@@ -26,13 +26,11 @@ SAS高级程序员专项课程：P36：使用字典表探索数据环境 🔍
 *   **`DICTIONARY.COLUMNS` / `SASHELP.VCOLUMN`**：包含所有SAS数据表中列的信息。
 *   **`DICTIONARY.LIBNAMES` / `SASHELP.VLIBNAM`**：包含所有已分配库的信息。
 
-![](img/0aff459e08c4562676a2ea4d9c3e0ee0_1.png)
 
 ### 实践应用示例 💻
 
 了解了核心的字典表后，我们通过几个具体场景来看看如何应用它们。
 
-![](img/0aff459e08c4562676a2ea4d9c3e0ee0_2.png)
 
 **场景一：查看指定库中的所有表**
 
@@ -50,7 +48,6 @@ quit;
 
 如果我们想找出所有包含名为 `CustomerID` 的列的表。
 
-![](img/0aff459e08c4562676a2ea4d9c3e0ee0_4.png)
 
 ```sas
 proc sql;
@@ -74,7 +71,6 @@ quit;
 ```
 通过这个查询结果，您可以快速对比 `Sales` 列在不同表中的定义。
 
-![](img/0aff459e08c4562676a2ea4d9c3e0ee0_6.png)
 
 **场景四：查看所有已分配的库**
 

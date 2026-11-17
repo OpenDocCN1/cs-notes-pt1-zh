@@ -88,7 +88,6 @@ for x in my_tuple:
 my_tuple[0] = 5
 ```
 
-![](img/8d79f0f619e53923aca40c18fb08a632_3.png)
 
 运行此代码，将会得到一个错误：`TypeError: ‘tuple’ object does not support item assignment`。这是因为元组中声明的任何内容都是不可变的。
 

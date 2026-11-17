@@ -18,21 +18,16 @@
 
 你学会了在Windows操作系统上本地安装Git，在GitHub上创建新仓库并将其克隆到本地机器。
 
-![](img/8d269eda55f05f371f5e33bd058f02ce_1.png)
 
 ### Git工作流基础
 
-![](img/8d269eda55f05f371f5e33bd058f02ce_2.png)
 
-![](img/8d269eda55f05f371f5e33bd058f02ce_3.png)
 
 你掌握了Git的基础知识，并能概述Git的标准工作流程。同时，你能识别GitHub中远程仓库和本地仓库之间的区别。
 
-![](img/8d269eda55f05f371f5e33bd058f02ce_4.png)
 
 ### 提交更改
 
-![](img/8d269eda55f05f371f5e33bd058f02ce_5.png)
 
 你理解了`git add`和`git commit`命令的作用，并能描述它们的工作方式。
 
@@ -44,11 +39,9 @@ git commit -m "提交信息"
 
 ### 远程同步
 
-![](img/8d269eda55f05f371f5e33bd058f02ce_7.png)
 
 你学会了使用`git push`将内容推送到远程仓库，并使用`git pull`从远程服务器检索内容。
 
-![](img/8d269eda55f05f371f5e33bd058f02ce_8.png)
 
 **代码示例：**
 ```bash
@@ -56,7 +49,6 @@ git push origin main
 git pull origin main
 ```
 
-![](img/8d269eda55f05f371f5e33bd058f02ce_9.png)
 
 ### 分支管理
 
@@ -65,7 +57,6 @@ git pull origin main
 **概念公式：**
 `HEAD` -> 当前分支 -> 最新提交
 
-![](img/8d269eda55f05f371f5e33bd058f02ce_11.png)
 
 ### 比较与追溯
 
@@ -79,7 +70,6 @@ git blame <文件名>
 
 ### Forking创建仓库
 
-![](img/8d269eda55f05f371f5e33bd058f02ce_13.png)
 
 ![](img/8d269eda55f05f371f5e33bd058f02ce_14.png)
 

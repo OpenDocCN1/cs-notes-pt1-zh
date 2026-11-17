@@ -1,6 +1,5 @@
 # 063：泛型结构体与枚举 🧬
 
-![](img/0a97c3c1ebd3ed7a9257f5d5e1a4693c_1.png)
 
 在本节课中，我们将继续学习泛型，并了解如何在结构体（`struct`）和枚举（`enum`）中使用它们。泛型允许我们编写灵活且可重用的代码，而无需为每种数据类型重复编写逻辑。
 
@@ -8,17 +7,13 @@
 
 ## 泛型结构体
 
-![](img/0a97c3c1ebd3ed7a9257f5d5e1a4693c_3.png)
 
 结构体可以使用泛型来定义其字段的类型。例如，我们可能想创建一个具有两个字段 X 和 Y 的点。
 
-![](img/0a97c3c1ebd3ed7a9257f5d5e1a4693c_5.png)
 
 以下是定义一个泛型 `Point` 结构体的方法：
 
-![](img/0a97c3c1ebd3ed7a9257f5d5e1a4693c_6.png)
 
-![](img/0a97c3c1ebd3ed7a9257f5d5e1a4693c_7.png)
 
 ```rust
 #[derive(Debug)]
@@ -30,7 +25,6 @@ struct Point<T> {
 
 我们使用尖括号 `<T>` 来声明一个名为 `T` 的泛型类型。结构体内部的字段 `x` 和 `y` 都使用这个类型 `T`。`#[derive(Debug)]` 是为了能够使用 `println!` 宏打印结构体。
 
-![](img/0a97c3c1ebd3ed7a9257f5d5e1a4693c_9.png)
 
 现在，当我们创建 `Point` 实例时，可以使用任何类型，只要 `x` 和 `y` 的类型相同。
 
@@ -51,17 +45,12 @@ fn main() {
 
 如果你的代码需要多个泛型类型，可以在结构体中指定额外的泛型参数。
 
-![](img/0a97c3c1ebd3ed7a9257f5d5e1a4693c_11.png)
 
-![](img/0a97c3c1ebd3ed7a9257f5d5e1a4693c_12.png)
 
-![](img/0a97c3c1ebd3ed7a9257f5d5e1a4693c_13.png)
 
 例如，我们可以让 `x` 和 `y` 使用不同的类型：
 
-![](img/0a97c3c1ebd3ed7a9257f5d5e1a4693c_14.png)
 
-![](img/0a97c3c1ebd3ed7a9257f5d5e1a4693c_15.png)
 
 ```rust
 #[derive(Debug)]
@@ -102,7 +91,6 @@ num = "0.4"
 然后，我们可以修改结构体定义，为泛型 `T` 添加 `Num` 特质约束：
 
 
-![](img/0a97c3c1ebd3ed7a9257f5d5e1a4693c_17.png)
 
 ```rust
 use num::Num;
@@ -128,15 +116,11 @@ fn main() {
 }
 ```
 
-![](img/0a97c3c1ebd3ed7a9257f5d5e1a4693c_19.png)
 
 这样，我们确保了 `Point` 结构体只用于有意义的数值类型，提高了代码的安全性和清晰度。
 
-![](img/0a97c3c1ebd3ed7a9257f5d5e1a4693c_20.png)
 
-![](img/0a97c3c1ebd3ed7a9257f5d5e1a4693c_21.png)
 
-![](img/0a97c3c1ebd3ed7a9257f5d5e1a4693c_22.png)
 
 ## 泛型枚举
 
@@ -153,9 +137,7 @@ enum MyOption<T> {
 
 这个枚举有一个泛型类型 `T`。变体 `Some` 包含一个 `T` 类型的值，而 `None` 不包含任何值。
 
-![](img/0a97c3c1ebd3ed7a9257f5d5e1a4693c_24.png)
 
-![](img/0a97c3c1ebd3ed7a9257f5d5e1a4693c_25.png)
 
 以下是一个使用示例，模拟检查网络连接：
 
@@ -188,7 +170,6 @@ enum Result<T, E> {
 
 它包含两个泛型类型：`T` 代表成功时返回的值（`Ok` 变体），`E` 代表错误时返回的类型（`Err` 变体）。这对于可能成功或失败的操作非常方便。
 
-![](img/0a97c3c1ebd3ed7a9257f5d5e1a4693c_27.png)
 
 ## 总结
 

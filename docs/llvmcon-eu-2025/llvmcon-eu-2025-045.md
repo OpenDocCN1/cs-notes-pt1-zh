@@ -1,6 +1,5 @@
 # 045：llvmlite - 一个用于 LLVM 的 Python 训练场
 
-![](img/91ecebfe0f046e95b10cdbb6c3d26deb_0.png)
 
 ![](img/91ecebfe0f046e95b10cdbb6c3d26deb_0.png)
 
@@ -304,6 +303,5 @@ llvmlite 的未来发展方向包括更新以支持 LLVM 最新的稳定版本�
 
 希望本教程能帮助你开始使用 llvmlite 探索 LLVM 的世界。
 
-![](img/91ecebfe0f046e95b10cdbb6c3d26deb_2.png)
 
 ![](img/91ecebfe0f046e95b10cdbb6c3d26deb_2.png)

@@ -17,7 +17,6 @@ from streamlit_lottie import st_lottie
 
 上一节我们介绍了导入组件，本节中我们来看看如何具体使用它们来添加动画。
 
-![](img/b9b99405b799d3281558a83e7f5c71d9_3.png)
 
 ## 方法一：使用 iframe 嵌入动画 🌐
 

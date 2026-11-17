@@ -4,9 +4,7 @@
 
 ![](img/13f3c34aeca4e45732e15609ba01749b_3.png)
 
-![](img/13f3c34aeca4e45732e15609ba01749b_5.png)
 
-![](img/13f3c34aeca4e45732e15609ba01749b_7.png)
 
 ![](img/13f3c34aeca4e45732e15609ba01749b_8.png)
 
@@ -34,9 +32,7 @@
 
 ![](img/13f3c34aeca4e45732e15609ba01749b_29.png)
 
-![](img/13f3c34aeca4e45732e15609ba01749b_31.png)
 
-![](img/13f3c34aeca4e45732e15609ba01749b_33.png)
 
 ![](img/13f3c34aeca4e45732e15609ba01749b_35.png)
 
@@ -84,7 +80,6 @@
 
 ![](img/13f3c34aeca4e45732e15609ba01749b_74.png)
 
-![](img/13f3c34aeca4e45732e15609ba01749b_76.png)
 
 ![](img/13f3c34aeca4e45732e15609ba01749b_78.png)
 
@@ -104,11 +99,9 @@
 
 ![](img/13f3c34aeca4e45732e15609ba01749b_92.png)
 
-![](img/13f3c34aeca4e45732e15609ba01749b_94.png)
 
 ## 修复遗留Bug
 
-![](img/13f3c34aeca4e45732e15609ba01749b_96.png)
 
 ![](img/13f3c34aeca4e45732e15609ba01749b_98.png)
 
@@ -521,7 +514,6 @@ for (int i = 0; i < MAX_PARTICLES; ++i) {
 
 ![](img/13f3c34aeca4e45732e15609ba01749b_422.png)
 
-![](img/13f3c34aeca4e45732e15609ba01749b_424.png)
 
 ![](img/13f3c34aeca4e45732e15609ba01749b_426.png)
 
@@ -727,7 +719,6 @@ if (ball->active) {
 
 ![](img/13f3c34aeca4e45732e15609ba01749b_577.png)
 
-![](img/13f3c34aeca4e45732e15609ba01749b_579.png)
 
 ![](img/13f3c34aeca4e45732e15609ba01749b_581.png)
 
@@ -809,11 +800,9 @@ void on_block_destroyed(V2 block_p, u32 block_color) {
 
 ![](img/13f3c34aeca4e45732e15609ba01749b_637.png)
 
-![](img/13f3c34aeca4e45732e15609ba01749b_639.png)
 
 同样地，当球体撞击墙壁时，也可以生成一小簇粒子，增强打击感。
 
-![](img/13f3c34aeca4e45732e15609ba01749b_641.png)
 
 ![](img/13f3c34aeca4e45732e15609ba01749b_643.png)
 
@@ -892,13 +881,10 @@ void on_block_destroyed(V2 block_p, u32 block_color) {
 
 本节课中我们一起学习了如何为C语言游戏实现一个粒子系统。我们从修复一个多球体碰撞Bug开始，然后逐步构建了粒子的数据结构、更新渲染逻辑以及生成函数。我们将粒子系统应用到了球体轨迹、方块摧毁爆炸和墙壁撞击等多个场景中，并进行了颜色、大小、随机性等视觉优化。
 
-![](img/13f3c34aeca4e45732e15609ba01749b_706.png)
 
 通过添加粒子系统，游戏的视觉反馈和整体观感得到了显著提升。在接下来的课程中，我们将继续优化引擎，例如添加旋转矩形支持（让粒子轨迹更平滑）和音频系统，让游戏变得更加完整和有趣。
 
-![](img/13f3c34aeca4e45732e15609ba01749b_708.png)
 
-![](img/13f3c34aeca4e45732e15609ba01749b_710.png)
 
 ![](img/13f3c34aeca4e45732e15609ba01749b_712.png)
 

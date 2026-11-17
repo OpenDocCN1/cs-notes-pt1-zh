@@ -1,6 +1,5 @@
 # 015：自适应网络加固 🔒
 
-![](img/c226a81efda01a60f9444a4d0e97d647_0.png)
 
 在本节课中，我们将学习自适应网络加固。这是一种通过分析实际流量模式来优化网络安全组规则，从而提升网络安全性态的方法。
 
@@ -31,11 +30,8 @@ Allow traffic from 140.20.30.0/29 on port 22
 Deny all other traffic to port 22
 ```
 
-![](img/c226a81efda01a60f9444a4d0e97d647_2.png)
 
-![](img/c226a81efda01a60f9444a4d0e97d647_3.png)
 
-![](img/c226a81efda01a60f9444a4d0e97d647_4.png)
 
 ## 功能演练与要求
 
@@ -45,7 +41,6 @@ Deny all other traffic to port 22
 *   启用 **Microsoft Defender for servers** 计划。
 *   拥有对虚拟机及其关联NSG的相应权限。
 
-![](img/c226a81efda01a60f9444a4d0e97d647_6.png)
 
 ## 操作界面导览
 
@@ -66,15 +61,12 @@ Deny all other traffic to port 22
 
 该界面还提供以下选项卡进行管理：
 
-![](img/c226a81efda01a60f9444a4d0e97d647_8.png)
 
-![](img/c226a81efda01a60f9444a4d0e97d647_9.png)
 
 以下是规则管理相关功能：
 *   **规则选项卡**：提供具体的规则修改建议。
 *   **警报选项卡**：显示因资源流量触发的安全警报。
 
-![](img/c226a81efda01a60f9444a4d0e97d647_10.png)
 
 在规则选项卡中，你可以执行以下操作：
 *   **修改规则**
@@ -83,11 +75,9 @@ Deny all other traffic to port 22
 
 你可以选择想要应用到NSG上的规则，然后执行**强制执行**等操作。
 
-![](img/c226a81efda01a60f9444a4d0e97d647_12.png)
 
 ## 总结
 
-![](img/c226a81efda01a60f9444a4d0e97d647_13.png)
 
 ![](img/c226a81efda01a60f9444a4d0e97d647_14.png)
 

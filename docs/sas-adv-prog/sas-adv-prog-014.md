@@ -6,7 +6,6 @@
 
 上一节我们介绍了如何筛选和计算数据，本节中我们来看看如何对查询结果进行排序。你可以通过添加`ORDER BY`子句来指定结果集中行的排列顺序。
 
-![](img/c71d38c23c198a07d327fd771dec1695_1.png)
 
 ```sql
 SELECT column1, column2
@@ -20,7 +19,6 @@ ORDER BY column1;
 
 默认的排序顺序是升序，但你可以在列名后添加`DESC`关键字，将其更改为降序排列。
 
-![](img/c71d38c23c198a07d327fd771dec1695_3.png)
 
 ```sql
 SELECT column1, column2

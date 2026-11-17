@@ -1,6 +1,5 @@
 # 030：TCP与简易HTTP服务器 🖥️
 
-![](img/7dbc400bd678ed3d1daabde601b2f13b_1.png)
 
 在本节课中，我们将继续学习传输控制协议（TCP），并尝试实现一个简易的HTTP服务器。我们将调试之前遇到的连接问题，并最终实现与外部网络（如Web浏览器）的基本通信。
 
@@ -159,7 +158,6 @@ if (strstr(request, "GET / HTTP")) {
 
 ![](img/7dbc400bd678ed3d1daabde601b2f13b_53.png)
 
-![](img/7dbc400bd678ed3d1daabde601b2f13b_54.png)
 
 ## 总结
 

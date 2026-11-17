@@ -59,7 +59,6 @@ LEFT JOIN orders AS o ON c.client_id = o.client_id;
 
 ## 使用右连接（RIGHT JOIN）
 
-![](img/86f0eef9bae5798f00a829e6085d27d8_3.png)
 
 接下来，我们使用`RIGHT JOIN`概念创建一个类似的查询。其语法与左连接相似，只需将`LEFT`关键字替换为`RIGHT`关键字。
 

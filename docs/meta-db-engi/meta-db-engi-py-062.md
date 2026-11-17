@@ -110,7 +110,6 @@ def test_pass_example():
 python -m pytest test_addition.py::test_add
 ```
 
-![](img/363c2600b442d256dce40854ce94899f_3.png)
 
 这条命令将只运行 `test_addition.py` 文件中的 `test_add` 函数。
 

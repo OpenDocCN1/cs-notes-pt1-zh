@@ -19,13 +19,10 @@
 // 钩子是让你在函数组件中使用React状态和生命周期特性的函数。
 ```
 
-![](img/a07589298daaffa5f60f932cc5f6b553_1.png)
 
-![](img/a07589298daaffa5f60f932cc5f6b553_2.png)
 
 ## 探索`useState`钩子 📝
 
-![](img/a07589298daaffa5f60f932cc5f6b553_3.png)
 
 让我们观察一个具体的钩子示例。你将仔细研究`useState`钩子的一个实例，因为它是最常用的钩子之一。这个钩子用于管理组件内部的状态并跟踪它，并且它直接内置于React中。
 
@@ -62,7 +59,6 @@ const [showMenu, setShowMenu] = useState(false);
 
 在这个例子中，注意到`useState`钩子被用来跟踪布尔状态值。你可以使用`useState`钩子来跟踪任何类型的数据。它可以是字符串、数字、数组、布尔值或对象。
 
-![](img/a07589298daaffa5f60f932cc5f6b553_5.png)
 
 例如，你甚至可以跟踪一个按钮被按下的次数。
 
@@ -74,7 +70,6 @@ const [clickCount, setClickCount] = useState(0);
 
 除了React开箱即用的钩子之外，你还可以构建自己的钩子，这将允许你将自定义的组件逻辑提取到可重用的函数中。
 
-![](img/a07589298daaffa5f60f932cc5f6b553_7.png)
 
 这是使用钩子的一个极佳特性和好处。钩子最大的好处在于它们为代码提供的可读性和简洁性。
 

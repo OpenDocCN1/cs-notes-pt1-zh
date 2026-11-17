@@ -10,7 +10,6 @@
 
 美国被划分为九个区域，每个区域都有一个区域编号。现在需要生成一份报告，显示那些平均预估人口大于所有州总平均人口的区域。
 
-![](img/728db313726daccca46f187d6bc62e3f_1.png)
 
 这个场景与之前的类似，但区别在于，我们现在需要对分组后的数据进行筛选。
 
@@ -18,7 +17,6 @@
 
 要对分组数据进行筛选，我们可以使用`HAVING`子句。我们将使用`state_population`表中的`division`和`P_estimate1`列来创建报告。
 
-![](img/728db313726daccca46f187d6bc62e3f_3.png)
 
 ## 手动方法生成程序
 
@@ -26,7 +24,6 @@
 
 以下是核心的SQL代码结构：
 
-![](img/728db313726daccca46f187d6bc62e3f_5.png)
 
 ```sql
 SELECT division, AVG(P_estimate1) AS avg_pop
@@ -39,7 +36,6 @@ HAVING AVG(P_estimate1) > (SELECT AVG(P_estimate1) FROM state_population);
 
 然后，我们使用子查询返回的值来完成外部查询的`HAVING`子句。外部查询将每个州分组到其对应的区域，然后计算每个区域的预估人口平均值。
 
-![](img/728db313726daccca46f187d6bc62e3f_7.png)
 
 在外部查询中，我们必须使用`HAVING`子句来筛选我们的分组聚合结果。
 

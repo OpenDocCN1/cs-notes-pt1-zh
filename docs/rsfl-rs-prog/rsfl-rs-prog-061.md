@@ -33,9 +33,7 @@ pub mod banking {
 
 我们需要使用 `pub` 关键字将其公开，以便其他文件可以访问这个模块。
 
-![](img/4fd8e8e518c33f195af496907f7bfcf3_1.png)
 
-![](img/4fd8e8e518c33f195af496907f7bfcf3_2.png)
 
 ### 创建账户模块
 
@@ -65,13 +63,10 @@ pub mod banking {
         }
 ```
 
-![](img/4fd8e8e518c33f195af496907f7bfcf3_4.png)
 
-![](img/4fd8e8e518c33f195af496907f7bfcf3_5.png)
 
 然后，我们创建一个私有函数 `close_account`，用于模拟关闭账户的操作。由于没有使用 `pub` 关键字，这个函数只能在 `accounts` 模块内部使用。
 
-![](img/4fd8e8e518c33f195af496907f7bfcf3_6.png)
 
 ```rust
         #[allow(dead_code)]
@@ -106,7 +101,6 @@ pub mod banking {
         }
 ```
 
-![](img/4fd8e8e518c33f195af496907f7bfcf3_8.png)
 
 接下来是 `withdraw` 函数，用于从指定账户取款。在取款前，我们需要检查账户余额是否充足。
 
@@ -168,7 +162,6 @@ fn main() {
 2.  从 James 的账户取出 50 美元。
 3.  James 向 Bob 的账户转账 100 美元。
 
-![](img/4fd8e8e518c33f195af496907f7bfcf3_10.png)
 
 ```rust
     transactions::deposit(&mut account_james, 200.0);
@@ -188,7 +181,6 @@ fn main() {
 
 ## 总结
 
-![](img/4fd8e8e518c33f195af496907f7bfcf3_12.png)
 
 本节课中我们一起学习了：
 1.  Rust 中定义模块的另一种方式：使用目录内的 `mod.rs` 文件作为入口点。
@@ -197,9 +189,7 @@ fn main() {
 4.  使用 `use super::...` 语法引用父模块中的项。
 5.  在二进制包（`src/main.rs`）中通过项目名引入并使用自定义库的功能。
 
-![](img/4fd8e8e518c33f195af496907f7bfcf3_13.png)
 
-![](img/4fd8e8e518c33f195af496907f7bfcf3_14.png)
 
 ![](img/4fd8e8e518c33f195af496907f7bfcf3_15.png)
 

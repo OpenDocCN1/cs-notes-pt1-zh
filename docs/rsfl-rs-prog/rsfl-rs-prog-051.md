@@ -22,9 +22,7 @@ fn order_food(food: &str) {
 
 在这个例子中，我们定义了一个 `order_food` 函数，它接收一个字符串切片作为参数。由于我们尚未想好如何实现订餐功能，我们使用 `todo!` 宏作为占位符。此时，如果我们调用这个函数：
 
-![](img/a19c9dbaa40cee8c51d55b2767cefa77_1.png)
 
-![](img/a19c9dbaa40cee8c51d55b2767cefa77_2.png)
 
 ```rust
 order_food("banana");
@@ -34,9 +32,7 @@ order_food("banana");
 
 ## `unimplemented!` 宏：标记概念性功能
 
-![](img/a19c9dbaa40cee8c51d55b2767cefa77_4.png)
 
-![](img/a19c9dbaa40cee8c51d55b2767cefa77_5.png)
 
 `unimplemented!` 宏的用法与 `todo!` 类似，但它传达的意图不同。它用于标记那些**可能永远不会被实现**的功能，或者仅仅是一个概念、想法。
 
@@ -50,25 +46,18 @@ fn order_food_fast_mode(food: &str) {
 
 这里，`order_food_fast_mode` 代表一个“快速订餐模式”的概念。我们使用 `unimplemented!` 是因为这个功能目前只是一个想法，我们不确定未来是否会实现它。调用此函数同样会导致程序恐慌，但输出的信息是“not implemented”。
 
-![](img/a19c9dbaa40cee8c51d55b2767cefa77_7.png)
 
-![](img/a19c9dbaa40cee8c51d55b2767cefa77_8.png)
 
 两者的核心区别在于意图：`todo!` 表示“稍后完成”，`unimplemented!` 表示“仅为概念”。
 
 ## 在结构体方法中的应用
 
-![](img/a19c9dbaa40cee8c51d55b2767cefa77_10.png)
 
-![](img/a19c9dbaa40cee8c51d55b2767cefa77_11.png)
 
 这两个宏在定义结构体的方法时尤其有用。我们可以先搭建出方法的框架，而不必立即实现所有细节。
 
-![](img/a19c9dbaa40cee8c51d55b2767cefa77_12.png)
 
-![](img/a19c9dbaa40cee8c51d55b2767cefa77_13.png)
 
-![](img/a19c9dbaa40cee8c51d55b2767cefa77_14.png)
 
 让我们创建一个 `CustomFile` 结构体作为示例：
 
@@ -103,9 +92,7 @@ impl CustomFile {
 
 现在，我们可以在 `main` 函数中使用这个结构体：
 
-![](img/a19c9dbaa40cee8c51d55b2767cefa77_16.png)
 
-![](img/a19c9dbaa40cee8c51d55b2767cefa77_17.png)
 
 ```rust
 fn main() {
@@ -123,23 +110,16 @@ fn main() {
 
 ## 辅助开发：消除语法高亮干扰
 
-![](img/a19c9dbaa40cee8c51d55b2767cefa77_19.png)
 
 `todo!` 宏还有一个非常实用的场景：在编写复杂函数时，临时消除 Rust 语言服务器（LSP）的语法错误高亮干扰。
 
-![](img/a19c9dbaa40cee8c51d55b2767cefa77_20.png)
 
-![](img/a19c9dbaa40cee8c51d55b2767cefa77_21.png)
 
-![](img/a19c9dbaa40cee8c51d55b2767cefa77_22.png)
 
-![](img/a19c9dbaa40cee8c51d55b2767cefa77_23.png)
 
 假设我们正在编写一个函数来读取和显示文件内容：
 
-![](img/a19c9dbaa40cee8c51d55b2767cefa77_25.png)
 
-![](img/a19c9dbaa40cee8c51d55b2767cefa77_26.png)
 
 ```rust
 use std::fs::File;
@@ -168,13 +148,9 @@ fn get_and_display_contents(path: &str) -> Result<Contents, Error> {
 
 在编写函数体的过程中，编译器会因为函数缺少确定的返回值而用红色高亮标出错误，这可能会干扰我们的思路。此时，在函数末尾放置一个 `todo!()` 可以“安抚”编译器，让这些高亮暂时消失，使我们能更专注地编写核心逻辑。
 
-![](img/a19c9dbaa40cee8c51d55b2767cefa77_28.png)
 
-![](img/a19c9dbaa40cee8c51d55b2767cefa77_29.png)
 
-![](img/a19c9dbaa40cee8c51d55b2767cefa77_30.png)
 
-![](img/a19c9dbaa40cee8c51d55b2767cefa77_31.png)
 
 当我们完成函数主体后，再回来替换掉 `todo!()`：
 
@@ -199,21 +175,15 @@ fn get_and_display_contents(path: &str) -> Result<Contents, Error> {
 }
 ```
 
-![](img/a19c9dbaa40cee8c51d55b2767cefa77_33.png)
 
 这种方法让开发流程更加顺畅，并且你不用担心会忘记完成函数，因为如果调用包含 `todo!` 的函数，程序会明确地提醒你。
 
-![](img/a19c9dbaa40cee8c51d55b2767cefa77_34.png)
 
-![](img/a19c9dbaa40cee8c51d55b2767cefa77_35.png)
 
-![](img/a19c9dbaa40cee8c51d55b2767cefa77_36.png)
 
-![](img/a19c9dbaa40cee8c51d55b2767cefa77_37.png)
 
 ## 总结
 
-![](img/a19c9dbaa40cee8c51d55b2767cefa77_39.png)
 
 本节课中我们一起学习了 Rust 中的 `todo!` 和 `unimplemented!` 宏。
 

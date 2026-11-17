@@ -2,23 +2,19 @@
 
 在本节课中，我们将学习如何使用Python读取三种常见格式的文件：纯文本文件（.txt）、JSON文件（.json）和CSV文件（.csv）。我们将从文件路径的指定开始，逐步讲解读取每种文件的具体方法，并学习如何处理可能出现的异常。
 
-![](img/8f60d14447ea4c81899e9ca66fb585e8_1.png)
 
 ---
 
-![](img/8f60d14447ea4c81899e9ca66fb585e8_3.png)
 
 ## 概述
 
 在之前的课程中，我们已经创建了一些示例文件用于练习。本节课的目标是掌握读取这些文件内容的核心技巧。我们将使用Python内置的`open()`函数以及`json`和`csv`模块来完成这项任务。
 
-![](img/8f60d14447ea4c81899e9ca66fb585e8_5.png)
 
 ---
 
 ## 准备工作：指定文件路径
 
-![](img/8f60d14447ea4c81899e9ca66fb585e8_7.png)
 
 首先，我们需要告诉Python要读取哪个文件。这通过指定文件路径来实现。文件路径可以是相对路径，也可以是绝对路径。为了清晰起见，这里我们使用绝对路径。
 
@@ -42,7 +38,6 @@ file_path = "C:/Users/YourName/Desktop/input.txt"
 
 以下是读取文本文件的完整代码示例：
 
-![](img/8f60d14447ea4c81899e9ca66fb585e8_9.png)
 
 ```python
 try:
@@ -55,7 +50,6 @@ except PermissionError:
     print("您没有读取该文件的权限。")
 ```
 
-![](img/8f60d14447ea4c81899e9ca66fb585e8_10.png)
 
 **代码解释：**
 1.  `with open(...) as file:`：打开文件并将返回的文件对象赋值给变量`file`。
@@ -72,14 +66,12 @@ except PermissionError:
 
 以下是读取JSON文件的步骤：
 
-![](img/8f60d14447ea4c81899e9ca66fb585e8_12.png)
 
 首先，导入`json`模块并指定JSON文件的路径。
 
 ![](img/8f60d14447ea4c81899e9ca66fb585e8_14.png)
 
 
-![](img/8f60d14447ea4c81899e9ca66fb585e8_16.png)
 
 ```python
 import json

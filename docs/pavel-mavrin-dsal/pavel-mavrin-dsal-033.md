@@ -1,44 +1,25 @@
 # 033：图论。深度优先搜索。拓扑排序 🎼
 
-![](img/d61f4732f0af4c9ef94281dafc7bc13c_1.png)
 
-![](img/d61f4732f0af4c9ef94281dafc7bc13c_3.png)
 
-![](img/d61f4732f0af4c9ef94281dafc7bc13c_5.png)
 
-![](img/d61f4732f0af4c9ef94281dafc7bc13c_7.png)
 
-![](img/d61f4732f0af4c9ef94281dafc7bc13c_9.png)
 
-![](img/d61f4732f0af4c9ef94281dafc7bc13c_11.png)
 
-![](img/d61f4732f0af4c9ef94281dafc7bc13c_13.png)
 
-![](img/d61f4732f0af4c9ef94281dafc7bc13c_15.png)
 
-![](img/d61f4732f0af4c9ef94281dafc7bc13c_17.png)
 
-![](img/d61f4732f0af4c9ef94281dafc7bc13c_19.png)
 
-![](img/d61f4732f0af4c9ef94281dafc7bc13c_21.png)
 
-![](img/d61f4732f0af4c9ef94281dafc7bc13c_23.png)
 
-![](img/d61f4732f0af4c9ef94281dafc7bc13c_25.png)
 
-![](img/d61f4732f0af4c9ef94281dafc7bc13c_26.png)
 
-![](img/d61f4732f0af4c9ef94281dafc7bc13c_28.png)
 
-![](img/d61f4732f0af4c9ef94281dafc7bc13c_30.png)
 
 在本节课中，我们将要学习图论的基础知识，包括图的基本概念、两种常见的存储方式，以及一个核心算法——深度优先搜索。我们还将探讨深度优先搜索的一个重要应用：在有向无环图中进行拓扑排序。
 
-![](img/d61f4732f0af4c9ef94281dafc7bc13c_32.png)
 
-![](img/d61f4732f0af4c9ef94281dafc7bc13c_34.png)
 
-![](img/d61f4732f0af4c9ef94281dafc7bc13c_36.png)
 
 ## 什么是图？📊
 

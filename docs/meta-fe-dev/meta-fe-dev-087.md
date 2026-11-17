@@ -12,21 +12,15 @@ Adrian是Little Lemon餐厅的联合创始人之一，负责管理所有与产�
 
 
 
-![](img/e873906cf31aa712c8d568cf9a64c817_1.png)
 
-![](img/e873906cf31aa712c8d568cf9a64c817_1.png)
 
-![](img/e873906cf31aa712c8d568cf9a64c817_2.png)
 
-![](img/e873906cf31aa712c8d568cf9a64c817_2.png)
 
 最后，你将获得对最终课程项目所能完成内容的描述。
 
 
 
-![](img/e873906cf31aa712c8d568cf9a64c817_4.png)
 
-![](img/e873906cf31aa712c8d568cf9a64c817_4.png)
 
 ---
 
@@ -38,19 +32,13 @@ Adrian是Little Lemon餐厅的联合创始人之一，负责管理所有与产�
 
 
 
-![](img/e873906cf31aa712c8d568cf9a64c817_6.png)
 
-![](img/e873906cf31aa712c8d568cf9a64c817_7.png)
 
-![](img/e873906cf31aa712c8d568cf9a64c817_6.png)
 
-![](img/e873906cf31aa712c8d568cf9a64c817_8.png)
 
-![](img/e873906cf31aa712c8d568cf9a64c817_7.png)
 
 ---
 
-![](img/e873906cf31aa712c8d568cf9a64c817_8.png)
 
 ## 你的实践任务
 
@@ -60,19 +48,13 @@ Adrian是Little Lemon餐厅的联合创始人之一，负责管理所有与产�
 
 
 
-![](img/e873906cf31aa712c8d568cf9a64c817_10.png)
 
-![](img/e873906cf31aa712c8d568cf9a64c817_11.png)
 
-![](img/e873906cf31aa712c8d568cf9a64c817_12.png)
 
-![](img/e873906cf31aa712c8d568cf9a64c817_10.png)
 
 ---
 
-![](img/e873906cf31aa712c8d568cf9a64c817_11.png)
 
-![](img/e873906cf31aa712c8d568cf9a64c817_12.png)
 
 ## 最终项目：餐桌预订交互元素设计
 
@@ -86,9 +68,7 @@ Adrian是Little Lemon餐厅的联合创始人之一，负责管理所有与产�
 
 
 
-![](img/e873906cf31aa712c8d568cf9a64c817_14.png)
 
-![](img/e873906cf31aa712c8d568cf9a64c817_14.png)
 
 在选择这些选项后，顾客将添加他们的详细信息。这些信息包括：
 
@@ -99,7 +79,6 @@ Adrian是Little Lemon餐厅的联合创始人之一，负责管理所有与产�
 
 
 
-![](img/e873906cf31aa712c8d568cf9a64c817_16.png)
 
 ![](img/e873906cf31aa712c8d568cf9a64c817_16.png)
 

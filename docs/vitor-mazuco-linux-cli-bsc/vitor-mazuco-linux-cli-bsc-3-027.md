@@ -62,9 +62,7 @@
 
 让我们在一个模拟的“bug修复”分支上进行实战。假设我们有一个 `bug-fix` 分支，上面有几个用于修复问题的提交。
 
-![](img/bc3caf97452d069263db566ff4965e45_5.png)
 
-![](img/bc3caf97452d069263db566ff4965e45_6.png)
 
 1.  切换到 `bug-fix` 分支：`git checkout bug-fix`
 2.  进行一些修改并提交。

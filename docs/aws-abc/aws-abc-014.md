@@ -8,23 +8,15 @@
 
 上一节我们提到了关系型数据库的局限性，本节中我们来看看图数据库如何提供更好的解决方案。
 
-![](img/80e14e91e44dc828fb1c09caaaaf01ca_1.png)
 
-![](img/80e14e91e44dc828fb1c09caaaaf01ca_2.png)
 
-![](img/80e14e91e44dc828fb1c09caaaaf01ca_3.png)
 
-![](img/80e14e91e44dc828fb1c09caaaaf01ca_4.png)
 
 图数据库（如Amazon Neptune）专为存储和查询数据之间的关系而优化。当您尝试建模的数据核心在于连接或关系时，图数据库是一个绝佳的选择。
 
-![](img/80e14e91e44dc828fb1c09caaaaf01ca_5.png)
 
-![](img/80e14e91e44dc828fb1c09caaaaf01ca_6.png)
 
-![](img/80e14e91e44dc828fb1c09caaaaf01ca_7.png)
 
-![](img/80e14e91e44dc828fb1c09caaaaf01ca_8.png)
 
 以下是图数据库的典型应用场景：
 *   **社交媒体**：分析用户之间的好友关系、关注关系。
@@ -42,27 +34,18 @@ Neptune的核心优势在于其**速度**与**规模**：
 *   **扩展性**：支持每秒数十万次查询。
 *   **公式化描述**：其性能可以概括为 `低延迟查询 + 高并发处理 = 适用于大规模关系数据`。
 
-![](img/80e14e91e44dc828fb1c09caaaaf01ca_10.png)
 
-![](img/80e14e91e44dc828fb1c09caaaaf01ca_11.png)
 
-![](img/80e14e91e44dc828fb1c09caaaaf01ca_12.png)
 
 此外，Neptune还提供内置安全功能、持续备份、无服务器计算选项以及与其他AWS服务的集成。
 
-![](img/80e14e91e44dc828fb1c09caaaaf01ca_13.png)
 
-![](img/80e14e91e44dc828fb1c09caaaaf01ca_14.png)
 
-![](img/80e14e91e44dc828fb1c09caaaaf01ca_15.png)
 
-![](img/80e14e91e44dc828fb1c09caaaaf01ca_16.png)
 
 ## 创建与使用Neptune数据库
 
-![](img/80e14e91e44dc828fb1c09caaaaf01ca_17.png)
 
-![](img/80e14e91e44dc828fb1c09caaaaf01ca_18.png)
 
 创建Amazon Neptune数据库集群最简单的方法是使用AWS CloudFormation模板。该模板会自动为您创建所有必需的资源，无需手动构建。
 
@@ -78,7 +61,6 @@ Neptune的一个关键架构特点是计算与存储分离：
 *   **openCypher**
 *   **SPARQL**
 
-![](img/80e14e91e44dc828fb1c09caaaaf01ca_20.png)
 
 有时，将查询结果可视化会更有帮助。Neptune Workbench工具通常可以创建查询结果的可视化图表，同时也以表格形式返回结果。
 
@@ -92,21 +74,15 @@ Neptune的一个关键架构特点是计算与存储分离：
 
 Neptune还支持**全球数据库**功能，允许您创建一个跨越多个AWS区域的数据库，从而为全球分布式应用程序提供服务。
 
-![](img/80e14e91e44dc828fb1c09caaaaf01ca_25.png)
 
-![](img/80e14e91e44dc828fb1c09caaaaf01ca_26.png)
 
-![](img/80e14e91e44dc828fb1c09caaaaf01ca_27.png)
 
-![](img/80e14e91e44dc828fb1c09caaaaf01ca_28.png)
 
 ## 总结与后续学习
 
-![](img/80e14e91e44dc828fb1c09caaaaf01ca_29.png)
 
 本节课中我们一起学习了Amazon Neptune，这是一个专为处理高度互联数据而设计的全托管图数据库服务。我们了解了它相对于传统关系型数据库在特定场景下的优势、其核心特性（高性能、易扩展、计算存储分离），以及典型的应用场景和创建使用方法。
 
-![](img/80e14e91e44dc828fb1c09caaaaf01ca_31.png)
 
 ![](img/80e14e91e44dc828fb1c09caaaaf01ca_32.png)
 

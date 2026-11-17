@@ -10,7 +10,6 @@
 
 本节我们将探讨如何通过并行性为程序获取额外性能的基础知识。现代CPU拥有多核并支持SIMD指令，我们希望充分利用这些硬件特性。实现这一目标的方法之一就是使用并行算法。幸运的是，在现代C++版本和一些额外库的帮助下，我们可以获得我们所熟悉的标准STL算法的并行版本。
 
-![](img/dd12c16af7aa82eac0427d6288b55ddf_1.png)
 
 ## 创建示例程序
 
@@ -39,7 +38,6 @@ int main() {
 
 ## 测量串行性能
 
-![](img/dd12c16af7aa82eac0427d6288b55ddf_3.png)
 
 我们可以使用 `time` 命令来测量这个程序的运行时间。在终端中编译并运行：
 
@@ -63,7 +61,6 @@ C++17引入了执行策略（Execution Policies），允许我们指示算法使
 
 修改后的代码如下：
 
-![](img/dd12c16af7aa82eac0427d6288b55ddf_5.png)
 
 ```cpp
 #include <numeric>
@@ -87,18 +84,15 @@ int main() {
 
 对于GCC等编译器，并行算法的实现依赖于外部线程库，例如Intel的Threading Building Blocks（TBB）。你需要先安装这个库（例如，在Ubuntu上使用 `sudo apt-get install libtbb-dev`），然后在编译时链接它。
 
-![](img/dd12c16af7aa82eac0427d6288b55ddf_7.png)
 
 使用以下命令编译并行版本的程序：
 
-![](img/dd12c16af7aa82eac0427d6288b55ddf_9.png)
 
 ```bash
 g++ -o parallel_algo_par parallel_algo.cpp -ltbb
 time ./parallel_algo_par
 ```
 
-![](img/dd12c16af7aa82eac0427d6288b55ddf_11.png)
 
 再次运行程序，你会发现执行时间从大约 **11秒** 减少到了大约 **4秒**，性能提升了接近 **3倍**。我们所做的仅仅是在 `std::reduce` 调用中添加了一个执行策略参数。
 
@@ -106,7 +100,6 @@ time ./parallel_algo_par
 
 并非所有STL算法都支持并行执行策略。CPPReference网站有一个专门的页面列出了所有支持执行策略的算法，例如 `std::sort`， `std::for_each`， `std::transform` 等。在决定并行化之前，请务必查阅文档。
 
-![](img/dd12c16af7aa82eac0427d6288b55ddf_13.png)
 
 使用并行算法时也需注意：
 *   **线程安全性**： 确保传递给算法的函数和操作是线程安全的。

@@ -60,9 +60,7 @@ enum class CompilationPhase {
 
 以下是 `SereneContext` 类的简化结构：
 
-![](img/c135c62f4d82ba624692e31ae1d99790_1.png)
 
-![](img/c135c62f4d82ba624692e31ae1d99790_3.png)
 
 ```cpp
 class SereneContext {

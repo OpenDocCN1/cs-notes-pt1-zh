@@ -100,10 +100,8 @@ AI并不理解它所要照看的系统。它只是基于数据模式进行概率
 
 ---
 
-![](img/a9e78c9fb90f72398d39fe05ba6d4de2_8.png)
 
 ![](img/a9e78c9fb90f72398d39fe05ba6d4de2_8.png)
 
-![](img/a9e78c9fb90f72398d39fe05ba6d4de2_9.png)
 
 ![](img/a9e78c9fb90f72398d39fe05ba6d4de2_9.png)

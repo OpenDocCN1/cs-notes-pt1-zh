@@ -1,26 +1,19 @@
 Linux命令行基础：Part3：虚拟主机配置 🖥️
 
-![](img/44887a28188caa172e2e298543d89b08_1.png)
 
-![](img/44887a28188caa172e2e298543d89b08_2.png)
 
 在本节课中，我们将学习如何在Linux系统上为Apache服务器配置虚拟主机。虚拟主机允许我们在同一台服务器上托管多个网站。
 
-![](img/44887a28188caa172e2e298543d89b08_4.png)
 
-![](img/44887a28188caa172e2e298543d89b08_6.png)
 
 ---
 
-![](img/44887a28188caa172e2e298543d89b08_8.png)
 
 上一节我们介绍了Apache的基本概念，本节中我们来看看其核心配置文件。
 
-![](img/44887a28188caa172e2e298543d89b08_10.png)
 
 Apache的主要配置文件是 `apache2.conf`。该文件默认已预配置，包含许多设置和通用资源。其中，最值得我们关注的部分在文件末尾，它涉及虚拟主机的配置。
 
-![](img/44887a28188caa172e2e298543d89b08_12.png)
 
 以下是关键配置行：
 ```apache
@@ -31,7 +24,6 @@ IncludeOptional sites-enabled/*.conf
 
 ---
 
-![](img/44887a28188caa172e2e298543d89b08_14.png)
 
 ![](img/44887a28188caa172e2e298543d89b08_16.png)
 
@@ -39,13 +31,10 @@ IncludeOptional sites-enabled/*.conf
 
 ![](img/44887a28188caa172e2e298543d89b08_18.png)
 
-![](img/44887a28188caa172e2e298543d89b08_20.png)
 
 让我们进入网站配置目录 `/etc/apache2/sites-available/`。这里有一个名为 `000-default.conf` 的默认配置文件，它控制着Apache的默认网站。
 
-![](img/44887a28188caa172e2e298543d89b08_22.png)
 
-![](img/44887a28188caa172e2e298543d89b08_24.png)
 
 以下是该文件的核心结构解析：
 ```apache
@@ -65,7 +54,6 @@ IncludeOptional sites-enabled/*.conf
 *   **`DocumentRoot`**： 指定了网站内容（如HTML、图片文件）存放的目录。
 *   **日志文件**： `ErrorLog` 记录服务器错误，`CustomLog` 记录所有访问请求。
 
-![](img/44887a28188caa172e2e298543d89b08_26.png)
 
 ![](img/44887a28188caa172e2e298543d89b08_27.png)
 

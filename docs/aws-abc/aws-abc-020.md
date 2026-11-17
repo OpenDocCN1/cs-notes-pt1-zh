@@ -6,15 +6,12 @@ AWS Trusted Advisor是一项服务，它会检查您的AWS环境，并向您提�
 
 ![](img/5e5b0ce8012ba27d24088ffd988a979c_1.png)
 
-![](img/5e5b0ce8012ba27d24088ffd988a979c_2.png)
 
-![](img/5e5b0ce8012ba27d24088ffd988a979c_3.png)
 
 ![](img/5e5b0ce8012ba27d24088ffd988a979c_4.png)
 
 上一节我们介绍了Trusted Advisor的基本概念，本节中我们来看看它的具体检查类别。
 
-![](img/5e5b0ce8012ba27d24088ffd988a979c_5.png)
 
 ![](img/5e5b0ce8012ba27d24088ffd988a979c_6.png)
 

@@ -58,7 +58,6 @@ override func viewDidLoad() {
 
 为了跟踪哪些水果被用户标记为“最爱”，我们需要一个可变的数据结构来存储状态。这里使用 `NSMutableDictionary`，因为它允许我们动态地添加和移除条目。
 
-![](img/8b881d78aa934d4a3ea83dbeed5a0086_1.png)
 
 在视图控制器中声明一个字典：
 
@@ -119,7 +118,6 @@ var selectedFruits = [FruitModel]()
 
 ![](img/8b881d78aa934d4a3ea83dbeed5a0086_3.png)
 
-![](img/8b881d78aa934d4a3ea83dbeed5a0086_4.png)
 
 在 `favoriteTapped(at:)` 方法中更新这个数组，与更新 `favoriteDictionary` 的逻辑同步。
 
@@ -127,7 +125,6 @@ var selectedFruits = [FruitModel]()
 
 最后，我们需要一个按钮来跳转到显示“最爱水果列表”的视图控制器。
 
-![](img/8b881d78aa934d4a3ea83dbeed5a0086_6.png)
 
 1.  在故事板中，向 `FruitListViewController` 添加一个按钮，例如命名为“发送水果列表”。
 2.  为按钮创建一个 `@IBAction` 方法。

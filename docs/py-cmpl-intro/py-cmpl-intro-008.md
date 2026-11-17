@@ -4,7 +4,6 @@
 
 ## 概述
 
-![](img/7fe7139509e0d8ba0d869a8d2ac5a86f_1.png)
 
 我们将创建一个交互式程序，其核心逻辑是：
 1.  获取用户输入的体重数值。
@@ -20,7 +19,6 @@
 
 ### 第一步：获取用户输入
 
-![](img/7fe7139509e0d8ba0d869a8d2ac5a86f_3.png)
 
 首先，我们需要获取用户输入的体重数值和单位。
 
@@ -31,7 +29,6 @@ unit = input("请输入单位（K 代表公斤， L 代表磅）：")
 *   `input()`函数用于获取用户输入。
 *   `float()`函数将输入的字符串转换为浮点数，以便进行数学计算。
 
-![](img/7fe7139509e0d8ba0d869a8d2ac5a86f_5.png)
 
 ### 第二步：使用if语句进行判断和转换
 
@@ -55,13 +52,11 @@ else:
     *   磅转公斤：`weight_in_kilograms = weight_in_pounds / 2.205`
 *   在转换的同时，我们也更新`unit`变量的值，以便在输出时显示正确的单位。
 
-![](img/7fe7139509e0d8ba0d869a8d2ac5a86f_7.png)
 
 ### 第三步：格式化并输出结果
 
 最后，我们需要输出转换后的结果。为了提升可读性，我们使用`round()`函数对结果进行四舍五入，并保留一位小数。
 
-![](img/7fe7139509e0d8ba0d869a8d2ac5a86f_9.png)
 
 ```python
 if unit == "LBS" or unit == "KGS":
@@ -72,12 +67,10 @@ if unit == "LBS" or unit == "KGS":
 
 ## 完整程序代码
 
-![](img/7fe7139509e0d8ba0d869a8d2ac5a86f_11.png)
 
 将以上所有步骤组合起来，就得到了完整的体重转换器程序。
 
 
-![](img/7fe7139509e0d8ba0d869a8d2ac5a86f_13.png)
 
 ```python
 # 获取用户输入
@@ -98,13 +91,10 @@ if unit == "LBS" or unit == "KGS":
     print(f"您的体重是 {round(weight, 1)} {unit}。")
 ```
 
-![](img/7fe7139509e0d8ba0d869a8d2ac5a86f_14.png)
 
-![](img/7fe7139509e0d8ba0d869a8d2ac5a86f_16.png)
 
 ## 程序运行示例
 
-![](img/7fe7139509e0d8ba0d869a8d2ac5a86f_18.png)
 
 让我们看看程序运行时的效果。
 
@@ -115,7 +105,6 @@ if unit == "LBS" or unit == "KGS":
 您的体重是 178.6 LBS。
 ```
 
-![](img/7fe7139509e0d8ba0d869a8d2ac5a86f_20.png)
 
 **示例 2：将磅转换为公斤**
 ```
@@ -131,11 +120,9 @@ if unit == "LBS" or unit == "KGS":
 您输入的单位 ‘Pizza’ 无效。
 ```
 
-![](img/7fe7139509e0d8ba0d869a8d2ac5a86f_22.png)
 
 ## 总结
 
-![](img/7fe7139509e0d8ba0d869a8d2ac5a86f_23.png)
 
 ![](img/7fe7139509e0d8ba0d869a8d2ac5a86f_24.png)
 

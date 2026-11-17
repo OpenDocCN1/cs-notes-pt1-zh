@@ -1,6 +1,5 @@
 # 055：Windows平台上的LLVM工具链中缺失的关键功能
 
-![](img/5e8e7d590db8f916197131c46f30a16a_0.png)
 
 ![](img/5e8e7d590db8f916197131c46f30a16a_0.png)
 

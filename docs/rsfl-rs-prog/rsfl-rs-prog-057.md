@@ -6,9 +6,7 @@
 
 上一节我们介绍了如何创建哈希映射，本节中我们来看看如何更新它。
 
-![](img/e9c3714c1e351e5b13e76a79e812b9fe_1.png)
 
-![](img/e9c3714c1e351e5b13e76a79e812b9fe_2.png)
 
 首先，哈希映射中的每个键值对都必须拥有唯一的键。不能存在两个完全相同的键，因为后一个会覆盖前一个。更新哈希映射数据有多种方法。
 
@@ -24,9 +22,7 @@ items.insert(String::from("cup"), 10);
 println!("{:?}", items);
 ```
 
-![](img/e9c3714c1e351e5b13e76a79e812b9fe_4.png)
 
-![](img/e9c3714c1e351e5b13e76a79e812b9fe_5.png)
 
 这段代码创建一个 `HashMap`，键的类型是 `String`，值的类型是 `i32`。然后插入一个键为 `"cup"`，值为 `10` 的键值对。运行后会输出 `{"cup": 10}`。
 
@@ -46,7 +42,6 @@ println!("{:?}", items);
 以下是使用 `entry` API 的示例：
 
 
-![](img/e9c3714c1e351e5b13e76a79e812b9fe_7.png)
 
 ```rust
 let mut items = HashMap::new();
@@ -57,19 +52,14 @@ items.entry(String::from("spoon")).or_insert(20);
 println!("{:?}", items);
 ```
 
-![](img/e9c3714c1e351e5b13e76a79e812b9fe_9.png)
 
-![](img/e9c3714c1e351e5b13e76a79e812b9fe_10.png)
 
-![](img/e9c3714c1e351e5b13e76a79e812b9fe_11.png)
 
 `entry` 方法检查键是否存在。`or_insert` 方法仅在键不存在时插入提供的值。
 *   对于键 `"cup"`，由于它已存在（值为10），`or_insert(20)` 不会更新其值。
 *   对于键 `"spoon"`，由于它不存在，`or_insert(20)` 会将其插入，值为20。
 
-![](img/e9c3714c1e351e5b13e76a79e812b9fe_13.png)
 
-![](img/e9c3714c1e351e5b13e76a79e812b9fe_15.png)
 
 因此，最终输出是 `{"cup": 10, "spoon": 20}`。
 
@@ -84,14 +74,11 @@ println!("{:?}", value); // 输出 10
 
 哈希映射另一个常见用例是查找一个键的值，并基于旧值进行更新。例如，统计一段文本中每个单词的出现次数。
 
-![](img/e9c3714c1e351e5b13e76a79e812b9fe_17.png)
 
-![](img/e9c3714c1e351e5b13e76a79e812b9fe_18.png)
 
 以下是实现单词计数器的代码：
 
 
-![](img/e9c3714c1e351e5b13e76a79e812b9fe_20.png)
 
 ```rust
 let text = "Bob says: Bob said that. Bob said that Bob. Bob, bob didn't say anything";
@@ -104,7 +91,6 @@ for word in text.split_whitespace() {
 println!("{:?}", map);
 ```
 
-![](img/e9c3714c1e351e5b13e76a79e812b9fe_21.png)
 
 让我们分解这段代码：
 1.  `text.split_whitespace()`：将字符串按空白字符分割，得到一个单词迭代器。
@@ -117,7 +103,6 @@ println!("{:?}", map);
 
 ## 关于哈希函数
 
-![](img/e9c3714c1e351e5b13e76a79e812b9fe_23.png)
 
 默认情况下，Rust 的 `HashMap` 使用一个名为 **SipHash** 的哈希函数。它能提供对涉及哈希表的拒绝服务（DoS）攻击的抵抗力。这不是最快的哈希算法，但用一定的性能代价换取更好的安全性通常是值得的。
 

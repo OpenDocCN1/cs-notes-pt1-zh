@@ -39,9 +39,7 @@
 
 **ARP（地址解析协议）的核心作用是通过IP地址来寻找对应的MAC地址**。其工作过程如下：
 
-![](img/21bb35ecfb46feab48d98dc198b6b6b5_3.png)
 
-![](img/21bb35ecfb46feab48d98dc198b6b6b5_5.png)
 
 1.  **ARP请求（广播）**：当PC1需要与网关（IP: 192.168.1.1）通信时，它会先在局域网内广播一个ARP请求包，内容为：“谁的IP是192.168.1.1？请告诉你的MAC地址。”
 2.  **ARP响应（单播）**：局域网内所有设备都会收到这个广播包。只有IP地址为192.168.1.1的网关设备会做出响应，向PC1发送一个单播回复：“我的IP是192.168.1.1，我的MAC地址是XX:XX:XX:XX:XX:XX。”
@@ -51,23 +49,17 @@
 
 ## ARP攻击与防御策略
 
-![](img/21bb35ecfb46feab48d98dc198b6b6b5_7.png)
 
 理解了ARP的工作原理，我们就能分析常见的网络攻击——ARP欺骗/攻击。
 
-![](img/21bb35ecfb46feab48d98dc198b6b6b5_9.png)
 
 ### ARP攻击原理
 
-![](img/21bb35ecfb46feab48d98dc198b6b6b5_11.png)
 
-![](img/21bb35ecfb46feab48d98dc198b6b6b5_13.png)
 
 攻击者通过伪造ARP响应包，扰乱正常设备的ARP表，主要分为两种目的：
 
-![](img/21bb35ecfb46feab48d98dc198b6b6b5_15.png)
 
-![](img/21bb35ecfb46feab48d98dc198b6b6b5_17.png)
 
 1.  **ARP欺骗（断网攻击）**：
     *   攻击者（例如被病毒感染的PC2）持续向网络发送伪造的ARP广播，声称：“网关IP（192.168.1.1）的MAC地址是GG:GG:GG:GG:GG:GG”（一个虚假的MAC）。

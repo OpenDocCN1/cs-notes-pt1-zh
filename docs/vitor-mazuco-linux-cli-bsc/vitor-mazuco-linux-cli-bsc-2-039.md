@@ -12,7 +12,6 @@ GRUB是大多数Linux发行版使用的引导加载程序。它负责在计算�
 
 ## 配置GRUB默认文件
 
-![](img/dc0e6fd4a5e4ae2db4982ee455a5486e_3.png)
 
 GRUB的主要配置文件通常是 `/etc/default/grub`。我们在此文件中进行基本设置。
 
@@ -22,7 +21,6 @@ GRUB的主要配置文件通常是 `/etc/default/grub`。我们在此文件中�
 
 以下是修改配置文件的步骤：
 
-![](img/dc0e6fd4a5e4ae2db4982ee455a5486e_5.png)
 
 1.  使用文本编辑器（如 `nano` 或 `vi`）打开配置文件：
     ```bash
@@ -38,7 +36,6 @@ GRUB的主要配置文件通常是 `/etc/default/grub`。我们在此文件中�
     ```
 4.  保存文件并退出编辑器。
 
-![](img/dc0e6fd4a5e4ae2db4982ee455a5486e_7.png)
 
 **重要提示**：请务必在虚拟机中进行此操作。如果在实体机上操作出错，恢复起来会困难得多。
 
@@ -51,16 +48,13 @@ GRUB的主要配置文件通常是 `/etc/default/grub`。我们在此文件中�
 sudo update-grub
 ```
 
-![](img/dc0e6fd4a5e4ae2db4982ee455a5486e_9.png)
 
 对于基于Red Hat/Fedora的系统，使用以下命令：
 ```bash
 sudo grub2-mkconfig -o /boot/grub2/grub.cfg
 ```
 
-![](img/dc0e6fd4a5e4ae2db4982ee455a5486e_11.png)
 
-![](img/dc0e6fd4a5e4ae2db4982ee455a5486e_12.png)
 
 执行更新命令后，新的配置会被编译并写入 `/boot/grub/grub.cfg` 文件。
 

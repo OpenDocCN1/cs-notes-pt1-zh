@@ -80,7 +80,6 @@ INNER JOIN products p ON o.product_id = p.product_id;
 
 ## 总结
 
-![](img/6e292254dd76eca3f3321ea749575ac7_3.png)
 
 本节课中，我们一起学习了优化MySQL SELECT查询的三个核心技巧：
 

@@ -17,13 +17,10 @@
 
 ## 安装必要软件包
 
-![](img/df47c3cd4bca027d219448ec2dd8b28f_1.png)
 
 为了使用USB设备进行认证，我们需要安装 `pamusb-tools` 软件包。在较新的Ubuntu（16.04+）和Debian（8/9+）版本中，该软件包可能不在默认仓库中。
 
-![](img/df47c3cd4bca027d219448ec2dd8b28f_3.png)
 
-![](img/df47c3cd4bca027d219448ec2dd8b28f_4.png)
 
 因此，我们需要先添加其PPA仓库，然后进行安装。
 
@@ -87,7 +84,6 @@ sudo pamusb-conf --add-user user1
 
 ## 测试USB认证登录
 
-![](img/df47c3cd4bca027d219448ec2dd8b28f_10.png)
 
 现在，让我们测试配置是否生效。首先，确保USB设备已连接到系统。
 
@@ -99,28 +95,23 @@ sudo pamusb-check --user user1
 
 如果配置正确，命令会提示该用户需要通过USB设备认证。
 
-![](img/df47c3cd4bca027d219448ec2dd8b28f_12.png)
 
-![](img/df47c3cd4bca027d219448ec2dd8b28f_13.png)
 
 **关键测试步骤：**
 1.  保持USB设备插入状态，尝试切换到 `user1` 用户（`su - user1`）。你应该能直接登录，无需输入密码，因为USB设备充当了令牌。
 2.  尝试切换到未配置USB认证的其他用户（如 `user2`），系统会要求输入密码。
 3.  **最终验证**：安全移除USB设备，再次尝试切换到 `user1` 用户。此时认证会失败，系统会回退并要求你输入 `user1` 的密码。
 
-![](img/df47c3cd4bca027d219448ec2dd8b28f_15.png)
 
 通过以上步骤，你可以验证USB令牌认证是否按预期工作。
 
 ## 图形界面环境配置（可选）
 
-![](img/df47c3cd4bca027d219448ec2dd8b28f_17.png)
 
 如果你在带有图形登录管理器（如GDM、LightDM、KDM）的桌面环境中使用此功能，可能需要在PAM配置中为图形会话显式启用 `pam_usb` 模块。
 
 这通常涉及编辑 `/etc/pam.d/` 目录下的相应配置文件（例如 `gdm-password` 或 `lightdm`），添加类似下面的一行：
 
-![](img/df47c3cd4bca027d219448ec2dd8b28f_19.png)
 
 ```
 auth    sufficient      pam_usb.so
@@ -128,7 +119,6 @@ auth    sufficient      pam_usb.so
 
 **注意**：服务器环境通常没有图形界面，因此此步骤是可选的。修改PAM配置前请务必备份原文件，错误的配置可能导致无法登录系统。
 
-![](img/df47c3cd4bca027d219448ec2dd8b28f_21.png)
 
 ## 总结
 

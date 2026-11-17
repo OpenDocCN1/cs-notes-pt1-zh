@@ -1,12 +1,8 @@
 # 005：scanf 函数简介
 
-![](img/de67d35cd273fff48fb8b9e41e53e97e_0.png)
 
-![](img/de67d35cd273fff48fb8b9e41e53e97e_1.png)
 
-![](img/de67d35cd273fff48fb8b9e41e53e97e_0.png)
 
-![](img/de67d35cd273fff48fb8b9e41e53e97e_1.png)
 
 ## 概述
 
@@ -68,6 +64,5 @@ a = getchar();
 
 本节课中我们一起学习了 `scanf` 函数。我们了解到它是一个用于从标准输入读取数据的库函数，其核心在于正确使用格式说明符（如 `%d`、`%c`）和地址运算符 `&`。我们还简单了解了 `getchar` 函数用于读取单个字符的用途。掌握这些输入函数是进行用户交互式编程的基础。
 
-![](img/de67d35cd273fff48fb8b9e41e53e97e_3.png)
 
 ![](img/de67d35cd273fff48fb8b9e41e53e97e_3.png)

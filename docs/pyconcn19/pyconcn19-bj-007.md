@@ -1,8 +1,6 @@
 # 007：理解 Python AST
 
-![](img/3960f60f875a328668f9c3ebf8a6c993_0.png)
 
-![](img/3960f60f875a328668f9c3ebf8a6c993_0.png)
 
 在本教程中，我们将学习 Python 抽象语法树（AST）的核心概念、相关库以及如何利用 AST 解决实际问题。我们将从 Python 代码的编译过程开始，逐步深入到 AST 的操作与应用。
 
@@ -163,6 +161,5 @@ updated_tree = merger.visit(old_tree)
 
 希望本教程能帮助你理解并开始使用 Python AST 这个强大的工具。
 
-![](img/3960f60f875a328668f9c3ebf8a6c993_2.png)
 
 ![](img/3960f60f875a328668f9c3ebf8a6c993_2.png)

@@ -73,10 +73,8 @@
 
 做得好。
 
-![](img/10b50ee5b76e448c622a7d1c58b77178_1.png)
 
 ![](img/10b50ee5b76e448c622a7d1c58b77178_1.png)
 
-![](img/10b50ee5b76e448c622a7d1c58b77178_2.png)
 
 ![](img/10b50ee5b76e448c622a7d1c58b77178_2.png)

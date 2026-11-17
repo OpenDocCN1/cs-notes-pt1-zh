@@ -6,9 +6,7 @@ Python超全入门教程：P38：列表推导式
 
 上一节我们介绍了列表推导式的基本概念，本节中我们来看看如何通过具体示例来掌握它。
 
-![](img/c9ed449c6614a09ae9cc40c26b4043d8_1.png)
 
-![](img/c9ed449c6614a09ae9cc40c26b4043d8_3.png)
 
 ### 从传统循环到列表推导式
 
@@ -28,17 +26,14 @@ doubles = [x * 2 for x in range(1, 11)]
 print(doubles)  # 输出: [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
 ```
 
-![](img/c9ed449c6614a09ae9cc40c26b4043d8_5.png)
 
 可以看到，列表推导式将多行代码压缩为一行，逻辑更清晰。
 
-![](img/c9ed449c6614a09ae9cc40c26b4043d8_7.png)
 
 ### 基础练习
 
 接下来，我们通过几个基础练习来熟悉列表推导式的语法。
 
-![](img/c9ed449c6614a09ae9cc40c26b4043d8_9.png)
 
 **练习1：创建数字的三倍列表**
 ```python
@@ -46,9 +41,7 @@ triples = [y * 3 for y in range(1, 11)]
 print(triples)  # 输出: [3, 6, 9, 12, 15, 18, 21, 24, 27, 30]
 ```
 
-![](img/c9ed449c6614a09ae9cc40c26b4043d8_11.png)
 
-![](img/c9ed449c6614a09ae9cc40c26b4043d8_13.png)
 
 **练习2：创建数字的平方列表**
 ```python
@@ -56,15 +49,12 @@ squares = [z * z for z in range(1, 11)]
 print(squares)  # 输出: [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
 ```
 
-![](img/c9ed449c6614a09ae9cc40c26b4043d8_15.png)
 
-![](img/c9ed449c6614a09ae9cc40c26b4043d8_17.png)
 
 ### 处理字符串列表
 
 列表推导式同样适用于处理字符串列表。
 
-![](img/c9ed449c6614a09ae9cc40c26b4043d8_19.png)
 
 **练习3：将水果名称转换为大写**
 ```python
@@ -79,7 +69,6 @@ fruit_chars = [fruit[0] for fruit in fruits]
 print(fruit_chars)  # 输出: ['a', 'o', 'b', 'c']
 ```
 
-![](img/c9ed449c6614a09ae9cc40c26b4043d8_21.png)
 
 ### 使用条件筛选
 
@@ -98,7 +87,6 @@ negative_nums = [num for num in numbers if num < 0]
 print(negative_nums)  # 输出: [-2, -4, -6]
 ```
 
-![](img/c9ed449c6614a09ae9cc40c26b4043d8_23.png)
 
 **练习7：筛选偶数**
 ```python
@@ -107,11 +95,8 @@ even_nums = [num for num in numbers if num % 2 == 0]
 print(even_nums)  # 输出: [-2, -4, -6, 8]
 ```
 
-![](img/c9ed449c6614a09ae9cc40c26b4043d8_25.png)
 
-![](img/c9ed449c6614a09ae9cc40c26b4043d8_27.png)
 
-![](img/c9ed449c6614a09ae9cc40c26b4043d8_29.png)
 
 **练习8：筛选奇数**
 ```python

@@ -1,8 +1,6 @@
 # 144：删除表空间 🗑️
 
-![](img/03ba0ad78b6ef4ec11736f8c35809e73_1.png)
 
-![](img/03ba0ad78b6ef4ec11736f8c35809e73_3.png)
 
 在本节课中，我们将学习如何在Oracle数据库中使用`DROP TABLESPACE`命令来删除表空间。我们将详细讲解其语法、注意事项，并通过实例演示不同场景下的删除操作。
 
@@ -10,24 +8,19 @@
 
 `DROP TABLESPACE`命令用于从Oracle数据库中移除一个表空间。删除表空间时，需要根据其是否包含数据对象（如表）或存在约束（如外键）来使用不同的选项，否则操作会失败。
 
-![](img/03ba0ad78b6ef4ec11736f8c35809e73_5.png)
 
-![](img/03ba0ad78b6ef4ec11736f8c35809e73_7.png)
 
 ## 基本语法与注意事项
 
 上一节我们介绍了创建表空间，本节中我们来看看如何删除它。`DROP TABLESPACE`命令的基本语法如下：
 
-![](img/03ba0ad78b6ef4ec11736f8c35809e73_9.png)
 
 ```sql
 DROP TABLESPACE tablespace_name
 [INCLUDING CONTENTS [AND DATAFILES] [CASCADE CONSTRAINTS]];
 ```
 
-![](img/03ba0ad78b6ef4ec11736f8c35809e73_11.png)
 
-![](img/03ba0ad78b6ef4ec11736f8c35809e73_13.png)
 
 以下是使用该命令前必须了解的关键点：
 *   如果表空间**非空**（包含任何对象），必须使用`INCLUDING CONTENTS`选项。
@@ -43,10 +36,8 @@ DROP TABLESPACE tablespace_name
 
 首先，我们创建一个空的表空间，然后将其删除。
 
-![](img/03ba0ad78b6ef4ec11736f8c35809e73_15.png)
 
 
-![](img/03ba0ad78b6ef4ec11736f8c35809e73_17.png)
 
 ```sql
 -- 创建一个空的表空间
@@ -60,22 +51,15 @@ DROP TABLESPACE space_1;
 
 接下来，我们创建一个包含表的表空间，并尝试删除它。
 
-![](img/03ba0ad78b6ef4ec11736f8c35809e73_19.png)
-
-![](img/03ba0ad78b6ef4ec11736f8c35809e73_21.png)
 
 
-![](img/03ba0ad78b6ef4ec11736f8c35809e73_23.png)
 
 
-![](img/03ba0ad78b6ef4ec11736f8c35809e73_25.png)
 
 
-![](img/03ba0ad78b6ef4ec11736f8c35809e73_27.png)
 
-![](img/03ba0ad78b6ef4ec11736f8c35809e73_29.png)
 
-![](img/03ba0ad78b6ef4ec11736f8c35809e73_31.png)
+
 
 ```sql
 -- 创建第二个表空间
@@ -89,29 +73,21 @@ DROP TABLESPACE space_2 INCLUDING CONTENTS;
 ```
 当表空间包含对象时，必须使用`INCLUDING CONTENTS`选项来同时删除其中的所有对象。
 
-![](img/03ba0ad78b6ef4ec11736f8c35809e73_33.png)
 
-![](img/03ba0ad78b6ef4ec11736f8c35809e73_34.png)
 
 ### 3. 删除存在约束的表空间
 
-![](img/03ba0ad78b6ef4ec11736f8c35809e73_36.png)
 
 最后，我们来看一个更复杂的场景：删除一个其内部表存在外键约束的表空间。
 
 
-![](img/03ba0ad78b6ef4ec11736f8c35809e73_38.png)
 
 
-![](img/03ba0ad78b6ef4ec11736f8c35809e73_40.png)
 
 
-![](img/03ba0ad78b6ef4ec11736f8c35809e73_42.png)
 
 
-![](img/03ba0ad78b6ef4ec11736f8c35809e73_44.png)
 
-![](img/03ba0ad78b6ef4ec11736f8c35809e73_46.png)
 
 ```sql
 -- 创建两个表空间
@@ -131,13 +107,10 @@ DROP TABLESPACE space_3 INCLUDING CONTENTS CASCADE CONSTRAINTS;
 ```
 当表空间中的对象被其他对象引用（存在外键约束）时，必须添加`CASCADE CONSTRAINTS`选项来级联删除这些约束。
 
-![](img/03ba0ad78b6ef4ec11736f8c35809e73_48.png)
 
 ## 总结
 
-![](img/03ba0ad78b6ef4ec11736f8c35809e73_50.png)
 
-![](img/03ba0ad78b6ef4ec11736f8c35809e73_52.png)
 
 本节课中我们一起学习了`DROP TABLESPACE`命令的使用。关键点在于：
 1.  删除**空表空间**可直接操作。

@@ -1,30 +1,22 @@
 # 004：显示收藏列表 🍎
 
-![](img/226b7b3fb259e89941e86fffad7da0ac_1.png)
 
-![](img/226b7b3fb259e89941e86fffad7da0ac_3.png)
 
-![](img/226b7b3fb259e89941e86fffad7da0ac_5.png)
 
 在本节课中，我们将学习如何在一个新的视图控制器中显示用户选择的“最爱水果”列表。我们将通过创建新的界面、设置表格视图、传递数据模型以及实现导航来完成这个功能。
 
 ---
 
-![](img/226b7b3fb259e89941e86fffad7da0ac_7.png)
 
 ## 创建新视图控制器与界面
 
-![](img/226b7b3fb259e89941e86fffad7da0ac_9.png)
 
 上一节我们介绍了如何收集用户的选择。本节中，我们来看看如何创建一个新的界面来展示这些选择。
 
-![](img/226b7b3fb259e89941e86fffad7da0ac_11.png)
 
-![](img/226b7b3fb259e89941e86fffad7da0ac_13.png)
 
 首先，我们需要在 `Main.storyboard` 中添加一个新的视图控制器。
 
-![](img/226b7b3fb259e89941e86fffad7da0ac_15.png)
 
 以下是具体步骤：
 1.  打开 `Main.storyboard` 文件。
@@ -43,11 +35,9 @@
 
 ---
 
-![](img/226b7b3fb259e89941e86fffad7da0ac_21.png)
 
 ## 创建视图控制器与单元格类
 
-![](img/226b7b3fb259e89941e86fffad7da0ac_23.png)
 
 界面搭建完成后，我们需要创建对应的 Swift 类来管理逻辑。
 
@@ -61,11 +51,9 @@
 
 ---
 
-![](img/226b7b3fb259e89941e86fffad7da0ac_25.png)
 
 ## 设置表格视图数据源与代理
 
-![](img/226b7b3fb259e89941e86fffad7da0ac_27.png)
 
 现在，我们需要在 `DisplayFavoriteListViewController` 中设置表格视图，并准备显示数据。
 
@@ -114,7 +102,6 @@ extension DisplayFavoriteListViewController: UITableViewDelegate, UITableViewDat
 
 ![](img/226b7b3fb259e89941e86fffad7da0ac_31.png)
 
-![](img/226b7b3fb259e89941e86fffad7da0ac_33.png)
 
 数据展示的逻辑已经完成，现在需要实现从主界面到收藏列表的导航。
 
@@ -122,15 +109,12 @@ extension DisplayFavoriteListViewController: UITableViewDelegate, UITableViewDat
 
 在 `DisplayFavoriteListViewController` 的 `viewDidLoad` 中，设置导航栏标题。
 
-![](img/226b7b3fb259e89941e86fffad7da0ac_35.png)
 
-![](img/226b7b3fb259e89941e86fffad7da0ac_37.png)
 
 ```swift
 self.title = “Favorite Fruit List”
 ```
 
-![](img/226b7b3fb259e89941e86fffad7da0ac_39.png)
 
 回到主视图控制器，在“发送收藏列表”按钮的 `@IBAction` 方法中，实现导航跳转和数据传递。
 
@@ -146,15 +130,12 @@ self.title = “Favorite Fruit List”
 }
 ```
 
-![](img/226b7b3fb259e89941e86fffad7da0ac_41.png)
 
-![](img/226b7b3fb259e89941e86fffad7da0ac_42.png)
 
 同时，当用户返回主界面时，需要清空临时存储的收藏数据，以便下次重新选择。
 
 ![](img/226b7b3fb259e89941e86fffad7da0ac_44.png)
 
-![](img/226b7b3fb259e89941e86fffad7da0ac_46.png)
 
 ```swift
 override func viewWillAppear(_ animated: Bool) {
@@ -165,7 +146,6 @@ override func viewWillAppear(_ animated: Bool) {
 }
 ```
 
-![](img/226b7b3fb259e89941e86fffad7da0ac_48.png)
 
 ![](img/226b7b3fb259e89941e86fffad7da0ac_50.png)
 

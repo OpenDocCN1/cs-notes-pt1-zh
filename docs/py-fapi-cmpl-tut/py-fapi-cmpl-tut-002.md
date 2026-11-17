@@ -40,7 +40,6 @@ async def get_current_user(
 
 接下来，我们创建一个路由来获取当前登录用户。
 
-![](img/7d5adcabc5e6be579c6937eaaf16dbca_8.png)
 
 
 ![](img/7d5adcabc5e6be579c6937eaaf16dbca_10.png)
@@ -109,7 +108,6 @@ class RoleChecker:
 
 ![](img/7d5adcabc5e6be579c6937eaaf16dbca_22.png)
 
-![](img/7d5adcabc5e6be579c6937eaaf16dbca_23.png)
 
 ```python
 from source.auth.dependencies import RoleChecker
@@ -193,7 +191,6 @@ def create_exception_handler(status_code: int, detail: Any):
 
 然后，我们将自定义异常注册到 FastAPI 应用中。
 
-![](img/7d5adcabc5e6be579c6937eaaf16dbca_25.png)
 
 ![](img/7d5adcabc5e6be579c6937eaaf16dbca_27.png)
 
@@ -397,7 +394,6 @@ async def password_reset_confirm(token: str, passwords: PasswordResetConfirm, se
 
 ---
 
-![](img/7d5adcabc5e6be579c6937eaaf16dbca_87.png)
 
 ![](img/7d5adcabc5e6be579c6937eaaf16dbca_88.png)
 
@@ -503,7 +499,6 @@ async def send_email_endpoint(
 
 ![](img/7d5adcabc5e6be579c6937eaaf16dbca_154.png)
 
-![](img/7d5adcabc5e6be579c6937eaaf16dbca_156.png)
 
 ![](img/7d5adcabc5e6be579c6937eaaf16dbca_158.png)
 
@@ -535,7 +530,6 @@ async def send_email_celery_endpoint(email_data: EmailSchema):
 
 上一节我们介绍了后台任务，本节中我们来看看如何生成 API 文档。
 
-![](img/7d5adcabc5e6be579c6937eaaf16dbca_162.png)
 
 ![](img/7d5adcabc5e6be579c6937eaaf16dbca_164.png)
 
@@ -585,7 +579,6 @@ app = FastAPI(
 
 ![](img/7d5adcabc5e6be579c6937eaaf16dbca_186.png)
 
-![](img/7d5adcabc5e6be579c6937eaaf16dbca_188.png)
 
 ![](img/7d5adcabc5e6be579c6937eaaf16dbca_190.png)
 
@@ -715,7 +708,6 @@ DOMAIN=https://your-app.onrender.com
 
 ![](img/7d5adcabc5e6be579c6937eaaf16dbca_275.png)
 
-![](img/7d5adcabc5e6be579c6937eaaf16dbca_277.png)
 
 ![](img/7d5adcabc5e6be579c6937eaaf16dbca_279.png)
 

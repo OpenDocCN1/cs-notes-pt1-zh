@@ -1,86 +1,55 @@
 # CCNA教程合集：08：IP地址基础与子网划分详解 📚
 
-![](img/bd37e7ae710dc16a01ed942baf4462b1_1.png)
 
-![](img/bd37e7ae710dc16a01ed942baf4462b1_3.png)
 
 在本节课中，我们将要学习IPV4协议的核心——IP地址。我们将从IP地址的基本概念、格式、分类讲起，并深入探讨如何通过子网划分来高效利用宝贵的IP地址资源。
 
-![](img/bd37e7ae710dc16a01ed942baf4462b1_5.png)
 
 ---
 
-![](img/bd37e7ae710dc16a01ed942baf4462b1_7.png)
 
-![](img/bd37e7ae710dc16a01ed942baf4462b1_9.png)
 
 ## IP地址概述 🌐
 
-![](img/bd37e7ae710dc16a01ed942baf4462b1_11.png)
 
-![](img/bd37e7ae710dc16a01ed942baf4462b1_12.png)
 
-![](img/bd37e7ae710dc16a01ed942baf4462b1_14.png)
 
 IP地址是TCP/IP网络环境中用于标识设备接口的逻辑地址。所有具备三层功能的设备接口，如计算机、服务器、路由器、多层交换机和防火墙的接口，都需要配置IP地址才能进行网络通信。
 
-![](img/bd37e7ae710dc16a01ed942baf4462b1_16.png)
 
-![](img/bd37e7ae710dc16a01ed942baf4462b1_17.png)
 
-![](img/bd37e7ae710dc16a01ed942baf4462b1_18.png)
 
-![](img/bd37e7ae710dc16a01ed942baf4462b1_20.png)
 
-![](img/bd37e7ae710dc16a01ed942baf4462b1_21.png)
 
-![](img/bd37e7ae710dc16a01ed942baf4462b1_23.png)
 
-![](img/bd37e7ae710dc16a01ed942baf4462b1_24.png)
 
 IP地址与你所处的网络位置息息相关。在同一个网络中，所有主机的IP地址**网络位**必须相同；在不同网络中，主机的IP地址**网络位**必须不同。地址的分配可以通过手工配置或DHCP（动态主机配置协议）自动完成。
 
-![](img/bd37e7ae710dc16a01ed942baf4462b1_25.png)
 
 ---
 
-![](img/bd37e7ae710dc16a01ed942baf4462b1_27.png)
 
 ## IP地址格式与进制转换 🔢
 
-![](img/bd37e7ae710dc16a01ed942baf4462b1_28.png)
 
-![](img/bd37e7ae710dc16a01ed942baf4462b1_29.png)
 
-![](img/bd37e7ae710dc16a01ed942baf4462b1_31.png)
 
 一个IPV4地址由32位二进制数组成，通常以“点分十进制”格式表示，例如 `192.168.1.1`。它将32位地址分为4段，每段8位，用十进制数表示，段间用点分隔。
 
-![](img/bd37e7ae710dc16a01ed942baf4462b1_33.png)
 
 ### 二进制与十进制转换
 
-![](img/bd37e7ae710dc16a01ed942baf4462b1_35.png)
 
-![](img/bd37e7ae710dc16a01ed942baf4462b1_36.png)
 
-![](img/bd37e7ae710dc16a01ed942baf4462b1_37.png)
 
-![](img/bd37e7ae710dc16a01ed942baf4462b1_39.png)
 
-![](img/bd37e7ae710dc16a01ed942baf4462b1_40.png)
 
-![](img/bd37e7ae710dc16a01ed942baf4462b1_42.png)
 
-![](img/bd37e7ae710dc16a01ed942baf4462b1_44.png)
 
 理解进制转换是计算IP地址的基础。
 
-![](img/bd37e7ae710dc16a01ed942baf4462b1_45.png)
 
-![](img/bd37e7ae710dc16a01ed942baf4462b1_47.png)
 
-![](img/bd37e7ae710dc16a01ed942baf4462b1_48.png)
 
 *   **二进制转十进制**：使用加法。二进制数每一位对应一个十进制权值（从右向左，依次是2^0, 2^1, 2^2...）。将值为“1”的位对应的权值相加即可。
     *   **公式**：`十进制结果 = Σ(二进制位值 * 2^(位置索引))`，其中位置索引从0开始（最右位）。
@@ -94,35 +63,23 @@ IP地址与你所处的网络位置息息相关。在同一个网络中，所有
         *   1 - 1 = 0 -> 第1位为1
         *   结果：`11000101`
 
-![](img/bd37e7ae710dc16a01ed942baf4462b1_50.png)
 
-![](img/bd37e7ae710dc16a01ed942baf4462b1_51.png)
 
 因此，IP地址每段的十进制取值范围是 **0 到 255**。
 
-![](img/bd37e7ae710dc16a01ed942baf4462b1_53.png)
 
-![](img/bd37e7ae710dc16a01ed942baf4462b1_54.png)
 
 ---
 
-![](img/bd37e7ae710dc16a01ed942baf4462b1_56.png)
 
-![](img/bd37e7ae710dc16a01ed942baf4462b1_57.png)
 
-![](img/bd37e7ae710dc16a01ed942baf4462b1_58.png)
 
-![](img/bd37e7ae710dc16a01ed942baf4462b1_59.png)
 
-![](img/bd37e7ae710dc16a01ed942baf4462b1_61.png)
 
-![](img/bd37e7ae710dc16a01ed942baf4462b1_62.png)
 
-![](img/bd37e7ae710dc16a01ed942baf4462b1_64.png)
 
 ## IP地址的分类（主类）🏷️
 
-![](img/bd37e7ae710dc16a01ed942baf4462b1_66.png)
 
 IANA将IP地址分为五大类，其中A、B、C类为单播地址，用于标识单个接口。
 
@@ -135,9 +92,7 @@ IANA将IP地址分为五大类，其中A、B、C类为单播地址，用于标�
 
 *   **C类地址**：首字节范围 **192 - 223**。网络位为前24位，主机位为后8位。每个C类网络包含254个地址。
 
-![](img/bd37e7ae710dc16a01ed942baf4462b1_68.png)
 
-![](img/bd37e7ae710dc16a01ed942baf4462b1_70.png)
 
 *   **D类地址**：首字节范围 **224 - 239**。用于组播，标识一组接收者。
 
@@ -147,11 +102,8 @@ IANA将IP地址分为五大类，其中A、B、C类为单播地址，用于标�
 1.  **主机位全为0的地址**：称为**网络号**，用于标识网络本身。
 2.  **主机位全为1的地址**：称为**定向广播地址**，用于向该网络内所有主机发送数据。
 
-![](img/bd37e7ae710dc16a01ed942baf4462b1_72.png)
 
-![](img/bd37e7ae710dc16a01ed942baf4462b1_73.png)
 
-![](img/bd37e7ae710dc16a01ed942baf4462b1_74.png)
 
 ---
 
@@ -200,7 +152,6 @@ IANA将IP地址分为五大类，其中A、B、C类为单播地址，用于标�
 
 针对主类地址分配造成的巨大浪费，我们深入探讨了**子网划分**这一关键技术。通过借用主机位作为子网位，我们可以将大网络切分为小网络。而**子网掩码**则是声明网络位长度的关键工具。最后，我们比较了**FLSM**和**VLSM**两种子网划分方式，认识到VLSM结合无类路由协议是实现地址高效利用的现代网络基础。
 
-![](img/bd37e7ae710dc16a01ed942baf4462b1_76.png)
 
 ![](img/bd37e7ae710dc16a01ed942baf4462b1_77.png)
 

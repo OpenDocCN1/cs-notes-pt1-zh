@@ -12,9 +12,7 @@
 
 假设我们有一个设置电脑屏幕亮度的函数。该函数接收一个 `Option<i32>` 类型的参数，表示亮度值（`Some(i32)`）或没有设置（`None`）。
 
-![](img/bd11049ccbde00d531fa14950e1ea096_1.png)
 
-![](img/bd11049ccbde00d531fa14950e1ea096_2.png)
 
 以下是使用 `match` 的实现：
 
@@ -33,9 +31,7 @@ fn set_brightness(brightness: Option<i32>) {
 
 在 `main` 函数中调用它：
 
-![](img/bd11049ccbde00d531fa14950e1ea096_4.png)
 
-![](img/bd11049ccbde00d531fa14950e1ea096_5.png)
 
 ```rust
 fn main() {
@@ -62,15 +58,11 @@ fn set_brightness(brightness: Option<i32>) {
 }
 ```
 
-![](img/bd11049ccbde00d531fa14950e1ea096_7.png)
 
-![](img/bd11049ccbde00d531fa14950e1ea096_8.png)
 
 这段代码与之前的 `match` 表达式完全等效。它的含义是：**如果** `brightness` 能够匹配 `Some(value)` 这个模式，**那么**就执行后面的代码块。如果匹配失败（即 `brightness` 是 `None`），则跳过整个代码块。
 
-![](img/bd11049ccbde00d531fa14950e1ea096_9.png)
 
-![](img/bd11049ccbde00d531fa14950e1ea096_10.png)
 
 运行修改后的代码，结果与之前完全相同。
 
@@ -92,11 +84,9 @@ fn set_brightness(brightness: Option<i32>) {
 }
 ```
 
-![](img/bd11049ccbde00d531fa14950e1ea096_12.png)
 
 现在，如果调用 `set_brightness(None)`，将会输出：`未设置亮度。`
 
-![](img/bd11049ccbde00d531fa14950e1ea096_13.png)
 
 ## 另一个例子：枚举匹配
 
@@ -104,9 +94,7 @@ fn set_brightness(brightness: Option<i32>) {
 
 首先，定义一个表示加密货币的枚举：
 
-![](img/bd11049ccbde00d531fa14950e1ea096_15.png)
 
-![](img/bd11049ccbde00d531fa14950e1ea096_16.png)
 
 ```rust
 enum Crypto {
@@ -144,13 +132,10 @@ match coin {
 }
 ```
 
-![](img/bd11049ccbde00d531fa14950e1ea096_18.png)
 
-![](img/bd11049ccbde00d531fa14950e1ea096_19.png)
 
 在这个具体的例子中，由于我们需要明确处理“其他所有情况”并给出提示，使用 `match` 表达式可能看起来更清晰、意图更明确。
 
-![](img/bd11049ccbde00d531fa14950e1ea096_20.png)
 
 ## `if let` 的使用时机
 

@@ -6,20 +6,16 @@ Python超全入门教程：P64：map()函数详解 🗺️
 
 ### 概述
 
-![](img/7d0e8eb6a04dc2eedd4740be2017ef5a_1.png)
 
 `map()`函数的核心作用是将一个函数映射到一个可迭代对象的所有元素上。它至少需要两个参数：一个函数和一个可迭代对象（如列表）。函数会被应用到可迭代对象的每个元素上。
 
-![](img/7d0e8eb6a04dc2eedd4740be2017ef5a_2.png)
 
 其基本语法可以表示为：
 ```python
 map(function, iterable, ...)
 ```
 
-![](img/7d0e8eb6a04dc2eedd4740be2017ef5a_4.png)
 
-![](img/7d0e8eb6a04dc2eedd4740be2017ef5a_5.png)
 
 ---
 
@@ -34,7 +30,6 @@ print(celsius_temps)
 
 ---
 
-![](img/7d0e8eb6a04dc2eedd4740be2017ef5a_7.png)
 
 ### 方法一：使用预定义函数
 
@@ -53,11 +48,9 @@ def celsius_to_fahrenheit(temp):
 fahrenheit_temps_map = map(celsius_to_fahrenheit, celsius_temps)
 ```
 
-![](img/7d0e8eb6a04dc2eedd4740be2017ef5a_9.png)
 
 `map()`函数返回的是一个`map`对象，它是一个迭代器。我们可以直接遍历它。
 
-![](img/7d0e8eb6a04dc2eedd4740be2017ef5a_11.png)
 
 以下是遍历`map`对象并打印结果的代码：
 
@@ -73,15 +66,12 @@ fahrenheit_temps_list = list(map(celsius_to_fahrenheit, celsius_temps))
 print(fahrenheit_temps_list)
 ```
 
-![](img/7d0e8eb6a04dc2eedd4740be2017ef5a_13.png)
 
 ---
 
-![](img/7d0e8eb6a04dc2eedd4740be2017ef5a_15.png)
 
 ### 方法二：使用Lambda函数
 
-![](img/7d0e8eb6a04dc2eedd4740be2017ef5a_16.png)
 
 除了预定义函数，我们还可以使用更简洁的Lambda（匿名）函数作为`map()`的参数，这样可以避免为简单的操作单独命名函数。
 
@@ -96,11 +86,9 @@ print(fahrenheit_temps_lambda)
 
 这种方法代码更加紧凑，特别适合只使用一次的小型操作。
 
-![](img/7d0e8eb6a04dc2eedd4740be2017ef5a_18.png)
 
 ---
 
-![](img/7d0e8eb6a04dc2eedd4740be2017ef5a_20.png)
 
 ### 总结
 

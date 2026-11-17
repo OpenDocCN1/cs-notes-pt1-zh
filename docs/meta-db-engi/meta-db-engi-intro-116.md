@@ -4,7 +4,6 @@
 
 ---
 
-![](img/45427df6134f3568b94c02769a4ce3ea_1.png)
 
 ## 触发器应用场景示例
 
@@ -83,8 +82,6 @@ DROP TRIGGER IF EXISTS database_name.trigger_name;
 
 **重要提示**：如果你删除了`orders`表，那么与该表相关的所有触发器也会被自动删除。
 
-![](img/45427df6134f3568b94c02769a4ce3ea_3.png)
-![](img/45427df6134f3568b94c02769a4ce3ea_4.png)
 
 ---
 
@@ -92,7 +89,6 @@ DROP TRIGGER IF EXISTS database_name.trigger_name;
 
 本节课中，我们一起学习了如何在MySQL中创建和删除触发器。我们通过Lucky Shrub的案例，逐步解析了创建`BEFORE INSERT`触发器的完整语法，包括命名、定义时机、指定目标表、编写行级逻辑，并使用了`NEW`修饰符来验证和修正数据。最后，我们介绍了如何安全地使用`DROP TRIGGER`语句移除触发器。现在，你应该能够在你自己的数据库中应用这些知识来创建和管理触发器了。
 
-![](img/45427df6134f3568b94c02769a4ce3ea_3.png)
 
 ![](img/45427df6134f3568b94c02769a4ce3ea_4.png)
 

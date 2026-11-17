@@ -55,7 +55,6 @@ git log --grep="performance"
 
 如果你想更高效地查看提交，或者希望获取与某段代码变更相关的提交，可以使用 `git log` 的格式化输出选项。
 
-![](img/9df35d6ce8337187422bedab726512ca_1.png)
 
 例如，使用 `--oneline` 选项让每个提交只显示一行摘要，再结合 `--grep` 进行搜索：
 
@@ -73,7 +72,6 @@ git log --oneline --grep="outdated"
 
 最后，如果你想查看某次特定提交的完整内容，可以使用 `git show` 命令，后面跟上提交的哈希值。
 
-![](img/9df35d6ce8337187422bedab726512ca_3.png)
 
 ![](img/9df35d6ce8337187422bedab726512ca_5.png)
 

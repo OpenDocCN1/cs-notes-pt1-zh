@@ -8,13 +8,11 @@
 
 首先，我们需要导入创建标签所需的PyQt5模块。核心的标签类位于 `QWidget` 模块中。
 
-![](img/38ac2305b37814d3a8d44fbb385a50be_1.png)
 
 ```python
 from PyQt5.QtWidgets import QApplication, QMainWindow, QLabel
 ```
 
-![](img/38ac2305b37814d3a8d44fbb385a50be_3.png)
 
 ---
 
@@ -68,14 +66,12 @@ from PyQt5.QtGui import QFont
 
 接下来，我们调整标签在窗口中的位置和尺寸。使用 `setGeometry` 方法可以设置标签的X坐标、Y坐标、宽度和高度。
 
-![](img/38ac2305b37814d3a8d44fbb385a50be_9.png)
 
 ```python
         # 设置标签的位置和大小 (x, y, width, height)
         self.label.setGeometry(0, 0, 500, 100)
 ```
 
-![](img/38ac2305b37814d3a8d44fbb385a50be_11.png)
 
 现在，标签位于窗口左上角，宽度为500像素，高度为100像素。
 

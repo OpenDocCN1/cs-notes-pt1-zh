@@ -20,7 +20,6 @@ Lucky Shrub公司需要识别出所有在2020年9月5日之后，购买了特定
 
 ## 构建查询语句
 
-![](img/f2548e965b4220994db3d5551b8c63d0_3.png)
 
 我们可以使用`INNER JOIN`来联接这些表，并提取以下目标数据：来自`clients`表的`ClientID`和`ContactNumber`列，来自`orders`表的`OrderID`、`Quantity`和`Date`列，以及来自`products`表的`NumberOfItems`列（我们将其重命名为`ItemsInStock`）。
 

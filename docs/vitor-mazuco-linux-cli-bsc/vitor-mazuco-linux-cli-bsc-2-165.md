@@ -1,6 +1,5 @@
 # 165：创建与挂载数据卷 📦
 
-![](img/5d21805ef1eaa0dbaaac135c99478f32_1.png)
 
 在本节课中，我们将学习如何在 Docker 中创建、挂载和管理数据卷。数据卷是 Docker 中用于持久化存储数据的关键组件，它们独立于容器的生命周期，即使容器被删除，数据也能得以保留。
 
@@ -38,7 +37,6 @@ docker container diff demo
 
 ## 创建持久化数据卷
 
-![](img/5d21805ef1eaa0dbaaac135c99478f32_3.png)
 
 你可以使用 `docker volume create` 命令来创建一个持久化数据卷。
 
@@ -52,7 +50,6 @@ docker volume create sample
 
 创建卷后，你可以查看它的具体信息，例如它位于宿主机的哪个位置。
 
-![](img/5d21805ef1eaa0dbaaac135c99478f32_5.png)
 
 ```bash
 docker volume inspect sample
@@ -60,7 +57,6 @@ docker volume inspect sample
 
 这个命令会输出一些重要信息，比如使用的驱动（通常是 `local`）、挂载点（Mountpoint）以及名称。请记下这个名称，因为稍后我们在创建 Docker 容器时，需要将容器索引到这个卷。
 
-![](img/5d21805ef1eaa0dbaaac135c99478f32_7.png)
 
 在 Linux 系统上，挂载点通常位于 `/var/lib/docker/volumes/` 目录下。你可以进入这个目录查看，目前它是空的，因为我们还没有存储任何数据。
 
@@ -74,17 +70,14 @@ docker run -it --rm --privileged alpine sh
 
 这个命令会运行一个具有特权（`--privileged`）的 Alpine 容器。这意味着容器内的应用可以访问宿主机的设备，甚至宿主机的进程树。在这个环境中，我们可以导航到卷的目录。
 
-![](img/5d21805ef1eaa0dbaaac135c99478f32_9.png)
 
 进入容器后，可以导航到卷的目录：
 
-![](img/5d21805ef1eaa0dbaaac135c99478f32_11.png)
 
 ```bash
 cd /var/lib/docker/volumes/sample/_data
 ```
 
-![](img/5d21805ef1eaa0dbaaac135c99478f32_12.png)
 
 你会发现这个目录是空的，因为我们还没有存储任何数据。按 `Ctrl+D` 可以退出这个容器。
 
@@ -92,7 +85,6 @@ cd /var/lib/docker/volumes/sample/_data
 
 现在我们已经创建了一个名为 `sample` 的卷，接下来可以将其挂载到一个容器中。
 
-![](img/5d21805ef1eaa0dbaaac135c99478f32_14.png)
 
 以下是创建一个新容器并将 `sample` 卷挂载到容器内 `/data` 目录的命令：
 
@@ -126,7 +118,6 @@ docker rm -f test
 
 容器被删除后，数据卷依然存在。我们可以再次以特权模式进入宿主机上的卷目录查看：
 
-![](img/5d21805ef1eaa0dbaaac135c99478f32_16.png)
 
 ```bash
 docker run -it --rm --privileged alpine sh
@@ -146,7 +137,6 @@ docker run -it --name test2 -v sample:/data alpine:3.18 sh
 
 进入新容器后，再次检查 `/data` 目录：
 
-![](img/5d21805ef1eaa0dbaaac135c99478f32_18.png)
 
 ```bash
 cd /data
@@ -157,16 +147,13 @@ ls -l
 
 ## 清理资源
 
-![](img/5d21805ef1eaa0dbaaac135c99478f32_20.png)
 
 最后，我们来学习如何清理。如果你想删除一个数据卷，可以使用 `docker volume rm` 命令。
 
 **注意**：只有当没有任何容器在使用该卷时，你才能删除它。
 
 
-![](img/5d21805ef1eaa0dbaaac135c99478f32_22.png)
 
-![](img/5d21805ef1eaa0dbaaac135c99478f32_23.png)
 
 ```bash
 # 首先删除使用该卷的容器
@@ -177,9 +164,7 @@ docker volume rm sample
 
 如果你想清理所有已停止的容器以释放系统资源，可以使用以下命令：
 
-![](img/5d21805ef1eaa0dbaaac135c99478f32_25.png)
 
-![](img/5d21805ef1eaa0dbaaac135c99478f32_27.png)
 
 ```bash
 docker container prune -f

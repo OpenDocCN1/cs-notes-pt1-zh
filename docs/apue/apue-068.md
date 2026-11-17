@@ -1,6 +1,5 @@
 # 068：受限Shell、Chroot与Jail 🔒
 
-![](img/e26a0c29236afefce7cdf2e4bab2ffd1_1.png)
 
 在本节课中，我们将学习如何通过受限Shell、Chroot和Jail等技术来限制进程的权限和访问范围。这些方法有助于增强系统安全性，特别是在运行需要特权的服务时。
 
@@ -8,7 +7,6 @@
 
 ## 受限Shell 🐚
 
-![](img/e26a0c29236afefce7cdf2e4bab2ffd1_3.png)
 
 受限Shell是一种限制用户执行命令能力的Shell。许多流行的Shell，如Bash或Korn Shell，都支持这种模式。在受限模式下，Shell通常会禁止以下操作：
 *   更改当前工作目录（即无法运行 `cd` 命令）。
@@ -18,15 +16,12 @@
 
 通过这些限制，管理员可以通过将允许用户运行的可执行文件放在特定位置，并在调用受限Shell前相应地设置 `PATH` 环境变量，来合理控制用户可调用的命令。
 
-![](img/e26a0c29236afefce7cdf2e4bab2ffd1_5.png)
 
-![](img/e26a0c29236afefce7cdf2e4bab2ffd1_7.png)
 
 然而，正如我们之前配置 `sudo` 时所见，管理员需要充分了解并理解允许用户在受限环境中执行的命令。许多命令可以用来“逃逸”到其他程序，或者用来克服受限Shell的部分或全部限制。
 
 以下是使用受限Korn Shell（`rksh`）的一个示例。首先，我们创建一个受限Shell，并将用户`fred`的登录Shell更改为它：
 
-![](img/e26a0c29236afefce7cdf2e4bab2ffd1_9.png)
 
 ```bash
 # 创建指向受限ksh的链接
@@ -35,7 +30,6 @@ ln -s /bin/ksh /usr/local/bin/rksh
 usermod -s /usr/local/bin/rksh fred
 ```
 
-![](img/e26a0c29236afefce7cdf2e4bab2ffd1_11.png)
 
 当用户`fred`登录后，他只能运行`PATH`中的命令。尝试使用相对路径（如`./sudo`）或更改目录（`cd`）都会失败。但是，如果`PATH`中包含了像`ed`（标准Unix编辑器）这样的程序，用户就有可能通过编辑启动文件（如`.profile`）来修改`PATH`，从而绕过限制。例如，用户可以使用`ed`编辑器移除限制`PATH`的代码行。
 
@@ -48,11 +42,9 @@ usermod -s /usr/local/bin/rksh fred
 
 ## Chroot：改变根目录 🏠
 
-![](img/e26a0c29236afefce7cdf2e4bab2ffd1_13.png)
 
 虽然受限Shell可以限制用户执行命令的能力，但有时用户可能需要与文件系统的特定部分交互，而不暴露整个文件系统。`chroot` 系统调用（1979年加入Unix）解决了这个问题。
 
-![](img/e26a0c29236afefce7cdf2e4bab2ffd1_15.png)
 
 `chroot` 将传递给它的目录名设置为进程的根目录。这意味着所有路径名都将在这个新目录下进行解析。通过这种方式，可以向进程暴露一个受限的文件系统副本或视图。
 
@@ -60,7 +52,6 @@ usermod -s /usr/local/bin/rksh fred
 
 让我们看一个创建最小化`chroot`环境的脚本示例。该脚本会确定运行特定命令（如`sh`， `ps`， `id`）所需的共享库，并将它们复制到`chroot`目录中。
 
-![](img/e26a0c29236afefce7cdf2e4bab2ffd1_17.png)
 
 ```bash
 #!/bin/sh
@@ -75,7 +66,6 @@ cp /bin/ps $JAIL/bin/
 # ...
 ```
 
-![](img/e26a0c29236afefce7cdf2e4bab2ffd1_19.png)
 
 创建好`chroot`后，可以使用以下命令进入：
 ```bash
@@ -89,7 +79,6 @@ chroot /home/jail /bin/sh
 
 ## FreeBSD Jail：操作系统级虚拟化 🚀
 
-![](img/e26a0c29236afefce7cdf2e4bab2ffd1_21.png)
 
 为了进一步限制进程，使其甚至无法感知到系统上其他进程的存在，FreeBSD在2000年左右引入了`jail`系统调用和工具。
 

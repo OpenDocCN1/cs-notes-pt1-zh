@@ -1,12 +1,8 @@
 # 043：为相关UART寄存器分配符号名 🧩
 
-![](img/2bc9f7c8855cb898f04fec5d3e47fa77_1.png)
 
-![](img/2bc9f7c8855cb898f04fec5d3e47fa77_3.png)
 
-![](img/2bc9f7c8855cb898f04fec5d3e47fa77_5.png)
 
-![](img/2bc9f7c8855cb898f04fec5d3e47fa77_7.png)
 
 在本节课中，我们将学习如何为TM4C123微控制器开发UART驱动程序。我们将从创建一个新项目开始，并逐步为所有相关的GPIO和UART寄存器分配符号名，为后续编写驱动代码打下基础。
 
@@ -45,13 +41,10 @@ SYSCTL_BASE EQU 0x400FE000
 
 配置GPIO引脚需要操作几个关键寄存器。我们将为每个寄存器定义两个符号名：一个是偏移量，另一个是完整的寄存器地址。
 
-![](img/2bc9f7c8855cb898f04fec5d3e47fa77_9.png)
 
-![](img/2bc9f7c8855cb898f04fec5d3e47fa77_11.png)
 
 以下是需要为GPIOA定义的寄存器：
 
-![](img/2bc9f7c8855cb898f04fec5d3e47fa77_13.png)
 
 *   **数字使能寄存器 (GPIOA_DEN_R)**：用于启用引脚的数字功能。
 *   **复用功能选择寄存器 (GPIOA_AFSEL_R)**：用于将引脚功能切换到UART。
@@ -59,7 +52,6 @@ SYSCTL_BASE EQU 0x400FE000
 
 我们首先为这些寄存器定义偏移量占位符和寄存器地址符号名。
 
-![](img/2bc9f7c8855cb898f04fec5d3e47fa77_15.png)
 
 ```assembly
 ; GPIOA 寄存器偏移量 (稍后从数据手册填充)
@@ -73,11 +65,9 @@ GPIOA_AFSEL_R EQU GPIOA_BASE + GPIOA_AFSEL_OFFSET
 GPIOA_PCTL_R  EQU GPIOA_BASE + GPIOA_PCTL_OFFSET
 ```
 
-![](img/2bc9f7c8855cb898f04fec5d3e47fa77_17.png)
 
 ## 定义时钟使能控制位
 
-![](img/2bc9f7c8855cb898f04fec5d3e47fa77_19.png)
 
 在访问任何外设前，必须通过系统控制模块启用其时钟。我们需要为GPIOA和UART0定义时钟门控使能位。
 
@@ -86,11 +76,8 @@ GPIOA_PCTL_R  EQU GPIOA_BASE + GPIOA_PCTL_OFFSET
 
 我们为它们定义易于理解的常量。
 
-![](img/2bc9f7c8855cb898f04fec5d3e47fa77_21.png)
 
-![](img/2bc9f7c8855cb898f04fec5d3e47fa77_23.png)
 
-![](img/2bc9f7c8855cb898f04fec5d3e47fa77_25.png)
 
 ```assembly
 ; 时钟使能控制位
@@ -98,9 +85,7 @@ GPIOA_EN EQU (1 << 0) ; 置位 RCGCGPIO 寄存器的位0以启用 GPIOA 时钟
 UART0_EN EQU (1 << 0) ; 置位 RCGCUART 寄存器的位0以启用 UART0 时钟
 ```
 
-![](img/2bc9f7c8855cb898f04fec5d3e47fa77_27.png)
 
-![](img/2bc9f7c8855cb898f04fec5d3e47fa77_29.png)
 
 接下来，需要找到 `RCGCUART` 寄存器的地址。从数据手册中查得其偏移量为 `0x618`。然后定义其寄存器地址。
 
@@ -131,15 +116,12 @@ GPIOA_PCTL_OFFSET  EQU 0x52C
 
 ## 定义UART0寄存器符号名
 
-![](img/2bc9f7c8855cb898f04fec5d3e47fa77_31.png)
 
 配置UART0本身需要操作其内部的一系列寄存器。我们首先需要UART0的基地址。从数据手册中查得 `UART0_BASE` 为 `0x4000C000`。
 
 以下是UART0的关键寄存器，我们将为它们定义符号名：
 
-![](img/2bc9f7c8855cb898f04fec5d3e47fa77_33.png)
 
-![](img/2bc9f7c8855cb898f04fec5d3e47fa77_35.png)
 
 *   **数据寄存器 (UART0_DR_R)**：用于发送和接收数据。
 *   **标志寄存器 (UART0_FR_R)**：用于检查发送/接收缓冲区状态（如是否为空或满）。

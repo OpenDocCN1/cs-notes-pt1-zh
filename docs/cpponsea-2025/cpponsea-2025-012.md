@@ -1,8 +1,6 @@
 # 012：缺失（以及未来）的 C++ 范围概念
 
-![](img/3b6621316fabf78322edb660cfbf6abe_0.png)
 
-![](img/3b6621316fabf78322edb660cfbf6abe_0.png)
 
 在本教程中，我们将探讨 C++ 标准库中缺失的一些范围概念，以及未来可能的发展方向。我们将重点关注性能优化和元编程这两个核心问题，并介绍一些已在 `think-cell` 库中实现的概念，这些概念有望被纳入标准。
 
@@ -229,6 +227,5 @@ constexpr auto opcode_table = std::views::iota(0, 256)
 
 一些概念，如 `conditional_range` 和 `for_each_while`，非常实用且易于集成，有望进入标准。而像完整的异构生成器这样的概念，由于与现有模型差异较大，可能更适合通过未来的反射功能来实现。
 
-![](img/3b6621316fabf78322edb660cfbf6abe_2.png)
 
 ![](img/3b6621316fabf78322edb660cfbf6abe_2.png)

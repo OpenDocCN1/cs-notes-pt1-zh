@@ -30,7 +30,6 @@
 
 ![](img/80ebbaad2eb9948dc69a50a6f8cfb116_24.png)
 
-![](img/80ebbaad2eb9948dc69a50a6f8cfb116_26.png)
 
 ![](img/80ebbaad2eb9948dc69a50a6f8cfb116_28.png)
 
@@ -64,9 +63,7 @@
 
 ![](img/80ebbaad2eb9948dc69a50a6f8cfb116_53.png)
 
-![](img/80ebbaad2eb9948dc69a50a6f8cfb116_55.png)
 
-![](img/80ebbaad2eb9948dc69a50a6f8cfb116_57.png)
 
 ![](img/80ebbaad2eb9948dc69a50a6f8cfb116_59.png)
 
@@ -96,11 +93,9 @@
 
 ![](img/80ebbaad2eb9948dc69a50a6f8cfb116_81.png)
 
-![](img/80ebbaad2eb9948dc69a50a6f8cfb116_83.png)
 
 在开始新功能之前，我们首先修复了几个在测试中发现的游戏Bug，以确保代码的稳定性。
 
-![](img/80ebbaad2eb9948dc69a50a6f8cfb116_85.png)
 
 ![](img/80ebbaad2eb9948dc69a50a6f8cfb116_87.png)
 
@@ -110,9 +105,7 @@
 
 ![](img/80ebbaad2eb9948dc69a50a6f8cfb116_91.png)
 
-![](img/80ebbaad2eb9948dc69a50a6f8cfb116_93.png)
 
-![](img/80ebbaad2eb9948dc69a50a6f8cfb116_95.png)
 
 ![](img/80ebbaad2eb9948dc69a50a6f8cfb116_97.png)
 
@@ -157,7 +150,6 @@ if (block_life > 0) {
 
 ![](img/80ebbaad2eb9948dc69a50a6f8cfb116_118.png)
 
-![](img/80ebbaad2eb9948dc69a50a6f8cfb116_120.png)
 
 ![](img/80ebbaad2eb9948dc69a50a6f8cfb116_122.png)
 
@@ -177,7 +169,6 @@ if (block_life > 0) {
 
 ![](img/80ebbaad2eb9948dc69a50a6f8cfb116_135.png)
 
-![](img/80ebbaad2eb9948dc69a50a6f8cfb116_137.png)
 
 ![](img/80ebbaad2eb9948dc69a50a6f8cfb116_139.png)
 
@@ -211,17 +202,13 @@ if (block_life > 0) {
 
 **核心代码修改：**
 
-![](img/80ebbaad2eb9948dc69a50a6f8cfb116_166.png)
 
 ![](img/80ebbaad2eb9948dc69a50a6f8cfb116_167.png)
 
 ![](img/80ebbaad2eb9948dc69a50a6f8cfb116_169.png)
 
-![](img/80ebbaad2eb9948dc69a50a6f8cfb116_171.png)
 
-![](img/80ebbaad2eb9948dc69a50a6f8cfb116_172.png)
 
-![](img/80ebbaad2eb9948dc69a50a6f8cfb116_174.png)
 
 ![](img/80ebbaad2eb9948dc69a50a6f8cfb116_175.png)
 
@@ -288,7 +275,6 @@ width_clamped = clamp(width, 0, bitmap->width); // 正确：使用 width
 
 ![](img/80ebbaad2eb9948dc69a50a6f8cfb116_224.png)
 
-![](img/80ebbaad2eb9948dc69a50a6f8cfb116_226.png)
 
 ![](img/80ebbaad2eb9948dc69a50a6f8cfb116_228.png)
 
@@ -345,7 +331,6 @@ if (!game_state->is_paused) {
 
 ![](img/80ebbaad2eb9948dc69a50a6f8cfb116_266.png)
 
-![](img/80ebbaad2eb9948dc69a50a6f8cfb116_268.png)
 
 ![](img/80ebbaad2eb9948dc69a50a6f8cfb116_270.png)
 
@@ -355,7 +340,6 @@ if (!game_state->is_paused) {
 
 ---
 
-![](img/80ebbaad2eb9948dc69a50a6f8cfb116_276.png)
 
 ![](img/80ebbaad2eb9948dc69a50a6f8cfb116_277.png)
 
@@ -365,7 +349,6 @@ if (!game_state->is_paused) {
 
 ![](img/80ebbaad2eb9948dc69a50a6f8cfb116_281.png)
 
-![](img/80ebbaad2eb9948dc69a50a6f8cfb116_283.png)
 
 ![](img/80ebbaad2eb9948dc69a50a6f8cfb116_285.png)
 
@@ -383,7 +366,6 @@ if (!game_state->is_paused) {
 
 ![](img/80ebbaad2eb9948dc69a50a6f8cfb116_299.png)
 
-![](img/80ebbaad2eb9948dc69a50a6f8cfb116_301.png)
 
 ![](img/80ebbaad2eb9948dc69a50a6f8cfb116_303.png)
 
@@ -395,7 +377,6 @@ if (!game_state->is_paused) {
 
 ![](img/80ebbaad2eb9948dc69a50a6f8cfb116_307.png)
 
-![](img/80ebbaad2eb9948dc69a50a6f8cfb116_309.png)
 
 ![](img/80ebbaad2eb9948dc69a50a6f8cfb116_311.png)
 
@@ -427,7 +408,6 @@ if (!game_state->is_paused) {
 
 ![](img/80ebbaad2eb9948dc69a50a6f8cfb116_333.png)
 
-![](img/80ebbaad2eb9948dc69a50a6f8cfb116_335.png)
 
 **绘制关卡列表代码逻辑：**
 ```c
@@ -442,7 +422,6 @@ for (int i = 0; i < level_count; ++i) {
 }
 ```
 
-![](img/80ebbaad2eb9948dc69a50a6f8cfb116_337.png)
 
 ![](img/80ebbaad2eb9948dc69a50a6f8cfb116_339.png)
 
@@ -454,7 +433,6 @@ for (int i = 0; i < level_count; ++i) {
 
 ![](img/80ebbaad2eb9948dc69a50a6f8cfb116_343.png)
 
-![](img/80ebbaad2eb9948dc69a50a6f8cfb116_345.png)
 
 ![](img/80ebbaad2eb9948dc69a50a6f8cfb116_347.png)
 
@@ -494,7 +472,6 @@ hot_level = clamp(hot_level, 0, level_count - 1);
 
 ![](img/80ebbaad2eb9948dc69a50a6f8cfb116_371.png)
 
-![](img/80ebbaad2eb9948dc69a50a6f8cfb116_373.png)
 
 ![](img/80ebbaad2eb9948dc69a50a6f8cfb116_375.png)
 
@@ -510,7 +487,6 @@ hot_level = clamp(hot_level, 0, level_count - 1);
 
 ![](img/80ebbaad2eb9948dc69a50a6f8cfb116_384.png)
 
-![](img/80ebbaad2eb9948dc69a50a6f8cfb116_386.png)
 
 ![](img/80ebbaad2eb9948dc69a50a6f8cfb116_388.png)
 
@@ -538,13 +514,10 @@ hot_level = clamp(hot_level, 0, level_count - 1);
 
 ![](img/80ebbaad2eb9948dc69a50a6f8cfb116_408.png)
 
-![](img/80ebbaad2eb9948dc69a50a6f8cfb116_410.png)
 
-![](img/80ebbaad2eb9948dc69a50a6f8cfb116_411.png)
 
 ![](img/80ebbaad2eb9948dc69a50a6f8cfb116_413.png)
 
-![](img/80ebbaad2eb9948dc69a50a6f8cfb116_415.png)
 
 ![](img/80ebbaad2eb9948dc69a50a6f8cfb116_417.png)
 
@@ -634,7 +607,6 @@ Level_Save level_saves[MAX_LEVELS]; // 全局存档数组
 
 ![](img/80ebbaad2eb9948dc69a50a6f8cfb116_475.png)
 
-![](img/80ebbaad2eb9948dc69a50a6f8cfb116_477.png)
 
 ![](img/80ebbaad2eb9948dc69a50a6f8cfb116_479.png)
 
@@ -706,9 +678,7 @@ b32 load_game() {
 
 ![](img/80ebbaad2eb9948dc69a50a6f8cfb116_515.png)
 
-![](img/80ebbaad2eb9948dc69a50a6f8cfb116_517.png)
 
-![](img/80ebbaad2eb9948dc69a50a6f8cfb116_519.png)
 
 ![](img/80ebbaad2eb9948dc69a50a6f8cfb116_521.png)
 
@@ -718,9 +688,7 @@ b32 load_game() {
 
 ### 音乐管理与切换
 
-![](img/80ebbaad2eb9948dc69a50a6f8cfb116_526.png)
 
-![](img/80ebbaad2eb9948dc69a50a6f8cfb116_528.png)
 
 ![](img/80ebbaad2eb9948dc69a50a6f8cfb116_530.png)
 
@@ -728,7 +696,6 @@ b32 load_game() {
 
 ![](img/80ebbaad2eb9948dc69a50a6f8cfb116_532.png)
 
-![](img/80ebbaad2eb9948dc69a50a6f8cfb116_534.png)
 
 ![](img/80ebbaad2eb9948dc69a50a6f8cfb116_536.png)
 
@@ -744,21 +711,17 @@ b32 load_game() {
 
 ![](img/80ebbaad2eb9948dc69a50a6f8cfb116_545.png)
 
-![](img/80ebbaad2eb9948dc69a50a6f8cfb116_547.png)
 
 ![](img/80ebbaad2eb9948dc69a50a6f8cfb116_549.png)
 
 ![](img/80ebbaad2eb9948dc69a50a6f8cfb116_551.png)
 
-![](img/80ebbaad2eb9948dc69a50a6f8cfb116_553.png)
 
 ![](img/80ebbaad2eb9948dc69a50a6f8cfb116_554.png)
 
 ![](img/80ebbaad2eb9948dc69a50a6f8cfb116_556.png)
 
-![](img/80ebbaad2eb9948dc69a50a6f8cfb116_558.png)
 
-![](img/80ebbaad2eb9948dc69a50a6f8cfb116_560.png)
 
 ![](img/80ebbaad2eb9948dc69a50a6f8cfb116_561.png)
 
@@ -786,7 +749,6 @@ set_target_volume(&menu_music, 1.0f);
 
 ![](img/80ebbaad2eb9948dc69a50a6f8cfb116_575.png)
 
-![](img/80ebbaad2eb9948dc69a50a6f8cfb116_576.png)
 
 ![](img/80ebbaad2eb9948dc69a50a6f8cfb116_578.png)
 
@@ -873,9 +835,7 @@ set_target_volume(&menu_music, 1.0f);
 
 ![](img/80ebbaad2eb9948dc69a50a6f8cfb116_648.png)
 
-![](img/80ebbaad2eb9948dc69a50a6f8cfb116_650.png)
 
-![](img/80ebbaad2eb9948dc69a50a6f8cfb116_651.png)
 
 ![](img/80ebbaad2eb9948dc69a50a6f8cfb116_652.png)
 
@@ -953,11 +913,8 @@ if (ball_hit_paddle) {
 
 ![](img/80ebbaad2eb9948dc69a50a6f8cfb116_706.png)
 
-![](img/80ebbaad2eb9948dc69a50a6f8cfb116_708.png)
 
-![](img/80ebbaad2eb9948dc69a50a6f8cfb116_710.png)
 
-![](img/80ebbaad2eb9948dc69a50a6f8cfb116_712.png)
 
 ![](img/80ebbaad2eb9948dc69a50a6f8cfb116_713.png)
 
@@ -1002,7 +959,6 @@ if (ball_hit_paddle) {
 
 ![](img/80ebbaad2eb9948dc69a50a6f8cfb116_743.png)
 
-![](img/80ebbaad2eb9948dc69a50a6f8cfb116_745.png)
 
 ![](img/80ebbaad2eb9948dc69a50a6f8cfb116_747.png)
 
@@ -1185,7 +1141,6 @@ sound->position += sound->pitch; // 根据音高调整播放进度
 
 ![](img/80ebbaad2eb9948dc69a50a6f8cfb116_879.png)
 
-![](img/80ebbaad2eb9948dc69a50a6f8cfb116_881.png)
 
 ![](img/80ebbaad2eb9948dc69a50a6f8cfb116_882.png)
 

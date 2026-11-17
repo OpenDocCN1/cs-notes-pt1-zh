@@ -29,7 +29,6 @@ import numpy as np
 fig = plt.figure()  # 实例化一个图形对象
 ```
 
-![](img/e9706eaea8dc7229b563b18febb73326_1.png)
 
 ![](img/e9706eaea8dc7229b563b18febb73326_2.png)
 

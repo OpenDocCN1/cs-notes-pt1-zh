@@ -2,19 +2,15 @@
 
 在本节课中，我们将学习如何从一个C语言程序中调用我们之前编写的ADC（模数转换器）汇编子程序。我们将创建一个新的项目，整合C语言和汇编代码，并最终在开发板上运行和调试。
 
-![](img/98ca0ce0deea0dd0618a6ad2cfc9e1a5_1.png)
 
-![](img/98ca0ce0deea0dd0618a6ad2cfc9e1a5_3.png)
 
 上一节我们介绍了如何用纯汇编语言编写ADC驱动程序。本节中我们来看看如何让C语言主程序来调用这些汇编函数。
 
-![](img/98ca0ce0deea0dd0618a6ad2cfc9e1a5_5.png)
 
 ## 创建新项目与文件
 
 首先，我们需要在Keil uVision中创建一个新的项目。
 
-![](img/98ca0ce0deea0dd0618a6ad2cfc9e1a5_7.png)
 
 1.  选择 `Project` -> `New uVision Project`。
 2.  为项目创建一个新文件夹，例如命名为 `CallFromC`。
@@ -24,7 +20,6 @@
 
 项目创建完成后，我们需要添加两个源文件。
 
-![](img/98ca0ce0deea0dd0618a6ad2cfc9e1a5_9.png)
 
 以下是需要添加的文件列表：
 *   **ADC.S**：用于存放我们的汇编语言ADC驱动函数。

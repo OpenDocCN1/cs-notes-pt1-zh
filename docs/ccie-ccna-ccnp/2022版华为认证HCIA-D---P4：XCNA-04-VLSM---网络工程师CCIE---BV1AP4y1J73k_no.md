@@ -150,7 +150,6 @@ IANA将IP地址分为五大类：
 
 ![](img/c4c24b1ba93ab6c5a72a747b80d1e094_1.png)
 
-![](img/c4c24b1ba93ab6c5a72a747b80d1e094_3.png)
 
 ![](img/c4c24b1ba93ab6c5a72a747b80d1e094_5.png)
 

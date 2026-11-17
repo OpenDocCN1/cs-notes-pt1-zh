@@ -142,9 +142,7 @@ func @example(%arg0: i64, %arg1: i1) -> i64 {
 
 ## Serene编译器中的实际应用
 
-![](img/64f1576f0836b4af49b069f14dabfccf_7.png)
 
-![](img/64f1576f0836b4af49b069f14dabfccf_9.png)
 
 在Serene编译器中，我们首先将源代码转换为自定义的SLIR方言。例如，一个简单的Serene函数：
 ```
@@ -192,9 +190,7 @@ define i64 @main_one(i64 %0, i64 %1, i64 %2) {
 
 ## 推荐资源
 
-![](img/64f1576f0836b4af49b069f14dabfccf_11.png)
 
-![](img/64f1576f0836b4af49b069f14dabfccf_13.png)
 
 以下是我强烈推荐的学习资源：
 1.  MLIR工程师的演讲视频（在课程视频的资源部分有链接），它们非常精彩但篇幅较短。

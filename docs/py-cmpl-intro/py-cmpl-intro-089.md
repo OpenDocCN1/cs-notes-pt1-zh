@@ -110,9 +110,7 @@ def initUI(self):
 
 我们为每个控件设置一个唯一的对象名，然后通过样式表来定义它们的字体、大小等属性。
 
-![](img/7982e815a6049d0f91e5f6506273c41e_13.png)
 
-![](img/7982e815a6049d0f91e5f6506273c41e_15.png)
 
 ```python
 def initUI(self):
@@ -180,9 +178,7 @@ def get_weather(self):
 
 这是应用的核心功能部分。我们将在`get_weather`方法中构造API请求URL，发送网络请求，并处理返回的JSON数据。
 
-![](img/7982e815a6049d0f91e5f6506273c41e_17.png)
 
-![](img/7982e815a6049d0f91e5f6506273c41e_19.png)
 
 首先，我们需要API密钥和用户输入的城市名。
 

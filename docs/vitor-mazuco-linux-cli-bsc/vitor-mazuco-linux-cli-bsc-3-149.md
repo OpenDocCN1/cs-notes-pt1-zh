@@ -6,7 +6,6 @@
 
 ## 命令概述
 
-![](img/62b68c845c3a35d2b39484f6237ed60a_1.png)
 
 `REVOKE` 命令用于撤销之前授予用户的权限。其语法结构与 `GRANT` 命令非常相似，基本逻辑也相同。
 
@@ -45,11 +44,9 @@ GRANT SELECT, INSERT, UPDATE, DELETE ON user1.table1 TO user3;
 
 ## 测试权限效果
 
-![](img/62b68c845c3a35d2b39484f6237ed60a_3.png)
 
 让我们登录 `user3` 来验证权限是否生效。
 
-![](img/62b68c845c3a35d2b39484f6237ed60a_5.png)
 
 以下是验证步骤：
 1.  使用 `user3` 身份登录 SQL*Plus。
@@ -73,7 +70,6 @@ SELECT * FROM user1.table1;
 REVOKE SELECT, INSERT, UPDATE, DELETE ON user1.table1 FROM user3;
 ```
 
-![](img/62b68c845c3a35d2b39484f6237ed60a_7.png)
 
 撤销后，再次切换到 `user3` 账户尝试查询该表，系统会返回权限错误。
 

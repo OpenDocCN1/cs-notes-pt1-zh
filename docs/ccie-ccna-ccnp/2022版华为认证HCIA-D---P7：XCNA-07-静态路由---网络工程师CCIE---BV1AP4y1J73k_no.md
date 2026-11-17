@@ -1,10 +1,7 @@
 # 华为认证HCIA-DATACOM教程：07：静态路由与路由器工作原理 🚦
 
-![](img/dddea4752c2cfc0fcb2a97a34dce246e_1.png)
 
-![](img/dddea4752c2cfc0fcb2a97a34dce246e_2.png)
 
-![](img/dddea4752c2cfc0fcb2a97a34dce246e_4.png)
 
 在本节课中，我们将要学习路由器的核心工作原理，包括其定位、路由表的概念、以及数据层面与控制层面的区别。我们还将深入探讨静态路由的配置方法，并理解路由条目中的关键要素。这些知识是理解网络数据如何在不同网络间传输的基础。
 
@@ -72,27 +69,19 @@
 5.  **管理距离/优先级**：用于衡量从不同来源（直连、静态、不同动态协议）学到的**同一条路由的可靠性**。**数值越小，优先级越高，路由越可信**。例如，华为设备中OSPF路由的优先级为10，静态路由为60，OSPF路由更优。
 6.  **度量值**：用于比较**从同一种路由协议学到的、通往同一目的地的不同路径的优劣**。度量值计算方式因协议而异（如RIP使用跳数，OSPF使用带宽成本），**值越小路径越优**。
 
-![](img/dddea4752c2cfc0fcb2a97a34dce246e_6.png)
 
-![](img/dddea4752c2cfc0fcb2a97a34dce246e_8.png)
 
-![](img/dddea4752c2cfc0fcb2a97a34dce246e_10.png)
 
-![](img/dddea4752c2cfc0fcb2a97a34dce246e_12.png)
 
 > **注意**：管理距离用于在不同“信息来源”间做选择；度量值用于在同一“信息来源”的不同“路径”间做选择。
 
-![](img/dddea4752c2cfc0fcb2a97a34dce246e_14.png)
 
 ## 静态路由配置示例 💻
 
-![](img/dddea4752c2cfc0fcb2a97a34dce246e_16.png)
 
-![](img/dddea4752c2cfc0fcb2a97a34dce246e_18.png)
 
 理论需要结合实际操作。下面我们通过一个简单示例，演示如何在华为设备上配置静态路由，使两个非直连网络能够通信。
 
-![](img/dddea4752c2cfc0fcb2a97a34dce246e_19.png)
 
 假设我们需要让R1知道如何到达网络 `20.1.1.0/24`。
 在R1上的配置命令如下：
@@ -103,7 +92,6 @@ ip route-static 20.1.1.0 255.255.255.0 GigabitEthernet 0/0/0 12.1.1.2
 *   `GigabitEthernet 0/0/0`：出接口。
 *   `12.1.1.2`：下一跳IP地址。
 
-![](img/dddea4752c2cfc0fcb2a97a34dce246e_21.png)
 
 配置完成后，可以使用 `display ip routing-table` 命令查看路由表，确认静态路由是否已生效。
 
@@ -118,9 +106,7 @@ interface LoopBack 0
 ```
 这样，`2.2.2.2/32` 这个地址就可以代表R2所连接的一个终端，简化了实验拓扑。
 
-![](img/dddea4752c2cfc0fcb2a97a34dce246e_23.png)
 
-![](img/dddea4752c2cfc0fcb2a97a34dce246e_25.png)
 
 ---
 

@@ -41,21 +41,17 @@ metadata:
 
 保存文件后，使用 `kubectl create` 命令来创建这个服务账户：
 
-![](img/b34f3a655c36a7a6531351308d7f9c34_1.png)
 
 ```bash
 kubectl create -f <你的文件名>.yaml
 ```
 
-![](img/b34f3a655c36a7a6531351308d7f9c34_3.png)
 
 创建完成后，可以使用 `kubectl get serviceaccount` 命令查看所有服务账户，确认我们创建的 `custom-service-account` 已经存在。
 
 ## 查看服务账户详情
 
-![](img/b34f3a655c36a7a6531351308d7f9c34_5.png)
 
-![](img/b34f3a655c36a7a6531351308d7f9c34_6.png)
 
 要查看某个服务账户的详细信息，可以使用 `kubectl describe` 命令：
 
@@ -63,25 +59,20 @@ kubectl create -f <你的文件名>.yaml
 kubectl describe serviceaccount custom-service-account
 ```
 
-![](img/b34f3a655c36a7a6531351308d7f9c34_8.png)
 
 命令输出会显示该服务账户的详细信息，包括其名称、所属命名空间、创建时间、唯一ID以及关联的Secret名称。这个关联的Secret里就包含了访问API服务器所需的令牌（Token）和证书。
 
-![](img/b34f3a655c36a7a6531351308d7f9c34_10.png)
 
 以下是查看关联Secret详细内容的方法：
 
-![](img/b34f3a655c36a7a6531351308d7f9c34_12.png)
 
 ```bash
 kubectl describe secret <上一步中看到的Secret名称>
 ```
 
-![](img/b34f3a655c36a7a6531351308d7f9c34_14.png)
 
 在Secret的详情中，你会看到编码后的证书（`ca.crt`）和令牌（`token`）数据。这些就是挂载到Pod中的安全凭据，用于确保Pod与API服务器之间通信的安全性。
 
-![](img/b34f3a655c36a7a6531351308d7f9c34_16.png)
 
 ## 总结
 

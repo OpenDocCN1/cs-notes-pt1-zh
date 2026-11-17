@@ -10,31 +10,21 @@
 
 首先，我们需要让用户上传音频文件。我们将使用 Streamlit 的 `file_uploader` 小部件来实现这个功能。
 
-![](img/9533e4eba803d42b58a3a3b3dbc7a8d3_1.png)
 
 ### 第二步：分割音频文件
 
-![](img/9533e4eba803d42b58a3a3b3dbc7a8d3_2.png)
 
-![](img/9533e4eba803d42b58a3a3b3dbc7a8d3_3.png)
 
-![](img/9533e4eba803d42b58a3a3b3dbc7a8d3_4.png)
 
 由于我们将使用 Google 的翻译服务（或类似的外部API）来将音频转换为文本，而这类服务通常对上传的音频文件有长度限制（例如，不超过一分钟），因此我们需要将用户上传的大音频文件分割成多个小片段。
 
-![](img/9533e4eba803d42b58a3a3b3dbc7a8d3_5.png)
 
-![](img/9533e4eba803d42b58a3a3b3dbc7a8d3_6.png)
 
-![](img/9533e4eba803d42b58a3a3b3dbc7a8d3_7.png)
 
 ### 第三步：导出音频片段
 
-![](img/9533e4eba803d42b58a3a3b3dbc7a8d3_8.png)
 
-![](img/9533e4eba803d42b58a3a3b3dbc7a8d3_9.png)
 
-![](img/9533e4eba803d42b58a3a3b3dbc7a8d3_10.png)
 
 分割完成后，我们需要将这些音频片段导出为独立的文件。这一步是为后续处理做准备。
 
@@ -46,27 +36,19 @@
 
 接下来，我们将这些分割好的小音频片段逐一发送给 Google（或其他服务）进行语音识别和翻译，以获取对应的文本。
 
-![](img/9533e4eba803d42b58a3a3b3dbc7a8d3_12.png)
 
 ### 第六步：显示转换结果
 
-![](img/9533e4eba803d42b58a3a3b3dbc7a8d3_13.png)
 
-![](img/9533e4eba803d42b58a3a3b3dbc7a8d3_14.png)
 
-![](img/9533e4eba803d42b58a3a3b3dbc7a8d3_15.png)
 
 最后，我们需要将转换得到的文本结果显示在应用的界面上，供用户查看和复制。
 
-![](img/9533e4eba803d42b58a3a3b3dbc7a8d3_16.png)
 
-![](img/9533e4eba803d42b58a3a3b3dbc7a8d3_17.png)
 
-![](img/9533e4eba803d42b58a3a3b3dbc7a8d3_18.png)
 
 ## 总结
 
-![](img/9533e4eba803d42b58a3a3b3dbc7a8d3_19.png)
 
 ![](img/9533e4eba803d42b58a3a3b3dbc7a8d3_20.png)
 

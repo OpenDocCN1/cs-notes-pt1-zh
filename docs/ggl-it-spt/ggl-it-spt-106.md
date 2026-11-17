@@ -11,7 +11,6 @@
 *   选择“复制”。
 *   在目标位置右键点击，选择“粘贴”。
 
-![](img/e47d62193d5e0e741ff4bbc1cddb8aa6_1.png)
 
 你也可以使用热键来提高效率。热键是Windows中用于执行特定任务的键盘快捷键。复制操作的热键是 **`Ctrl + C`**，粘贴操作的热键是 **`Ctrl + V`**。
 
@@ -89,7 +88,6 @@ cp .\BirdPictures\ C:\Users\[用户名]\Desktop\ -Recurse -Verbose
 
 这条消息说明我们已经复制了 `BirdPictures` 目录，但我们之前没有做的是复制里面的文件，现在文件就在这里了。
 
-![](img/e47d62193d5e0e741ff4bbc1cddb8aa6_11.png)
 
 现在，目录及其所有内容都已成功复制到我的桌面。
 

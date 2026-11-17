@@ -39,11 +39,9 @@
 
 至此，Code::Blocks IDE已安装完毕，你可以随时打开它，开始跟随本课程编写精彩的C程序了。
 
-![](img/be6872e63efacb9534182128cadccf04_1.png)
 
 ## 总结
 
-![](img/be6872e63efacb9534182128cadccf04_3.png)
 
 ![](img/be6872e63efacb9534182128cadccf04_4.png)
 

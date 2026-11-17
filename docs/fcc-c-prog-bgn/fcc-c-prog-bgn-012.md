@@ -47,9 +47,7 @@ int main() {
 以下是获取GPA（平均绩点）的示例：
 
 
-![](img/db65679198681a3f98e0e35ecaa32aeb_4.png)
 
-![](img/db65679198681a3f98e0e35ecaa32aeb_5.png)
 
 ```c
 #include <stdio.h>
@@ -100,7 +98,6 @@ int main() {
 
 ### 使用 `scanf` 获取字符串（及其局限性）
 
-![](img/db65679198681a3f98e0e35ecaa32aeb_14.png)
 
 ![](img/db65679198681a3f98e0e35ecaa32aeb_15.png)
 
@@ -109,7 +106,6 @@ int main() {
 
 ![](img/db65679198681a3f98e0e35ecaa32aeb_17.png)
 
-![](img/db65679198681a3f98e0e35ecaa32aeb_18.png)
 
 ```c
 #include <stdio.h>
@@ -167,7 +163,6 @@ int main() {
 2.  获取**字符串**时，`scanf` 的 `%s` 无法处理包含空格的输入。
 3.  因此，获取字符串输入推荐使用 `fgets` 函数，它可以读取整行文本（包括空格），并且更安全，可以指定最大输入长度以防止缓冲区溢出。
 
-![](img/db65679198681a3f98e0e35ecaa32aeb_28.png)
 
 ![](img/db65679198681a3f98e0e35ecaa32aeb_30.png)
 

@@ -4,9 +4,7 @@
 
 ## 概述
 
-![](img/26574ae142fbb06f2cf03bdeb4f00980_1.png)
 
-![](img/26574ae142fbb06f2cf03bdeb4f00980_3.png)
 
 条件语句的核心是`if`语句。它的基本逻辑是：**如果**某个条件为真，**那么**执行一段代码；**否则**，可以执行另一段代码。我们还将学习如何使用`elif`来检查多个条件，以及如何利用布尔值来简化条件判断。
 
@@ -14,7 +12,6 @@
 
 ## 基本if语句
 
-![](img/26574ae142fbb06f2cf03bdeb4f00980_5.png)
 
 上一节我们介绍了条件语句的概念，本节中我们来看看最基本的`if`语句结构。
 
@@ -26,7 +23,6 @@ age = int(input("Enter your age: "))
 
 假设用户想申请信用卡，但规定年龄必须大于或等于18岁。我们可以使用`if`语句来检查这个条件：
 
-![](img/26574ae142fbb06f2cf03bdeb4f00980_7.png)
 
 ```python
 if age >= 18:
@@ -37,7 +33,6 @@ if age >= 18:
 *   `if age >= 18:`：这是一个条件检查。`>=`是比较运算符，表示“大于或等于”。如果`age`变量的值满足这个条件，则执行下方缩进的代码。
 *   注意`:`和代码缩进。`if`语句后的冒号`:`是必须的，而所有属于该`if`块的代码都必须**缩进**（通常是4个空格或一个Tab键）。
 
-![](img/26574ae142fbb06f2cf03bdeb4f00980_9.png)
 
 运行代码，如果输入21，条件为真，程序会打印“You are now signed up.”。如果输入13，条件为假，则`if`块内的代码会被跳过，程序没有任何输出。
 
@@ -47,13 +42,10 @@ if age >= 18:
 
 如果条件不满足时，我们想执行另一段代码，该怎么办呢？这时就需要`else`语句。
 
-![](img/26574ae142fbb06f2cf03bdeb4f00980_11.png)
 
-![](img/26574ae142fbb06f2cf03bdeb4f00980_12.png)
 
 以下是`else`语句的用法：
 
-![](img/26574ae142fbb06f2cf03bdeb4f00980_13.png)
 
 ```python
 if age >= 18:
@@ -62,29 +54,22 @@ else:
     print("You must be 18 plus to sign up.")
 ```
 
-![](img/26574ae142fbb06f2cf03bdeb4f00980_15.png)
 
 现在，如果用户年龄小于18岁，程序会打印“You must be 18 plus to sign up.”。`else`就像一个“备用方案”，当所有`if`条件都不满足时执行。
 
-![](img/26574ae142fbb06f2cf03bdeb4f00980_17.png)
 
 ---
 
-![](img/26574ae142fbb06f2cf03bdeb4f00980_19.png)
 
-![](img/26574ae142fbb06f2cf03bdeb4f00980_21.png)
 
 ## 使用elif检查多个条件
 
-![](img/26574ae142fbb06f2cf03bdeb4f00980_23.png)
 
 有时我们需要检查一系列条件，而不仅仅是“是”或“否”。这时可以使用`elif`（`else if`的缩写）。
 
 以下是添加多个`elif`语句的示例：
 
-![](img/26574ae142fbb06f2cf03bdeb4f00980_25.png)
 
-![](img/26574ae142fbb06f2cf03bdeb4f00980_27.png)
 
 ```python
 if age >= 100:
@@ -97,29 +82,23 @@ else:
     print("You must be 18 plus to sign up.")
 ```
 
-![](img/26574ae142fbb06f2cf03bdeb4f00980_29.png)
 
 **重要提示**：条件检查是**从上到下依次进行**的。一旦某个条件为真，就会执行对应的代码块，并跳过后面所有的`elif`和`else`。因此，条件的**顺序**非常重要。在上面的例子中，我们首先检查年龄是否过大，然后检查是否成年，最后检查是否为无效的负数。
 
 ---
 
-![](img/26574ae142fbb06f2cf03bdeb4f00980_31.png)
 
 ## 更多条件语句示例
 
-![](img/26574ae142fbb06f2cf03bdeb4f00980_33.png)
 
 为了加深理解，我们来看几个不同的应用场景。
 
-![](img/26574ae142fbb06f2cf03bdeb4f00980_35.png)
 
 ### 示例1：是/否回答
 
-![](img/26574ae142fbb06f2cf03bdeb4f00980_37.png)
 
 以下是询问用户是否需要食物的示例：
 
-![](img/26574ae142fbb06f2cf03bdeb4f00980_39.png)
 
 ```python
 response = input("Would you like food? (Y/N): ")
@@ -130,19 +109,15 @@ else:
     print("No food for you.")
 ```
 
-![](img/26574ae142fbb06f2cf03bdeb4f00980_41.png)
 
 **核心概念**：注意这里使用了双等号`==`。在Python中，`=`是赋值运算符，用于给变量赋值。而`==`是**比较运算符**，用于检查两个值是否相等。在条件判断中，必须使用`==`。
 
-![](img/26574ae142fbb06f2cf03bdeb4f00980_43.png)
 
 ### 示例2：检查输入是否为空
 
-![](img/26574ae142fbb06f2cf03bdeb4f00980_45.png)
 
 以下是检查用户是否输入了名字的示例：
 
-![](img/26574ae142fbb06f2cf03bdeb4f00980_47.png)
 
 ```python
 name = input("Enter your name: ")
@@ -163,10 +138,8 @@ else:
 
 以下是使用布尔变量的示例：
 
-![](img/26574ae142fbb06f2cf03bdeb4f00980_49.png)
 
 
-![](img/26574ae142fbb06f2cf03bdeb4f00980_51.png)
 
 ```python
 for_sale = True
@@ -180,9 +153,7 @@ else:
 
 另一个例子：
 
-![](img/26574ae142fbb06f2cf03bdeb4f00980_53.png)
 
-![](img/26574ae142fbb06f2cf03bdeb4f00980_55.png)
 
 ```python
 online = False
@@ -193,11 +164,9 @@ else:
     print("The user is offline.")
 ```
 
-![](img/26574ae142fbb06f2cf03bdeb4f00980_57.png)
 
 ---
 
-![](img/26574ae142fbb06f2cf03bdeb4f00980_59.png)
 
 ## 总结
 

@@ -4,9 +4,7 @@ Python入门教程：P04：用户输入与练习
 
 ---
 
-![](img/fc7aebbd431c08d9aacaf1de90660058_1.png)
 
-![](img/fc7aebbd431c08d9aacaf1de90660058_2.png)
 
 ### 用户输入基础
 
@@ -79,11 +77,9 @@ print(story)
 
 ---
 
-![](img/fc7aebbd431c08d9aacaf1de90660058_4.png)
 
 ### 练习二：计算矩形面积 📐
 
-![](img/fc7aebbd431c08d9aacaf1de90660058_6.png)
 
 上一节我们创建了一个文字游戏，本节中我们来看看一个更实用的例子：计算几何图形的面积。
 
@@ -112,11 +108,9 @@ volume = length * width * height
 print(f"The volume is {volume} cm³.")
 ```
 
-![](img/fc7aebbd431c08d9aacaf1de90660058_8.png)
 
 尝试运行程序并输入不同的数值，验证计算结果。
 
-![](img/fc7aebbd431c08d9aacaf1de90660058_9.png)
 
 ---
 

@@ -42,7 +42,6 @@ import json
 
 **包**可以被看作是Python模块的集合。为了让Python将一个目录识别为包，该目录下必须包含一个名为`__init__.py`的特殊文件。
 
-![](img/0afcf2f8e322cd23d5309c7df4e5bb01_5.png)
 
 Python拥有一个由社区构建的庞大包生态系统，这些包托管在**Python包索引（PyPI）**上。
 

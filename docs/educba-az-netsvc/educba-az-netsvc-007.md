@@ -1,6 +1,5 @@
 # 007：快速路由对等互联 第一部分
 
-![](img/bde06e411ef64bb3f23b7ec874bc88c1_0.png)
 
 ## 概述
 
@@ -14,9 +13,7 @@
 
 基本上，我们有以下三种类型的对等互联：**Azure公共对等互联**、**Azure私有对等互联**和**Microsoft对等互联**。Azure服务根据IP寻址方案被分类为Azure公共和Azure私有，每种对等互联都在一对路由器上以相同的方式配置，通常采用主动-主动或负载共享配置。
 
-![](img/bde06e411ef64bb3f23b7ec874bc88c1_2.png)
 
-![](img/bde06e411ef64bb3f23b7ec874bc88c1_3.png)
 
 ---
 
@@ -42,11 +39,9 @@ Azure私有对等互联通常用于连接Azure计算服务，例如虚拟机、�
 
 ## Microsoft对等互联
 
-![](img/bde06e411ef64bb3f23b7ec874bc88c1_5.png)
 
 了解了私有对等互联后，我们接下来看看Microsoft对等互联。
 
-![](img/bde06e411ef64bb3f23b7ec874bc88c1_7.png)
 
 通常，Microsoft 365被设计为通过互联网安全可靠地访问。因此，对于特定场景，推荐使用快速路由。
 

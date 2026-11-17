@@ -22,7 +22,6 @@ MicroPython 拥有所谓的标准库。当你将 MicroPython 安装到 Pico 上�
 
 标准库有很多，一次快速的谷歌搜索就能让你知道可以使用哪些。
 
-![](img/392cdeef7f8354def3d47a91dfd9358b_1.png)
 
 ### 外部库
 

@@ -2,7 +2,6 @@
 
 在本节课中，我们将要学习一个名为 `make` 的Unix工具。`make` 是一个用于根据源文件和目标文件之间的依赖关系，有选择性地构建代码项目的工具。我们将看到，`make` 不仅仅是一个在调用编译器时节省打字的便捷方式，它还能智能地管理复杂的构建过程。
 
-![](img/7b1d7ab0b1cd31a0edd73b30d5dd50eb_1.png)
 
 ## 为什么需要make工具？ 🤔
 
@@ -22,7 +21,6 @@ cc -Wall -Werror -Wextra *.c -o ls
 
 一种更高效的方法是单独编译每个源文件，生成目标文件（`.o` 文件），然后再将它们链接成可执行文件。
 
-![](img/7b1d7ab0b1cd31a0edd73b30d5dd50eb_3.png)
 
 我们可以使用 `-c` 选项让编译器只生成目标文件：
 ```bash
@@ -38,7 +36,6 @@ cc cmp.o ls.o main.o stat_flags.o -o ls
 
 现在，如果我们只修改了 `cmp.c` 文件，我们只需要重新编译这一个文件，然后重新链接所有目标文件即可。这比重新编译所有文件要高效得多。
 
-![](img/7b1d7ab0b1cd31a0edd73b30d5dd50eb_5.png)
 
 ## 依赖关系图 📊
 
@@ -107,9 +104,7 @@ CFLAGS = -Wall -Werror -Wextra
 
 现在，我们可以简化我们的目标规则：
 
-![](img/7b1d7ab0b1cd31a0edd73b30d5dd50eb_7.png)
 
-![](img/7b1d7ab0b1cd31a0edd73b30d5dd50eb_8.png)
 
 ```makefile
 all: $(PROGRAM)
@@ -140,13 +135,10 @@ stat_flags.o: stat_flags.c stat_flags.h
 
 ## 自动生成依赖：makedepend 工具 🔧
 
-![](img/7b1d7ab0b1cd31a0edd73b30d5dd50eb_10.png)
 
-![](img/7b1d7ab0b1cd31a0edd73b30d5dd50eb_12.png)
 
 幸运的是，有一个名为 `makedepend` 的工具可以自动分析 C 源文件并生成依赖规则。
 
-![](img/7b1d7ab0b1cd31a0edd73b30d5dd50eb_14.png)
 
 我们可以在 `Makefile` 中添加一个 `depend` 目标：
 ```makefile
@@ -161,7 +153,6 @@ depend:
 *   `CC` 变量默认是 `cc`（C 编译器）。
 *   对于从 `.c` 文件构建 `.o` 文件，`make` 有一个内置的隐式规则，其命令大致是 `$(CC) $(CFLAGS) -c -o $@ $<`。
 
-![](img/7b1d7ab0b1cd31a0edd73b30d5dd50eb_16.png)
 
 这意味着，即使我们不显式地编写 `.c.o` 后缀规则，`make` 通常也知道如何构建 `.o` 文件。我们只需要设置好 `CFLAGS` 等变量即可。
 

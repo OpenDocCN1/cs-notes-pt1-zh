@@ -1,6 +1,5 @@
 # 013：应用委托与网络请求基础
 
-![](img/0269a5b7156577f0a22c18388ffb7467_1.png)
 
 ## 概述
 
@@ -16,7 +15,6 @@
 
 一个iOS应用在其生命周期中会经历五种不同的状态：
 
-![](img/0269a5b7156577f0a22c18388ffb7467_3.png)
 
 ![](img/0269a5b7156577f0a22c18388ffb7467_4.png)
 
@@ -100,13 +98,10 @@ let task = URLSession.shared.dataTask(with: request) { data, response, error in
 task.resume() // 不要忘记启动任务
 ```
 
-![](img/0269a5b7156577f0a22c18388ffb7467_6.png)
 
 **重要配置**：为了允许HTTP请求（而非安全的HTTPS），你需要在项目的 `Info.plist` 文件中添加一个例外。添加 `App Transport Security Settings` 字典，并在其下添加一个布尔键 `Allow Arbitrary Loads`，将其值设置为 `YES`。**请注意，这仅适用于开发测试，上架App Store前应移除或配置更安全的ATS规则。**
 
-![](img/0269a5b7156577f0a22c18388ffb7467_8.png)
 
-![](img/0269a5b7156577f0a22c18388ffb7467_10.png)
 
 运行应用并触发网络请求后，你将在控制台看到从服务器获取的原始字符串和解析后的JSON对象。通常，JSON数据是嵌套的字典和数组结构。在后续教程中，我们将学习如何从中提取特定字段（如“name”），并将其显示在表格视图（UITableView）中。
 
@@ -114,7 +109,6 @@ task.resume() // 不要忘记启动任务
 
 ## 总结
 
-![](img/0269a5b7156577f0a22c18388ffb7467_12.png)
 
 ![](img/0269a5b7156577f0a22c18388ffb7467_13.png)
 

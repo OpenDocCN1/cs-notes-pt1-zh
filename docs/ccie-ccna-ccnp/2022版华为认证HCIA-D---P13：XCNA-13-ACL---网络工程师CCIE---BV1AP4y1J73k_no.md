@@ -103,7 +103,6 @@ ACL采用“自顶向下，首次匹配”的匹配流程：
 *   `deny tcp`：拒绝TCP协议流量。
 *   `destination-port eq 21`：匹配目的端口等于21（FTP）。
 
-![](img/1484424cbe9dcaa8e57868829ceec8d7_1.png)
 
 ### 3. 在接口上调用ACL
 ```bash
@@ -126,29 +125,18 @@ ACL采用“自顶向下，首次匹配”的匹配流程：
 *   `0`：是 `0.0.0.0` 的简写，表示精确匹配一个IP地址。例如 `source 10.1.1.1 0`。
 *   `any`：是 `0.0.0.0 255.255.255.255` 的简写，表示匹配任何源或目的IP地址。
 
-![](img/1484424cbe9dcaa8e57868829ceec8d7_3.png)
 
-![](img/1484424cbe9dcaa8e57868829ceec8d7_4.png)
 
-![](img/1484424cbe9dcaa8e57868829ceec8d7_5.png)
 
-![](img/1484424cbe9dcaa8e57868829ceec8d7_7.png)
 
-![](img/1484424cbe9dcaa8e57868829ceec8d7_8.png)
 
-![](img/1484424cbe9dcaa8e57868829ceec8d7_10.png)
 
-![](img/1484424cbe9dcaa8e57868829ceec8d7_11.png)
 
-![](img/1484424cbe9dcaa8e57868829ceec8d7_13.png)
 
-![](img/1484424cbe9dcaa8e57868829ceec8d7_14.png)
 
-![](img/1484424cbe9dcaa8e57868829ceec8d7_16.png)
 
 ---
 
-![](img/1484424cbe9dcaa8e57868829ceec8d7_18.png)
 
 ## ACL的广泛应用
 ACL作为一个基础工具，其用途远不止于接口流量过滤：
@@ -158,19 +146,12 @@ ACL作为一个基础工具，其用途远不止于接口流量过滤：
 4.  **服务质量**：在QoS中，用于分类和标记感兴趣的流量。
 5.  **防火墙策略**：在防火墙中，作为更高级安全策略的基础。
 
-![](img/1484424cbe9dcaa8e57868829ceec8d7_20.png)
 
-![](img/1484424cbe9dcaa8e57868829ceec8d7_22.png)
 
-![](img/1484424cbe9dcaa8e57868829ceec8d7_23.png)
 
-![](img/1484424cbe9dcaa8e57868829ceec8d7_25.png)
 
-![](img/1484424cbe9dcaa8e57868829ceec8d7_26.png)
 
-![](img/1484424cbe9dcaa8e57868829ceec8d7_28.png)
 
-![](img/1484424cbe9dcaa8e57868829ceec8d7_30.png)
 
 ---
 

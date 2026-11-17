@@ -33,21 +33,16 @@ AWS控制台是一个基于Web的用户界面，它通过EC2实例服务提供�
 
 这就是我已经安装了Elasticsearch和Kibana的实例。它只允许我通过特定的IP地址进入。如你所见，这里的实例状态是“已停止”。现在，我需要启动这个实例。所以我将点击“操作” -> “实例状态” -> “启动”。
 
-![](img/3a6feb25027f85da582affa4ecc88c97_1.png)
 
-![](img/3a6feb25027f85da582affa4ecc88c97_1.png)
 
 与此同时，我们将打开PuTTY，它作为中介，将带我进入EC2实例。
 
-![](img/3a6feb25027f85da582affa4ecc88c97_3.png)
 
 在“主机名”中，我将输入实例启动后将提供的公共IP地址。每次启动服务时，它都会更改公共IP和私有IP地址，我们只能在PuTTY配置中添加那个特定的IP地址。这是公共IP地址：`3.7.254.145`。输入这个特定的IP地址，然后点击“打开”。
 
-![](img/3a6feb25027f85da582affa4ecc88c97_5.png)
 
 这是一个警告，点击“是”。我已经预先设置好了用户名和密码。
 
-![](img/3a6feb25027f85da582affa4ecc88c97_5.png)
 
 现在，我们已经到达了特定部分。也就是说，我们已经进入了这个特定项目的EC2实例。
 
@@ -71,7 +66,6 @@ sudo service kibana start
 
 现在，两个服务都已启动。让我们看看它们是否能正常工作。
 
-![](img/3a6feb25027f85da582affa4ecc88c97_7.png)
 
 ## 验证服务
 
@@ -89,7 +83,6 @@ sudo service kibana start
 
 我们知道，在这个视频中，我们将讨论四种API：PUT、POST、GET和DELETE。现在，我们在这里获得了公共IP。将其输入到主机名中。
 
-![](img/3a6feb25027f85da582affa4ecc88c97_9.png)
 
 然后点击“打开”。我们已经创建了用户。好的，现在我们将启动服务。
 
@@ -99,7 +92,6 @@ sudo service elasticsearch start
 ```
 现在正在启动你的Elasticsearch。
 
-![](img/3a6feb25027f85da582affa4ecc88c97_9.png)
 
 当我们启动这两个服务后，我们将进入控制台。现在，启动Kibana服务。命令是：
 ```bash
@@ -107,14 +99,11 @@ sudo service kibana start
 ```
 是的，这个命令，名字变了。现在Kibana也已经启动，但这里的工作已经完成。
 
-![](img/3a6feb25027f85da582affa4ecc88c97_11.png)
 
-![](img/3a6feb25027f85da582affa4ecc88c97_11.png)
 
 现在，我们将首先输入从该实例获得的公共IP：`13.234.31.209`，以及Kibana的默认端口5601。它正在加载Elasticsearch。
 
 然后，我们必须进入那个可以编写API的特定图标，即“开发工具”。
 
-![](img/3a6feb25027f85da582affa4ecc88c97_13.png)
 
 ![](img/3a6feb25027f85da582affa4ecc88c97_13.png)

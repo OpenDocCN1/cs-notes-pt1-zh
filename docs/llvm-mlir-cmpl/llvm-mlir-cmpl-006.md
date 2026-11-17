@@ -10,33 +10,23 @@
 
 ## 关于前几集问题的解答
 
-![](img/a4f2cba96bb70490c3b21f4895f7607b_1.png)
 
 在开始之前，我们先回答几个关于上一集的问题。
 
-![](img/a4f2cba96bb70490c3b21f4895f7607b_3.png)
 
 ### 为什么没有实现链表？
 
-![](img/a4f2cba96bb70490c3b21f4895f7607b_5.png)
 
-![](img/a4f2cba96bb70490c3b21f4895f7607b_7.png)
 
 在上一集的实现中，列表是围绕`std::vector`的包装器。我们的目标是先创建一个简单的编译器，然后在此基础上构建。目前，我们不需要实现一个真正的链表。在未来的类型系统阶段，我们将需要创建一个MLIR类型系统中的列表类型，这与C++的链表不同。
 
-![](img/a4f2cba96bb70490c3b21f4895f7607b_9.png)
 
-![](img/a4f2cba96bb70490c3b21f4895f7607b_10.png)
 
 ### 为什么使用`std::vector`而不是LLVM集合？
 
-![](img/a4f2cba96bb70490c3b21f4895f7607b_12.png)
 
-![](img/a4f2cba96bb70490c3b21f4895f7607b_13.png)
 
-![](img/a4f2cba96bb70490c3b21f4895f7607b_15.png)
 
-![](img/a4f2cba96bb70490c3b21f4895f7607b_17.png)
 
 LLVM提供了许多替代标准库类型的数据结构，例如`llvm::SmallVector`。这些替代品通常更快、更高效。目前，为了代码的清晰易懂，我们使用了大家熟悉的`std::vector`。未来在重构代码时，我们会将其替换为LLVM的替代类型。
 
@@ -44,17 +34,12 @@ LLVM提供了许多替代标准库类型的数据结构，例如`llvm::SmallVect
 
 ## 什么是语义分析？
 
-![](img/a4f2cba96bb70490c3b21f4895f7607b_19.png)
 
-![](img/a4f2cba96bb70490c3b21f4895f7607b_20.png)
 
-![](img/a4f2cba96bb70490c3b21f4895f7607b_22.png)
 
 语义分析阶段会检查AST，确保程序符合语言规范，在逻辑上是正确的。例如，考虑以下代码片段：
 
-![](img/a4f2cba96bb70490c3b21f4895f7607b_24.png)
 
-![](img/a4f2cba96bb70490c3b21f4895f7607b_26.png)
 
 ```lisp
 (4 main)
@@ -64,9 +49,7 @@ LLVM提供了许多替代标准库类型的数据结构，例如`llvm::SmallVect
 
 ## 语义分析中的重写
 
-![](img/a4f2cba96bb70490c3b21f4895f7607b_28.png)
 
-![](img/a4f2cba96bb70490c3b21f4895f7607b_30.png)
 
 在我们的Serene编译器中，语义分析阶段不仅进行错误检查，还会对AST进行重写。我们通过识别特定的模式，将通用的列表节点替换为更具语义的专用节点。
 
@@ -110,21 +93,16 @@ Def
 
 ## 语义分析器的工作原理
 
-![](img/a4f2cba96bb70490c3b21f4895f7607b_32.png)
 
-![](img/a4f2cba96bb70490c3b21f4895f7607b_34.png)
 
-![](img/a4f2cba96bb70490c3b21f4895f7607b_36.png)
 
 现在，让我们深入代码，看看语义分析器是如何工作的。
 
-![](img/a4f2cba96bb70490c3b21f4895f7607b_38.png)
 
 ### 入口点
 
 语义分析器的入口点是一个名为`analyze`的函数。它接收一个设置上下文和一个AST，并返回一个`AnalyzeResult`，其中包含处理后的AST或错误列表。
 
-![](img/a4f2cba96bb70490c3b21f4895f7607b_40.png)
 
 ```cpp
 // 位于 `include/reader/semantic_analysis.h`
@@ -133,17 +111,13 @@ AnalyzeResult analyze(SettingContext &ctx, AST &tree);
 
 ### 核心逻辑
 
-![](img/a4f2cba96bb70490c3b21f4895f7607b_42.png)
 
-![](img/a4f2cba96bb70490c3b21f4895f7607b_44.png)
 
 `analyze`函数的核心逻辑是遍历AST中的每个节点，并调用其`analyze`成员函数。根据返回的`MaybeNode`结果，我们决定是重写节点、保留原节点还是记录错误。
 
 
-![](img/a4f2cba96bb70490c3b21f4895f7607b_46.png)
 
 
-![](img/a4f2cba96bb70490c3b21f4895f7607b_48.png)
 
 ```cpp
 // 简化后的核心循环逻辑
@@ -212,21 +186,15 @@ if (errors.empty()) {
 
 ## 新的语义节点类型
 
-![](img/a4f2cba96bb70490c3b21f4895f7607b_50.png)
 
-![](img/a4f2cba96bb70490c3b21f4895f7607b_52.png)
 
 在语义分析阶段，我们引入了三种新的节点类型：`Def`、`Fn`和`Call`。
 
-![](img/a4f2cba96bb70490c3b21f4895f7607b_54.png)
 
-![](img/a4f2cba96bb70490c3b21f4895f7607b_56.png)
 
-![](img/a4f2cba96bb70490c3b21f4895f7607b_57.png)
 
 ### `Def` 节点
 
-![](img/a4f2cba96bb70490c3b21f4895f7607b_59.png)
 
 `Def`节点表示一个绑定定义，例如`(def x 10)`。它包含一个绑定名称和一个值表达式。
 
@@ -262,11 +230,9 @@ if (errors.empty()) {
 
 ### `Call` 节点
 
-![](img/a4f2cba96bb70490c3b21f4895f7607b_61.png)
 
 `Call`节点表示一个函数调用。它包含一个目标表达式（要调用的函数）和一个参数列表。
 
-![](img/a4f2cba96bb70490c3b21f4895f7607b_63.png)
 
 *   **`make`函数**：`Call::make`函数分析调用目标（可能是一个需要解析的符号，或者是另一个表达式的结果），分析所有参数，并创建`Call`节点。
     ```cpp
@@ -284,19 +250,15 @@ if (errors.empty()) {
 
 ## 与编译器交互
 
-![](img/a4f2cba96bb70490c3b21f4895f7607b_65.png)
 
 你可以使用编译器的`semantic`动作来查看经过语义分析后的AST。
 
-![](img/a4f2cba96bb70490c3b21f4895f7607b_67.png)
 
 ```bash
 ./serene hello.sr -action semantic -o output
 ```
 
-![](img/a4f2cba96bb70490c3b21f4895f7607b_69.png)
 
-![](img/a4f2cba96bb70490c3b21f4895f7607b_70.png)
 
 这将输出重写后的AST，其中原始的列表节点已被替换为`Def`、`Fn`和`Call`等语义节点。
 

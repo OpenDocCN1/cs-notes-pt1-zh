@@ -36,7 +36,6 @@
 mkdir BuildDjango
 ```
 
-![](img/7de6469007a65e2f5a14f7cde8527319_3.png)
 
 然后，使用`cd`命令进入此目录。
 

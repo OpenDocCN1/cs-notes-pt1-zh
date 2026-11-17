@@ -46,11 +46,9 @@ NEXT i
 *   `FOR...NEXT`循环：循环变量`i`从0到15，代表16种颜色。
 *   `CIRCLE`命令：用于画圆。参数依次是圆心的X坐标、Y坐标、半径和颜色。
 
-![](img/55c78dc961b6edf6630a71a6f58ebf7b_7.png)
 
 运行这段代码，你将在屏幕中央看到一组彩色的同心圆，就像一个彩虹。
 
-![](img/55c78dc961b6edf6630a71a6f58ebf7b_9.png)
 
 ## 创建动画：飘落的雪花 ❄️
 
@@ -76,30 +74,22 @@ NEXT i
 
 ![](img/55c78dc961b6edf6630a71a6f58ebf7b_23.png)
 
-![](img/55c78dc961b6edf6630a71a6f58ebf7b_25.png)
 
 ![](img/55c78dc961b6edf6630a71a6f58ebf7b_27.png)
 
 以下是核心代码框架：
 
-![](img/55c78dc961b6edf6630a71a6f58ebf7b_29.png)
 
 ![](img/55c78dc961b6edf6630a71a6f58ebf7b_31.png)
 
 
-![](img/55c78dc961b6edf6630a71a6f58ebf7b_33.png)
-
-![](img/55c78dc961b6edf6630a71a6f58ebf7b_35.png)
 
 
-![](img/55c78dc961b6edf6630a71a6f58ebf7b_37.png)
 
 
-![](img/55c78dc961b6edf6630a71a6f58ebf7b_39.png)
 
-![](img/55c78dc961b6edf6630a71a6f58ebf7b_41.png)
 
-![](img/55c78dc961b6edf6630a71a6f58ebf7b_43.png)
+
 
 ```basic
 RANDOMIZE TIMER
@@ -129,9 +119,7 @@ DO
 LOOP UNTIL INKEY$ <> ""
 ```
 
-![](img/55c78dc961b6edf6630a71a6f58ebf7b_45.png)
 
-![](img/55c78dc961b6edf6630a71a6f58ebf7b_47.png)
 
 **关键概念**：
 *   `RANDOMIZE TIMER`：用系统时间初始化随机数种子。
@@ -139,9 +127,7 @@ LOOP UNTIL INKEY$ <> ""
 *   `PSET (x, y), color`：在指定坐标`(x, y)`绘制一个指定颜色的像素点。
 *   `INKEY$`函数：检测是否有按键被按下。循环会一直运行，直到用户按下任意键。
 
-![](img/55c78dc961b6edf6630a71a6f58ebf7b_49.png)
 
-![](img/55c78dc961b6edf6630a71a6f58ebf7b_51.png)
 
 ## 添加背景音乐 🎵
 
@@ -153,9 +139,7 @@ LOOP UNTIL INKEY$ <> ""
 
 `PLAY`命令使用一个特殊的字符串来定义音符、音长和节奏。以下是一段《铃儿响叮当》(Jingle Bells)的示例：
 
-![](img/55c78dc961b6edf6630a71a6f58ebf7b_57.png)
 
-![](img/55c78dc961b6edf6630a71a6f58ebf7b_59.png)
 
 ```basic
 PLAY "MB T200 L16 O2 E L4 E L2 E L4 E L4 E L2 E L4 G L4 C L4 D L1 E"
@@ -172,9 +156,7 @@ PLAY "MB T200 L16 O2 E L4 E L2 E L4 E L4 E L2 E L4 G L4 C L4 D L1 E"
 *   `O2`：设置音阶为第2个八度。
 *   后面的`E`、`G`、`C`、`D`等字母代表音符。
 
-![](img/55c78dc961b6edf6630a71a6f58ebf7b_65.png)
 
-![](img/55c78dc961b6edf6630a71a6f58ebf7b_67.png)
 
 为了让音乐在播放完毕后自动重复，我们可以检查音乐缓冲区。以下是如何将音乐整合到主循环中：
 
@@ -192,7 +174,6 @@ PLAY "MB T200 L16 O2 E L4 E L2 E L4 E L4 E L2 E L4 G L4 C L4 D L1 E"
 
 ![](img/55c78dc961b6edf6630a71a6f58ebf7b_79.png)
 
-![](img/55c78dc961b6edf6630a71a6f58ebf7b_81.png)
 
 ```basic
 ' 设置更大的声音缓冲区
@@ -211,7 +192,6 @@ LOOP UNTIL INKEY$ <> ""
 
 ## 添加节日问候文本
 
-![](img/55c78dc961b6edf6630a71a6f58ebf7b_83.png)
 
 最后，让我们在屏幕上显示一句节日祝福。在图形模式下，我们可以使用`PRINT`语句，但需要手动定位。
 
@@ -221,7 +201,6 @@ LOOP UNTIL INKEY$ <> ""
 
 由于PowerBasic的图形模式没有直接的文本光标定位命令，我们可以通过打印多个空行和空格来模拟居中效果：
 
-![](img/55c78dc961b6edf6630a71a6f58ebf7b_89.png)
 
 ```basic
 COLOR 5  ' 设置文本颜色为洋红色
@@ -231,11 +210,8 @@ NEXT i
 PRINT "                                    Merry Christmas!"  ' 使用空格进行水平居中
 ```
 
-![](img/55c78dc961b6edf6630a71a6f58ebf7b_91.png)
 
-![](img/55c78dc961b6edf6630a71a6f58ebf7b_93.png)
 
-![](img/55c78dc961b6edf6630a71a6f58ebf7b_95.png)
 
 ## 程序整合与运行
 
@@ -245,11 +221,9 @@ PRINT "                                    Merry Christmas!"  ' 使用空格进�
 
 ![](img/55c78dc961b6edf6630a71a6f58ebf7b_99.png)
 
-![](img/55c78dc961b6edf6630a71a6f58ebf7b_101.png)
 
 运行这个完整的程序，你将看到一个充满节日气氛的MS-DOS圣诞贺卡。
 
-![](img/55c78dc961b6edf6630a71a6f58ebf7b_103.png)
 
 ## 总结与思考
 

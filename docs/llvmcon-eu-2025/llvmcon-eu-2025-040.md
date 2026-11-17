@@ -1,6 +1,5 @@
 # 040：优化FDTD求解器
 
-![](img/73ce5eccd3669021e0fd060821f2280c_0.png)
 
 ![](img/73ce5eccd3669021e0fd060821f2280c_0.png)
 

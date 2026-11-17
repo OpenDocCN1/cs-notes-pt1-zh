@@ -2,17 +2,14 @@ Linux命令行基础：Part2：使用mongoexport导出数据 📤
 
 在本节课中，我们将学习如何使用 `mongoexport` 工具从MongoDB数据库中导出数据。我们将了解其基本用法、适用场景以及需要注意的事项。
 
-![](img/cb77bb0deed2da57f86ba163d8b91d6d_1.png)
 
 ---
 
 `mongoexport` 并非生产环境中执行备份的合适工具。然而，它在快速提取数据以生成报告时非常有用。例如，你可以用它来快速生成JSON格式的备份或Excel CSV类型的报告。
 
-![](img/cb77bb0deed2da57f86ba163d8b91d6d_3.png)
 
 虽然不推荐在生产环境中使用此方法，但如果你想测试 `mongoexport` 工具，可以按照以下步骤操作。
 
-![](img/cb77bb0deed2da57f86ba163d8b91d6d_5.png)
 
 以下是 `mongoexport` 命令的基本语法结构：
 

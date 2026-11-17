@@ -12,52 +12,35 @@
 
 后来的 80286 和 80386 CPU 将寻址能力提升到了 16 MB 和 4 GB。但对于已经存在的旧软件，640KB 的限制依然存在。为了解决这个问题，Lotus、Intel 和 Microsoft 三家公司联合制定了 **LIM 标准**，定义了所谓的“扩展内存”。
 
-![](img/ce8475ab5dbd1304bea8baf2cdafce72_3.png)
 
-![](img/ce8475ab5dbd1304bea8baf2cdafce72_5.png)
 
-![](img/ce8475ab5dbd1304bea8baf2cdafce72_7.png)
 
 扩展内存通常位于一块额外的 ISA 插卡上，带有数 MB 的 RAM。这块卡通过“分页切换”技术，将内存“窗口”映射到常规内存中一个未使用的段（通常在 `D000:0000` 到 `E000:0000` 之间）。程序通过一个标准化的 API（通过中断 `0x67` 访问）与这块卡通信。你可以分配内存、释放内存，并将扩展内存中的 **16 KB 页面** 切换到常规内存的“页框”中查看。后来，MS-DOS 自带了一个名为 **EMM386** 的扩展内存管理器，它通过软件模拟硬件卡的功能，允许旧程序在 386 及以上 CPU 上使用扩展内存。
 
-![](img/ce8475ab5dbd1304bea8baf2cdafce72_9.png)
 
-![](img/ce8475ab5dbd1304bea8baf2cdafce72_11.png)
 
 使用 EMS 的好处是，它可以在从第一台 PC 开始的所有系统上工作，让你能编写使用超过 640KB 内存的 DOS 程序，同时又无需处理保护模式等复杂概念。
 
-![](img/ce8475ab5dbd1304bea8baf2cdafce72_13.png)
 
 ## 核心功能与实现
 
-![](img/ce8475ab5dbd1304bea8baf2cdafce72_15.png)
 
-![](img/ce8475ab5dbd1304bea8baf2cdafce72_16.png)
 
 以下是使用扩展内存需要了解的核心功能，我们将通过代码示例来逐一讲解。
 
 ### 1. 检测 EMS 驱动程序
 
-![](img/ce8475ab5dbd1304bea8baf2cdafce72_18.png)
 
-![](img/ce8475ab5dbd1304bea8baf2cdafce72_19.png)
 
-![](img/ce8475ab5dbd1304bea8baf2cdafce72_21.png)
 
-![](img/ce8475ab5dbd1304bea8baf2cdafce72_22.png)
 
 首先，需要检查系统是否安装了 EMS 驱动程序。可以通过检查中断 `0x67` 的处理程序地址处是否存在特定字符串来实现。
 
-![](img/ce8475ab5dbd1304bea8baf2cdafce72_24.png)
-
-![](img/ce8475ab5dbd1304bea8baf2cdafce72_26.png)
 
 
-![](img/ce8475ab5dbd1304bea8baf2cdafce72_28.png)
 
-![](img/ce8475ab5dbd1304bea8baf2cdafce72_30.png)
 
-![](img/ce8475ab5dbd1304bea8baf2cdafce72_32.png)
+
 
 ```c
 #define EMS_INT 0x67
@@ -76,17 +59,12 @@ int ems_installed() {
 }
 ```
 
-![](img/ce8475ab5dbd1304bea8baf2cdafce72_34.png)
 
-![](img/ce8475ab5dbd1304bea8baf2cdafce72_36.png)
 
 ### 2. 获取 EMS 版本
 
-![](img/ce8475ab5dbd1304bea8baf2cdafce72_38.png)
 
-![](img/ce8475ab5dbd1304bea8baf2cdafce72_40.png)
 
-![](img/ce8475ab5dbd1304bea8baf2cdafce72_42.png)
 
 获取驱动程序的版本号，返回值是二进制编码的十进制数。
 
@@ -94,9 +72,7 @@ int ems_installed() {
 
 ![](img/ce8475ab5dbd1304bea8baf2cdafce72_46.png)
 
-![](img/ce8475ab5dbd1304bea8baf2cdafce72_48.png)
 
-![](img/ce8475ab5dbd1304bea8baf2cdafce72_50.png)
 
 ```c
 int ems_version() {
@@ -110,40 +86,26 @@ int ems_version() {
 }
 ```
 
-![](img/ce8475ab5dbd1304bea8baf2cdafce72_52.png)
 
-![](img/ce8475ab5dbd1304bea8baf2cdafce72_54.png)
 
-![](img/ce8475ab5dbd1304bea8baf2cdafce72_56.png)
 
-![](img/ce8475ab5dbd1304bea8baf2cdafce72_58.png)
 
-![](img/ce8475ab5dbd1304bea8baf2cdafce72_60.png)
 
-![](img/ce8475ab5dbd1304bea8baf2cdafce72_62.png)
 
-![](img/ce8475ab5dbd1304bea8baf2cdafce72_63.png)
 
-![](img/ce8475ab5dbd1304bea8baf2cdafce72_65.png)
 
 ### 3. 查询页面信息
 
 扩展内存以 16 KB 的“页面”为单位进行管理。需要查询系统总共有多少页面，以及有多少空闲页面。
 
-![](img/ce8475ab5dbd1304bea8baf2cdafce72_67.png)
-
-![](img/ce8475ab5dbd1304bea8baf2cdafce72_69.png)
 
 
-![](img/ce8475ab5dbd1304bea8baf2cdafce72_71.png)
 
-![](img/ce8475ab5dbd1304bea8baf2cdafce72_73.png)
+
 
 ![](img/ce8475ab5dbd1304bea8baf2cdafce72_75.png)
 
-![](img/ce8475ab5dbd1304bea8baf2cdafce72_77.png)
 
-![](img/ce8475ab5dbd1304bea8baf2cdafce72_78.png)
 
 ```c
 // 获取总页面数
@@ -164,13 +126,11 @@ int ems_free_pages() {
 }
 ```
 
-![](img/ce8475ab5dbd1304bea8baf2cdafce72_80.png)
 
 ### 4. 获取页框段地址
 
 页框是常规内存中用于映射扩展内存页面的窗口，通常是一个段地址。
 
-![](img/ce8475ab5dbd1304bea8baf2cdafce72_82.png)
 
 ```c
 unsigned short ems_frame_segment() {
@@ -224,9 +184,7 @@ int ems_map(int handle, int logical_page, int physical_page) {
 }
 ```
 
-![](img/ce8475ab5dbd1304bea8baf2cdafce72_84.png)
 
-![](img/ce8475ab5dbd1304bea8baf2cdafce72_86.png)
 
 ### 7. 访问映射内存
 
@@ -241,9 +199,7 @@ unsigned short ems_frame_seg; // 存储获取到的页框段地址
 _fmemcpy(EMS_PAGE(0), source_data, copy_size);
 ```
 
-![](img/ce8475ab5dbd1304bea8baf2cdafce72_88.png)
 
-![](img/ce8475ab5dbd1304bea8baf2cdafce72_90.png)
 
 ## 实战示例：加载并播放动画
 
@@ -272,9 +228,7 @@ _fmemcpy(EMS_PAGE(0), source_data, copy_size);
 
 ## 总结
 
-![](img/ce8475ab5dbd1304bea8baf2cdafce72_96.png)
 
-![](img/ce8475ab5dbd1304bea8baf2cdafce72_98.png)
 
 本节课中我们一起学习了 MS-DOS 扩展内存的基本概念和使用方法。
 

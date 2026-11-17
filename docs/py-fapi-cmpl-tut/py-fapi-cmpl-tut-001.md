@@ -70,34 +70,25 @@
 
 ![](img/61b5aa4c68627fe37ce2e42649211167_31.png)
 
-![](img/61b5aa4c68627fe37ce2e42649211167_33.png)
 
-![](img/61b5aa4c68627fe37ce2e42649211167_34.png)
 
 ## 安装 FastAPI
 
-![](img/61b5aa4c68627fe37ce2e42649211167_36.png)
 
-![](img/61b5aa4c68627fe37ce2e42649211167_38.png)
 
-![](img/61b5aa4c68627fe37ce2e42649211167_39.png)
 
-![](img/61b5aa4c68627fe37ce2e42649211167_41.png)
 
-![](img/61b5aa4c68627fe37ce2e42649211167_43.png)
 
 现在我们已经激活了虚拟环境，接下来安装 FastAPI。
 
 ![](img/61b5aa4c68627fe37ce2e42649211167_45.png)
 
-![](img/61b5aa4c68627fe37ce2e42649211167_47.png)
 
 使用 `pip` 安装 FastAPI：
 ```bash
 pip install fastapi
 ```
 
-![](img/61b5aa4c68627fe37ce2e42649211167_49.png)
 
 ![](img/61b5aa4c68627fe37ce2e42649211167_51.png)
 
@@ -125,11 +116,9 @@ fastapi
 
 ![](img/61b5aa4c68627fe37ce2e42649211167_60.png)
 
-![](img/61b5aa4c68627fe37ce2e42649211167_62.png)
 
 首先，创建一个名为 `main.py` 的文件。
 
-![](img/61b5aa4c68627fe37ce2e42649211167_64.png)
 
 ![](img/61b5aa4c68627fe37ce2e42649211167_66.png)
 
@@ -264,7 +253,6 @@ async def greet_user_with_age(name: str, age: int = 0):
 2.  将参数类型定义为 `Optional[str]` 或 `Optional[int]`。
 3.  为参数提供默认值。
 
-![](img/61b5aa4c68627fe37ce2e42649211167_92.png)
 
 ![](img/61b5aa4c68627fe37ce2e42649211167_94.png)
 
@@ -309,7 +297,6 @@ async def greet_optional(name: Optional[str] = "User", age: Optional[int] = 0):
 
 ![](img/61b5aa4c68627fe37ce2e42649211167_109.png)
 
-![](img/61b5aa4c68627fe37ce2e42649211167_111.png)
 
 
 ![](img/61b5aa4c68627fe37ce2e42649211167_113.png)
@@ -326,7 +313,6 @@ async def create_book(book: BookCreate):
     return {"title": book.title, "author": book.author}
 ```
 
-![](img/61b5aa4c68627fe37ce2e42649211167_117.png)
 
 使用 RESTfox 发送 POST 请求到 `http://localhost:8000/createbook`，并在请求体中提供 JSON 数据（如 `{"title": "Learn FastAPI", "author": "John Doe"}`），服务器将返回创建的书本信息。
 

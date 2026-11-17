@@ -1,6 +1,5 @@
 # 007：示例程序
 
-![](img/2a6abffa79de8e18beb31e1d928c5c1d_0.png)
 
 ![](img/2a6abffa79de8e18beb31e1d928c5c1d_0.png)
 
@@ -128,6 +127,5 @@ ret                   # 返回
 
 记住，编写清晰、注释完整的汇编代码，并充分理解底层机制（如栈的操作），是进行高效汇编编程的关键。
 
-![](img/2a6abffa79de8e18beb31e1d928c5c1d_2.png)
 
 ![](img/2a6abffa79de8e18beb31e1d928c5c1d_2.png)

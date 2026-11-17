@@ -1,173 +1,103 @@
 # 007：链表与指针机模型 🧠
 
-![](img/569b6d62b660e28bb3f923aa74ec49d8_1.png)
 
-![](img/569b6d62b660e28bb3f923aa74ec49d8_2.png)
 
-![](img/569b6d62b660e28bb3f923aa74ec49d8_4.png)
 
-![](img/569b6d62b660e28bb3f923aa74ec49d8_6.png)
 
-![](img/569b6d62b660e28bb3f923aa74ec49d8_8.png)
 
-![](img/569b6d62b660e28bb3f923aa74ec49d8_9.png)
 
-![](img/569b6d62b660e28bb3f923aa74ec49d8_10.png)
 
-![](img/569b6d62b660e28bb3f923aa74ec49d8_12.png)
 
-![](img/569b6d62b660e28bb3f923aa74ec49d8_13.png)
 
-![](img/569b6d62b660e28bb3f923aa74ec49d8_15.png)
 
-![](img/569b6d62b660e28bb3f923aa74ec49d8_17.png)
 
-![](img/569b6d62b660e28bb3f923aa74ec49d8_19.png)
 
-![](img/569b6d62b660e28bb3f923aa74ec49d8_21.png)
 
-![](img/569b6d62b660e28bb3f923aa74ec49d8_23.png)
 
-![](img/569b6d62b660e28bb3f923aa74ec49d8_25.png)
 
 在本节课中，我们将学习一种新的计算模型——指针机模型，并在此模型下探讨链表这一基础数据结构。我们将了解指针机模型与RAM模型的区别，学习如何实现单链表和双链表，并探索如何实现栈、队列以及持久化数据结构。
 
-![](img/569b6d62b660e28bb3f923aa74ec49d8_27.png)
 
-![](img/569b6d62b660e28bb3f923aa74ec49d8_28.png)
 
-![](img/569b6d62b660e28bb3f923aa74ec49d8_30.png)
 
-![](img/569b6d62b660e28bb3f923aa74ec49d8_32.png)
 
-![](img/569b6d62b660e28bb3f923aa74ec49d8_34.png)
 
-![](img/569b6d62b660e28bb3f923aa74ec49d8_36.png)
 
-![](img/569b6d62b660e28bb3f923aa74ec49d8_38.png)
 
-![](img/569b6d62b660e28bb3f923aa74ec49d8_40.png)
 
 ---
 
-![](img/569b6d62b660e28bb3f923aa74ec49d8_42.png)
 
-![](img/569b6d62b660e28bb3f923aa74ec49d8_44.png)
 
-![](img/569b6d62b660e28bb3f923aa74ec49d8_46.png)
 
-![](img/569b6d62b660e28bb3f923aa74ec49d8_48.png)
 
-![](img/569b6d62b660e28bb3f923aa74ec49d8_50.png)
 
-![](img/569b6d62b660e28bb3f923aa74ec49d8_52.png)
 
-![](img/569b6d62b660e28bb3f923aa74ec49d8_54.png)
 
-![](img/569b6d62b660e28bb3f923aa74ec49d8_56.png)
 
 ## 概述：指针机模型 🧩
 
-![](img/569b6d62b660e28bb3f923aa74ec49d8_58.png)
 
-![](img/569b6d62b660e28bb3f923aa74ec49d8_60.png)
 
-![](img/569b6d62b660e28bb3f923aa74ec49d8_61.png)
 
-![](img/569b6d62b660e28bb3f923aa74ec49d8_62.png)
 
-![](img/569b6d62b660e28bb3f923aa74ec49d8_64.png)
 
-![](img/569b6d62b660e28bb3f923aa74ec49d8_66.png)
 
 在之前的课程中，我们几乎都使用RAM模型。在RAM模型中，数据存储在一个大数组中，我们可以通过索引访问任何元素。
 
-![](img/569b6d62b660e28bb3f923aa74ec49d8_68.png)
 
-![](img/569b6d62b660e28bb3f923aa74ec49d8_70.png)
 
-![](img/569b6d62b660e28bb3f923aa74ec49d8_72.png)
 
-![](img/569b6d62b660e28bb3f923aa74ec49d8_74.png)
 
-![](img/569b6d62b660e28bb3f923aa74ec49d8_76.png)
 
 本节我们将切换到另一种计算模型，称为**指针机模型**。
 
-![](img/569b6d62b660e28bb3f923aa74ec49d8_78.png)
 
-![](img/569b6d62b660e28bb3f923aa74ec49d8_80.png)
 
-![](img/569b6d62b660e28bb3f923aa74ec49d8_82.png)
 
-![](img/569b6d62b660e28bb3f923aa74ec49d8_83.png)
 
-![](img/569b6d62b660e28bb3f923aa74ec49d8_85.png)
 
-![](img/569b6d62b660e28bb3f923aa74ec49d8_86.png)
 
-![](img/569b6d62b660e28bb3f923aa74ec49d8_88.png)
 
-![](img/569b6d62b660e28bb3f923aa74ec49d8_90.png)
 
 指针机模型是一个非常简单的计算模型。在指针机模型中，所有数据都存储在一些**节点**上。每个节点拥有恒定数量的**字段**，每个字段可以存储数据，也可以是指向另一个节点的**指针**。
 
-![](img/569b6d62b660e28bb3f923aa74ec49d8_92.png)
 
-![](img/569b6d62b660e28bb3f923aa74ec49d8_94.png)
 
-![](img/569b6d62b660e28bb3f923aa74ec49d8_96.png)
 
-![](img/569b6d62b660e28bb3f923aa74ec49d8_98.png)
 
-![](img/569b6d62b660e28bb3f923aa74ec49d8_100.png)
 
-![](img/569b6d62b660e28bb3f923aa74ec49d8_102.png)
 
-![](img/569b6d62b660e28bb3f923aa74ec49d8_104.png)
 
-![](img/569b6d62b660e28bb3f923aa74ec49d8_106.png)
 
-![](img/569b6d62b660e28bb3f923aa74ec49d8_108.png)
 
 这类似于大多数编程语言中的对象或类。例如，在Java中，一个对象可以有多个字段，其中一些字段存储数据（如整数、字符串），另一些字段则是指向其他对象的引用。
 
-![](img/569b6d62b660e28bb3f923aa74ec49d8_110.png)
 
-![](img/569b6d62b660e28bb3f923aa74ec49d8_112.png)
 
-![](img/569b6d62b660e28bb3f923aa74ec49d8_114.png)
 
-![](img/569b6d62b660e28bb3f923aa74ec49d8_116.png)
 
-![](img/569b6d62b660e28bb3f923aa74ec49d8_118.png)
 
-![](img/569b6d62b660e28bb3f923aa74ec49d8_120.png)
 
 在指针机模型中，你可以执行以下基本操作：
 *   创建新节点。
 *   删除节点。
 *   更改节点字段的值（数据或指针）。
 
-![](img/569b6d62b660e28bb3f923aa74ec49d8_122.png)
 
 指针机模型与RAM模型的主要区别在于：**指针机模型中没有数组**。你无法通过索引直接访问任意元素，只能通过节点间的指针来访问数据。
 
-![](img/569b6d62b660e28bb3f923aa74ec49d8_124.png)
 
 你可能会问，既然RAM模型更强大，为什么还要使用指针机模型？原因在于，更简单的模型有时更容易分析和保证某些性质。例如，在指针机模型中，要修改一个节点，你必须持有指向该节点的指针。这使得追踪数据访问和修改路径变得更容易，这对于实现**垃圾回收**或**并发数据结构**非常重要。我们稍后会再讨论这一点。
 
-![](img/569b6d62b660e28bb3f923aa74ec49d8_126.png)
 
 ---
 
-![](img/569b6d62b660e28bb3f923aa74ec49d8_128.png)
 
 ## 链表：指针机模型下的列表 📝
 
 既然指针机模型中没有数组，我们如何维护一个元素列表呢？答案就是**链表**。
 
-![](img/569b6d62b660e28bb3f923aa74ec49d8_130.png)
 
 链表由一系列节点组成，每个节点包含：
 1.  存储的**数据**。
@@ -214,9 +144,7 @@ while current is not None:
 3.  将 `Z.prev` 指向 `Y`。
 这样，我们就不再需要从头遍历来寻找前驱节点了。
 
-![](img/569b6d62b660e28bb3f923aa74ec49d8_132.png)
 
-![](img/569b6d62b660e28bb3f923aa74ec49d8_134.png)
 
 ### 简化边界条件：哨兵节点
 
@@ -228,25 +156,18 @@ while current is not None:
 
 ---
 
-![](img/569b6d62b660e28bb3f923aa74ec49d8_136.png)
 
 ## 栈与队列的实现 🥞🚶
 
 上一节我们介绍了链表的基本操作。本节我们来看看如何用链表实现栈和队列这两种重要的数据结构。
 
-![](img/569b6d62b660e28bb3f923aa74ec49d8_138.png)
 
-![](img/569b6d62b660e28bb3f923aa74ec49d8_140.png)
 
 ### 栈的实现
 
-![](img/569b6d62b660e28bb3f923aa74ec49d8_142.png)
 
-![](img/569b6d62b660e28bb3f923aa74ec49d8_144.png)
 
-![](img/569b6d62b660e28bb3f923aa74ec49d8_146.png)
 
-![](img/569b6d62b660e28bb3f923aa74ec49d8_148.png)
 
 栈是后进先出（LIFO）的数据结构，主要操作是 `push`（入栈）和 `pop`（出栈）。
 
@@ -291,23 +212,16 @@ while current is not None:
 
 为了实现持久化，我们不覆盖旧的 `top` 指针，而是为每个版本保留其自己的 `top` 指针。这样，版本1的 `top` 指向旧的栈顶，版本2的 `top` 指向新的栈顶。通过跟随不同版本的 `top` 指针，我们就可以访问不同版本的栈。
 
-![](img/569b6d62b660e28bb3f923aa74ec49d8_150.png)
 
-![](img/569b6d62b660e28bb3f923aa74ec49d8_152.png)
 
 如果从版本2再执行 `pop` 操作，我们就创建版本3，其 `top` 指针指向版本2栈顶的下一个元素（即版本1的栈顶）。如此反复，所有版本通过指针连接成一个“版本树”。
 
-![](img/569b6d62b660e28bb3f923aa74ec49d8_154.png)
 
-![](img/569b6d62b660e28bb3f923aa74ec49d8_156.png)
 
-![](img/569b6d62b660e28bb3f923aa74ec49d8_158.png)
 
 ### 持久化的挑战与部分持久化
 
-![](img/569b6d62b660e28bb3f923aa74ec49d8_160.png)
 
-![](img/569b6d62b660e28bb3f923aa74ec49d8_162.png)
 
 ![](img/569b6d62b660e28bb3f923aa74ec49d8_163.png)
 

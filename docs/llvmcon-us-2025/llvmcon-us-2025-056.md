@@ -1,6 +1,5 @@
 # 056：理解MLIR崩溃再现器
 
-![](img/0d4b75061ed8614b5a4b88c3b33d89cc_0.png)
 
 ![](img/0d4b75061ed8614b5a4b88c3b33d89cc_0.png)
 
@@ -110,7 +109,6 @@ mlir-reduce --test=interesting_script.sh repro.mlir --traversal=topdown
 
 ## 总结与后续步骤
 
-![](img/0d4b75061ed8614b5a4b88c3b33d89cc_2.png)
 
 本节课中我们一起学习了MLIR崩溃再现器的强大功能。我们从终端到端编译器失败这一常见且令人沮丧的场景开始，看到了如何使用崩溃再现器来更可靠地复现这些失败，并开始迭代以修复错误。
 

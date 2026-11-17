@@ -6,7 +6,6 @@
 
 ## 回顾之前的代码
 
-![](img/85f730e3be20f4ceb7e9d3f9dce1d574_1.png)
 
 在之前的代码中，我们创建了一个返回 `Result<String, io::Error>` 的函数。函数内部没有处理错误，而是将所有错误信息都传播给调用者。
 
@@ -38,7 +37,6 @@ fn read_data() -> Result<String, io::Error> {
 
 ## `?` 运算符的工作原理
 
-![](img/85f730e3be20f4ceb7e9d3f9dce1d574_3.png)
 
 `?` 运算符与我们在 `match` 表达式中编写的代码有一个重要区别：被 `?` 调用的错误值会经过标准库中 `From` trait 定义的 `from` 函数。这个函数用于将值从一种类型转换为另一种类型。
 
@@ -46,7 +44,6 @@ fn read_data() -> Result<String, io::Error> {
 
 ## 进一步简化代码
 
-![](img/85f730e3be20f4ceb7e9d3f9dce1d574_5.png)
 
 我们可以通过链式调用使用 `?` 运算符的方法来进一步缩短代码。例如：
 
@@ -72,9 +69,7 @@ fn read_data() -> Result<String, io::Error> {
 }
 ```
 
-![](img/85f730e3be20f4ceb7e9d3f9dce1d574_7.png)
 
-![](img/85f730e3be20f4ceb7e9d3f9dce1d574_8.png)
 
 这个函数会打开文件、创建一个新字符串、读取文件内容、将内容放入该字符串，然后返回。这取代了我们之前编写的所有代码。
 
@@ -84,7 +79,6 @@ fn read_data() -> Result<String, io::Error> {
 
 例如，在默认返回单元类型 `()` 的 `main` 函数中使用 `?`，Rust 会报错。
 
-![](img/85f730e3be20f4ceb7e9d3f9dce1d574_10.png)
 
 ```rust
 fn main() {
@@ -93,9 +87,7 @@ fn main() {
 }
 ```
 
-![](img/85f730e3be20f4ceb7e9d3f9dce1d574_12.png)
 
-![](img/85f730e3be20f4ceb7e9d3f9dce1d574_13.png)
 
 要修复这个问题，我们可以让 `main` 函数返回一个 `Result`。
 
@@ -111,7 +103,6 @@ fn main() -> Result<(), io::Error> {
 
 `?` 运算符同样适用于 `Option` 类型。以下是一个示例函数，它返回给定文本第一行的最后一个字符：
 
-![](img/85f730e3be20f4ceb7e9d3f9dce1d574_15.png)
 
 ```rust
 fn last_char_of_first_line(text: &str) -> Option<char> {
@@ -119,13 +110,10 @@ fn last_char_of_first_line(text: &str) -> Option<char> {
 }
 ```
 
-![](img/85f730e3be20f4ceb7e9d3f9dce1d574_17.png)
 
 在这个函数中，`text.lines().next()` 返回一个 `Option`。如果字符串为空，则返回 `None`；否则返回第一行。`?` 运算符在这里处理了 `None` 的情况，使得代码更简洁。
 
-![](img/85f730e3be20f4ceb7e9d3f9dce1d574_19.png)
 
-![](img/85f730e3be20f4ceb7e9d3f9dce1d574_20.png)
 
 ## 总结
 
@@ -137,7 +125,6 @@ fn last_char_of_first_line(text: &str) -> Option<char> {
 4.  我们可以使用标准库提供的便捷函数（如 `fs::read_to_string`）来进一步简化代码。
 5.  在 `main` 函数中使用 `?` 需要将其返回类型改为 `Result`。
 
-![](img/85f730e3be20f4ceb7e9d3f9dce1d574_22.png)
 
 ![](img/85f730e3be20f4ceb7e9d3f9dce1d574_23.png)
 

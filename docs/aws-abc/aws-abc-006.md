@@ -14,11 +14,9 @@ AWS Fargate是一个无服务器计算引擎，专为在AWS上运行容器而设
 
 AWS Fargate是一个**无服务器计算引擎**，用于在AWS上运行容器。与任何应用程序一样，容器需要计算资源才能运行。在Fargate出现之前，您通常需要创建一个Amazon EC2实例集群来运行容器，这意味着您需要负责预置、配置和扩展这个EC2集群。
 
-![](img/1de97fa8624811ecc7bfe4aa787426ad_1.png)
 
 使用AWS Fargate，您可以创建一个用于容器托管的**无服务器集群**。这意味着托管您集群的底层基础设施的预置、配置和扩展工作都由AWS处理。
 
-![](img/1de97fa8624811ecc7bfe4aa787426ad_2.png)
 
 ![](img/1de97fa8624811ecc7bfe4aa787426ad_3.png)
 
@@ -48,9 +46,7 @@ Fargate与ECS和EKS都兼容。
 
 以下是选择计算选项时的关键考虑因素：
 
-![](img/1de97fa8624811ecc7bfe4aa787426ad_8.png)
 
-![](img/1de97fa8624811ecc7bfe4aa787426ad_9.png)
 
 ![](img/1de97fa8624811ecc7bfe4aa787426ad_10.png)
 
@@ -95,13 +91,10 @@ Fargate Spot让您能够以更低的价格运行容器。其工作原理是：AW
 
 ![](img/1de97fa8624811ecc7bfe4aa787426ad_16.png)
 
-![](img/1de97fa8624811ecc7bfe4aa787426ad_17.png)
 
 ---
 
-![](img/1de97fa8624811ecc7bfe4aa787426ad_18.png)
 
-![](img/1de97fa8624811ecc7bfe4aa787426ad_19.png)
 
 ## 总结
 

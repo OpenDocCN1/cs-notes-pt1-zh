@@ -4,19 +4,13 @@
 
 ![](img/f3b5473da7cd833bfbb2f428af3b93bf_2.png)
 
-![](img/f3b5473da7cd833bfbb2f428af3b93bf_4.png)
 
-![](img/f3b5473da7cd833bfbb2f428af3b93bf_6.png)
 
 在本节课中，我们将继续为MS-DOS街机项目编写x86汇编代码。我们将重构原型代码，创建状态回调函数，并将功能模块化，以便更清晰地管理不同的数据块（如瓦片、精灵、字体）的编辑状态。核心任务包括：将标签栏和查看器分离，实现基于状态的动态回调机制，以及为按钮系统添加更多自定义功能。
 
-![](img/f3b5473da7cd833bfbb2f428af3b93bf_8.png)
 
-![](img/f3b5473da7cd833bfbb2f428af3b93bf_10.png)
 
-![](img/f3b5473da7cd833bfbb2f428af3b93bf_12.png)
 
-![](img/f3b5473da7cd833bfbb2f428af3b93bf_14.png)
 
 ![](img/f3b5473da7cd833bfbb2f428af3b93bf_16.png)
 
@@ -53,7 +47,6 @@ draw_tab:
 
 ![](img/f3b5473da7cd833bfbb2f428af3b93bf_22.png)
 
-![](img/f3b5473da7cd833bfbb2f428af3b93bf_24.png)
 
 ```assembly
 ; 伪代码示例：查看器绘制逻辑
@@ -77,9 +70,7 @@ draw_viewer:
 
 由于瓦片、精灵和字体本质上都是基于网格的图形，我们可以使用同一个编辑器，只需传入不同的参数（如单元尺寸、放大像素尺寸）进行配置。
 
-![](img/f3b5473da7cd833bfbb2f428af3b93bf_32.png)
 
-![](img/f3b5473da7cd833bfbb2f428af3b93bf_34.png)
 
 ![](img/f3b5473da7cd833bfbb2f428af3b93bf_36.png)
 
@@ -128,21 +119,14 @@ button_def BUTTON_PREV, BUTTON_ENABLED|BUTTON_TEXT_ONLY, "<", (248<<8)|85, 6, 6,
 
 我们创建了 `pick_box_draw` 函数来绘制这个选择框，并为其内部的每个类型选项创建了对应的按钮。
 
-![](img/f3b5473da7cd833bfbb2f428af3b93bf_42.png)
 
-![](img/f3b5473da7cd833bfbb2f428af3b93bf_44.png)
 
-![](img/f3b5473da7cd833bfbb2f428af3b93bf_46.png)
 
-![](img/f3b5473da7cd833bfbb2f428af3b93bf_47.png)
 
-![](img/f3b5473da7cd833bfbb2f428af3b93bf_48.png)
 
-![](img/f3b5473da7cd833bfbb2f428af3b93bf_50.png)
 
 ## 修复鼠标光标裁剪问题
 
-![](img/f3b5473da7cd833bfbb2f428af3b93bf_51.png)
 
 ![](img/f3b5473da7cd833bfbb2f428af3b93bf_53.png)
 
@@ -156,9 +140,7 @@ button_def BUTTON_PREV, BUTTON_ENABLED|BUTTON_TEXT_ONLY, "<", (248<<8)|85, 6, 6,
 
 ![](img/f3b5473da7cd833bfbb2f428af3b93bf_61.png)
 
-![](img/f3b5473da7cd833bfbb2f428af3b93bf_63.png)
 
-![](img/f3b5473da7cd833bfbb2f428af3b93bf_65.png)
 
 ![](img/f3b5473da7cd833bfbb2f428af3b93bf_67.png)
 
@@ -168,15 +150,11 @@ button_def BUTTON_PREV, BUTTON_ENABLED|BUTTON_TEXT_ONLY, "<", (248<<8)|85, 6, 6,
 
 ![](img/f3b5473da7cd833bfbb2f428af3b93bf_70.png)
 
-![](img/f3b5473da7cd833bfbb2f428af3b93bf_72.png)
 
-![](img/f3b5473da7cd833bfbb2f428af3b93bf_74.png)
 
-![](img/f3b5473da7cd833bfbb2f428af3b93bf_76.png)
 
 核心思路是在绘制每个像素前，检查其坐标是否超出屏幕边界（对于256x256的图形模式，边界是255）。如果超出，则跳过该像素的绘制。
 
-![](img/f3b5473da7cd833bfbb2f428af3b93bf_78.png)
 
 ![](img/f3b5473da7cd833bfbb2f428af3b93bf_79.png)
 

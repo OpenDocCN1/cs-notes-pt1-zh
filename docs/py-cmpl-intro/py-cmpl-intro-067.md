@@ -4,34 +4,25 @@
 
 ## 列表排序 📋
 
-![](img/4819c5f43593a74f62af660809ee2da6_1.png)
 
-![](img/4819c5f43593a74f62af660809ee2da6_3.png)
 
 列表是Python中最基础的数据结构之一，对其进行排序也最为直接。Python为列表提供了内置的`sort()`方法。
 
-![](img/4819c5f43593a74f62af660809ee2da6_5.png)
 
 以下是列表排序的步骤：
 
-![](img/4819c5f43593a74f62af660809ee2da6_7.png)
 
-![](img/4819c5f43593a74f62af660809ee2da6_9.png)
 
 1.  创建一个列表。
 2.  调用列表的`sort()`方法。
 3.  如需逆序，可传入参数`reverse=True`。
 
-![](img/4819c5f43593a74f62af660809ee2da6_11.png)
 
 **代码示例：**
 
-![](img/4819c5f43593a74f62af660809ee2da6_12.png)
-
-![](img/4819c5f43593a74f62af660809ee2da6_14.png)
 
 
-![](img/4819c5f43593a74f62af660809ee2da6_16.png)
+
 
 ```python
 # 对字符串列表排序
@@ -47,31 +38,24 @@ fruits.sort(reverse=True)
 print(fruits)  # 输出: ['orange', 'coconut', 'banana', 'apple']
 ```
 
-![](img/4819c5f43593a74f62af660809ee2da6_18.png)
 
 `sort()`方法会直接修改原列表，使其元素按指定顺序排列。
 
-![](img/4819c5f43593a74f62af660809ee2da6_20.png)
 
 ---
 
-![](img/4819c5f43593a74f62af660809ee2da6_22.png)
 
 上一节我们介绍了如何使用`sort()`方法对列表进行原地排序。本节中我们来看看如何对元组进行排序。
 
-![](img/4819c5f43593a74f62af660809ee2da6_24.png)
 
 ## 元组排序 📦
 
-![](img/4819c5f43593a74f62af660809ee2da6_26.png)
 
 元组是不可变序列，因此它没有`sort()`方法。对元组排序需要使用内置的`sorted()`函数，该函数会返回一个新的排序后的列表。
 
 以下是元组排序的步骤：
 
-![](img/4819c5f43593a74f62af660809ee2da6_28.png)
 
-![](img/4819c5f43593a74f62af660809ee2da6_29.png)
 
 1.  使用`sorted()`函数对元组进行排序，得到一个列表。
 2.  如需保留元组类型，可将`sorted()`的结果用`tuple()`函数转换。
@@ -79,10 +63,8 @@ print(fruits)  # 输出: ['orange', 'coconut', 'banana', 'apple']
 
 **代码示例：**
 
-![](img/4819c5f43593a74f62af660809ee2da6_31.png)
 
 
-![](img/4819c5f43593a74f62af660809ee2da6_33.png)
 
 ```python
 fruits_tuple = ('banana', 'orange', 'apple', 'coconut')
@@ -100,11 +82,9 @@ print(reverse_sorted_tuple)  # 输出: ('orange', 'coconut', 'banana', 'apple')
 
 `sorted()`函数不会修改原始元组，而是返回一个新的排序后的序列。
 
-![](img/4819c5f43593a74f62af660809ee2da6_35.png)
 
 ---
 
-![](img/4819c5f43593a74f62af660809ee2da6_37.png)
 
 了解了列表和元组的排序后，我们进入更复杂的部分。本节中我们来看看如何对字典进行排序。
 
@@ -118,22 +98,16 @@ print(reverse_sorted_tuple)  # 输出: ('orange', 'coconut', 'banana', 'apple')
 2.  **按值排序**：使用`sorted()`函数并配合`key`参数，指定按值排序。
 3.  **保留键值对**：使用`items()`方法获取键值对元组，排序后再重构字典。
 
-![](img/4819c5f43593a74f62af660809ee2da6_39.png)
 
 **代码示例：**
 
-![](img/4819c5f43593a74f62af660809ee2da6_41.png)
-
-![](img/4819c5f43593a74f62af660809ee2da6_43.png)
 
 
-![](img/4819c5f43593a74f62af660809ee2da6_45.png)
 
 
-![](img/4819c5f43593a74f62af660809ee2da6_47.png)
 
 
-![](img/4819c5f43593a74f62af660809ee2da6_49.png)
+
 
 ```python
 fruits_dict = {'banana': 105, 'orange': 73, 'apple': 72, 'coconut': 354}
@@ -163,9 +137,7 @@ print(reverse_sorted_dict_by_value)
 *   `dict.items()`：返回一个包含字典所有`(键, 值)`元组的视图对象。
 *   `key=lambda item: item[1]`：这是一个`lambda`函数，它告诉`sorted()`函数使用每个元组（即每个键值对）的第二个元素（索引1，即“值”）作为排序依据。`item[0]`代表键。
 
-![](img/4819c5f43593a74f62af660809ee2da6_51.png)
 
-![](img/4819c5f43593a74f62af660809ee2da6_53.png)
 
 ---
 
@@ -181,26 +153,18 @@ print(reverse_sorted_dict_by_value)
 2.  创建该类的对象列表。
 3.  使用`sorted()`函数，并通过`key`参数指定排序依据的属性（如`lambda fruit: fruit.name`）。
 
-![](img/4819c5f43593a74f62af660809ee2da6_55.png)
 
-![](img/4819c5f43593a74f62af660809ee2da6_57.png)
 
-![](img/4819c5f43593a74f62af660809ee2da6_59.png)
 
 **代码示例：**
 
-![](img/4819c5f43593a74f62af660809ee2da6_61.png)
 
 
-![](img/4819c5f43593a74f62af660809ee2da6_63.png)
 
 
-![](img/4819c5f43593a74f62af660809ee2da6_65.png)
 
 
-![](img/4819c5f43593a74f62af660809ee2da6_67.png)
 
-![](img/4819c5f43593a74f62af660809ee2da6_69.png)
 
 ```python
 class Fruit:
@@ -236,27 +200,20 @@ print(reverse_sorted_by_calories)
 # 输出: [coconut: 354, banana: 105, orange: 73, apple: 72]
 ```
 
-![](img/4819c5f43593a74f62af660809ee2da6_71.png)
 
-![](img/4819c5f43593a74f62af660809ee2da6_73.png)
 
 **核心概念解释：**
 *   `__repr__`方法：定义对象的官方字符串表示形式，便于打印查看。
 *   `key=lambda fruit: fruit.calories`：`lambda`函数从每个`Fruit`对象中提取`calories`属性作为排序键。
 
-![](img/4819c5f43593a74f62af660809ee2da6_74.png)
 
-![](img/4819c5f43593a74f62af660809ee2da6_76.png)
 
 ---
 
-![](img/4819c5f43593a74f62af660809ee2da6_78.png)
 
 ## 总结 📝
 
-![](img/4819c5f43593a74f62af660809ee2da6_80.png)
 
-![](img/4819c5f43593a74f62af660809ee2da6_82.png)
 
 本节课中我们一起学习了Python中多种数据结构的排序方法：
 
@@ -265,7 +222,6 @@ print(reverse_sorted_by_calories)
 *   **字典**：使用`sorted()`函数配合`items()`方法和`key`参数，可以按键或按值排序，并重构字典。
 *   **自定义对象**：使用`sorted()`函数配合`key`参数和`lambda`函数，指定依据对象的某个属性进行排序。
 
-![](img/4819c5f43593a74f62af660809ee2da6_84.png)
 
 ![](img/4819c5f43593a74f62af660809ee2da6_85.png)
 

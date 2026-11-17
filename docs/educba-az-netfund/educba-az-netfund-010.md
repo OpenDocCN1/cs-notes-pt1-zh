@@ -31,13 +31,9 @@ Azure Front Door是一个现代化的云内容分发网络，它在全球范围�
 *   **支持现代应用与架构**：可使用自定义域名，并在全球范围内进行负载均衡和流量路由。
 *   **简单且经济高效**：提供简化的配置和管理体验。
 
-![](img/995d4728d3686c4d3fecbf35389ef4c6_1.png)
 
-![](img/995d4728d3686c4d3fecbf35389ef4c6_3.png)
 
-![](img/995d4728d3686c4d3fecbf35389ef4c6_5.png)
 
-![](img/995d4728d3686c4d3fecbf35389ef4c6_6.png)
 
 Azure Front Door的工作流程如下：
 1.  选择并连接到最近的Azure Front Door边缘位置。

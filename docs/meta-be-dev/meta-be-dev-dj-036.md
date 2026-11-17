@@ -47,7 +47,6 @@ Django框架内置了一个处理权限的系统。这个认证系统集成了�
 
 例如，如果请求用户没有适当的权限，你可以抛出一个`PermissionDenied`错误，而不是返回正常的HTTP响应。
 
-![](img/4517493be5bde69089a93ab4c1c8d42c_1.png)
 
 ```python
 if not request.user.has_perm('my_app.view_mymodel'):
@@ -55,7 +54,6 @@ if not request.user.has_perm('my_app.view_mymodel'):
     raise PermissionDenied
 ```
 
-![](img/4517493be5bde69089a93ab4c1c8d42c_3.png)
 
 ## 使用用户组管理权限
 

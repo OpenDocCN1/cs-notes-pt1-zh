@@ -13,9 +13,7 @@
 以下是定义我们方言（`serene`）和三个基础操作（`value`， `fn`， `return`）的ODS文件核心内容：
 
 
-![](img/e848665f6c73b4117590a6b17ec88bf2_1.png)
 
-![](img/e848665f6c73b4117590a6b17ec88bf2_3.png)
 
 ```tablegen
 // 定义 serene 方言
@@ -228,9 +226,7 @@ mlir::LogicalResult DefExpr::generateIR(serene::Namespace &ns,
 module.print(llvm::outs(), mlir::OpPrintingFlags().enableDebugInfo());
 ```
 
-![](img/e848665f6c73b4117590a6b17ec88bf2_5.png)
 
-![](img/e848665f6c73b4117590a6b17ec88bf2_6.png)
 
 启用调试信息后，打印出的IR可能如下所示：
 
